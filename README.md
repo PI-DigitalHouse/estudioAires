@@ -14,7 +14,11 @@ estudio aires
 ---
 ### To - dos
 
---> home.html <--
+#### --> Home <--
 
 - [ ] Definir imagem do header + texto alternativo.
 - [ ] Definir imagens de projetos da home.html + textos alternativos.
+
+#### --> Footer <--
+
+- [ ] Incluir link válido para as contas de instagram e Facebook e endereço de e-mail, nos links da footer. No momento, deixei com um placeholder para os links, usando a # no lugar da URL.
