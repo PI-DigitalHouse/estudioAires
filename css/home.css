@@ -1,4 +1,38 @@
-/* CSS da nav */
+body{
+    font-family: Quicksand;  
+    width: 100%;
+    margin: auto;  
+}
+
+/* header */
+
+header{
+    background-image: url(../images/home/header.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.icons-header{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+
+}
+
+.logo-icon{
+    margin: 40px 29px;
+}
+
+.button-login{
+    width: 161px;
+    height: 80px;
+    margin-top: 136px;
+
+
+}
+
+
 #menu ul{
     background-color: transparent;
     list-style: none;
@@ -17,4 +51,3 @@
 #menu ul li a:hover{
     border-bottom: 2px solid orange;
 }
-/* CSS da nav */
