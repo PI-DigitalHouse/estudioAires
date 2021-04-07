@@ -1,0 +1,20 @@
+/* CSS da nav */
+#menu ul{
+    background-color: transparent;
+    list-style: none;
+}
+
+#menu ul li{
+    display: inline;
+}
+
+#menu ul li a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+#menu ul li a:hover{
+    border-bottom: 2px solid orange;
+}
+/* CSS da nav */
