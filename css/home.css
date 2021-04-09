@@ -1,7 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 6.25%;
+}
+
 body{
-    font-family: Quicksand;  
+    font-family: Quicksand;
     width: 100%;
-    margin: auto;  
+    margin: auto;
 }
 
 /* header */
@@ -28,9 +36,9 @@ header{
     width: 161px;
     height: 80px;
     margin-top: 136px;
-
-
 }
+
+/* nav bar */
 
 
 #menu ul{
@@ -46,8 +54,89 @@ header{
     padding: 10px;
     color: black;
     text-decoration: none;
+    font-size: 25rem;
 }
 
 #menu ul li a:hover{
     border-bottom: 2px solid orange;
+}
+
+/* quem somos */
+
+.quem-somos{
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/quem-somos/backgroundImgOpc3.jpg);
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.quem-somos-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quem-somos-intro h2{
+    font-family: Lato;
+    font-size: 64rem;
+    align-self: flex-start;
+    font-weight: 700;
+    margin: 58rem 0 0 82rem;
+}
+
+.quem-somos-intro p{
+    font-size: 36rem;
+    width: 60%;
+    text-align: justify;
+    margin: 111rem 153rem 111rem 0;
+}
+
+.container-socios{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 111rem;
+}
+
+.socio{
+    width: 30%;
+    height: 30vh;
+
+}
+.socio img{
+    width: 60%;
+    height: 100%;
+}
+
+.socio h3{
+    font-family: Lato;
+    font-size: 48rem;
+    font-weight: 700;
+}
+
+.socio p{
+    font-size: 24rem;
+    font-weight: 400;
+    width: 108%;
+    text-align: center;
+    margin: 0 -24%;
+}
+
+.button-socios{
+    height: 10vh;
+    width: 66.5%;
+    margin: 520rem 0 100rem 178rem;
+
+
+    background-color:#FC7600;
+    border: none;
+    border-radius: 18px; /*transformar em % */
+    color: #FFFFFF;
+    font-family: 'Lato';
+    font-size: 48rem;
+    font-weight: 800;
+
 }
