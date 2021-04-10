@@ -7,7 +7,7 @@ html{
 }
 
 body{
-    font-family: Quicksand;
+    font-family: 'Quicksand';
     width: 100%;
     margin: auto;
 }
@@ -79,7 +79,7 @@ header{
 }
 
 .quem-somos-intro h2{
-    font-family: Lato;
+    font-family: 'Lato';
     font-size: 64rem;
     align-self: flex-start;
     font-weight: 700;
@@ -112,7 +112,7 @@ header{
 }
 
 .socio h3{
-    font-family: Lato;
+    font-family: 'Lato';
     font-size: 48rem;
     font-weight: 700;
 }
@@ -139,4 +139,50 @@ header{
     font-size: 48rem;
     font-weight: 800;
 
+}
+
+/* sessão parceiros */
+
+.parceiros{
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/parceiros/backgroundImgOpc3.png);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parceiros h2{
+    width: 29%;
+    margin: 0 6.5%;
+    padding: 4.2% 0;
+
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 64rem;
+    line-height: 77px;
+    color: #000000;
+}
+
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 24rem;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer h2{
+    font-size: 30rem;
 }
