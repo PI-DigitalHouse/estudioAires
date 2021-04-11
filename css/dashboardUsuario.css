@@ -13,14 +13,17 @@ header{
     background-color: #666;
     color:#FC7600;
     width: 100%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    position:fixed;
+    top:0
 }
 
 header img.logo{
     width: 120px;
-    margin: 20px;
+    margin: 1.5px;
     height: 120px;
 
 }
@@ -32,8 +35,8 @@ nav{
 #selected{
     background-color: white;
     color: black;
-    padding: 10px 60px 20px 60px;
-    border-radius: 100% 100% 10% 15%;
+    padding: 10px 60px 17px 60px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 #selected:hover{
@@ -79,10 +82,105 @@ nav li a:hover{
     width: 30%;
 }
 
+/* ordenação */
+.ordenacao{
+    margin-top: 140px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ordenacao div{
+    margin: 5px
+}
+
+.ordenacao p{
+    display: inline;
+}
+
+/* serviços */
+
+.containerServico{
+    display: flex;
+    border: 2px solid #fff ;
+    margin: 20px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.containerEsquerda{
+    display: flex;
+    width: 50%;
+}
+
+.servicoConcluido1 .info p{ 
+    display: inline;
+}
+
+.tipo1{
+    font-weight: bold;
+}
+
+.servicoConcluido2{
+    margin: 50px;
+}
+
+.servicoConcluido2 .info p{
+    margin: 0px
+}
+
+.containerDireita a{
+    text-decoration: none;
+    color: black;
+    width: 50%;
+}
+
+.status{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.step{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #ACACA6;
+    border-radius: 50%;
+}
+
+.botoes{
+    display: flex
+}
+
+.botoes .prestador{
+    border: 1.5px solid #BFBFBF;
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'Quicksand';
+    padding: 5px;
+    
+}
+
+.botoes .prestador:hover{
+    font-weight: bold;
+}
+
+.botoes .entregaveis{
+    border: 1.5px solid #BFBFBF;
+    background-color:#FC7600;
+    border-radius: 10px;
+    font-family: 'Quicksand';
+    padding: 5px;
+}
+
+.botoes .entregaveis:hover{
+    font-weight: bold;
+}
+
 /* separador */
 
 .separador{
-    background-color: #212121;
+    background-color: #2121219a;
     height: 2px;
     width: 80%;
     margin:auto;
