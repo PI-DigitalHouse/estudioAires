@@ -1,0 +1,116 @@
+body{
+    font-family: Calibri;
+}
+
+/* header */
+
+header{
+    background-color: #666;
+    color:#FC7600;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header img.logo{
+    width: 120px;
+    margin: 20px;
+    height: 120px;
+
+}
+
+nav{
+    width: 60%;
+}
+
+#selected{
+    background-color: white;
+    color: black;
+    padding: 10px 60px 20px 60px;
+    border-radius: 100% 100% 10% 15%;
+}
+
+#selected:hover{
+    font-weight: bold;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav li{
+    width: 50%;
+
+}
+nav li a{
+    color:#FC7600;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color:#db7012;
+}
+
+.usuario{
+    width:20%;
+    margin-bottom: 15px;
+}
+
+.usuario a{
+    color:#FC7600;
+    text-decoration: none;
+}
+
+.usuario a:hover{
+    color:#db7012;
+}
+
+.fotoPerfil{
+    border-radius: 50%;
+    width: 30%;
+}
+
+/* separador */
+
+.separador{
+    background-color: #212121;
+    height: 2px;
+    width: 80%;
+    margin:auto;
+}
+
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer li{
+    padding: 5px;
+}
+
+footer li a{
+    color:black;
+    text-decoration: none;
+}
+
+footer li a:hover{
+    font-weight: bold;
+}
+
+footer img.logo{
+    width: 120px;
+    margin: 50px 20px;
+    height: 120px;
+
+}
