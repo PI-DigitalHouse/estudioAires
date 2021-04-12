@@ -66,7 +66,7 @@ header{
 .quem-somos{
     width: 100%;
     height: 100%;
-    background-image: url(/images/quem-somos/backgroundImgOpc3.jpg);
+    background-image: url(../images/quem-somos/backgroundImgOpc3.jpg);
     background-position: center;
     background-attachment: fixed;
 
@@ -146,7 +146,7 @@ header{
 .parceiros{
     width: 100%;
     height: 100%;
-    background-image: url(/images/parceiros/backgroundImgOpc3.png);
+    background-image: url(../images/parceiros/backgroundImgOpc3.png);
     background-position: center;
     background-attachment: fixed;
 }
@@ -167,22 +167,74 @@ header{
 /* footer */
 
 footer{
-    width: 100%;
-    height: 100%;
+    border-top: 1px solid #212121;
+    margin: 1.5% 0 0 5%;
+    width: 90%;
 
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-footer a{
-    text-decoration: none;
-    font-size: 24rem;
+.conheca, .privacidade, .contato{
+    display: flex;
+    flex-direction: column;
+}
+.conheca h2, .privacidade h2, .contato h2{
+    font-size: 20rem;
+    color: #212121;
+    font-weight: 700;
+    font-family: 'Lato';
 }
 
-footer li{
+.conheca ul, .privacidade ul, .contato ul{
+    line-height: 3.9vh;
+}
+
+.conheca li, .privacidade li, .contato li{
     list-style: none;
+
 }
 
-footer h2{
-    font-size: 30rem;
+.conheca a, .privacidade a, .contato a{
+    text-decoration: none;
+    font-size: 15rem;
+    color: #212121;
+    margin: 0 0 0 -50%;
+}
+
+.privacidade a{
+    margin: 0 0 0 -24%;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+}
+
+.socialLogo-footer{
+    width: 55%;
+    height: 60%;
+    /* margin-top: 6%; */
+    /* align-self: flex-end; */
+}
+
+.social-socialNetwork{
+    display: flex;
+    position: relative;
+    left: 132px;
+    right: 138px;
+    top: -14%;
+}
+
+.social-socialNetwork-facebook {
+    width: 75%;
+}
+
+.social-socialNetwork-mail{
+
 }
