@@ -212,29 +212,4 @@ footer{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-
-
-}
-
-.socialLogo-footer{
-    width: 55%;
-    height: 60%;
-    /* margin-top: 6%; */
-    /* align-self: flex-end; */
-}
-
-.social-socialNetwork{
-    display: flex;
-    position: relative;
-    left: 132px;
-    right: 138px;
-    top: -14%;
-}
-
-.social-socialNetwork-facebook {
-    width: 75%;
-}
-
-.social-socialNetwork-mail{
-
 }
