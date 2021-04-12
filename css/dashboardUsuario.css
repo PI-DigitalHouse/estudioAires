@@ -40,7 +40,7 @@ nav{
 }
 
 #selected:hover{
-    font-weight: bold;
+    color: #666666;
 }
 
 nav ul{
@@ -158,12 +158,14 @@ nav li a:hover{
     border-radius: 10px;
     font-family: 'Quicksand';
     padding: 5px;
+    font-size: 16rem;
+    color: black;
     
 }
 
-.botoes .prestador:hover{
-    font-weight: bold;
-}
+/* .botoes .prestador:hover{
+    background-color:#BFBFBF;
+} */
 
 .botoes .entregaveis{
     border: 1.5px solid #BFBFBF;
@@ -171,11 +173,12 @@ nav li a:hover{
     border-radius: 10px;
     font-family: 'Quicksand';
     padding: 5px;
+    font-size: 16px;
 }
 
-.botoes .entregaveis:hover{
-    font-weight: bold;
-}
+/* .botoes .entregaveis:hover{
+    background-color: #fc9337;
+} */
 
 /* separador */
 
@@ -208,7 +211,7 @@ footer li a{
 }
 
 footer li a:hover{
-    font-weight: bold;
+    color: #666666;
 }
 
 footer img.logo{
