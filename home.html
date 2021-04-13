@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/">
         <link rel="stylesheet" href="./css/home.css">
         <link rel="shortcut icon" href="images/square-logo-lineorange.png">
         <title>Estúdio Aires</title>
@@ -10,27 +11,30 @@
 
     <body>
         <header>
-            <img src="./images/square-logo.png" alt="Logo para Estúdio Aires">
-            <img src="./images/icons/login-icon.png" alt="Imagem para ícone de login.">
-        
-            <img src="./images/home/header.png" alt="Casa de Campo, imagem externa do jardim.  ">
-      
+            <div class="icons-header">
+
+                <img class="logo-icon" src="./images/square-logo.png" alt="Logo para Estúdio Aires">
+                <img class="button-login" src="./images/icons/login-icon.png" alt="Imagem para ícone de login.">
+
+            </div>
+
         </header>
 
-        <main>
+        <main>  
+
             <!-- início da nav -->
-            <nav>
-
-                <a href="#"> Home </a>
-                <a href="quem-somos"> Quem Somos</a>
-                <a href="servicos"> Serviços </a>
-                <a href="parceiros"> Parceiros </a>
-                <a href="contato"> Contato </a>
-
+            <nav id="menu">
+                <ul>
+                    <li class="lista-menu"><a href="#"> Home </a></li>
+                    <li class="lista-menu"><a href="quem-somos"> Quem Somos</a></li>
+                    <li class="lista-menu"><a href="servicos"> Serviços </a></li>
+                    <li class="lista-menu"><a href="parceiros"> Parceiros </a></li>
+                    <li class="lista-menu"><a href="contato"> Contato </a></li>
+                </ul>
             </nav>
 
             <!-- início da sessão de portfólio -->
-            <section class="portfolio">
+            <section id="portfolio">
 
                 <div class="containerPortfolio">
 
@@ -134,30 +138,34 @@
             <!-- início da sessão quem somos -->
             <section class="quem-somos">
 
-                <h2>Quem Somos</h2>
+                <div class="quem-somos-intro">
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero id, perferendis ut ex, similique fugiat distinctio ipsam earum praesentium consectetur dolorum officia obcaecati modi consequatur nam ab sit accusantium cumque.</p>
-
-                <div class="socio1">
-
-                    <img src="./images/quem-somos/placeHolderImageSocio1.png" alt="Placeholder image para o sócio 1">
-                    <h3>Fotógrafo 1</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta minus!</p>
+                    <h2>Quem Somos</h2>
+                
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero id, perferendis ut ex, similique fugiat distinctio ipsam earum praesentium consectetur dolorum officia obcaecati modi consequatur nam ab sit accusantium cumque.</p>
 
                 </div>
 
-                <div class="socio1">
+                <div class="container-socios">
 
-                    <img src="./images/quem-somos/placeHolderImageSocio2.png" alt="Placeholder image para o sócio 2">
-                    <h3>Fotógrafo 2</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta minus!</p>
+                    <div class="socio">
+
+                        <img src="./images/quem-somos/placeHolderImageSocio1.png" alt="Placeholder image para o sócio 1">
+                        <h3>Fotógrafo 1</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta minus!</p>
+    
+                    </div>
+    
+                    <div class="socio">
+    
+                        <img src="./images/quem-somos/placeHolderImageSocio2.png" alt="Placeholder image para o sócio 2">
+                        <h3>Fotógrafo 2</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta minus!</p>
+                    </div>
+
                 </div>
 
-                <div class="button">
-
-                    <button type="submit">Faça um orçamento com a gente!</button>
-
-                </div>
+                <button class="button-socios" type="submit">Faça um orçamento com a gente!</button>
 
             </section>
 
@@ -225,8 +233,8 @@
 
                 </div>
 
-                <div class="conta">
-
+                <div class="contato">
+                    <h2>Contato</h2>
                     <ul>
                         <li><a href="#">Fale conosco</a></li>
                     </ul>
@@ -234,10 +242,10 @@
                 </div>
 
                 <div class="social">
-                    <img src="./images/footer/placeHolderImageLogoFooter.png" alt="Placeholder para logo">
-                    <a href="#"><img src="./images/footer/instagram.png" alt="Ícone com link para a conta Instagram"></a>
+                    <img src="./images/square-logo-noOpacity.png" alt="Placeholder para logo">
                     <a href="#"><img src="./images/footer/facebook.png" alt="Ícone com link para conta Facebook"></a>
-                    <a href="mailto:#"><img src="./images/footer/email.png" alt="Íconte com link para envio de e-mail"></a>
+                    <a class="social-socialNetwork-mail" href="mailto:#"><img src="./images/footer/email.png" alt="Íconte com link para envio de e-mail"></a>
+                    <a class="social-socialNetwork-instagram" href="#"><img src="./images/footer/instagram.png" alt="Ícone com link para a conta Instagram"></a>
                 </div>
 
             </footer>
