@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+     
+  
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background-image: url("body-backgrounds/bg-opacity.png");
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+    }
+    nav {
+        display: flex;
+        width: 100%;
+        
+        background: #222;
+        opacity: 0.8;
+        padding: 0 15px;
+    }
+    a {
+        color:orange;
+        text-decoration: none;
+    }
+    .menu{   
+        display: flex;
+        list-style-type: none;
+    }
+    .logo {
+        font-size: 20px;
+        padding: 7.5px 10px 7.5px 0;
+    }
+    .item {
+        padding: 10px;
+        margin-left: 350px;
+        border: orange solid 1px;
+        border-radius: 15px;
+        background-color: rgb(7, 7, 7);
+    }
+    .button {
+        padding: 9px 5px;
+        margin-left: 550px;
+    }
+  

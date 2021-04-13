@@ -6,28 +6,34 @@ body {
     
   
 }
+main{
+    text-align: center;
+}
+header{
+    text-align: center;
+    margin-bottom: 2%;
+}
 img{
-    margin-left: 50%;
+    
     width: 120px;
     top: 120px;
 }
 
 .card-login{
-    position: absolute;
+    display: inline-block;
     width: 960px;
     height: 577px;
-    left: 493px;
     top: 185px;
     mix-blend-mode: normal;
     border: 2.8px solid #FC7600;
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
     border-radius: 18px;
-    margin-left: 2%;
     background-color: white;
+    text-align: center;
     
 }
 .container-01{
-    /*position: absolute;*/
+    
     width: 100px;
     height: 42px;
     margin-left: 15px;
@@ -36,7 +42,6 @@ img{
 }
 
 .container-01{
-    /*position: absolute;*/
     width: 100px;
     height: 42px;
     margin-left: 15px;
@@ -140,8 +145,7 @@ button {
   width: 95%;
 
 }
-
-  .termos{
+.termos{
     display: flex;
 
   }
@@ -157,4 +161,5 @@ button {
     margin: 20px;
   }
 
-  
+  @media (max-width:1024px) {
+  }

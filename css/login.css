@@ -6,14 +6,20 @@ body {
     
   
 }
+header{
+    text-align: center;
+    margin-bottom: 2%;
+}
 img{
-    margin-left: 50%;
+    /*margin-left: 50%;*/
     width: 120px;
     top: 120px;
 }
-
+main{
+   text-align: center;
+}
 .card-login{
-    position: absolute;
+   display: inline-block;
     width: 360px;
     height: 577px;
     left: 493px;
@@ -22,13 +28,13 @@ img{
     border: 2.8px solid #FC7600;
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
     border-radius: 18px;
-    margin-left: 18%;
+    padding: 1%;
     }
 .container-01{
     /*position: absolute;*/
     width: 100px;
     height: 42px;
-    margin-left: 15px;
+    /*margin-left: 15px;*/
     top: 190px;
     display: flex;
 }
@@ -39,14 +45,14 @@ img{
     opacity:  .8;
     font-weight:  400; 
     margin-top: 25px;
-    margin-left: 15px;
+justify-content: center;    
    
 
 }
 
 
 .email{
-    margin-left: 2px;
+    
     margin-top: 35px;
 }
 
@@ -54,7 +60,7 @@ input[type=text]{
     width: 95%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: inline-flex;
     border: 1px solid #ccc;
     box-sizing: border-box;
     
@@ -67,7 +73,6 @@ input[type="password"] {
     display: inline-flex;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    margin-right: 80px;
     font-family: 'Open Sans', caption;
 
 }
@@ -82,7 +87,6 @@ button {
     background-color: #FC7600;;
     color: white;
     padding: 14px 20px;
-    margin: 5px 0;
     border: none;
     cursor: pointer;
     width: 95%;
@@ -95,3 +99,21 @@ button {
   button:hover {
     opacity: 0.8;
   }
+
+@media (max-width:1024px) {
+
+    header{
+        margin-left: 5%;
+        text-justify: center;
+    }
+    .card-login {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-left: 5%;
+    }
+  
+
+}
+      
+  
