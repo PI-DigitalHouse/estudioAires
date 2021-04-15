@@ -64,6 +64,7 @@ nav{
 }
 
 /* sessão portfólio */
+
 .backgroundNav-Portfolio{
     width: 100%;
     height: 150vh;
@@ -83,27 +84,78 @@ nav{
 }
 
 /* sessão de serviços */
+
 .servicos{
     width: 100%;
     height: 140vh;
     background: url(/images/home/backgroundImage-nossosServicos-opc3.png);
     background-position: center;
     background-attachment: fixed;
+
+    margin: -3.3% 0 0 0; /* Feito para cobrir o gap entre sessões */
 }
 
 .servicos h2{
     font-size: 64rem;
     font-family: 'Quicksand';
-    color: #212121; 
+    color: #212121;
+    padding: 4.7% 0 0 4.6%;
 }
 
 .container-servicos{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+}
+
+.box-servico{
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    filter: drop-shadow(4rem 4rem 4rem rgba(0, 0, 0, 0.25));
+    border-radius: 20rem;
+    width: 390px;
+    height: 572px;
+    text-align: center;
+    margin: 0 0 5% 0.4%;
+}
+
+.box-servico h3{
+    font-family: 'Lato';
+    font-size: 36rem;
+    font-weight: 800;
+
+    color: #FC7600;
+}
+
+.box-servico img{
+    width: 370px;
+    height: 227px;
+}
+
+.box-servico p{
+    width: 268px;
+    height: 159px;
+    font-family: 'Quicksand';
+    font-size: 18rem;
+    color: #212121;
+
+    margin: 3.5% 0 0 16%;
+}
+
+.box-servico button{
+    width: 258px;
+    height: 42px;
+    
+    background: #FC7600;
+    color: #F5F4F6;
+    border: none;
+    border-radius: 18px;
+    
+    box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0.25) ;
 }
 
 /* quem somos */
+
 .quem-somos{
     width: 100%;
     height: 100%;
@@ -123,6 +175,7 @@ nav{
     font-family: 'Lato';
     font-size: 64rem;
     align-self: flex-start;
+    color: #212121;
     font-weight: 700;
     margin: 58rem 0 0 82rem;
 }
@@ -179,7 +232,6 @@ nav{
     font-family: 'Lato';
     font-size: 48rem;
     font-weight: 800;
-
 }
 
 /* sessão parceiros */
@@ -203,7 +255,6 @@ nav{
     line-height: 77px;
     color: #000000;
 }
-
 
 /* footer */
 
