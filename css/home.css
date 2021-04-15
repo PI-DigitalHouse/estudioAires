@@ -63,6 +63,32 @@ nav{
     border-bottom: 2px solid #FC7600;
 }
 
+/* sessão portfólio */
+
+.backgroundNav-Portfolio{
+    width: 100%;
+    height: 135vh;
+    background: url(/images/home/headerImg-opc3.png);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.containerPortfolio{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.portfolioProjeto-3, .portfolioProjeto-4{
+    margin: 1% 0 0 0;
+}
+
+.portfolioProjeto-1, .portfolioProjeto-2, .portfolioProjeto-3, .portfolioProjeto-4{
+
+}
+
 /* quem somos */
 
 .quem-somos{
