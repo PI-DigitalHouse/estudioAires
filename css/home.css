@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -166,50 +169,98 @@ header{
 
 /* footer */
 
-footer{
-    border-top: 1px solid #212121;
-    margin: 1.5% 0 0 5%;
-    width: 90%;
+body{
+    line-height: 1.5;
+}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-footer{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
-.conheca, .privacidade, .contato{
-    display: flex;
-    flex-direction: column;
-}
-.conheca h2, .privacidade h2, .contato h2{
-    font-size: 20rem;
-    color: #212121;
-    font-weight: 700;
-    font-family: 'Lato';
-}
-
-.conheca ul, .privacidade ul, .contato ul{
-    line-height: 3.9vh;
-}
-
-.conheca li, .privacidade li, .contato li{
+ul{
     list-style: none;
+}
+
+footer{
+    background: #F5F4F6;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
 
 }
 
-.conheca a, .privacidade a, .contato a{
+.footer-col h4{
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    color: #FC7600;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #81A8E7;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: capitalize;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 15rem;
-    color: #212121;
-    margin: 0 0 0 -50%;
+    font-weight: 300;
+    color: #81A8E7;
+    display: block;
+    transition: all 0.3s ease;
 }
 
-.privacidade a{
-    margin: 0 0 0 -24%;
+.footer-col ul li a:hover{
+    color: #FC7600;
+    padding-left: 8px;
 }
 
-.social{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    background: #81A8E7;
+    margin-right: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease-out;
+}
+
+.footer-col .social-links a:hover{
+    cursor: pointer;
+    transform: translateY(-15px);
 }
