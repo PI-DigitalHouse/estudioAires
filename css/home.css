@@ -12,13 +12,14 @@ html{
 body{
     font-family: 'Quicksand';
     width: 100%;
+    min-height: 100vh;
     margin: auto;
 }
 
 /* header */
 
 header{
-    background-image: url(../images/home/header.png);
+    background: url(/images/home/header.png);
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -28,7 +29,6 @@ header{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-
 }
 
 .logo-icon{
@@ -43,25 +43,118 @@ header{
 
 /* nav bar */
 
+nav{
+    margin: 0 0 0 17%;
+}
 
-#menu ul{
-    background-color: transparent;
+.nav-container ul {
+    width: 1070px;
+    height: 91px;
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#menu ul li{
-    display: inline;
-}
-
-#menu ul li a{
-    padding: 10px;
-    color: black;
+.nav-container ul li a{
+    color: #212121;
     text-decoration: none;
     font-size: 25rem;
 }
 
-#menu ul li a:hover{
-    border-bottom: 2px solid orange;
+.nav-container ul li a:hover{
+    border-bottom: 2px solid #FC7600;
+}
+
+/* sessão portfólio */
+
+.backgroundNav-Portfolio{
+    width: 100%;
+    height: 150vh;
+    background: url(/images/home/headerImg-opc3.png);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.portfolioProjeto-3, .portfolioProjeto-4{
+    margin: 1% 0 0 0;
+}
+
+/* sessão de serviços */
+
+.servicos{
+    width: 100%;
+    height: 200vh;
+    background: url(/images/home/backgroundImage-nossosServicos-opc3.png);
+    background-position: center;
+    background-attachment: fixed;
+
+    margin: -3.3% 0 0 0; /* Feito para cobrir o gap entre sessões */
+}
+
+.servicos h2{
+    font-size: 64rem;
+    font-family: 'Quicksand';
+    color: #212121;
+    padding: 4.7% 0 0 4.6%;
+}
+
+.container-servicos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.box-servico{
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    filter: drop-shadow(4rem 4rem 4rem rgba(0, 0, 0, 0.25));
+    border-radius: 20rem;
+    width: 390px;
+    height: 572px;
+    text-align: center;
+    margin: 0 0 5% 0.4%;
+}
+
+.box-servico h3{
+    font-family: 'Lato';
+    font-size: 36rem;
+    font-weight: 800;
+
+    color: #FC7600;
+}
+
+.box-servico img{
+    width: 370px;
+    height: 227px;
+}
+
+.box-servico p{
+    width: 268px;
+    height: 159px;
+    font-family: 'Quicksand';
+    font-size: 18rem;
+    color: #212121;
+
+    margin: 3.5% 0 0 16%;
+}
+
+.box-servico button{
+    width: 258px;
+    height: 42px;
+    
+    background: #FC7600;
+    color: #F5F4F6;
+    border: none;
+    border-radius: 18px;
+    
+    box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0.25) ;
 }
 
 /* quem somos */
@@ -72,7 +165,6 @@ header{
     background-image: url(../images/quem-somos/backgroundImgOpc3.jpg);
     background-position: center;
     background-attachment: fixed;
-
 }
 
 .quem-somos-intro{
@@ -85,15 +177,16 @@ header{
     font-family: 'Lato';
     font-size: 64rem;
     align-self: flex-start;
+    color: #212121;
     font-weight: 700;
-    margin: 58rem 0 0 82rem;
+    margin: 3.6% 0 0 5.2%;
 }
 
 .quem-somos-intro p{
     font-size: 36rem;
     width: 60%;
     text-align: justify;
-    margin: 111rem 153rem 111rem 0;
+    margin: 7% 9.5% 7% 0;
 }
 
 .container-socios{
@@ -101,13 +194,12 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0 111rem;
+    margin: 0 07%;
 }
 
 .socio{
     width: 30%;
     height: 30vh;
-
 }
 .socio img{
     width: 60%;
@@ -131,17 +223,16 @@ header{
 .button-socios{
     height: 10vh;
     width: 66.5%;
-    margin: 520rem 0 100rem 178rem;
+    margin: 32.9% 0 6.5% 11.3%;
 
 
     background-color:#FC7600;
     border: none;
-    border-radius: 18px; /*transformar em % */
+    border-radius: 18rem;
     color: #FFFFFF;
     font-family: 'Lato';
     font-size: 48rem;
     font-weight: 800;
-
 }
 
 /* sessão parceiros */
@@ -165,7 +256,6 @@ header{
     line-height: 77px;
     color: #000000;
 }
-
 
 /* footer */
 

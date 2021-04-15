@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+    background-image: url("body-backgrounds/bg-opacity.png");
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  
+}
+main{
+    text-align: center;
+
+   
+}
+
+header{
+height: 20vh;
+
+}
+
+.card-login{
+    display: inline-block;
+    width: 960px;
+    height: 50vh;
+    top: 185px;
+    mix-blend-mode: normal;
+    border: 2.8px solid #FC7600;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
+    border-radius: 18px;
+    background-color: white;
+    text-align: center;
+    padding: 50px;
+    
+}
+img{
+    margin: 25px;
+}
+
+.container-02{
+    display: flex;
+    flex-direction: column;
+    font-size:  12.5px; 
+    color:  #000;
+    opacity:  .8;
+    font-weight:  400; 
+    justify-content: center;
+    margin-left: 350px;
+    margin-top: 100px;
+    
+    
+
+}
+
+
+
+
+button {
+    display: flex;
+    background-color: #FC7600;;
+    color: white;
+    padding: 14px 20px;
+    margin: 5px 0;
+    /*margin-left:250px;*/
+    border: none;
+    cursor: pointer;
+    width: 45%;
+    justify-content: center;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    
+    
+}
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .button-login{
+  /*justify-content: center;
+  width: 95%;
+  margin-top: 150px;
+  margin-left: 20px;*/
+
+}
+
+
+
+  @media (max-width:1024px) {
+  }
+
+
+
+
