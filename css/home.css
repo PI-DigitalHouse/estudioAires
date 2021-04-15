@@ -15,7 +15,7 @@ body{
 /* header */
 
 header{
-    background-image: url(../images/home/header.png);
+    background: url(/images/home/header.png);
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -25,7 +25,6 @@ header{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-
 }
 
 .logo-icon{
@@ -40,25 +39,28 @@ header{
 
 /* nav bar */
 
+nav{
+    position: relative;
+    left: 15%;
+}
 
-#menu ul{
-    background-color: transparent;
+.nav-container ul {
+    width: 1070px;
+    height: 91px;
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#menu ul li{
-    display: inline;
-}
-
-#menu ul li a{
-    padding: 10px;
-    color: black;
+.nav-container ul li a{
+    color: #212121;
     text-decoration: none;
     font-size: 25rem;
 }
 
-#menu ul li a:hover{
-    border-bottom: 2px solid orange;
+.nav-container ul li a:hover{
+    border-bottom: 2px solid #FC7600;
 }
 
 /* quem somos */
