@@ -9,6 +9,7 @@ html{
 body{
     font-family: 'Quicksand';
     width: 100%;
+    min-height: 100vh;
     margin: auto;
 }
 
@@ -40,8 +41,7 @@ header{
 /* nav bar */
 
 nav{
-    position: relative;
-    left: 15%;
+    margin: 0 0 0 17%;
 }
 
 .nav-container ul {
@@ -64,18 +64,15 @@ nav{
 }
 
 /* sessão portfólio */
-
 .backgroundNav-Portfolio{
     width: 100%;
-    height: 135vh;
+    height: 150vh;
     background: url(/images/home/headerImg-opc3.png);
     background-position: center;
     background-attachment: fixed;
 }
 
-.containerPortfolio{
-    width: 100%;
-    height: 100vh;
+#portfolio{
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
@@ -85,12 +82,28 @@ nav{
     margin: 1% 0 0 0;
 }
 
-.portfolioProjeto-1, .portfolioProjeto-2, .portfolioProjeto-3, .portfolioProjeto-4{
+/* sessão de serviços */
+.servicos{
+    width: 100%;
+    height: 140vh;
+    background: url(/images/home/backgroundImage-nossosServicos-opc3.png);
+    background-position: center;
+    background-attachment: fixed;
+}
 
+.servicos h2{
+    font-size: 64rem;
+    font-family: 'Quicksand';
+    color: #212121; 
+}
+
+.container-servicos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /* quem somos */
-
 .quem-somos{
     width: 100%;
     height: 100%;
