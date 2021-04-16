@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmacao Pagamento</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        body{
+            width: 31.25rem;
+            display: flex;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .flex-container{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-family: Lato;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 0em;
+        }
+        .flex-container-nmr-pedido{
+            display: flex;
+            
+            border-radius: 10px;
+            width:80%;
+            height: 10vh;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(252, 118, 0, 0.62);
+            font-family: Lato;
+            position: relative;
+            top:1rem;
+            z-index: 2;
+        }
+
+        h2{
+            text-align: center;
+            font-family: Lato;
+            font-size: 1.7rem;
+        }
+        h3{
+            text-align: center;
+            font-family: Lato;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            
+            letter-spacing: 0em;
+           
+
+        }
+        .flex-container-infos-pay{
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-wrap: wrap;
+            width:80%;
+            border-radius: 10px;
+            margin-top: rem;
+            height: 15vh;
+            background-color: white;
+            z-index: 0;
+            position: relative;
+            justify-content: space-around;
+
+        }
+        .vazio{
+            height: 2rem;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+        <div class="flex-container">
+        <h2 >Olá {{nome}} {{sobrenome}}, para finalizar seu cadastro, por favor clique no link abaixo.</h2>
+        </div>
+
+        <div class="flex-container-nmr-pedido">
+            <h3>
+                Nmr do pedido
+            </h3>
+        </div>
+       
+        <div class="flex-container-infos-pay">
+            <div class="vazio"></div>
+            <div>Numero</div>
+            <div>Numero</div>
+        </div>
+    
+</body>
+</html>

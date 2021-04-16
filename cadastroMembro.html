@@ -108,6 +108,17 @@
             height: 2rem;
             margin-top: 1rem;
         }    
+        .inputTipo3{
+            background-color: #D0E1FC;
+            border-bottom: solid #97B9F1 3px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            height: 2rem;
+            
+            
+        }
         
         .flex-container-boas-vindas{
             display: flex;
@@ -209,6 +220,7 @@
                 width: 80%;
                 margin: rem;
             }
+            
             .inputTipo2{
                 width: 80%;
                 margin: rem;
@@ -238,7 +250,21 @@
                 justify-content: center;
             }
             
-        }
+            }
+            .inputTipo1:focus,.EscrevaSobreVc:focus,.inputTipo3{
+                    outline-color: #FC7600;
+                    
+                    
+                }
+                .displayFlexColumn{
+                    display: flex;
+                    flex-direction: column;
+                    width: 35%;
+                }
+                label{
+                   font-family: Lato;
+                }
+               
     </style>
 
 </head>
@@ -262,11 +288,23 @@
             </div>
             <div class="flex-container-boas-vindas"><h2>Seja bem-vindo!</h2></div>
             
-            <form >
+            <form id="cadastroMembro">
+                
                 <div class="flex-container-nome">
-                    
+                    <div class="displayFlexColumn" >
+                        
+                        <input class="inputTipo3" placeholder="Nome completo" maxlength="50" type="text" name="Nome" id="Nome">
+                    </div>
+                    <div class="displayFlexColumn" >
+                        
+                        <input class="inputTipo3" placeholder="Email" type="email" name="email" id="email">
+                    </div>
+                    <!-- <label for="Nome">Nome</label>
                     <input class="inputTipo1" placeholder="Nome completo" type="text" name="Nome" id="Nome">
-                    <input class="inputTipo1" placeholder="Email" type="email" id="Email">
+                    <label>E-mail
+                        <input class="inputTipo1" placeholder="Email" type="email" id="Email">
+                    </label> -->
+                    
                 </div>
                 <div class="flex-container-nome">
                     <input class="inputTipo1" placeholder="Tel/Cel" type="text" name="Telefone" id="Telefone">
@@ -289,12 +327,13 @@
                 <div class="flex-container-nome">
                     <div class="text">Você tem experiência com fotografia?
                         <div>
-                            <input type="radio" class="botãoRadio">Sim
-                            <input type="radio" class="botãoRadio">Não
+                            <input type="radio" name="experiencia" class="botãoRadio" value="true">Sim
+                            <input type="radio" name="experiencia" class="botãoRadio" value="false">Não
                         </div>
                     </div>
                     <div class="text">Conte-nos um pouco mais. Se preferir pode gravar um áudio!
                         <input type="text" placeholder="Escreva sobre você" class="EscrevaSobreVc"> 
+                        <input type="file" accept="audio/*;capture=microphone">
                     </div>
                 </div>
                 <div class="flex-container-nome">
@@ -311,7 +350,7 @@
                     <input class="inputTipo1" placeholder="Confirmar Senha" type="email" id="Email">
                </div>
                <div class="flex-container-nome">
-                <input class ="botao" type="button" value="Enviar">
+                <input class ="botao" type="submit" value="Enviar">
             </div>
             </form>
 
