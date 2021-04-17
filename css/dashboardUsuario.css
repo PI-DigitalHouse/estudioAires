@@ -206,12 +206,25 @@ h2{
     position: absolute;
     bottom: 0px;
     right: 0px;
+    display: flex;
 }
 
-.rodape a{
+.rodape p{
+    margin-right: 57px;
+}
+
+
+
+.cancelamento{
+    border: none;
+    font-size: 9rem;
+    margin-top: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: white;
     text-decoration: underline;
 }
-
 
 /* footer */
 .container-footer{
