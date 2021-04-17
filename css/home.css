@@ -161,7 +161,7 @@ nav{
 
 .quem-somos{
     width: 100%;
-    height: 100%;
+    height: 209vh;
     background-image: url(../images/quem-somos/backgroundImgOpc3.jpg);
     background-position: center;
     background-attachment: fixed;
@@ -240,22 +240,78 @@ nav{
 
 .parceiros{
     width: 100%;
-    height: 100%;
+    height: 216.5vh;
     background-image: url(../images/parceiros/backgroundImgOpc3.png);
     background-position: center;
     background-attachment: fixed;
 }
 
 .parceiros h2{
-    width: 29%;
-    margin: 0 6.5%;
-    padding: 4.2% 0;
+    width: 100%;
+    padding: 67.33px 0 26.88px 104px;
 
     font-family: 'Lato';
     font-weight: 700;
     font-size: 64rem;
     line-height: 77px;
     color: #000000;
+}
+
+.listaParceiros-direita{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.listaParceiros-direita img{
+    height: 23vh;
+    margin: -2% 16.9% 5.2% 0;
+    padding: 0 0 0 13%;
+}
+
+.listaParceiros-direita h4{
+    font-size: 36rem;
+    font-weight: 600;
+    font-family: 'Lato';
+    margin: 1.7% 41.2% 0 48%;
+    color: #F2994A;
+}
+
+.listaParceiros-direita p{
+    width: 32.9%;
+    font-size: 22rem;
+    text-align: end;
+    color: #212121;
+}
+
+
+.listaParceiros-esquerda{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.listaParceiros-esquerda img{
+    height: 23vh;
+    margin: 5.2% 0 5.2% 13.2%;
+    padding: 0 0 0 13%;
+}
+
+.listaParceiros-esquerda h4{
+    font-size: 36rem;
+    font-weight: 600;
+    font-family: 'Lato';
+    margin: -17.5% 31.2% 0 48.4%;
+    color: #F2994A;
+}
+
+.listaParceiros-esquerda p{
+    width: 32.9%;
+    font-size: 22rem;
+    text-align:start;
+    margin: -14% 0 0 48.5%;
+    color: #212121;
 }
 
 /* footer */
