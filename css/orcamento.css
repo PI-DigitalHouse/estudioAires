@@ -1,44 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
      
   
-    * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-    }
-    body {
-        background-image: url("body-backgrounds/bg-opacity.png");
-        font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
-    }
-    nav {
-        display: flex;
-        width: 100%;
-        
-        background: #222;
-        opacity: 0.8;
-        padding: 0 15px;
-        justify-content: space-between;
-    }
-    a {
-        color:orange;
-        text-decoration: none;
-    }
-    .menu{   
-        display: flex;
-        list-style-type: none;
-    }
-    .logo {
-        font-size: 20px;
-        padding: 7.5px 10px 7.5px 0;
-    }
-    .item {
-        width: 150px;
-        text-align:center;
-        background-color: rgb(7, 7, 7);
-    }
-    .button {
-        padding: 9px 5px;
-        margin-left: 550px;
-    }
+html{
+    font-size: 6.25%;
+}
+
+body{
+    font-family: Arial;
+    font-size: 16rem;
+    background-image: url("body-backgrounds/bg-opacity.png");
+    margin: 0px;
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: flex;
+ 
   
+}
+.card-login{
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+    width: 1160px;
+    height: 600px;   
+    border: 2.8px solid #FC7600;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
+    border-radius: 18px;
+    background-color: white;
+    text-align: center;
+    
+}
+.container{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.menu-lateral{
+    display: flex;
+    background-color: greenyellow;
+    width: 450px;
+    height: 35em;
+    border-radius: 18px;
+
+}
+
+.acao-central{
+    background-color: hotpink;
+    width: 650px;
+    height: 35em;
+    border-radius: 18px;
+    margin-left: 50px;
+}
+.title{
+    display: grid;
+    place-content: center;
+    width: 450px;
+    height: 2em;
+    border-radius: 5px;
+    background-color:#FC7600;
+    padding: 2px;
+    font-weight: bold;
+    
+}  
