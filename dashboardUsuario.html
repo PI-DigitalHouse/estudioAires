@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/dashboardUsuario.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/square-logo-lineorange.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <img class="logo" src= "images/square-logo-noOpacity.png" alt="Logo Estudio Aires">
+        <a href="TBC"><img class="logo" src= "images/square-logo-noOpacity.png" alt="Logo Estudio Aires"></a>
         <nav>
             <ul>
                 <li><a id = "selected" href="TBC">Solicitações</a></li>
@@ -23,19 +26,25 @@
         </div>
     </header>
     <div class="ordenacao">
-        <div>
+        <div class="cronos">
             <p>Ordenar por:</p>
-            <p>Mais nova a mais antiga (drop)</p>
+            <select name="ordCronologica" id="ordCronologica" class="dropdown">
+                <option value="mais nova a mais antiga">Mais nova a mais antiga</option>
+                <option value="mais antiga a mais nova">Mais antiga a mais nova</option>
+            </select>
         </div>
-        <div>
-            <p>Filtrar solicitações: </p>
-            <p>Todas (drop)</p>
-        </div>
+        <p>Filtrar solicitações: </p>
+        <select name="filtro" id="filtro" class="dropdown">
+            <option value="imagens postadas">Imagens postadas </option>
+            <option value="fotografo editando">Fotógrado está editando as imagens</option>
+            <option value="sessao em andamento">Sessão em andamento</option>
+            <option value="sessao agendada">Sessão agendada</option>
+        </select>
     </div>
 
     <div class="containerServico">
         <div class="containerEsquerda">
-            <div class="servicoConcluido1">
+            <div class="servicoContratado1">
                 <h2>Número serviço: 00002</h2>
             
                 <div class="info">
@@ -56,7 +65,7 @@
                 </div>
             </div>
 
-            <div class="servicoConcluido2">
+            <div class="servicoContratado2">
                 <br>
                 <div class="info">
                     <p class="tipo1">Serviços contratados:</p>
@@ -69,11 +78,24 @@
     
         <div class="containerDireita">
             <div class="status">
-                <!-- <div class="step" id= "0"></div>
-                <div class="step" id= "1"></div>
-                <div class="step" id= "2"></div>
-                <div class="step" id= "3"></div> -->
+                <div class="fases">
+                    <p>Sessão agendada</p>
+                    <p>Sessão em andamento</p>
+                    <p>Imagens em edição</p>
+                    <p>Imagens postadas</p>
+                </div> 
             </div>
+
+            <div class="farol">
+                <div class="bolinhas">
+                    <div class="bolaOk"> 1 </div>
+                    <div class="bolaOk"> 2 </div>
+                    <div class="bolaOk"> 3 </div>
+                    <div class="bolaOk"> 4 </div>     
+                </div>
+                <div class="linha">  </div>
+            </div>
+
             <div class="botoes">
                 <form>
                     <div class="prestador">
@@ -91,7 +113,7 @@
 
     <div class="containerServico">
         <div class="containerEsquerda">
-            <div class="servicoConcluido1">
+            <div class="servicoContratado1">
                 <h2>Número serviço: 00003</h2>
             
                 <div class="info">
@@ -112,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="servicoConcluido2">
+            <div class="servicoContratado2">
                 <br>
                 <div class="info">
                     <p class="tipo1">Serviços contratados:</p>
@@ -125,10 +147,22 @@
     
         <div class="containerDireita">
             <div class="status">
-                <!-- <div class="step" id= "0"></div>
-                <div class="step" id= "1"></div>
-                <div class="step" id= "2"></div>
-                <div class="step" id= "3"></div> -->
+                <div class="fases">
+                    <p>Sessão agendada</p>
+                    <p>Sessão em andamento</p>
+                    <p>Imagens em edição</p>
+                    <p>Imagens postadas</p>
+                </div> 
+            </div>
+
+            <div class="farol">
+                <div class="bolinhas">
+                    <div class="bolaOk"> 1 </div>
+                    <div class="bolaOk"> 2 </div>
+                    <div class="bola"> 3 </div>
+                    <div class="bola"> 4 </div>     
+                </div>
+                <div class="linha">  </div>
             </div>
             <div class="botoes">
                 <div class="prestador">
@@ -140,7 +174,7 @@
 
     <div class="containerServico">
         <div class="containerEsquerda">
-            <div class="servicoConcluido1">
+            <div class="servicoContratado1">
                 <h2>Número serviço: 00004</h2>
             
                 <div class="info">
@@ -161,7 +195,7 @@
                 </div>
             </div>
 
-            <div class="servicoConcluido2">
+            <div class="servicoContratado2">
                 <br>
                 <div class="info">
                     <p class="tipo1">Serviços contratados:</p>
@@ -174,22 +208,35 @@
     
         <div class="containerDireita">
             <div class="status">
-                <!-- <div class="step" id= "0"></div>
-                <div class="step" id= "1"></div>
-                <div class="step" id= "2"></div>
-                <div class="step" id= "3"></div> -->
+                <div class="fases">
+                    <p>Sessão agendada</p>
+                    <p>Sessão em andamento</p>
+                    <p>Imagens em edição</p>
+                    <p>Imagens postadas</p>
+                </div> 
+            </div>
+
+            <div class="farol">
+                <div class="bolinhas">
+                    <div class="bolaOk"> 1 </div>
+                    <div class="bola"> 2 </div>
+                    <div class="bola"> 3 </div>
+                    <div class="bola"> 4 </div>     
+                </div>
+                <div class="linha">  </div>
             </div>
             <div class="botoes">
                 <div class="prestador">
                     <a href="TBC"> Informações prestador</a>
                 </div>
             </div>
+            <p class="rodape">Ocorreu algum imprevisto e precisa cancelar essa sessão? <a href="TBC">Clique aqui</a></p>
         </div>
     </div>
 
-    <div class="containerServico">
+    <div class="containerServicoCancelado">
         <div class="containerEsquerda">
-            <div class="servicoConcluido1">
+            <div class="servicoContratado1">
                 <h2>Número serviço: 00005</h2>
                 <h3>CANCELADO</h3>
                 <div class="info">
@@ -211,7 +258,7 @@
                 
             </div>
 
-            <div class="servicoConcluido2">
+            <div class="servicoContratado2">
                 <br>
                 <div class="info">
                     <p class="tipo1">Serviços contratados:</p>
@@ -224,10 +271,22 @@
     
         <div class="containerDireita">
             <div class="status">
-                <!-- <div class="step" id= "0"></div>
-                <div class="step" id= "1"></div>
-                <div class="step" id= "2"></div>
-                <div class="step" id= "3"></div> -->
+                <div class="fases">
+                    <p>Sessão agendada</p>
+                    <p>Sessão em andamento</p>
+                    <p>Imagens em edição</p>
+                    <p>Imagens postadas</p>
+                </div> 
+            </div>
+
+            <div class="farol">
+                <div class="bolinhas">
+                    <div class="bola"> 1 </div>
+                    <div class="bola"> 2 </div>
+                    <div class="bola"> 3 </div>
+                    <div class="bola"> 4 </div>     
+                </div>
+                <div class="linha">  </div>
             </div>
             <div class="botoes">
                 <div class="entregaveis">
@@ -237,34 +296,46 @@
         </div>
     </div>
 
-    <div class="separador">
 
-    </div>
-
-    <footer>
-        <ul>
-            <li><h2>Conheça</h2></li>
-            <li><a href="TBC">Quem Somos</a></li>
-            <li><a href="TBC">Portfolio</a></li>
-            <li><a href="TBC">Orçamento</a></li>
-            <li><a href="TBC">Cadastre-se</a></li>
-        </ul>
-        <ul>
-            <li><h2>Privacidade</h2></li>
-            <li><a href="TBC">Termos e Condições de uso</a></li>
-        </ul>
-        <ul>
-            <li><h2>Contato</h2></li>
-            <li><a href="TBC">Fale conosco</a></li>
-        </ul>
-        
-        <div class="logos">
-        <img class="logo" src= "images/square-logo-noOpacity.png" alt="Logo Estudio Aires">
-        <div class="redes">
-            <a href="TBC"><img class ="redeSocial" src="images/icons/icone_instagram.png" alt="Logo Instagram"></a>
-            <a href="TBC"><img class ="redeSocial" src="images/icons/icone_facebook.png" alt="Logo Facebook"></a>
-            <a href="TBC"><img class ="redeSocial" src="images/icons/icone_email.png" alt="Logo Email"></a>
-        </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>conheça</h4>
+                    <ul>
+                        <li><a href="#">quem somos</a></li>
+                        <li><a href="#">portifólio</a></li>
+                        <li><a href="#">orçamento</a></li>
+                        <li><a href="#">cadastre-se</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Contate-nos</h4>
+                  <ul>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">telefone</a></li>
+                      <li><a href="#">whatsapp <i class="fab fa-whatsapp"></i></a></li>
+                      <li><a href="#">ipDoEmail@email.com</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>privacidade</h4>
+                  <ul>
+                      
+                      <li><a href="#">termos</a></li>
+                      <li><a href="#">condições de uso</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Siga-nos</h4>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+            </div>
         </div>
     </footer>
 

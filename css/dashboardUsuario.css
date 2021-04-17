@@ -3,83 +3,10 @@ html{
 }
 
 body{
-    font-family: 'Quicksand';
+    font-family: Arial;
     font-size: 16rem;
-}
-
-/* header */
-
-header{
-    background-color: #666;
-    color:#FC7600;
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position:fixed;
-    top:0
-}
-
-header img.logo{
-    width: 120px;
-    margin: 1.5px;
-    height: 120px;
-
-}
-
-nav{
-    width: 60%;
-}
-
-#selected{
-    background-color: white;
-    color: black;
-    padding: 10px 60px 17px 60px;
-    border-radius: 10px 10px 0px 0px;
-}
-
-#selected:hover{
-    color: #666666;
-}
-
-nav ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-
-}
-
-nav li{
-    width: 50%;
-
-}
-nav li a{
-    color:#FC7600;
-    text-decoration: none;
-}
-
-nav li a:hover{
-    color:#db7012;
-}
-
-.usuario{
-    width:20%;
-    margin-bottom: 15px;
-}
-
-.usuario a{
-    color:#FC7600;
-    text-decoration: none;
-}
-
-.usuario a:hover{
-    color:#db7012;
-}
-
-.fotoPerfil{
-    border-radius: 50%;
-    width: 30%;
+    background-image: url("body-backgrounds/bg-opacity.png");
+    margin: 0px;
 }
 
 /* ordenação */
@@ -89,12 +16,17 @@ nav li a:hover{
     justify-content: flex-end;
 }
 
-.ordenacao div{
-    margin: 5px
+.dropdown{
+    height: fit-content;
 }
 
-.ordenacao p{
-    display: inline;
+.cronos{
+    display: flex;
+    margin-right: 15px;
+}
+
+p{
+    margin: 0  5px 0 0;
 }
 
 /* serviços */
@@ -105,6 +37,19 @@ nav li a:hover{
     margin: 20px;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    background-color:white;
+    justify-content: center;
+}
+
+.containerServicoCancelado{
+    display: flex;
+    border: 2px solid #fff ;
+    margin: 20px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color:white;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
 .containerEsquerda{
@@ -112,7 +57,19 @@ nav li a:hover{
     width: 50%;
 }
 
-.servicoConcluido1 .info p{ 
+h2{
+    font-size: 22rem;
+}
+
+.info{
+    font-size: 14rem;
+}
+
+.servicoContratado1{
+    margin-top: 10px;
+}
+
+.servicoContratado1 .info p{ 
     display: inline;
 }
 
@@ -120,12 +77,17 @@ nav li a:hover{
     font-weight: bold;
 }
 
-.servicoConcluido2{
+.servicoContratado2{
     margin: 50px;
 }
 
-.servicoConcluido2 .info p{
+.servicoContratado2 .info p{
     margin: 0px
+}
+
+.containerDireita{
+    margin-right: 20px;
+    position: relative;
 }
 
 .containerDireita a{
@@ -137,8 +99,24 @@ nav li a:hover{
 .status{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    margin-top: 15px;
 }
+
+.fases{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12rem;
+
+}
+
+.fases p{
+    text-align: center;
+    margin-left: 10px;
+}
+
 
 .step{
     width: 20px;
@@ -148,88 +126,176 @@ nav li a:hover{
     border-radius: 50%;
 }
 
+.farol{
+    position: relative;
+}
+
+.bolinhas{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+.bolaOk{
+    height: 25px;
+    width: 25px;
+    background-color:#27AE60;
+    border: #ACACA6 solid 1px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.bola{
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border: #ACACA6 solid 1px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.linha{
+    position: absolute;
+    background: #ACACA6 ;
+    width: 75%;
+    height: 1.5px;
+    margin-left: 60px;
+    top: 15px;
+}
+
 .botoes{
-    display: flex
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
 }
 
 .botoes .prestador{
     border: 1.5px solid #BFBFBF;
     background-color: white;
     border-radius: 10px;
-    font-family: 'Quicksand';
     padding: 5px;
-    font-size: 16rem;
+    font-size: 14rem;
     color: black;
     
 }
 
-/* .botoes .prestador:hover{
-    background-color:#BFBFBF;
-} */
-
-.botoes .entregaveis{
-    border: 1.5px solid #BFBFBF;
-    background-color:#FC7600;
-    border-radius: 10px;
-    font-family: 'Quicksand';
-    padding: 5px;
-    font-size: 16px;
+.botoes .prestador:hover{
+    background-color:#d4d4d4;
+    border: 1.5px solid #d4d4d4;
 }
 
-/* .botoes .entregaveis:hover{
-    background-color: #fc9337;
-} */
+.botoes .entregaveis{
+    border: 1.5px solid #FC7600;
+    background-color:#FC7600;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14rem;
+}
 
-/* separador */
+.botoes .entregaveis:hover{
+    background-color: #fa8d2e;
+    border: 1.5px solid #fa8d2e;
+}
 
-.separador{
-    background-color: #2121219a;
-    height: 2px;
-    width: 80%;
-    margin:auto;
+.rodape{
+    font-size: 9rem;
+    margin-top: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.rodape a{
+    text-decoration: underline;
 }
 
 
 /* footer */
+.container-footer{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+    padding:0px
+}
 
 footer{
-    display: flex;
-    justify-content: space-between;
+    background: #F5F4F6;
+    padding: 70px 0;
 }
 
-footer ul{
-    list-style-type: none;
+.footer-col{
+    width: 25%;
+    /* padding: 0 15px; */
+
 }
 
-footer li{
-    padding: 5px;
+.footer-col h4{
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    color: #FC7600;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
 }
 
-footer li a{
-    color:black;
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #81A8E7;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: capitalize;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: 300;
+    color: #81A8E7;
+    display: block;
+    transition: all 0.3s ease;
 }
 
-footer li a:hover{
-    color: #666666;
+.footer-col ul li a:hover{
+    color: #FC7600;
+    padding-left: 8px;
 }
 
-footer img.logo{
-    width: 120px;
-    margin: 50px 40px 0px 20px;
-    height: 120px;
-
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    background: #81A8E7;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease-out;
 }
 
-.redeSocial{
-    width: 20px;
-    height: 20px;
-    margin: 5px;
-    }
-
-.redes{
-    display: flex;
-    justify-content: flex-end;
-    margin: 40px;
-    
+.footer-col .social-links a:hover{
+    cursor: pointer;
+    transform: translateY(-15px);
 }
