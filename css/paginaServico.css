@@ -273,6 +273,7 @@ footer{
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
+
         header{
             width: 100%;
             height: 150vh;
@@ -324,6 +325,32 @@ footer{
   
   /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
+        .back-button p {
+            margin: 45% 0 0 0;
+            font-size: 26rem;
+        }
+
+        header {
+            height: 80vh;
+        }
+
+        header h1 {
+            right: 40%;
+        }
+
+        button {
+            margin: 9.7% 0 0 5.6%;
+        }
+
+        .descricaoServico p {
+            font-size: 28rem;
+        }
+
+        .descricaoServico img {
+            width: 70%;
+            height: 56vh;
+            margin: 2.4% 5.4% 6% 16%;
+        }
     
     }
   
