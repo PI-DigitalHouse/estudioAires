@@ -207,31 +207,31 @@ footer{
     @media only screen and (max-width: 600px) {
         header{
             width: 100%;
+            height: 81vh;
         }
 
         .back-button p {
-            margin: 93% 0 0 0;
+            margin: 90% 0 0 0;
         }
 
         header h1 {
             font-size: 50rem;
-            top: 8%;
-            right: 24%;
+            top: 10%;
+            right: 31%;
         }
 
         header p {
             width: 97%;
-            font-size: 19rem;
-            margin: 36.8% 0 0 0;
+            font-size: 27rem;
+            margin: 16.8% 2% 0 2%;
             color: #212121;
             text-align: center;
             align-self: center;
         }
 
         button {
-            margin: 31.7% 0 0 0;
-            height: 5%;
-            width: 100%;
+            margin: 16.7% 0 0 4%;
+            width: 46%;
         }
 
         button a {
@@ -276,7 +276,7 @@ footer{
 
         header{
             width: 100%;
-            height: 150vh;
+            height: 77vh;
         }
 
         .back-button p {
@@ -331,7 +331,7 @@ footer{
         }
 
         header {
-            height: 80vh;
+            height: 66vh;
         }
 
         header h1 {
@@ -347,16 +347,16 @@ footer{
         }
 
         .descricaoServico img {
-            width: 70%;
-            height: 56vh;
-            margin: 2.4% 5.4% 6% 16%;
+            width: 100%;
+            height: 67vh;
+            margin: 2.4% 5.4% 6% 0%;
         }
     
     }
   
   /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-    
+    @media only screen and (min-width: 992px) { 
+
     }
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
