@@ -25,7 +25,7 @@ body{
 }
 
 .back-button p{
-    margin: 22% 0 0 0;
+    margin: 25% 0 0 0;
     font-size: 21rem;
 }
 
@@ -204,7 +204,7 @@ footer{
 /* media queries */
 
 /* Extra small devices (phones, 600px and down) - referência Chrome: Pixel 2 (411 x 731)  */
-    @media only screen and (max-width: 600px) {
+    /* @media only screen and (max-width: 600px) {
         header{
             width: 100%;
             height: 75vh;
@@ -271,12 +271,12 @@ footer{
         .footer-col ul li a {
             font-size: 11rem;
         }
-    }
+    } */
   
   /* Small devices (portrait tablets and large phones, 600px and up) - referência Chrome: responsive - 600x731 */
-    @media only screen and (min-width: 600px) {
+    /* @media only screen and (min-width: 600px) { */
         /* header */
-        header{
+        /* header{
             width: 100%;
             height: 77vh;
         }
@@ -299,10 +299,10 @@ footer{
         button {
             height: 53rem;
             margin: 17.7% 0 0 5.6%;
-        }
+        } */
 
         /* descrição do serviço */
-        .descricaoServico {
+        /* .descricaoServico {
             flex-direction: column;
         }
 
@@ -327,19 +327,19 @@ footer{
         .descricaoServico img {
             width: 100%;
             height: 100vh;
-        }
+        } */
 
         /* footer */
-        .footer-col .social-links a {
+        /* .footer-col .social-links a {
             height: 29px;
             width: 28px;
         }
         
         
-    }
+    } */
   
   /* Medium devices (landscape tablets, 768px and up) - referência Chrome: responsive - 768x744 */
-    @media only screen and (min-width: 768px) {
+    /* @media only screen and (min-width: 768px) {
         .back-button p {
             margin: 82% 0 0 0;
             font-size: 26rem;
@@ -368,17 +368,17 @@ footer{
             height: 100vh;
         }
     
-    }
+    } */
   
   /* Large devices (laptops/desktops, 992px and up) - referência Chrome: responsive - 922x744 */
-    @media only screen and (min-width: 992px) { 
+    /* @media only screen and (min-width: 992px) { 
         button {
             top: 40%;
         }
-    }
+    } */
   
   /* Extra large devices (large laptops and desktops, 1200px and up) - referência Chrome: responsive - 1200x744 */
-    @media only screen and (min-width: 1200px) {
+    /* @media only screen and (min-width: 1200px) {
         .back-button p {
             margin: 46% 0 0 0;
         }      
@@ -405,4 +405,4 @@ footer{
             height: 100vh;
             margin: 0;
         }
-    }
+    } */
