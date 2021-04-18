@@ -11,7 +11,7 @@ body{
 
 /* ordenação */
 .ordenacao{
-    margin-top: 140px;
+    margin-top: 20px;
     display: flex;
     justify-content: flex-end;
 }
