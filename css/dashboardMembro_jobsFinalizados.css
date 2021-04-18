@@ -10,6 +10,28 @@ body{
 }
 
 
+/* ordenação */
+.ordenacao{
+    margin-top: 20px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdown{
+    height: fit-content;
+}
+
+.cronos{
+    display: flex;
+    margin-right: 15px;
+}
+
+p{
+    margin: 0  5px 0 0;
+}
+
+
 .containerServico{
     display: flex;
     border: 2px solid #fff ;
