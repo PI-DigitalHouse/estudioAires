@@ -1,0 +1,103 @@
+html{
+    font-size: 6.25%;
+}
+
+body{
+    font-family: Arial;
+    font-size: 16rem;
+    background-image: url("body-backgrounds/bg-opacity.png");
+    margin: 0px;
+}
+
+
+.containerServico{
+    display: flex;
+    border: 2px solid #fff ;
+    margin: 20px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color:white;
+    justify-content: space-around;
+}
+
+.containerEsquerda{
+    display: flex;
+    width: 60%;
+    margin-left: 40px;
+}
+
+h2{
+    font-size: 22rem;
+}
+
+.info{
+    font-size: 14rem;
+}
+
+.servicoContratado1{
+    margin-top: 10px;
+}
+
+.servicoContratado1 .info p{ 
+    display: inline;
+}
+
+.tipo1{
+    font-weight: bold;
+}
+
+.servicoContratado2{
+    margin: 50px;
+}
+
+.servicoContratado2 .info p{
+    margin: 0px
+}
+
+.servicoContratado3{
+    margin-top: 70px;
+}
+
+.servicoContratado3 .info p{ 
+    display: inline;
+}
+
+.tipo2{
+    font-weight: bold;
+    text-decoration: underline;  
+}
+
+.containerDireita{
+    width: 20%;
+    margin-right: 100px;
+}
+
+.informacoes{
+    font-size: 12rem;
+    text-align: end;
+}
+
+.botoes{
+    margin-top: 30px;
+}
+
+.botoes p{
+    margin: 0px;
+    text-align: center;
+}
+
+.botoes .entregaveis{
+    border: 1.5px solid #FC7600;
+    background-color:#FC7600;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14rem;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.botoes .entregaveis:hover{
+    background-color: #fa8d2e;
+    border: 1.5px solid #fa8d2e;
+}
+
