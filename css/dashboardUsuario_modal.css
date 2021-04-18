@@ -1,0 +1,30 @@
+html{
+    font-size: 6.25%;
+}
+
+body{
+    font-family: Arial;
+    height: 40vh;
+    width: 50vw;
+}
+
+h3{
+    font-size: 18rem;
+}
+
+.botao{
+    border: 1.5px solid #BFBFBF;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 30px;
+    font-size: 16rem;
+    color: black;
+    width: 10%;
+    margin: 10px;
+    
+}
+
+.botao:hover{
+    background-color:#d4d4d4;
+    border: 1.5px solid #d4d4d4;
+}
