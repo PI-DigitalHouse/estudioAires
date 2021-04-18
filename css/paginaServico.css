@@ -13,6 +13,66 @@ body{
     margin: auto;
 }
 
+/* header */
+header{
+    background: url(/images/servicos/headerPaginaServico.png);
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header h1{
+    font-size: 64rem;
+    font-family: 'Lato';
+    color:#212121;
+    align-self: flex-end;
+    
+}
+
+header p{
+    width: 525px;
+    font-size: 24rem;
+    color: #212121;
+    text-align: end;
+    align-self: center;
+}
+
+button{
+    background: #FC7600;
+    border: 1px solid #FC7600;;
+    border-radius: 18rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 309rem;
+    height: 66rem;
+}
+
+button a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 30rem;
+}
+
+.descricaoServico{
+    display: flex;
+}
+
+.descricaoServico p{
+    font-size: 24rem;
+    color: #212121;
+    text-align: end;
+}
+
+.paragraph2{
+    align-self: flex-end;
+}
+
+.paragraph1{
+    
+}
+
+
 /* footer */
 
 body{
