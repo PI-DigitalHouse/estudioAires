@@ -9,7 +9,6 @@ body{
     margin: 0px;
 }
 
-
 .containerServico{
     display: flex;
     border: 2px solid #fff ;
@@ -22,7 +21,7 @@ body{
 
 .containerEsquerda{
     display: flex;
-    width: 60%;
+    width: 40%;
     margin-left: 40px;
 }
 
@@ -47,29 +46,29 @@ h2{
 }
 
 .servicoContratado2{
-    margin: 50px;
+    margin-left: 60px;
+    margin-top: 50px;
 }
 
 .servicoContratado2 .info p{
     margin: 0px
 }
 
-.servicoContratado3{
-    margin-top: 70px;
+.containerCentro{
+       width: 20%;
 }
 
-.servicoContratado3 .info p{ 
-    display: inline;
+.containerCentro p{
+    margin-top: 30px;
 }
 
-.tipo2{
-    font-weight: bold;
-    text-decoration: underline;  
+label{
+    font-size: 14rem;
 }
 
 .containerDireita{
     width: 20%;
-    margin-right: 100px;
+    margin-right: 40px;
 }
 
 .informacoes{
@@ -116,4 +115,3 @@ h2{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
 }
-

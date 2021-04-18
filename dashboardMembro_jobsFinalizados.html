@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Agenda</title>
+    <title>Jobs Finalizados</title>
     <link rel="shortcut icon" href="images/square-logo-lineorange.png">
-    <link rel="stylesheet" href="css/dashboardMembro_minhaAgenda.css">
+    <link rel="stylesheet" href="css/dashboardMembro_jobsFinalizados.css">
     <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
@@ -15,8 +15,8 @@
         <nav>
             <ul>
                 <li><a href="TBC">Aprovações</a></li>
-                <li><a id = "selected" href="TBC">Minha Agenda</a></li>
-                <li><a href="TBC">Jobs Finalizados</a></li>
+                <li><a href="TBC">Minha Agenda</a></li>
+                <li><a id = "selected" href="TBC">Jobs Finalizados</a></li>
             </ul>
         </nav>
         <div class="usuario">
@@ -27,6 +27,17 @@
     </header>
 
     <main>
+        <div class="ordenacao">
+            <div class="cronos">
+                <p>Ordenar por:</p>
+                <select name="ordCronologica" id="ordCronologica" class="dropdown">
+                    <option value="mais nova a mais antiga">Mais nova a mais antiga</option>
+                    <option value="mais antiga a mais nova">Mais antiga a mais nova</option>
+                </select>
+            </div>
+            <p> Buscar: </p>
+            <input type="text" name="nome">
+        </div>
         <div class="containerServico">
             <div class="containerEsquerda">
                 <div class="servicoContratado1">
@@ -83,11 +94,8 @@
             <div class="containerDireita">
                 <div class="botoes">
                     <div class="entregaveis">
-                        <p>Upload arquivos</p> 
+                        <p>Ver arquivos</p> 
                     </div> 
-                    <div class="prestador">
-                        <p>Finalizar</p> 
-                    </div>
                 </div>
             </div>
         </div>
@@ -148,11 +156,8 @@
             <div class="containerDireita">
                 <div class="botoes">
                     <div class="entregaveis">
-                        <p>Upload arquivos</p> 
+                        <p>Ver arquivos</p> 
                     </div> 
-                    <div class="prestador">
-                        <p>Finalizar</p> 
-                    </div>
                 </div>
             </div>
         </div>
@@ -213,11 +218,8 @@
             <div class="containerDireita">
                 <div class="botoes">
                     <div class="entregaveis">
-                        <p>Upload arquivos</p> 
+                        <p>Ver arquivos</p> 
                     </div> 
-                    <div class="prestador">
-                        <p>Finalizar</p> 
-                    </div>
                 </div>
             </div>
         </div>
