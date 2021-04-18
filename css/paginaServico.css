@@ -200,3 +200,95 @@ footer{
     cursor: pointer;
     transform: translateY(-15px);
 }
+
+/* media queries */
+
+/* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        header{
+            width: 100%;
+        }
+
+        .back-button p {
+            margin: 93% 0 0 0;
+        }
+
+        header h1 {
+            font-size: 50rem;
+            top: 8%;
+            right: 24%;
+        }
+
+        header p {
+            width: 97%;
+            font-size: 19rem;
+            margin: 36.8% 0 0 0;
+            color: #212121;
+            text-align: center;
+            align-self: center;
+        }
+
+        button {
+            margin: 31.7% 0 0 0;
+            height: 5%;
+            width: 100%;
+        }
+
+        button a {
+            font-size: 20rem;
+        }
+
+        .descricaoServico {
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .descricaoServico p {
+            text-align: center;;
+        }
+
+        .paragraph1{
+            left: 0;
+        }
+
+        .paragraph2{
+            margin: 8% 0 3% 0;
+        }
+
+        .descricaoServico img {
+            width: 80%;
+            height: 40vh;
+            margin: 2.4% 0 6% 0;
+            align-self: center;
+        }
+
+        .footer-col h4 {
+            font-size: 11px;
+        }
+
+        .footer-col ul li a {
+            font-size: 11rem;
+        }
+    }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+    header {background: green;}
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+    header {background: blue;}
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+    header {background: orange;}
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        header {
+            background: pink;
+        }
+    }
