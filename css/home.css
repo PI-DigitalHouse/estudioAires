@@ -3,6 +3,8 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html{
@@ -16,54 +18,59 @@ body{
     margin: auto;
 }
 
-/* header */
+li, a, button{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: #edf0f1;
+    text-decoration: none;
+}
 
 header{
-    background: url(../images/home/header.png);
-    background-size: cover;
-    height: 100vh;
+    height: 18vh;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
-}
-
-.icons-header{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-}
-
-.logo-icon{
-    margin: 2.5% 1.9%;
-}
-
-.button-login{
-    width: 10%;
-    height: 1%;
-    margin-top: 8.5%;
-}
-
-/* nav bar */
-
-nav{
-    margin: 0 0 0 17%;
-}
-
-.nav-container ul {
-    width: 1070px;
-    height: 91px;
-    list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: rgba(0, 0, 0, .2);
 }
 
-.nav-container ul li a{
-    color: #212121;
-    text-decoration: none;
-    font-size: 25rem;
+.logo{
+    cursor: pointer;
 }
 
-.nav-container ul li a:hover{
-    border-bottom: 2px solid #FC7600;
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a:hover{
+    border-bottom: 3px solid #FC7600;
+}
+
+button{
+    padding: 10px 25px;
+    background: rgba(252, 118, 0, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background: rgba(252, 118, 0, 0.8);
+}
+
+video{
+    width: 100%;
 }
 
 /* sessão portfólio */

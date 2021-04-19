@@ -11,33 +11,26 @@
     </head>
 
     <body>
-        <header>
-            <div class="icons-header">
 
-                <img class="logo-icon" src="./images/square-logo.png" alt="Logo para Estúdio Aires">
-                <img class="button-login" src="./images/icons/login-icon.png" alt="Imagem para ícone de login.">
-
+        <div class="banner-area"><!--Vídeo de entrada do site-->
+            <div class="banner">
+                <video autoplay muted loop>
+                    <source src="./images/landing-page/teste.mov" type="video/mp4">
+                </video>
             </div>
-
-        </header>
-
-        <main>  
-            <!-- div criada para viabilizar o background fixo, de acordo com o design do Figma. -->
-            <div class="backgroundNav-Portfolio">
-
-                <!-- início da nav -->
-                <nav>
-                    <div class="nav-container">
-                        <ul>
-                            <li class="lista-menu"><a href="#"> Home </a></li>
-                            <li class="lista-menu"><a href="servicos"> Serviços </a></li>
-                            <li class="lista-menu"><a href="quem-somos"> Quem Somos</a></li>
-                            <li class="lista-menu"><a href="parceiros"> Parceiros </a></li>
-                            <li class="lista-menu"><a href="contato"> Contato </a></li>
+        </div> 
+            <header><!--Nav fixo do site-->
+                <div class="logo"><a href="#">Estúdio Aires</a></div>
+                    <nav><!--menu do site-->
+                        <ul class="nav-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Serviços</a></li>
+                            <li><a href="#">Quem Somos</a></li>
+                            <li><a href="#">Contato</a></li>
                         </ul>
-                    </div>
-                </nav>
-
+                    </nav>
+                    <a href="#" class="login"><button>Login</button></a>
+            </header>
 
                 <!-- início da sessão de portfólio -->
                 <div id="portfolio">
