@@ -51,9 +51,92 @@ main{
     box-shadow: 4px 4px 4px 4px rgba(112, 112, 112, 0.25);
 }
 
+
+ 
+
+#step-selection{
+
+    display: flex;
+    place-content:center;
+    width: 450px;
+    height: 3em;
+    margin-top: 35px;
+    border-radius: 5px;
+    border: #FC7600 solid 1px;
+    font-weight: bold;
+    font-size: 14px;
+  
+
+}
+#step-selection p{
+
+    width: 380px;
+}
+
+.step{
+    display: flex;
+    place-content:center;
+    width: 450px;
+    height: 2em;
+    margin-top: 66px;
+    font-weight: bold;
+    font-size: 14px;
+
+
+}
+
+.step p{
+
+    width: 300px;
+}
+
+
+.bolinhas{
+    /* position: relative;*/
+    width: 35px;
+     display: flex;
+     justify-content: space-around;
+     z-index: 2;
+     margin-top: 5px;
+ }
+
+ .bolinhasnaoselect{
+    /* position: relative;*/
+    width: 35px;
+     display: flex;
+     justify-content: space-around;
+     z-index: 2;
+     margin-left: 85px;
+     margin-top: 5px;
+ }
+ 
+ .bolaOk{
+    
+     height: 28px;
+     width: 28px;
+     background-color: #FC7600;
+     border: #ACACA6 solid 1px;
+     border-radius: 60%;
+     text-align: center;
+     padding-top: 3px;
+ } 
+
+ .no{
+     
+    background-color: transparent;
+    border-color: #FC7600;
+    color: #FC7600;
+
+ }
+
+ 
+ /* Dashboard central*/
+
 .acao-central{
-    /*background-color: hotpink;*/
-   
+    margin-top: 15px;
+}
+.acao-central{
+    
     box-shadow: 4px 4px 4px 4px rgba(112, 112, 112, 0.25);
     width: 650px;
     height: 35em;
@@ -70,12 +153,26 @@ main{
     padding: 2px;
     font-weight: bold;
     
-}  
+} 
+
+.inputscentro{
+   display: inline-block;
+    align-items: center;
+
+   
+}
+.inputscentro p{
+    width: 350px;
+    
+}
+input{
+    margin-left: 2px;
+}
+
 input[type=text]{
-    width: 45%;
+    width: 75%;
     padding: 12px 20px;
     margin: 15px 0;
-    display: inline-flex;
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin-right: 80px;
@@ -90,66 +187,6 @@ input[type=number]{
     box-sizing: border-box;
     margin-right: 80px;
     
-}
- 
-
-#step-selection{
-
-    display: grid;
-    place-content:center;
-    width: 450px;
-    height: 3em;
-    margin-top: 35px;
-    border-radius: 5px;
-    border: #FC7600 solid 1px;
-    font-weight: bold;
-    font-size: 14px;
-  
-
-}
-
-.step{
-    display: grid;
-    place-content:center;
-    width: 450px;
-    height: 2em;
-    margin-top: 66px;
-    font-weight: bold;
-    font-size: 14px;
-
-
-}
-
-  progress[value] {
-    
-    appearance: none;
-    margin-top: 15px;
-    border: none;
-     width: 80%; height: 20px;
-      background-color: whiteSmoke;
-      border-radius: 3px;
-      box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-      color: royalblue;
-      position: relative;
-   
-  }
-
-  
-  progress[value]::-webkit-progress-bar {
-    background-color: whiteSmoke;
-    border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-  }
-  
-  progress[value]::-webkit-progress-value {
-    position: relative;
-    background-size: 35px 20px, 100% 100%, 100% 100%;
-    border-radius:3px;
-   
-  }
-  
-.acao-central{
-    margin-top: 15px;
 }
   
 

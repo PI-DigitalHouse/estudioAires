@@ -12,10 +12,10 @@
 </head>
 <body>
     <header>
-        <a href="TBC"><img class="logo" src= "images/square-logo-noOpacity.png" alt="Logo Estudio Aires"></a>
+        <a href="home.html"><img class="logo" src= "images/square-logo-noOpacity.png" alt="Logo Estudio Aires"></a>
         <nav>
             <ul>
-                <li><a  href="TBC">Solicitações</a></li>
+                <li><a  href="dashboardUsuario.html">Solicitações</a></li>
                 <li><a id = "selected" href="TBC">+ Novo Orçamento</a></li>
             </ul>
         </nav>
@@ -36,25 +36,40 @@
             <div class="title">
                 <p>Orçamentos e Agendamentos</p>
             </div>
-            <progress max="5" value="1"></progress>
+            
             <div id="step-selection">
                 <p>Informe o endereço onde serão realizadas as fotos</p>
-            
+                <div class="bolinhas">
+                    <div class="bolaOk"> 1 </div>
+                </div>
+                
             </div>
             <div class="step">
                 <p>Selecione os tipos de serviços </p>
+                <div class="bolinhasnaoselect">
+                    <div class="bolaOk no"> 2 </div>
+                </div>
             
             </div>
             <div class="step">
                 <p>Detalhes do serviço </p>
+                <div class="bolinhasnaoselect">
+                    <div class="bolaOk no"> 3 </div>
+                </div>
             
             </div>
             <div class="step">
                 <p>Datas para a sessão </p>
+                <div class="bolinhasnaoselect">
+                    <div class="bolaOk no"> 4 </div>
+                </div>
             
             </div>
             <div class="step">
                 <p>Pagamento </p>
+                <div class="bolinhasnaoselect">
+                    <div class="bolaOk no"> 5 </div>
+                </div>
             
             </div>
             
@@ -63,18 +78,21 @@
        
 
     </div>
+
+    
         <div class="acao-central">
             <div class="title">
                 <p>Informe o endereço onde serao realizadas as fotos</p>
             </div>
-            <form action="">
+            <div class="inputscentro">
                 <p>Informe o novo endereço:</p>
                 <input type="text">
-                <p>Informe o CEP e o tamanho do imovel:</p>
-                <input type="number" placeholder="Informe seu CEP">
-                <input type="number" placeholder="Informe o tamanho do imóvel">
+                <p>Informe o CEP:</p>
+                <input type="text" placeholder="Informe seu CEP">
+                <p>Informe o tamanho do imovel:</p>
+                <input type="number" placeholder="Informe o tamanho do imóvel em m2">
 
-            </form>
+            </div>
 
         </div>
 
