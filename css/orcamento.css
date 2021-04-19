@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-     
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');  
   
 html{
     font-size: 6.25%;
 }
 
 body{
-    font-family: Arial;
+    font-family: "Lato", sans-serif;
     font-size: 16rem;
     background-image: url("body-backgrounds/bg-opacity.png");
     margin: 0px;
@@ -28,7 +28,7 @@ main{
     border: 2.8px solid #FC7600;
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
     border-radius: 18px;
-    background-color: white;
+    background-color:  rgba(253, 253, 253, 0.7);
     text-align: center;
     
 }
@@ -48,8 +48,7 @@ main{
     height: 35em;
     border-radius: 18px;
     
-    box-shadow: 4px 4px 4px 4px rgba(112, 112, 112, 0.25);
-}
+    }
 
 
  
@@ -69,7 +68,7 @@ main{
 
 }
 #step-selection p{
-
+    display: flex;
     width: 380px;
 }
 
@@ -86,7 +85,7 @@ main{
 }
 
 .step p{
-
+    display: flex;
     width: 300px;
 }
 
@@ -136,8 +135,9 @@ main{
     margin-top: 15px;
 }
 .acao-central{
-    
-    box-shadow: 4px 4px 4px 4px rgba(112, 112, 112, 0.25);
+    display: flex;
+    flex-direction: column;
+    box-shadow:2px 2px 7px rgba(112, 112, 112, 0.25);
     width: 650px;
     height: 35em;
     border-radius: 18px;
@@ -149,25 +149,25 @@ main{
     width: 100%;
     height: 2em;
     border-radius: 5px;
-    background-color:#FC7600;
+    background-color: rgba(252, 118, 0, 2);
     padding: 2px;
     font-weight: bold;
     
 } 
 
 .inputscentro{
-   display: inline-block;
-    align-items: center;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
 
    
 }
 .inputscentro p{
-    width: 350px;
+    display: flex;
+    margin-left:5px;
     
 }
-input{
-    margin-left: 2px;
-}
+
 
 input[type=text]{
     width: 75%;
@@ -189,4 +189,46 @@ input[type=number]{
     
 }
   
+
+/* Bottom */
+.button-submit{
+width: 100%;
+display: flex;
+justify-content:space-around;
+margin-top: 55px;
+
+}
+
+button {
+    background-color: #FC7600;;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    font-weight: bold;
+    
+}
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+.cancel{
+    background-color: rgb(189, 189, 189);
+    color: black;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    
+
+
+  }
 
