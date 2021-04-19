@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    <script src="https://kit.fontawesome.com/f67cfcbcf9.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -199,6 +200,11 @@
             justify-content: center;
             margin-left: 3rem;
         }
+        a{
+            text-decoration: none;
+            color: #FC7600;
+            margin: 1rem;
+        }
         @media (max-width:520px){
             
             *{box-sizing: border-box;}
@@ -270,14 +276,19 @@
 </head>
 <header>
     <div class="flex-container">
-            <img class="flex-item" src="Logotipo.png">
+        <a href="#"><img class="flex-item" src="Logotipo.png"></a>
+            
     </div>
 </header>
 <body>
     <section class="flex-container" >
         <div class="card-flex">
             <div class="flex-container2">
-                <h3 class="cadastro">Cadastro</h3>
+                <h3 class="cadastro">
+                    
+                    <a href="#" class="fas fa-arrow-left"></a>
+                    
+                    Cadastro</h3>
             </div>
             <div class="flex-container">
                 <div class="textoApresentacao">
@@ -297,7 +308,7 @@
                     </div>
                     <div class="displayFlexColumn" >
                         
-                        <input class="inputTipo3" placeholder="Email" type="email" name="email" id="email">
+                        <input class="inputTipo3" placeholder="Email" maxlength="60" type="email" name="email" id="email">
                     </div>
                     <!-- <label for="Nome">Nome</label>
                     <input class="inputTipo1" placeholder="Nome completo" type="text" name="Nome" id="Nome">
@@ -307,8 +318,8 @@
                     
                 </div>
                 <div class="flex-container-nome">
-                    <input class="inputTipo1" placeholder="Tel/Cel" type="text" name="Telefone" id="Telefone">
-                    <input class="inputTipo1" placeholder="CPF/CNPJ" type="text" name="Nome" id="Nome">
+                    <input class="inputTipo1" placeholder="Tel/Cel" maxlength="14" type="text" name="Telefone" id="Telefone">
+                    <input class="inputTipo1" placeholder="CPF/CNPJ" type="text" maxlength="11" name="Nome" id="Nome">
                 </div>
                 
                 <div class="flex-container-nome">
@@ -331,9 +342,9 @@
                             <input type="radio" name="experiencia" class="botãoRadio" value="false">Não
                         </div>
                     </div>
-                    <div class="text">Conte-nos um pouco mais. Se preferir pode gravar um áudio!
-                        <input type="text" placeholder="Escreva sobre você" class="EscrevaSobreVc"> 
-                        <input type="file" accept="audio/*;capture=microphone">
+                    <div class="text">Conte-nos um pouco mais.
+                        <input type="text" placeholder="Escreva sobre você" class="EscrevaSobreVc" maxlength="300"> 
+                        
                     </div>
                 </div>
                 <div class="flex-container-nome">
@@ -346,11 +357,11 @@
                     </input>
                 </div>
                 <div class="flex-container-nome">
-                    <input class="inputTipo1" placeholder="Senha" type="text" name="Nome" id="Nome">
-                    <input class="inputTipo1" placeholder="Confirmar Senha" type="email" id="Email">
+                    <input class="inputTipo1" placeholder="Senha" type="password" name="Nome" id="senha">
+                    <input class="inputTipo1" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao">
                </div>
                <div class="flex-container-nome">
-                <input class ="botao" type="submit" value="Enviar">
+                <input class ="botao" type="submit" value="Cadastrar">
             </div>
             </form>
 
