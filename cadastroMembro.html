@@ -8,270 +8,8 @@
     <title>Cadastro</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <style>
-       
-       @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-        html{font-size: 6,25%;}
-        *{box-sizing: border-box;}
-
-        .flex-container{
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            width: 100%;
-            
-
-        }
-        .flex-item{
-            justify-content: center;
-            width: 15rem;
-            
-        }
-
-        .flex-container2{
-            display: flex;
-            flex-wrap: wrap; 
-            width: 90%;
-            
-            height: fit-content;
-        }
-        .card-flex{
-            border: 2px solid #FC7600;
-            border-radius: 18px;
-            width: 90%;
-            height: fit-content;
-        }
-
-        .cadastro{
-            font-family: Lato;
-            font-size: 1.5rem;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 22px;
-            letter-spacing: 0em;
-            text-align: start;
-            justify-content: flex-start;
-            align-self: flex-start;
-            margin-block-start: 1em;
-            margin-block-end: 2em;
-            margin-left: 1em;
-            width:95% ;
-
-            
-        }
-        .arrowBack{
-            
-            
-            align-self: center;
-        }
-        .textoApresentacao{
-            height: 10%;
-            width: 85%;
-            font-family: Lato;
-            font-size: 1em;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 22px;
-            letter-spacing: 0em;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            padding: 1.5rem;
-            margin-bottom: 4rem;
-            border-radius: 2rem;
-        }
-        .flex-container-nome{
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: space-around;
-            width: 100%;
-            margin: 1%;
-            height: 5rem;
-            
-        }
-        .inputTipo1{
-            background-color: #D0E1FC;
-            border-bottom: solid #97B9F1 3px;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            width: 35%;
-            height: 2rem;
-            margin-top: 1rem;
-        }
-        
-        .inputTipo2{
-            background-color: #D0E1FC;
-            border-bottom: solid #97B9F1 3px;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            width: 85%;
-            height: 2rem;
-            margin-top: 1rem;
-        }    
-        .inputTipo3{
-            background-color: #D0E1FC;
-            border-bottom: solid #97B9F1 3px;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            width: 100%;
-            height: 2rem;
-            
-            
-        }
-        
-        .flex-container-boas-vindas{
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            width: 100%;
-            font-family: Lato;
-            font-size: 88%;
-            font-style: normal;
-            font-weight: 800;
-            margin-bottom: 7%;
-            
-        }
-        .fonte{
-            font-family: Lato;
-            font-size: 0.7em;
-            font-style: normal;
-            font-weight: 800;
-            margin-left: 3rem;
-
-        }
-        .text{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.8em;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: 0em;
-            text-align: left;
-            background-color: #D0E1FC ;
-            border-bottom: solid #97B9F1 3px;
-            border-top: none;
-            
-            width: 35%;
-            height: fit-content;
-            padding: 0.5rem;
-            display: block;
-
-        }
-        .EscrevaSobreVc{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.8em;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: 0em;
-            text-align: left;
-            border-radius: 0.5rem;
-            margin-top: 1rem;
-            border: solid 1px #FC7600 ;
-            width: 100%;
-            height: 3rem;
-            padding: 0.5rem;
-        }
-        .flex-container-anexo{
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            width: 100%;
-            padding: 1rem;
-        }
-        .botãoRadio{
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .botao{
-            width: 20%;
-            height: fit-content;
-            background-color: #FC7600 ;
-            border-radius: 12px;
-            border: 1px;
-            padding: 0.5rem;
-            color: white;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            font-size: 1rem;
-            margin: 1rem;
-        }
-        .curriculo{
-            
-            justify-content: center;
-            margin-left: 3rem;
-        }
-        a{
-            text-decoration: none;
-            color: #FC7600;
-            margin: 1rem;
-        }
-        @media (max-width:520px){
-            
-            *{box-sizing: border-box;}
-            
-            form{
-                display: flex;
-                flex-wrap: wrap;
-                
-                
-            }
-            .flex-container-nome{
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: flex;
-                justify-content: center;
-                
-            }
-            .inputTipo1{
-                width: 80%;
-                margin: rem;
-            }
-            
-            .inputTipo2{
-                width: 80%;
-                margin: rem;
-            }
-            .text{
-                width: 80%;
-                margin: rem;
-                margin-top: 0.4rem;
-                margin-bottom: 0.5rem;
-            }
-            .flex-container-anexo{
-                width: 80%;
-                margin: 0rem;
-                margin-top: 3rem;
-                justify-content: center;
-                display: flex;
-                flex-wrap: wrap; 
-                
-                
-                padding: 1rem;
-            }
-            .EscrevaSobreVc{
-                margin-bottom: 0.5rem;
-            }
-            .fonte{
-                display: flex;
-                justify-content: center;
-            }
-            
-            }
-            .inputTipo1:focus,.EscrevaSobreVc:focus,.inputTipo3{
-                    outline-color: #FC7600;
-                    
-                    
-                }
-                .displayFlexColumn{
-                    display: flex;
-                    flex-direction: column;
-                    width: 35%;
-                }
-                label{
-                   font-family: Lato;
-                }
-               
-    </style>
+    <link rel="stylesheet" href="css/cadastroMembro.css">
+    
 
 </head>
 <header>
@@ -280,7 +18,7 @@
             
     </div>
 </header>
-<body>
+<body background="C:\Users\Henri\Documents\Prog\ProjetoIntegrado\estudioAires\images\home\headerImg-opc3.png">
     <section class="flex-container" >
         <div class="card-flex">
             <div class="flex-container2">
@@ -302,24 +40,12 @@
             <form id="cadastroMembro">
                 
                 <div class="flex-container-nome">
-                    <div class="displayFlexColumn" >
-                        
-                        <input class="inputTipo3" placeholder="Nome completo" maxlength="50" type="text" name="Nome" id="Nome">
-                    </div>
-                    <div class="displayFlexColumn" >
-                        
-                        <input class="inputTipo3" placeholder="Email" maxlength="60" type="email" name="email" id="email">
-                    </div>
-                    <!-- <label for="Nome">Nome</label>
-                    <input class="inputTipo1" placeholder="Nome completo" type="text" name="Nome" id="Nome">
-                    <label>E-mail
-                        <input class="inputTipo1" placeholder="Email" type="email" id="Email">
-                    </label> -->
-                    
+                    <input required class="inputTipo3" placeholder="Nome completo" maxlength="50" type="text" name="Nome" id="Nome" required>
+                    <input required class="inputTipo3" placeholder="Email" maxlength="60" type="email" name="email" id="email">                  
                 </div>
                 <div class="flex-container-nome">
-                    <input class="inputTipo1" placeholder="Tel/Cel" maxlength="14" type="text" name="Telefone" id="Telefone">
-                    <input class="inputTipo1" placeholder="CPF/CNPJ" type="text" maxlength="11" name="Nome" id="Nome">
+                    <input required class="inputTipo1" placeholder="Tel/Cel" maxlength="14" type="text" name="Telefone" id="Telefone">
+                    <input required class="inputTipo1" placeholder="CPF/CNPJ" type="text" maxlength="11" name="Nome" id="Nome">
                 </div>
                 
                 <div class="flex-container-nome">
@@ -338,12 +64,12 @@
                 <div class="flex-container-nome">
                     <div class="text">Você tem experiência com fotografia?
                         <div>
-                            <input type="radio" name="experiencia" class="botãoRadio" value="true">Sim
-                            <input type="radio" name="experiencia" class="botãoRadio" value="false">Não
+                            <input required type="radio" name="experiencia" class="botãoRadio" value="true">Sim
+                            <input required type="radio" name="experiencia" class="botãoRadio" value="false">Não
                         </div>
                     </div>
                     <div class="text">Conte-nos um pouco mais.
-                        <input type="text" placeholder="Escreva sobre você" class="EscrevaSobreVc" maxlength="300"> 
+                        <input required type="text" placeholder="Escreva sobre você" class="EscrevaSobreVc" maxlength="300"> 
                         
                     </div>
                 </div>
@@ -352,13 +78,13 @@
                     
                 </div>
                 <div class="flex-container-anexo">
-                    <input class="curriculo" type="file" accept=".pdf" >
+                    <input required class="curriculo" type="file" accept=".pdf" >
                         <h4 class="fonte" >Anexe seu currículo no formato .pdf</h4>
                     </input>
                 </div>
                 <div class="flex-container-nome">
-                    <input class="inputTipo1" placeholder="Senha" type="password" name="Nome" id="senha">
-                    <input class="inputTipo1" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao">
+                    <input required class="inputTipo1" placeholder="Senha" type="password" name="Nome" id="senha">
+                    <input required class="inputTipo1" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao">
                </div>
                <div class="flex-container-nome">
                 <input class ="botao" type="submit" value="Cadastrar">
