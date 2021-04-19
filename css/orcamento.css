@@ -15,21 +15,19 @@ body{
 }
 main{
     display: flex;
- 
+    justify-content: center;
   
 }
 .card-login{
     display: flex;
-    margin-top: 100px;
-    margin-left: 250px;
-    margin-right: 250px;
     width: 1160px;
-    height: 600px;   
+    height: 600px; 
+    margin-top: 25px;  
     border: 2.8px solid #FC7600;
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
     border-radius: 18px;
     background-color:  rgba(253, 253, 253, 0.7);
-    text-align: center;
+    
     
 }
 .container{
@@ -42,8 +40,6 @@ main{
 
 .menu-lateral{
     display:inline-block;
-      
-    /*background-color: greenyellow;*/
     width: 450px;
     height: 35em;
     border-radius: 18px;

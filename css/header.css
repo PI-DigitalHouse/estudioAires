@@ -78,6 +78,7 @@ nav li a:hover{
 .usuario{
     width:20%;
     margin-bottom: 15px;
+    
    
 }
 
@@ -85,11 +86,14 @@ nav li a:hover{
     color:#FC7600;
     text-decoration: none;
     margin-left: 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
     
 }
 
 .usuario a:hover{
-    color:#db7012;
+    color: white;
 }
 
 .fotoPerfil{
