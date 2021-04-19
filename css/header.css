@@ -1,5 +1,5 @@
 
-/* o html tá no dashboardUsuario */
+/* o html tá no dashboardUsuario_solicitacoes */
 
 header{
     background-color:rgba(0, 0, 0, 0.6);
@@ -30,9 +30,8 @@ nav{
 }
 
 #selected{
-    /* background-color:#FFFFFF;; */
     color: #FC7600;
-    padding: 10px 60px 3px 30px;
+    padding: 10px 30px 3px 30px;
     border-radius: 10px 10px 0px 0px;
     border-bottom: #FC7600 solid 2px;
     
