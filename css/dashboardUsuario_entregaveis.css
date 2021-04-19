@@ -1,0 +1,89 @@
+html{
+    font-size: 6.25%;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+header{
+    background:#F3A057 ;
+    font-size: 16rem;
+    height: 15vh;
+    text-align: center;
+    margin: 0px;
+    display: flex;
+}
+
+.logo{
+    width: 10%;
+}
+
+h1{
+    width: 80%;
+}
+
+h2{
+    font-size: 16rem;
+}
+
+p{
+    margin: 3px;
+    padding-top: 10px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.item{
+    display: flex;
+    height: 10vh;
+}
+
+input{
+    border: black solid 1px;
+    width: 20px;
+    height: 20px;
+    margin: 15px;
+}
+
+.icone{
+    height: 25px;
+    margin: 15px 15px 15px 0px;
+}
+
+.nomeZip{
+    font-size: 16rem;
+    padding-top: 3px;
+    display: flex;
+}
+
+.tipo1{
+    border: 1.5px solid #FC7600;
+    background-color:#FC7600;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14rem;
+    margin: 10px;
+    width: 100px;
+}
+
+.tipo1:hover{
+    background-color: #fa8d2e;
+    border: 1.5px solid #fa8d2e;
+}
+
+
+.tipo2{
+    border: 1.5px solid #BFBFBF;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14rem;
+    color: black;
+    width: 100px
+}
+
+.tipo2:hover{
+    background-color:#d4d4d4;
+    border: 1.5px solid #d4d4d4;
+}

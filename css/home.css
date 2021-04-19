@@ -3,6 +3,8 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html{
@@ -16,54 +18,59 @@ body{
     margin: auto;
 }
 
-/* header */
+li, a, button{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: #edf0f1;
+    text-decoration: none;
+}
 
 header{
-    background: url(/images/home/header.png);
-    background-size: cover;
-    height: 100vh;
+    height: 18vh;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
-}
-
-.icons-header{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-}
-
-.logo-icon{
-    margin: 2.5% 1.9%;
-}
-
-.button-login{
-    width: 10%;
-    height: 1%;
-    margin-top: 8.5%;
-}
-
-/* nav bar */
-
-nav{
-    margin: 0 0 0 17%;
-}
-
-.nav-container ul {
-    width: 1070px;
-    height: 91px;
-    list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: rgba(0, 0, 0, .2);
 }
 
-.nav-container ul li a{
-    color: #212121;
-    text-decoration: none;
-    font-size: 25rem;
+.logo{
+    cursor: pointer;
 }
 
-.nav-container ul li a:hover{
-    border-bottom: 2px solid #FC7600;
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a:hover{
+    border-bottom: 3px solid #FC7600;
+}
+
+button{
+    padding: 10px 25px;
+    background: rgba(252, 118, 0, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background: rgba(252, 118, 0, 0.8);
+}
+
+video{
+    width: 100%;
 }
 
 /* sessão portfólio */
@@ -71,7 +78,7 @@ nav{
 .backgroundNav-Portfolio{
     width: 100%;
     height: 150vh;
-    background: url(/images/home/headerImg-opc3.png);
+    background: url(../images/home/headerImg-opc3.png);
     background-position: center;
     background-attachment: fixed;
 }
@@ -86,23 +93,108 @@ nav{
     margin: 1% 0 0 0;
 }
 
+/*hover do portfólio */
+.portfolioProjeto-1, .portfolioProjeto-2, .portfolioProjeto-3, .portfolioProjeto-4{
+    position: relative;
+
+}
+
+.portfolioProjeto-1-image{
+    display: block;
+}
+
+.image-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #F5F4F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.800s;
+}
+
+.image-overlay--blur{
+    backdrop-filter: blur(5px);
+}
+
+.image-overlay > *{
+    transform: translateY(20px);
+    transition: transform 0.800s;
+}
+
+.image-overlay:hover{
+    opacity: 1;
+}
+
+.image-overlay:hover > *{
+    transform: translateY(0);
+}
+
+.image-overlayTitle{
+    font-size: 40rem;
+    font-weight: bold;
+    font-family: 'Lato';
+}
+
+.image-overlay p{
+    font-size: 18rem;
+    font-weight: bold;
+    margin: 0 0 5% 0;
+}
+
+.image-overlay a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F5F4F6;
+}
+
+.image-overlay img{
+    position: absolute;
+    top: 35%;
+    left: 112%;
+}
+
+.image-overlay button{
+    width: 25%;
+    height: 4.7vh;
+    position: absolute;
+    right: 0;
+    left: 5%;
+    top: 84%;
+    background: #FC7600;
+    border: none;
+    border-radius: 18rem;
+    box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0, 0.25);
+}
+
+.image-overlay a{
+    color: #F5F4F6;
+    font-size: 12rem;
+    font-weight: bold;
+}
+
+
 /* sessão de serviços */
 
 .servicos{
     width: 100%;
-    height: 200vh;
-    background: url(/images/home/backgroundImage-nossosServicos-opc3.png);
+    height: 220vh;
+    background: url(../images/home/backgroundImage-nossosServicos-opc3.png);
     background-position: center;
     background-attachment: fixed;
-
-    margin: -3.3% 0 0 0; /* Feito para cobrir o gap entre sessões */
 }
 
 .servicos h2{
-    font-size: 64rem;
+    font-size: 55rem;
     font-family: 'Quicksand';
     color: #212121;
-    padding: 4.7% 0 0 4.6%;
+    padding: 4.8% 0 1.3% 4.5%;
 }
 
 .container-servicos{
@@ -117,14 +209,14 @@ nav{
     filter: drop-shadow(4rem 4rem 4rem rgba(0, 0, 0, 0.25));
     border-radius: 20rem;
     width: 390px;
-    height: 572px;
+    height: 622px;
     text-align: center;
     margin: 0 0 5% 0.4%;
 }
 
 .box-servico h3{
     font-family: 'Lato';
-    font-size: 36rem;
+    font-size: 30rem;
     font-weight: 800;
 
     color: #FC7600;
@@ -133,13 +225,14 @@ nav{
 .box-servico img{
     width: 370px;
     height: 227px;
+    margin: 9% 0 0 0;
 }
 
 .box-servico p{
     width: 268px;
     height: 159px;
     font-family: 'Quicksand';
-    font-size: 18rem;
+    font-size: 17rem;
     color: #212121;
 
     margin: 3.5% 0 0 16%;
@@ -148,20 +241,26 @@ nav{
 .box-servico button{
     width: 258px;
     height: 42px;
+    margin: 13% 0 0 0;
     
     background: #FC7600;
-    color: #F5F4F6;
     border: none;
     border-radius: 18px;
     
     box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0.25) ;
 }
 
+.box-servico button a {
+    color: #F5F4F6;
+    text-decoration: none;
+    font-size: 16rem;
+}
+
 /* quem somos */
 
 .quem-somos{
     width: 100%;
-    height: 100%;
+    height: 209vh;
     background-image: url(../images/quem-somos/backgroundImgOpc3.jpg);
     background-position: center;
     background-attachment: fixed;
@@ -175,18 +274,18 @@ nav{
 
 .quem-somos-intro h2{
     font-family: 'Lato';
-    font-size: 64rem;
+    font-size: 55rem;
     align-self: flex-start;
     color: #212121;
     font-weight: 700;
-    margin: 3.6% 0 0 5.2%;
+    margin: 3.7% 0 0 16%;
 }
 
 .quem-somos-intro p{
-    font-size: 36rem;
+    font-size: 30rem;
     width: 60%;
     text-align: justify;
-    margin: 7% 9.5% 7% 0;
+    margin: 7% 15% 4.2% 16.2%
 }
 
 .container-socios{
@@ -204,6 +303,7 @@ nav{
 .socio img{
     width: 60%;
     height: 100%;
+    margin: 16% 0 11.6% 0px;
 }
 
 .socio h3{
@@ -213,11 +313,11 @@ nav{
 }
 
 .socio p{
-    font-size: 24rem;
+    font-size: 22rem;
     font-weight: 400;
     width: 108%;
     text-align: center;
-    margin: 0 -24%;
+    margin: 12.3% 0 0 -21%
 }
 
 .button-socios{
@@ -239,22 +339,78 @@ nav{
 
 .parceiros{
     width: 100%;
-    height: 100%;
+    height: 216.5vh;
     background-image: url(../images/parceiros/backgroundImgOpc3.png);
     background-position: center;
     background-attachment: fixed;
 }
 
 .parceiros h2{
-    width: 29%;
-    margin: 0 6.5%;
-    padding: 4.2% 0;
+    width: 100%;
+    padding: 67.33px 0 26.88px 104px;
 
     font-family: 'Lato';
     font-weight: 700;
     font-size: 64rem;
     line-height: 77px;
     color: #000000;
+}
+
+.listaParceiros-direita{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.listaParceiros-direita img{
+    height: 23vh;
+    margin: -2% 16.9% 5.2% 0;
+    padding: 0 0 0 13%;
+}
+
+.listaParceiros-direita h4{
+    font-size: 36rem;
+    font-weight: 600;
+    font-family: 'Lato';
+    margin: 1.7% 41.2% 0 48%;
+    color: #F2994A;
+}
+
+.listaParceiros-direita p{
+    width: 32.9%;
+    font-size: 22rem;
+    text-align: end;
+    color: #212121;
+}
+
+
+.listaParceiros-esquerda{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.listaParceiros-esquerda img{
+    height: 23vh;
+    margin: 5.2% 0 5.2% 13.2%;
+    padding: 0 0 0 13%;
+}
+
+.listaParceiros-esquerda h4{
+    font-size: 36rem;
+    font-weight: 600;
+    font-family: 'Lato';
+    margin: -17.5% 31.2% 0 48.4%;
+    color: #F2994A;
+}
+
+.listaParceiros-esquerda p{
+    width: 32.9%;
+    font-size: 22rem;
+    text-align:start;
+    margin: -14% 0 0 48.5%;
+    color: #212121;
 }
 
 /* footer */

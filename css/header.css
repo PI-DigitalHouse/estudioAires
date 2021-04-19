@@ -1,0 +1,88 @@
+
+/* o html tá no dashboardUsuario_solicitacoes */
+
+header{
+    background-color:rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position:sticky;
+    top:0;
+    font-size: 18rem;
+   
+  
+}
+
+header img.logo{
+    width: 90px;
+    margin: 1.5px;
+    height: 90px;
+    
+    
+}
+
+nav{
+    width: 60%;
+    
+    
+}
+
+#selected{
+    color: #FC7600;
+    padding: 10px 30px 3px 30px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: #FC7600 solid 2px;
+    
+}
+
+#selected:hover{
+    color: #db7012;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+
+}
+
+nav li{
+    width: 50%;
+    margin-left: 15px;
+    text-align: center;
+}
+
+nav li a{
+    color:gray;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color:#db7012;
+}
+
+.usuario{
+    width:20%;
+    margin-bottom: 15px;
+    margin-right: 25px;
+}
+
+.usuario a{
+    color:#FC7600;
+    text-decoration: none;
+    margin-left: 40px;
+    
+}
+
+.usuario a:hover{
+    color:#db7012;
+}
+
+.fotoPerfil{
+    border-radius: 50%;
+    width: 12%;
+    margin-left: 10px;
+}

@@ -11,54 +11,70 @@
     </head>
 
     <body>
-        <header>
-            <div class="icons-header">
 
-                <img class="logo-icon" src="./images/square-logo.png" alt="Logo para Estúdio Aires">
-                <img class="button-login" src="./images/icons/login-icon.png" alt="Imagem para ícone de login.">
-
+        <div class="banner-area"><!--Vídeo de entrada do site-->
+            <div class="banner">
+                <video autoplay muted loop>
+                    <source src="./images/landing-page/teste.mov" type="video/mp4">
+                </video>
             </div>
-
-        </header>
-
-        <main>  
-            <!-- div criada para viabilizar o background fixo, de acordo com o design do Figma. -->
-            <div class="backgroundNav-Portfolio">
-
-                <!-- início da nav -->
-                <nav>
-                    <div class="nav-container">
-                        <ul>
-                            <li class="lista-menu"><a href="#"> Home </a></li>
-                            <li class="lista-menu"><a href="servicos"> Serviços </a></li>
-                            <li class="lista-menu"><a href="quem-somos"> Quem Somos</a></li>
-                            <li class="lista-menu"><a href="parceiros"> Parceiros </a></li>
-                            <li class="lista-menu"><a href="contato"> Contato </a></li>
+        </div> 
+            <header><!--Nav fixo do site-->
+                <div class="logo"><a href="#">Estúdio Aires</a></div>
+                    <nav><!--menu do site-->
+                        <ul class="nav-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Serviços</a></li>
+                            <li><a href="#">Quem Somos</a></li>
+                            <li><a href="#">Contato</a></li>
                         </ul>
-                    </div>
-                </nav>
-            </div>
+                    </nav>
+                    <a href="#" class="login"><button>Login</button></a>
+            </header>
 
                 <!-- início da sessão de portfólio -->
                 <div id="portfolio">
-
                         <div class="portfolioProjeto-1">
-                            <img src="./images/home/projeto1.png" alt="Imagem ilustrativa do projeto.">
+                            <img class="portfolioProjeto-1-image" src="./images/home/projeto1.png" alt="Imagem ilustrativa do projeto.">
+                            <div class="image-overlay">
+                                <div class="image-overlayTitle">Projeto 1</div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                <p><a href="#">Saiba Mais<img src="./images/home/arrow_right_hover.png" alt="Botão de link"></a></p>
+                                <button><a href="/orcamento.html">Peça um Orçamento</a></button>
+                            </div>
                         </div>
 
                         <div class="portfolioProjeto-2">
                             <img src="./images/home/projeto2.png" alt="Imagem ilustrativa do projeto.">
+                            <div class="image-overlay">
+                                <div class="image-overlayTitle">Projeto 2</div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                <p><a href="#">Saiba Mais<img src="./images/home/arrow_right_hover.png" alt="Botão de link"></a></p>
+                                <button><a href="/orcamento.html">Peça um Orçamento</a></button>
+                            </div>
                         </div>
 
                         <div class="portfolioProjeto-3">
                             <img src="./images/home/projeto3.png" alt="Imagem ilustrativa do projeto.">
+                            <div class="image-overlay">
+                                <div class="image-overlayTitle">Projeto 3</div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                <p><a href="#">Saiba Mais<img src="./images/home/arrow_right_hover.png" alt="Botão de link"></a></p>
+                                <button><a href="/orcamento.html">Peça um Orçamento</a></button>
+                            </div>
                         </div>
 
                         <div class="portfolioProjeto-4">
                             <img src="./images/home/projeto4.png" alt="Imagem ilustrativa do projeto.">
+                            <div class="image-overlay">
+                                <div class="image-overlayTitle">Projeto 4</div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                <p><a href="#">Saiba Mais<img src="./images/home/arrow_right_hover.png" alt="Botão de link"></a></p>
+                                <button><a href="/orcamento.html">Peça um Orçamento</a></button>
+                            </div>
                         </div>   
-
                 </div>
+            </div>
 
             <!-- início da sessão de serviços-->
             <section class="servicos">
@@ -68,54 +84,56 @@
                 <div class="container-servicos">
                     <div class="box-servico">
 
+                        <img src="./images/servicos/servico1.png" alt="Descritivo serviço 1">
                         <h3>Serviço 1</h3>
-                        <img src="./images/servicos/servico1.png" alt="Descritivo serviço 1">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                        <button type="submit">Saiba mais</button>
+                        <button><a href="paginaServico1.html">Saiba mais</a></button>
 
                     </div>
 
                     <div class="box-servico">
 
+                        <img src="./images/servicos/servico1.png" alt="Descritivo serviço 1">
                         <h3>Serviço 2</h3>
-                        <img src="./images/servicos/servico1.png" alt="Descritivo serviço 1">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                        <button type="submit">Saiba mais</button>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>                        
+                        <button><a href="paginaServico2.html">Saiba mais</a></button>
 
                     </div>
 
                     <div class="box-servico">
-                        <h3>Serviço 3</h3>
+                        
                         <img src="./images/servicos/servico3.png" alt="Descritivo serviço 1">
+                        <h3>Serviço 3</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                        <button type="submit">Saiba mais</button>
+                        
+                        <button><a href="paginaServico3.html">Saiba mais</a></button>
 
                     </div>
 
                     <div class="box-servico">
 
-                        <h3>Serviço 4</h3>
                         <img src="./images/servicos/servico4.png" alt="Descritivo serviço 1">
+                        <h3>Serviço 4</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                        <button type="submit">Saiba mais</button>
+                        <button><a href="paginaServico4.html">Saiba mais</a></button>
 
                     </div>
 
                     <div class="box-servico">
 
-                        <h3>Serviço 5</h3>
                         <img src="./images/servicos/servico5.png" alt="Descritivo serviço 1">
+                        <h3>Serviço 5</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                        <button type="submit">Saiba mais</button>
+                        <button><a href="paginaServico5.html">Saiba mais</a></button>
 
                     </div>
 
                     <div class="box-servico">
 
-                        <h3>Serviço 6</h3>
                         <img src="./images/servicos/servico6.png" alt="Descritivo serviço 1">
+                        <h3>Serviço 6</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                        <button type="submit">Saiba mais</button>
+                        <button><a href="paginaServico6.html">Saiba mais</a></button>
 
                     </div>
                 </div>
@@ -164,32 +182,32 @@
                 <div class="listaParceiros-direita">
 
                     <h4>Parceiro 1</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta maiores consectetur iure possimus perferendis. Nobis dolorem error maxime.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
                     <img src="./images/parceiros/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
 
                 </div>
 
                 <div class="listaParceiros-esquerda">
 
-                    <h4>Parceiro 2</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta maiores consectetur iure possimus perferendis. Nobis dolorem error maxime.</p>
                     <img src="./images/parceiros/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
+                    <h4>Parceiro 2</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
 
                 </div>
 
                 <div class="listaParceiros-direita">
 
                     <h4>Parceiro 3</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta maiores consectetur iure possimus perferendis. Nobis dolorem error maxime.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
                     <img src="./images/parceiros/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
 
                 </div>
 
                 <div class="listaParceiros-esquerda">
 
-                    <h4>Parceiro 4</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta maiores consectetur iure possimus perferendis. Nobis dolorem error maxime.</p>
                     <img src="./images/parceiros/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
+                    <h4>Parceiro 4</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
 
                 </div>
 
