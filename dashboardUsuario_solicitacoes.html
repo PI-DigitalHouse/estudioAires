@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/dashboardUsuario_solicitacoes.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/square-logo-lineorange.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <title>Solicitações</title>
+</head>
+
+<body>
+    <header>
+        <a href="home.html"><img class="logo" src= "images/square-logo-noOpacity.png" alt="Logo Estudio Aires"></a>
+        <nav>
+            <ul>
+                <li><a id = "selected" href="TBC">Solicitações</a></li>
+                <li><a href="orcamento.html">+ Novo Orçamento</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <a href="TBC">Nome do usuario 
+            <img class= "fotoPerfil" src ="images/dashboard_cliente/fotoPerfil.png" alt="Foto usuário">
+            </a>
+        </div>
+    </header>
+    <div class="ordenacao">
+        <div class="cronos">
+            <p>Ordenar por:</p>
+            <select name="ordCronologica" id="ordCronologica" class="dropdown">
+                <option value="mais nova a mais antiga">Mais nova a mais antiga</option>
+                <option value="mais antiga a mais nova">Mais antiga a mais nova</option>
+            </select>
+        </div>
+        <p>Filtrar solicitações: </p>
+        <select name="filtro" id="filtro" class="dropdown">
+            <option value="imagens postadas">Imagens postadas </option>
+            <option value="fotografo editando">Fotógrado está editando as imagens</option>
+            <option value="sessao em andamento">Sessão em andamento</option>
+            <option value="sessao agendada">Sessão agendada</option>
+        </select>
+    </div>
+
+    <div class="containerServico">
+        <div class="containerEsquerda">
+            <div class="servicoContratado1">
+                <h2>Número serviço: 00002</h2>
+            
+                <div class="info">
+                    <p class="tipo1">Endereço:</p>
+                    <p>Rua X</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Valor do serviço:</p>
+                    <p>R$ 500,00</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Tamanho aproximado do imóvel:</p>
+                    <p>400 m²</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Data do serviço</p>
+                    <p>5 de março 2020</p>
+                </div>
+            </div>
+
+            <div class="servicoContratado2">
+                <br>
+                <div class="info">
+                    <p class="tipo1">Serviços contratados:</p>
+                    <p>Fotografia</p>
+                    <p>Fotografia 3d</p>
+                    <p>Vídeo</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="containerDireita">
+            <div class="status">
+                <div class="fases">
+                    <p>Sessão agendada</p>
+                    <p>Sessão em andamento</p>
+                    <p>Imagens em edição</p>
+                    <p>Imagens postadas</p>
+                </div> 
+            </div>
+
+            <div class="farol">
+                <div class="bolinhas">
+                    <div class="bolaOk"> 1 </div>
+                    <div class="bolaOk"> 2 </div>
+                    <div class="bolaOk"> 3 </div>
+                    <div class="bolaOk"> 4 </div>     
+                </div>
+                <div class="linha">  </div>
+            </div>
+
+            <div class="botoes">
+                <form>
+                    <div class="prestador">
+                        <a href="TBC"> Informações prestador</a>
+                    </div>
+                </form>
+                <form>
+                    <div class="entregaveis">
+                        <a href="TBC"> Ver entregáveis </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerServico">
+        <div class="containerEsquerda">
+            <div class="servicoContratado1">
+                <h2>Número serviço: 00003</h2>
+            
+                <div class="info">
+                    <p class="tipo1">Endereço:</p>
+                    <p>Rua X</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Valor do serviço:</p>
+                    <p>R$ 500,00</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Tamanho aproximado do imóvel:</p>
+                    <p>400 m²</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Data do serviço</p>
+                    <p>5 de março 2020</p>
+                </div>
+            </div>
+
+            <div class="servicoContratado2">
+                <br>
+                <div class="info">
+                    <p class="tipo1">Serviços contratados:</p>
+                    <p>Fotografia</p>
+                    <p>Fotografia 3d</p>
+                    <p>Vídeo</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="containerDireita">
+            <div class="status">
+                <div class="fases">
+                    <p>Sessão agendada</p>
+                    <p>Sessão em andamento</p>
+                    <p>Imagens em edição</p>
+                    <p>Imagens postadas</p>
+                </div> 
+            </div>
+
+            <div class="farol">
+                <div class="bolinhas">
+                    <div class="bolaOk"> 1 </div>
+                    <div class="bolaOk"> 2 </div>
+                    <div class="bola"> 3 </div>
+                    <div class="bola"> 4 </div>     
+                </div>
+                <div class="linha">  </div>
+            </div>
+            <div class="botoes">
+                <div class="prestador">
+                    <a href="TBC"> Informações prestador</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerServico">
+        <div class="containerEsquerda">
+            <div class="servicoContratado1">
+                <h2>Número serviço: 00004</h2>
+            
+                <div class="info">
+                    <p class="tipo1">Endereço:</p>
+                    <p>Rua X</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Valor do serviço:</p>
+                    <p>R$ 500,00</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Tamanho aproximado do imóvel:</p>
+                    <p>400 m²</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Data do serviço</p>
+                    <p>5 de março 2020</p>
+                </div>
+            </div>
+
+            <div class="servicoContratado2">
+                <br>
+                <div class="info">
+                    <p class="tipo1">Serviços contratados:</p>
+                    <p>Fotografia</p>
+                    <p>Fotografia 3d</p>
+                    <p>Vídeo</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="containerDireita">
+            <div class="status">
+                <div class="fases">
+                    <p>Sessão agendada</p>
+                    <p>Sessão em andamento</p>
+                    <p>Imagens em edição</p>
+                    <p>Imagens postadas</p>
+                </div> 
+            </div>
+
+            <div class="farol">
+                <div class="bolinhas">
+                    <div class="bolaOk"> 1 </div>
+                    <div class="bola"> 2 </div>
+                    <div class="bola"> 3 </div>
+                    <div class="bola"> 4 </div>     
+                </div>
+                <div class="linha">  </div>
+            </div>
+            <div class="botoes">
+                <div class="prestador">
+                    <a href="TBC"> Informações prestador</a>
+                </div>
+            </div>
+            <div class="rodape">
+                <p>Ocorreu algum imprevisto e precisa cancelar? </p>
+                <button class="cancelamento">Clique aqui</button>
+            </div>
+    </div>
+</div>
+
+    <div class="containerServicoCancelado">
+        <div class="containerEsquerda">
+            <div class="servicoContratado1">
+                <h2>Número serviço: 00005</h2>
+                <h3>CANCELADO</h3>
+                <div class="info">
+                    <p class="tipo1">Endereço:</p>
+                    <p>Rua X</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Valor do serviço:</p>
+                    <p>R$ 500,00</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Tamanho aproximado do imóvel:</p>
+                    <p>400 m²</p>
+                </div>
+                <div class="info">
+                    <p class="tipo1">Data do serviço</p>
+                    <p>5 de março 2020</p>
+                </div>
+                
+            </div>
+
+            <div class="servicoContratado2">
+                <br>
+                <div class="info">
+                    <p class="tipo1">Serviços contratados:</p>
+                    <p>Fotografia</p>
+                    <p>Fotografia 3d</p>
+                    <p>Vídeo</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="containerDireita">
+            <div class="status">
+                <div class="fases">
+                    <p>Sessão agendada</p>
+                    <p>Sessão em andamento</p>
+                    <p>Imagens em edição</p>
+                    <p>Imagens postadas</p>
+                </div> 
+            </div>
+
+            <div class="farol">
+                <div class="bolinhas">
+                    <div class="bola"> 1 </div>
+                    <div class="bola"> 2 </div>
+                    <div class="bola"> 3 </div>
+                    <div class="bola"> 4 </div>     
+                </div>
+                <div class="linha">  </div>
+            </div>
+            <div class="botoes">
+                <div class="entregaveis">
+                    <a href="TBC"> Gostaria de remarcar minha sessão</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>conheça</h4>
+                    <ul>
+                        <li><a href="#">quem somos</a></li>
+                        <li><a href="#">portifólio</a></li>
+                        <li><a href="#">orçamento</a></li>
+                        <li><a href="#">cadastre-se</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Contate-nos</h4>
+                  <ul>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">telefone</a></li>
+                      <li><a href="#">whatsapp <i class="fab fa-whatsapp"></i></a></li>
+                      <li><a href="#">ipDoEmail@email.com</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>privacidade</h4>
+                  <ul>
+                      
+                      <li><a href="#">termos</a></li>
+                      <li><a href="#">condições de uso</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Siga-nos</h4>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -9,6 +9,7 @@ body{
     margin: 0px;
 }
 
+
 .containerServico{
     display: flex;
     border: 2px solid #fff ;
@@ -21,7 +22,7 @@ body{
 
 .containerEsquerda{
     display: flex;
-    width: 40%;
+    width: 60%;
     margin-left: 40px;
 }
 
@@ -53,17 +54,22 @@ h2{
     margin: 0px
 }
 
-.containerCentro{
-       width: 20%;
+.servicoContratado3{
+    margin-top: 70px;
 }
 
-.containerCentro p{
-    margin-top: 30px;
+.servicoContratado3 .info p{ 
+    display: inline;
+}
+
+.tipo2{
+    font-weight: bold;
+    text-decoration: underline;  
 }
 
 .containerDireita{
     width: 20%;
-    margin-right: 40px;
+    margin-right: 100px;
 }
 
 .informacoes{
@@ -110,3 +116,4 @@ h2{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
 }
+
