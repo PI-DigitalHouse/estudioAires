@@ -86,9 +86,14 @@ main{
 
 }
 
-.step p{
+.step p a{
     display: flex;
     width: 100%;
+}
+.step a{
+   
+    font-style: none;
+
 }
 
 

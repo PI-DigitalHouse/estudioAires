@@ -89,6 +89,10 @@ main{
     width: 300px;
 }
 
+#next-step{
+    text-decoration: none;
+    color: black;
+}
 
 .bolinhas{
     /* position: relative;*/

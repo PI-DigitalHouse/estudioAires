@@ -55,7 +55,7 @@ nav li{
     text-align: center;
    
 }
-a{
+nav a{
     font-family: "Lato", sans-serif;
     font-weight: 500;
     font-size: 26px;
@@ -63,7 +63,7 @@ a{
     text-decoration: none;
 }
 
-nav li a{
+nav li a {
     font-family: "Lato", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -91,6 +91,16 @@ nav li a:hover{
     font-weight: bold;
     
 }
+
+#logo {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+
 
 .usuario a:hover{
     color: white;
