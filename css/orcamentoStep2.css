@@ -23,6 +23,7 @@ main{
     width: 1160px;
     height: 600px; 
     margin-top: 45px;  
+    padding: 20px;
     border: 2.8px solid #FC7600;
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
     border-radius: 18px;
@@ -58,17 +59,18 @@ main{
     width: 450px;
     height: 3em;
     margin-top: 35px;
+    
     border-radius: 5px;
     border: #FC7600 solid 1px;
     font-weight: bold;
     font-size: 14px;
     padding: 5px;
-  
 
 }
 #step-selection p{
     display: flex;
-    width: 380px;
+    width: 100%;
+    
 }
 
 .step{
@@ -86,7 +88,7 @@ main{
 
 .step p{
     display: flex;
-    width: 300px;
+    width: 100%;
 }
 
 
@@ -110,14 +112,13 @@ main{
  }
  
  .bolaOk{
-    
      height: 28px;
      width: 28px;
      background-color: #FC7600;
      border: #ACACA6 solid 1px;
-     border-radius: 60%;
+     border-radius: 55%;
      text-align: center;
-     padding-top: 3px;
+     padding: 3px;
  } 
 
  .no{
@@ -142,6 +143,7 @@ main{
     height: 35em;
     border-radius: 18px;
     margin-left: 40px;
+    padding: 10px;
 }
 .title{
     display: grid;
@@ -188,7 +190,10 @@ input[type=number]{
     margin-right: 80px;
     
 }
-  
+ul{
+    list-style-type: none;
+
+}  
 
 /* Bottom */
 .button-submit{
