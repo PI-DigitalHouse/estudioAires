@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/f67cfcbcf9.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio Aires | Fotografias Imobiliária</title>
+    <title>Cadastro Usuário</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/cadastro.css">
-    <link rel="shortcut icon" href="images/square-logo-lineorange.png">
-    
-</head>
-<body>
-    <header>
-        <a href="home.html">
-            <a  class= 'logo' href="home.html">Estúdio Aires </a>
-        </a>
-     </header>
 
-    <main>
-        <section class='card-login'>
-            <div class="container-01">
-                <a href="home.html"><img src="images/cadastro/seta-retorno.png" alt="retorno" style="width: 30px; margin: 15px;"></a>
-                <h3>Cadastro</h3>
+</head>
+<header>
+    <div class="usu-flex-container-01">
+        <img class="usu-logo" src="C:\Users\Henri\Documents\Prog\ProjetoIntegrado\estudioAires\images\Logotipo.png"
+    </div>
+</header>
+<body background="C:\Users\Henri\Documents\Prog\ProjetoIntegrado\estudioAires\images\home\headerImg-opc3.png">
+    <section class="usu-flex-container-01">
+        <div class="usu-card-login">
+            <div class="usu-flex-container-02">
+                <h3 class="usu-cadastro">
+                    <a href="#" class="fas fa-arrow-left"></a> Cadastro
+                </h3>
+
             </div>
-            
-            <div class="container-02">
-                <form action="" class="log-in" autocomplete="off"> 
-                
-            <div class="container-02 email">   
-                
-                <input type="text" placeholder="Insira o seu nome completo:" name="nome" required maxlength="150">
-                <input type="tel" placeholder="Insira seu telefone mais atual:" name="telefone" required maxlength="50">
-            </div>  
-            <div class="container-02 email2">   
-                
-                <input type="email" placeholder="Insira seu e-mail mais atual" name="emailatual" required maxlength="50"> 
-                <input type="text" placeholder="Insira seu CPF ou CNPJ" name="cpfcnpj" required maxlength="50">
-            </div>  
-            <div class="container-02 email3">   
-                
-                <input type="password" placeholder="Senha" name="nome" required maxlength="50">
-                <input type="password" placeholder="Confirmacao da senha" name="confirsenha" required maxlength="50">
-            
-            </div>
-            <div class="container-02 email4">  
-                <form>
-                    
-                    <select>
-                      <option value="como" selected>Como nos Conheceu?</option>  
-                      <option value="google">Google</option>
-                      <option value="facebook">Facebook</option>
-                      <option value="Instagram" >Instagram</option>
-                      <option value="Outros">Outros</option>
+            <div class="usu-flex-container-boas-vindas"><h2>Seja bem-vindo!</h2></div>
+
+            <form id="cadastroUsuario">
+
+                <div class="usu-flex-container-nome">
+                    <input required class="usu-input-tipo-1" placeholder="Nome completo" maxlength="50" type="text" name="Nome" id="Nome" required>
+                    <input required class="usu-input-tipo-1" placeholder="Email" maxlength="60" type="email" name="email" id="email">
+                </div>
+                <div class="usu-flex-container-tel-cpf">
+                    <input required class="usu-input-tipo-1" placeholder="Telefone mais atual" maxlength="50" type="text" name="Nome" id="Nome" required>
+                    <input required class="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="60" type="email" name="email" id="email">
+                </div>
+                <div class="usu-flex-container-selecione">
+                    <select class="usu-input-Tipo-2" placeholder="Como nos conheceu?" name="Como nos conheceu" id="Como nos conheceu">
+                        <option value="Cartao de visita-usu">Como nos conheceu?</option>
+                        <option value="Cartao de visita-usu">Imobiliária</option>
+                        <option value="Cartao de visita-usu">Facebook</option>
+                        <option value="Cartao de visita-usu">Instagram</option>
+                        <option value="Cartao de visita-usu">Google</option>
+                        <option value="Cartao de visita-usu">Outro</option>
                     </select>
+                </div>
+                <div class="usu-flex-container-senha">
+                    <input required class="usu-input-Tipo-3" placeholder="Senha" type="password" name="Nome" id="senha">
+                    <input required class="usu-input-Tipo-3" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao">
+                </div>
+
+                <div class="usu-flex-container-termos">
+                    <div class="checkbox1">
+                        <input type="checkbox"> Sou uma imobiliária
+                    </div>
+                    <div class="checkbox1">
+                        <input class="LiEAceito" type="checkbox"> Li e aceito os <a class="Termos" href="#">Termos de uso</a> e a <a class="política" href="#">Política de Privacidade</a>
+                    </div>
+                   
+                   
+                </div>
+
+                <div class="usu-flex-container-botao">
+                    <button  type="submit"> CADASTRAR </button>
+
+                </div>
                 
-                  </form>
-            </div>
-            <div class="termos">
-                <div class="termos termo-1">
-                <input type="checkbox" name="termos" id="checkbox"> 
-                <p>Sou uma Imobiliaria</p> 
-                </div>
-                <div class="termos termo-2">
-                <input type="checkbox" name="termos" id="checkbox"> 
-                <p> Li e estou de acordo com o 
-                    <a href="" style="margin-left: 2px; margin-right:2px ; margin-top: 10px;"><h4>Termos de Usos</h4></a> <p>e</p> <a href=""><h4>Politica de Privacidade</h4></a>   </p>
-                </div>
-            </div>
-            <div class="container-02 button-login">
-                <button type="submit"> CADASTRAR </button>
-         </div>  
-        </section>
+            </form>
+
+        </div>
+    </section>
+    
 </body>
 </html>
