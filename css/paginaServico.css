@@ -202,9 +202,10 @@ footer{
 }
 
 /* media queries */
-
 /* Extra small devices (phones, 600px and down) - referência Chrome: Responsive (600x670)  */
     @media only screen and (max-width: 600px) {
+
+        /* início da header */
         .headerServico{
             width: 100%;
             height: 75vh;
@@ -238,7 +239,9 @@ footer{
         .headerServico--buttonLink {
             font-size: 20rem;
         }
+        /* fim da header */
 
+        /* início da main de descrição de serviços */
         .descricaoServico {
             flex-direction: column;
             justify-content: space-around;
@@ -264,7 +267,9 @@ footer{
             margin: 2.4% 0 6% 0;
             align-self: center;
         }
+        /* fim da main de descrição de serviços */
 
+        /* início do footer */
         .social-links{
             display: flex;
             flex-direction: column;
@@ -280,37 +285,38 @@ footer{
         .footer-col .social-links a{
             margin: 2% 0 0 0;
         }
+        /* fim da footer */
     }
   
-  /* Small devices (portrait tablets and large phones, 600px and up) - referência Chrome: responsive - 600x731
-    @media only screen and (min-width: 600px) { */
-        /* header */
-        /* header{
+  /* Small devices (portrait tablets and large phones, 601px and up) - referência Chrome: responsive - 601x670 */
+    /* @media only screen and (min-width: 601px) { */
+        
+        /* início da header */
+        /* .headerServico{
             width: 100%;
             height: 77vh;
         }
 
-        .back-button p {
-            margin: 100% 0 0 0;
+        .headerServico--backButton__paragraph {
+            margin: 52% 0 0 0;
         }
 
-        header h1 {
+        .headerServico--h1 {
             top: 8%;
             right: 33%;
         }
 
-        header p {
+        .headerServico--p {
             font-size: 24rem;
             margin: 10.8% 0 0 -2%;
             text-align: center;
         }
 
-        button {
+        .headerServico--buttonOrcamento {
             height: 53rem;
-            margin: 17.7% 0 0 5.6%;
         } */
 
-        /* descrição do serviço */
+        /* início da main de descrição do serviço */
         /* .descricaoServico {
             flex-direction: column;
         }
@@ -320,32 +326,32 @@ footer{
             text-align: center;
         }
 
-        .paragraph1{
+        .descricaoServico--paragraph1{
             margin: 8.6% 2% 0 2%;
             left: 0;
         }
 
-        .paragraph2 {
+        .descricaoServico--paragraph2 {
             margin: 4% 2% 6% 2%;
-        }
-
-        .social-links{
-            display: flex;
         }
 
         .descricaoServico img {
             width: 100%;
             height: 100vh;
         } */
+        /* fim da main de descrição do serviço */
+        
+        /* início do footer */
+        /* .social-links{
+            display: flex;
+        }
 
-        /* footer */
-        /* .footer-col .social-links a {
+        .footer-col .social-links a {
             height: 29px;
             width: 28px;
-        }
-        
-        
-    } */
+        } */
+        /* fim do footer */
+    /* } */
   
   /* Medium devices (landscape tablets, 768px and up) - referência Chrome: responsive - 768x744 */
     /* @media only screen and (min-width: 768px) {
