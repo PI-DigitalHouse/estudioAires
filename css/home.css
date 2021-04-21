@@ -227,23 +227,31 @@ video{
     margin: 3.5% 0 0 16%;
 }
 
-.box-servico button{
+.box-servico--button{
+    padding: 10px 25px;
+    background: rgba(252, 118, 0, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    width: 43%;
+    margin: 13% 0 0 0;
+
+    box-shadow: 0rem 4rem 4rem rgb(0 0 0 / 25%);
+}
+
+.box-servico--buttonLink{
     width: 258px;
     height: 42px;
     margin: 13% 0 0 0;
-    
+    color: #F5F4F6;
+    text-decoration: none;
+    font-size: 24rem;
     background: #FC7600;
     border: none;
     border-radius: 18px;
-    
-    box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0.25) ;
 }
 
-.box-servico button a {
-    color: #F5F4F6;
-    text-decoration: none;
-    font-size: 16rem;
-}
 /* fim da sessão de serviços */
 
 /* início da sessão quem somos */
