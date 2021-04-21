@@ -16,6 +16,7 @@ h2{
 
 .info{
     font-size: 14rem;
+    margin-bottom: 20px;
 }
 
 .tipo1{
@@ -24,10 +25,12 @@ h2{
 
 .containerDir{
     width: 15%;
+    height: 50%;
 }
 
 .containerEsq{
     margin-top: 10px;
+    height: 50%;
 }
 
 .informacoesUsuario{
