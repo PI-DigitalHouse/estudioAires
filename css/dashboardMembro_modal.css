@@ -16,6 +16,7 @@ h2{
 
 .info{
     font-size: 14rem;
+    margin-bottom: 20px;
 }
 
 .tipo1{
@@ -24,16 +25,18 @@ h2{
 
 .containerDir{
     width: 15%;
+    height: 50%;
 }
 
 .containerEsq{
     margin-top: 10px;
+    height: 50%;
 }
 
 .informacoesUsuario{
-    margin-left: 110px;
-    margin-top: 70px;
+    margin-top: 150px;
     display: flex;
+    justify-content: center;
 }
 
 .informacoesUsuario .info p{ 
@@ -49,4 +52,18 @@ h2{
     width: 100%;
     margin-left: 10px;
     
+}
+
+@media (max-width:520px){
+    body{
+        width: 100vw;
+    }
+    .containerDir{
+        width: 35%;
+    }
+    .informacoesUsuario{
+        margin-left: 0px;
+        margin-top: 100px;
+        display: flex;
+    }
 }
