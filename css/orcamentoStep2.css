@@ -86,7 +86,7 @@ main{
 
 }
 
-.step p a{
+.step p {
     display: flex;
     width: 100%;
 }
@@ -225,11 +225,12 @@ button {
   
   button:hover {
     opacity: 0.8;
+    
   }
 
 .cancel{
     background-color: rgb(189, 189, 189);
-    color: black;
+    
     padding: 14px 20px;
     border: none;
     cursor: pointer;
@@ -241,4 +242,9 @@ button {
 
 
   }
+button a{
+    text-decoration: none;
+    color: black;
+
+}
 
