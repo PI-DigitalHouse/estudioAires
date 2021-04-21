@@ -14,22 +14,8 @@ body{
 }
 
 
-/* header */
-
-/* botão de retorno para main page */
-.back-button{  
-    width: 6%;
-    height: 5.5%;
-    margin: 0 0 0 1%;
-    display: flex;
-}
-
-.back-button p{
-    margin: 25% 0 0 0;
-    font-size: 21rem;
-}
-
-header{
+/* início do header */
+.headerServico{
     background: url(../images/servicos/headerPaginaServico.png);
     background-attachment: fixed;
     height: 100vh;
@@ -39,7 +25,21 @@ header{
     align-items: flex-start;
 }
 
-header h1{
+/* botão de retorno para main page */
+.headerServico--backButton{  
+    width: 6%;
+    height: 5.5%;
+    margin: 0 0 0 1%;
+    display: flex;
+}
+
+.headerServico--backButton__paragraph{
+    margin: 25% 0 0 0;
+    font-size: 21rem;
+}
+
+/* fim do botão de retorno para main page */
+.headerServico--h1{
     font-size: 64rem;
     font-family: 'Lato';
     color:#212121;
@@ -50,7 +50,7 @@ header h1{
     right: 27%;
 }
 
-header p{
+.headerServico--p{
     width: 525px;
     font-size: 24rem;
     margin: 10.8% 0 0 12%;
@@ -59,7 +59,7 @@ header p{
     align-self: center;
 }
 
-button{
+.headerServico--buttonOrcamento{
     background: #FC7600;
     border: 1px solid #FC7600;;
     border-radius: 18rem;
@@ -69,14 +69,15 @@ button{
     margin: 9.7% 0 0 9.6%;
 }
 
-button a{
+.headerServico--buttonLink{
     text-decoration: none;
     color: #FFFFFF;
     font-size: 25rem;
 }
+/* fim do header */
 
 
-/* descrição de serviço */
+/* início da main - descrição de serviço */
 .descricaoServico{
     display: flex;
 }
@@ -87,13 +88,13 @@ button a{
     text-align: end;
 }
 
-.paragraph1{
+.descricaoServico--paragraph1{
     position: relative;
     left: 26%;
     margin: 8.6% 0 0 0;
 }
 
-.paragraph2{
+.descricaoServico--paragraph2{
     align-self: flex-end;
     margin: 22% 4.5% 16.9% 0;
 }
@@ -102,7 +103,7 @@ button a{
     width: 100%;
     margin: 2.4% 5.4% 6% 0;
 }
-
+/* fim da main - descrição de serviço */
 
 /* footer */
 
@@ -271,10 +272,10 @@ footer{
         .footer-col ul li a {
             font-size: 11rem;
         }
-    } */
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) - referência Chrome: responsive - 600x731 */
-    /* @media only screen and (min-width: 600px) { */
+    }
+   */
+  /* Small devices (portrait tablets and large phones, 600px and up) - referência Chrome: responsive - 600x731
+    @media only screen and (min-width: 600px) { */
         /* header */
         /* header{
             width: 100%;
@@ -368,8 +369,8 @@ footer{
             height: 100vh;
         }
     
-    } */
-  
+    }
+   */
   /* Large devices (laptops/desktops, 992px and up) - referência Chrome: responsive - 922x744 */
     /* @media only screen and (min-width: 992px) { 
         button {
