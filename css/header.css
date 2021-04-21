@@ -5,9 +5,9 @@ html{
 }
 
 header{
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .8);
     width: 100%;
-    height: 18vh;
+    height: fit-content;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -19,10 +19,18 @@ header{
    
   
 }
+header a{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    margin:none;
+}
 
 nav{
-    width: 50%;
-    
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     
 }
 
@@ -41,17 +49,27 @@ nav{
 #selected:hover{
     border-bottom: 3px solid #FC7600;
 }
+nav ul li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 15%
+    
 
+}
 nav ul{
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
     
 
 }
 
 nav li{
-    width: 30%;
+    width: fit-content;
     text-align: center;
    
 }
@@ -61,6 +79,7 @@ nav a{
     font-size: 26px;
     color: #edf0f1;
     text-decoration: none;
+    width: 15%;
 }
 
 nav li a {
@@ -69,6 +88,7 @@ nav li a {
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
+    
 }
 
 nav li a:hover{
@@ -78,24 +98,40 @@ nav li a:hover{
 .usuario{
     width:20%;
     margin-bottom: 15px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem;
+
     
    
+}
+.usuario-flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    margin: 4rem;
 }
 
 .usuario a{
     color:#FC7600;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: none;
     font-family: "Lato", sans-serif;
     font-size: 16px;
     font-weight: bold;
-    
+    width: 100%;
+    justify-content: center;
+    text-align: center;
 }
 
 #logo {
     font-family: "Lato", sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    width:  15%;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -108,6 +144,20 @@ nav li a:hover{
 
 .fotoPerfil{
     border-radius: 50%;
-    width: 12%;
-    margin-left: 10px;
+    width:15%;
+    height: auto;
+}
+@media (max-width:600px){
+    nav li a{
+        font-family: "Lato", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        color: #edf0f1;
+        text-decoration: none;
+        width: 10%;
+    }
+    nav ul li {
+        margin: 5rem;
+        width: 10%;
+    }
 }
