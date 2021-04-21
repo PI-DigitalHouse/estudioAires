@@ -73,17 +73,14 @@ video{
     width: 100%;
 }
 
-/* sessão portfólio */
-
-.backgroundNav-Portfolio{
+/* início da sessão de portfólio */
+#portfolio{
     width: 100%;
     height: 150vh;
+
     background: url(../images/home/headerImg-opc3.png);
     background-position: center;
     background-attachment: fixed;
-}
-
-#portfolio{
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
@@ -93,7 +90,7 @@ video{
     margin: 1% 0 0 0;
 }
 
-/*hover do portfólio */
+/* hover do portfólio */
 .portfolioProjeto-1, .portfolioProjeto-2, .portfolioProjeto-3, .portfolioProjeto-4{
     position: relative;
 
@@ -178,10 +175,10 @@ video{
     font-size: 12rem;
     font-weight: bold;
 }
+/* fim da sessão portfólio */
 
 
-/* sessão de serviços */
-
+/* início da sessão de serviços */
 .servicos{
     width: 100%;
     height: 220vh;
@@ -255,9 +252,9 @@ video{
     text-decoration: none;
     font-size: 16rem;
 }
+/* fim da sessão de serviços */
 
-/* quem somos */
-
+/* início da sessão quem somos */
 .quem-somos{
     width: 100%;
     height: 209vh;
@@ -334,9 +331,9 @@ video{
     font-size: 48rem;
     font-weight: 800;
 }
+/* fim da sessão quem somos */
 
-/* sessão parceiros */
-
+/* início da sessão parceiros */
 .parceiros{
     width: 100%;
     height: 216.5vh;
@@ -390,7 +387,6 @@ video{
     flex-wrap: wrap;
 }
 
-
 .listaParceiros-esquerda img{
     height: 23vh;
     margin: 5.2% 0 5.2% 13.2%;
@@ -412,9 +408,9 @@ video{
     margin: -14% 0 0 48.5%;
     color: #212121;
 }
+/* fim da sessão parceiros */
 
 /* footer */
-
 body{
     line-height: 1.5;
 }
