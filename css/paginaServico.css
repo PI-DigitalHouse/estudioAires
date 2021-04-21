@@ -13,7 +13,6 @@ body{
     margin: auto;
 }
 
-
 /* início do header */
 .headerServico{
     background: url(../images/servicos/headerPaginaServico.png);
@@ -34,7 +33,7 @@ body{
 }
 
 .headerServico--backButton__paragraph{
-    margin: 25% 0 0 0;
+    margin: 20% 0 0 0;
     font-size: 21rem;
 }
 
@@ -204,25 +203,25 @@ footer{
 
 /* media queries */
 
-/* Extra small devices (phones, 600px and down) - referência Chrome: Pixel 2 (411 x 731)  */
-    /* @media only screen and (max-width: 600px) {
-        header{
+/* Extra small devices (phones, 600px and down) - referência Chrome: Responsive (600x670)  */
+    @media only screen and (max-width: 600px) {
+        .headerServico{
             width: 100%;
             height: 75vh;
         }
 
-        .back-button p {
-            margin: 122% 0 0 0;
+        .headerServico--backButton__paragraph {
+            margin: 52% 0 0 0;
         }
 
-        header h1 {
+        .headerServico--h1 {
             font-size: 50rem;
             top: 10%;
-            right: 27%;
+            right: 29%;
         }
 
-        header p {
-            width: 97%;
+        .headerServico--p {
+            width: 84%;
             font-size: 24rem;
             margin: 16.8% 2% 0 2%;
             color: #212121;
@@ -230,13 +229,13 @@ footer{
             align-self: center;
         }
 
-        button {
-            margin: 16.7% 0 0 4%;
-            width: 56%;
-            height: 6vh;
+        .headerServico--buttonOrcamento {
+            margin: 71.7% 0 0 -90%;
+            width: 37%;
+            height: 8vh;
         }
 
-        button a {
+        .headerServico--buttonLink {
             font-size: 20rem;
         }
 
@@ -250,21 +249,26 @@ footer{
             font-size: 22rem;
         }
 
-        .paragraph1{
+        .descricaoServico--paragraph1{
             left: 0;
+
         }
 
-        .paragraph2{
+        .descricaoServico--paragraph2{
             margin: 8% 0 3% 0;
         }
 
         .descricaoServico img {
             width: 100%;
-            height: 40vh;
+            height: 100vh;
             margin: 2.4% 0 6% 0;
             align-self: center;
         }
 
+        .social-links{
+            display: flex;
+            flex-direction: column;
+        }
         .footer-col h4 {
             font-size: 11px;
         }
@@ -272,8 +276,12 @@ footer{
         .footer-col ul li a {
             font-size: 11rem;
         }
+
+        .footer-col .social-links a{
+            margin: 2% 0 0 0;
+        }
     }
-   */
+  
   /* Small devices (portrait tablets and large phones, 600px and up) - referência Chrome: responsive - 600x731
     @media only screen and (min-width: 600px) { */
         /* header */
