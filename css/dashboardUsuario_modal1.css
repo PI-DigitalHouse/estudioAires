@@ -6,7 +6,7 @@ html{
 body{
     font-family: Arial;
     height: 40vh;
-    width: 40vw;
+    width: 60vw;
 }
 
 header{
@@ -19,13 +19,8 @@ header{
 
 .modal1{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background: #EFB37E;
-    height: 20vh;
-}
-
-.modal2{
     background: #EFB37E;
     height: 20vh;
 }
@@ -44,7 +39,6 @@ h3{
     color: black;
     width: 10%;
     height: 30px;
-    margin: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,4 +51,12 @@ p{
 .botao:hover{
     background-color:#d4d4d4;
     border: 1.5px solid #d4d4d4;
+}
+
+@media (min-width:520px){
+    body{
+        font-family: Arial;
+        height: 40vh;
+        width: 40vw;
+    }
 }
