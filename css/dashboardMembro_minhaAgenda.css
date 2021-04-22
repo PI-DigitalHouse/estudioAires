@@ -8,8 +8,17 @@ body{
     background-image: url("body-backgrounds/bg-opacity.png");
     margin: 0px;
 }
+main{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
 
+}
 
+.dash-mem-jobs-fin{
+    text-decoration: none;
+    color: white;
+}
 .containerServico{
     display: flex;
     border: 2px solid #fff ;
@@ -18,12 +27,15 @@ body{
     border-radius: 10px;
     background-color:white;
     justify-content: space-around;
+    width: 100%;
 }
 
 .containerEsquerda{
     display: flex;
-    width: 60%;
-    margin-left: 40px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    
 }
 
 h2{
@@ -33,13 +45,21 @@ h2{
 .info{
     font-size: 14rem;
 }
-
+.form{
+    width: 25%;
+}
 .servicoContratado1{
-    margin-top: 10px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+
 }
 
 .servicoContratado1 .info p{ 
     display: inline;
+    margin: 4rem;
 }
 
 .tipo1{
@@ -47,7 +67,8 @@ h2{
 }
 
 .servicoContratado2{
-    margin: 50px;
+    height: 100%;
+    margin: 4rem;
 }
 
 .servicoContratado2 .info p{
@@ -55,12 +76,10 @@ h2{
 }
 
 .servicoContratado3{
-    margin-top: 70px;
+    margin: 4rem;
 }
 
-.servicoContratado3 .info p{ 
-    display: inline;
-}
+
 
 .tipo2{
     font-weight: bold;
@@ -78,7 +97,12 @@ h2{
 }
 
 .botoes{
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 25%;
+    justify-content: center;
+    height: 100%;
 }
 
 .botoes p{
@@ -89,8 +113,8 @@ h2{
 .botoes-2{
     padding: 5px;
     font-size: 14rem;
-    margin-top: 30px;
-    margin-left: 30px;
+    width: 90%;
+    
 }
 
 .botoes .botoes-1{
@@ -99,8 +123,8 @@ h2{
     border-radius: 10px;
     padding: 5px;
     font-size: 14rem;
-    margin-top: 20px;
-    margin-left: 30px;
+    width: 50%;
+    
 }
 
 .botoes .botoes-1:hover{
@@ -108,3 +132,84 @@ h2{
     border: 1.5px solid #fa8d2e;
 }
 
+@media (max-width:600px){
+    .containerServico{
+        display: flex;
+        border: 2px solid #fff ;
+        margin: 20px;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        background-color:white;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerEsquerda{
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        flex-wrap: wrap;
+    }
+    .containerCentro{
+        width: 100%;
+        margin-top: 20rem;
+        margin-left: 40rem;
+    }
+    .containerDireita{
+        width: 100%;
+        
+    }
+    .servicoContratado1{
+        width: fit-content;
+        margin: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .servicoContratado2{
+        margin: 20rem;
+        width: 100%;
+        height: fit-content;
+    }
+    .servicoContratado3{
+        margin: 20rem;
+        width: 100%;
+        display: inline-block;
+    }
+    .botoes{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 10%;
+        margin: 16rem;
+        margin-top: 0rem;
+    }
+    .botoes .entregaveis{
+        border: 1.5px solid #FC7600;
+        background-color:#FC7600;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 14rem;
+        width: 100%;
+        margin: 0rem;
+    }
+    .botoes .prestador{
+        width: 100%;
+        margin: 0rem;
+    }
+    .containerDireita{
+        width: 100%;
+        margin: 0rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .informacoes{
+        margin-left: 50rem;
+    }
+    .info{
+        text-align: left;
+    }
+    
+}
