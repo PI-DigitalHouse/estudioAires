@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/">
         <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="./login-modal/login-modal.css">
         <link rel="shortcut icon" href="images/square-logo-lineorange.png">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <title>Estúdio Aires</title>
@@ -30,8 +31,35 @@
                             <li><a href="#">Contato</a></li>
                         </ul>
                     </nav>
-                    <a href="login.html" class="login"><button>Login</button></a>
+                  <!--   <a href="login.html" class="login"><button>Login</button></a> -->
+                  <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
             </header>
+              <!-- Modal -->
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal">&times;</span>
+        <form class="modal-content animate" action="">
+     
+            <div class="container-login">
+                <span class="container-logo">Estúdio Aires</span>
+                <!-- label for="uname"><b>E-mail:</b></label> -->
+                <input type="text" placeholder="E-mail cadastrado:" name="uname" required>
+              <!--<label for="psw"><b>Senha:</b></label> -->
+                <input type="password" placeholder="Senha:" name="psw" required>
+                <span class="psw-forget"><a href="#">Esqueceu sua senha? </a></span>
+                <button type="submit">ENTRAR</button>
+  
+                <div class="icons-login">
+                    <a href=""><img src="images/icons/botao-google.png" alt=""> </a>
+                    <a href=""><img src="images/icons/botao-facebook.png" alt=""> </a>
+                </div>  
+  
+                <div class="container-div">
+                    <span class="psw">Novo no Estúdio? <a href="#">CADASTRE-SE</a></span>
+                </div>  
+            </div>
+        </form>
+        </div>
+      
 
                 <!-- início da sessão de portfólio -->
                 <div id="portfolio">
@@ -257,5 +285,6 @@
                 </div>
             </footer>
         </main>
+        <script type="text/javascript" src="./login-modal/login-modal.js"></script>   
     </body>
 </html>
