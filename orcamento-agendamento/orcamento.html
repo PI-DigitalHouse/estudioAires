@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="orcamento.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="header-orcamento.css">
+  
+    <title>Estudio Aires | Fotografias Imobiliária</title>
+    <link rel="shortcut icon" href="images/square-logo-lineorange.png">
+</head>
+<body>
+<header>
+        <a id="logo" href="home.html">Estudio Aires </a>
+        <nav>
+            <ul>
+                <li><a  href="dashboardUsuario_solicitacoes.html">Solicitações</a></li>
+                <li><a id = "selected" href="TBC">+ Novo Orçamento</a></li>
+                <li><a  href="">Contatos</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <a href="TBC">Nome do usuario 
+            <img class= "fotoPerfil" src ="./orcamento-images/fotoPerfil.png" alt="Foto usuário">
+            </a>
+        </div>
+    </header>
+
+    <!-- Inicio do Dashboard -->
+    
+    <main>
+    <section class='card-login'>
+        <div class="container">
+
+            <div class= "menu-lateral">
+                <div class="title">
+                <p>Orçamentos e Agendamentos</p>
+                </div>
+            
+                <div class="step">
+                    <p>Informe o endereço onde serão realizadas as fotos</p>
+                    <div class="bolinhas">
+                        <div class="bolaOk"> 1 </div>
+                    </div>
+                </div> 
+
+                <div class="step">
+                    <p>Selecione os tipos de serviços</a> </p>
+                    <div class="bolinhas">
+                         <div class="bolaOk"> 2 </div>
+                    </div>
+                </div>
+
+                 <div class="step">
+                    <p>Detalhes do serviço </p>
+                    <div class="bolinhas">
+                        <div class="bolaOk"> 3 </div>
+                    </div>
+            
+                </div>
+                <div class="step">
+                    <p>Datas para a sessão </p>
+                    <div class="bolinhas">
+                        <div class="bolaOk"> 4 </div>
+                    </div>
+            
+                </div>
+                 <div class="step">
+                    <p>Pagamento </p>
+                    <div class="bolinhas">
+                        <div class="bolaOk"> 5 </div>
+                    </div>
+            
+                </div>
+            
+
+            </div>
+        </div>
+
+    <!-- 
+        <div class="acao-central"> passo a substituir a div pelo form-->
+            
+            <form id="acao-central" action="">
+                
+                <div class="title">
+                    <p>Preencha as informacoes abaixo</p>
+                </div>
+
+                    <!--  /*STEP1*/ --> 
+                    <div class="tab">
+                        <h4>Informe o endereço onde serao realizadas as fotos:</h4>
+                        <p>Endereço:<input placeholder="Preencha com o endereço onde serão realizadas as fotos" maxlength="250" oninput="this.className = ''"></p>
+                        <p>Informe o CEP:<input placeholder="Informe o CEP:" oninput="this.className = ''"></p>
+                        <p>Informe o tamanho do imovel:<input placeholder="Informe o tamanho do imóvel em m2" oninput="this.className = ''"></p>
+                    </div>
+
+                    
+                    <!--  /*STEP2*/ --> 
+
+                    <div class="tab">
+                        <h4>Selecione os tipos de serviço:</h4>
+                        <ul class="listado">
+                            <li><input type="radio" name="service1" oninput="this.className = ''">Fotografia</li>
+                            <li><input type="radio" name="service2" oninput="this.className = ''"  >Fotografia 360 3D</li>
+                            <li><input type="radio" name="service3" oninput="this.className = ''">Video dinamico</li>
+                            <li><input type="radio" name="service4" oninput="this.className = ''" >Imagens Aéreas</li>
+      
+                        </ul>  
+                        <div class="valor-orcamento">
+                            <p>Valor do seu orçamento:</p>
+                            
+                            <div class="valor-orcamento preco"> 
+                                <p>$ Valor</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--  /*STEP3*/ --> 
+                    <div class="tab">
+                        <h4>Algum resposável irá receber o prestador? Se sim, por favor informe o nome da pessoa:</h4>
+                        <p>Nome do Responsável: <input placeholder="Nome do Responsável" oninput="this.className = ''">
+                            <p>Informe se há detalhes adicionais sobre o servico a ser prestado</p>
+                            <p>Detalhes: <input placeholder="Detalhes:" oninput="this.className = ''">
+
+                        <p>ATENÇÃO! Caso não haja quem receber o prestador, por favor entrar em contato com o prestador para detalhar as informações.</p>          
+                       
+
+                    </div>
+                    <!--  /*STEP4*/ --> 
+
+                    <div class="tab">
+                        <h4>Por favor, selecione 3 opções de datas:</h4>
+
+                        
+                        <div class="step-4-date">
+                            <p>Data 1:</p>
+                            <input  placeholder="Dia" oninput="this.className = ''"type="number" > 
+                            <input placeholder="mes" oninput="this.className = ''" type="month">
+                            <input placeholder="mes" oninput="this.className = ''" type="time">   
+                        </div>   
+                        <div class="step-4-date">
+                            <p>Data 2:</p>
+                            <input  placeholder="Dia" oninput="this.className = ''"type="number" > 
+                            <input placeholder="mes" oninput="this.className = ''" type="month"> 
+                            <input placeholder="mes" oninput="this.className = ''" type="time">
+                        </div>   
+                        <div class="step-4-date">
+                            <p>Data 3:</p>
+                            <input  placeholder="Dia" oninput="this.className = ''"type="number" > 
+                            <input placeholder="mes" oninput="this.className = ''" type="month"> 
+                            <input placeholder="mes" oninput="this.className = ''" type="time">  
+                        </div>   
+                                  
+                        
+
+                    </div>
+                    <div class="tab">
+                        <h4>Escolha a forma de pagamento:</h4>
+                        <ul class="listado">
+                            <li><input type="radio" name="pagamento" oninput="this.className = ''">PIX</li>
+                            <li><input type="radio" name="pagamento" oninput="this.className = ''"  >Transferencia Bancária</li>
+                            <li><input type="radio" name="pagamento" oninput="this.className = ''">Boleto</li>
+                            <li><input type="radio" name="pagamento" oninput="this.className = ''" >PagSeguro</li>
+                        </ul>  
+                    </div>     
+                    <div class="tab">
+                        <div class="icon-confirm">
+                        <h4>Solicitação enviada com sucesso!</h4>
+                        
+                            <img src="./orcamento-images/Vector.png" alt="">
+                        
+                            <h5>Para obter mais informações a respeito do seu agendamento acesse sua área restrita.</h5>
+            
+                        </div>
+                    </div>           
+                        
+
+                    
+                 
+
+                    <!-- BOTOES DE CONTINUAR E VOLTAR -->
+               
+                    <div class="button-submit">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">VOLTAR</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">CONFIRMAR</button>
+                   
+                    </div>
+                </div> 
+            </form>
+        </div>
+
+       </div>
+    </section>
+    </main>
+
+
+<script type="text/javascript" src="orcamento.js"></script>      
+</body>
+</html>

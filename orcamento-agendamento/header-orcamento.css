@@ -1,0 +1,110 @@
+
+/* o html tá no dashboardUsuario_solicitacoes */
+html{
+    font-size: 6.25%;
+}
+
+header{
+    margin:0;
+    background: rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:sticky;
+    top:0;
+    left: 0;
+    font-size: 16rem;
+    margin:0;
+   
+  
+}
+
+nav{
+    width: 60%;
+    
+    
+}
+
+
+#selected{
+    color: white;
+    padding: 10px 30px 3px 30px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: #FC7600 solid 2px;
+    font-weight: bold;
+    
+    
+}
+
+#selected:hover{
+    border-bottom: 3px solid #FC7600;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+     
+    
+
+}
+
+
+nav li a {
+    margin-left: 85px;
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color:#FC7600;
+}
+
+.usuario{
+    width:20%;
+    margin-bottom: 15px;
+    
+   
+}
+
+.usuario a{
+    color:white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+#logo {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+
+
+.usuario a:hover{
+    color: white;
+}
+
+.fotoPerfil{
+    border-radius: 50%;
+    width: 12%;
+    margin-left: 10px;
+}
