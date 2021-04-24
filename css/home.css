@@ -56,9 +56,40 @@ li, a, button{
     left: 82%;
     background-color:transparent;
     width: 18%;
+    margin-top: 30px;
+    font-size: 15px;
+    color: #edf0f1;
     
 
 }
+.container-div-2{
+    display: flex;
+    position: absolute;
+    top: 83%;
+    left: 3%;
+    background-color:transparent;
+    width: 22%;
+    margin-top: 30px;
+    font-size: 10px;
+    color: #edf0f1;
+    text-align: center;
+    font-weight: bold;
+    
+
+}
+.header-orcamento{
+    border: #FC7600 solid 2px;
+    border-radius: 10px;
+    width: 550px;
+    padding: 15px;
+    background-color:transparent;
+}
+.header-orcamento:hover{
+    background-color:#FC7600;
+    transition: all 0.5s ease 0s;
+    
+}
+
 .header-cadastrese{
     text-align: center;
     font-size: 13px;
@@ -96,12 +127,12 @@ button{
     padding: 10px 25px;
     background: rgba(252, 118, 0, 1);
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
-button:hover{
+ button:hover{
     background: rgba(252, 118, 0, 0.8);
 }
 

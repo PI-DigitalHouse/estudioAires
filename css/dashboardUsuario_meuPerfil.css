@@ -24,11 +24,13 @@ body{
 
 .du-meuPerfil-info h1{
     text-align: center;
+    padding: 5px;
+    border-bottom: #FC7600 solid 1px;
 }
 
 .du-meuPerfil-info-fotoPerfil{
-    border-radius: 50%;
-    height: 300px;
+    border-radius: 250px;
+    height: 180px;
     display: block;
     margin-left: auto;
     margin-right: auto;

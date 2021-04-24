@@ -1,5 +1,4 @@
 
-/* o html tá no dashboardUsuario_solicitacoes */
 html{
     font-size: 6.25%;
 }
@@ -8,22 +7,23 @@ header{
     margin:0;
     background: rgba(0, 0, 0, .4);
     width: 100%;
-    height: fit-content;
+    height:fit-content;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position:sticky;
     top:0;
     left: 0;
-    font-size: 16rem;
+    font-size: 26px;
     margin:0;
    
   
 }
 
 #selected{
+    position: relative;
     color: white;
-    padding: 10px 30px 3px 30px;
+    padding: 1px 1px 1px 1px;
     border-radius: 10px 10px 0px 0px;
     border-bottom: #FC7600 solid 2px;
     font-weight: bold;
@@ -38,13 +38,19 @@ header{
 nav{
     width: 60%;
     display: flex;
-    justify-content: space-around;
+    font-size: 35px;
+    justify-content: space-around; 
+    align-items: center;
     
 
 }
 nav ul{
     display: flex;
-    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position:relative;
+    left: 15%;
+    /* justify-content: space-around; */
     list-style-type: none;
      
     
@@ -53,7 +59,9 @@ nav ul{
 
 
 nav li a {
-    margin-left: 85px;
+    display: flex;  
+    position: relative;
+    margin-right: 128px;
     width: 100%;
     font-family: "Lato", sans-serif;
     font-weight: 500;
@@ -83,6 +91,50 @@ nav li a:hover{
     
 }
 
+.container-div{
+    display: flex;
+    position: absolute;
+    top: 45%;
+    left: 83%;
+    background-color:transparent;
+    width: 18%;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #edf0f1;
+    
+
+}
+.container-div-2{
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    background-color:transparent;
+    width: 22%;
+    margin-top: 30px;
+    font-size: 10px;
+    color: #edf0f1;
+    text-align: center;
+    font-weight: bold;
+  
+}
+.header-cadastrese{
+    text-align: center;
+    
+    font-size: 13px;
+}
+.header-cadastrese a{
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+.header-cadastrese a:hover{
+    color:#FC7600;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 #logo {
     font-family: "Lato", sans-serif;
     font-weight: 500;
@@ -91,14 +143,31 @@ nav li a:hover{
     text-decoration: none;
 }
 
+.usuario a{
+    width: 100% ;
 
+}
 
 .usuario a:hover{
-    color: white;
+    color: #FC7600;
 }
 
 .fotoPerfil{
     border-radius: 50%;
     width: 12%;
     margin-left: 10px;
+}
+
+.login{
+    padding: 10px 25px;
+    background: rgba(252, 118, 0, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+ .login:hover{
+    background: rgba(252, 118, 0, 0.8);
 }

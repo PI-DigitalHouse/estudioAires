@@ -273,6 +273,7 @@ input.invalid {
 
 /*STEP FINAL*/
 
+
 .icon-confirm{
     display: flex;
     position: relative;
@@ -292,6 +293,27 @@ input.invalid {
     height: 50px;
     top: 20px;
     bottom: 25px;
+
+}
+.icon-confirm a{
+    text-decoration: none;
+    color: #FC7600;
+    font-weight: bold;
+}
+
+.login2{
+  color: black;
+  font-weight: bold;  
+ margin-top: 45px;   
+ width: 25%;
+ margin-left: 230px;
+ background: transparent;
+border: rgba(252, 118, 0, 1) solid 1px;
+border-radius: 10px;
+}
+.login2:hover{
+background-color: #FC7600;
+color: white; 
 
 }
 

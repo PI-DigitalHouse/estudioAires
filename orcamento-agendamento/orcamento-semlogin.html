@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="orcamento.css">
+    <link rel="stylesheet" href="../login-modal/login-modal.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="header-orcamento.css">
   
@@ -16,17 +17,18 @@
         <a id="logo" href="../home.html">Estudio Aires </a>
         <nav>
             <ul>
-                <li><a  href="">Contatos</a></li>
-                <li><a  href="../dashboardUsuario/dashboardUsuario_solicitacoes.html">Solicitações</a></li>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="#quem-somosEA">Quem Somos</a></li>
+                
                 <li><a id = "selected" href="TBC">+ Novo Orçamento</a></li>
                 
             </ul>
         </nav>
-        <div class="usuario">
-            <a href="../dashboardUsuario/dashboardUsuario_meuPerfil.html">Nome do usuario 
-            <img class= "fotoPerfil" src ="./orcamento-images/fotoPerfil.png" alt="Foto usuário">
-            </a>
-        </div>
+        <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
+        <div class="container-div">
+          <span class="header-cadastrese">Novo no Estúdio?                        
+              <a href="#">CADASTRE-SE</a></span>
+      </div> 
     </header>
 
     <!-- Inicio do Dashboard -->
@@ -129,6 +131,22 @@
                        
 
                     </div>
+                    <!-- Obrigatório realizar login -->
+
+                    <div class="tab">
+                        <div class="icon-confirm">
+                        <h4>Para seguir, por favor realize o seu login.</h4>
+                        
+                            <img src="../images/icons/red-x.png" alt="">
+                           
+                            <button class="icon confirm login2">Login</button>
+                            
+
+                            <h5>Novo no Estúdio? <a href="">CADASTRE-SE</a></h5>
+            
+                        </div>
+                    </div> 
+
                     <!--  /*STEP4*/ --> 
 
                     <div class="tab">
@@ -157,6 +175,8 @@
                         
 
                     </div>
+               
+
                     <div class="tab">
                         <h4>Escolha a forma de pagamento:</h4>
                         <ul class="listado">
@@ -166,16 +186,7 @@
                             <li><input type="radio" name="pagamento" oninput="this.className = ''" >PagSeguro</li>
                         </ul>  
                     </div>     
-                    <div class="tab">
-                        <div class="icon-confirm">
-                        <h4>Solicitação enviada com sucesso!</h4>
-                        
-                            <img src="./orcamento-images/Vector.png" alt="">
-                        
-                            <h5>Para obter mais informações a respeito do seu agendamento acesse sua área restrita.</h5>
-            
-                        </div>
-                    </div>           
+                              
                         
 
                     
@@ -194,9 +205,34 @@
 
        </div>
     </section>
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal">&times;</span>
+    <form class="modal-content animate" action="">
+ 
+        <div class="container-login">
+            <span class="container-logo">Estúdio Aires</span>
+            <!-- label for="uname"><b>E-mail:</b></label> -->
+            <input type="text" placeholder="E-mail cadastrado:" name="uname" required>
+          <!--<label for="psw"><b>Senha:</b></label> -->
+            <input type="password" placeholder="Senha:" name="psw" required>
+            <span class="psw-forget"><a href="#">Esqueceu sua senha? </a></span>
+            <button type="submit"><a href="../dashboardUsuario/dashboardUsuario_solicitacoes.html">ENTRAR</a></button>
+
+            <div class="icons-login">
+                <a href=""><img src="../images/icons/botao-google.png" alt=""> </a>
+                <a href=""><img src="../images/icons/botao-facebook.png" alt=""> </a>
+            </div>  
+
+            <div class="modal-cadastro">
+                <span class="psw">Novo no Estúdio? <a href="#">CADASTRE-SE</a></span>
+            </div>  
+        </div>
+    </form>
+    </div>
+       
     </main>
 
-
+    <script type="text/javascript" src="../login-modal/login-modal.js"></script> 
 <script type="text/javascript" src="orcamento.js"></script>      
 </body>
 </html>

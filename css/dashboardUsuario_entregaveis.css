@@ -3,15 +3,32 @@ html{
     font-family: Arial;
     box-sizing: border-box;
 }
+body{
+    margin:0;
+}
 
 header{
-    background:#F3A057 ;
+    margin:0;
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:sticky;
+    top:0;
+    left: 0;
+    font-size: 16rem;
+    margin:0;
+
+
+    /*background:#F3A057 ;
     font-size: 16rem;
     height: 15vh;
     text-align: center;
     margin: 0px;
     display: flex;
-    padding: 50px
+    padding: 50px*/
 
 }
 
