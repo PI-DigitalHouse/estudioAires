@@ -6,9 +6,9 @@ html{
 
 header{
     margin:0;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .4);
     width: 100%;
-    height: 18vh;
+    height: fit-content;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,13 +20,6 @@ header{
    
   
 }
-
-nav{
-    width: 60%;
-    
-    
-}
-
 
 #selected{
     color: white;
@@ -43,6 +36,7 @@ nav{
 }
 
 nav{
+    width: 60%;
     display: flex;
     justify-content: space-around;
     
