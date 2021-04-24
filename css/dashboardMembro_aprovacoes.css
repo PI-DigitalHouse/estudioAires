@@ -86,6 +86,8 @@ label{
     margin: 16rem;
     display: flex;
     align-items: flex-end;
+    text-decoration: none;
+    color: black;
 }
 
 .informacoes a{
