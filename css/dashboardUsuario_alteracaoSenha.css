@@ -6,7 +6,7 @@ html{
 
 body{
     font-family: "Lato", sans-serif;
-    font-size: 16rem;
+    font-size: 20rem;
     background-image: url("body-backgrounds/bg-opacity.png");
     margin: 0px;
 }
@@ -36,6 +36,7 @@ body{
 
 .du-meuPerfil-info-secao p{
     margin-top: 5px;
+    font-size: 20rem;
 }
 
 .du-meuPerfil-info-secao-icone{
@@ -61,7 +62,7 @@ body{
     background-color:#FC7600;
     border-radius: 10px;
     padding: 5px;
-    font-size: 14rem;
+    font-size: 20rem;
     width: 20%;
     text-align: center;
     margin-left: auto;
@@ -72,7 +73,7 @@ body{
 
 .du-meuPerfil-info-botao a{
     padding: 5px;
-    font-size: 15px;
+    font-size: 20rem;
     color: black;
     text-decoration: none;   
 }
@@ -97,7 +98,7 @@ body{
 
 .du-meuPerfil-info-botao2 a{
     padding: 5px;
-    font-size: 15px;
+    font-size: 20px;
     color: black;
     text-decoration: none;
 }
