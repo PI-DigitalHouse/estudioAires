@@ -201,6 +201,12 @@ h2{
         width: 100%;
         margin: 0rem;
     }
+
+    a .botoes-entregaveis-a{
+        text-decoration: none;
+        color: black;
+    }
+
     .botoes .prestador{
         width: 100%;
         margin: 0rem;
