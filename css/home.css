@@ -47,13 +47,12 @@ li, a, button{
     align-items: center;
     background: rgba(0, 0, 0, .2);
     z-index: 999;
-
 }
 
 .container-div{
     display: flex;
     position: absolute;
-    top: 55%;
+    top: 75%;
     left: 82%;
     background-color:transparent;
     width: 18%;
