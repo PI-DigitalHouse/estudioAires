@@ -111,7 +111,7 @@ h2{
 .fases{
     display: flex;
     justify-content: space-between;
-    font-size: 14rem;
+    font-size: 16rem;
 
 }
 
@@ -221,7 +221,7 @@ h2{
 }
 
 .rodape{
-    font-size: 9rem;
+    font-size: 16rem;
     margin-top: 5px;
     position: absolute;
     bottom: 0px;
@@ -230,14 +230,13 @@ h2{
 }
 
 .rodape p{
-    margin-right: 57px;
+    margin-right: 95px;
 }
-
-
 
 .cancelamento{
     border: none;
-    font-size: 9rem;
+    font-family: 'Lato';
+    font-size: 16rem;
     margin-top: 5px;
     position: absolute;
     bottom: 0px;
