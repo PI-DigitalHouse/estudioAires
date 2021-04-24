@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 html{
     font-size: 6.25%;
+    font-family: "Lato", sans-serif;
 }
 
 .logo-dash-memb{
     width: 80%;
 }
 body{
-    font-family: Arial;
-    font-size: 16rem;
+    font-size: 20rem;
     background-image: url("body-backgrounds/bg-opacity.png");
     margin: 0px;
 }
@@ -28,12 +29,8 @@ body{
     margin-left: 40px;
 }
 
-h2{
-    font-size: 22rem;
-}
-
-.info{
-    font-size: 14rem;
+h3{
+    font-size: 26rem;
 }
 
 .servicoContratado1{
@@ -48,6 +45,7 @@ h2{
 .tipo1{
     font-weight: bold;
     margin-bottom: 0rem;
+    font-size: 20rem;
     
 }
 
@@ -69,7 +67,7 @@ h2{
 }
 
 label{
-    font-size: 14rem;
+    font-size: 20rem;
 }
 
 .containerDireita{
@@ -83,11 +81,15 @@ label{
 }
 
 .informacoes{
-    font-size: 10rem;
+    font-size: 16rem;
     text-align: end;
-    margin: 10rem;
+    margin: 16rem;
     display: flex;
     align-items: flex-end;
+}
+
+.informacoes a{
+    color: black;
 }
 
 .botoes{
@@ -105,7 +107,7 @@ label{
     background-color: white;
     border-radius: 10px;
     padding: 5px;
-    font-size: 14rem;
+    font-size: 20rem;
     color: black;
     margin: 5rem;
     width: 100%;
@@ -122,7 +124,7 @@ label{
     background-color:#FC7600;
     border-radius: 10px;
     padding: 5px;
-    font-size: 14rem;
+    font-size: 20rem;
     margin: 5rem;
     width: 100%;
 }
