@@ -82,7 +82,9 @@
 color: #FC7600;
 
 }
-
+.pws{
+  font-size: 15px;
+}
 
 .psw a{
   text-decoration: none;
@@ -94,14 +96,14 @@ color: #FC7600;
 .psw a:hover{
   color: white;
 }
-
-.container-div{
+ 
+.modal-cadastro{
   margin-top: 30px;
   font-size: 15px;
   color: #edf0f1;
 
 
-}
+} 
 
 
  .container-login button{
@@ -180,7 +182,7 @@ color: #FC7600;
  
     flex-direction: column;
     height: auto;
-    
+   
   }
 
   .modal-content {

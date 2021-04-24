@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 html{
     font-size: 6.25%;
 }
 
 body{
-    font-family: Arial;
-    font-size: 16rem;
+    font-family: "Lato", sans-serif;
+    font-size: 20rem;
     background-image: url("body-backgrounds/bg-opacity.png");
     margin: 0px;
 }
@@ -24,6 +25,7 @@ main{
 
 .dropdown{
     height: fit-content;
+    font-size: 18rem;
 }
 
 .cronos{
@@ -33,6 +35,7 @@ main{
 
 p{
     margin: 0  5px 0 0;
+    font-size: 20rem;
 }
 
 
@@ -60,7 +63,7 @@ h2{
 }
 
 .info{
-    font-size: 14rem;
+    font-size: 20rem;
 }
 
 .servicoContratado1{
@@ -126,7 +129,7 @@ h2{
     background-color:#FC7600;
     border-radius: 10px;
     padding: 5px;
-    font-size: 14rem;
+    font-size: 20rem;
     width: 100%;
     
 }
@@ -198,6 +201,12 @@ h2{
         width: 100%;
         margin: 0rem;
     }
+
+    a .botoes-entregaveis-a{
+        text-decoration: none;
+        color: black;
+    }
+
     .botoes .prestador{
         width: 100%;
         margin: 0rem;
