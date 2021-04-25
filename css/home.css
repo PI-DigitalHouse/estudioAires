@@ -263,6 +263,7 @@ video{
 .portfolio--orcamentoContainer--iconDiv img{
     width: 58%;
 }
+/* fim do botão de orçamento - fixo até o final da homepage */
 
 /* fim da sessão portfólio */
 
@@ -496,10 +497,12 @@ video{
 
 .footer--goUpBtn--linkImg{
     position: relative;
-    height: 3.5vh;
+    height: 65%;
+    width: 22%;
     top: 500%;
-    left: -593%;
-
+    left: 23%;
+    padding: 2% 0 2% 0;
+    
     background: #FC7600;
     border-radius: 50%;
 }
