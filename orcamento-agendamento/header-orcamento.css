@@ -166,6 +166,8 @@ nav li a:hover{
     cursor: pointer;
     transition: all 0.3s ease 0s;
     color: white;
+    font-size: 18px;
+
 }
 
  .login:hover{

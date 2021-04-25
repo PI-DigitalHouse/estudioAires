@@ -37,9 +37,9 @@
                     </nav>
                   <!--   <a href="login.html" class="login"><button>Login</button></a> -->
                   <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
-                  <div class="container-div">
+                  <div class="container-cadastrese">
                     <span class="header-cadastrese">Novo no Estúdio?                        
-                        <a href="#">CADASTRE-SE</a></span>
+                        <a href="./cadastro-new-users/cadastro.html">CADASTRE-SE</a></span>
                 </div> 
                             
 
@@ -59,7 +59,7 @@
             <div class="container-login">
                 <span class="container-logo">Estúdio Aires</span>
                 <!-- label for="uname"><b>E-mail:</b></label> -->
-                <input type="text" placeholder="E-mail cadastrado:" name="uname" required>
+                <input type="text" placeholder="E-mail cadastrado:" required placeholder="Email" maxlength="60" type="email" name="email" id="email">
               <!--<label for="psw"><b>Senha:</b></label> -->
                 <input type="password" placeholder="Senha:" name="psw" required>
                 <span class="psw-forget"><a href="#">Esqueceu sua senha? </a></span>
@@ -71,7 +71,7 @@
                 </div>  
   
                 <div class="modal-cadastro">
-                    <span class="psw">Novo no Estúdio? <a href="#">CADASTRE-SE</a></span>
+                    <span class="psw">Novo no Estúdio? <a href="./cadastro-new-users/cadastro.html">CADASTRE-SE</a></span>
                 </div>  
             </div>
         </form>
@@ -305,6 +305,6 @@
             </footer>
         </main>
         <script type="text/javascript" src="./login-modal/login-modal.js"></script>
-        <script type="text/javascript" src="./cadastro-new-users/cadastro-modal.js"></script>     
+          
     </body>
 </html>

@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/">
-        <link rel="stylesheet" href="./css/home.css">
-        <link rel="stylesheet" href="./cadastro-new-users/cadastro-modal.css">
+        <link rel="stylesheet" href="../css/">
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../cadastro-new-users/cadastro-modal.css">
         <link rel="shortcut icon" href="images/square-logo-lineorange.png">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <title>Estúdio Aires</title>
@@ -16,7 +16,7 @@
         <div class="banner-area"><!--Vídeo de entrada do site-->
             <div class="banner">
                 <video autoplay muted loop>
-                    <source src="./images/landing-page/teste.mov" type="video/mp4">
+                    <source src="../images/landing-page/teste.mov" type="video/mp4">
                      
                 </video>
                  
@@ -25,10 +25,10 @@
         </div> 
             <header><!--Nav fixo do site-->
                <div class="header-log-nav"> 
-                <div class="logo"><a href="#">Estúdio Aires</a></div>
+                <div class="logo"><a href="../home.html">Estúdio Aires</a></div>
                     <nav><!--menu do site-->
                         <ul class="nav-links">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="../home.html">Home</a></li>
                             <li><a href="#servicosEA">Serviços</a></li>
                             <li><a href="#quem-somosEA">Quem Somos</a></li>
                             <li><a href="#parceirosEA">Parceiros</a></li>
@@ -37,7 +37,7 @@
                     </nav>
                   <!--   <a href="login.html" class="login"><button>Login</button></a> -->
                   <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
-                  <div class="container-div">
+                  <div class="container-cadastrese">
                     <span class="header-cadastrese">Novo no Estúdio? 
                         
                         <a href="#">CADASTRE-SE</a></span>
@@ -52,11 +52,11 @@
          <!-- Modal-Cadastro-->
         <div class="modalCadastro">
             
-            <form class="modal-content-cadastro animate" >
+            <form class="modal-content-cadastro" >
             <div class="usu-card-login">
-              <div  id="id01" class="usu-flex-container-02">
+              <div  class="usu-flex-container-02">
                   <h3 class="usu-cadastro">
-                      <a href="#" class="fas fa-arrow-left"></a> Cadastro
+                      <a href="../home.html" class="fas fa-arrow-left"></a> Cadastro
                   </h3>
           
               </div>
@@ -106,6 +106,6 @@
               </form>
           
           </div>
-    
+          <script type="text/javascript" src="../login-modal/login-modal.js"></script>   
 </body>
 </html>

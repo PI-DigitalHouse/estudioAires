@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
+html{
+    font-size: 6.25%;
+}
 
 .modalCadastro {
     /* display: flex; */ 
     position: fixed;
-    z-index: 1; 
+   /*  z-index: 1;  */
     left: 0;
     top: 0;
     width:100%; 
@@ -22,9 +24,10 @@
     display: flex;
     font-family: "Lato", sans-serif;
     position: relative;
-    left: 30%;
+    left: 23%;
+    top:15%;
     border:#FC7600 solid 1px; 
-    width: 40%;
+    width: 50%;
     height: fit-content;
   }
 
@@ -62,6 +65,7 @@
 }
 .usu-cadastro{
     font-family: Lato;
+    font-size:18px;
 }
 .usu-flex-item{
     justify-content: center;
@@ -79,8 +83,8 @@
     height: fit-content;
     mix-blend-mode: normal;
     border: 2.8px solid #FC7600;
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
-         
+    /* filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1)); */
+    background-color:whitesmoke;
     flex-wrap: wrap;
 }
 .usu-flex-container-02{
@@ -95,7 +99,7 @@
     justify-content: center;
     width: 100%;
     font-family: Lato;
-    font-size: 88%;
+    font-size: 18px;
     font-style: normal;
     font-weight: 800;
     margin-bottom: 7%;
@@ -110,15 +114,18 @@
     font-size: 88%;
     font-style: normal;
     font-weight: 800;
-    margin-bottom: 7%;
-    opacity: .8;
+    margin-bottom: 5%;
+    /* opacity: .8; */
+    color: black;
 }
 .usu-input-tipo-1{
-    background-color: white;
+    z-index: 2;
+    background-color: #ffffff;
     border: 1px solid  darkgray;
     opacity: 2;
     width: 35%;
-    height: 2rem;
+    height: 30rem;
+    padding: 5px;
     
 }
 .usu-input-Tipo-2{
@@ -126,15 +133,17 @@
     border: 1px solid  darkgray;
     opacity: 2;
     width: 85%;
-    height: 2rem;
+    height: 30rem;
     margin-top: 1rem;
+    padding: 5px;
 }
 .usu-input-Tipo-3{
     background-color: #ffffff;
     border: 1px solid  darkgray;
     opacity: 2;
     width: 35%;
-    height: 2rem;
+    height: 30rem;
+    padding: 5px;
 }
 .usu-flex-container-tel-cpf{
     display: flex;
@@ -145,7 +154,7 @@
     font-size: 88%;
     font-style: normal;
     font-weight: 800;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 form{
     width: 100%;
@@ -159,7 +168,7 @@ form{
     font-size: 88%;
     font-style: normal;
     font-weight: 800;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 .usu-flex-container-senha{
     display: flex;
@@ -170,18 +179,19 @@ form{
     font-size: 88%;
     font-style: normal;
     font-weight: 800;
-    margin-bottom: 7%;
+    margin-bottom: 3%;
 }
 button[type=submit] {
     background-color: #FC7600;;
     color: white;
-    padding: 14px 20px;
-    height: 3rem;
+    padding: 14px;
+    height: fit-content;
     border: none;
     cursor: pointer;
     width: 45%;
     justify-content: center;
     font-size: 15px;
+    font-weight: bold;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 18px;
     opacity: 0.8;
@@ -192,15 +202,16 @@ button:hover {
 a[class="fas fa-arrow-left"]{
     text-decoration: none;
     color: #FC7600;
-    margin: 1rem;
+    margin: 8rem;
 }
 .usu-flex-container-botao{
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around;
     width: 100%;
-    margin: 1%;
-    height: 5rem;
+    margin: 3%;
+    height: 35rem;
+    
 }
 .usu-flex-container-termos{
     display: flex;
@@ -208,10 +219,11 @@ a[class="fas fa-arrow-left"]{
     justify-content: space-around;
     width: 100%;
     font-family: Lato;
-    font-size: 88%;
+    font-size: 12px;
     font-style: normal;
+    
     font-weight: 800;
-    margin-bottom: 7%;
+    margin-bottom: 3%;
     
 }
 .checkbox1{
@@ -220,12 +232,15 @@ a[class="fas fa-arrow-left"]{
 }
 .LiEAceito{
     color: darkgray;
+    
 }
 .Termos{
     text-decoration: none;
     color:#FC7600;
+    font-size: 12px;
 }
 .política{
     text-decoration: none;
     color:#FC7600;
+    font-size: 12px;
 }

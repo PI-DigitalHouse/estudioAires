@@ -260,9 +260,10 @@ nav li a:hover{
 }
 
 .fotoPerfil{
-    border-radius: 45%;
-    width: 18%;
-    margin-left: 10px;
+    margin-top: 8px;
+    margin-left: 5px;
+    border-radius: 50%;
+    width: 13%;
     height: auto;
 }
 
