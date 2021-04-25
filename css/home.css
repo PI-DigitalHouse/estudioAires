@@ -6,6 +6,7 @@
 
 html{
     font-size: 6.25%;
+    scroll-behavior: smooth; /*torna o scroll entre as sessões mais suave*/ 
 }
 
 body{
@@ -232,7 +233,6 @@ video{
 
 /* fim da sessão portfólio */
 
-
 /* início da sessão de serviços */
 .servicos{
     width: 100%;
@@ -452,6 +452,25 @@ video{
 /* fim da sessão parceiros */
 
 /* footer */
+
+/* início da sessão up-butn para retorno à início da homepage */
+
+.footer--goUpBtn{
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer--goUpBtn--linkImg{
+    position: relative;
+    height: 3.5vh;
+    top: 500%;
+    left: -593%;
+
+    background: #FC7600;
+    border-radius: 50%;
+}
 
 .container-footer{
     max-width: 1170px;
