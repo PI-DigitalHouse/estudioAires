@@ -231,6 +231,39 @@ video{
     left: 112%;
 }
 
+/* botão de orçamento - fixo até o final da homepage */
+
+.portfolio--orcamentoContainer{
+    width: 16%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 53%;
+    left: 83%;
+    z-index: 1;
+}
+
+.portfolio--orcamentoContainer p{
+    font-size: 12rem;
+    font-weight: 800;
+    color: #212121;
+    position: relative;
+    left: 13%;
+    align-self: center;
+}
+
+.portfolio--orcamentoContainer--iconDiv{
+    padding: 4% 0 0% 0;
+    border-radius: 50%;
+    background: #FC7600;
+
+    text-align: center;
+}
+
+.portfolio--orcamentoContainer--iconDiv img{
+    width: 58%;
+}
+
 /* fim da sessão portfólio */
 
 /* início da sessão de serviços */
@@ -421,7 +454,6 @@ video{
     text-align: end;
     color: #212121;
 }
-
 
 .listaParceiros-esquerda{
     display: flex;
