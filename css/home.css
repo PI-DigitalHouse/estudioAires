@@ -60,9 +60,8 @@ li, a, button{
     margin-top: 30px;
     font-size: 15px;
     color: #edf0f1;
-    
-
 }
+
 .container-div-2{
     display: flex;
     position: absolute;
@@ -75,9 +74,8 @@ li, a, button{
     color: #edf0f1;
     text-align: center;
     font-weight: bold;
-    
-
 }
+
 .header-orcamento{
     border: #FC7600 solid 2px;
     border-radius: 10px;
@@ -104,8 +102,6 @@ li, a, button{
     font-size: 18px;
     font-weight: bold;
 }
-
-
 
 .logo{
     cursor: pointer;
@@ -140,8 +136,6 @@ button{
 video{
     width: 100%;
 }
-
-
 
 /* início da sessão de portfólio */
 #portfolio{
@@ -324,7 +318,7 @@ video{
 /* início da sessão quem somos */
 .quem-somos{
     width: 100%;
-    height: 209vh;
+    height: 165vh;
     background-image: url(../images/quem-somos/backgroundImgOpc3.jpg);
     background-position: center;
     background-attachment: fixed;
@@ -380,25 +374,6 @@ video{
     width: 108%;
     text-align: center;
     margin: 12.3% 0 0 -21%
-}
-
-.button-socios{
-    height: 9vh;
-    width: 28.5%;
-    margin: 32.9% 0 0 11.3%;
-
-
-    background-color:#FC7600;
-    border: none;
-    border-radius: 18rem;
-    color: #FFFFFF;
-    font-size: 48rem;
-    font-weight: 800;
-}
-
-.container-socios--buttonLink{
-    position: relative;
-    bottom: 38%;
 }
 
 /* fim da sessão quem somos */
