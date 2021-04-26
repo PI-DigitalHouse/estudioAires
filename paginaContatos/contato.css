@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 body{
@@ -93,7 +93,7 @@ body{
 }
 
 .form-contato .btn-enviar{
-    background: #81A8E7;
+    background: rgba(252, 118, 0, 1);
     color: #F5F4F6;
     border: none;
     width: 120px;
@@ -102,17 +102,15 @@ body{
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
     transition-property: background;
 }
 
 .form-contato .btn-enviar:hover{
-    background: #5d8bd6;
+    background: rgba(252, 118, 0, 0.8);
 }
-
-
 
 
 
