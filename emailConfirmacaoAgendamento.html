@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação Agendamento</title>
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        body{
+            width: 31.25rem;
+            display: flex;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .flex-container{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-family: Lato;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 0em;
+            
+        }
+        .flex-container-nmr-pedido{
+            display: flex;
+            
+            border-radius: 10px;
+            width:80%;
+            height: 10vh;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(252, 118, 0, 0.62);
+            font-family: Lato;
+            position: relative;
+            top:1rem;
+            z-index: 2;
+        }
+
+        h2{
+            text-align: center;
+            font-family: Lato;
+            
+            align-content: center;
+            display: flex;
+            justify-content: center;
+            margin: 3rem;
+        }
+        h3{
+            text-align: center;
+            font-family: Lato;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            
+            letter-spacing: 0em;
+           
+
+        }
+        .flex-container-infos-pay{
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-wrap: wrap;
+            width:80%;
+            border-radius: 10px;
+            margin-top: rem;
+            height: 15vh;
+            background-color: white;
+            z-index: 0;
+            position: relative;
+            justify-content: flex-start;
+            height: fit-content;
+            margin-bottom: 1rem;
+
+        }
+        .vazio{
+            height: 2rem;
+            width: 100%;
+        }
+        .flex-item{
+            margin-left: 2rem;
+            font-family: Lato;
+            display: flex;
+            flex-direction: column;
+        }
+        .sub-item{
+            font-family: Lato;
+            font-weight: 700;
+
+        }
+        *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}/* }Configuração padrão do css para alguns navegadores */
+
+.container-footer{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+footer{
+    background: #F5F4F6;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #FC7600;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #81A8E7;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #81A8E7;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #FC7600;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    background: #81A8E7;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease-out;
+}
+
+.footer-col .social-links a:hover{
+    cursor: pointer;
+    transform: translateY(-15px);
+}
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <h2 >Boa tarde {{nome}}, Sua solicitação foi aceita por um de nossos fotógrafos. 
+            Abaixo você confere o horário e data de sua sessão.</h2>
+    </div>
+
+    <div class="flex-container-nmr-pedido">
+        <h3>
+            Nmr do pedido
+        </h3>
+    </div>
+   
+    <div class="flex-container-infos-pay">
+        <div class="vazio"></div>
+        <div class="flex-item">
+            <div class="sub-item">Endereço:</div>
+            <div>R. Dos Devs, n°2021 - 05707001</div>
+        
+        </div>
+
+        <div class="vazio"></div>
+        <div class="flex-item">
+            <div class="sub-item">Valor do serviço:</div>
+            <div>R$xxxx,xx</div>
+        
+        </div>
+
+        <div class="vazio"></div>
+        <div class="flex-item">
+            <div class="sub-item">Data</div>
+            <div>DD/MM/AA</div>
+        
+        </div>
+
+        <div class="vazio"></div>
+        <div class="flex-item">
+            <div class="sub-item">Pessoa que receberá o prestador:</div>
+            <div>Fulana de tal</div>
+        
+        </div>
+
+        <div class="vazio"></div>
+        <div class="flex-item">
+            <div class="sub-item">Tamanho do imóvel:</div>
+            <div>400m²</div>
+        
+            <div class="vazio"></div>
+        </div>
+        
+    </div>
+</body>
+<footer class="footer">
+    <div class="container-footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>conheça</h4>
+                <ul>
+                    <li><a href="#quem-somosEA">quem somos</a></li>
+                    <li><a href="#portfolio">portifólio</a></li>
+                    <li><a href="./orcamento-agendamento/orcamento.html">orçamento</a></li>
+                    <li><a href="#">cadastre-se</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contate-nos</h4>
+              <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">telefone</a></li>
+                  <li><a href="#">whatsapp <i class="fab fa-whatsapp"></i></a></li>
+                  <li><a href="#">ipDoEmail@email.com</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>privacidade</h4>
+              <ul>
+                  
+                  <li><a href="#">termos</a></li>
+                  <li><a href="#">condições de uso</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Siga-nos</h4>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+        </div>
+    </div>
+</footer>
+</html>
