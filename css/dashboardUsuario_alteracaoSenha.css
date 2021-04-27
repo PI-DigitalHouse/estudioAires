@@ -32,6 +32,7 @@ body{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .du-meuPerfil-info-secao p{
@@ -194,4 +195,54 @@ footer{
 .footer-col .social-links a:hover{
     cursor: pointer;
     transform: translateY(-15px);
+}
+@media (max-width:600px){
+    body{
+        font-family: "Lato", sans-serif;
+        font-size: 12px;
+        background-image: url("body-backgrounds/bg-opacity.png");
+        margin: 0px;
+    }
+    .du-meuPerfil-info{
+        font-size: 12px;
+    }
+    .du-meuPerfil-info p{
+        font-size: 12px;
+    }
+    .du-meuPerfil-info-secao-titulo {
+        font: size 12px;
+    }
+    .du-meuPerfil-info-botao{
+        border: 1.5px solid #FC7600;
+        background-color:#FC7600;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 12px;
+        width: 20%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .du-meuPerfil-info-botao{
+        width: 30%;
+    }
+    .du-meuPerfil-info-botao2{
+        width: 30%;
+    }
+    
+    .du-meuPerfil-info-botao a{
+        padding: 5px;
+        font-size: 12px;
+        color: black;
+        text-decoration: none;   
+    }
+    .du-meuPerfil-info-botao2 a{
+        font-size: 12px;
+    }
+    .du-meuPerfil-info-secao-formulario{
+        margin-bottom: 15px;
+        width: 80%;
+    }
 }
