@@ -13,6 +13,9 @@ body{
 
 /* informações */
 
+h1{
+    margin: 26rem;
+}
 .du-meuPerfil-info{
     border: 2px solid #fff ;
     margin: 20px;

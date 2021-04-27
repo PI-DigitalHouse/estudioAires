@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        h2{
+            text-align: center;
+            font-family: Lato;
+            
+            align-content: flex-start;
+            display: flex;
+            justify-content: center;
+
+        }
+        body{
+            width: 31.25rem;
+            display: flex;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .vazio{
+            height: 5vh;
+            width: 100%;
+        }
+        .flex-container{
+            display: flex;
+            justify-content: center;
+            height: 15vh;
+            align-items: center;
+        }
+        .link{
+            font-family: Lato;
+            text-align: center;
+            border: black solid 4 px;
+        }
+        .flex-container-link{
+            display: flex;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            width:80%;
+            height: 13vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .cliqueAqui{
+            color:rgba(39, 170, 226, 1);
+            text-decoration: none;
+        }
