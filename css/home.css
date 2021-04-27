@@ -23,19 +23,6 @@ li, a, button{
     text-decoration: none;
 }
 
-/*header{
-    height: 18vh;
-    overflow: hidden;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: rgba(0, 0, 0, .2);
-}*/
-
 .header-log-nav{
     height: 18vh;
     overflow: hidden;
