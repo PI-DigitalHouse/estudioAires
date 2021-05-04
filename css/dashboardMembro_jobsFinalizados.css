@@ -143,6 +143,12 @@ h2{
     text-decoration: none;
     color: white;
 }
+
+.entregaveis a{
+    text-decoration: none;
+    color: black;
+}
+
 @media (max-width:600px){
     .containerServico{
         display: flex;
@@ -202,7 +208,7 @@ h2{
         margin: 0rem;
     }
 
-    a .botoes-entregaveis-a{
+    .botoes a{
         text-decoration: none;
         color: black;
     }
