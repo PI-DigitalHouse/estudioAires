@@ -60,3 +60,5 @@ Para os dois tipos de usuário, será possível visualizar em suas _dashboards_ 
 #### --> Footer <--
 
 - [ ] Incluir link válido para as contas de instagram e Facebook e endereço de e-mail, nos links da footer. No momento, deixei com um placeholder para os links, usando a # no lugar da URL.
+
+Teste
