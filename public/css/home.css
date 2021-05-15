@@ -1,0 +1,496 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 6.25%;
+    scroll-behavior: smooth; /*torna o scroll entre as sessões mais suave*/ 
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+li, a, button{
+    font-weight: 500;
+    font-size: 26px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.header-log-nav{
+    height: 18vh;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, .2);
+    z-index: 999;
+}
+
+.container-cadastrese{
+    display: flex;
+    position: absolute;
+   
+    top: 58%;
+    left: 82%;
+    background-color:transparent;
+    width: 18%;
+    margin-top: 30px;
+    font-size: 15px;
+    color: #edf0f1;
+}
+
+.container-div-2{
+    display: flex;
+    position: absolute;
+    top: 83%;
+    left: 3%;
+    background-color:transparent;
+    width: fit-content;
+    margin-top: 30px;
+    font-size: 10px;
+    color: #edf0f1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header-orcamento{
+    border: #FC7600 solid 2px;
+    border-radius: 10px;
+    width: 550px;
+    padding: 5px;
+    background-color:transparent;
+}
+.header-orcamento:hover{
+    background-color:#FC7600;
+    transition: all 0.5s ease 0s;
+    
+}
+
+.header-cadastrese{
+    text-align: center;
+    font-size: 13px;
+}
+.header-cadastrese a{
+   
+    font-size: 13px;
+}
+.header-cadastrese a:hover{
+    color:#FC7600;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a:hover{
+    border-bottom: 3px solid #FC7600;
+}
+
+button{
+    padding: 10px 25px;
+    background: rgba(252, 118, 0, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+ button:hover{
+    background: rgba(252, 118, 0, 0.8);
+}
+
+video{
+    width: 100%;
+}
+
+/* início da sessão de portfólio */
+#portfolio{
+    width: 100%;
+    height: 150vh;
+    padding: 2% 0 0 0;
+
+    background: url(../images/home/headerImg-opc3.png);
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+/* hover do portfólio */
+.portfolioProjeto{
+    position: relative;
+}
+
+.image-overlay{
+    width: 100%;
+    height: 79.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #F5F4F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.800s;
+}
+
+.image-overlay--blur{
+    backdrop-filter: blur(5px);
+}
+
+.image-overlay > *{
+    transform: translateY(20px);
+    transition: transform 0.800s;
+}
+
+.image-overlay:hover{
+    opacity: 1;
+}
+
+.image-overlay:hover > *{
+    transform: translateY(0);
+}
+
+.image-overlayTitle{
+    font-size: 40rem;
+    font-weight: bold;
+}
+
+.image-overlay p{
+    font-size: 18rem;
+    font-weight: bold;
+    margin: 0 0 5% 0;
+}
+
+.image-overlay button{
+    width: 30%;
+    height: 4.7vh;
+    position: absolute;
+    right: 0;
+    left: 5%;
+    top: 84%;
+    background: #FC7600;
+    border: none;
+    border-radius: 18rem;
+    box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0, 0.25);
+}
+
+.image-overlay--link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F5F4F6;
+    font-size: 13rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 79%;
+}
+
+.image-overlay img{
+    position: absolute;
+    top: 35%;
+    left: 112%;
+}
+
+/* botão de orçamento - fixo até o final da homepage */
+
+.portfolio--orcamentoContainer{
+    width: 16%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 53%;
+    left: 83%;
+    z-index: 1;
+}
+
+.portfolio--orcamentoContainer p{
+    font-size: 12rem;
+    font-weight: 800;
+    color: #212121;
+    position: relative;
+    left: 13%;
+    align-self: center;
+}
+
+.portfolio--orcamentoContainer--iconDiv{
+    padding: 4% 0 0% 0;
+    border-radius: 50%;
+    background: #FC7600;
+
+    text-align: center;
+}
+
+.portfolio--orcamentoContainer--iconDiv img{
+    width: 58%;
+}
+/* fim do botão de orçamento - fixo até o final da homepage */
+
+/* fim da sessão portfólio */
+
+/* início da sessão de serviços */
+.servicos{
+    width: 100%;
+    height: 220vh;
+    background: url(../images/home/backgroundImage-nossosServicos-opc3.png);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.servicos h2{
+    font-size: 55rem;
+    color: #212121;
+    padding: 4.8% 0 1.3% 4.5%;
+}
+
+.container-servicos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.box-servico{
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    filter: drop-shadow(4rem 4rem 4rem rgba(0, 0, 0, 0.25));
+    border-radius: 20rem;
+    width: 390px;
+    height: 622px;
+    text-align: center;
+    margin: 0 0 5% 0.4%;
+}
+
+.box-servico h3{
+    font-family: 'Lato';
+    font-size: 30rem;
+    font-weight: 800;
+
+    color: #FC7600;
+}
+
+.box-servico img{
+    width: 370px;
+    height: 227px;
+    margin: 9% 0 0 0;
+}
+
+.box-servico p{
+    width: 268px;
+    height: 159px;
+    font-size: 17rem;
+    color: #212121;
+
+    margin: 3.5% 0 0 16%;
+}
+
+.box-servico--button{
+    padding: 10px 25px;
+    background: rgba(252, 118, 0, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    width: 43%;
+    margin: 13% 0 0 0;
+
+    box-shadow: 0rem 4rem 4rem rgb(0 0 0 / 25%);
+}
+
+.box-servico--buttonLink{
+    width: 258px;
+    height: 42px;
+    margin: 13% 0 0 0;
+    color: #F5F4F6;
+    text-decoration: none;
+    font-size: 21rem;
+    background: #FC7600;
+    border: none;
+    border-radius: 18px;
+}
+
+/* fim da sessão de serviços */
+
+/* início da sessão quem somos */
+.quem-somos{
+    width: 100%;
+    height: 165vh;
+    background-image: url(../images/quem-somos/backgroundImgOpc3.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.quem-somos-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quem-somos-intro h2{
+    font-size: 55rem;
+    align-self: flex-start;
+    color: #212121;
+    font-weight: 700;
+    margin: 3.7% 0 0 16%;
+}
+
+.quem-somos-intro p{
+    font-size: 30rem;
+    width: 60%;
+    text-align: justify;
+    margin: 7% 15% 4.2% 16.2%
+}
+
+.container-socios{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 07%;
+}
+
+.socio{
+    width: 30%;
+    height: 30vh;
+}
+.socio img{
+    width: 60%;
+    height: 100%;
+    margin: 16% 0 11.6% 0px;
+}
+
+.socio h3{
+    font-size: 48rem;
+    font-weight: 700;
+}
+
+.socio p{
+    font-size: 22rem;
+    font-weight: 400;
+    width: 108%;
+    text-align: center;
+    margin: 12.3% 0 0 -21%
+}
+
+/* fim da sessão quem somos */
+
+/* início da sessão parceiros */
+.parceiros{
+    width: 100%;
+    height: 216.5vh;
+    background-image: url(../images/parceiros/backgroundImgOpc3.png);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parceiros h2{
+    width: 100%;
+    padding: 67.33px 0 26.88px 104px;
+    font-weight: 700;
+    font-size: 64rem;
+    line-height: 77px;
+    color: #000000;
+}
+
+.listaParceiros-direita{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.listaParceiros-direita img{
+    height: 23vh;
+    margin: -2% 16.9% 5.2% 0;
+    padding: 0 0 0 13%;
+}
+
+.listaParceiros-direita h4{
+    font-size: 35rem;
+    font-weight: 600;
+    margin: 1.7% 41.2% 0 48%;
+    color: #F2994A;
+}
+
+.listaParceiros-direita p{
+    width: 32.9%;
+    font-size: 22rem;
+    text-align: end;
+    color: #212121;
+}
+
+.listaParceiros-esquerda{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.listaParceiros-esquerda img{
+    height: 23vh;
+    margin: 5.2% 0 5.2% 13.2%;
+    padding: 0 0 0 13%;
+}
+
+.listaParceiros-esquerda h4{
+    font-size: 36rem;
+    font-weight: 600;
+    margin: -17.5% 31.2% 0 48.4%;
+    color: #F2994A;
+}
+
+.listaParceiros-esquerda p{
+    width: 32.9%;
+    font-size: 22rem;
+    text-align:start;
+    margin: -14% 0 0 48.5%;
+    color: #212121;
+}
+/* fim da sessão parceiros */
+
+/* footer */
+
+/* início da sessão up-butn para retorno à início da homepage */
+
+.footer--goUpBtn{
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer--goUpBtn--linkImg{
+    position: relative;
+    height: 65%;
+    width: 22%;
+    top: 500%;
+    left: 23%;
+    padding: 2% 0 2% 0;
+
+    background: #FC7600;
+    border-radius: 50%;
+}
+

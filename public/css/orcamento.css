@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');  
+  
+html{
+    font-size: 6.25%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-size: 16rem;
+    background-image: url("../img/bg-opacity.png");
+    margin: 0px;
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+  
+}
+.card-login{
+    display: flex;
+    width: 1175px;
+    height: 655px; 
+    margin-top: 45px;  
+    border: 2.8px solid #FC7600;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
+    border-radius: 18px;
+    background-color:  rgba(253, 253, 253, 0.7);
+    padding: 5px;
+    
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.menu-lateral{
+    display:flex;
+    flex-direction: column;
+    width: 450px;
+    height: 38em;
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow:2px 2px 7px rgba(112, 112, 112, 0.25);
+    position: relative;
+    left: 1%;
+    top:2%;
+    }
+
+
+.bolaOk.finish {
+     color:rgb(68, 173, 68);
+     font-size: 0px;
+     border: green; 
+    background-image: url("orcamento-images/Vector.png");
+    
+  }
+
+
+.step{
+    display: flex;
+    place-content:center;
+    width: 450px;
+    height: 2em;
+    margin-top: 36px; 
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px;
+   
+
+
+}
+
+.step.finish2{
+    color:rgb(190, 190, 190);
+
+    
+}
+
+.step p{
+    display: flex;
+    width: 800px;
+    
+}
+
+
+
+.bolinhas{
+     width: 35px;
+     display: flex;
+     justify-content: space-around;
+     margin-top: 5px;
+     margin-right: 15px;
+
+ }
+
+
+ 
+ .bolaOk{
+    
+     height: 28px;
+     width: 28px;
+     background-color: transparent;
+     border-color: #FC7600;
+     color: #FC7600;
+     border: #f88336 solid 1px;
+     border-radius: 60%;
+     text-align: center;
+     padding-top: 3px;
+     
+ } 
+
+ 
+
+ 
+ /* Dashboard central*/
+
+
+#acao-central{
+    display: flex;
+    flex-direction: column;
+    box-shadow:2px 2px 7px rgba(112, 112, 112, 0.25);
+    width: 650px;
+    height: 38em;
+    border-radius: 18px;
+    position: relative;
+    left: 2%;
+    top:2%;
+    
+    padding:10px;
+}
+.title{
+    display: flex;
+    
+}
+
+
+.title p{
+    color: blanchedalmond;
+    display: grid;
+    position: relative;
+    left: 2%;
+    place-content: center;
+    width: 95%;
+    height: 2em;
+    border-radius: 5px;
+    background-color: rgba(252, 118, 0, 2);
+    padding: 2px;
+    font-weight: bold;
+    
+} 
+
+.tab{
+   display: none;
+   flex-direction: column;
+   width: 100%;
+   padding: 15px;
+
+   
+}
+.tab p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left:5px;
+   padding-left: 10px;
+  
+    
+}
+
+/*STEP1*/
+.tab input{
+    width: 75%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 80px;
+    
+}
+
+.step-4-date{
+
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    border: rgb(252, 135, 26) solid 1px;
+    margin-bottom: 10px;
+
+}
+.step-4-date p{
+    display: flex;
+    text-align: center;
+    margin-bottom:20px;
+}
+
+
+.step-4-date input{
+
+    width: 95%;
+    padding: 12px ;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+   
+    
+}
+
+
+    
+
+
+
+input.invalid {
+    background-color: #ffdddd;
+  }
+
+
+
+ /*STEP2*/
+ .listado {
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    width:100%;
+    margin-left:0;
+    justify-content: space-around;
+    
+   
+  
+} 
+.listado li{
+    margin-left: 2px;
+    list-style: none;
+    padding: 15px;
+}
+
+.listado input{
+    width: 15px;
+    margin:5px;
+}
+
+.valor-orcamento{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 8%;
+    bottom: 5%;
+    text-align: center;
+}
+.valor-orcamento p{
+    width: 35%;
+    margin:0;
+    padding: 0;
+}
+
+.preco{
+    display: flex;
+    border-radius: 15px;
+    border: tomato 1px solid;
+    width: 230px;
+    height: 25px;
+    background-color: transparent;
+    margin-top: 19px;
+    margin-left: 12px;
+    padding: 2px;
+}
+
+/*STEP FINAL*/
+
+
+.icon-confirm{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    
+    
+}
+.icon-confirm h4, h5{
+    text-align: center;
+    margin-top: 35px;
+}
+
+.icon-confirm img {
+    position: relative;
+    left: 45%;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    bottom: 25px;
+
+}
+.icon-confirm a{
+    text-decoration: none;
+    color: #FC7600;
+    font-weight: bold;
+}
+
+.login2{
+  color: black;
+  font-weight: bold;  
+ margin-top: 45px;   
+ width: 25%;
+ margin-left: 230px;
+ background: transparent;
+border: rgba(252, 118, 0, 1) solid 1px;
+border-radius: 10px;
+}
+.login2:hover{
+background-color: #FC7600;
+color: white; 
+
+}
+
+
+
+
+/* Botoes */
+
+.button-submit{
+width: 100%;
+display: flex;
+justify-content:space-around;
+position: relative;
+top: 10%;
+
+}
+
+.button-submit button {
+    background-color: #FC7600;;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    font-weight: bold;
+    
+}
+.button-submit button a{
+    text-decoration: none;
+    color: black;
+
+}
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+
+
+
+
+    
+
+
+  
+
+  

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');  
+
+html{
+    font-size: 6.25%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-size: 20rem;
+    background-image: url("body-backgrounds/bg-opacity.png");
+    margin: 0px;
+}
+
+/* ordenação */
+.ordenacao{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdown{
+    height: fit-content;
+    font-size: 18rem;
+}
+
+.cronos{
+    display: flex;
+    margin-right: 15px;
+}
+
+p{
+    margin: 0  5px 0 0;
+}
+
+/* serviços */
+
+.containerServico{
+    display: flex;
+    border: 2px solid #fff ;
+    margin: 20px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color:white;
+    justify-content: center;
+}
+
+.containerServicoCancelado{
+    display: flex;
+    border: 2px solid #fff ;
+    margin: 20px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color:white;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.containerEsquerda{
+    display: flex;
+    width: 50%;
+}
+
+h2{
+    font-size: 26rem;
+}
+
+.info{
+    font-size: 20rem;
+}
+
+.servicoContratado1{
+    margin-top: 10px;
+}
+
+.servicoContratado1 .info p{ 
+    display: inline;
+}
+
+.tipo1{
+    font-weight: bold;
+}
+
+.servicoContratado2{
+    margin: 50px;
+}
+
+.servicoContratado2 .info p{
+    margin: 0px
+}
+
+.containerDireita{
+    margin-right: 20px;
+    position: relative;
+}
+
+.containerDireita a{
+    text-decoration: none;
+    color: black;
+    width: 50%;
+}
+
+.status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    margin-top: 15px;
+}
+
+.fases{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16rem;
+
+}
+
+.fases p{
+    text-align: center;
+    margin-left: 10px;
+}
+
+
+.step{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #ACACA6;
+    border-radius: 50%;
+}
+
+.farol{
+    position: relative;
+}
+
+.bolinhas{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+.bolaOk{
+    height: 25px;
+    width: 25px;
+    background-color:#27AE60;
+    border: #ACACA6 solid 1px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.bola{
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border: #ACACA6 solid 1px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.linha{
+    position: absolute;
+    background: #ACACA6 ;
+    width: 75%;
+    height: 1.5px;
+    margin-left: 60px;
+    top: 15px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.botoes .prestador{
+    border: 1.5px solid #BFBFBF;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    color: black;
+    text-align: center;
+    
+}
+.botoes .prestador a{
+    padding: 5px;
+    font-size: 20rem;
+    color: black;
+   
+    
+}
+
+.botoes .prestador:hover{
+    background-color:#d4d4d4;
+    border: 1.5px solid #d4d4d4;
+}
+
+.botoes .entregaveis{
+    border: 1.5px solid #FC7600;
+    background-color:#FC7600;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20rem;
+    width: 100%;
+    text-align: center;
+}
+.botoes .entregaveis a{
+    padding: 5px;
+    font-size: 20rem;
+    color: black;
+    
+}
+
+
+.botoes .entregaveis:hover{
+    background-color: #fa8d2e;
+    border: 1.5px solid #fa8d2e;
+}
+
+.rodape{
+    font-size: 16rem;
+    margin-top: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+}
+
+.rodape p{
+    margin-right: 95px;
+}
+
+.cancelamento{
+    border: none;
+    font-family: 'Lato';
+    font-size: 16rem;
+    margin-top: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: white;
+    text-decoration: underline;
+}

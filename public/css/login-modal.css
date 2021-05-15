@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 115px;
+  font-family: "Lato", sans-serif;
+}
+
+
+
+/* Modal Content*/
+.modal-content {
+  background-color: rgba(0,0,0,0.35);
+  font-family: "Lato", sans-serif;
+  margin: 5px auto; 
+  border:#FC7600 solid 1px; 
+  width: 30%; 
+  height: 530px;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width:100%;
+  height: 530px;
+   
+}
+
+.container-logo{
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #edf0f1;
+  text-decoration: none;
+  margin: 50px;
+  
+
+}
+
+.container-login input[type=text]{
+  position: relative;
+  left: 20%;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-flex;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+ 
+  
+}
+
+.container-login input[type="password"] {
+  position: relative;
+  left: 20%;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  
+
+}
+.psw-forget a{
+ /*  text-decoration: none; */
+  color:white;
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+.psw-forget a:hover{
+color: #FC7600;
+
+}
+.pws{
+  font-size: 15px;
+}
+
+.psw a{
+  text-decoration: none;
+  color: #FC7600;
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+.psw a:hover{
+  color: white;
+}
+ 
+.modal-cadastro{
+  margin-top: 30px;
+  font-size: 15px;
+  color: #edf0f1;
+
+
+} 
+
+
+ .container-login button{
+  position: relative;
+  left: 25%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #FC7600;;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-weight: bold;
+
+ }
+ .container-login button:hover{
+
+ background: rgba(252, 118, 0, 0.8);
+ }
+
+.icons-login{
+  display: flex;
+  justify-content:center;
+
+  
+} 
+.icons-login img{
+  width: 33px;
+  height: 33px;
+  margin: 15px;
+  
+
+}
+
+
+
+/* Botao Close */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Botao fechamento hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+@media (max-width:1024px) {
+.modal{
+  display: flex;
+ 
+    flex-direction: column;
+    height: auto;
+   
+  }
+
+  .modal-content {
+    height: auto;
+  }
+}

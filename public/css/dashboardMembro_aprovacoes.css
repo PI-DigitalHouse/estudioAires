@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+html{
+    font-size: 6.25%;
+    font-family: "Lato", sans-serif;
+}
+
+.logo-dash-memb{
+    width: 80%;
+}
+body{
+    font-size: 20rem;
+    background-image: url("body-backgrounds/bg-opacity.png");
+    margin: 0px;
+}
+
+.containerServico{
+    display: flex;
+    border: 2px solid #fff ;
+    margin: 20px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color:white;
+    justify-content: space-around;
+}
+
+.containerEsquerda{
+    display: flex;
+    width: 40%;
+    margin-left: 40px;
+}
+
+h3{
+    font-size: 26rem;
+}
+
+.servicoContratado1{
+    margin-top: 10px;
+    margin-bottom: 10rem;
+}
+
+.servicoContratado1 .info p{ 
+    display: inline;
+}
+
+.tipo1{
+    font-weight: bold;
+    margin-bottom: 0rem;
+    font-size: 20rem;
+    
+}
+
+.servicoContratado2{
+    margin-left: 15rem;
+    margin-top: 13rem;
+}
+
+.servicoContratado2 .info p{
+    margin: 0px
+}
+
+.containerCentro{
+       width: 25%;
+}
+
+.containerCentro p{
+    margin-top: 30px;
+}
+
+label{
+    font-size: 20rem;
+}
+
+.containerDireita{
+    width: 15%;
+    margin: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.informacoes{
+    font-size: 16rem;
+    text-align: end;
+    margin: 16rem;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    color: black;
+}
+
+.informacoes a{
+    color: black;
+}
+
+.botoes{
+    margin-top: 30px;
+}
+
+.botoes p{
+    margin: 0px;
+    text-align: center;
+    
+}
+
+.botoes .prestador{
+    border: 1.5px solid #BFBFBF;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20rem;
+    color: black;
+    margin: 5rem;
+    width: 100%;
+    
+}
+
+.botoes .prestador:hover{
+    background-color:#d4d4d4;
+    border: 1.5px solid #d4d4d4;
+}
+
+.botoes .entregaveis{
+    border: 1.5px solid #FC7600;
+    background-color:#FC7600;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20rem;
+    margin: 5rem;
+    width: 100%;
+}
+
+.botoes .entregaveis:hover{
+    background-color: #fa8d2e;
+    border: 1.5px solid #fa8d2e;
+}
+
+@media (max-width:625px){
+    .containerServico{
+        display: flex;
+        border: 2px solid #fff ;
+        margin: 20px;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        background-color:white;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .containerEsquerda{
+        display: flex;
+        width: 100%;
+        margin-top: 20rem;
+        margin-left: 40rem;
+        flex-wrap: wrap;
+    }
+    .containerCentro{
+        width: 100%;
+        margin-top: 20rem;
+        margin-left: 40rem;
+    }
+    .containerDireita{
+        width: 100%;
+        
+    }
+    .servicoContratado1{
+        width: 100%;
+    }
+    .servicoContratado2{
+        margin: 0rem;
+    }
+    .botoes .entregaveis{
+        border: 1.5px solid #FC7600;
+        background-color:#FC7600;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 14rem;
+        width: 100%;
+        margin: 0rem;
+    }
+    .botoes .prestador{
+        width: 100%;
+        margin: 0rem;
+    }
+    .containerDireita{
+        width: 100%;
+        margin: 0rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .informacoes{
+        margin-left: 50rem;
+    }
+    
+}

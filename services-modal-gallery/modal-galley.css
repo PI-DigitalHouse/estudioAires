@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+html{
+    font-size: 6.25%;
+}
+
+.modalCadastro {
+    /* display: flex; */ 
+    position: fixed;
+   /*  z-index: 1;  */
+    left: 0;
+    top: 0;
+    width:100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8); 
+    padding-top: 50px;
+    padding-left:20px;
+    font-family: "Lato", sans-serif;
+  }
+
+  .w3-container{
+    display: flex;
+    font-family: "Lato", sans-serif;
+    position: relative;
+    left: 5%;
+    top:15%;
+    border:#FC7600 solid 1px; 
+    width: 1550px;
+    height: 1050px;
+    justify-content: space-between;
+  }
+  
+
+
+.w3-content{
+  display:flex;
+  width:50%;
+  height: fit-content;
+  justify-content: space-between;
+}
+.column img {
+  position: relative;
+  top: 70px;
+  width: 1000px;
+  height: 650px;
+  padding: 18px;
+}
+.row h3{
+  position: relative;
+  padding-top:45px ;
+  background-color: black;
+  font-size: 20px;
+  color: white;
+  left: 18px;
+  width: 50%;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+
+   width: 100%;
+}
+
+/* The Modal (background) */
+
+.row{
+  display: flex;
+  flex-direction: column;
+}
+
+.column-2 img {
+  width: 550px;
+  height: 350px;
+  padding: 8px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+

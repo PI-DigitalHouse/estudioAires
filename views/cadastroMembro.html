@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://kit.fontawesome.com/f67cfcbcf9.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastroMembro</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/cadastroMembro.css">
+    
+
+</head>
+<header>
+    <div class="flex-container">
+        <a href="#"><img class="flex-item" src="C:\Users\Henrique\Documents\DH\estudioAires\images\Logotipo.png"></a>
+            
+    </div>
+</header>
+<body background="C:\Users\Henri\Documents\Prog\ProjetoIntegrado\estudioAires\images\home\headerImg-opc3.png">
+    <section class="flex-container" >
+        <div class="card-flex">
+            <div class="flex-container2">
+                <h3 class="cadastro">
+                    
+                    <a href="#" class="fas fa-arrow-left"></a>
+                    
+                    Cadastro</h3>
+            </div>
+            <div class="flex-container">
+                <div class="textoApresentacao">
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                </div>
+                
+
+            </div>
+            <div class="flex-container-boas-vindas"><h2>Seja bem-vindo!</h2></div>
+            
+            <form id="cadastroMembro">
+                
+                <div class="flex-container-nome">
+                    <input required class="inputTipo3" placeholder="Nome completo" maxlength="50" type="text" name="Nome" id="Nome" required>
+                    <input required class="inputTipo3" placeholder="Email" maxlength="60" type="email" name="email" id="email">                  
+                </div>
+                <div class="flex-container-nome">
+                    <input required class="inputTipo1" placeholder="Tel/Cel" maxlength="14" type="text" name="Telefone" id="Telefone">
+                    <input required class="inputTipo1" placeholder="CPF/CNPJ" type="text" maxlength="11" name="Nome" id="Nome">
+                </div>
+                
+                <div class="flex-container-nome">
+                    <select class="inputTipo2" placeholder="Como nos conheceu?" name="Como nos conheceu" id="Como nos conheceu">
+                        <option value="Cartao de visita">Como nos conheceu?</option>
+                        <option value="Cartao de visita">Imobiliária</option>
+                        <option value="Cartao de visita">Facebook</option>
+                        <option value="Cartao de visita">Instagram</option>
+                        <option value="Cartao de visita">Google</option>
+                        <option value="Cartao de visita">Outro</option>
+                    </select>
+                </div>
+
+            
+
+                <div class="flex-container-nome">
+                    <div class="text">Você tem experiência com fotografia?
+                        <div>
+                            <input required type="radio" name="experiencia" class="botãoRadio" value="true">Sim
+                            <input required type="radio" name="experiencia" class="botãoRadio" value="false">Não
+                        </div>
+                    </div>
+                    <div class="text">Conte-nos um pouco mais.
+                        <input required type="text" placeholder="Escreva sobre você" class="EscrevaSobreVc" maxlength="300"> 
+                        
+                    </div>
+                </div>
+                <div class="flex-container-nome">
+                   
+                    
+                </div>
+                <div class="flex-container-anexo">
+                    <input required class="curriculo" type="file" accept=".pdf" >
+                        <h4 class="fonte" >Anexe seu currículo no formato .pdf</h4>
+                    </input>
+                </div>
+                <div class="flex-container-nome">
+                    <input required class="inputTipo1" placeholder="Senha" type="password" name="Nome" id="senha">
+                    <input required class="inputTipo1" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao">
+               </div>
+               <div class="flex-container-nome">
+                <button type="submit"> CADASTRAR </button>
+            </div>
+            </form>
+
+        </div>
+    </section>
+</body>
+</html>
