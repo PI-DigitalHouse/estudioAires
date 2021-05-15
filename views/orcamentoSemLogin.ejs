@@ -13,23 +13,7 @@
     <link rel="shortcut icon" href="images/square-logo-lineorange.png">
 </head>
 <body>
-<header>
-        <a id="logo" href="../home.html">Estudio Aires </a>
-        <nav>
-            <ul>
-                <li><a href="../home.html">Home</a></li>
-                <li><a href="#quem-somosEA">Quem Somos</a></li>
-                
-                <li><a id = "selected" href="TBC">+ Novo Orçamento</a></li>
-                
-            </ul>
-        </nav>
-        <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
-        <div class="container-div">
-          <span class="header-cadastrese">Novo no Estúdio?                        
-              <a href="../cadastro-new-users/cadastro.html">CADASTRE-SE</a></span>
-      </div> 
-    </header>
+    <%- include partials/headerPrivateAreas.ejs %> <!-- inclui header como partial -->
 
     <!-- Inicio do Dashboard -->
     
