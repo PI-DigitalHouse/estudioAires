@@ -173,7 +173,7 @@ h2{
 .botoes{
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .botoes .prestador{
