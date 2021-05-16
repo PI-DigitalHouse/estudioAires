@@ -23,7 +23,7 @@ const array = [{
 }];
 
 /* GET entregáveis. */
-router.get('/entregaveis', (req, res) => {
+router.get('/entregaveis/:idServico', (req, res) => {
   res.render('dashboardUsuario_entregaveis', { 
     title: 'Entregáveis', 
     entregaveis: array });
