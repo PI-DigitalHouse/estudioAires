@@ -18,7 +18,7 @@ router.post('/membro', function(req, res, next) {
 
 function salvarObjeto(objeto){
   const str = JSON.stringify(objeto) // aqui estou transformando o objeto que captei do formulário em string
-  fs.writeFileSync('novosMembros', str) //aqui indico ONDE e O QUE salvar. 
+  fs.writeFileSync('novosMembros.json', str) //aqui indico ONDE e O QUE salvar. 
 }
 
 module.exports = router;
