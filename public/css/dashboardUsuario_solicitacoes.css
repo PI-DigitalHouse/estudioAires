@@ -6,7 +6,7 @@ html{
 
 body{
     font-family: "Lato", sans-serif;
-    font-size: 20rem;
+    font-size: 14rem;
     background-image: url("body-backgrounds/bg-opacity.png");
     margin: 0px;
 }
@@ -20,7 +20,7 @@ body{
 
 .dropdown{
     height: fit-content;
-    font-size: 18rem;
+    font-size: 14rem;
 }
 
 .cronos{
@@ -65,11 +65,12 @@ h2{
 }
 
 .info{
-    font-size: 20rem;
+    font-size: 14rem;
 }
 
 .servicoContratado1{
-    margin-top: 10px;
+
+    margin-bottom: 20px;
 }
 
 .servicoContratado1 .info p{ 
@@ -111,7 +112,7 @@ h2{
 .fases{
     display: flex;
     justify-content: space-between;
-    font-size: 16rem;
+    font-size: 14rem;
 
 }
 
@@ -187,7 +188,7 @@ h2{
 }
 .botoes .prestador a{
     padding: 5px;
-    font-size: 20rem;
+    font-size: 14rem;
     color: black;
    
     
@@ -203,13 +204,13 @@ h2{
     background-color:#FC7600;
     border-radius: 10px;
     padding: 5px;
-    font-size: 20rem;
+    font-size: 14rem;
     width: 100%;
     text-align: center;
 }
 .botoes .entregaveis a{
     padding: 5px;
-    font-size: 20rem;
+    font-size: 14rem;
     color: black;
     
 }
@@ -221,7 +222,7 @@ h2{
 }
 
 .rodape{
-    font-size: 16rem;
+    font-size: 14rem;
     margin-top: 5px;
     position: absolute;
     bottom: 0px;
@@ -236,7 +237,7 @@ h2{
 .cancelamento{
     border: none;
     font-family: 'Lato';
-    font-size: 16rem;
+    font-size: 14rem;
     margin-top: 5px;
     position: absolute;
     bottom: 0px;
