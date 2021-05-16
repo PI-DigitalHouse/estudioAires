@@ -80,3 +80,8 @@ module.exports.listSolicitacoes = (req, res) => {
       title: 'Solicitações', 
       solicitacoes: array2 });
 }
+
+module.exports.recuperaSenha = (req, res) => {
+    res.render('DU_recuperacaoSenha', { 
+      title: 'Recuperação de Senha'});
+}
