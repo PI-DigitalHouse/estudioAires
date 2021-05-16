@@ -7,7 +7,8 @@ router.get('/membro', function(req, res, next) {
 });
 
 router.post('/membro', function(req, res, next) {
-  console.log(req.body)
+  const dadosDoFormulario = req.body
+  console.log(dadosDoFormulario)
   res.send(201);
 });
 
