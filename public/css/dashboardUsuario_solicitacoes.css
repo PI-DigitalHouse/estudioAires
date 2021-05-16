@@ -9,6 +9,8 @@ body{
     font-size: 14rem;
     background-image: url("body-backgrounds/bg-opacity.png");
     margin: 0px;
+    width: 80%;
+    margin: auto;
 }
 
 /* ordenação */
@@ -61,7 +63,7 @@ p{
 }
 
 h2{
-    font-size: 26rem;
+    font-size: 24rem;
 }
 
 .info{
@@ -82,7 +84,8 @@ h2{
 }
 
 .servicoContratado2{
-    margin: 50px;
+    margin-top: 50px;
+    margin-left: 20px;
 }
 
 .servicoContratado2 .info p{
@@ -217,6 +220,29 @@ h2{
 
 
 .botoes .entregaveis:hover{
+    background-color: #fa8d2e;
+    border: 1.5px solid #fa8d2e;
+}
+
+.botoes .remarcacao{
+    margin-top: 25px;
+    border: 1.5px solid #FC7600;
+    background-color:#FC7600;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14rem;
+    width: 100%;
+    text-align: center;
+}
+.botoes .remarcacao a{
+    padding: 5px;
+    font-size: 14rem;
+    color: black;
+    
+}
+
+
+.botoes .remarcacao:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
 }
