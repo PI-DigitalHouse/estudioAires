@@ -7,13 +7,18 @@ html{
 body{
     font-family: "Lato", sans-serif;
     font-size: 20rem;
-    background-image: url("body-backgrounds/bg-opacity.png");
+    background-image: url("/img/bg-opacity.png");
     margin: 0px;
+}
+
+.container-recuperar-senha{
+    width: 50%;
+    margin: auto;
 }
 
 /* informações */
 
-.du-meuPerfil-info{
+.recuperar-senha{
     border: 2px solid #fff ;
     margin: 20px;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -22,13 +27,13 @@ body{
     justify-content: center;
 }
 
-.du-meuPerfil-info h1{
+.recuperar-senha h3{
     text-align: center;
     padding: 5px;
     border-bottom: #FC7600 solid 1px;
 }
 
-.du-meuPerfil-info-fotoPerfil{
+.recuperar-senha-fotoPerfil{
     border-radius: 250px;
     height: 180px;
     display: block;
@@ -37,7 +42,7 @@ body{
     
 }
 
-.du-meuPerfil-info-secao{
+.recuperar-senha-secao{
     display: flex;
     border-bottom:#949494 dashed 1px ;
     width: 80%;
@@ -45,29 +50,34 @@ body{
     margin-right: auto;
 }
 
-.du-meuPerfil-info-secao p{
+.recuperar-senha-secao p{
     margin-top: 5px;
 }
 
-.du-meuPerfil-info-secao-icone{
+.recuperar-senha-secao-icone{
     height: 20px;
     position: relative;
-    top: 12px;
+    top: 25px;
     margin-right: 20px;
     margin-left: 20px;
 }
 
-.du-meuPerfil-info-secao-titulo{
+.recuperar-senha-secao-titulo{
     font-size: 14rem;
     color: #949494;
     margin-bottom: 0px;
 }
 
-.du-meuPerfil-info-botao{
+.recuperar-senha-secao-input{
+    margin-bottom: 10px;
+    border:solid #949494 1px
+}
+
+.recuperar-senha-botao{
     border: 1.5px solid #FC7600;
     background-color:#FC7600;
     border-radius: 10px;
-    padding: 5px;
+    padding-bottom: 5px;
     width: 20%;
     text-align: center;
     margin-left: auto;
@@ -76,26 +86,31 @@ body{
     margin-bottom: 20px;
 }
 
-.du-meuPerfil-info-botao a{
+.recuperar-senha-botao a{
     padding: 5px;
-    font-size: 20rem;
+    font-size: 14rem;
     color: black;
     text-decoration: none;
     
 }
 
-.du-meuPerfil-info-botao:hover{
+.recuperar-senha-botao:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
 } 
 
-.du-meuPerfil-info-rodape{
-    text-align: end;
-    position: relative;
-    right: 20px;
-}
-
-.du-meuPerfil-info p a{
+.recuperar-senha-botao-a{
     text-decoration: none;
     color: black;
 }
+
+.recuperar-senha-botao-2{
+    font-size: 14rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.recuperar-senha-botao-2 a{
+    color: #949494;
+}
+
