@@ -213,6 +213,58 @@ button {
  
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+        
+        .header-log-nav{
+            display: flex;
+            width: 100%;
+            height: 10vh;
+            justify-content: center;
+            background: rgba(0, 0, 0, .2);
+            
+            flex-wrap: wrap;
+        }
+        .logo{
+            cursor: pointer;
+            align-self: center;
+        
+        }
+        .nav-links{
+            list-style: none;
+            text-decoration: none;
+            align-self: center;
+            font-family: 'Lato', sans-serif;
+        }
+        .nav-links li{
+            display: inline-block;
+            padding: 0px 20px;
+            align-self: center;
+        }
+        li, a, button{
+            font-weight: 500;
+            font-size: 20px;
+            color: #edf0f1;
+            text-decoration: none;
+            align-self: center;
+        }
+        .nav-links li a:hover{
+            border-bottom: 3px solid #FC7600;
+        }
+        .espaco{
+            width: 20%;
+
+        }
+        body{
+            justify-content: center;
+        }
+        .modalCadastro{
+            display: flex;
+            justify-content: center;
+        }
+        .modal-content-cadastro{
+            display: flex;
+            justify-content: center;
+            margin-top: 5rem;
+        }
         .usu-flex-container-01{ /**container-01**/
             display: flex;
             flex-wrap: wrap; 
@@ -223,6 +275,7 @@ button {
         .usu-cadastro{
             font-family: Lato;
         }
+        
         .usu-flex-item{
             justify-content: center;
             width: 15rem;
@@ -235,15 +288,17 @@ button {
         .usu-card-login{ /** card-login**/
             display: flex;        
             border-radius: 18px;
-            width: 85%;
+            width: 80%;
             height: fit-content;
             mix-blend-mode: normal;
             border: 2.8px solid #FC7600;
             filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
             border-radius: 18px;
             background-color:   rgba(253, 253, 253, 0.7);   
-            margin-top: 50px;           
+                       
             flex-wrap: wrap;
+            justify-content: space-around;
+            margin:0rem;
         }
         .usu-flex-container-02{/**container de posicionamento do cadastro e seta**/
             display: flex;
