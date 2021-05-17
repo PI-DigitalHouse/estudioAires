@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const fs = require('fs')
+const bcrypt =require('bcrypt')
 dadosSalvos= []
 
 /* GET home page. */
@@ -14,6 +15,7 @@ router.post('/membro', function(req, res, next) {
   res.send(201);
   console.log(dadosSalvos)
   salvarObjeto(dadosSalvos)
+  res.redirect('/')
 });
 
 function salvarObjeto(objeto){
