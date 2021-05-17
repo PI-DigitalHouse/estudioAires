@@ -5,8 +5,8 @@ html{
 }
 
 .modalCadastro {
-    /* display: flex; */ 
-    position: fixed;
+    display: flex; 
+    /*position: fixed;*/
    /*  z-index: 1;  */
     left: 0;
     top: 0;
@@ -18,17 +18,19 @@ html{
     padding-top: 50px;
     padding-left:20px;
     font-family: "Lato", sans-serif;
+    justify-content: center;
   }
 
   .modal-content-cadastro {
     display: flex;
     font-family: "Lato", sans-serif;
-    position: relative;
+    /*position: relative;*/
     left: 23%;
     top:15%;
     border:#FC7600 solid 1px; 
     width: 50%;
     height: fit-content;
+    justify-content: center;
   }
 
 
