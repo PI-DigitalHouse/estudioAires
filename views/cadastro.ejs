@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/cadastro.css">
+        <!--<link rel="stylesheet" href="../css/headerPrivateAreas.css">-->
+        <!--<link rel="stylesheet" href="../cadastro-new-users/cadastro-modal.css">-->
+        <!--<link rel="shortcut icon" href="images/square-logo-lineorange.png">-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Estúdio Aires</title>
+
+        
+    </head>
+
+    <body>
+
+        
+            
+            
+       
+            <header><!--Nav fixo do site-->
+               <div class="header-log-nav"> 
+                <div class="logo"><a href="../home.html">Estúdio Aires</a></div>
+                    <nav><!--menu do site-->
+                        <ul class="nav-links">
+                            <li><a href="../home.html">Home</a></li>
+                            <li><a href="../home.html#servicosEA">Serviços</a></li>
+                            <li><a href="../home.html#quem-somosEA">Quem Somos</a></li>
+                            <li><a href="../home.html#parceirosEA">Parceiros</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                  <div class='espaco'>
+                    
+                  </div>
+                  
+                  
+                </div>
+               
+                </header>
+            
+
+              
+        
+         <!-- Modal-Cadastro-->
+        <div class="modalCadastro">
+            
+            <form class="modal-content-cadastro" action='' method="POST">
+            <div class="usu-card-login">
+              <div  class="usu-flex-container-02">
+                  <h3 class="usu-cadastro">
+                      <a href="../home.html" class="fas fa-arrow-left"></a> Cadastro
+                  </h3>
+          
+              </div>
+              <div class="usu-flex-container-boas-vindas"><h2>Seja bem-vindo!</h2></div>
+          
+              
+          
+                  <div class="usu-flex-container-nome">
+                      <input required class="usu-input-tipo-1" placeholder="Nome completo" maxlength="50" type="text" name="Nome" id="Nome" required>
+                      <input required class="usu-input-tipo-1" placeholder="Email" maxlength="60" type="email" name="email" id="email">
+                  </div>
+                  <div class="usu-flex-container-tel-cpf">
+                      <input required class="usu-input-tipo-1" placeholder="Telefone mais atual" maxlength="50" type="text" name="Nome" id="Nome" required>
+                      <input required class="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="14" type="text" name="CPF" id="CPF">
+                  </div>
+                  <div class="usu-flex-container-selecione">
+                      <select class="usu-input-Tipo-2" placeholder="Como nos conheceu?" name="Como nos conheceu" id="Como nos conheceu">
+                          <option value="Como nos conheceu?">Como nos conheceu?</option>
+                          <option value="Através da minha imobiliária">Imobiliária</option>
+                          <option value="Facebook">Facebook</option>
+                          <option value="Instagram">Instagram</option>
+                          <option value="Google">Google</option>
+                          <option value="Outro">Outro</option>
+                      </select>
+                  </div>
+                  <div class="usu-flex-container-senha">
+                      <input required class="usu-input-Tipo-3" placeholder="Senha" type="password" name="Nome" id="senha">
+                      <input required class="usu-input-Tipo-3" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao">
+                  </div>
+          
+                  <div class="usu-flex-container-termos">
+                      <div class="checkbox1">
+                          <input type="checkbox" id="Sou uma imobiliária" name= "Sou uma imobiliária"> Sou uma imobiliária
+                      </div>
+                      <div class="checkbox1" >
+                          <input class="LiEAceito" type="checkbox" required id= 'Li e aceito os termos' name="Li e aceito os termos"> Li e aceito os <a class="Termos" href="#">Termos de uso</a> e a <a class="política" href="#">Política de Privacidade</a>
+                      </div>
+                     
+                     
+                  </div>
+          
+                  <div class="usu-flex-container-botao">
+                      <button  type="submit"> CADASTRAR </button>
+          
+                  </div>
+                  
+              </form>
+          
+          </div>
+          <script type="text/javascript" src="../login-modal/login-modal.js"></script>   
+</body>
+</html>
