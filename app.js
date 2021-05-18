@@ -27,6 +27,7 @@ app.use('/novo', require('./routes/orcamentoSemLogin'));
 app.use('/cadastro', require('./routes/cadastroMembro'));
 app.use('/dashboardUsuario', dashboardUsuarioRouter);
 app.use('/cadastroUsuario', require('./routes/cadastro'));
+app.use('/dashboardMembro', require('./routes/dashBoardMembro_meuPerfil'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
