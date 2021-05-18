@@ -13,13 +13,15 @@
     <title>Estúdio Aires</title>
 </head>
 
+
+
 <body>
 
     <div class="banner-area">
         <!--Vídeo de entrada do site-->
         <div class="banner">
             <video autoplay muted loop>
-                    <source src="/images/landing-page/teste.mov" type="video/mp4">
+                    <source src="/img/teste.mov" type="video/mp4">
                      
                 </video>
 
@@ -41,7 +43,11 @@
                 </ul>
             </nav>
             <!--   <a href="login.html" class="login"><button>Login</button></a> -->
-            <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
+             <!--   <a href="login.html" class="login"><button>Login</button></a> -->
+             <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
+            
+            
+            
             <div class="container-cadastrese">
                 <span class="header-cadastrese">Novo no Estúdio?                        
                         <a href="./cadastro-new-users/cadastro.html">CADASTRE-SE</a></span>
@@ -52,14 +58,15 @@
 
     </header>
     <div class="container-div-2">
-        <span class="header-orcamento"><a href="./orcamento-agendamento/orcamento-semlogin.html">Faça seu orçamento com a gente!</a></span>
+        <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input></a>
+    
     </div>
 
 
     <!-- Modal-Login -->
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <form class="modal-content animate" action="">
+        <form method="Post" class="modal-content animate" action="/dasboardUsuarios">
 
             <div class="container-login">
                 <span class="container-logo">Estúdio Aires</span>
@@ -316,7 +323,7 @@
         </div>
     </footer>
     </main>
-    <script type="text/javascript" src="./login-modal/login-modal.js"></script>
+    <script type="text/javascript" src="/js/login-modal.js"></script>
     <!-- <script type="text/javascript" src="./js/chatHome.js"></script> -->
 
 </body>
