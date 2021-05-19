@@ -21,7 +21,7 @@
                 </video>
                 <div class="modalCadastro">
 
-                    <form class="modal-content-cadastro" >
+                    <form class="modal-content-cadastro" method="POST" action="cadastro-usuario/novo" >
                     <div class="usu-card-login">
                       <div  class="usu-flex-container-02">
                           <h3 class="usu-cadastro">
@@ -38,8 +38,8 @@
                               <input required class="usu-input-tipo-1" placeholder="Email" maxlength="60" type="email" name="email" id="email">
                           </div>
                           <div class="usu-flex-container-tel-cpf">
-                              <input required class="usu-input-tipo-1" placeholder="Telefone mais atual" maxlength="50" type="text" name="Nome" id="Nome" required>
-                              <input required class="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="60" type="email" name="email" id="email">
+                              <input required class="usu-input-tipo-1" placeholder="Telefone mais atual" maxlength="50" type="text" name="telefone" id="Nome" required>
+                              <input required class="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="60" type="text" name="cpfOucnpj" id="email">
                           </div>
                           <div class="usu-flex-container-selecione">
                               <select class="usu-input-Tipo-2" placeholder="Como nos conheceu?" name="Como nos conheceu" id="Como nos conheceu">
@@ -52,8 +52,8 @@
                               </select>
                           </div>
                           <div class="usu-flex-container-senha">
-                              <input required class="usu-input-Tipo-3" placeholder="Senha" type="password" name="Nome" id="senha">
-                              <input required class="usu-input-Tipo-3" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao">
+                              <input required class="usu-input-Tipo-3" placeholder="Senha" type="password" name="psw" id="senha">
+                              <input required class="usu-input-Tipo-3" placeholder="Confirmar Senha" type="password" name="psw2" id="senhaConfirmacao">
                           </div>
         
                           <div class="usu-flex-container-termos">
@@ -68,7 +68,7 @@
                           </div>
         
                           <div class="usu-flex-container-botao">
-                              <button  type="submit"> CADASTRAR </button>
+                              <input type="submit" value="CADASTRAR">
         
                           </div>
         
