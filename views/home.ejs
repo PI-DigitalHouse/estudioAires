@@ -47,33 +47,37 @@
              <button onclick="document.getElementById('id01').style.display='block'" class="login">Login</button>
             
             
-            
-            <div class="container-cadastrese">
-                <span class="header-cadastrese">Novo no Estúdio?                        
-                        <a href="./cadastro-new-users/cadastro.html">CADASTRE-SE</a></span>
-            </div>
+             <form method="GET" action="/cadastro-usuario">
+                <div class="container-cadastrese">
+                    <span class="header-cadastrese">Novo no Estúdio?                        
+                        <input class="header-cadastrese" type="submit" value="CADASTRE-SE"></input>
+                </div>
+                </form>
+           
 
 
         </div>
 
     </header>
+    <form method="GET" action="/orcamento">
     <div class="container-div-2">
-        <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input></a>
+        <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input>
     
     </div>
+    </form>
 
 
-    <!-- Modal-Login -->
+    <!-- Modal-Login --PRECISA DE CORRECAO> 
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <form method="Post" class="modal-content animate" action="/dasboardUsuarios">
 
             <div class="container-login">
                 <span class="container-logo">Estúdio Aires</span>
-                <!-- label for="uname"><b>E-mail:</b></label> -->
+                label for="uname"><b>E-mail:</b></label> 
                 <input type="text" placeholder="E-mail cadastrado:" required placeholder="Email" maxlength="60" type="email" name="email" id="email">
-                <!--<label for="psw"><b>Senha:</b></label> -->
-                <input type="password" placeholder="Senha:" name="psw" required>
+              <label for="psw"><b>Senha:</b></label> -->
+               <!--  <input type="password" placeholder="Senha:" name="psw" required>
                 <span class="psw-forget"><a href="#">Esqueceu sua senha? </a></span>
                 <button type="submit"><a href="./dashboardUsuario/dashboardUsuario_solicitacoes.html">ENTRAR</a></button>
 
@@ -87,7 +91,7 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> --> -->
 
     <!-- início da sessão de portfólio -->
     <div id="portfolio">
