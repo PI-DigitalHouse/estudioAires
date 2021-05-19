@@ -29,6 +29,7 @@ app.use('/dashboardUsuario', dashboardUsuarioRouter);
 app.use('/cadastro-membro', require('./routes/cadastroMembro'));
 app.use('/cadastro-usuario', require('./routes/cadastro-usuario'));
 app.use('/dashboardMembro', require('./routes/dashBoardMembro_meuPerfil'))
+app.use('/alterarDados', require('./routes/alterarDados'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
