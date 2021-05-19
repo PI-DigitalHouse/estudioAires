@@ -8,6 +8,7 @@ const bodyparser = require('body-parser')
 const indexRouter = require('./routes/index');
 const dashboardUsuarioRouter = require ('./routes/dashboardUsuario')
 
+
 const app = express();
 
 // view engine setup
@@ -24,10 +25,9 @@ app.use(bodyparser())
 app.use('/', indexRouter);
 app.use('/orcamento', require('./routes/orcamento'));
 app.use('/novo', require('./routes/orcamentosemlogin'));
-app.use('/cadastro', require('./routes/cadastroMembro'));
 app.use('/dashboardUsuario', dashboardUsuarioRouter);
-app.use('/cadastroUsuario', require('./routes/cadastro'));
-/* app.use('/cadastroUsuario', require('./routes/cadastro')); */
+app.use('/cadastro-membro', require('./routes/cadastroMembro'));
+app.use('/cadastro-usuario', require('./routes/cadastro-usuario'));
 app.use('/dashboardMembro', require('./routes/dashBoardMembro_meuPerfil'))
 
 // catch 404 and forward to error handler

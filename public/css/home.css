@@ -36,13 +36,20 @@ li, a, button{
     background: rgba(0, 0, 0, .2);
     z-index: 999;
 }
+.header-cadastrese input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer ;
+}
 
 .container-cadastrese{
     display: flex;
     position: absolute;
    
     top: 58%;
-    left: 82%;
+    left: 72%;
     background-color:transparent;
     width: 18%;
     margin-top: 30px;
@@ -50,15 +57,16 @@ li, a, button{
     color: #edf0f1;
 }
 
-.container-div-2{
+.container-div-2 input{
     display: flex;
     position: absolute;
+    padding: 20px;
     top: 83%;
     left: 3%;
     background-color:transparent;
     width: fit-content;
     margin-top: 30px;
-    font-size: 10px;
+    font-size: 25px;
     color: #edf0f1;
     text-align: center;
     font-weight: bold;
@@ -68,8 +76,9 @@ li, a, button{
     border: #FC7600 solid 2px;
     border-radius: 10px;
     width: 550px;
-    padding: 5px;
+    padding: 10px;
     background-color:transparent;
+    cursor: pointer ;
 }
 .header-orcamento:hover{
     background-color:#FC7600;
