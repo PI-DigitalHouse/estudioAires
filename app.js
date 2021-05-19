@@ -4,7 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyparser = require('body-parser')
-
+const session = require('express-session')
 const indexRouter = require('./routes/index');
 const dashboardUsuarioRouter = require ('./routes/dashboardUsuario')
 
@@ -21,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyparser())
+app.use(session({secret: 'lapidandodiamante'}))
 
 app.use('/', indexRouter);
 app.use('/orcamento', require('./routes/orcamento'));
