@@ -25,12 +25,12 @@ app.use(session({secret: 'lapidandodiamante'}))
 
 app.use('/', indexRouter);
 app.use('/orcamento', require('./routes/orcamento'));
-app.use('/novo', require('./routes/orcamentosemlogin'));
 app.use('/dashboardUsuario', dashboardUsuarioRouter);
 app.use('/cadastro-membro', require('./routes/cadastroMembro'));
 app.use('/cadastro-usuario', require('./routes/cadastro-usuario'));
 app.use('/dashboardMembro', require('./routes/dashBoardMembro_meuPerfil'))
 app.use('/alterarDados', require('./routes/alterarDados'))
+app.use('/novo', require('./routes/orcamentoSemLogin'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
