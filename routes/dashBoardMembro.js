@@ -2,8 +2,13 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs')
 
+const usuarios = require('../usuariosCadastrados.json')
+
+
+
 router.get('/', function(req, res, next){
-    res.render('dashboardMembroMeuPerfil',{title: 'Meu perfil'})
+    
+    res.render('dashboardMembroMeuPerfil', usuarios)
 })
 
 router.get('/jobsFinalizados', function (req, res, next){
