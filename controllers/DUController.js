@@ -85,3 +85,8 @@ module.exports.recuperaSenha = (req, res) => {
     res.render('DU_recuperacaoSenha', { 
       title: 'Recuperação de Senha'});
 }
+
+module.exports.alteraSenha = (req, res) => {
+    res.render('dashboardUsuario_alteracaoSenha',{
+        title: 'Altere a sua Senha'});
+}

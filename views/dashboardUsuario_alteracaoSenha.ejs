@@ -7,42 +7,32 @@
     <link href="../css/dashboardUsuario_alteracaoSenha.css" rel="stylesheet">
     <link rel="shortcut icon" href="../images/square-logo-lineorange.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <!-- <link rel="stylesheet" href="../css/header.css"> -->
     <title>Alteração senha</title>
     <link rel="stylesheet" href="../css/footerGeral.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/partials/headerAreaRestritaUsuarios.css">
 </head>
 
 <body>
     <header>
-        <a id="logo" href="home.html">Estudio Aires </a>
-        <nav >
-            <ul>
-                <li><a href="dashboardUsuario_solicitacoes.html">Solicitações</a></li>
-                <li><a href="../orcamento-agendamento/orcamento.html">+ Novo Orçamento</a></li>
-                <li><a  href="">Contatos</a></li>
-            </ul>
-        </nav>
-        <div class="usuario">
-            <a href="dashboardUsuario_meuPerfil.html">Nome do usuario </a>
-            <a><img class= "fotoPerfil" src ="../images/dashboard_cliente/fotoPerfil.png" alt="Foto usuário"></a>
-        </div>
+        <%- include partials/headerAreaRestritaUsuarios.ejs %>
     </header>
 
     <main>
         <div class="du-meuPerfil-info">
             <h1>Alteração de senha</h1>
             <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../images/dashboard_cliente/key.png" alt="ícone chave">
+                <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">Senha antiga</p>
-                    <form>
+                    <form action="/dashboardUsuario/alteraSenha" method="GET">
                         <input class="du-meuPerfil-info-secao-formulario" type="password">
                     </form>
                 </div>
             </div>
             <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../images/dashboard_cliente/key.png" alt="ícone chave">
+                <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">Senha nova</p>
                     <form>
@@ -51,10 +41,10 @@
                 </div>
             </div>
             <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../images/dashboard_cliente/key.png" alt="ícone chave">
+                <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">Confirme senha nova</p>
-                    <form>
+                    <form action=" " method="POST">
                         <input class="du-meuPerfil-info-secao-formulario" type="password">
                     </form>
                 </div>
