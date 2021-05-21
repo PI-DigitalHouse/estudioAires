@@ -39,7 +39,7 @@
             </div>
             <div class="flex-container-boas-vindas"><h2>Seja bem-vindo!</h2></div>
             
-            <form id="cadastroMembro" action="" method="POST">
+            <form id="cadastroMembro" action="cadastro-membro/novo" method="POST">
                 
                 <div class="flex-container-nome">
                     <input required class="inputTipo3" placeholder="Nome completo" maxlength="50" type="text" name="Nome" id="Nome" required>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="flex-container-nome">
                     <input required class="inputTipo1" placeholder="Tel/Cel" maxlength="14" type="text" name="Telefone" id="Telefone">
-                    <input required class="inputTipo1" placeholder="CPF/CNPJ" type="text" maxlength="11" name="Nome" id="Nome">
+                    <input required class="inputTipo1" placeholder="CPF/CNPJ" type="text" maxlength="11" name="CPF" id="CPF">
                 </div>
                 
                 <div class="flex-container-nome">
@@ -79,15 +79,16 @@
                    
                     
                 </div>
-                <div class="flex-container-anexo">
+                <!-- <div class="flex-container-anexo">
                     <input required class="curriculo" type="file" accept=".pdf" >
                         <h4 class="fonte" >Anexe seu currículo no formato .pdf</h4>
                     </input>
-                </div>
+                </div> -->
                 <div class="flex-container-nome">
-                    <input required class="inputTipo1" placeholder="Senha" type="password" name="Nome" id="senha">
-                    <input required class="inputTipo1" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao">
+                    <input required class="inputTipo1" placeholder="Senha" type="password" name="psw">
+                    <input required class="inputTipo1" placeholder="Confirmar Senha" type="password" name="psw2">
                </div>
+               
                <div class="flex-container-nome">
                 <button type="submit" > CADASTRAR  </button>
             </div>

@@ -3,16 +3,20 @@ const router = express.Router();
 const usuarios = require('../usuariosCadastrados.json')
 const bcrypt = require('bcrypt')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Express' });
+// gets da home
+router.get('/', function(req, res) {
+  res.render('home');
 });
 
-router.get('/login',function(req, res, next){
+router.get('/login',function(req, res){
   res.render('login')
 })
 
-router.post('/login/autentica',function(req, res, next){
+//fim dos gets da home
+
+// posts da home
+
+router.post('/login/autentica',function(req, res){
   
   for (var i = 0; i < usuarios.length; i++){
     
@@ -23,5 +27,14 @@ router.post('/login/autentica',function(req, res, next){
   }
   res.send('Usuário ou senha inválidos')
 })
+
+//fim dos posts da home
+
+//↓↓↓↓↓↓ PARTE DE CONTATO AQUI ATÉ TIRAR DÚVIDA
+router.get('/contato', (req, res)=>{
+  res.render('contato')
+})
+
+
 
 module.exports = router;
