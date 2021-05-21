@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 router.post('/novo', function(req, res, next) {;
 const dadosDoFormulario = req.body
       dadosDoFormulario.password =hash(dadosDoFormulario.psw) //encriptando a senha
-      dadosDoFormulario.password2 =hash(dadosDoFormulario.psw)
+      dadosDoFormulario.password2 =hash(dadosDoFormulario.psw2)
       membrosCadastrados.push(dadosDoFormulario)
       salvarObjeto(membrosCadastrados)
       console.log(membrosCadastrados)
