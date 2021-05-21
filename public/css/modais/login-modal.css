@@ -18,15 +18,15 @@
 
 /* Modal Content*/
 .modal-content {
-  background-color: rgb(253, 253, 253);
+  background-color: #FC7600;
   font-family: "Lato", sans-serif;
   margin: 5px auto;
-  border: #FC7600 solid 1px;
+ /*  border: #0c0c0c solid 1px; */
   width: 30%;
   height: 530px;
   position: absolute;
   display: flex;
-  top: 165px;
+  top: 175px;
   left: 566px;
 }
 
@@ -83,7 +83,7 @@
   
 }
 .psw-forget a:hover{
-color: #FC7600;
+color:black;
 
 }
 .pws{
@@ -98,7 +98,7 @@ color: #FC7600;
   
 }
 .psw a:hover{
-  color: #FC7600;
+  color:white;
 }
  
 .modal-cadastro{
@@ -115,7 +115,7 @@ color: #FC7600;
   left: 25%;
   margin-top: 25px;
   margin-bottom: 25px;
-  background-color: #FC7600;;
+  background-color: BLACK;
   color: white;
   padding: 14px 20px;
   border: none;
