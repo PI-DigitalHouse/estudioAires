@@ -18,12 +18,16 @@
 
 /* Modal Content*/
 .modal-content {
-  background-color: rgba(0,0,0,0.35);
+  background-color: rgb(253, 253, 253);
   font-family: "Lato", sans-serif;
-  margin: 5px auto; 
-  border:#FC7600 solid 1px; 
-  width: 30%; 
+  margin: 5px auto;
+  border: #FC7600 solid 1px;
+  width: 30%;
   height: 530px;
+  position: absolute;
+  display: flex;
+  top: 165px;
+  left: 566px;
 }
 
 .container-login {
@@ -40,7 +44,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 20px;
-  color: #edf0f1;
+  color:black;
   text-decoration: none;
   margin: 50px;
   
@@ -88,19 +92,19 @@ color: #FC7600;
 
 .psw a{
   text-decoration: none;
-  color: #FC7600;
+  color: black;
   font-weight: bold;
   font-size: 15px;
   
 }
 .psw a:hover{
-  color: white;
+  color: #FC7600;
 }
  
 .modal-cadastro{
   margin-top: 30px;
   font-size: 15px;
-  color: #edf0f1;
+  color: black;
 
 
 } 
