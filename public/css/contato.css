@@ -16,6 +16,12 @@ body{
     align-items: center;
 }
 
+.logo a{
+    text-decoration: none;
+    color: #FC7600;
+    font-size: 30px;
+}
+
 .section-contato{
     width: 100%;
     display: flex;

@@ -5,64 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/footerGeral.css">
-    <link rel="stylesheet" href="/css/login-modal.css">
-    <link rel="shortcut icon" href="images/square-logo-lineorange.png">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/partials/footerGeral.css">
+    <link rel="stylesheet" href="/css/modais/login-modal.css">
+    <link rel="stylesheet" href="/img/square-logo-lineorange.png">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <title>Estúdio Aires</title>
 </head>
 
 <body>
-
+    <!--Vídeo de entrada do site-->
     <div class="banner-area">
-        <!--Vídeo de entrada do site-->
         <div class="banner">
             <video autoplay muted loop>
-                    <source src="/img/teste.mov" type="video/mp4">
-                     
-                </video>
-
+                <source src="/img/teste.mov" type="video/mp4">
+            </video>
         </div>
-
     </div>
+
     <header>
         <!--Nav fixo do site-->
         <div class="header-log-nav">
-            <div class="logo"><a href="#">Estúdio Aires</a></div>
+            <div class="logo"><a href="/">Estúdio Aires</a></div>
             <nav>
-                <!--menu do site-->
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/">Home <!--Fazer redirect?--></a></li> 
                     <li><a href="#servicosEA">Serviços</a></li>
                     <li><a href="#quem-somosEA">Quem Somos</a></li>
                     <li><a href="#parceirosEA">Parceiros</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/contato">Contato <!--Fazer AGORA --></a></li>
                 </ul>
             </nav>
+
+            <!-- O QUE É ISSO? ↓↓↓↓↓↓-->
             <!--   <a href="login.html" class="login"><button>Login</button></a> -->
-             <!--   <a href="login.html" class="login"><button>Login</button></a> -->
-             
-             <button onclick="document.getElementById('id01').style.display='block'" class="login"><a href='/login'>Login</a></button>
-             
-            
-             <form method="GET" action="/cadastro-usuario">
+
+            <button onclick="document.getElementById('id01').style.display='block'" class="login"><a
+                    href='/login'>Login</a></button>
+
+                    <!-- PAREI AQUI -->
+
+            <form method="GET" action="/cadastro-usuario">
                 <div class="container-cadastrese">
-                    <span class="header-cadastrese">Novo no Estúdio?                        
+                    <span class="header-cadastrese">Novo no Estúdio?
                         <input class="header-cadastrese" type="submit" value="CADASTRE-SE"></input>
                 </div>
-                </form>
-           
+            </form>
+        </div>
+    </header>
+
+<!-- COPIA DO HEADER AQUI EMBAIXO -->
+
+            <!-- <div class="container-cadastrese">
+                <span class="header-cadastrese">Novo no Estúdio?                        
+                        <a href="./cadastro-new-users/cadastro.html">CADASTRE-SE</a></span>
+            </div>
 
 
         </div>
 
-    </header>
+    </header> -->
+
+    <!-- FIM DA COPIA DO HEADER -->
+
     <form method="GET" action="/orcamento">
-    <div class="container-div-2">
-        <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input>
-    
-    </div>
+        <div class="container-div-2">
+            <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input>
+
+        </div>
     </form>
 
 
@@ -76,7 +87,7 @@
                 label for="uname"><b>E-mail:</b></label> 
                 <input type="text" placeholder="E-mail cadastrado:" required placeholder="Email" maxlength="60" type="email" name="email" id="email">
               <label for="psw"><b>Senha:</b></label> -->
-               <!--  <input type="password" placeholder="Senha:" name="psw" required>
+    <!--  <input type="password" placeholder="Senha:" name="psw" required>
                 <span class="psw-forget"><a href="#">Esqueceu sua senha? </a></span>
                 <button type="submit"><a href="./dashboardUsuario/dashboardUsuario_solicitacoes.html">ENTRAR</a></button>
 
@@ -99,8 +110,10 @@
             <div class="image-overlay">
                 <div class="image-overlayTitle">Projeto 1</div>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img src="./images/home/arrow_right_hover.png"></a></p>
-                <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um Orçamento</a></button>
+                <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
+                            src="./images/home/arrow_right_hover.png"></a></p>
+                <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um
+                        Orçamento</a></button>
             </div>
         </div>
 
@@ -109,8 +122,10 @@
             <div class="image-overlay">
                 <div class="image-overlayTitle">Projeto 2</div>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img src="./images/home/arrow_right_hover.png"></a></p>
-                <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um Orçamento</a></button>
+                <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
+                            src="./images/home/arrow_right_hover.png"></a></p>
+                <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um
+                        Orçamento</a></button>
             </div>
         </div>
 
@@ -119,8 +134,10 @@
             <div class="image-overlay">
                 <div class="image-overlayTitle">Projeto 3</div>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img src="./images/home/arrow_right_hover.png"></a></p>
-                <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um Orçamento</a></button>
+                <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
+                            src="./images/home/arrow_right_hover.png"></a></p>
+                <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um
+                        Orçamento</a></button>
             </div>
         </div>
 
@@ -129,8 +146,10 @@
             <div class="image-overlay">
                 <div class="image-overlayTitle">Projeto 4</div>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img src="./images/home/arrow_right_hover.png"></a></p>
-                <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um Orçamento</a></button>
+                <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
+                            src="./images/home/arrow_right_hover.png"></a></p>
+                <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um
+                        Orçamento</a></button>
             </div>
         </div>
         <!-- Adiciona botão fixo de orçamento -->
@@ -153,8 +172,11 @@
 
                 <img src="./images/servicos/servico1.png" alt="Descritivo serviço 1">
                 <h3>Serviço 1</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                <button class="box-servico--button"><a class="box-servico--buttonLink" href="./paginasDeServiços/paginaServico1.html">Saiba mais</a></button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad
+                    porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio,
+                    laudantium tempora.</p>
+                <button class="box-servico--button"><a class="box-servico--buttonLink"
+                        href="./paginasDeServiços/paginaServico1.html">Saiba mais</a></button>
 
             </div>
 
@@ -162,8 +184,11 @@
 
                 <img src="./images/servicos/servico1.png" alt="Descritivo serviço 1">
                 <h3>Serviço 2</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                <button class="box-servico--button"><a class="box-servico--buttonLink" href="././paginasDeServiços/paginaServico2.html">Saiba mais</a></button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad
+                    porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio,
+                    laudantium tempora.</p>
+                <button class="box-servico--button"><a class="box-servico--buttonLink"
+                        href="././paginasDeServiços/paginaServico2.html">Saiba mais</a></button>
 
             </div>
 
@@ -171,9 +196,12 @@
 
                 <img src="./images/servicos/servico3.png" alt="Descritivo serviço 1">
                 <h3>Serviço 3</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad
+                    porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio,
+                    laudantium tempora.</p>
 
-                <button class="box-servico--button"><a class="box-servico--buttonLink" href="././paginasDeServiços/paginaServico3.html">Saiba mais</a></button>
+                <button class="box-servico--button"><a class="box-servico--buttonLink"
+                        href="././paginasDeServiços/paginaServico3.html">Saiba mais</a></button>
 
             </div>
 
@@ -181,8 +209,11 @@
 
                 <img src="./images/servicos/servico4.png" alt="Descritivo serviço 1">
                 <h3>Serviço 4</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                <button class="box-servico--button"><a class="box-servico--buttonLink" href="././paginasDeServiços/paginaServico4.html">Saiba mais</a></button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad
+                    porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio,
+                    laudantium tempora.</p>
+                <button class="box-servico--button"><a class="box-servico--buttonLink"
+                        href="././paginasDeServiços/paginaServico4.html">Saiba mais</a></button>
 
             </div>
 
@@ -190,8 +221,11 @@
 
                 <img src="./images/servicos/servico5.png" alt="Descritivo serviço 1">
                 <h3>Serviço 5</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                <button class="box-servico--button"><a class="box-servico--buttonLink" href="./paginasDeServiços/paginaServico5.html">Saiba mais</a></button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad
+                    porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio,
+                    laudantium tempora.</p>
+                <button class="box-servico--button"><a class="box-servico--buttonLink"
+                        href="./paginasDeServiços/paginaServico5.html">Saiba mais</a></button>
 
             </div>
 
@@ -199,8 +233,11 @@
 
                 <img src="./images/servicos/servico6.png" alt="Descritivo serviço 1">
                 <h3>Serviço 6</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                <button class="box-servico--button"><a class="box-servico--buttonLink" href="././paginasDeServiços/paginaServico6.html">Saiba mais</a></button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad
+                    porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio,
+                    laudantium tempora.</p>
+                <button class="box-servico--button"><a class="box-servico--buttonLink"
+                        href="././paginasDeServiços/paginaServico6.html">Saiba mais</a></button>
 
             </div>
         </div>
@@ -214,7 +251,9 @@
 
             <h2>Quem Somos</h2>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero id, perferendis ut ex, similique fugiat distinctio ipsam earum praesentium consectetur dolorum officia obcaecati modi consequatur nam ab sit accusantium cumque.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero id, perferendis ut ex, similique fugiat
+                distinctio ipsam earum praesentium consectetur dolorum officia obcaecati modi consequatur nam ab sit
+                accusantium cumque.</p>
 
         </div>
 
@@ -224,7 +263,9 @@
 
                 <img src="./images/quem-somos/placeHolderImageSocio1.png" alt="Placeholder image para o sócio 1">
                 <h3>Fotógrafo 1</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta minus!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti,
+                    maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus
+                    ullam soluta minus!</p>
 
             </div>
 
@@ -232,7 +273,9 @@
 
                 <img src="./images/quem-somos/placeHolderImageSocio2.png" alt="Placeholder image para o sócio 2">
                 <h3>Fotógrafo 2</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta minus!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti,
+                    maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus
+                    ullam soluta minus!</p>
             </div>
 
         </div>
@@ -247,7 +290,8 @@
         <div class="listaParceiros-direita">
 
             <h4>Parceiro 1</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi
+                odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
             <img src="./images/parceiros/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
 
         </div>
@@ -256,14 +300,16 @@
 
             <img src="./images/parceiros/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
             <h4>Parceiro 2</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi
+                odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
 
         </div>
 
         <div class="listaParceiros-direita">
 
             <h4>Parceiro 3</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi
+                odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
             <img src="./images/parceiros/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
 
         </div>
@@ -272,19 +318,22 @@
 
             <img src="./images/parceiros/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
             <h4>Parceiro 4</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi
+                odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
 
         </div>
 
     </section>
 
-    <!-- início do footer -->
+    <!--INICIO DO FOOTER-->
     <footer class="footer">
+
         <!-- Início do botão go up para início da home-->
         <div class="footer--goUpBtn">
             <a href="#"><img class="footer--goUpBtn--linkImg" src="./images/home/upButton.png"></a>
         </div>
         <!-- Fim do botão go up para início da home-->
+
         <div class="container-footer">
             <div class="row">
                 <div class="footer-col">
@@ -308,7 +357,6 @@
                 <div class="footer-col">
                     <h4>privacidade</h4>
                     <ul>
-
                         <li><a href="#">termos</a></li>
                         <li><a href="#">condições de uso</a></li>
                     </ul>
@@ -325,10 +373,11 @@
             </div>
         </div>
     </footer>
+    <!--FIM DO FOOTER-->
+
     </main>
     <script type="text/javascript" src="/js/login-modal.js"></script>
     <!-- <script type="text/javascript" src="./js/chatHome.js"></script> -->
-
 </body>
 
 </html>
