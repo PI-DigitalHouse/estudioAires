@@ -291,7 +291,7 @@ input.invalid {
 /* Botoes */
 
 
-.button-submit{
+.button-submit {
     width: 100%;
     display: flex;
     justify-content:space-around;
@@ -299,7 +299,7 @@ input.invalid {
     top: 10%;
 }
 
-.button-submit button {
+.button-submit input {
     background-color: #FC7600;;
     color: white;
     padding: 14px 20px;
@@ -312,7 +312,7 @@ input.invalid {
     font-weight: bold;
 }
 
-.button-submit button a{
+.button-submit a input{
     text-decoration: none;
     color: black;
 }

@@ -1,5 +1,6 @@
 var currentTab = 0; // O dash atual é definido para ser o primeiro dash (0)
 showTab(currentTab); // Exibir a dash atual
+const orcamentosCadastrados=[];
 
 function showTab(n) {
   // Esta função irá exibir dash especificado do formulário ...
@@ -33,6 +34,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...o formulário é enviado:
     document.getElementById("acao-central").submit();
+    document.getElementById("acao-central").salvarUsuario(orcamentosCadastrados)
     
     return false;
   }
@@ -95,4 +97,9 @@ function fixStepIndicator2(n) {
   }
   //...  e adiciona a classe "ativa" ao step atual:
   x[n].className += " active";
+}
+
+function salvarUsuario (usuario){
+  const str = JSON.stringify(usuario) //transforma usuario em string
+  fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
 }
