@@ -1,3 +1,5 @@
+const fs = require('fs')
+dadosSalvos= []
 const controlador = {
     cadastroMembro: (req, res) => {
         res.render('cadastroMembro', { title: 'cadastroMembro' });
@@ -12,7 +14,10 @@ const controlador = {
     }
 }
 
-
+function salvarObjeto(objeto){
+    const str = JSON.stringify(objeto) // aqui estou transformando o objeto que captei do formulário em string
+    fs.writeFileSync('novosMembros.json', str) //aqui indico ONDE e O QUE salvar. 
+  }
 
 
 
