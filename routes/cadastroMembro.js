@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
+const cadastroMembroController = require('../controllers/cadastroMembroController')
 //const bcrypt =require('bcrypt')
 dadosSalvos= []
 
 
-router.get('/membro', function(req, res, next) {
-  res.render('cadastroMembro', { title: 'cadastroMembro' });
-});
+router.get('/membro', cadastroMembroController.cadastroMembro)
 
 router.post('/membro', function(req, res, next) {
   const dadosDoFormulario = req.body
