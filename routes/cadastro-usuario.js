@@ -44,3 +44,6 @@ router.post('/novo', function(req, res, next) { //rota para criacao do cadastro 
   
 
 module.exports = router;
+
+
+

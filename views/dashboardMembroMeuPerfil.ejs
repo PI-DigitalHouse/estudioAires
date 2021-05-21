@@ -25,21 +25,21 @@
                 <img class="du-meuPerfil-info-secao-icone" src="../img/user.png" alt="ícone usuario">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">Nome</p>
-                    <p>Manu Chao </p>
+                    <%= Nome %>
                 </div>
             </div>
             <div class="du-meuPerfil-info-secao">
                 <img class="du-meuPerfil-info-secao-icone" src="../img/icone_email.png" alt="ícone email">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">Email</p>
-                    <p>manu.chao@gmail.com </p>
+                    <p><%= email %> </p>
                 </div>
             </div>
             <div class="du-meuPerfil-info-secao">
                 <img class="du-meuPerfil-info-secao-icone" src="../img/driver-license.png" alt="ícone documento">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
-                    <p> 000.000.000-00 </p>
+                    <p> <%= cpfOucnpj %> </p>
                 </div>
             </div>
             <div class="du-meuPerfil-info-secao">
@@ -62,7 +62,7 @@
                 
                 
             </div>
-            <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a href="dashboardUsuario_alteracaoSenha.html">Clique aqui</a></p>
+            <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a href="/dashboardUsuario/alteracaoSenha">Clique aqui</a></p>
         </div>
     </main>
 
