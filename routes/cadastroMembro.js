@@ -8,14 +8,7 @@ dadosSalvos= []
 
 router.get('/membro', cadastroMembroController.cadastroMembro)
 
-router.post('/membro', function(req, res, next) {
-  const dadosDoFormulario = req.body
-  dadosSalvos.push(dadosDoFormulario)
-  res.send(201);
-  console.log(dadosSalvos)
-  salvarObjeto(dadosSalvos)
-  res.redirect('/')
-});
+router.post('/membro', cadastroMembroController.enviaInfos)  
 
 function salvarObjeto(objeto){
   const str = JSON.stringify(objeto) // aqui estou transformando o objeto que captei do formulário em string
