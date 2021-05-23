@@ -16,7 +16,7 @@ body{
 
 /* início do header */
 .headerServico{
-    background: url(../images/servicos/headerPaginaServico.png);
+    background: url(/img/headerPaginaServico.png);
     background-attachment: fixed;
     height: 100vh;
     display: flex;
