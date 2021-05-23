@@ -1,3 +1,53 @@
+//dados para teste
+
+const array = [{
+    idUsuario: 3,
+    idServico: 3,
+    endereco: 'Rua X',
+    valorDoServico: 500.00,
+    tamanhoImovel: 400,
+    dataServico: '5 de março de 2020',
+    servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+},{
+    idUsuario: 3,
+    idServico: 4,
+    endereco: 'Rua X',
+    valorDoServico: 500.00,
+    tamanhoImovel: 400,
+    dataServico: '5 de março de 2020',
+    servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+},{
+    idUsuario: 3,
+    idServico: 5,
+    endereco: 'Rua X',
+    valorDoServico: 500.00,
+    tamanhoImovel: 400,
+    dataServico: '5 de março de 2020',
+    servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+},{
+    idUsuario: 3,
+    idServico: 6,
+    endereco: 'Rua X',
+    valorDoServico: 500.00,
+    tamanhoImovel: 400,
+    dataServico: '5 de março de 2020',
+    servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+},{
+    idUsuario: 3,
+    idServico: 7,
+    endereco: 'Rua X',
+    valorDoServico: 500.00,
+    tamanhoImovel: 400,
+    dataServico: '5 de março de 2020',
+    servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+}
+];
+
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
@@ -36,7 +86,9 @@ router.get('/minhaAgenda', function(req, res, next){
 })
 
 router.get('/aprovacoes', function(req, res, next){
-    res.render('dashboardMembro_aprovacoes')
+    res.render('dashboardMembro_aprovacoes', {
+        title: 'Aprovações',
+        aprovacoes: array });
 })
 
 module.exports = router;

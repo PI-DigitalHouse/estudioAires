@@ -9,6 +9,7 @@ const homeRouter = require('./routes/home');
 
 const dashboardUsuarioRouter = require ('./routes/dashboardUsuario')
 const servicosRouter = require ('./routes/servicos')
+const DMRouter = require ('./routes/dashBoardMembro')
 
 
 const app = express();
@@ -31,7 +32,7 @@ app.use('/dashboardUsuario', dashboardUsuarioRouter);
 app.use('/servicos', servicosRouter);
 app.use('/cadastro-membro', require('./routes/cadastroMembro'));
 app.use('/cadastro-usuario', require('./routes/cadastro-usuario'));
-app.use('/dashboardMembro', require('./routes/dashBoardMembro'))
+app.use('/dashboardMembro', DMRouter)
 app.use('/novo', require('./routes/orcamentoSemLogin'));
 
 // catch 404 and forward to error handler
