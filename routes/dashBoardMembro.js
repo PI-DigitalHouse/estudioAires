@@ -8,7 +8,11 @@ const array = [{
     tamanhoImovel: 400,
     dataServico: '5 de março de 2020',
     servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
-    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00'],
+    nomeCliente: 'Maria da Silva',
+    emailCliente: 'mariazinha@mail.com',
+    telefoneCliente: '+55 00 00000 0000'
+    
 },{
     idUsuario: 3,
     idServico: 4,
@@ -17,7 +21,10 @@ const array = [{
     tamanhoImovel: 400,
     dataServico: '5 de março de 2020',
     servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
-    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00'],
+    nomeCliente: 'Maria da Silva',
+    emailCliente: 'mariazinha@mail.com',
+    telefoneCliente: '+55 00 00000 0000'
 },{
     idUsuario: 3,
     idServico: 5,
@@ -26,7 +33,10 @@ const array = [{
     tamanhoImovel: 400,
     dataServico: '5 de março de 2020',
     servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
-    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00'],
+    nomeCliente: 'Maria da Silva',
+    emailCliente: 'mariazinha@mail.com',
+    telefoneCliente: '+55 00 00000 0000'
 },{
     idUsuario: 3,
     idServico: 6,
@@ -35,7 +45,10 @@ const array = [{
     tamanhoImovel: 400,
     dataServico: '5 de março de 2020',
     servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
-    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00'],
+    nomeCliente: 'Maria da Silva',
+    emailCliente: 'mariazinha@mail.com',
+    telefoneCliente: '+55 00 00000 0000'
 },{
     idUsuario: 3,
     idServico: 7,
@@ -44,9 +57,13 @@ const array = [{
     tamanhoImovel: 400,
     dataServico: '5 de março de 2020',
     servicosContratados: ['Fotografia', ' Fotografia 3D', ' Vídeo'],
-    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00']
+    horariosSelecionados: ['4 de maio 2021, 10:00','4 de maio 2021, 14:00', '4 de maio 2021, 17:00'],
+    nomeCliente: 'Maria da Silva',
+    emailCliente: 'mariazinha@mail.com',
+    telefoneCliente: '+55 00 00000 0000'
 }
 ];
+
 
 const express = require('express');
 const router = express.Router();
@@ -62,7 +79,9 @@ router.get('/', function(req, res, next){
 })
 
 router.get('/jobsFinalizados', function (req, res, next){
-    res.render('dashboardMembro_jobsFinalizados', {title: 'Meus jobs finalizados'})
+    res.render('dashboardMembro_jobsFinalizados', {
+        title: 'Meus jobs finalizados', 
+        jobs: array })
 } )
 
 /*dentro dessa função eu preciso puxar os dados do usuário logado, imprimi-los no formulário de 
@@ -76,10 +95,6 @@ router.get('/alterarDados', function(req, res, next){
 })
 /* está dando erro pq eu não fiz a sessão nessa página. Preciso garantir que a sessão 
 esteja implementada e que a sessão puxe o nome corretamente*/
-
-router.get('/jobsFinalizados', function(req, res, next){
-    res.render('dashboardMembro_jobsFinalizados')
-})
 
 router.get('/minhaAgenda', function(req, res, next){
     res.render('dashboardMembro_minhaAgenda')

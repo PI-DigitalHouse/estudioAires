@@ -26,186 +26,68 @@
             <p> Buscar: </p>
             <input type="text" name="nome">
         </div>
-        <div class="containerServico">
-            
-                <div class="servicoContratado1">
-                    <h2>Número serviço: 00002</h2>
-                
-                    <div class="info">
-                        <p class="tipo1">Endereço:</p>
-                        <p>Rua X</p>
+
+        <% for (job of jobs) { %> 
+            <div class="containerServico">
+                <div class="containerEsquerda">
+                    <div class="servicoContratado1">
+                        <h2>Número serviço: <%=job.idServico%></h2>
+                    
+                        <div class="info">
+                            <p class="tipo1">Endereço:</p>                        
+                            <p><%=job.endereco%> </p>
+                        </div>
+                        <div class="info">
+                            <p class="tipo1">Valor do serviço:</p>
+                            <p>R$ <%=job.valorDoServico%> </p>
+                        </div>
+                        <div class="info">
+                            <p class="tipo1">Tamanho aproximado do imóvel:</p>
+                            <p><%=job.tamanhoImovel%>  m²</p>
+                        </div>
+                        <div class="data">
+                            <p class="tipo1">Data:</p>
+                            <p><%=job.data%></p>
+                        </div>
                     </div>
-                    <div class="info">
-                        <p class="tipo1">Valor do serviço:</p>
-                        <p>R$ 500,00</p>
+        
+                    <div class="servicoContratado2">
+                        <br>
+                        <div class="info"> 
+                            <p class="tipo1">Serviços contratados:</p>
+                            <p><%=job.servicosContratados%> </p>
+                        </div>
                     </div>
-                    <div class="info">
-                        <p class="tipo1">Tamanho aproximado do imóvel:</p>
-                        <p>400 m²</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Data do serviço</p>
-                        <p>5 de março 2020</p>
-                    </div>
-                    <div class="info">
-                    <p class="tipo1">Valor:</p>
-                    <p>R$ 500,00</p>
-                    </div>
-                </div>
-                <div class="servicoContratado2">
-                    <br>
-                    <div class="info">
-                        <p class="tipo1">Serviços contratados:</p>
-                        <p>Fotografia</p>
-                        <p>Fotografia 3d</p>
-                        <p>Vídeo</p>
-                    </div>
-                </div>
+
+                </div> 
+
                 <div class="servicoContratado3">
                     <div class="info">
                         <p class="tipo2"> Informações do (a) cliente </p>
                     </div>
                     <div class="info">
                         <p class="tipo1">Nome:</p>
-                        <p>Maria da Silva</p>
+                        <p><%=job.nomeCliente%></p>
                     </div>
                     <div class="info">
                         <p class="tipo1">Email:</p>
-                        <p>mdasilva@gmail.com</p>
+                        <p><%=job.emailCliente%></p>
                     </div>
                     <div class="info">
                         <p class="tipo1">Telefone:</p>
-                        <p>+55 00 00000 0000</p>
+                        <p><%=job.telefoneCliente%></p>
                     </div>
-
-                    
-
                 </div>
+
                 <div class="botoes">
                     <div class="entregaveis">
                         <p> <a class = "botoes-entregaveis-a" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>
                     </div> 
                 </div>
             
-        </div>
-
-        <div class="containerServico">
-            
-            <div class="servicoContratado1">
-                <h2>Número serviço: 00002</h2>
-            
-                <div class="info">
-                    <p class="tipo1">Endereço:</p>
-                    <p>Rua X</p>
-                </div>
-                <div class="info">
-                    <p class="tipo1">Valor do serviço:</p>
-                    <p>R$ 500,00</p>
-                </div>
-                <div class="info">
-                    <p class="tipo1">Tamanho aproximado do imóvel:</p>
-                    <p>400 m²</p>
-                </div>
-                <div class="info">
-                    <p class="tipo1">Data do serviço</p>
-                    <p>5 de março 2020</p>
-                </div>
-                <div class="info">
-                <p class="tipo1">Valor:</p>
-                <p>R$ 500,00</p>
-                </div>
             </div>
-            <div class="servicoContratado2">
-                <br>
-                <div class="info">
-                    <p class="tipo1">Serviços contratados:</p>
-                    <p>Fotografia</p>
-                    <p>Fotografia 3d</p>
-                    <p>Vídeo</p>
-                </div>
-            </div>
-            <div class="servicoContratado3">
-                <div class="info">
-                    <p class="tipo2"> Informações do (a) cliente </p>
-                </div>
-                <div class="info">
-                    <p class="tipo1">Nome:</p>
-                    <p>Maria da Silva</p>
-                </div>
-                <div class="info">
-                    <p class="tipo1">Email:</p>
-                    <p>mdasilva@gmail.com</p>
-                </div>
-                <div class="info">
-                    <p class="tipo1">Telefone:</p>
-                    <p>+55 00 00000 0000</p>
-                </div>
-
-                
-
-            </div>
-            <div class="botoes">
-                <div class="entregaveis">
-                <p> <a href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>                </div> 
-            </div>
-    </div>
-
-        <div class="containerServico">   
-                <div class="servicoContratado1">
-                    <h2>Número serviço: 00002</h2>
-                
-                    <div class="info">
-                        <p class="tipo1">Endereço:</p>
-                        <p>Rua X</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Valor do serviço:</p>
-                        <p>R$ 500,00</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Tamanho aproximado do imóvel:</p>
-                        <p>400 m²</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Data do serviço</p>
-                        <p>5 de março 2020</p>
-                    </div>
-                    <div class="info">
-                    <p class="tipo1">Valor:</p>
-                    <p>R$ 500,00</p>
-                    </div>
-                </div>
-                <div class="servicoContratado2">
-                    <br>
-                    <div class="info">
-                        <p class="tipo1">Serviços contratados:</p>
-                        <p>Fotografia</p>
-                        <p>Fotografia 3d</p>
-                        <p>Vídeo</p>
-                    </div>
-                </div>
-                <div class="servicoContratado3">
-                    <div class="info">
-                        <p class="tipo2"> Informações do (a) cliente </p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Nome:</p>
-                        <p>Maria da Silva</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Email:</p>
-                        <p>mdasilva@gmail.com</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Telefone:</p>
-                        <p>+55 00 00000 0000</p>
-                    </div>
-                </div>
-                <div class="botoes">
-                    <div class="entregaveis">
-                    <p> <a class = "botoes-entregaveis-a" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>                    </div> 
-                </div>
-        </div>
+        <% } %> 
+        
     </main>
 </body>
 </html>
