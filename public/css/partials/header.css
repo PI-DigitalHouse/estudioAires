@@ -267,8 +267,6 @@ nav li a:hover{
     height: auto;
 }
 
-
-
 @media (max-width:600px){
     nav li a{
         font-family: "Lato", sans-serif;
