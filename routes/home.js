@@ -2,19 +2,49 @@ const express = require('express');
 const router = express.Router();
 const usuarios = require('../usuariosCadastrados.json')
 const bcrypt = require('bcrypt')
+const fs = require('fs')
 
 // gets da home
 router.get('/', function(req, res) {
   res.render('home');
 });
 
-router.get('/login',function(req, res){
-  res.render('login')
-})
-
 //fim dos gets da home
 
 // posts da home
+
+//fim dos posts da home
+
+//↓↓↓↓↓↓ PARTE DE CONTATO AQUI ATÉ TIRAR DÚVIDA com require de fs lá em cima pra pegar
+
+const readFile = () => {
+  const content = fs.readFileSync('./mensagemDeContato.json', 'utf-8')
+  return JSON.parse(content)
+}
+
+const writeFile = (content) => {
+  const updateFile = JSON.stringify(content)
+  fs.writeFileSync('./mensagemDeContato.json', updateFile, 'utf-8')
+}
+
+router.get('/contato', (req, res)=>{
+  res.render('contato')
+})
+
+router.post('/contate', (req, res) => {
+  const dados = {nome: req.body.nome, email: req.body.email, mensagem: req.body.mensagem}
+  const currentContent = readFile()
+  currentContent.push({ dados })
+  writeFile(currentContent)
+  res.redirect('/')
+})
+
+//↑↑↑↑↑↑ PARTE DE CONTATO AQUI ATÉ TIRAR DÚVIDA com require de fs lá em cima pra pegar
+
+//COISAS PARA COLOCAR AINDA (DEIXAR ORGANIZADO)
+router.get('/login',function(req, res){
+  res.render('login')
+})
 
 router.post('/login/autentica',function(req, res){
   
@@ -27,14 +57,5 @@ router.post('/login/autentica',function(req, res){
   }
   res.send('Usuário ou senha inválidos')
 })
-
-//fim dos posts da home
-
-//↓↓↓↓↓↓ PARTE DE CONTATO AQUI ATÉ TIRAR DÚVIDA
-router.get('/contato', (req, res)=>{
-  res.render('contato')
-})
-
-
 
 module.exports = router;
