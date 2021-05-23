@@ -49,10 +49,14 @@
                 <p class="tipo1">Selecione um horario:</p>
 
                 <div class="botoes">
-                    <div>     
-                        <label><%= aprovacao.horariosSelecionados %> ></label> 
-                        <input type="radio" id = "horario1" name="answer">
-                    </div>
+                        
+                    <% for(let i = 0; i<aprovacao.horariosSelecionados.length ; i ++){ %>  
+                        <div>
+                            <input type="radio" id = "horario1" name="answer">
+                            <label><%= aprovacao.horariosSelecionados[i] %></label> 
+                        </div>
+                    <% } %> 
+                    
                 </div>
             </div>
 
