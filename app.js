@@ -8,6 +8,7 @@ const session = require('express-session')
 const homeRouter = require('./routes/home');
 
 const dashboardUsuarioRouter = require ('./routes/dashboardUsuario')
+const servicosRouter = require ('./routes/servicos')
 
 
 const app = express();
@@ -27,6 +28,7 @@ app.use(session({secret: 'lapidandodiamante'}))
 app.use('/', homeRouter);
 app.use('/orcamento', require('./routes/orcamento'));
 app.use('/dashboardUsuario', dashboardUsuarioRouter);
+app.use('/servicos', servicosRouter);
 app.use('/cadastro-membro', require('./routes/cadastroMembro'));
 app.use('/cadastro-usuario', require('./routes/cadastro-usuario'));
 app.use('/dashboardMembro', require('./routes/dashBoardMembro'))
