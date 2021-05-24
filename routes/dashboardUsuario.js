@@ -1,17 +1,20 @@
 var express = require('express');
-const { listEntregaveis, listSolicitacoes,recuperaSenha, alteraSenha } = require('../controllers/DUController');
+const { listEntregaveis, listSolicitacoes,recuperaSenha, alteraSenha, meuPerfil} = require('../controllers/DUController');
 var router = express.Router();
 
-/* GET entregáveis */
+// Entregáveis
 router.get('/entregaveis/:idServico', listEntregaveis);
 
-/* GET solicitações */
+// Solicitações
 router.get('/solicitacoes/:idUsuario',listSolicitacoes );
   
-// recuperacao de senha
+// Recuperação de Senha
 router.get('/recuperacaoSenha', recuperaSenha);
 
-// alteração da senha
+// Alteração da Senha
 router.get('/alteraSenha', alteraSenha)
+
+// Meu Perfil
+router.get('/meuPerfil', meuPerfil)
 
 module.exports = router;

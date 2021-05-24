@@ -90,3 +90,7 @@ module.exports.alteraSenha = (req, res) => {
     res.render('dashboardUsuario_alteracaoSenha',{
         title: 'Altere a sua Senha'});
 }
+
+module.exports.meuPerfil = (req, res) => {
+    res.render('dashboardUsuario_meuPerfil');
+}
