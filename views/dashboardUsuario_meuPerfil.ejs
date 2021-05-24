@@ -7,30 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Perfil</title>
     <link href="../css/dashboardUsuarioEMembro_meuPerfil.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../img/square-logo-lineorange.png">
-    <link rel="stylesheet" href="../css/partials/header.css">
-    <link rel="stylesheet" href="../css/partials/footerGeral.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <a id="logo" href="/">Estudio Aires </a>
-        <nav>
-            <ul>
-                <!-- DUVIDA SOBRE CRIAR ROTA PARA AS INFOS DO PROPRIO USUARIO -->
-                <li><a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitações</a></li>
-                <li><a href="/orcamento">+ Novo Orçamento</a></li>
-                <li><a href="/contato">Contate-nos</a></li>
-            </ul>
-        </nav>
-        <div class="usuario">
-            <a href="dashboardUsuario_meuPerfil.html">Nome do usuario
-                <img class="fotoPerfil" src="../img/fotoPerfil.jpg" alt="Foto usuário">
-            </a>
-        </div>
-    </header>
+
+    <%- include partials/headerAreaRestritaUsuarios.ejs %>
 
     <main>
         <div class="du-meuPerfil-info">

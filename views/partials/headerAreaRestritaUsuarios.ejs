@@ -1,15 +1,17 @@
- 
-    <a id="logo" href="../html/home.html">Estudio Aires </a>
+<link rel="stylesheet" href="../css/partials/header.css">
+<header>
+    <a id="logo" href="/">Estudio Aires </a>
     <nav>
         <ul>
-            <li><a href="#">Contatos</a></li>
-            <li><a href="/solicitacoes/:idUsuario">Solicitações</a></li>
+            <!-- DUVIDA SOBRE CRIAR ROTA PARA AS INFOS DO PROPRIO USUARIO -->
+            <li><a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitações</a></li>
             <li><a href="/orcamento">+ Novo Orçamento</a></li>
-            
+            <li><a href="/contato">Contate-nos</a></li>
         </ul>
     </nav>
     <div class="usuario">
-        <a href="../dashboardUsuario/dashboardUsuario_meuPerfil.html">Nome do usuario 
-        <img class= "fotoPerfil" src ="/img/header/fotoPerfil.png" alt="Foto usuário">
+        <a href="/dashboardUsuario/meuPerfil">Nome do usuário
+            <img class="fotoPerfil" src="../img/fotoPerfil.jpg" alt="Foto usuário">
         </a>
     </div>
+</header>

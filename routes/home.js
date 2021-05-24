@@ -9,6 +9,8 @@ router.get('/', function(req, res) {
   res.render('home');
 });
 
+
+
 //fim dos gets da home
 
 // posts da home

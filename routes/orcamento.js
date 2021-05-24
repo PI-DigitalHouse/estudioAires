@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) { //localhost/:3000/orcamento
   res.render('orcamento');
 });
 //ajax ou fetin 
-router.post('/novo', function(req, res, next) {
+router.post('/novoOrcamento', function(req, res, next) {
   const dadosDoFormulario = req.body
     orcamentosCadastrados.push(dadosDoFormulario) //adicionando os dadosdo formulario no array
     salvarUsuario(orcamentosCadastrados)  //chamar a funcao para salvar o orcamento no JSON
