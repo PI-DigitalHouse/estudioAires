@@ -97,8 +97,10 @@ router.get('/alterarDados', function(req, res, next){
 esteja implementada e que a sessão puxe o nome corretamente*/
 
 router.get('/minhaAgenda', function(req, res, next){
-    res.render('dashboardMembro_minhaAgenda')
-})
+    res.render('dashboardMembro_minhaAgenda', {
+        title : 'Minha Agenda'
+    });
+});
 
 router.get('/aprovacoes', function(req, res, next){
     res.render('dashboardMembro_aprovacoes', {
