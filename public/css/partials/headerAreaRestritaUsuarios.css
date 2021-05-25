@@ -24,9 +24,7 @@ header{
     padding: 1px 1px 1px 1px;
     border-radius: 10px 10px 0px 0px;
     border-bottom: #FC7600 solid 2px;
-    font-weight: bold;
-    
-    
+    font-weight: bold;   
 }
 
 #selected:hover{
@@ -39,9 +37,8 @@ nav{
     font-size: 35px;
     justify-content: space-around; 
     align-items: center;
-    
-
 }
+
 nav ul{
     display: flex;
     width: 100%;
@@ -160,6 +157,6 @@ nav li a:hover{
     font-size: 18px;
 }
 
- .login:hover{
+.login:hover{
     background: rgba(252, 118, 0, 0.8);
 }
