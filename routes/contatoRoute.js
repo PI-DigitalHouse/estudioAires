@@ -9,7 +9,7 @@ router.get('/contato', (req, res)=>{
   })
 
 
-
+// AINDA TENHO QUE FAZER A TRANSIÇÃO DOS DADOS DA HOME PARA CÁ
 
 
 
