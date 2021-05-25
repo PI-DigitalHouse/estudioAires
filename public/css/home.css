@@ -289,7 +289,7 @@ video{
 
 .box-servico{
     border: 1px solid rgba(51, 51, 51, 0.5);
-    filter: drop-shadow(4rem 4rem 4rem rgba(0, 0, 0, 0.25));
+    /* filter: drop-shadow(4rem 4rem 4rem rgba(0, 0, 0, 0.25)); */
     border-radius: 20rem;
     width: 390px;
     height: 622px;
@@ -330,7 +330,7 @@ video{
     width: 43%;
     margin: 13% 0 0 0;
 
-    box-shadow: 0rem 4rem 4rem rgb(0 0 0 / 25%);
+    /* box-shadow: 0rem 4rem 4rem rgb(0 0 0 / 25%); */
 }
 
 .box-servico--buttonLink{
