@@ -94,7 +94,17 @@ body{
     
 }
 
+.enviar{
+    border: 1.5px solid #FC7600;
+    background-color:#FC7600;
+}
+
 .recuperar-senha-botao:hover{
+    background-color: #fa8d2e;
+    border: 1.5px solid #fa8d2e;
+} 
+
+.enviar:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
 } 

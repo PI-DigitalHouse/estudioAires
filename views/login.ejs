@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,13 +14,16 @@
     <!--<link rel="stylesheet" href="./modal-galley.css">-->
     <link rel="stylesheet" href="../login-modal/login-modal.css">
     <link rel="shortcut icon" href="images/square-logo-lineorange.png">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-        <title>Estúdio Aires</title>
+    <title>Estúdio Aires</title>
 </head>
+
 <body>
     <header>
-        <%- include partials/headerAreaLivreSemLogin.ejs %> <!-- inclui header como partial -->
+        <%- include partials/headerAreaLivreSemLogin.ejs %>
+            <!-- inclui header como partial -->
     </header>
     <div class="banner-area">
         <div class="banner">
@@ -28,27 +32,31 @@
             </video>
         </div>
     </div>
-      
-    <form class="modal-content animate" action="/login/autentica" method="POST" >
-        <div class="container-login" >
+
+    <form class="modal-content animate" action="/login/autentica" method="POST">
+        <div class="container-login">
             <span class="container-logo">Estúdio Aires</span>
-            
-            <input type="text"  required placeholder="Email" maxlength="60" type="email" name="email" id="email">
-        
+
+            <input type="text" required placeholder="Email" maxlength="60" type="email" name="email" id="email">
+
             <input type="password" placeholder="Senha" name="psw" required>
-            <span class="psw-forget"><a href="#">Esqueceu sua senha? </a></span>
+
+            <form action="/recuperarSenha" method="GET">
+                <span class="psw-forget"><a href="/recuperarSenha">Esqueceu sua senha? </a></span>
+            </form>
+            
             <button type="submit">ENTRAR</button>
 
             <div class="icons-login">
                 <a href=""><img src="img/botao-google.png" alt=""> </a>
                 <a href=""><img src="img/botao-facebook.png" alt=""> </a>
-            </div>  
+            </div>
 
             <div class="modal-cadastro">
                 <span class="psw">Novo no Estúdio? <a href="/cadastro-usuario">CADASTRE-SE</a></span>
-            </div>  
+            </div>
         </div>
-</form>
+    </form>
 </body>
-</html>
 
+</html>

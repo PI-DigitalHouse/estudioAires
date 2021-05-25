@@ -43,6 +43,32 @@ router.post('/contate', (req, res) => {
 
 //↑↑↑↑↑↑ PARTE DE CONTATO AQUI ATÉ TIRAR DÚVIDA com require de fs lá em cima pra pegar
 
+//↓↓↓↓↓↓ PARTE DE RECUPERAR SENHA AQUI ATÉ TIRAR DÚVIDA com require de fs lá em cima pra pegar
+
+// const readFile = () => {
+//   const content = fs.readFileSync('./emailDeRecuperacao.json', 'utf-8')
+//   return JSON.parse(content)
+// }
+
+// const writeFile = (content) => {
+//   const updateFile = JSON.stringify(content)
+//   fs.writeFileSync('./emailDeRecuperacao.json', updateFile, 'utf-8')
+// }
+
+router.get('/recuperarSenha', (req, res)=>{
+  res.render('DU_recuperacaoSenha')
+})
+
+// router.post('/receberEmail', (req, res) => {
+//   const { email } = req.body
+//   const currentContent = readFile()
+//   currentContent.push({ email })
+//   writeFile(currentContent)
+//   res.redirect('/login')
+// })
+
+//↑↑↑↑↑↑ PARTE DE RECUPERAR SENHA AQUI ATÉ TIRAR DÚVIDA com require de fs lá em cima pra pegar
+
 //COISAS PARA COLOCAR AINDA (DEIXAR ORGANIZADO)
 router.get('/login',function(req, res){
   res.render('login')
