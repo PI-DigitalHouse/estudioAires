@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estúdio Aires</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-</head>
-
 <body>
     <!--Carrossel de entrada do site-->
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <div class="container">
         <div class="splide">
             <div class="splide__track">
@@ -29,39 +20,7 @@
         new Splide('.splide').mount();
     </script>
 
-    <header>
-        <!--Nav fixo do site-->
-        <div class="header-log-nav">
-            <div class="logo"><a href="/">Estúdio Aires</a></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/">Home
-                        </a></li>
-                    <li><a href="#servicosEA">Serviços</a></li>
-                    <li><a href="#quem-somosEA">Quem Somos</a></li>
-                    <li><a href="#parceirosEA">Parceiros</a></li>
-                    <li><a href="/contato">Contato
-                        </a></li>
-                </ul>
-            </nav>
-
-            <!-- O QUE É ISSO? ↓↓↓↓↓↓-->
-            <!--   <a href="login.html" class="login"><button>Login</button></a> -->
-            <!-- O QUE É ISSO? ↑↑↑↑↑↑-->
-
-            <!-- EXPLICAÇÃO ↓↓↓↓↓↓-->
-            <button onclick="document.getElementById('id01').style.display='block'" class="login"><a
-                    href='/login'>Login</a></button>
-
-            <form method="GET" action="/cadastro-usuario">
-                <div class="container-cadastrese">
-                    <span class="header-cadastrese">Novo no Estúdio?
-                        <input class="header-cadastrese" type="submit" value="CADASTRE-SE"></input>
-                </div>
-            </form>
-            <!-- EXPLICAÇÃO ↑↑↑↑↑↑-->
-        </div>
-    </header>
+    <%- include partials/headerAreaLivreSemLogin.ejs %>
 
     <form method="GET" action="orcamento">
         <div class="container-div-2">
