@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Login.init({
-        id: DataTypes.INTEGER
+        id: DataTypes.INTEGER //arrumar isso aqui matheus
     }, {
         sequelize,
         modelName: 'Login',

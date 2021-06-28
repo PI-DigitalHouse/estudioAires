@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Pagamento.init({
-        valorFinal: DataTypes.NUMBER,
-        formaDePagamento: DataTypes.STRING,
-        statusTransacao: DataTypes.STRING
+        valorFinal: DataTypes.DECIMAL(10, 0),
+        formaDePagamento: DataTypes.STRING(150),
+        statusTransacao: DataTypes.STRING(150)
     }, {
         sequelize,
         modelName: 'Pagamento',

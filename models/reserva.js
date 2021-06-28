@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     Reserva.init({
         data: DataTypes.DATE,
         horario: DataTypes.DATE,
-        confirmado: DataTypes.NUMBER,
+        confirmado: DataTypes.BOOLEAN,
         horarioInicio: DataTypes.DATE,
         horarioFinal: DataTypes.DATE
     }, {

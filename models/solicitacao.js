@@ -14,19 +14,19 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Solicitacao.init({
-        endereco: DataTypes.STRING,
-        tamanhoImovel: DataTypes.STRING,
-        cep: DataTypes.STRING,
-        valor: DataTypes.NUMBER,
-        dataPropostaUm: DataTypes.STRING,
-        dataPropostaDois: DataTypes.STRING,
-        dataPropostaTres: DataTypes.STRING,
-        dataConfirmada: DataTypes.STRING,
-        pagamento: DataTypes.STRING,
-        status: DataTypes.STRING,
-        contatoSessao: DataTypes.STRING,
-        nomeContato: DataTypes.STRING,
-        sessaoShooting: DataTypes.STRING
+        endereco: DataTypes.STRING(300),
+        tamanhoImovel: DataTypes.STRING(45),
+        cep: DataTypes.STRING(9),
+        valor: DataTypes.DECIMAL(10, 0),
+        dataPropostaUm: DataTypes.STRING(8),
+        dataPropostaDois: DataTypes.STRING(8),
+        dataPropostaTres: DataTypes.STRING(8),
+        dataConfirmada: DataTypes.STRING(8),
+        pagamento: DataTypes.STRING(30),
+        status: DataTypes.STRING(45),
+        contatoSessao: DataTypes.STRING(45),
+        nomeContato: DataTypes.STRING(150),
+        sessaoShooting: DataTypes.DATE
     }, {
         sequelize,
         modelName: 'Solicitacao',

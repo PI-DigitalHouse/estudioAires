@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Servico.init({
-        tipoDeServico: DataTypes.STRING,
-        descricao: DataTypes.STRING,
-        valor: DataTypes.NUMBER
+        tipoDeServico: DataTypes.STRING(150),
+        descricao: DataTypes.STRING(150),
+        valor: DataTypes.DECIMAL(2, 0)
     }, {
         sequelize,
         modelName: 'Servico',

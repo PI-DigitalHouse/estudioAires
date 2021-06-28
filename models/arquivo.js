@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Arquivo.init({
-        nomeArquivo: DataTypes.STRING,
-        tipoDeArquivo: DataTypes.STRING
+        nomeArquivo: DataTypes.STRING(150),
+        tipoDeArquivo: DataTypes.STRING(150)
     }, {
         sequelize,
         modelName: 'Arquivo',
