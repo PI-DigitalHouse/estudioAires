@@ -1,35 +1,35 @@
 'use strict';
 const {
-  Model
+    Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class solicitacao extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  };
-  solicitacao.init({
-    endereco: DataTypes.STRING,
-    tamanhoImovel: DataTypes.STRING,
-    cep: DataTypes.STRING,
-    valor: DataTypes.NUMBER,
-    dataPropostaUm: DataTypes.STRING,
-    dataPropostaDois: DataTypes.STRING,
-    dataPropostaTres: DataTypes.STRING,
-    dataConfirmada: DataTypes.STRING,
-    pagamento: DataTypes.STRING,
-    status: DataTypes.STRING,
-    contatoSessao: DataTypes.STRING,
-    nomeContato: DataTypes.STRING,
-    sessaoShooting: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'solicitacao',
-  });
-  return solicitacao;
+    class Solicitacao extends Model {
+        /**
+         * Helper method for defining associations.
+         * This method is not a part of Sequelize lifecycle.
+         * The `models/index` file will call this method automatically.
+         */
+        static associate(models) {
+            // define association here
+        }
+    };
+    Solicitacao.init({
+        endereco: DataTypes.STRING(300),
+        tamanhoImovel: DataTypes.STRING(45),
+        cep: DataTypes.STRING(9),
+        valor: DataTypes.DECIMAL(10, 0),
+        dataPropostaUm: DataTypes.STRING(8),
+        dataPropostaDois: DataTypes.STRING(8),
+        dataPropostaTres: DataTypes.STRING(8),
+        dataConfirmada: DataTypes.STRING(8),
+        pagamento: DataTypes.STRING(30),
+        status: DataTypes.STRING(45),
+        contatoSessao: DataTypes.STRING(45),
+        nomeContato: DataTypes.STRING(150),
+        sessaoShooting: DataTypes.DATE
+    }, {
+        sequelize,
+        modelName: 'Solicitacao',
+    });
+    return Solicitacao;
 };

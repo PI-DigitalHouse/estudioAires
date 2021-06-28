@@ -8,7 +8,9 @@ const orcamentosCadastrados=[];
 
 /* GET users listing. */
 router.get('/', function(req, res, next) { //localhost/:3000/orcamento
-  res.render('orcamento');
+  res.render('orcamento', {
+    title : 'Novo Orçamento'
+  });
 });
 //ajax ou fetin 
 router.post('/novoOrcamento', function(req, res, next) {
