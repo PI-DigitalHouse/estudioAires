@@ -1,5 +1,5 @@
 var express = require('express');
-const { listEntregaveis, listSolicitacoes,recuperaSenha, alteraSenha, meuPerfil} = require('../controllers/DUController');
+const { listEntregaveis, listSolicitacoes,recuperaSenha, alteraSenha, meuPerfil, calendario} = require('../controllers/DUController');
 var router = express.Router();
 
 // Entregáveis
