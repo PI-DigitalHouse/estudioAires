@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const {renderizaOrcamento, } = require ('../controllers/orcamentoController')
+const {renderizaOrcamento, novoOrcamento } = require ('../controllers/orcamentoController')
 
 
 
