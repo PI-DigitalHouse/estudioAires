@@ -68,6 +68,7 @@ const array = [{
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
+const {calendario} = require('../controllers/DMController');
 
 const usuarios = require('../usuariosCadastrados.json')
 
@@ -107,5 +108,8 @@ router.get('/aprovacoes', function(req, res, next){
         title: 'Aprovações',
         aprovacoes: array });
 })
+
+//Visualização calendario
+router.get ('/calendario', calendario)
 
 module.exports = router;
