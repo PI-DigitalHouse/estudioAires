@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Servico.init({
-        idservico: {
+        idServico: {
             type: DataTypes.INTEGER,
             primaryKey: true
         },
