@@ -1,4 +1,4 @@
-/* const fs = require('fs');
+const fs = require('fs');
 const bcrypt =require('bcrypt');
 
 const membrosCadastrados= [];
@@ -12,7 +12,5 @@ module.exports.cadastrarMembro = function(req, res, next) {
       salvarObjeto(membrosCadastrados)
       console.log(membrosCadastrados)
       res.redirect('/')
-     */
-
-//revisar controller de cadastro membro
+}
 
