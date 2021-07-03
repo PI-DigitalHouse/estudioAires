@@ -18,6 +18,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true
         },
+        idUsuario: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Usuarios'
+            }
+        },
         id: DataTypes.INTEGER //arrumar isso aqui matheus
     }, {
         sequelize,

@@ -18,6 +18,24 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true
         },
+        reservadoPor: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Usuarios'
+            }
+        },
+        aceitoPor: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Usuarios'
+            }
+        },
+        idSolicitacao: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Solicitacoes'
+            }
+        },
         data: DataTypes.DATE,
         horario: DataTypes.DATE,
         confirmado: DataTypes.BOOLEAN,
