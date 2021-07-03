@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Servico.init({
+        idservico: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
         tipoDeServico: DataTypes.STRING(150),
         descricao: DataTypes.STRING(150),
         valor: DataTypes.DECIMAL(2, 0)

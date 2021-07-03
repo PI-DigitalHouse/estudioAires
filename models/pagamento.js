@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Pagamento.init({
+        idPagamento: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
         valorFinal: DataTypes.DECIMAL(10, 0),
         formaDePagamento: DataTypes.STRING(150),
         statusTransacao: DataTypes.STRING(150)

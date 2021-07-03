@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Reserva.init({
+        idReserva: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
         data: DataTypes.DATE,
         horario: DataTypes.DATE,
         confirmado: DataTypes.BOOLEAN,

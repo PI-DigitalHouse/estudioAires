@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Login.init({
+        idLogin: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
         id: DataTypes.INTEGER //arrumar isso aqui matheus
     }, {
         sequelize,
