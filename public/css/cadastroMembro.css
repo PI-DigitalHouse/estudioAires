@@ -11,6 +11,7 @@
             
 
         }
+
         .flex-item{
             justify-content: center;
             width: 15rem;
@@ -24,6 +25,7 @@
             
             height: fit-content;
         }
+
         .card-flex{
             border: 2px solid #FC7600;
             border-radius: 18px;
@@ -46,16 +48,13 @@
             margin-block-start: 1em;
             margin-block-end: 2em;
             margin-left: 1em;
-            width:95% ;
-
-            
+            width:95% ; 
         }
         
         .arrowBack{
-            
-            
             align-self: center;
         }
+
         .textoApresentacao{
             height: 10%;
             width: 85%;
@@ -70,15 +69,16 @@
             margin-bottom: 4rem;
             border-radius: 2rem;
         }
+
         .flex-container-nome{
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
             width: 100%;
             margin: 1%;
-            height: 5rem;
-            
+            height: 5rem;  
         }
+
         .inputTipo1{
             background-color: #ffffff;
             border: 1px solid  darkgray;
@@ -95,15 +95,14 @@
             width: 85%;
             height: 2rem;
             margin-top: 1rem;
-        }    
+        }
+
         .inputTipo3{
             background-color: #ffffff;
             border: 1px solid  darkgray;
             opacity: .8;
             width: 35%;
-            height: 2rem;
-            
-            
+            height: 2rem;   
         }
         
         .flex-container-boas-vindas{
@@ -116,16 +115,16 @@
             font-style: normal;
             font-weight: 800;
             margin-bottom: 7%;
-            
         }
+
         .fonte{
             font-family: Lato;
             font-size: 0.7em;
             font-style: normal;
             font-weight: 800;
             margin-left: 3rem;
-
         }
+
         .text{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 0.8em;
@@ -142,8 +141,8 @@
             height: fit-content;
             padding: 0.5rem;
             display: block;
-
         }
+
         .EscrevaSobreVc{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 0.8em;
@@ -158,18 +157,20 @@
             height: 3rem;
             padding: 0.5rem;
         }
+
         .flex-container-anexo{
             display: flex;
             flex-wrap: wrap; 
             justify-content: flex-start;
             width: 100%;
-            padding: 1rem;
-            
+            padding: 1rem; 
         }
+
         .botãoRadio{
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
         }
+
         .botao{
             width: 20%;
             height: fit-content;
@@ -182,6 +183,7 @@
             font-size: 1rem;
             margin: 1rem;
         }
+
         .curriculo{
             
             justify-content: center;
@@ -193,6 +195,7 @@
             color: #FC7600;
             margin: 1rem;
         }
+
         button[type=submit] {
             background-color: #FC7600;;
             color: white;
@@ -205,13 +208,13 @@
             font-size: 15px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 18px;
-            opacity: 0.8;
-            
-            
+            opacity: 0.8;  
         }
+
         button:hover {
             opacity: 0.6;
           }
+
         @media (max-width:520px){
             
             *{box-sizing: border-box;}
