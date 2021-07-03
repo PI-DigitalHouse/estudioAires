@@ -79,6 +79,18 @@ router.get('/', function(req, res, next){
     res.render('dashboardMembroMeuPerfil', usuarios)
 })
 
+router.get('/minhaAgenda', function(req, res, next){
+    res.render('dashboardMembro_minhaAgenda', {
+        title : 'Minha Agenda'
+    });
+});
+
+router.get('/aprovacoes', function(req, res, next){
+    res.render('dashboardMembro_aprovacoes', {
+        title: 'Aprovações',
+        aprovacoes: array });
+})
+
 router.get('/jobsFinalizados', function (req, res, next){
     res.render('dashboardMembro_jobsFinalizados', {
         title: 'Meus jobs finalizados', 
@@ -96,18 +108,6 @@ router.get('/alterarDados', function(req, res, next){
 })
 /* está dando erro pq eu não fiz a sessão nessa página. Preciso garantir que a sessão 
 esteja implementada e que a sessão puxe o nome corretamente*/
-
-router.get('/minhaAgenda', function(req, res, next){
-    res.render('dashboardMembro_minhaAgenda', {
-        title : 'Minha Agenda'
-    });
-});
-
-router.get('/aprovacoes', function(req, res, next){
-    res.render('dashboardMembro_aprovacoes', {
-        title: 'Aprovações',
-        aprovacoes: array });
-})
 
 //Visualização calendario
 router.get ('/calendario', calendario)
