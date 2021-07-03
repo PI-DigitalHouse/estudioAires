@@ -1,6 +1,6 @@
   .container1 {
     width: 80%;
-    margin-left: 100px;
+    margin-left: 120px;
     margin-top: 50px;
     background-color: white;
   }
@@ -105,15 +105,15 @@
     border: none;
   }
   .current-week {
-    border-top: 4px solid #fed6d7;
+    border-top: 4px solid #fdb577;
   }
   .current-day {
-    background: #fed6d7;
-    border-top: 4px solid #cb6c6b;
+    background: #fdb577;
+    border-top: 4px solid #FC7600;
   }
   .current-day .date {
     font-weight: bold;
-    color: #cb6c6b;
+    color: #FC7600;
   }
   .weekend {
     /* background-clop: padding-box; */
