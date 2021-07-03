@@ -70,7 +70,8 @@ body{
 
 .recuperar-senha-secao-input{
     margin-bottom: 10px;
-    border:solid #949494 1px
+    border:solid #949494 1px;
+    width: 80%;
 }
 
 .recuperar-senha-botao{
