@@ -1,6 +1,8 @@
+const fs =require ('fs')
+const bcrypt =require('bcrypt');
 const usuariosCadastrados=[]
 module.exports.cadastroModal = (req, res) => {
-    res.render('cadastro-usuarios');
+    res.render('cadastro-usuario');
 }
 
 module.exports.postUsuario = (req, res) => { //rota para criacao do cadastro localhost/cadastro/novo
