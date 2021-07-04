@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Solicitacao.init({
+        idSolicitacao: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
         endereco: DataTypes.STRING(300),
         tamanhoImovel: DataTypes.STRING(45),
         cep: DataTypes.STRING(9),

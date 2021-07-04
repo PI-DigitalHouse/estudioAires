@@ -9,6 +9,7 @@ body{
     font-size: 20rem;
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
+    width: 100%;
 }
 
 /* informações */
@@ -23,6 +24,7 @@ h1{
     border-radius: 10px;
     background-color:white;
     justify-content: center;
+    width: 70%;
 }
 
 .du-meuPerfil-info h1{

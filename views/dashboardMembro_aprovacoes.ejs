@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <header>
-        <%- include partials/headerAreaRestritaMembros.ejs %>
-    </header>
+    <%- include partials/head.ejs %>
 <body>
-
+    <%- include partials/headerAreaRestritaMembros.ejs %>
 
     <% for (aprovacao of aprovacoes) { %> 
-        <div class="containerServico">
+        <div id="containerServico">
             <div class="containerEsquerda">
                 <div class="servicoContratado1">
                     <h2>Número serviço: <%=aprovacao.idServico%></h2>
@@ -29,7 +27,7 @@
                 <div class="servicoContratado2">
                     <br>
                     <div class="info"> 
-                        <p class="tipo1">Serviços contratados:</p>
+                        <p class="tipo1"  id="servicoContratado__tipo--ajuste">Serviços contratados:</p>
                         <p><%=aprovacao.servicosContratados%> </p>
                     </div>
                 </div>
