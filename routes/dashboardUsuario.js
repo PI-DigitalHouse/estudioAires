@@ -1,6 +1,15 @@
-var express = require('express');
+const express = require('express');
 const { listEntregaveis, listSolicitacoes,recuperaSenha, alteraSenha, meuPerfil, calendario} = require('../controllers/DUController');
-var router = express.Router();
+
+const autenticaUsuario = require('../controllers/autenticacaoController');
+const router = express.Router();
+
+
+
+/* router.get('/autentica', autenticaUsuario); */
+
+
+//Requer Autenticacao
 
 // Entregáveis
 router.get('/entregaveis/:idServico', listEntregaveis);
