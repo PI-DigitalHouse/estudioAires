@@ -24,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
         cpfCnpj: DataTypes.STRING(18),
         senha: DataTypes.STRING(150),
         comoConheceu: DataTypes.STRING(30),
-        imobiliaria: DataTypes.INTEGER,
-        termosDeUso: DataTypes.INTEGER
+        imobiliaria: DataTypes.STRING(30),
+        termosDeUso: DataTypes.STRING(30)
     }, {
         sequelize,
         modelName: 'Usuario',
