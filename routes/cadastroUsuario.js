@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const{cadastroModal,postUsuario} = require('../controllers/cadastroUsuarioController')
+const{cadastroModal,postUsuario, errorMessage} = require('../controllers/cadastroUsuarioController')
 
 
 router.get('/', cadastroModal);
