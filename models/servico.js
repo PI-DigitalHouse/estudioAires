@@ -18,6 +18,13 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true
         },
+        idSolicitacao: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Solicitacoes'
+            },
+            allowNull: false
+        },
         tipoDeServico: DataTypes.STRING(150),
         descricao: DataTypes.STRING(150),
         valor: DataTypes.DECIMAL(2, 0)

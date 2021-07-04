@@ -22,19 +22,22 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             references: {
                 model: 'Usuarios'
-            }
+            },
+            allowNull: false
         },
         aceitoPor: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'Usuarios'
-            }
+            },
+            allowNull: false
         },
         idSolicitacao: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'Solicitacoes'
-            }
+            },
+            allowNull: false
         },
         data: DataTypes.DATE,
         horario: DataTypes.DATE,

@@ -18,6 +18,13 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true
         },
+        idSolicitacao: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Solicitacoes'
+            },
+            allowNull: false
+        },
         nomeArquivo: DataTypes.STRING(150),
         tipoDeArquivo: DataTypes.STRING(150)
     }, {

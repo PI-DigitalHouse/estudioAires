@@ -22,7 +22,8 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             references: {
                 model: 'Usuarios'
-            }
+            },
+            allowNull: false
         },
         id: DataTypes.INTEGER //arrumar isso aqui matheus
     }, {
