@@ -95,3 +95,4 @@ module.exports.meuPerfil = (req, res) => {
     res.render('dashboardUsuario_meuPerfil', {
         title: 'Meu Perfil'});
 }
+

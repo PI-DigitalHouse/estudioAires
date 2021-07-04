@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 html{
     font-size: 6.25%;
     font-family: "Lato", sans-serif;
@@ -7,13 +8,14 @@ html{
 .logo-dash-memb{
     width: 80%;
 }
+
 body{
     font-size: 20rem;
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
 }
 
-.containerServico{
+#containerServico{
     display: flex;
     border: 2px solid #fff ;
     margin: 20px;
@@ -31,6 +33,10 @@ body{
 
 h3{
     font-size: 26rem;
+}
+
+#servicoContratado__tipo--ajuste{
+    width: 70%;
 }
 
 .servicoContratado1{
@@ -64,6 +70,7 @@ h3{
 
 .containerCentro p{
     margin-top: 30px;
+    width: 87%;
 }
 
 label{
@@ -76,8 +83,7 @@ label{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;   
 }
 
 .informacoes{
@@ -100,8 +106,7 @@ label{
 
 .botoes p{
     margin: 0px;
-    text-align: center;
-    
+    text-align: center;  
 }
 
 .botoes .prestador{

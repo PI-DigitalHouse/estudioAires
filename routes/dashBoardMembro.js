@@ -68,6 +68,7 @@ const array = [{
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
+const {calendario} = require('../controllers/DMController');
 
 const usuarios = require('../usuariosCadastrados.json')
 
@@ -76,6 +77,18 @@ const usuarios = require('../usuariosCadastrados.json')
 router.get('/', function(req, res, next){
     
     res.render('dashboardMembroMeuPerfil', usuarios)
+})
+
+router.get('/minhaAgenda', function(req, res, next){
+    res.render('dashboardMembro_minhaAgenda', {
+        title : 'Minha Agenda'
+    });
+});
+
+router.get('/aprovacoes', function(req, res, next){
+    res.render('dashboardMembro_aprovacoes', {
+        title: 'Aprovações',
+        aprovacoes: array });
 })
 
 router.get('/jobsFinalizados', function (req, res, next){
@@ -96,16 +109,7 @@ router.get('/alterarDados', function(req, res, next){
 /* está dando erro pq eu não fiz a sessão nessa página. Preciso garantir que a sessão 
 esteja implementada e que a sessão puxe o nome corretamente*/
 
-router.get('/minhaAgenda', function(req, res, next){
-    res.render('dashboardMembro_minhaAgenda', {
-        title : 'Minha Agenda'
-    });
-});
-
-router.get('/aprovacoes', function(req, res, next){
-    res.render('dashboardMembro_aprovacoes', {
-        title: 'Aprovações',
-        aprovacoes: array });
-})
+//Visualização calendario
+router.get ('/calendario', calendario)
 
 module.exports = router;

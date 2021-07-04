@@ -9,7 +9,7 @@ body{
     font-size: 14rem;
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -68,6 +68,7 @@ h2{
 
 .info{
     font-size: 14rem;
+    margin-bottom: 7%;
 }
 
 .servicoContratado1{

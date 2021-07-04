@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +7,26 @@
     <link href="../css/dashboardUsuarioEMembro_meuPerfil.css" rel="stylesheet">
     <link rel="shortcut icon" href="../images/square-logo-lineorange.png">
     <link rel="stylesheet" href="../css/partials/header.css">
-    <title>Meu Perfil</title>
+    <title>Dashboard Membro</title>
     <link rel="stylesheet" href="../css/footerGeral.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
 <body>
     <header>
-        <%- include partials/headerAreaRestritaMembros.ejs %>
+        <nav>
+            <a id="logo" href="/">Estudio Aires </a>
+            <ul>
+                <li <% if (title === 'Aprovações') { %> id='selected' <% } %> > <a href="/dashboardMembro/aprovacoes">Aprovações</a></li>
+                <li <% if (title === 'Minha Agenda') { %> id='selected' <% } %> ><a href="/dashboardMembro/minhaAgenda">Minha Agenda</a></li>
+                <li <% if (title === 'Meus jobs finalizados') { %> id='selected' <% } %> ><a href="/dashboardMembro/jobsFinalizados">Jobs Finalizados</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <div class="usuario-flex"><img class= "fotoPerfil" src ="/img/fotoPerfil.jpg" alt="Foto usuário"></div>
+            <div class="usuario-flex"><a href="/dashboardMembro" >Nome do usuario </a></div>
+            
+        </div> 
     </header>
-
     <main>
         <div class="du-meuPerfil-info">
             <h1>Meu Perfil</h1>
