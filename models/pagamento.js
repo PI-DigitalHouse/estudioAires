@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     Pagamento.init({
         idPagamento: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         idSolicitacao: {
             type: DataTypes.INTEGER,

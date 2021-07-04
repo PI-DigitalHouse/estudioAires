@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     Reserva.init({
         idReserva: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         reservadoPor: {
             type: DataTypes.INTEGER,

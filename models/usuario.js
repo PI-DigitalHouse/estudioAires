@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     Usuario.init({
         idUsuario: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         nome: DataTypes.STRING(150),
         email: DataTypes.STRING(150),
