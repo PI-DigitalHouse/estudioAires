@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
             // Associação com usuario
             this.belongsTo(models.Usuario, {
                 foreignKey: 'idUsuario',
-                //?
+                id: 'idUsuario'
             })
         }
     };

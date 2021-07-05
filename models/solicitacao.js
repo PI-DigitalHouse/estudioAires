@@ -13,21 +13,25 @@ module.exports = (sequelize, DataTypes) => {
             // Associação com Reserva 
             this.hasOne(models.Reserva, {
                     foreignKey: 'idSolicitacao',
+                    targetKey: 'idSolicitacao'
                 }),
 
                 // Associação com Arquivo
                 this.hasMany(models.Arquivo, {
                     foreignKey: 'idSolicitacao',
+                    targetKey: 'idSolicitacao'
                 }),
 
                 // Associação com Pagamento
                 this.hasOne(models.Pagamento, {
                     foreignKey: 'idSolicitacao',
+                    targetKey: 'idSolicitacao'
                 }),
 
                 // Associação com Servico
                 this.hasMany(models.Servico, {
                     foreignKey: 'idSolicitacao',
+                    targetKey: 'idSolicitacao'
                 })
         }
     };

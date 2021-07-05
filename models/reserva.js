@@ -13,16 +13,19 @@ module.exports = (sequelize, DataTypes) => {
             // Associação com Usuario
             this.belongsTo(models.Usuario, {
                     foreignKey: 'reservadoPor',
+                    id: 'idUsuario'
                 }),
 
                 // Associação com Usuario
                 this.belongsTo(models.Usuario, {
                     foreignKey: 'aceitoPor',
+                    id: 'idUsuario'
                 }),
 
                 // Associação com Solicitação 
                 this.belongsTo(models.Solicitacao, {
                     foreignKey: 'idSolicitacao',
+                    id: 'idSolicitacao'
                 })
         }
     };

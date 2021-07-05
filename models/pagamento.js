@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
             //associação com solicitacao
             this.belongsTo(models.Solicitacao, {
                 foreignKey: 'idSolicitacao',
+                id: 'idSolicitacao'
             })
         }
     };

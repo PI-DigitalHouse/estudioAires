@@ -13,15 +13,17 @@ module.exports = (sequelize, DataTypes) => {
             // Associação com login 
             this.hasMany(models.Login, {
                     foreignKey: 'idUsuario',
-                    //targetKey: ''
+                    targetKey: 'idUsuario'
                 }),
                 // Associação com Reservas
                 this.hasOne(models.Reserva, {
                     foreignKey: 'reservadoPor',
+                    targetKey: 'idUsuario'
                 }),
                 // Associação com Reservas
                 this.hasOne(models.Reserva, {
                     foreignKey: 'aceitoPor',
+                    targetKey: 'idUsuario'
                 })
         }
     };
