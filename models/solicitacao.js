@@ -10,13 +10,36 @@ module.exports = (sequelize, DataTypes) => {
          * The `models/index` file will call this method automatically.
          */
         static associate(models) {
-            // define association here
+            // Associação com Reserva 
+            this.hasOne(models.Reserva, {
+                    foreignKey: 'idSolicitacao',
+                    targetKey: 'idSolicitacao'
+                }),
+
+                // Associação com Arquivo
+                this.hasMany(models.Arquivo, {
+                    foreignKey: 'idSolicitacao',
+                    targetKey: 'idSolicitacao'
+                }),
+
+                // Associação com Pagamento
+                this.hasOne(models.Pagamento, {
+                    foreignKey: 'idSolicitacao',
+                    targetKey: 'idSolicitacao'
+                }),
+
+                // Associação com Servico
+                this.hasMany(models.Servico, {
+                    foreignKey: 'idSolicitacao',
+                    targetKey: 'idSolicitacao'
+                })
         }
     };
     Solicitacao.init({
         idSolicitacao: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         endereco: DataTypes.STRING(300),
         tamanhoImovel: DataTypes.STRING(45),

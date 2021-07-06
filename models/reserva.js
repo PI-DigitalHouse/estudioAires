@@ -10,13 +10,30 @@ module.exports = (sequelize, DataTypes) => {
          * The `models/index` file will call this method automatically.
          */
         static associate(models) {
-            // define association here
+            // Associação com Usuario
+            this.belongsTo(models.Usuario, {
+                    foreignKey: 'reservadoPor',
+                    id: 'idUsuario'
+                }),
+
+                // Associação com Usuario
+                this.belongsTo(models.Usuario, {
+                    foreignKey: 'aceitoPor',
+                    id: 'idUsuario'
+                }),
+
+                // Associação com Solicitação 
+                this.belongsTo(models.Solicitacao, {
+                    foreignKey: 'idSolicitacao',
+                    id: 'idSolicitacao'
+                })
         }
     };
     Reserva.init({
         idReserva: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         reservadoPor: {
             type: DataTypes.INTEGER,

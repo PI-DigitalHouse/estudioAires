@@ -74,9 +74,11 @@ const usuarios = require('../usuariosCadastrados.json')
 
 
 
-router.get('/', function(req, res, next){
-    
-    res.render('dashboardMembroMeuPerfil', usuarios)
+router.get('/meuPerfil', function(req, res, next){
+    res.render('dashboardMembroMeuPerfil',{
+    title : 'Minha Agenda',
+    usuarios
+    });
 })
 
 router.get('/minhaAgenda', function(req, res, next){
