@@ -70,7 +70,7 @@ const router = express.Router();
 const fs = require('fs')
 const {calendario} = require('../controllers/DMController');
 
-/* const usuarios = require('../usuariosCadastrados.json') */
+//const usuarios = require('../usuariosCadastrados.json')
 
 
 

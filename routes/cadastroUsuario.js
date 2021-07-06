@@ -9,11 +9,7 @@ router.get('/', cadastroModal);
 
 router.post('/novo', postUsuario) 
 
-router.get('/', getHome)
 
 
 module.exports = router;
 
-
-
-|

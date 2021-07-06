@@ -1,9 +1,11 @@
+
 const models = require('../models');
 const bcrypt =require('bcrypt');
 
 
 module.exports.cadastroModal = (req, res) => {
   res.render('cadastro-usuario');
+
 }
 
 
