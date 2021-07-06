@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const usuarios = require('../usuariosCadastrados.json')
+//const usuarios = require('../usuariosCadastrados.json')
 const bcrypt = require('bcrypt')
 const fs = require('fs')
 const { getHome, recuSenha, getLogin, autenticacao } = require('../controllers/homeController');
