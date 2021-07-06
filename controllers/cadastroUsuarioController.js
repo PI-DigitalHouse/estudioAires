@@ -1,24 +1,23 @@
 const models = require('../models');
 const bcrypt =require('bcrypt');
 
-let errorMessage= ''
+
 module.exports.cadastroModal = (req, res) => {
   res.render('cadastro-usuario');
 }
 
 
 module.exports.postUsuario = (async (req, res) => {
-  const usuario = req.body
+  const user = req.body
 
 
-  usuario.senha = hash(usuario.senha) //encriptando a senha
+  user.senha = hash(user.senha) //encriptando a senha
+  user.senha2 = hash(user.senha2)
+  console.log(user)
+     
+  await models.Usuario.create(user)
+ 
 
-  if(usuario.senha!==usuario.senha2){
-   errorMessage='Nao compativel'
-  
-  } 
-  await models.Usuario.create(usuario)
-  console.log(usuario)
   res.redirect('/') //redireciiona para home
 
 });

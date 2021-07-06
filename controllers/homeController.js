@@ -1,8 +1,7 @@
-const fs = require('fs')
 const bcrypt = require('bcrypt')
 
 module.exports.getHome = (req, res) => {
-    res.render('home');
+    res.render('home')
 }
 
 module.exports.recuSenha = (req, res) => {
@@ -12,7 +11,7 @@ module.exports.recuSenha = (req, res) => {
 module.exports.getLogin = (req, res) => {
     res.render('login')
 }
-
+/* 
 module.exports.autenticacao = (req, res) => {
 
     for (var i = 0; i < usuarios.length; i++) {
@@ -22,5 +21,5 @@ module.exports.autenticacao = (req, res) => {
         }
     }
     res.send('Usuário ou senha inválidos')
-}
+} */
 

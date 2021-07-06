@@ -33,13 +33,25 @@
         </div>
     </div>
 
-    <form class="modal-content animate" action="/login/autentica" method="POST">
+    <form class="modal-content animate" action="/login" method="POST">
         <div class="container-login">
             <span class="container-logo">Estúdio Aires</span>
 
-            <input type="text" required placeholder="Email" maxlength="60" type="email" name="email" id="email">
+            <input
+             type="text" 
+             required placeholder="Email" 
+             maxlength="60" 
+             type="email"
+             name="email"
+             id="email"
+             />
 
-            <input type="password" placeholder="Senha" name="psw" required>
+            <input
+            type="password"
+            placeholder="Senha" 
+            name="psw" 
+            required
+            />
 
             <form action="/recuperarSenha" method="GET">
                 <span class="psw-forget"><a href="/recuperarSenha">Esqueceu sua senha? </a></span>
