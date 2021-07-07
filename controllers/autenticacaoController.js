@@ -3,24 +3,34 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 
 
-module.exports.autenticaUsuario = (async (req, res) => {
-    const usuarioLogin = req.body
-    const userDb = await models.usuario.findOne(
-        {
-            where: {
-                email: usuarioLogin.email,
-            }
-        }).then(userDb => {
-            if (userDb) {
-                req.session.estaAuntenticado = true;
-                
-            }
-            res.redirect('/dashboardUsuario');
 
-        })
-
-}) 
-
+module.exports.logar = (async (req, res) =>{
+    const {email, senha } = req.body;
+  
+    const foundUser = await models.Usuario.findOne({
+        where:{
+            email:'', 
+            senha:''
+           }   
+        });
+  
+    if (!foundUser) {
+      res.render('home', {
+        error: {
+          email: 'cadastro nao encontrado'
+        },
+        value: email
+      })
+    }
+  
+    if (!compareHash(senha, foundUser.senha)) {
+      res.render('home');
+    }
+  
+    req.session.usuario = foundUser;
+  
+    res.redirect('/dashboardUsuario');
+  });
 
 
 
