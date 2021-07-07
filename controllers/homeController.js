@@ -15,34 +15,43 @@ module.exports.getLogin = (req, res) => {
 }
 
 module.exports.logar = (async (req, res) => {
-    const {email, psw } = req.body;
-  
+    const { email, senha } = req.body;
+
     const foundUser = await models.Usuario.findOne({
-        where:{
-            email: req.body.email, 
-            senha: req.body.psw
-           }   
-        });
-  
+        where: {
+            email: req.body.email,
+           
+        }
+    });
+
+   
     if (!foundUser) {
-      res.render('home', {
-        error: {
-          email: 'cadastro nao encontrado'
-        },
-        value: email
-      }) //colocar error no ejs login 
+        res.render('home', {
+            error: {
+                email: 'cadastro nao encontrado'
+            },
+            value: email
+        }) 
+        console.log('email')
+        return//colocar error no ejs login 
     }
-  
-    if (!compareHash(psw, foundUser.senha)) {
-      res.render('home');
+    const hashando = await compareHash(req.body.senha, foundUser.senha)
+    console.log(hashando)
+    if (!hashando) {
+        res.render('home');
+        return
     }
-  
+   
+    console.log(req.body)
+    console.log(foundUser)
+
+
     req.session.usuario = foundUser;
-  
-    res.redirect('/dashboardUsuario');
-  });
+
+    res.redirect('/dashboardUsuario/meuPerfil');
+});
 
 
-  function compareHash (senha, hash) {
-    return bcrypt.compareSync(senha, hash);
-  };
+  async function compareHash(senha, hash) {
+    return await bcrypt.compare(senha, hash);
+};

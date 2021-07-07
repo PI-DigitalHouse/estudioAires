@@ -92,7 +92,12 @@ module.exports.alteraSenha = (req, res) => {
 }
 
 module.exports.meuPerfil = (req, res) => {
+    console.log(req)
     res.render('dashboardUsuario_meuPerfil', {
-        title: 'Meu Perfil'});
+        title: 'Meu Perfil',
+        dadosUsuario: req.session.usuario
+    }
+        
+        );
 }
 

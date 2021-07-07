@@ -1,4 +1,4 @@
-const models = require('../models');
+/* const models = require('../models');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 
@@ -31,6 +31,6 @@ module.exports.logar = (async (req, res) =>{
   
     res.redirect('/dashboardUsuario');
   });
-
+ */
 
 
