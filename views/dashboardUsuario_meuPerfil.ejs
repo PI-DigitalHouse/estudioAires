@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <%- include partials/head.ejs %>
-<body>
-    <%- include partials/headerAreaRestritaUsuarios.ejs %>
-    <main>
-        <div class="du-meuPerfil-info">
-            <h1>Meu Perfil</h1>
-            <img class="du-meuPerfil-info-fotoPerfil" src="../img/fotoPerfil.jpg" alt="foto do perfil">
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../img/user.png" alt="ícone usuario">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">Nome</p>
-                    <p><%=dadosUsuario.nome%> </p>
-                </div>
-            </div>
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../img/icone_email.png" alt="ícone email">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">Email</p>
-                    <p>manu.chao@gmail.com </p>
-                </div>
-            </div>
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../img/driver-license.png" alt="ícone documento">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
-                    <p> 000.000.000-00 </p>
-                </div>
-            </div>
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../img/phone.png" alt="ícone telefone">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">Telefone</p>
-                    <p> (59) 98877 6655 </p>
-                </div>
-            </div>
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../img/calendar.png" alt="ícone calendario">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">Data de nascimento</p>
-                    <p> 01/01/1990</p>
-                </div>
-            </div>
+<%- include partials/head.ejs %>
 
-            <div class="du-meuPerfil-info-botao">
-                <a href=""> Alterar dados </a><!-- CRIAR E COLOCAR A ROTA DE ALTERAR DADOS -->
-            </div>
-            <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a href="">Clique aqui</a></p>
-            <!-- PAREI AQUI (COLOCAR ROTA CERTA)-->
-        </div>
-    </main>
+    <body>
+        <%- include partials/headerAreaRestritaUsuarios.ejs %>
+            <main>
+                <div class="du-meuPerfil-info">
+                    <h1>Meu Perfil</h1>
+                    <div class="du-meuPerfil-info-secao">
+                        <img class="du-meuPerfil-info-secao-icone" src="../img/user.png" alt="ícone usuario">
+                        <div>
+                            <p class="du-meuPerfil-info-secao-titulo">Nome</p>
+                            <p>
+                                <%=dadosUsuario.nome%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="du-meuPerfil-info-secao">
+                        <img class="du-meuPerfil-info-secao-icone" src="../img/icone_email.png" alt="ícone email">
+                        <div>
+                            <p class="du-meuPerfil-info-secao-titulo">Email</p>
+                            <p>
+                                <%=dadosUsuario.email%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="du-meuPerfil-info-secao">
+                        <img class="du-meuPerfil-info-secao-icone" src="../img/driver-license.png" alt="ícone documento">
+                        <div>
+                            <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
+                            <p>
+                                <%=dadosUsuario.cpfCnpj%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="du-meuPerfil-info-secao">
+                        <img class="du-meuPerfil-info-secao-icone" src="../img/phone.png" alt="ícone telefone">
+                        <div>
+                            <p class="du-meuPerfil-info-secao-titulo">Telefone</p>
+                            <p>
+                                <%=dadosUsuario.telefone%>
+                            </p>
+                        </div>
+                    </div>
 
-    <!-- Footer -->
-    <%- include partials/footer.ejs %>
-    
-</body>
+                    <div class="du-meuPerfil-info-botao">
+                        <a href=""> Alterar dados </a>
+                        <!-- CRIAR E COLOCAR A ROTA DE ALTERAR DADOS -->
+                    </div>
+                    <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a href="">Clique aqui</a></p>
+                    <!-- PAREI AQUI (COLOCAR ROTA CERTA)-->
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <%- include partials/footer.ejs %>
+
+    </body>
 
 </html>
