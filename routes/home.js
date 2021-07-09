@@ -1,5 +1,6 @@
 const express = require('express');
 const models = require('../models');
+const session = require('express-session');
 const router = express.Router();
 const bcrypt = require('bcrypt')
 const { getHome, recuSenha, getLogin, logar} = require('../controllers/homeController');

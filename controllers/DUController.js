@@ -72,23 +72,27 @@ const array2 = [{
 module.exports.listEntregaveis = (req, res) => {
     res.render('dashboardUsuario_entregaveis', { 
       title: 'Entregáveis', 
-      entregaveis: array });
+      entregaveis: array,
+      dadosUsuario: req.session.usuario });
 }
 
 module.exports.listSolicitacoes = (req, res) => {
     res.render('dashboardUsuario_solicitacoes', { 
       title: 'Solicitações', 
-      solicitacoes: array2 });
+      solicitacoes: array2 ,
+      dadosUsuario: req.session.usuario});
 }
 
 module.exports.recuperaSenha = (req, res) => {
     res.render('DU_recuperacaoSenha', { 
-      title: 'Recuperação de Senha'});
+      title: 'Recuperação de Senha',
+      dadosUsuario: req.session.usuario});
 }
 
 module.exports.alteraSenha = (req, res) => {
     res.render('dashboardUsuario_alteracaoSenha',{
-        title: 'Altere a sua Senha'});
+        title: 'Altere a sua Senha',
+        dadosUsuario: req.session.usuario});
 }
 
 module.exports.meuPerfil = (req, res) => {

@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate(models) {
             // Associação com login 
-          this.hasMany(models.Login, {
+            this.hasMany(models.Login, {
                     foreignKey: 'idUsuario',
                     targetKey: 'idUsuario'
                 }),
@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
                 this.hasOne(models.Reserva, {
                     foreignKey: 'aceitoPor',
                     targetKey: 'idUsuario'
-                }) 
+                })
         }
     };
     Usuario.init({
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-           
+
         },
         nome: DataTypes.STRING(150),
         email: DataTypes.STRING(150),
@@ -42,7 +42,8 @@ module.exports = (sequelize, DataTypes) => {
         comoConheceu: DataTypes.STRING(30),
         imobiliaria: DataTypes.STRING(30),
         termosDeUso: DataTypes.STRING(30),
-       
+        //usuarioFotografo? 0 ou 1
+
     }, {
         sequelize,
         modelName: 'Usuario',

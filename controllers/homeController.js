@@ -3,7 +3,9 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 
 module.exports.getHome = (req, res) => {
-    res.render('home')
+    res.render('home', {
+        dadosUsuario: req.session.usuario
+    })
 }
 
 module.exports.recuSenha = (req, res) => {
