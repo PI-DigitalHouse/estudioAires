@@ -1,7 +1,7 @@
 const express = require('express');
 const { listEntregaveis, listSolicitacoes,recuperaSenha, alteraSenha, meuPerfil, calendario} = require('../controllers/DUController');
 
-const autenticaUsuario = require('../controllers/autenticacaoController'); 
+
 const router = express.Router();
 const checkSession = require('../middlewares/checkSession') 
 

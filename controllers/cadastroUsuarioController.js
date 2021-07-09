@@ -12,10 +12,9 @@ module.exports.cadastroModal = (req, res) => {
 module.exports.postUsuario = (async (req, res) => {
   const user = req.body
 
-
   user.senha = hash(user.senha) //encriptando a senha
   user.senha2 = hash(user.senha2)
-  console.log(user)
+ 
      
   await models.Usuario.create(user)
  

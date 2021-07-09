@@ -11,7 +11,11 @@ module.exports.recuSenha = (req, res) => {
 }
 
 module.exports.getLogin = (req, res) => {
-    res.render('login')
+    res.render('login',{
+        error: {
+            email:''
+        }
+    })
 }
 
 module.exports.logar = (async (req, res) => {
@@ -26,7 +30,7 @@ module.exports.logar = (async (req, res) => {
 
    
     if (!foundUser) {
-        res.render('home', {
+        res.render('login', {
             error: {
                 email: 'cadastro nao encontrado'
             },

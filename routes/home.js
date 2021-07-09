@@ -3,9 +3,9 @@ const models = require('../models');
 const router = express.Router();
 const bcrypt = require('bcrypt')
 const { getHome, recuSenha, getLogin, logar} = require('../controllers/homeController');
+const checkSession = require('../middlewares/checkSession') 
 
-
-router.get('/', getHome)
+router.get('/', getHome )
 
 router.get('/recuperarSenha', recuSenha);
 

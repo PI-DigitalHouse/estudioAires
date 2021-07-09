@@ -8,7 +8,9 @@
         </ul>
     </nav>
     <div class="usuario">
-        <a href="/dashboardUsuario/meuPerfil"><%=dadosUsuario.nome%>
+        <a href="/dashboardUsuario/meuPerfil">
+            <% if(dadosUsuario) {%> 
+            Olá, <%=dadosUsuario.nome%>
             <img class="fotoPerfil" src="/img/fotoPerfil.jpg" alt="Foto usuário">
         </a>
     </div>
