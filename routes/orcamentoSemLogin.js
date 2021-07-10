@@ -1,8 +1,12 @@
 const express = require('express');
-const { renderizaOrcamento } = require('../controllers/orcamentoController');
 const router = express.Router();
 
-/* GET users listing. */
-router.get('/', renderizaOrcamento);
 
-module.exports = router;
+const {renderizaOrcamento, novoOrcamento } = require ('../controllers/orcamentoController')
+const checkSession = require('../middlewares/checkSession') 
+
+
+/* GET users listing. */
+router.get('/',  renderizaOrcamento);
+
+module.exports = router; 
