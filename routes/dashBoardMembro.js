@@ -119,4 +119,7 @@ esteja implementada e que a sessão puxe o nome corretamente*/
 //Visualização calendario
 router.get ('/calendario', checkSession, calendario)
 
+//Bloqueio de calendario
+router.post ('/calendario/bloquear', checkSession, calendarioBloquear)
+
 module.exports = router;
