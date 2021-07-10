@@ -69,42 +69,47 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs')
 const {calendario} = require('../controllers/DMController');
-
+const checkSession = require('../middlewares/checkSession') 
+const session = require('express-session');
 //const usuarios = require('../usuariosCadastrados.json')
 
 
 
-router.get('/meuPerfil', function(req, res, next){
+router.get('/meuPerfil', checkSession, function(req, res, next){
     res.render('dashboardMembroMeuPerfil',{
     title : 'Minha Agenda',
-    usuarios
-    });
+    dadosUsuario: req.session.usuario    });
 })
 
-router.get('/minhaAgenda', function(req, res, next){
+router.get('/minhaAgenda', checkSession, function(req, res, next){
     res.render('dashboardMembro_minhaAgenda', {
-        title : 'Minha Agenda'
+        title : 'Minha Agenda',
+        dadosUsuario: req.session.usuario
     });
 });
 
-router.get('/aprovacoes', function(req, res, next){
+router.get('/aprovacoes', checkSession, function(req, res, next){
     res.render('dashboardMembro_aprovacoes', {
         title: 'Aprovações',
-        aprovacoes: array });
+        aprovacoes: array,
+        dadosUsuario: req.session.usuario} );
 })
 
-router.get('/jobsFinalizados', function (req, res, next){
+router.get('/jobsFinalizados', checkSession, function (req, res, next){
     res.render('dashboardMembro_jobsFinalizados', {
         title: 'Meus jobs finalizados', 
-        jobs: array })
+        jobs: array,
+        dadosUsuario: req.session.usuario })
 } )
 
 /*dentro dessa função eu preciso puxar os dados do usuário logado, imprimi-los no formulário de 
 alteração de dados e tornar esses mesmos campos preenchidos editáveis*/ 
-router.get('/alterarDados', function(req, res, next){ 
+router.get('/alterarDados', checkSession, function(req, res, next){ 
 
     res.render('alterarDados', {usuario: {
-        nome: req.session.nome
+        nome: req.session.nome,
+        dadosUsuario: req.session.usuario
+        
     }})
     
 })
@@ -112,6 +117,6 @@ router.get('/alterarDados', function(req, res, next){
 esteja implementada e que a sessão puxe o nome corretamente*/
 
 //Visualização calendario
-router.get ('/calendario', calendario)
+router.get ('/calendario', checkSession, calendario)
 
 module.exports = router;
