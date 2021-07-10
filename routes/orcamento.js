@@ -7,7 +7,7 @@ const checkSession = require('../middlewares/checkSession')
 
 
 /* GET users listing. */
-router.get('/', renderizaOrcamento);
+router.get('/', checkSession, renderizaOrcamento);
 
 //ajax ou fetin 
 router.post('/novoOrcamento', novoOrcamento);

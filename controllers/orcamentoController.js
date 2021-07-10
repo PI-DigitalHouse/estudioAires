@@ -3,7 +3,9 @@ const orcamentosCadastrados=[];
 const fs =require ('fs'); //lib para manipular arquivo do sistema operacional
 module.exports.renderizaOrcamento = (req,res,next) => {
     res.render('orcamento', {
-        title : 'Novo Orçamento'
+        title : 'Novo Orçamento',
+        dadosUsuario: req.session.usuario
+
 })};
 
 module.exports.novoOrcamento = (req,res,next) => {
