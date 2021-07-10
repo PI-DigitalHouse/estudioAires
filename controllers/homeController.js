@@ -2,6 +2,7 @@ const models = require('../models');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 
+
 module.exports.getHome = (req, res) => {
     res.render('home', {
         dadosUsuario: req.session.usuario
@@ -15,7 +16,8 @@ module.exports.recuSenha = (req, res) => {
 module.exports.getLogin = (req, res) => {
     res.render('login',{
         error: {
-            email:''
+            email:'',
+            dadosUsuario: req.session.usuario
         }
     })
 }

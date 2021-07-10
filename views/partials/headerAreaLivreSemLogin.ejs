@@ -3,33 +3,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estúdio Aires</title>
     <link rel="stylesheet" href="/css/home.css">
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
 
 <header>
     <!--Nav fixo do site-->
     <div class="header-log-nav">
-        <div class="logo"><a href="/">Estúdio Aires</a></div>
+        <div class="logo a"><a href="/" class="a">Estúdio Aires</a></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="/">Home <!--Fazer redirect?--></a></li>
-                <li><a href="#servicosEA">Serviços</a></li>
-                <li><a href="#quem-somosEA">Quem Somos</a></li>
-                <li><a href="#parceirosEA">Parceiros</a></li>
-                <li><a href="/contato">Contato</a></li>
+                <li><a class="a" href="/">Home
+                        <!--Fazer redirect?-->
+                    </a></li>
+                <li><a class="a" href="#servicosEA">Serviços</a></li>
+                <li><a class="a" href="#quem-somosEA">Quem Somos</a></li>
+                <li><a class="a" href="#parceirosEA">Parceiros</a></li>
+                <li><a class="a" href="/contato">Contato</a></li>
             </ul>
         </nav>
-       
-        <!-- Código para o login (modal na homepage) -->
-        <button onclick="document.getElementById('id01').style.display='block'" class="login"><a
-                href='/login'>Login</a></button>
 
-        <form method="GET" action="/cadastro-usuario">
-            <div class="container-cadastrese">
-                <span class="header-cadastrese">Novo no Estúdio?
-                    <input class="header-cadastrese" type="submit" value="CADASTRE-SE"></input>
-            </div>
-        </form>
+        <!-- Código para o login (modal na homepage) -->
+        <div class="dropdown">
+            <% if(dadosUsuario) { %>
+
+                <a class="btn btn-secondary dropdown-toggle a" href="/dashboardUsuario/meuPerfil" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="true" style="font: size 16rem; ;">
+                    Olá, <%= dadosUsuario.nome %>!
+                  </a>
+        <!--Adicionar DropDown ----Amanda 
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Solicitacoesn</a></li>
+                    <li><a class="dropdown-item" href="#">Sair</a></li>
+                </ul>
+ -->
+        </div>
+        <% } %>
+            <% if(!dadosUsuario) { %>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <button onclick="document.getElementById('id01').style.display='block'" class="login a"><a
+                                href='/login'>Login</a></button>
+                    </div>
+                    <form method="GET" action="/cadastro-usuario">
+                        <div class="container-cadastrese">
+                            <span class="header-cadastrese">Novo no Estúdio?
+                                <input class="header-cadastrese" type="submit" value="CADASTRE-SE"></input>
+                        </div>
+                    </form>
+                </div>
+                <% } %>
+
+
     </div>
 </header>
 <!-- If para sessao do usuario -->

@@ -19,7 +19,7 @@ router.get('/entregaveis/:idServico', checkSession, listEntregaveis);
 router.get('/solicitacoes/:idUsuario', checkSession, listSolicitacoes );
   
 // Recuperação de Senha
-router.get('/recuperacaoSenha', checkSession, recuperaSenha);
+router.get('/recuperacaoSenha', recuperaSenha);
 
 // Alteração da Senha
 router.get('/alteraSenha',checkSession, alteraSenha)
