@@ -2,75 +2,76 @@
 <html lang="en">
 
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/jquery.datetimepicker.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/jquery.datetimepicker.min.css">
 
 
-  <body>
-  
+<body>
 
-      <form method="POST" action="calendario" id="bloqueioCalendario">
-        <h4>Selecione o período que deseja bloquear:</h4>
-        <div class="container mt-5 mb-5" style="width: 400px;">
-          <h4>Data de início:</h4>
-          <input type="text" id="picker1" name="horarioInicio" class="form-control">
-          <h4>Data de finalização:</h4>
-          <input type="text" id="picker2" name="horarioFinal" class="form-control">
-        </div>
-        <button class="btn btn-lg btn-primary">Bloquear calendario</button>
-      </form>
 
-      <!-- script datepicker -->
+  <form method="POST" action="calendario" id="bloqueioCalendario">
+    <h4>Selecione o período que deseja bloquear:</h4>
+    <div class="container mt-5 mb-5" style="width: 400px;">
+      <h4>Data de início:</h4>
+      <input type="text" id="picker1" name="horarioInicio" class="form-control">
+      <h4>Data de finalização:</h4>
+      <input type="text" id="picker2" name="horarioFinal" class="form-control">
+    </div>
+    <button class="btn btn-lg btn-primary">Bloquear calendario</button>
+  </form>
 
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      <script src="	https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-      <script src="../js/jquery.datetimepicker.full.min.js"></script>
+  <!-- script datepicker -->
 
-      <script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="	https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="../js/jquery.datetimepicker.full.min.js"></script>
 
-        jQuery.datetimepicker.setLocale('pt-BR')
+  <script>
 
-        var date = new Date();
-        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    jQuery.datetimepicker.setLocale('pt-BR')
 
-        $('#picker1').datetimepicker({
-          timepicker: true,
-          datepicker: true,
-          format: 'd-m-Y H:i',
-          yearStart: 2021,
-          yearEnd: 2022,
-          step: 30,
-          mask: true,
-          lang: 'pt-BR',
-          il8n: {
-            month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-            dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
-          },
-           minDate: today,
-          
-          
-        })
+    var date = new Date();
+    var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
-        $('#picker2').datetimepicker({
-          timepicker: true,
-          datepicker: true,
-          format: 'd-m-Y H:i',
-          yearStart: 2021,
-          yearEnd: 2022,
-          step: 30,
-          mask: true,
-          lang: 'pt-BR',
-          il8n: {
-            month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-            dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
-          },
-          minDate: today,
-          
-          
-        })
-      </script>
+    $('#picker1').datetimepicker({
+      timepicker: true,
+      datepicker: true,
+      format: 'd-m-Y H:i:s',
+      yearStart: 2021,
+      yearEnd: 2022,
+      step: 30,
+      mask: true,
+      lang: 'pt-BR',
+      il8n: {
+        month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+      },
+      minDate: today,
 
-  </body>
+
+    })
+
+    $('#picker2').datetimepicker({
+      timepicker: true,
+      datepicker: true,
+      format: 'd-m-Y H:i:s',
+      showSecond: true,
+      yearStart: 2021,
+      yearEnd: 2022,
+      step: 30,
+      mask: true,
+      lang: 'pt-BR',
+      il8n: {
+        month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+      },
+      minDate: today,
+
+
+    })
+  </script>
+
+</body>
 
 </html>
