@@ -120,6 +120,6 @@ esteja implementada e que a sessão puxe o nome corretamente*/
 router.get ('/calendario', checkSession, calendario)
 
 //Bloqueio de calendario
-router.post ('/calendario/bloquear', checkSession, calendarioBloquear)
+//router.post ('/calendario/bloquear', checkSession, calendarioBloquear)
 
 module.exports = router;
