@@ -68,7 +68,7 @@ const array = [{
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
-const {calendario} = require('../controllers/DMController');
+const {calendario, bloquear} = require('../controllers/DMController');
 const checkSession = require('../middlewares/checkSession') 
 const session = require('express-session');
 //const usuarios = require('../usuariosCadastrados.json')
@@ -120,6 +120,6 @@ esteja implementada e que a sessão puxe o nome corretamente*/
 router.get ('/calendario', checkSession, calendario)
 
 //Bloqueio de calendario
-//router.post ('/calendario/bloquear', checkSession, calendarioBloquear)
+router.post ('/calendario', checkSession, bloquear)
 
 module.exports = router;

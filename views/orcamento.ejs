@@ -184,7 +184,9 @@
           
               var date = new Date();
               var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-          
+              var horariosOcupados = ['2021-8-1']
+            
+
               $('#picker').datetimepicker({
                 timepicker: true,
                 datepicker: true,
@@ -198,7 +200,8 @@
                   dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
                 },
                 minDate: today,
-                allowTimes: ['8:00', '10:00', '14:00', '16:00']
+                allowTimes: ['8:00', '10:00', '14:00', '16:00'],
+                disabledDates: horariosOcupados
                 // adicionar disable para os horários ocupados
           
               })

@@ -9,13 +9,13 @@
   <body>
   
 
-      <form method="POST" action="calendario/bloquear" id="bloqueioCalendario">
+      <form method="POST" action="calendario" id="bloqueioCalendario">
         <h4>Selecione o período que deseja bloquear:</h4>
         <div class="container mt-5 mb-5" style="width: 400px;">
           <h4>Data de início:</h4>
-          <input type="text" id="picker1" class="form-control">
+          <input type="text" id="picker1" name="horarioInicio" class="form-control">
           <h4>Data de finalização:</h4>
-          <input type="text" id="picker2" class="form-control">
+          <input type="text" id="picker2" name="horarioFinal" class="form-control">
         </div>
         <button class="btn btn-lg btn-primary">Bloquear calendario</button>
       </form>
