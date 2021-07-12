@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const checkCheckbox = require('../middlewares/checkboxValidate')
 
 const {renderizaOrcamento, novoOrcamento } = require ('../controllers/orcamentoController')
 const checkSession = require('../middlewares/checkSession') 
@@ -11,6 +11,7 @@ router.get('/', checkSession, renderizaOrcamento);
 
 //ajax ou fetin 
 router.post('/novoOrcamento', novoOrcamento);
+
 
 
 
