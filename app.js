@@ -35,7 +35,6 @@ app.use('/servicos', servicosRouter);
 app.use('/cadastro-membro', require('./routes/cadastroMembro'));
 app.use('/cadastro-usuario', require('./routes/cadastroUsuario'));
 app.use('/dashboardMembro', DMRouter)
-app.use('/novo', require('./routes/orcamentoSemLogin'));
 app.use('/contato', require('./routes/contatoRoute'));
 
 // catch 404 and forward to error handler

@@ -2,12 +2,19 @@ const bcrypt =require('bcrypt'); //chamando a lib para crip de hash de cadastro
 const orcamentosCadastrados=[];
 const session = require('express-session');
 const fs =require ('fs'); //lib para manipular arquivo do sistema operacional
+
 module.exports.renderizaOrcamento = (req,res,next) => {
     res.render('orcamento', {
         title : 'Novo Orçamento',
         dadosUsuario: req.session.usuario
 
 })};
+module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
+  res.render('orcamentoSemLogin',{
+    title : 'Novo Orçamento',
+    dadosUsuario: req.session.usuario
+  });
+}
 
 module.exports.novoOrcamento = (req,res,next) => {
     
@@ -22,3 +29,4 @@ function salvarUsuario (usuario){
     fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
     
   }
+
