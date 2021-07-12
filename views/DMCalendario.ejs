@@ -36,18 +36,24 @@
 
     $('#picker1').datetimepicker({
       timepicker: true,
-      datepicker: true,
-      format: 'd-m-Y H:i:s',
-      yearStart: 2021,
-      yearEnd: 2022,
-      step: 30,
-      mask: true,
-      lang: 'pt-BR',
-      il8n: {
-        month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
-      },
-      minDate: today,
+        allowTimes: function getArr() {
+        var allowTimes = [
+        '08:00', '10:00', '14:00', '16:00'
+          ];
+          return allowTimes;
+        }(),
+        datepicker: false,
+        format: 'd-m-Y H:i:s',
+        yearStart: 2021,
+        yearEnd: 2022,
+        step: 30,
+        mask: true,
+        lang: 'pt-BR',
+        il8n: {
+          month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+          dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+        },
+        minDate: today,
 
 
     })
