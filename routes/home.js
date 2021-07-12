@@ -13,7 +13,7 @@ router.get('/',checkSession, getHome )
 
 router.get('/recuperarSenha', recuSenha);
 
-router.get('/login', getLogin);
+router.get('/login',  getLogin);
 
 
 router.post('/login', logar);
