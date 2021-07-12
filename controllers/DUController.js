@@ -108,9 +108,11 @@ module.exports.meuPerfil = (req, res) => {
     );
 }
 
-module.exports.alteraDados = (req, res) => {
+module.exports.showAlteraDados = (req, res) => {
     res.render('alterarDados', {
         title: 'Alterar Dados',
         dadosUsuario: req.session.usuario
     })
 }
+
+module.exports.alteraDados = (req, res) => {}

@@ -1,5 +1,5 @@
 const express = require('express');
-const { listEntregaveis, listSolicitacoes, recuperaSenha, alteraSenha, meuPerfil, calendario, alteraDados } = require('../controllers/DUController');
+const { listEntregaveis, listSolicitacoes, recuperaSenha, alteraSenha, meuPerfil, calendario, showAlteraDados, alteraDados } = require('../controllers/DUController');
 const session = require('express-session');
 
 const router = express.Router();
@@ -21,8 +21,6 @@ router.get('/alteraSenha', checkSession, alteraSenha)
 router.get('/meuPerfil', checkSession, meuPerfil)
 
 //alterar dados
-router.get('/alteraDados', checkSession, alteraDados)
-
-router.put('/alterandoDados') //...
+router.get('/alteraDados', checkSession, showAlteraDados)
 
 module.exports = router;

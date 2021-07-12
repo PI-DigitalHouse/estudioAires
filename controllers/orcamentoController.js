@@ -3,13 +3,18 @@ const orcamentosCadastrados=[];
 const session = require('express-session');
 const fs =require ('fs'); //lib para manipular arquivo do sistema operacional
 
-
 module.exports.renderizaOrcamento = (req,res,next) => {
     res.render('orcamento', {
         title : 'Novo Orçamento',
         dadosUsuario: req.session.usuario
 
 })};
+module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
+  res.render('orcamentoSemLogin',{
+    title : 'Novo Orçamento',
+    dadosUsuario: req.session.usuario
+  });
+}
 
 
 

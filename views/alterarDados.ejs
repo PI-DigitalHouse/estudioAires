@@ -7,40 +7,39 @@
             <main>
                 <div class="du-meuPerfil-info">
                     <h1>Meu Perfil</h1>
+
                     <form action="" method="post">
                         <div class="du-meuPerfil-info-secao">
                             <img class="du-meuPerfil-info-secao-icone" src="../img/user.png" alt="ícone usuario">
                             <div>
                                 <p class="du-meuPerfil-info-secao-titulo">Nome</p>
-                                <input type="text" placeholder="<%=dadosUsuario.nome%>">
+                                <input type="text" placeholder="nome" value="<%=dadosUsuario.nome%>">
                             </div>
                         </div>
                         <div class="du-meuPerfil-info-secao">
                             <img class="du-meuPerfil-info-secao-icone" src="../img/icone_email.png" alt="ícone email">
                             <div>
                                 <p class="du-meuPerfil-info-secao-titulo">Email</p>
-                                <input type="text" placeholder="<%=dadosUsuario.email%>">
+                                <input type="text" placeholder="E-mail" value="<%=dadosUsuario.email%>">
                             </div>
                         </div>
                         <div class="du-meuPerfil-info-secao">
                             <img class="du-meuPerfil-info-secao-icone" src="../img/driver-license.png" alt="ícone documento">
                             <div>
                                 <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
-                                <input type="text" placeholder="<%=dadosUsuario.cpfCnpj%>">
+                                <input type="text" placeholder="CPF ou CNPJ" value="<%=dadosUsuario.cpfCnpj%>">
                             </div>
                         </div>
                         <div class="du-meuPerfil-info-secao">
                             <img class="du-meuPerfil-info-secao-icone" src="../img/phone.png" alt="ícone telefone">
                             <div>
                                 <p class="du-meuPerfil-info-secao-titulo">Telefone</p>
-                                <input type="text" placeholder="<%=dadosUsuario.telefone%>">
+                                <input type="text" placeholder="Telefone" value="<%=dadosUsuario.telefone%>">
                             </div>
                         </div>
                     </form>
 
-                    <!-- Fazer form de post de salvar suas alterações -->
-                    <!--Fazer codigo do update -->
-                    <form action="/alterandoDados" method="POST" class="du-meuPerfil-info-botao">
+                    <form action="/alteraDados" method="POST" class="du-meuPerfil-info-botao">
                         <input type="submit" value="Salvar Alterações">
                     </form>
                     <form method="get">
