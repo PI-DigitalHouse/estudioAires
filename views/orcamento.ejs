@@ -137,8 +137,9 @@
 
                         <div class="tab">
                             <h4>Por favor, selecione a data:</h4>
-                            <div class="container mt-5 mb-5" style="width: 400px;">
-                              <input required type="text" id="picker" class="form-control">
+                            <div >
+                                <input type="text" id="picker1" name="horarioInicio" class="form-control">
+                                <input type="text" id="picker2" name="horarioFinal" class="form-control">
                             </div>
                         </div>
 
@@ -192,40 +193,64 @@
             <script type="text/javascript" src="js/orcamento.js"></script>
 
              <!-- script datepicker -->
-
+            <script src="/jquery.js"></script>
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
             <script src="	https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
             <script src="../js/jquery.datetimepicker.full.min.js"></script>
         
             <script>
-          
-              jQuery.datetimepicker.setLocale('pt-BR')
-          
-              var date = new Date();
-              var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-              var horariosOcupados = ['2021-8-1']
-            
 
-              $('#picker').datetimepicker({
-                timepicker: true,
-                datepicker: true,
-                format: 'd-m-Y H:i:s',
-                yearStart: 2021,
-                yearEnd: 2022,
-                mask: true,
-                lang: 'pt-BR',
-                il8n: {
-                  month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-                  dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
-                },
-                minDate: today,
-                allowTimes: ['8:00', '10:00', '14:00', '16:00'],
-                disabledDates: horariosOcupados
-                // adicionar disable para os horários ocupados
-          
-              })
-            </script>
+                jQuery.datetimepicker.setLocale('pt-BR')
+            
+                var date = new Date();
+                var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+            
+               $('#picker1').datetimepicker({
+                    timepicker: true,
+                    allowTimes: function getArr() {
+                    var allowTimes = [
+                     '08:00', '10:00', '14:00', '16:00'
+                    ];
+                    return allowTimes;
+                     }(),
+                  
+                  datepicker: true,
+                  format: 'd-m-Y H:i',
+                  yearStart: 2021,
+                  yearEnd: 2022,
+                  step: 30,
+                  mask: true,
+                  lang: 'pt-BR',
+                  il8n: {
+                    month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+                  },
+                  minDate: today,
+            
+            
+                })
+            
+                $('#picker2').datetimepicker({
+                    
+                  timepicker: false,
+                  datepicker: false,
+                  format: 'd-m-Y H:i',
+                  showSecond: false,
+                  yearStart: 2021,
+                  yearEnd: 2022,
+                  step: 30,
+                  mask: true,
+                  lang: 'pt-BR',
+                  il8n: {
+                    month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+                  },
+                  minDate: today,
+            
+            
+                })
+              </script>
 
     </body>
 
