@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
                 }),
 
                 // Associação com Solicitação 
-                this.belongsTo(models.Solicitacao, {
+                this.belongsTo(models.Orcamento, {
                     foreignKey: 'idSolicitacao',
                     id: 'idSolicitacao'
                 })
@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
         idSolicitacao: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'Solicitacoes'
+                model: 'Orcamento'
             },
             allowNull: false
         },

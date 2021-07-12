@@ -89,9 +89,9 @@
                             <p>Endereço:<input required name="endereco"
                                     placeholder="Preencha com o endereço onde serão realizadas as fotos" maxlength="250"
                                     oninput="this.className = ''"></p>
-                            <p>Informe o CEP:<input required name="CEP" placeholder="Informe o CEP:"
+                            <p>Informe o CEP:<input required name="cep" placeholder="Informe o CEP:"
                                     oninput="this.className = ''"></p>
-                            <p>Informe o tamanho do imovel:<input required name="MedidaImovel" type="number"
+                            <p>Informe o tamanho do imovel:<input required name="tamanhoImovel" type="number"
                                     placeholder="Informe o tamanho do imóvel em m2" oninput="this.className = ''"></p>
                         </div>
 
@@ -113,10 +113,12 @@
                             <div class="valor-orcamento">
                                 <p>Valor do seu orçamento:</p>
 
-                                <div class="valor-orcamento preco">
-                                    <p>$ Valor</p>
-                                </div>
-
+                               <div class="valor-orcamento preco" >
+                                  <!--    <p>$ Valor</p>teste Amanda-->
+                                
+                                <input type="number" name="valor">
+                                
+                            </div>  
                             </div>
                         </div>
                         <!--  /*STEP3*/ -->
@@ -138,8 +140,8 @@
                         <div class="tab">
                             <h4>Por favor, selecione a data:</h4>
                             <div >
-                                <input type="text" id="picker1" name="horarioInicio" class="form-control">
-                                <input type="text" id="picker2" name="horarioFinal" class="form-control">
+                                <input type="text" id="picker1" name="dataInicio" class="form-control">
+                                <input type="text" id="picker2" name="dataFinal" class="form-control">
                             </div>
                         </div>
 
