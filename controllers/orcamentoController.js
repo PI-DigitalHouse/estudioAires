@@ -2,6 +2,7 @@ const bcrypt =require('bcrypt'); //chamando a lib para crip de hash de cadastro
 const orcamentosCadastrados=[];
 const session = require('express-session');
 const fs =require ('fs'); //lib para manipular arquivo do sistema operacional
+const models = require('../models');
 
 module.exports.renderizaOrcamento = (req,res,next) => {
     res.render('orcamento', {
@@ -34,6 +35,8 @@ module.exports.novoOrcamento = (req,res,next) => {
   
   console.log(orcamentosCadastrados)
   console.log(medidasImovel)
+
+  models.Reserva.create(dadosDoFormulario)
   
   //salvarUsuario(orcamentosCadastrados)  //chamar a funcao para salvar o orcamento no JSON
   //res.redirect('/') //redireciiona para home
