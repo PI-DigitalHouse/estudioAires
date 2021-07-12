@@ -4,7 +4,9 @@ const bcrypt =require('bcrypt');
 
 
 module.exports.cadastroModal = (req, res) => {
-  res.render('cadastro-usuario');
+  res.render('cadastro-usuario',{
+    dadosUsuario: req.session.usuario
+  });
 
 }
 
