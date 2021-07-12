@@ -68,7 +68,7 @@ const array = [{
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
-const {calendario, bloquear} = require('../controllers/DMController');
+const {calendario, bloquear, solicitacoes} = require('../controllers/DMController');
 const checkSession = require('../middlewares/checkSession') 
 const session = require('express-session');
 //const usuarios = require('../usuariosCadastrados.json')
@@ -95,12 +95,7 @@ router.get('/aprovacoes', checkSession, function(req, res, next){
         dadosUsuario: req.session.usuario} );
 })
 
-router.get('/jobsFinalizados', checkSession, function (req, res, next){
-    res.render('dashboardMembro_jobsFinalizados', {
-        title: 'Meus jobs finalizados', 
-        jobs: array,
-        dadosUsuario: req.session.usuario })
-} )
+router.get('/jobsFinalizados', checkSession, solicitacoes)
 
 /*dentro dessa função eu preciso puxar os dados do usuário logado, imprimi-los no formulário de 
 alteração de dados e tornar esses mesmos campos preenchidos editáveis*/ 
