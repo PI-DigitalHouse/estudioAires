@@ -36,7 +36,7 @@ module.exports.logar = (async (req, res) => {
     if (!foundUser) {
         res.render('login', {
             error: {
-                email: 'cadastro nao encontrado'
+                email: 'Usuário nao cadastrado'
             },
             value: email
         }) 
@@ -44,15 +44,16 @@ module.exports.logar = (async (req, res) => {
         return//colocar error no ejs login 
     }
     const hashando = await compareHash(req.body.senha, foundUser.senha)
-    console.log(hashando)
+    
     if (!hashando) {
-        res.render('home');
+        res.render('login',{
+        error: {
+            senha: 'Usuário ou senha incorreta'
+        }
+    });
         return
     }
-   
-    console.log(req.body)
-    console.log(foundUser)
-
+  
 
     req.session.usuario = foundUser;
 

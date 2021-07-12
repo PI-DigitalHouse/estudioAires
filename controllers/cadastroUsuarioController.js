@@ -30,4 +30,7 @@ function hash(obj){
   return psw; 
 
 }
+async function compareHash(senha, hash) {
+  return await bcrypt.compare(senha, hash);
+};
 

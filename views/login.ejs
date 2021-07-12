@@ -36,6 +36,8 @@
     <form class="modal-content animate" action="/login" method="POST">
         <div class="container-login">
             <span class="container-logo">Estúdio Aires</span>
+            <span style="font-size: 16rem; color:black; font-weight:bold ;"><%= error.email ? error.email : '' %></span>
+            <span style="font-size: 16rem; color: red; font-weight:bold ;"><%= error.senha ? error.senha : '' %></span>
 
             <input
              type="text" 
@@ -52,7 +54,7 @@
             name="senha" 
             required
             />
-            <span class="psw-forget"><%=error.email%> </span>
+            
             <form action="/recuperarSenha" method="GET">
                 <span class="psw-forget"><a href="/recuperarSenha">Esqueceu sua senha? </a></span>
             </form>
