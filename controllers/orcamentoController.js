@@ -28,7 +28,7 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   const imagensAereas = parseFloat(req.body.ImagensAereas)
 
  
- req.body.valor = calculaOrcamento(tamanhoImovel, fotografiaS, fotografia3603d, videoDinamico, imagensAereas)
+ req.bodyvalor = calculaOrcamento(tamanhoImovel, fotografiaS, fotografia3603d, videoDinamico, imagensAereas)
  
 
 
