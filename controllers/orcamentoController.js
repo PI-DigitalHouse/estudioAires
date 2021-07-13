@@ -37,7 +37,7 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   
   console.log(dadosDoFormulario)
   console.log(tamanhoImovel)
- 
+  console.log(imagensAereas)
 
   await models.Orcamento.create(dadosDoFormulario)
  
@@ -56,7 +56,7 @@ function salvarUsuario (usuario){
 
  function calculaOrcamento(medida,serv1, serv2, serv3, serv4 ){
     
-    const valorTotal = medida*(0.8 + serv1 + serv2 + serv3 + serv4 )
+    const valorTotal = medida*(0.8 + serv1 + serv2 + serv3 + serv4)
     
     return valorTotal
  }
