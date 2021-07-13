@@ -20,3 +20,21 @@ module.exports.bloquear = (async (req, res, next) => {
 
   res.redirect('/')
 });
+
+module.exports.solicitacoes = (async(req,res) => {
+  res.render('dashBoardMembro_jobsFinalizados', {
+    title : 'Meus jobs finalizados',
+    dadosUsuario : req.session.usuario
+  })
+  const jobs = await models.Solicitacao.findAll({
+    where : {idSolicitacao}
+  })
+
+})
+
+// router.get('/jobsFinalizados', checkSession, function (req, res, next){
+//   res.render('dashboardMembro_jobsFinalizados', {
+//       title: 'Meus jobs finalizados', 
+//       jobs: array,
+//       dadosUsuario: req.session.usuario })
+// } )
