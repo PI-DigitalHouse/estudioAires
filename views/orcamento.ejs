@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<%- include partials/head.ejs %> 
+<!-- < include partials/head.ejs >  -->
 <link rel="stylesheet" href="css/orcamento.css">
 <link rel="stylesheet" href="css/partials/headerAreaRestritaUsuarios.css">
 <link rel="stylesheet" href="css/partials/header.css">
@@ -117,9 +117,7 @@
 
                                <div class="valor-orcamento preco" >
                                    <div></div>
-                                     <!-- <p>$ Valor</p>teste Amanda
-                               
-                                <input type="number" name="valor">-->
+                                    
                                 
                             </div>  
                             </div>
@@ -128,7 +126,7 @@
                         <div class="tab">
                             <h4>Algum resposável irá receber o prestador? Se sim, por favor informe o nome da pessoa:
                             </h4>
-                            <p>Nome do Responsável: <input required name="NomeDoResponsavel" placeholder="Nome do Responsável"
+                            <p>Nome do Responsável: <input required name="nomeContato" placeholder="Nome do Responsável"
                                     oninput="this.className = ''">
                             <p>Informe se há detalhes adicionais sobre o servico a ser prestado</p>
                             <p>Detalhes: <input name="detalhes" placeholder="Detalhes:" oninput="this.className = ''">
@@ -150,15 +148,16 @@
 
                         </div>
                         <div class="tab">
-                            <h4>Escolha a forma de pagamento:</h4>
-                            <ul required class="listado">
-                                <li><input type="checkbox" name="pagamentoPix" oninput="this.className = ''">PIX</li>
-                                <li><input type="checkbox" name="pagamentoTransf"
-                                        oninput="this.className = ''">Transferencia Bancária</li>
-                                <li><input type="checkbox" name="pagamentoBoleto" oninput="this.className = ''">Boleto</li>
-                                <li><input type="checkbox" name="pagamentoPagSeg" oninput="this.className = ''">PagSeguro
-                                </li>
-                            </ul>
+                           
+                            <select class="usu-input-Tipo-2" placeholder="Escolha a forma de Pagamento:" name="pagamento" id="pagamento">
+                                <option value="Como nos conheceu?">Escolha a forma de Pagamento:</option>
+                                <option value="Pix" >PIX</option>
+                                <option value="TransfBanc">Transferencia Bancária</option>
+                                <option value="Boleto">Boleto</option>
+                                <option value="PagSeguro">PagSeguro</option>
+                               
+                            </select>
+                           
                         </div>
                         <div class="tab">
                             <div class="icon-confirm">
@@ -221,7 +220,7 @@
                      }(),
                   
                   datepicker: true,
-                  format: 'd-m-Y H:i',
+                  format: 'Y-m-d H:i:s',
                   yearStart: 2021,
                   yearEnd: 2022,
                   step: 30,
@@ -240,7 +239,7 @@
                     
                   timepicker: false,
                   datepicker: false,
-                  format: 'd-m-Y H:i',
+                  format: 'Y-m-d H:i:s',
                   showSecond: false,
                   yearStart: 2021,
                   yearEnd: 2022,

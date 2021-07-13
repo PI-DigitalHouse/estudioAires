@@ -5,6 +5,7 @@ const models = require('../models');
 
 var orcamentosCadastrados=[]; 
 
+
 module.exports.renderizaOrcamento = (req,res,next) => {
     res.render('orcamento', {
         title : 'Novo Orçamento',
@@ -22,6 +23,8 @@ module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
 
 module.exports.novoOrcamento = (async (req,res,next) => {
   var servicos = req.body.servico
+  let pagamento = req.body.pagamento
+  let status = req.body.status= 'active';
   const dadosDoFormulario = req.body
   const tamanhoImovel = req.body.tamanhoImovel
   var fotografia = 0
@@ -30,9 +33,10 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   var imagensAereas = 0
 
   
-  var juncao = orcamentosCadastrados.concat(servicos)
 
+  var juncao = orcamentosCadastrados.concat(servicos)
   
+
   for (var i =0; i < juncao.length; i++){
     if (juncao[i] == 'fotografia'){
       var fotografia = 0.2
@@ -52,6 +56,9 @@ module.exports.novoOrcamento = (async (req,res,next) => {
     }
     return
   }
+ 
+
+
        
   const resultado = calculaOrcamento(tamanhoImovel, fotografia, videoDinamico,fotografia3603d, imagensAereas )
   req.body.valor = resultado
@@ -59,15 +66,22 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   
   //console.log(juncao)
   console.log(resultado)
-  //await models.Orcamento.create(dadosDoFormulario)
+  await models.Orcamento.create(dadosDoFormulario)
+
+  if (dadosDoFormulario) {
+    res.render('/', {
+        value: resultado
+    }) 
+
  
   //salvarUsuario(orcamentosCadastrados)  //chamar a funcao para salvar o orcamento no JSON
-  //res.redirect('/') //redireciiona para home
+  res.redirect('/') //redireciiona para home
  
 }
+})
 
 
-)
+
 /*function salvarUsuario (usuario){
     const str = JSON.stringify(usuario) //transforma usuario em string
     fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
