@@ -1,8 +1,9 @@
 const bcrypt =require('bcrypt'); //chamando a lib para crip de hash de cadastro
-/* const orcamentosCadastrados=[]; */
 const session = require('express-session');
 const fs =require ('fs'); //lib para manipular arquivo do sistema operacional
 const models = require('../models');
+
+var orcamentosCadastrados=[]; 
 
 module.exports.renderizaOrcamento = (req,res,next) => {
     res.render('orcamento', {
@@ -20,26 +21,45 @@ module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
 
 
 module.exports.novoOrcamento = (async (req,res,next) => {
+  var servicos = req.body.servico
   const dadosDoFormulario = req.body
-  const tamanhoImovel = parseInt(req.body.tamanhoImovel)
-  const fotografiaS = parseFloat(req.body.Fotografia)
-  const fotografia3603d = parseFloat(req.body.Fotografia3603d)
-  const videoDinamico = parseFloat(req.body.VideoDinamico)
-  const imagensAereas = parseFloat(req.body.ImagensAereas)
+  const tamanhoImovel = req.body.tamanhoImovel
+  var fotografia = 0
+  var fotografia3603d = 0
+  var videoDinamico = 0
+  var imagensAereas = 0
 
- 
- req.bodyvalor = calculaOrcamento(tamanhoImovel, fotografiaS, fotografia3603d, videoDinamico, imagensAereas)
- 
-
-
-  /* orcamentosCadastrados.push(dadosDoFormulario) //adicionando os dadosdo formulario no array
-  orcamentosCadastrados.push(orcamento) */
   
-  console.log(dadosDoFormulario)
-  console.log(tamanhoImovel)
-  console.log(imagensAereas)
+  var juncao = orcamentosCadastrados.concat(servicos)
 
-  await models.Orcamento.create(dadosDoFormulario)
+  
+  for (var i =0; i < juncao.length; i++){
+    if (juncao[i] == 'fotografia'){
+      var fotografia = 0.2
+      continue
+    }
+    else if(juncao[i] == 'videoDinamico'){
+      var videoDinamico = 0.2
+      continue
+    }
+    else if(juncao[i] == 'fotografia3603d'){
+      var fotografia3603d = 0.2
+      continue
+    }
+    else if(juncao[i] == 'imagensAereas'){
+      var imagensAereas = 0.2
+      continue
+    }
+    return
+  }
+       
+  const resultado = calculaOrcamento(tamanhoImovel, fotografia, videoDinamico,fotografia3603d, imagensAereas )
+  req.body.valor = resultado
+  console.log(dadosDoFormulario)
+  
+  //console.log(juncao)
+  console.log(resultado)
+  //await models.Orcamento.create(dadosDoFormulario)
  
   //salvarUsuario(orcamentosCadastrados)  //chamar a funcao para salvar o orcamento no JSON
   //res.redirect('/') //redireciiona para home
@@ -48,16 +68,16 @@ module.exports.novoOrcamento = (async (req,res,next) => {
 
 
 )
-function salvarUsuario (usuario){
+/*function salvarUsuario (usuario){
     const str = JSON.stringify(usuario) //transforma usuario em string
     fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
     
-  }
+  }*/
 
- function calculaOrcamento(medida,serv1, serv2, serv3, serv4 ){
+ function calculaOrcamento(juncao, serv1, serv2, serv3, serv4 ){
     
-    const valorTotal = medida*(0.8 + serv1 + serv2 + serv3 + serv4)
-    
+
+    var valorTotal = juncao*(0.8 + serv1 + serv2 + serv3 + serv4)
     return valorTotal
  }
 
