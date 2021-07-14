@@ -51,7 +51,8 @@ module.exports = (sequelize, DataTypes) => {
         status: DataTypes.STRING(45),
         contatoSessao: DataTypes.STRING(45),
         nomeContato: DataTypes.STRING(150),
-        sessaoShooting: DataTypes.DATE
+        sessaoShooting: DataTypes.DATE,
+        detalhes: DataTypes.STRING(300),
     }, {
         sequelize,
         modelName: 'Orcamento',
