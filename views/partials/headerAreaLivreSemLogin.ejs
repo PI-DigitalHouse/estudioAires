@@ -24,8 +24,8 @@
             </ul>
         </nav>
 
-        <!-- Código para o login (modal na homepage) -->
-        <div class="dropdown">
+        <!--USUARIO LOGADO-->
+        <div class="dropdown"> 
             <% if(dadosUsuario) { %>
               
                 <div class="dropdown">
@@ -35,7 +35,7 @@
                       <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
                       <a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitacoes</a>
                       <a href="/orcamento">+ Novo Orçamento</a>
-                      <a href="#">Log Out</a>
+                      <a href="/logout">Sair</a>
                     </div>
                   </div>
  
@@ -62,6 +62,7 @@
             }
             </script>
         <% } %>
+        <!--USUARIO NAO LOGADO-->
             <% if(!dadosUsuario) { %>
                 <div class="navbar-item">
                     <div class="buttons">

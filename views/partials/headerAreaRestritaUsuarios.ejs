@@ -1,15 +1,17 @@
 <header>
     <a id="logo" href="/">Estudio Aires </a>
-    <nav>
+    <nav class="nav-hea">
         <ul>
-            <li><a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitações</a></li>
+            <li ><a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitações</a></li>
             <li><a href="/orcamento">+ Novo Orçamento</a></li>
             <li><a href="/contato">Contate-nos</a></li>
         </ul>
     </nav>
     <div class="usuario">
-        <a href="/dashboardUsuario/meuPerfil">
+        <a class="a" href="/dashboardUsuario/meuPerfil">
             Olá, <%=dadosUsuario.nome%>
         </a>
+        <a class="a" href="/logout">Sair</a>
     </div>
+    
 </header>

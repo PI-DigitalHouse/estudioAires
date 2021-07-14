@@ -31,7 +31,7 @@ header{
     border-bottom: 3px solid #FC7600;
 }
 
-nav{
+.nav-hea{
     width: 60%;
     display: flex;
     font-size: 35px;
@@ -68,10 +68,11 @@ nav li a:hover{
 
 .usuario{
     width:20%;
+    height:100px;
     margin-bottom: 15px; 
 }
 
-.usuario a{
+.usuario, .a {
     color:white;
     text-decoration: none;
     margin-left: 20px;
@@ -132,9 +133,7 @@ nav li a:hover{
     text-decoration: none;
 }
 
-.usuario a{
-    width: 100% ;
-}
+
 
 .usuario a:hover{
     color: #FC7600;

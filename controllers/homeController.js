@@ -65,3 +65,8 @@ module.exports.logar = (async (req, res) => {
   async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
 };
+
+module.exports.logOut =  (req, res) => {
+    req.session.destroy();
+    res.redirect('/');  
+};
