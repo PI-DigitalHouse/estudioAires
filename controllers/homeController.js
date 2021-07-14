@@ -10,7 +10,11 @@ module.exports.getHome = (req, res) => {
 }
 
 module.exports.recuSenha = (req, res) => {
-    res.render('DU_recuperacaoSenha')
+    res.render('DU_recuperacaoSenha',{
+        title:'Recuperar Senha',
+        dadosUsuario: req.session.usuario,
+        
+    })
 }
 
 module.exports.getLogin = (req, res) => {
