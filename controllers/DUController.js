@@ -1,3 +1,5 @@
+const models = require('../models');
+
 // dados para teste
 const array = [{
         idServico: 3,
@@ -115,4 +117,15 @@ module.exports.showAlteraDados = (req, res) => {
     })
 }
 
-module.exports.alteraDados = (req, res) => {}
+module.exports.alteraDados = async(req, res) => {
+    let dadosNovos = req.body
+
+    const update = await models.Usuario.update(dadosNovos, {
+            where: {
+                idUsuario: req.session.usuario.idUsuario
+            }
+        }
+
+    )
+    res.redirect('/dashboardUsuario/meuPerfil')
+}

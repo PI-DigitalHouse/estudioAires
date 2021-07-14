@@ -23,4 +23,6 @@ router.get('/meuPerfil', checkSession, meuPerfil)
 //alterar dados
 router.get('/alteraDados', checkSession, showAlteraDados)
 
+router.post('/alterandoDados', alteraDados)
+
 module.exports = router;
