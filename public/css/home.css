@@ -67,17 +67,7 @@ button {
     cursor: pointer;
 }
 
-.container-cadastrese {
-    display: flex;
-    position: absolute;
-    top: 58%;
-    left: 72%;
-    background-color: transparent;
-    width: 18%;
-    margin-top: 30px;
-    font-size: 15px;
-    color: #edf0f1;
-}
+
 
 .container-div-2 input {
     display: flex;

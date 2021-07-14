@@ -107,6 +107,17 @@ nav li a:hover{
     text-align: center;
     font-weight: bold;
 } */
+.container-cadastrese {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 72%;
+    background-color: transparent;
+    width: 18%;
+    margin-top: 30px;
+    font-size: 15px;
+    color: #edf0f1;
+}
 
 .header-cadastrese{
     text-align: center;    
@@ -157,6 +168,7 @@ nav li a:hover{
     transition: all 0.3s ease 0s;
     color: white;
     font-size: 18px;
+    
 }
 
 .login:hover{
