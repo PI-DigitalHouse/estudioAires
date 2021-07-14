@@ -29,8 +29,8 @@
             <% if(dadosUsuario) { %>
               
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn"><a class="btn btn-secondary dropdown-toggle a" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="true" style="font: size 12rem; ;">
-                        Olá, <%= dadosUsuario.nome %>!</button>
+                    <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
+                         Olá, <%= dadosUsuario.nome %>! ▼</button>
                     <div id="myDropdown" class="dropdown-content">
                       <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
                       <a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitacoes</a>
