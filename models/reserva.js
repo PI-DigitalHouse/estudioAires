@@ -20,12 +20,6 @@ module.exports = (sequelize, DataTypes) => {
                 this.belongsTo(models.Usuario, {
                     foreignKey: 'aceitoPor',
                     id: 'idUsuario'
-                }),
-
-                // Associação com Solicitação 
-                this.belongsTo(models.Orcamento, {
-                    foreignKey: 'idSolicitacao',
-                    id: 'idSolicitacao'
                 })
         }
     };
@@ -49,16 +43,6 @@ module.exports = (sequelize, DataTypes) => {
             },
             allowNull: false
         },
-        idSolicitacao: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'Orcamentos'
-            },
-            allowNull: false
-        },
-        data: DataTypes.DATE,
-        horario: DataTypes.DATE,
-        confirmado: DataTypes.BOOLEAN,
         horarioInicio: DataTypes.DATE,
         horarioFinal: DataTypes.DATE
     }, {

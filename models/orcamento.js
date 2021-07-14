@@ -10,11 +10,7 @@ module.exports = (sequelize, DataTypes) => {
          * The `models/index` file will call this method automatically.
          */
         static associate(models) {
-            // Associação com Reserva 
-            this.hasOne(models.Reserva, {
-                    foreignKey: 'idSolicitacao',
-                    targetKey: 'idSolicitacao'
-                }),
+
 
                 // Associação com Arquivo
                 this.hasMany(models.Arquivo, {
