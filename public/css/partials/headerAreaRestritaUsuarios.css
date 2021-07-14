@@ -31,7 +31,7 @@ header{
     border-bottom: 3px solid #FC7600;
 }
 
-nav{
+.nav-hea{
     width: 60%;
     display: flex;
     font-size: 35px;
@@ -68,15 +68,16 @@ nav li a:hover{
 
 .usuario{
     width:20%;
+    height:100px;
     margin-bottom: 15px; 
 }
 
-.usuario a{
+.usuario, .a {
     color:white;
     text-decoration: none;
     margin-left: 20px;
     font-family: "Lato", sans-serif;
-    font-size: 16rem;
+    font-size: 14rem;
     font-weight: bold;  
 }
 
@@ -93,7 +94,7 @@ nav li a:hover{
     color: #edf0f1;
 }
 
-.container-div-2{
+/* .container-div-2{
     display: flex;
     position: absolute;
     top: 5%;
@@ -105,6 +106,17 @@ nav li a:hover{
     color: #edf0f1;
     text-align: center;
     font-weight: bold;
+} */
+.container-cadastrese {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 72%;
+    background-color: transparent;
+    width: 18%;
+    margin-top: 30px;
+    font-size: 15px;
+    color: #edf0f1;
 }
 
 .header-cadastrese{
@@ -132,12 +144,13 @@ nav li a:hover{
     text-decoration: none;
 }
 
-.usuario a{
-    width: 100% ;
-}
+
 
 .usuario a:hover{
     color: #FC7600;
+}
+.a{
+    font-size: 12px;
 }
 
 .fotoPerfil{
@@ -155,6 +168,7 @@ nav li a:hover{
     transition: all 0.3s ease 0s;
     color: white;
     font-size: 18px;
+    
 }
 
 .login:hover{

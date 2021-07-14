@@ -10,7 +10,11 @@ module.exports.getHome = (req, res) => {
 }
 
 module.exports.recuSenha = (req, res) => {
-    res.render('DU_recuperacaoSenha')
+    res.render('DU_recuperacaoSenha',{
+        title:'Recuperar Senha',
+        dadosUsuario: req.session.usuario,
+        
+    })
 }
 
 module.exports.getLogin = (req, res) => {
@@ -19,13 +23,14 @@ module.exports.getLogin = (req, res) => {
             email:'',
            
         },
+        
         dadosUsuario: req.session.usuario
     })
 }
 
 module.exports.logar = (async (req, res) => {
     const { email, senha } = req.body;
-
+    
     const foundUser = await models.Usuario.findOne({
         where: {
             email: req.body.email,
@@ -54,6 +59,8 @@ module.exports.logar = (async (req, res) => {
     });
         return
     }
+   
+    
   
 
     req.session.usuario = foundUser;
@@ -64,4 +71,9 @@ module.exports.logar = (async (req, res) => {
 
   async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
+};
+
+module.exports.logOut =  (req, res) => {
+    req.session.destroy();
+    res.redirect('/');  
 };
