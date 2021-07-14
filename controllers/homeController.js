@@ -23,13 +23,14 @@ module.exports.getLogin = (req, res) => {
             email:'',
            
         },
+        
         dadosUsuario: req.session.usuario
     })
 }
 
 module.exports.logar = (async (req, res) => {
     const { email, senha } = req.body;
-
+    
     const foundUser = await models.Usuario.findOne({
         where: {
             email: req.body.email,
@@ -58,6 +59,8 @@ module.exports.logar = (async (req, res) => {
     });
         return
     }
+   
+    
   
 
     req.session.usuario = foundUser;
