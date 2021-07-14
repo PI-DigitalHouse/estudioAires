@@ -4,40 +4,63 @@
     <title>Estúdio Aires</title>
     <link rel="stylesheet" href="/css/home.css">
    
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
 
 <header>
     <!--Nav fixo do site-->
     <div class="header-log-nav">
-        <div class="logo a"><a href="/" class="a">Estúdio Aires</a></div>
+        <div class="logo a"><a href="/" class="ab">Estúdio Aires</a></div>
         <nav>
             <ul class="nav-links">
-                <li><a class="a" href="/">Home
+                <li><a class="ab" href="/">Home
                         <!--Fazer redirect?-->
                     </a></li>
-                <li><a class="a" href="#servicosEA">Serviços</a></li>
-                <li><a class="a" href="#quem-somosEA">Quem Somos</a></li>
-                <li><a class="a" href="#parceirosEA">Parceiros</a></li>
-                <li><a class="a" href="/contato">Contato</a></li>
+                <li><a class="ab" href="#servicosEA">Serviços</a></li>
+                <li><a class="ab" href="#quem-somosEA">Quem Somos</a></li>
+                <li><a class="ab" href="#parceirosEA">Parceiros</a></li>
+                <li><a class="ab" href="/contato">Contato</a></li>
             </ul>
         </nav>
 
         <!-- Código para o login (modal na homepage) -->
         <div class="dropdown">
             <% if(dadosUsuario) { %>
-
-                <a class="btn btn-secondary dropdown-toggle a" href="/dashboardUsuario/meuPerfil" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="true" style="font: size 16rem; ;">
-                    Olá, <%= dadosUsuario.nome %>!
-                  </a>
-        <!--Adicionar DropDown ----Amanda 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
-                    <li><a class="dropdown-item" href="#">Solicitacoesn</a></li>
-                    <li><a class="dropdown-item" href="#">Sair</a></li>
-                </ul>
- -->
+              
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><a class="btn btn-secondary dropdown-toggle a" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="true" style="font: size 12rem; ;">
+                        Olá, <%= dadosUsuario.nome %>!</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
+                      <a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitacoes</a>
+                      <a href="/orcamento">+ Novo Orçamento</a>
+                      <a href="#">Log Out</a>
+                    </div>
+                  </div>
+ 
         </div>
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                let dropdowns = document.getElementsByClassName("dropdown-content");
+                let i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  let openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
         <% } %>
             <% if(!dadosUsuario) { %>
                 <div class="navbar-item">
