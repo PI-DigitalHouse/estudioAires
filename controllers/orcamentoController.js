@@ -7,17 +7,32 @@ var orcamentosCadastrados=[];
 
 
 module.exports.renderizaOrcamento = (req,res,next) => {
-    res.render('orcamento', {
+
+if(req.session.usuario){
+  console.log('logado')
+  res.render('orcamento', {
+    title : 'Novo Orçamento',
+    dadosUsuario: req.session.usuario
+  })
+}else{
+  console.log('n logado')
+  res.render('orcamentoSLogin', {
+    title : 'Novo Orçamento',
+    dadosUsuario: req.session.usuario
+  })
+}
+}
+    /*res.render('orcamento', {
         title : 'Novo Orçamento',
         dadosUsuario: req.session.usuario
 
-})};
-module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
-  res.render('orcamentoSemLogin',{
+})};*/
+/*module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
+  res.render('orcamentoSLogin',{
     title : 'Novo Orçamento',
     dadosUsuario: req.session.usuario
   });
-}
+}*/
 
 
 
@@ -27,12 +42,13 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   let status = req.body.status= 'active';
   const dadosDoFormulario = req.body
   const tamanhoImovel = req.body.tamanhoImovel
-  let fotografia = 0
-  let fotografia3603d = 0
-  let videoDinamico = 0
-  let imagensAereas = 0
+  var fotografia = 0
+  var fotografia3603d = 0
+  var videoDinamico = 0
+  var imagensAereas = 0
 
-  
+ req.body.horarioFinal = req.body.horarioInicio
+
 
   const juncao = orcamentosCadastrados.concat(servicos)
   
@@ -59,19 +75,22 @@ module.exports.novoOrcamento = (async (req,res,next) => {
  //reservas
 
 
+  const resultado = calculaOrcamento(tamanhoImovel, fotografia, videoDinamico,fotografia3603d, imagensAereas )
+  req.body.valor = resultado
+  console.log(resultado)
+
 
  dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
  dadosDoFormulario.aceitoPor = 1
 
 
        
-  const resultado = calculaOrcamento(tamanhoImovel, fotografia, videoDinamico,fotografia3603d, imagensAereas )
-  req.body.valor = resultado
+  
   
   //console.log(juncao)
-  console.log(resultado)
+  
 
-
+  console.log(dadosDoFormulario)
   const reservas = await models.Reserva.create(dadosDoFormulario)
 
   if (!reservas) {
@@ -79,7 +98,7 @@ module.exports.novoOrcamento = (async (req,res,next) => {
     return
   }
   dadosDoFormulario.reservas_idReserva=reservas.idReserva
-  console.log(dadosDoFormulario)
+  
   
   await models.Orcamento.create(dadosDoFormulario)
 /* 
