@@ -85,3 +85,9 @@ module.exports.logOut =  (req, res) => {
     req.session.destroy();
     res.redirect('/');  
 };
+
+module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
+    res.render('orcamentoSLogin', {
+        dadosUsuario: req.session.usuario
+    });
+} 
