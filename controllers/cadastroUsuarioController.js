@@ -34,7 +34,7 @@ module.exports.postUsuario = (async(req, res) => {
 
     user.senha = hash(user.senha) //encriptando a senha
     user.senha2 = hash(user.senha2)
-
+    console.log(user)
     await models.Usuario.create(user)
 
 
