@@ -101,8 +101,16 @@ module.exports.showAlteraSenha = (req, res) => {
 }
 
 module.exports.alteraSenha = async(req, res) => {
-    // let dados = req.body
+    const dados = req.body
 
+    console.log(dados)
+
+    //Primeiro passo: Fazer verificação da senha antiga com o input
+    // const foundPassword = await models.Usuario.findOne({
+    //     where: {
+    //         senha: dados.senhaAntiga
+    //     }
+    // })
 
     //último passo do processo
     // const update = await models.Usuario.update(dados, {
@@ -110,7 +118,7 @@ module.exports.alteraSenha = async(req, res) => {
     //         idUsuario: req.session.usuario.idUsuario
     //     }
     // })
-    // res.redirect('/dashboardUsuario/meuPerfil')
+    res.redirect('/dashboardUsuario/meuPerfil')
 }
 
 module.exports.meuPerfil = (req, res) => {
