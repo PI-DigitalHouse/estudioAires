@@ -13,16 +13,15 @@
     <!--<link rel="stylesheet" href="./modal-galley.css">-->
     <link rel="stylesheet" href="../login-modal/login-modal.css">
     <link rel="shortcut icon" href="images/square-logo-lineorange.png">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <title>Estúdio Aires</title>
 </head>
 
 <body>
     <header>
-    <%- include partials/headerAreaLivre2.ejs %>  
-            
+        <%- include partials/headerAreaLivre2.ejs %>
+
     </header>
     <div class="banner-area">
         <div class="banner">
@@ -38,26 +37,14 @@
             <span style="font-size: 16rem; color:red; font-weight:bold ;"><%= error.email ? error.email : '' %></span>
             <span style="font-size: 16rem; color: red; font-weight:bold ;"><%= error.senha ? error.senha : '' %></span>
 
-            <input
-             type="text" 
-             required placeholder="Email:" 
-             maxlength="60" 
-             type="email"
-             name="email"
-             id="email"
-             />
+            <input type="text" required placeholder="Email:" maxlength="60" type="email" name="email" id="email" />
 
-            <input
-            type="password"
-            placeholder="Senha:" 
-            name="senha" 
-            required
-            />
-            
+            <input type="password" placeholder="Senha:" name="senha" required />
+
             <form action="/recuperarSenha" method="GET">
                 <span class="psw-forget"><a href="/recuperarSenha">Esqueceu sua senha? </a></span>
             </form>
-            
+
             <button type="submit">ENTRAR</button>
 
             <div class="icons-login">
