@@ -93,11 +93,24 @@ module.exports.recuperaSenha = (req, res) => {
     });
 }
 
-module.exports.alteraSenha = (req, res) => {
+module.exports.showAlteraSenha = (req, res) => {
     res.render('dashboardUsuario_alteracaoSenha', {
         title: 'Altere a sua Senha',
         dadosUsuario: req.session.usuario
     });
+}
+
+module.exports.alteraSenha = async(req, res) => {
+    // let dados = req.body
+
+
+    //último passo do processo
+    // const update = await models.Usuario.update(dados, {
+    //     where: {
+    //         idUsuario: req.session.usuario.idUsuario
+    //     }
+    // })
+    // res.redirect('/dashboardUsuario/meuPerfil')
 }
 
 module.exports.meuPerfil = (req, res) => {
