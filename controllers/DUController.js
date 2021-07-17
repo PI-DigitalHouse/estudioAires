@@ -94,11 +94,32 @@ module.exports.recuperaSenha = (req, res) => {
     });
 }
 
-module.exports.alteraSenha = (req, res) => {
+module.exports.showAlteraSenha = (req, res) => {
     res.render('dashboardUsuario_alteracaoSenha', {
         title: 'Altere a sua Senha',
         dadosUsuario: req.session.usuario
     });
+}
+
+module.exports.alteraSenha = async(req, res) => {
+    const dados = req.body
+
+    console.log(dados)
+
+    //Primeiro passo: Fazer verificação da senha antiga com o input
+    // const foundPassword = await models.Usuario.findOne({
+    //     where: {
+    //         senha: dados.senhaAntiga
+    //     }
+    // })
+
+    //último passo do processo
+    // const update = await models.Usuario.update(dados, {
+    //     where: {
+    //         idUsuario: req.session.usuario.idUsuario
+    //     }
+    // })
+    res.redirect('/dashboardUsuario/meuPerfil')
 }
 
 module.exports.meuPerfil = (req, res) => {

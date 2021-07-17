@@ -12,34 +12,31 @@ module.exports.cadastroModal = (req, res) => {
 
 module.exports.postUsuario = (async(req, res) => {
     const user = req.body
-
     console.log(user)
 
-    // req.body.email.custom(value => {
-    //     return user.findUserByEmail(value).then(user => {
-    //         if (user) {
-    //             return Promise.reject('E-mail already in use');
-    //         }
-    //     });
-    // })
+    //Verificação se e-mail já está em uso
+    body('email').custom(value => {
+        return Usuario.findUserByEmail(value).then(user => {
+            if (user) {
+                return Promise.reject('Este e-mail já está em uso');
+            }
+        });
+    })
 
-    // req.body.senha2.custom((value, { req }) => {
-    //     if (value !== req.body.senha) {
-    //         throw new Error('Password confirmation does not match password');
-    //     }
-    //     return true;
-    // })
-
-    //verificar checkbox termos de uso
+    //Verifica se as duas senhas são iguais
+    body('senha2').custom((value, { req }) => {
+        if (value !== req.body.senha) {
+            throw new Error('Suas senhas não batem');
+        }
+        return true;
+    })
 
     user.senha = hash(user.senha) //encriptando a senha
     user.senha2 = hash(user.senha2)
     console.log(user)
     await models.Usuario.create(user)
 
-
     res.redirect('/') //redireciiona para home
-
 });
 
 function hash(obj) {
