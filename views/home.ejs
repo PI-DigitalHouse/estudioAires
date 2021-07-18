@@ -18,13 +18,23 @@
     </div>
 
     <%- include partials/headerAreaLivreSemLogin.ejs %>
-
-        <form method="GET" action="/orcamento">
+        <% if (!dadosUsuario){ %>
+            <form method="GET" action="/orcamento/orcamentoSLogin">
             <div class="container-div-2">
                 <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input>
 
             </div>
         </form>
+        <%}%>
+        <%if(dadosUsuario){%>
+            <form method="GET" action="/orcamento">
+                <div class="container-div-2">
+                    <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input>
+    
+                </div>
+            </form>
+        <%}%>
+        
 
         <!-- início da sessão de portfólio MODAL-->
         <div id="portfolio">

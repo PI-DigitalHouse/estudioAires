@@ -1,88 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <%- include partials/head.ejs %>
-<body>
-    <%- include partials/headerAreaRestritaUsuarios.ejs %>
-    <main>
-        <div class="du-meuPerfil-info">
-            <h1>Alteração de senha</h1>
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">Senha antiga</p>
-                    <form action="/dashboardUsuario/alteraSenha" method="GET">
-                        <input class="du-meuPerfil-info-secao-formulario" type="password">
-                    </form>
-                </div>
-            </div>
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">Senha nova</p>
-                    <form>
-                        <input class="du-meuPerfil-info-secao-formulario" type="password">
-                    </form>
-                </div>
-            </div>
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">Confirme senha nova</p>
-                    <form action=" " method="POST">
-                        <input class="du-meuPerfil-info-secao-formulario" type="password">
-                    </form>
-                </div>
-            </div>
-            <div class="du-meuPerfil-info-botao">
-                <a href="dashboardUsuario_meuPerfil.html"> Atualizar senha </a>
-            </div>
-            <div class="du-meuPerfil-info-botao2">
-                <a href="dashboardUsuario_meuPerfil.html"> Voltar </a>
-            </div>
-        </div>
-    </main>
+<%- include partials/head.ejs %>
 
-    <footer class="footer">
-            <div class="container-footer">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>conheça</h4>
-                        <ul>
-                            <li><a href="#">quem somos</a></li>
-                            <li><a href="#">portifólio</a></li>
-                            <li><a href="#">orçamento</a></li>
-                            <li><a href="#">cadastre-se</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                    <h4>Contate-nos</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">telefone</a></li>
-                        <li><a href="#">whatsapp <i class="fab fa-whatsapp"></i></a></li>
-                        <li><a href="#">ipDoEmail@email.com</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>privacidade</h4>
-                    <ul>
-                        
-                        <li><a href="#">termos</a></li>
-                        <li><a href="#">condições de uso</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Siga-nos</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                </div>
-            </div>
-    </footer>
+    <body>
+        <%- include partials/headerAreaRestritaUsuarios.ejs %>
+            <main>
+                <div class="du-meuPerfil-info">
+                    <h1>Alteração de senha</h1>
 
-</body>
+                    <form action="/dashboardUsuario/alterandoSenha" method="POST">
+                        <div class="du-meuPerfil-info-secao">
+                            <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
+                            <div>
+                                <p class="du-meuPerfil-info-secao-titulo">Senha antiga</p>
+                                <input class="du-meuPerfil-info-secao-formulario" type="password" name="senhaAntiga">
+                            </div>
+                        </div>
+                        <div class="du-meuPerfil-info-secao">
+                            <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
+                            <div>
+                                <p class="du-meuPerfil-info-secao-titulo">Senha nova</p>
+                                <input class="du-meuPerfil-info-secao-formulario" type="password" name="senhaNova">
+                            </div>
+                        </div>
+                        <div class="du-meuPerfil-info-secao">
+                            <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
+                            <div>
+                                <p class="du-meuPerfil-info-secao-titulo">Confirme senha nova</p>
+                                <input class="du-meuPerfil-info-secao-formulario" type="password" name="senhaNova2">
+                            </div>
+                        </div>
+                        <div class="du-meuPerfil-info-botao">
+                            <input type="submit" value="Atualizar Senha">
+                        </div>
+                        <div class="du-meuPerfil-info-botao2">
+                            <a href="/dashboardUsuario/meuPerfil"> Voltar </a>
+                        </div>
+                    </form>
+                </div>
+            </main>
+
+            <%- include partials/footer.ejs %>
+
+    </body>
+
 </html>

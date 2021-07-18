@@ -1,5 +1,5 @@
 const express = require('express');
-const { listEntregaveis, listSolicitacoes, recuperaSenha, alteraSenha, meuPerfil, calendario, showAlteraDados, alteraDados } = require('../controllers/DUController');
+const { listEntregaveis, listSolicitacoes, recuperaSenha, showAlteraSenha, alteraSenha, meuPerfil, calendario, showAlteraDados, alteraDados } = require('../controllers/DUController');
 const session = require('express-session');
 
 const router = express.Router();
@@ -15,7 +15,9 @@ router.get('/solicitacoes/:idUsuario', checkSession, listSolicitacoes);
 router.get('/recuperacaoSenha', recuperaSenha);
 
 // Alteração da Senha
-router.get('/alteraSenha', checkSession, alteraSenha)
+router.get('/alteraSenha', checkSession, showAlteraSenha)
+
+router.post('/alterandoSenha', alteraSenha)
 
 // Meu Perfil
 router.get('/meuPerfil', checkSession, meuPerfil)

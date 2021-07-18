@@ -7,22 +7,37 @@ var orcamentosCadastrados=[];
 
 
 module.exports.renderizaOrcamento = (req,res,next) => {
-    res.render('orcamento', {
+
+if(req.session.usuario){
+  console.log('logado')
+  res.render('orcamento', {
+    title : 'Novo Orçamento',
+    dadosUsuario: req.session.usuario
+  })
+}else{
+  console.log('n logado')
+  res.render('orcamentoSLogin', {
+    title : 'Novo Orçamento',
+    dadosUsuario: req.session.usuario
+  })
+}
+}
+    /*res.render('orcamento', {
         title : 'Novo Orçamento',
         dadosUsuario: req.session.usuario
 
-})};
-module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
-  res.render('orcamentoSemLogin',{
+})};*/
+/*module.exports.renderizaOrcamentoSLogin = (req, res, next) =>{
+  res.render('orcamentoSLogin',{
     title : 'Novo Orçamento',
     dadosUsuario: req.session.usuario
   });
-}
+}*/
 
 
 
 module.exports.novoOrcamento = (async (req,res,next) => {
-  var servicos = req.body.servico
+  let servicos = req.body.servico
   let pagamento = req.body.pagamento
   let status = req.body.status= 'active';
   const dadosDoFormulario = req.body
@@ -32,52 +47,74 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   var videoDinamico = 0
   var imagensAereas = 0
 
+ req.body.horarioFinal = req.body.horarioInicio
+
+
+  const juncao = orcamentosCadastrados.concat(servicos)
   
 
-  var juncao = orcamentosCadastrados.concat(servicos)
-  
-
-  for (var i =0; i < juncao.length; i++){
+  for (let i =0; i < juncao.length; i++){
     if (juncao[i] == 'fotografia'){
-      var fotografia = 0.2
+      let fotografia = 0.2
       continue
     }
     else if(juncao[i] == 'videoDinamico'){
-      var videoDinamico = 0.2
+      let videoDinamico = 0.2
       continue
     }
     else if(juncao[i] == 'fotografia3603d'){
-      var fotografia3603d = 0.2
+      let fotografia3603d = 0.2
       continue
     }
     else if(juncao[i] == 'imagensAereas'){
-      var imagensAereas = 0.2
+      let imagensAereas = 0.2
       continue
     }
     return
   }
- 
+ //reservas
+
+
+  const resultado = calculaOrcamento(tamanhoImovel, fotografia, videoDinamico,fotografia3603d, imagensAereas )
+  req.body.valor = resultado
+  console.log(resultado)
+
+
+ dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
+ dadosDoFormulario.aceitoPor = 1
 
 
        
-  const resultado = calculaOrcamento(tamanhoImovel, fotografia, videoDinamico,fotografia3603d, imagensAereas )
-  req.body.valor = resultado
-  console.log(dadosDoFormulario)
+  
   
   //console.log(juncao)
-  console.log(resultado)
-  await models.Orcamento.create(dadosDoFormulario)
+  
 
+  console.log(dadosDoFormulario)
+  const reservas = await models.Reserva.create(dadosDoFormulario)
+
+  if (!reservas) {
+    res.render('orcamento')
+    return
+  }
+  dadosDoFormulario.reservas_idReserva=reservas.idReserva
+  
+  
+  await models.Orcamento.create(dadosDoFormulario)
+/* 
   if (dadosDoFormulario) {
     res.render('/', {
         value: resultado
-    }) 
+        
+    } 
+    ) 
+    return */
 
  
   //salvarUsuario(orcamentosCadastrados)  //chamar a funcao para salvar o orcamento no JSON
   res.redirect('/') //redireciiona para home
  
-}
+
 })
 
 

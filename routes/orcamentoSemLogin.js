@@ -9,6 +9,6 @@ const renderizaOrcamentoSLogin = require ('../controllers/orcamentoSemLoginContr
 
 
  //GET users listing. 
-router.get('/', renderizaOrcamentoSLogin);
+router.get('/orcamentoSLogin', renderizaOrcamentoSLogin);
 
 module.exports = router;  

@@ -49,6 +49,12 @@ module.exports = (sequelize, DataTypes) => {
         nomeContato: DataTypes.STRING(150),
         sessaoShooting: DataTypes.DATE,
         detalhes: DataTypes.STRING(300),
+        reservas_idReserva: {
+            type: DataTypes.INTEGER,
+            foreignKey: true,
+            
+
+        }
     }, {
         sequelize,
         modelName: 'Orcamento',
