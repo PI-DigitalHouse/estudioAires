@@ -17,11 +17,12 @@
     <main>
         <div class="du-meuPerfil-info">
             <h1>Meu Perfil</h1>
-            <img class="du-meuPerfil-info-fotoPerfil" src="../img/fotoPerfil.jpg" alt="foto do perfil">
+           
             <div class="du-meuPerfil-info-secao">
                 <img class="du-meuPerfil-info-secao-icone" src="../img/user.png" alt="ícone usuario">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">Nome</p>
+                    <%=dadosMembro.nome%> 
                     
                 </div>
             </div>
@@ -29,30 +30,24 @@
                 <img class="du-meuPerfil-info-secao-icone" src="../img/icone_email.png" alt="ícone email">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">Email</p>
-                    <p> </p>
+                    <p><%=dadosMembro.email%>  </p>
                 </div>
             </div>
             <div class="du-meuPerfil-info-secao">
                 <img class="du-meuPerfil-info-secao-icone" src="../img/driver-license.png" alt="ícone documento">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
-                    <p>  </p>
+                    <p><%=dadosMembro.cpfCnpj%>   </p>
                 </div>
             </div>
             <div class="du-meuPerfil-info-secao">
                 <img class="du-meuPerfil-info-secao-icone" src="../img/phone.png" alt="ícone telefone">
                 <div>
                     <p class="du-meuPerfil-info-secao-titulo">Telefone</p>
-                    <p> (59) 98877 6655 </p>
+                    <p> <%=dadosMembro.telefone%> </p>
                 </div>
             </div>
-            <div class="du-meuPerfil-info-secao">
-                <img class="du-meuPerfil-info-secao-icone" src="../img/calendar.png" alt="ícone calendario">
-                <div>
-                    <p class="du-meuPerfil-info-secao-titulo">Data de nascimento</p>
-                    <p> 01/01/1990</p>
-                </div>
-            </div>
+            
             <div class="du-meuPerfil-info-botao">
                 
                     <a href="alterarDados"> Alterar dados </a> 

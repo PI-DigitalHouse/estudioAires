@@ -79,6 +79,7 @@ router.get('/login-membro', loginMembro)
 
 router.post('/login-membro', logarMembro)
 
+//rotas de membros que precisam de autenticacao
 
 router.get('/meuPerfil',checkSessionMembro, function(req, res, next){
     res.render('dashboardMembroMeuPerfil',{
@@ -90,7 +91,8 @@ router.get('/meuPerfil',checkSessionMembro, function(req, res, next){
 router.get('/minhaAgenda', checkSessionMembro, function(req, res, next){
     res.render('dashboardMembro_minhaAgenda', {
         title : 'Minha Agenda',
-        dadosUsuario: req.session.usuario
+        dadosUsuario: req.session.usuario,
+    dadosMembro: req.session.membro 
     });
 });
 
@@ -98,7 +100,8 @@ router.get('/aprovacoes', checkSessionMembro, function(req, res, next){
     res.render('dashboardMembro_aprovacoes', {
         title: 'Aprovações',
         aprovacoes: array,
-        dadosUsuario: req.session.usuario} );
+        dadosUsuario: req.session.usuario,
+        dadosMembro: req.session.membro } );
 })
 
 router.get('/jobsFinalizados', checkSessionMembro, solicitacoes)
@@ -109,7 +112,8 @@ router.get('/alterarDados',  function(req, res, next){
 
     res.render('alterarDados', {usuario: {
         nome: req.session.nome,
-        dadosUsuario: req.session.usuario
+        dadosUsuario: req.session.usuario,
+        dadosMembro: req.session.membro 
         
     }})
     
@@ -119,9 +123,9 @@ esteja implementada e que a sessão puxe o nome corretamente*/
 /* sessao implementada, falta ajusta middleware e puxar os dados do usuario membro! Ass.: Amanda */
 
 //Visualização calendario
-router.get ('/calendario',  calendario)
+router.get ('/calendario', checkSessionMembro,  calendario)
 
 //Bloqueio de calendario
-router.post ('/calendario',  bloquear)
+router.post ('/calendario', checkSessionMembro, bloquear)
 
 module.exports = router;
