@@ -105,7 +105,7 @@ router.get('/jobsFinalizados',  solicitacoes)
 
 /*dentro dessa função eu preciso puxar os dados do usuário logado, imprimi-los no formulário de 
 alteração de dados e tornar esses mesmos campos preenchidos editáveis*/ 
-router.get('/alterarDados', checkSession, function(req, res, next){ 
+router.get('/alterarDados',  function(req, res, next){ 
 
     res.render('alterarDados', {usuario: {
         nome: req.session.nome,
@@ -116,6 +116,7 @@ router.get('/alterarDados', checkSession, function(req, res, next){
 })
 /* está dando erro pq eu não fiz a sessão nessa página. Preciso garantir que a sessão 
 esteja implementada e que a sessão puxe o nome corretamente*/
+/* sessao implementada, falta ajusta middleware e puxar os dados do usuario membro! Ass.: Amanda */
 
 //Visualização calendario
 router.get ('/calendario',  calendario)
