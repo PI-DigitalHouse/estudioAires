@@ -70,7 +70,7 @@ const router = express.Router();
 const fs = require('fs')
 const {calendario, bloquear, solicitacoes} = require('../controllers/DMController');
 const {loginMembro, logarMembro} =require('../controllers/autenticacaoMembro')
-const checkSession = require('../middlewares/checkSession') 
+const checkSessionMembro = require('../middlewares/checkSession') 
 const session = require('express-session');
 //const usuarios = require('../usuariosCadastrados.json')
 
@@ -80,28 +80,28 @@ router.get('/login-membro', loginMembro)
 router.post('/login-membro', logarMembro)
 
 
-router.get('/meuPerfil', function(req, res, next){
+router.get('/meuPerfil',checkSessionMembro, function(req, res, next){
     res.render('dashboardMembroMeuPerfil',{
     title : 'Minha Agenda',
     dadosUsuario: req.session.usuario,
     dadosMembro: req.session.membro   });
 })
 
-router.get('/minhaAgenda',  function(req, res, next){
+router.get('/minhaAgenda', checkSessionMembro, function(req, res, next){
     res.render('dashboardMembro_minhaAgenda', {
         title : 'Minha Agenda',
         dadosUsuario: req.session.usuario
     });
 });
 
-router.get('/aprovacoes',  function(req, res, next){
+router.get('/aprovacoes', checkSessionMembro, function(req, res, next){
     res.render('dashboardMembro_aprovacoes', {
         title: 'Aprovações',
         aprovacoes: array,
         dadosUsuario: req.session.usuario} );
 })
 
-router.get('/jobsFinalizados',  solicitacoes)
+router.get('/jobsFinalizados', checkSessionMembro, solicitacoes)
 
 /*dentro dessa função eu preciso puxar os dados do usuário logado, imprimi-los no formulário de 
 alteração de dados e tornar esses mesmos campos preenchidos editáveis*/ 
