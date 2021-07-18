@@ -4,6 +4,7 @@ const session = require('express-session');
 const router = express.Router();
 const bcrypt = require('bcrypt')
 const { getHome, recuSenha, getLogin, logar, logOut, } = require('../controllers/homeController');
+const logarMembro =require('../controllers/autenticacaoMembro')
 const checkSession = require('../middlewares/checkSession') 
 
 
@@ -15,7 +16,9 @@ router.get('/recuperarSenha', recuSenha);
 
 router.get('/login',  getLogin);
 
+
 router.post('/login', logar);
+
 
 router.get('/logout', logOut);
 
