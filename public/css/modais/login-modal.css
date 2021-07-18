@@ -17,6 +17,31 @@
 
 
 /* Modal Content*/
+.adminLogin{
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  font-family: "Lato", sans-serif;
+  margin: 5px auto;
+ /*  border: #0c0c0c solid 1px; */
+  width: 30%;
+  height: 530px;
+  position: absolute;
+  display: flex;
+  top: 175px;
+  left: 15px;
+ 
+}
+
+.container-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width:100%;
+  height: 530px;
+   
+}
+
 .modal-content {
   background-color: #FC7600;
   font-family: "Lato", sans-serif;
@@ -26,8 +51,12 @@
   height: 530px;
   position: absolute;
   display: flex;
-  top: 175px;
+  top: 180px;
   left: 566px;
+}
+.membro{
+  height: 85px;
+  margin-top: 150px;
 }
 
 .container-login {
@@ -63,6 +92,10 @@
  
   
 }
+.adminLogin{
+  width:1350px;
+}
+
 
 .container-login input[type="password"] {
   position: relative;

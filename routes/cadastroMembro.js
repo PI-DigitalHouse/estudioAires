@@ -7,8 +7,8 @@ const membrosCadastrados=[];
 const {renderizaCadastroMembro, cadastrarMembro} = require('../controllers/cadastroMembroController')
 
 router.get('/', renderizaCadastroMembro)
-
-router.post('/novo', cadastrarMembro);
+/* 
+router.post('/novo', cadastrarMembro); */
 
 
 

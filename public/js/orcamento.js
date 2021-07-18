@@ -17,6 +17,7 @@ function showTab(n) {
   } else {
     document.getElementById("nextBtn").innerHTML = "CONFIRMAR";
   }
+
   // ... e executa uma função que exibe o indicador do step correto:
   fixStepIndicator(n)
 }
