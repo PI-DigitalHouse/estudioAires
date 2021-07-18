@@ -14,8 +14,8 @@
 
 </head>
 <body>
-    <!--<header>
-       <%- include partials/headerAreaLivreSemLogin.ejs %> 
+    <header>
+      <!--  <- include partials/headerAreaLivreSemLogin.ejs >  -->
     </header>
 
     <section class="flex-container" >
@@ -36,19 +36,19 @@
             </div>
             <div class="flex-container-boas-vindas"><h2>Seja bem-vindo!</h2></div>
             
-            <form id="cadastroMembro" action="cadastro-membro/novo" method="POST">
-                <!--mudar os names para letra minuscula -->
+            <form action="novoMembro" method="POST">
+             
                 <div class="flex-container-nome">
-                    <input required class="inputTipo3" placeholder="Nome completo" maxlength="50" type="text" name="Nome" id="Nome" required>
+                    <input required class="inputTipo3" placeholder="Nome completo" maxlength="50" type="text" name="nome" id="Nome" required>
                     <input required class="inputTipo3" placeholder="Email" maxlength="60" type="email" name="email" id="email">                  
                 </div>
                 <div class="flex-container-nome">
-                    <input required class="inputTipo1" placeholder="Tel/Cel" maxlength="14" type="text" name="Telefone" id="Telefone">
-                    <input required class="inputTipo1" placeholder="CPF/CNPJ" type="text" maxlength="11" name="CPF" id="CPF">
+                    <input required class="inputTipo1" placeholder="Tel/Cel" maxlength="14" type="text" name="telefone">
+                    <input required class="inputTipo1" placeholder="CPF/CNPJ" type="text" maxlength="11" name="cpfCnpj">
                 </div>
                 
                 <div class="flex-container-nome">
-                    <select class="inputTipo2" placeholder="Como nos conheceu?" name="Como nos conheceu" id="Como nos conheceu">
+                    <select class="inputTipo2" placeholder="Como nos conheceu?" name="comoConheceu" id="Como nos conheceu">
                         <option value="Como nos conheceu">Como nos conheceu?</option>
                         <option value="Atraves da minha imobiliaria">Através da minha imobiliária</option>
                         <option value="Facebook">Facebook</option>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="text">Conte-nos um pouco mais.
-                        <input required type="text" placeholder="Escreva sobre você" class="EscrevaSobreVc" maxlength="300"> 
+                        <input required type="text" placeholder="Escreva sobre você" class="EscrevaSobreVc" maxlength="300" name="detalhes"> 
                         
                     </div>
                 </div>
@@ -82,8 +82,8 @@
                     </input>
                 </div> -->
                 <div class="flex-container-nome">
-                    <input required class="inputTipo1" placeholder="Senha" type="password" name="psw">
-                    <input required class="inputTipo1" placeholder="Confirmar Senha" type="password" name="psw2">
+                    <input required class="inputTipo1" placeholder="Senha" type="password" name="senha">
+                    <input required class="inputTipo1" placeholder="Confirmar Senha" type="password" name="senha2">
                </div>
                
                <div class="flex-container-nome">

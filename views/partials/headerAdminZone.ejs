@@ -26,15 +26,15 @@
 
         <!--USUARIO LOGADO-->
         <div class="dropdown"> 
-            <% if(dadosUsuario) { %>
+            <% if(dadosAdmin) { %>
               
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
-                         Olá, <%= dadosUsuario.nome %>! ▼</button>
+                         Olá, <%= dadosAdmin %>! ▼</button>
                     <div id="myDropdown" class="dropdown-content">
-                      <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
-                      <a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitacoes</a>
-                      <a href="/orcamento">+ Novo Orçamento</a>
+                      <a href="/cadastro">cadastro membros</a>
+                      <a href="/">solicitacoes</a>
+                      <a href="/">outros</a>
                       <a href="/logout">Sair</a>
                     </div>
                   </div>
@@ -64,7 +64,7 @@
             </script>
         <% } %>
         <!--USUARIO NAO LOGADO-->
-            <% if(!dadosUsuario) { %>
+            <% if(!dadosAdmin) { %>
                 <div class="navbar-item">
                     <div class="buttons">
                         <button onclick="document.getElementById('id01').style.display='block'" class="login a"><a
