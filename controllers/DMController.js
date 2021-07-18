@@ -23,12 +23,18 @@ module.exports.bloquear = (async (req, res, next) => {
 
 module.exports.solicitacoes = (async(req,res) => {
   const usuario = await models.Usuario.findAll({
-    where : {idUsuario}
+    where : {
+      idUsuario : await req.session.usuario.idUsuario,
+    },
+    include: [
+      'reserva'
+    ]
   })
 
   res.render('dashBoardMembro_jobsFinalizados', {
     title : 'Meus jobs finalizados',
     dadosUsuario : req.session.usuario,
-    jobs,
+    // solicitacoes,
+
   })
 })
