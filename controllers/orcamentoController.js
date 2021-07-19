@@ -9,7 +9,7 @@ var orcamentosCadastrados=[];
 module.exports.renderizaOrcamento = (req,res,next) => {
 
 if(req.session.usuario){
-  console.log('logado')
+  
   res.render('orcamento', {
     title : 'Novo Orçamento',
     dadosUsuario: req.session.usuario

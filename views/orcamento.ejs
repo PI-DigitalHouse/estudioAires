@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- < include partials/head.ejs >  -->
+    <link rel="stylesheet" href="css/partials/header.css"> 
+
 <link rel="stylesheet" href="css/orcamento.css">
 
-<link rel="stylesheet" href="css/partials/header.css">
+
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  -->
 <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">  
 
     <body>
         <div class="dropdown">
             <% if(dadosUsuario) { %>
-                <link rel="stylesheet" href="css/partials/headerAreaRestritaUsuarios.css">
+               
 
                 <%- include partials/headerAreaRestritaUsuarios.ejs %>
         </div>
@@ -125,7 +126,7 @@
                         </div>
                         <!--  /*STEP3*/ -->
                         <div class="tab">
-                            <h4>Algum resposável irá receber o prestador? Se sim, por favor informe o nome da pessoa:
+                            <h4>Algum responsável irá receber o prestador? Se sim, por favor informe o nome da pessoa:
                             </h4>
                             <p>Nome do Responsável: <input required name="nomeContato" placeholder="Nome do Responsável"
                                     oninput="this.className = ''">
@@ -181,12 +182,12 @@
                         <div class="button-submit">
                             <input type="button" id="prevBtn" onclick="nextPrev(-1)" value="VOLTAR"></input>
                             <input type="button" id="nextBtn" onclick="nextPrev(1)" value="CONFIRMAR"></input>
-
+                            <input type="submit" id="nextBtn2" onclick="nextPrev(1)" value="Enviar solicitação"></input>
                         </div>
                         </div>
-                        <div class="button-submit">
+                      <!--   <div class="button-submit">
                             <input type = 'submit' class= 'submit' value ='Enviar solicitação'>
-                        </div>
+                        </div> -->
                     </form>
                     </div>
 
@@ -195,7 +196,7 @@
             </main>
 
 
-            <script type="text/javascript" src="js/orcamento.js"></script>
+            <script type="text/javascript" src="/js/orcamento.js"></script>
 
              <!-- script datepicker -->
             <script src="/jquery.js"></script>

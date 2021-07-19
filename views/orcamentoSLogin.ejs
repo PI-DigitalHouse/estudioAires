@@ -8,19 +8,8 @@
 <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">  
 
     <body>
-        <div class="dropdown">
-            <% if(dadosUsuario) { %>
-                <link rel="stylesheet" href="css/partials/headerAreaRestritaUsuarios.css">
-
-                <%- include partials/headerAreaRestritaUsuarios.ejs %>
-        </div>
-        <% } %>
-            <% if(!dadosUsuario) { %>
-                <%- include partials/headerAreaLivreSemLogin.ejs %>
-                <% } %>
-
-
-    </div>
+<header>
+            <%- include partials/headerAreaLivreSemLogin.ejs %>
 </header>
 
 

@@ -1,5 +1,6 @@
 const models = require('../models');
 const bcrypt = require('bcrypt');
+const { Op } = require('sequelize')
 
 // dados para teste
 const array = [{
@@ -194,3 +195,43 @@ function hash(obj) {
 async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
 };
+module.exports.mostrarSolicitacoes = (async(req, res) => {
+
+    const { idSolicitacao, endereco, tamanhoImovel, valor, /* dataInicio  dataFinal,*/ pagamento, status } = req.query
+
+    const resultados = await models.Orcamento.findAll({
+        where: {
+            idSolicitacao: {
+                [Op.like]: `${idSolicitacao || ''}%`
+            },
+            endereco: {
+                [Op.like]: `${endereco || ''}%`
+            },
+            tamanhoImovel: {
+                [Op.like]: `${tamanhoImovel || ''}%`
+            },
+            valor: {
+                [Op.like]: `${valor || ''}%`
+            },
+
+            /*   dataInicio: {
+                  [Op.like]: `${dataInicio || ''}%`
+              }, */
+            /*  dataFinal: {
+                 [Op.like]: `${dataFinal || ''}%`
+             }, */
+            pagamento: {
+                [Op.like]: `${pagamento || ''}%`
+            },
+            status: {
+                [Op.like]: `${status || ''}%`
+            },
+
+
+        },
+        dadosUsuario: req.session.usuario
+    })
+    console.log(resultados.length)
+    res.render('dashboardUsuario/solicitacoes/:idUsuario', { resultados })
+
+})

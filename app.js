@@ -29,11 +29,11 @@ app.use(session({
 }))
 
 app.use('/', homeRouter);
-
+app.use('/admin', require('./routes/adminRoute'));
 app.use('/orcamento', require('./routes/orcamento'));
 app.use('/dashboardUsuario', dashboardUsuarioRouter);
 app.use('/servicos', servicosRouter);
-app.use('/cadastro-membro', require('./routes/cadastroMembro'));
+/* app.use('/cadastro-membro', require('./routes/cadastroMembro')); */
 app.use('/cadastro-usuario', require('./routes/cadastroUsuario'));
 app.use('/dashboardMembro', DMRouter)
 app.use('/contato', require('./routes/contatoRoute'));

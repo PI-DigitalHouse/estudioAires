@@ -4,10 +4,10 @@ html{
 }
 
 header{
-    margin:0;
+   
     background: rgba(0, 0, 0, .4);
-    width: 100%;
-    height:fit-content;
+    width: auto;
+    height:110px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -152,6 +152,8 @@ nav li a:hover{
 .a{
     font-size: 12px;
 }
+
+
 
 .fotoPerfil{
     border-radius: 50%;

@@ -31,20 +31,26 @@
         </div>
     </div>
 
-    <form class="modal-content animate" action="admin/logarAdmin" method="POST">
+    <form class="modal-content animate" action="/dashboardMembro/login-membro" method="POST">
         <div class="container-login">
             <span class="container-logo">Estúdio Aires</span>
-            <span class="container-logo">Acesso Admin</span>
+            <span class="container-logo">Login Membros</span>
+            <span style="font-size: 16rem; color:red; font-weight:bold ;"><%= error.email ? error.email : '' %></span>
+            <span style="font-size: 16rem; color: red; font-weight:bold ;"><%= error.senha ? error.senha : '' %></span>
 
-            <input type="text" required placeholder="Email:" maxlength="60" type="email" name="emailAdmin" id="email" />
+            <input type="text" required placeholder="Email:" maxlength="60" type="email" name="email" id="email" />
 
-            <input type="password" placeholder="Senha:" name="senhaAdmin" required />
+            <input type="password" placeholder="Senha:" name="senha" required />
 
-         
+            
 
             <button type="submit">ENTRAR</button>
 
+            
 
+           
         </div>
     </form>
 </body>
+
+</html>

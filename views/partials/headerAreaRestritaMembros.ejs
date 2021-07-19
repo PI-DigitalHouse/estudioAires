@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/css/partials/headerAreaRestritaUsuarios.css">
+<link rel="stylesheet" href="/css/home.css">
 <header>
     <nav>
         <a id="logo" href="/">Estudio Aires </a>
@@ -10,13 +12,27 @@
                 <% } %> ><a href="/dashboardMembro/jobsFinalizados">Jobs Finalizados</a></li>
         </ul>
     </nav>
-    <div class="usuario">
-        <div class="usuario-flex"><img class="fotoPerfil" src="/img/fotoPerfil.jpg" alt="Foto usuário"></div>
-        <div class="usuario-flex">
-            <a href="/dashboardMembro">
-                <%= dadosUsuario.nome %>
-            </a>
-        </div>
+    
+    <div class="dropdown"> 
+                 
+        <div class="dropdown a">
+            <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a"> 
+                 Olá, <%= dadosMembro.nome %>! ▼</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="/dashboardMembro/meuPerfil">Meu Perfil</a>
+              <a href="/dashboardMembro/Aprovacoes">Aprovações</a>
+              <a href="/dashboardMembro/minhaAgenda">Minha Agenda</a>
+              <a href="/logout">Sair</a>
+            </div>
+          </div>
+        
 
-    </div>
+</div>
+        
+
+
+</div>
+<script src="/js/user-partials.js"></script>
 </header>
+
+
