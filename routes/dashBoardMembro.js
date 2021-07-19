@@ -105,7 +105,6 @@ router.get('/aprovacoes', checkSessionMembro, function(req, res, next){
 })
 
 //Membro -> jobs finalizados
-router.get('/jobsFinalizados', checkSession, solicitacoes)
 router.get('/jobsFinalizados', checkSessionMembro, solicitacoes)
 
 /*dentro dessa função eu preciso puxar os dados do usuário logado, imprimi-los no formulário de 

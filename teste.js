@@ -1,10 +1,9 @@
 const models = require('./models');
-// const usuario = require('./models/usuario');
 
-async function buscaUsuario (){
-  const usuario = await models.Usuario.findOne({
+async function buscaMembro (){
+  const usuario = await models.Membro.findOne({
     where : {
-      idUsuario : 5,
+      idUsuario : 1,
     },
     include : [
       'reserva'
@@ -12,4 +11,4 @@ async function buscaUsuario (){
   })
   console.log(usuario.toJSON());
 }
-buscaUsuario();
+buscaMembro();

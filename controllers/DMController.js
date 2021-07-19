@@ -23,14 +23,14 @@ module.exports.bloquear = (async (req, res, next) => {
 });
 
 module.exports.solicitacoes = (async(req,res) => {
-  const usuario = await models.Usuario.findAll({
-    where : {
-      idUsuario : await req.session.usuario.idUsuario,
-    },
-    include: [
-      'reserva'
-    ]
-  })
+  // const usuario = await models.Usuario.findAll({
+  //   where : {
+  //     idUsuario : await req.session.usuario.idUsuario,
+  //   },
+  //   include: [
+  //     'reserva'
+  //   ]
+  // })
 
   res.render('dashBoardMembro_jobsFinalizados', {
     title : 'Meus jobs finalizados',
@@ -39,7 +39,7 @@ module.exports.solicitacoes = (async(req,res) => {
     dadosMembro: req.session.membro
   })
   
-  const jobs = await models.Solicitacao.findAll({
-    where : {idSolicitacao}
-  })
+  // const jobs = await models.Solicitacao.findAll({
+  //   where : {idSolicitacao}
+  // })
 })
