@@ -67,7 +67,11 @@ button {
     cursor: pointer;
 }
 
-
+.acessoMembro{
+    font-size: 10px;
+    color: #FC7600;
+    
+}
 
 .container-div-2 input {
     display: flex;

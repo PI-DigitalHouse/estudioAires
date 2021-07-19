@@ -10,7 +10,7 @@ const checkSessionAdmin = require('../middlewares/checkAdmin')
 router.get('/', loginAdmin)
 
 router.post('/logarAdmin', logarAdmin);
-router.post('/novoMembro', postMembro);
+router.post('/novoMembro',checkSessionAdmin, postMembro);
 
 router.get('/dashboardAdmin',checkSessionAdmin, getDashAdmin)
 
