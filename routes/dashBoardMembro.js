@@ -70,7 +70,7 @@ const router = express.Router();
 const fs = require('fs')
 const {calendario, bloquear, solicitacoes} = require('../controllers/DMController');
 const {loginMembro, logarMembro} =require('../controllers/autenticacaoMembro')
-const checkSessionMembro = require('../middlewares/checkSession') 
+const checkSessionMembro = require('../middlewares/checkMembro') 
 const session = require('express-session');
 //const usuarios = require('../usuariosCadastrados.json')
 
