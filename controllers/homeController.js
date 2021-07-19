@@ -71,29 +71,6 @@ module.exports.logar = (async (req, res) => {
     res.redirect('/');
 });
 
-module.exports.logarMembro = (async (req, res) => {
-    const { email, senha } = req.body;
-    
-    
-    const foundUser2 = await models.Membro.findOne({
-        where: {
-            email: req.body.email,
-           
-        }
-    });
-     
-   
-    const hashando2 = await compareHash(req.body.senha, foundUser2.senha)
-    
-   
-  
-   
-  
-
-    req.session.membro = foundUser2;
-
-    res.redirect('/');
-});
 
 
 
