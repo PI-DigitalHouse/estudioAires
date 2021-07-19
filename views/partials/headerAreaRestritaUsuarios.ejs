@@ -1,3 +1,16 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estúdio Aires</title>
+    <link rel="stylesheet" href="/css/partials/headerAreaRestritaUsuarios.css">
+    <link rel="stylesheet" href="/css/home.css">
+   
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+   
+   
+</head>
+
 <header>
     <a id="logo" href="/">Estudio Aires </a>
     <nav class="nav-hea">
@@ -7,11 +20,27 @@
             <li><a href="/contato">Contate-nos</a></li>
         </ul>
     </nav>
-    <div class="usuario">
-        <a class="a" href="/dashboardUsuario/meuPerfil">
-            Olá, <%=dadosUsuario.nome%>
-        </a>
-        <a class="a" href="/logout">Sair</a>
-    </div>
     
+      <!--   <a class="a" href="/dashboardUsuario/meuPerfil">
+            Olá, <=dadosUsuario.nome%>
+        </a>
+        <a class="a" href="/logout">Sair</a> -->
+   
+    <div class="dropdown"> 
+                 
+            <div class="dropdown a">
+                <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a"> 
+                     Olá, <%= dadosUsuario.nome %>! ▼</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
+                  <a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitacoes</a>
+                  <a href="/orcamento">+ Novo Orçamento</a>
+                  <a href="/logout">Sair</a>
+                </div>
+              </div>
+            
+
+    </div>
+</div>
+<script src="/js/user-partials.js"></script>
 </header>

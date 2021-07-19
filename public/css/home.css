@@ -557,11 +557,11 @@ video {
 }
 /* Dropdown Button */
 .dropbtn {
-    background-color: #8acaf5;
+    background-color: transparent;
     color: white;
     padding: 12px;
     font-size: 16px;
-    border: none;
+    border: solid 3px #8acaf5;;
     cursor: pointer;
   }
   
@@ -583,7 +583,7 @@ video {
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 3;
   }
   
   /* Links inside the dropdown */
@@ -599,5 +599,9 @@ video {
   .dropdown-content a:hover {background-color: #2980B9}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;
-position:fixed;}
+  .show {
+      display:block;
+      position:fixed;
+      right: 50px;
+      
+    }
