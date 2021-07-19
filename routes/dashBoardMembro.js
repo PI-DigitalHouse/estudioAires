@@ -104,12 +104,9 @@ router.get('/aprovacoes', checkSessionMembro, function(req, res, next){
         dadosMembro: req.session.membro } );
 })
 
-<<<<<<< HEAD
 //Membro -> jobs finalizados
 router.get('/jobsFinalizados', checkSession, solicitacoes)
-=======
 router.get('/jobsFinalizados', checkSessionMembro, solicitacoes)
->>>>>>> 8ba2fcc394e551833e507e37ee67e4113c90ed58
 
 /*dentro dessa função eu preciso puxar os dados do usuário logado, imprimi-los no formulário de 
 alteração de dados e tornar esses mesmos campos preenchidos editáveis*/ 
