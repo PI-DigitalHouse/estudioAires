@@ -82,6 +82,7 @@ module.exports.novoOrcamento = (async (req,res,next) => {
 
  dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
  dadosDoFormulario.aceitoPor = 1
+ dadosDoFormulario.membros_idMembro = 1
 
 
        
