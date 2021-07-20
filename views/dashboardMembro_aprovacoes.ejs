@@ -3,24 +3,24 @@
     <%- include partials/head.ejs %>
 <body>
     <%- include partials/headerAreaRestritaMembros.ejs %>
-
-    <% for (aprovacao of aprovacoes) { %> 
+    <% if (resultados>0) { %> 
+    <% for (resultado of resultados) { %> 
         <div id="containerServico">
             <div class="containerEsquerda">
                 <div class="servicoContratado1">
-                    <h2>Número serviço: <%=aprovacao.idServico%></h2>
+                    <h2>Número serviço: <%=resultado.idSolicitacao%></h2>
                 
                     <div class="info">
                         <p class="tipo1">Endereço:</p>                        
-                        <p><%=aprovacao.endereco%> </p>
+                        <p><%=resultado.endereco%> </p>
                     </div>
                     <div class="info">
                         <p class="tipo1">Valor do serviço:</p>
-                        <p>R$ <%=aprovacao.valorDoServico%> </p>
+                        <p>R$ <%=resultado.valor%> </p>
                     </div>
                     <div class="info">
                         <p class="tipo1">Tamanho aproximado do imóvel:</p>
-                        <p><%=aprovacao.tamanhoImovel%>  m²</p>
+                        <p><%=resultado.tamanhoImovel%>  m²</p>
                     </div>
                 </div>
     
@@ -28,24 +28,25 @@
                     <br>
                     <div class="info"> 
                         <p class="tipo1"  id="servicoContratado__tipo--ajuste">Serviços contratados:</p>
-                        <p><%=aprovacao.servicosContratados%> </p>
+                        <p>servico </p>
                     </div>
                 </div>
             </div>   
 
             <div class="containerCentro">
             
-                <p class="tipo1">Selecione um horario:</p>
+                <p class="tipo1">Data e horario agendado:</p>
+                <p><%=resultado.horarioInicio%></p>
 
                 <div class="botoes">
                         
-                    <% for(let i = 0; i<aprovacao.horariosSelecionados.length ; i ++){ %>  
+        <!--             < for(let i = 0; i<aprovacao.horariosSelecionados.length ; i ++){ %>  
                         <div>
                             <input type="radio" id = "horario1" name="answer">
-                            <label><%= aprovacao.horariosSelecionados[i] %></label> 
+                            <label>< aprovacao.horariosSelecionados[i] </label> 
                         </div>
-                    <% } %> 
-                    
+                    } > 
+                     -->
                 </div>
             </div>
 
@@ -63,6 +64,15 @@
         
         </div>
     <% } %> 
-    
+    <% } else { %>
+         <div id="containerServico">
+
+            <div class="servicoContratado1">
+                <h2>Ops! Voce ainda nao tem novas solicitacoes</h2>
+            </div>
+
+        </div>
+        
+        <% } %> 
 </body>
 </html>

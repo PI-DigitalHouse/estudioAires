@@ -8,6 +8,7 @@ module.exports = {
      * Example:*/
       await queryInterface.bulkInsert('usuarios', [{
        nome: 'Lula Livre',
+       sobrenome: 'Da Silva',
        email: 'lula@pt.com.br',
        telefone: '0000',
        cpfCnpj: '1234',

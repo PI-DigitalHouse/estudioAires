@@ -46,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
         horarioInicio: DataTypes.DATE,
         horarioFinal: DataTypes.DATE,
         membros_idMembro:  DataTypes.INTEGER,
+        status: DataTypes.STRING(150)
     }, {
         sequelize,
         modelName: 'Reserva',

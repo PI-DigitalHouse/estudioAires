@@ -68,7 +68,7 @@ const models = require('../models');
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
-const {calendario, bloquear, solicitacoes} = require('../controllers/DMController');
+const {calendario, bloquear, solicitacoes,  aprovacoes} = require('../controllers/DMController');
 const {loginMembro, logarMembro} =require('../controllers/autenticacaoMembro')
 const checkSessionMembro = require('../middlewares/checkMembro') 
 const session = require('express-session');
@@ -96,13 +96,8 @@ router.get('/minhaAgenda', checkSessionMembro, function(req, res, next){
     });
 });
 
-router.get('/aprovacoes', checkSessionMembro, function(req, res, next){
-    res.render('dashboardMembro_aprovacoes', {
-        title: 'Aprovações',
-        aprovacoes: array,
-        dadosUsuario: req.session.usuario,
-        dadosMembro: req.session.membro } );
-})
+router.get('/aprovacoes', checkSessionMembro, aprovacoes );
+
 
 //Membro -> jobs finalizados
 router.get('/jobsFinalizados', checkSessionMembro, solicitacoes)

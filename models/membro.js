@@ -19,8 +19,12 @@ module.exports = (sequelize, DataTypes) => {
                 // Associação com Reservas
                 this.hasOne(models.Reserva, {
                     foreignKey: 'aceitoPor',
-                    targetKey: 'idMembro'
+                    targetKey: 'idMembro',
+                    as :'reserva'
+
+                                        
                 })
+                
         }
     };
     Membro.init({

@@ -151,10 +151,12 @@ module.exports.alteraDados = async(req, res) => {
     )
     res.redirect('/dashboardUsuario/meuPerfil')
 }
+
+///Traz as informacoes dos orcamentos dos usuarios
 module.exports.mostrarSolicitacoes=(async(req,res)=>{
     
     const { idSolicitacao, endereco, tamanhoImovel, valor, /* dataInicio  dataFinal,*/ pagamento, status } = req.query
-   
+    
      const resultados = await models.Orcamento.findAll({
          where: {
              idSolicitacao: {
@@ -185,9 +187,14 @@ module.exports.mostrarSolicitacoes=(async(req,res)=>{
             
             
          },
+         title: 'Solicitacoes',
          dadosUsuario: req.session.usuario 
      }) 
      console.log(resultados.length)
-     res.render('dashboardUsuario/solicitacoes/:idUsuario', {resultados})
+     
+      res.render('dashboardUsuario_solicitacoes', {
+        resultados,
+        title: 'Solicitacoes',
+        dadosUsuario: req.session.usuario })
     
  })
