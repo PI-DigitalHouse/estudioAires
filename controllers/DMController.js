@@ -1,5 +1,6 @@
 const models = require('../models');
 const session = require('express-session');
+const { Op } = require('sequelize')
 
 module.exports.calendario = (req, res) => {
     res.render('DMCalendario', {
@@ -43,3 +44,50 @@ module.exports.solicitacoes = (async(req,res) => {
   //   where : {idSolicitacao}
   // })
 })
+
+module.exports.aprovacoes=(async(req,res)=>{
+  const { idSolicitacao, endereco, tamanhoImovel, valor, horarioInicio, status } = req.query
+    
+     const resultados = await models.Orcamento.findAll({
+         where: {
+             idSolicitacao: {
+                 [Op.like]: `${idSolicitacao || ''}%`
+             },
+             endereco: {
+                 [Op.like]: `${endereco || ''}%`
+             },
+             tamanhoImovel: {
+                [Op.like]: `${tamanhoImovel || ''}%`
+            },
+             valor: {
+                 [Op.like]: `${valor || ''}%`
+             },
+           /*   horarioInicio: {
+              [Op.like]: `${horarioInicio || ''}%`
+          },  */ 
+          
+           /*  dataFinal: {
+                [Op.like]: `${dataFinal || ''}%`
+            }, */
+            
+            status: {
+                [Op.like]: `${status || ''}%`
+            },
+            
+            
+         },
+         include:[ 'reservas']
+         
+     }) 
+     console.log(resultados.length)
+     
+      res.render('dashboardMembro_aprovacoes', {
+        resultados,
+        title: 'Aprovações',
+        dadosUsuario: req.session.usuario,
+        dadosMembro: req.session.membro })
+    
+ })
+
+
+
