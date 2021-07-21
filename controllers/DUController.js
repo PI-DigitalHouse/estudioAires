@@ -181,7 +181,16 @@ module.exports.alteraDados = async(req, res) => {
         }
 
     )
-    res.redirect('/dashboardUsuario/meuPerfil')
+    const resultados = await models.Usuario.findOne({
+        where: {
+            idUsuario: req.session.usuario.idUsuario
+        }
+    })
+    req.session.save(function() {
+            req.session.usuario = resultados
+            res.redirect('/dashboardUsuario/meuPerfil')
+        })
+        // res.redirect('/dashboardUsuario/meuPerfil')
 }
 
 function hash(obj) {

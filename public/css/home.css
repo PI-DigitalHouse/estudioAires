@@ -69,7 +69,14 @@ button {
 
 .acessoMembro{
     font-size: 10px;
+    font-weight: bold;
     color: #FC7600;
+    
+}
+.acessoMembro:hover{
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
     
 }
 

@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
                     targetKey: 'idReserva',
                     as : 'orcamento'
                 })
+                
         }
     };
     Membro.init({
