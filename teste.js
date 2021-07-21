@@ -1,14 +1,17 @@
 const models = require('./models');
 
 async function buscaMembro (){
-  const usuario = await models.Membro.findOne({
+  const usuarioMembro = await models.Membro.findAll({
     where : {
-      idUsuario : 1,
+      idMembro : 1,
     },
     include : [
-      'reserva'
+      'reserva',
+      'orcamento'
     ]
   })
-  console.log(usuario.toJSON());
+  // const jobs = usuarioMembro.forEach(
+  // console.log(jobs);
 }
 buscaMembro();
+
