@@ -24,25 +24,32 @@ module.exports.bloquear = (async (req, res, next) => {
 });
 
 module.exports.solicitacoes = (async(req,res) => {
-  // const usuario = await models.Usuario.findAll({
-  //   where : {
-  //     idUsuario : await req.session.usuario.idUsuario,
-  //   },
-  //   include: [
-  //     'reserva'
-  //   ]
-  // })
+  const {idSolicitacao, endereco, valor, tamanhoImovel, dataInicio} = req.query;
 
+  const resultados = await models.Orcamento.findAll({
+    where: {
+      idSolicitacao: {
+        [Op.like]: `${idSolicitacao || ''}%`
+      },
+      endereco: {
+        [Op.like]: `${endereco || ''}%`
+      },
+      tamanhoImovel: {
+        [Op.like]: `${tamanhoImovel || ''}%`
+      },
+      // dataInicio: {
+      //   [Op.like]: `${dataInicio || ''}%`
+      // },
+    },
+    dadosMembro : req.session.membro
+  })
+  console.log(resultados)
+  
   res.render('dashBoardMembro_jobsFinalizados', {
     title : 'Meus jobs finalizados',
-    dadosUsuario : req.session.usuario,
-    // solicitacoes,
-    dadosMembro: req.session.membro
+    // dadosMembro: req.session.membro
+    resultados
   })
-  
-  // const jobs = await models.Solicitacao.findAll({
-  //   where : {idSolicitacao}
-  // })
 })
 
 module.exports.aprovacoes=(async(req,res)=>{
