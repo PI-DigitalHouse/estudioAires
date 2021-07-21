@@ -1,4 +1,5 @@
 const models = require('../models');
+const bcrypt = require('bcrypt');
 const { Op } = require('sequelize')
 
 // dados para teste
@@ -102,23 +103,54 @@ module.exports.showAlteraSenha = (req, res) => {
 }
 
 module.exports.alteraSenha = async(req, res) => {
-    const dados = req.body
+    const dadosForm = req.body
+        // console.log(dadosForm)
 
-    console.log(dados)
+    //Chamando o usuário pela sessão
+    const usuario = await models.Usuario.findOne({
+        where: {
+            idUsuario: req.session.usuario.idUsuario
+        }
+    });
+    // console.log(usuario)
 
-    //Primeiro passo: Fazer verificação da senha antiga com o input
-    // const foundPassword = await models.Usuario.findOne({
-    //     where: {
-    //         senha: dados.senhaAntiga
-    //     }
-    // })
+    //Validando senha do banco com a do input
+    const hashando = await compareHash(dadosForm.senhaAntiga, usuario.senha)
 
-    //último passo do processo
-    // const update = await models.Usuario.update(dados, {
-    //     where: {
-    //         idUsuario: req.session.usuario.idUsuario
-    //     }
-    // })
+    if (!hashando) {
+        res.render('dashboardUsuario_alteracaoSenha', {
+            erros: {
+                senhaAntiga: {
+                    msg: 'Senha não correspondente'
+                }
+            },
+            dadosUsuario: null //ficar esperto
+        })
+        return
+    }
+
+    //Verificando senhas iguais nos inputs de novaSenha1 e 2
+    if (!dadosForm.senhaNova === dadosForm.senhaNova2) {
+        res.render('dashboardUsuario_alteracaoSenha', {
+            erros: {
+                senhaNova: {
+                    msg: 'As senhas não correspondem'
+                }
+            },
+            dadosUsuario: null //ficar esperto
+        })
+        return
+    }
+
+    const update = await models.Usuario.update({
+            senha: hash(dadosForm.senhaNova)
+        }, {
+            where: {
+                idUsuario: req.session.usuario.idUsuario
+            }
+        }
+
+    )
     res.redirect('/dashboardUsuario/meuPerfil')
 }
 
@@ -149,45 +181,66 @@ module.exports.alteraDados = async(req, res) => {
         }
 
     )
-    res.redirect('/dashboardUsuario/meuPerfil')
+    const resultados = await models.Usuario.findOne({
+        where: {
+            idUsuario: req.session.usuario.idUsuario
+        }
+    })
+    req.session.save(function() {
+            req.session.usuario = resultados
+            res.redirect('/dashboardUsuario/meuPerfil')
+        })
+        // res.redirect('/dashboardUsuario/meuPerfil')
 }
-module.exports.mostrarSolicitacoes=(async(req,res)=>{
-    
+
+function hash(obj) {
+
+    const salt = bcrypt.genSaltSync(10)
+    const psw = bcrypt.hashSync(obj, salt)
+    return psw;
+
+}
+
+async function compareHash(senha, hash) {
+    return await bcrypt.compare(senha, hash);
+};
+module.exports.mostrarSolicitacoes = (async(req, res) => {
+
     const { idSolicitacao, endereco, tamanhoImovel, valor, /* dataInicio  dataFinal,*/ pagamento, status } = req.query
-   
-     const resultados = await models.Orcamento.findAll({
-         where: {
-             idSolicitacao: {
-                 [Op.like]: `${idSolicitacao || ''}%`
-             },
-             endereco: {
-                 [Op.like]: `${endereco || ''}%`
-             },
-             tamanhoImovel: {
+
+    const resultados = await models.Orcamento.findAll({
+        where: {
+            idSolicitacao: {
+                [Op.like]: `${idSolicitacao || ''}%`
+            },
+            endereco: {
+                [Op.like]: `${endereco || ''}%`
+            },
+            tamanhoImovel: {
                 [Op.like]: `${tamanhoImovel || ''}%`
             },
-             valor: {
-                 [Op.like]: `${valor || ''}%`
-             },
-           
-          /*   dataInicio: {
-                [Op.like]: `${dataInicio || ''}%`
-            }, */
-           /*  dataFinal: {
-                [Op.like]: `${dataFinal || ''}%`
-            }, */
+            valor: {
+                [Op.like]: `${valor || ''}%`
+            },
+
+            /*   dataInicio: {
+                  [Op.like]: `${dataInicio || ''}%`
+              }, */
+            /*  dataFinal: {
+                 [Op.like]: `${dataFinal || ''}%`
+             }, */
             pagamento: {
                 [Op.like]: `${pagamento || ''}%`
             },
             status: {
                 [Op.like]: `${status || ''}%`
             },
-            
-            
-         },
-         dadosUsuario: req.session.usuario 
-     }) 
-     console.log(resultados.length)
-     res.render('dashboardUsuario/solicitacoes/:idUsuario', {resultados})
-    
- })
+
+
+        },
+        dadosUsuario: req.session.usuario
+    })
+    console.log(resultados.length)
+    res.render('dashboardUsuario/solicitacoes/:idUsuario', { resultados })
+
+})
