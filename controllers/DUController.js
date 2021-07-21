@@ -187,7 +187,7 @@ module.exports.alteraDados = async(req, res) => {
         }
     })
     req.session.save(function() {
-            req.session.usuario
+            req.session.usuario = resultados
             res.redirect('/dashboardUsuario/meuPerfil')
         })
         // res.redirect('/dashboardUsuario/meuPerfil')
