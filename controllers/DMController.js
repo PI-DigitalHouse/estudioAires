@@ -47,15 +47,15 @@ module.exports.mostraJobs = async (req, res) => {
       //   [Op.like]: `${sessaoShooting || ''}%`,
       // },
     },
-    include: {
-      model: models.Reserva,
-      as: 'reservas',
-      include: {
-        model: models.Usuario,
-        as: 'usuarios',
-        attributes: ['nome', 'email', 'telefone'],
-      },
-    },
+    // include: {
+    //   model: models.Reserva,
+    //   as: 'reservas',
+    //   include: {
+    //     model: models.Usuario,
+    //     as: 'usuarios',
+    //     attributes: ['nome', 'email', 'telefone'],
+    //   },
+    // },
     dadosMembro: req.session.membro,
   });
   console.log(resultadosJobs);

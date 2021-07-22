@@ -32,9 +32,9 @@ module.exports = (sequelize, DataTypes) => {
           as: 'reservas',
         });
       // Associação com Membros
-      this.hasOne(models.Membro, {
-        foreignKey: 'idMembro',
-        as: 'membros',
+      this.hasOne(models.Usuario, {
+        foreignKey: 'reservadoPor',
+        as: 'usuarios',
       });
     }
   }
@@ -53,6 +53,7 @@ module.exports = (sequelize, DataTypes) => {
       status: DataTypes.STRING(45),
       contatoSessao: DataTypes.STRING(45),
       nomeContato: DataTypes.STRING(150),
+      telefoneContato: DataTypes.BIGINT,
       sessaoShooting: DataTypes.DATE,
       detalhes: DataTypes.STRING(300),
       reservas_idReserva: {
