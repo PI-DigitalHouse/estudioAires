@@ -13,14 +13,17 @@ module.exports = (sequelize, DataTypes) => {
             // Associação com Usuario
             this.belongsTo(models.Usuario, {
                     foreignKey: 'reservadoPor',
-                    id: 'idUsuario'
+                    id: 'idUsuario',
+                    as: 'usuarios'
                 }),
 
                 // Associação com Usuario
                 this.belongsTo(models.Usuario, {
                     foreignKey: 'aceitoPor',
-                    id: 'idUsuario'
+                    id: 'idUsuario',
+                   
                 })
+              
         }
     };
     Reserva.init({

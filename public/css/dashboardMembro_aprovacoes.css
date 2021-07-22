@@ -8,6 +8,14 @@ html{
 .logo-dash-memb{
     width: 80%;
 }
+.botoes-2{
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    width: 420px;
+    height: 50px;
+    
+}
 
 body{
     font-size: 20rem;

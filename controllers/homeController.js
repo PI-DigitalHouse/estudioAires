@@ -68,7 +68,7 @@ module.exports.logar = (async (req, res) => {
 
     req.session.usuario = foundUser;
 
-    res.redirect('/');
+    res.redirect('/')
 });
 
 
