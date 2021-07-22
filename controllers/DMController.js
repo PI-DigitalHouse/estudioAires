@@ -24,9 +24,15 @@ module.exports.bloquear = (async (req, res, next) => {
 });
 
 module.exports.solicitacoes = (async(req,res) => {
-  const {idSolicitacao, endereco, valor, tamanhoImovel, dataInicio} = req.query;
+  const {idSolicitacao, endereco, valor, tamanhoImovel, sessaoShooting} = req.query;
+  const {idUsuario, nome, email, telefone} = req.query;
 
-  const resultados = await models.Orcamento.findAll({
+  // Serviços contratados
+  // Nome do cliente
+  // E-mail do cliente
+  // Telefone do usuario
+
+  const resultadosJobs = await models.Orcamento.findAll({
     where: {
       idSolicitacao: {
         [Op.like]: `${idSolicitacao || ''}%`
@@ -37,18 +43,21 @@ module.exports.solicitacoes = (async(req,res) => {
       tamanhoImovel: {
         [Op.like]: `${tamanhoImovel || ''}%`
       },
-      // dataInicio: {
-      //   [Op.like]: `${dataInicio || ''}%`
-      // },
+      valor : {
+        [Op.like]: `${valor || ''}%`
+      },
+      sessaoShooting : {
+        [Op.like]: `${sessaoShooting || ''}%`
+      },
     },
     dadosMembro : req.session.membro
   })
-  console.log(resultados)
+  console.log(resultadosJobs)
   
   res.render('dashBoardMembro_jobsFinalizados', {
     title : 'Meus jobs finalizados',
     // dadosMembro: req.session.membro
-    resultados
+    resultadosJobs
   })
 })
 
