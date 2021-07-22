@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         tipoDeServico: DataTypes.STRING(150),
         descricao: DataTypes.STRING(150),
-        valor: DataTypes.DECIMAL(2, 0)
+        valor: DataTypes.DECIMAL(2,2)
     }, {
         sequelize,
         modelName: 'Servico',

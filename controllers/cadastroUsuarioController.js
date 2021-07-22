@@ -4,7 +4,7 @@ const { body, validationResult } = require('express-validator');
 
 module.exports.cadastroModal = (req, res) => {
     res.render('cadastro-usuario', {
-        dadosUsuario: req.session.usuario, //se nao existe usuario como vai ter sessao ? Revisar header
+        dadosUsuario: req.session.usuario, //FAZ o IF no HEADER se nao existe usuario como vai ter sessao ? Revisar header
         erros: {}
     });
 

@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'idSolicitacao',
         as: 'servicos',
       }),
-        // Associação com Arquivo
         this.hasMany(models.Arquivo, {
           foreignKey: 'idSolicitacao',
           targetKey: 'idSolicitacao',
@@ -37,12 +36,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'idMembro',
         as: 'membros',
       });
-
-      //Associação com Usuário
-      this.hasOne(models.Usuario, {
-        foreignKey: 'idUsuario',
-        as: 'usuarios',
-      });
     }
   }
   Orcamento.init(
@@ -60,7 +53,6 @@ module.exports = (sequelize, DataTypes) => {
       status: DataTypes.STRING(45),
       contatoSessao: DataTypes.STRING(45),
       nomeContato: DataTypes.STRING(150),
-      //   telefoneContato: DataTypes.BIGINT,
       sessaoShooting: DataTypes.DATE,
       detalhes: DataTypes.STRING(300),
       reservas_idReserva: {
