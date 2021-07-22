@@ -22,13 +22,28 @@
                         <p class="tipo1">Tamanho aproximado do imóvel:</p>
                         <p><%=resultado.tamanhoImovel%>  m²</p>
                     </div>
+                    <div class="info">
+                        <p class="tipo1">Serviços contratados:</p>
+                        <p><%=resultado.tamanhoImovel%>  m²</p>
+                    </div>
                 </div>
     
                 <div class="servicoContratado2">
-                    <br>
-                    <div class="info"> 
-                        <p class="tipo1"  id="servicoContratado__tipo--ajuste">Serviços contratados:</p>
-                        <p>servico </p>
+                    
+                    <div class="info">
+                        <p class="tipo2"> Informações do (a) cliente </p>
+                    </div>
+                    <div class="info">
+                        <p class="tipo1">Nome :</p>
+                        <p><%=resultado.nomeContato%></p>
+                    </div>
+                    <div class="info">
+                        <p class="tipo1">Email:</p>
+                        <p><%=resultado.reservas.usuarios.email%></p>
+                    </div>
+                    <div class="info">
+                        <p class="tipo1">Telefone:</p>
+                        <p><%=resultado.telefoneContato%></p>
                     </div>
                 </div>
             </div>   
@@ -36,9 +51,12 @@
             <div class="containerCentro">
             
                 <p class="tipo1">Data e horario agendado:</p>
-                <p><%=resultado.horarioInicio%></p>
+                <p><%=resultado.reservas.horarioInicio%></p>
 
-                <div class="botoes">
+                <div class="botoes" style="width: 150px; height: 18px;">
+                    <form>
+                        <input class = "botoes-2" type="file" multiple="multiple">
+                    </form>
                         
         <!--             < for(let i = 0; i<aprovacao.horariosSelecionados.length ; i ++){ %>  
                         <div>
@@ -53,11 +71,9 @@
             <div class="containerDireita">
                 <div class="botoes">
                     <div class="entregaveis">
-                        <p>Aprovar</p> 
+                       
                     </div> 
-                    <div class="prestador">
-                        <p>Não aprovar</p> 
-                    </div>
+                   
                 </div>
                 <a href="dashboardMembro_modal.html" class="informacoes">Mais informações</a>
             </div>

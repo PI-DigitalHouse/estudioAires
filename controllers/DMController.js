@@ -62,7 +62,7 @@ module.exports.solicitacoes = (async(req,res) => {
 })
 
 module.exports.aprovacoes=(async(req,res)=>{
-  const { idSolicitacao, endereco, tamanhoImovel, valor, horarioInicio, status } = req.query
+  const { idSolicitacao, endereco, tamanhoImovel, valor, nomeContato, telefoneContato, horarioInicio, status, email } = req.query
     
      const resultados = await models.Orcamento.findAll({
          where: {
@@ -78,6 +78,12 @@ module.exports.aprovacoes=(async(req,res)=>{
              valor: {
                  [Op.like]: `${valor || ''}%`
              },
+             nomeContato: {
+              [Op.like]: `${valor || ''}%`
+          },
+          telefoneContato: {
+            [Op.like]: `${valor || ''}%`
+        },
            /*   horarioInicio: {
               [Op.like]: `${horarioInicio || ''}%`
           },  */ 
@@ -89,10 +95,33 @@ module.exports.aprovacoes=(async(req,res)=>{
             status: {
                 [Op.like]: `${status || ''}%`
             },
+          
+          
             
             
          },
-         include:[ 'reservas']
+         include:
+           {
+             model: models.Reserva,
+             as: 'reservas',
+             attributes:[
+               'status',
+               'horarioInicio'
+                            
+            ],
+            include:
+              {
+                model: models.Usuario,
+                as:'usuarios',
+                attributes:[
+                  'email'
+
+                ]
+              }
+             
+            },
+             
+          
          
      }) 
      console.log(resultados.length)

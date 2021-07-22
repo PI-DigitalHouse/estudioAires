@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
          * The `models/index` file will call this method automatically.
          */
         static associate(models) {
-
+            this.hasMany(models.Servico, {
+                foreignKey: 'idSolicitacao',
+                as: 'servicos'
+            }),
 
                 // Associação com Arquivo
                 this.hasMany(models.Arquivo, {
@@ -33,13 +36,14 @@ module.exports = (sequelize, DataTypes) => {
                 // Associação com Reserva
                 this.hasOne(models.Reserva, {
                     foreignKey: 'idReserva',
-                    as : 'reservas'
+                    as: 'reservas'
                 })
-                 // Associação com Membros
-                this.hasOne(models.Membro, {
-                    foreignKey: 'idMembro',
-                    as : 'membros'
-                })
+            // Associação com Membros
+            this.hasOne(models.Membro, {
+                foreignKey: 'idMembro',
+                as: 'membros'
+            })
+            
         }
     };
     Orcamento.init({
@@ -56,12 +60,13 @@ module.exports = (sequelize, DataTypes) => {
         status: DataTypes.STRING(45),
         contatoSessao: DataTypes.STRING(45),
         nomeContato: DataTypes.STRING(150),
+        telefoneContato: DataTypes.BIGINT,
         sessaoShooting: DataTypes.DATE,
         detalhes: DataTypes.STRING(300),
         reservas_idReserva: {
             type: DataTypes.INTEGER,
             foreignKey: true,
-            
+
 
         }
     }, {
