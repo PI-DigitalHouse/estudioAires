@@ -24,7 +24,7 @@ module.exports.bloquear = async (req, res, next) => {
   res.redirect('/');
 };
 
-module.exports.solicitacoes = async (req, res) => {
+module.exports.mostraJobs = async (req, res) => {
   const { idSolicitacao, endereco, valor, tamanhoImovel, sessaoShooting } =
     req.query;
   // Serviços contratados
@@ -97,18 +97,8 @@ module.exports.aprovacoes = async (req, res) => {
       telefoneContato: {
         [Op.like]: `${valor || ''}%`,
       },
-      /*   horarioInicio: {
-              [Op.like]: `${horarioInicio || ''}%`
-          },  */
-
-      /*  dataFinal: {
-                [Op.like]: `${dataFinal || ''}%`
-            }, */
-            
-            status: {
-                [Op.like]: `${status || ''}%`
-            },
-          
+      
+           
           
             
             
