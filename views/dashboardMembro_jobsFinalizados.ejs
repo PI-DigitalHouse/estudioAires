@@ -16,73 +16,78 @@
                     <p> Buscar: </p>
                     <input type="text" name="nome">
                 </div>
+                <% if (resultadosJobs) { %>
+                    <% for (resultado of resultadosJobs) { %>
+                        <div class="containerServico">
+                            <div class="containerEsquerda">
+                                <div class="servicoContratado1">
+                                    <h2>Número serviço: <%= resultado.idSolicitacao%>
+                                    </h2>
+                                    <div class="info">
+                                        <p class="tipo1">Endereço:
+                                        </p>
+                                        <p>
+                                            <%= resultado.endereco%>
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <p class="tipo1">Valor do serviço:</p>
+                                        <p>R$ <%= resultado.valor%>
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <p class="tipo1">Tamanho aproximado do imóvel:</p>
+                                        <p>
+                                            <%= resultado.valor%> m²
+                                        </p>
+                                    </div>
+                                    <div class="data">
+                                        <p class="tipo1">Data:</p>
+                                        <p>
+                                        </p>
+                                    </div>
+                                </div>
 
-                <div class="containerServico">
-                    <div class="containerEsquerda">
-                        <div class="servicoContratado1">
-                            <h2>Número serviço:
-                            </h2>
+                                <div class="servicoContratado2">
+                                    <br>
+                                    <div class="info">
+                                        <p class="tipo1">Serviços contratados:</p>
+                                        <p>
+                                        </p>
+                                    </div>
+                                </div>
 
-                            <div class="info">
-                                <p class="tipo1">Endereço:</p>
-                                <p>
-                                </p>
                             </div>
-                            <div class="info">
-                                <p class="tipo1">Valor do serviço:</p>
-                                <p>R$
-                                </p>
-                            </div>
-                            <div class="info">
-                                <p class="tipo1">Tamanho aproximado do imóvel:</p>
-                                <p>
-                                </p>
-                            </div>
-                            <div class="data">
-                                <p class="tipo1">Data:</p>
-                                <p>
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="servicoContratado2">
-                            <br>
-                            <div class="info">
-                                <p class="tipo1">Serviços contratados:</p>
-                                <p>
-                                </p>
+                            <div class="servicoContratado3">
+                                <div class="info">
+                                    <p class="tipo2"> Informações do (a) cliente </p>
+                                </div>
+                                <div class="info">
+                                    <p class="tipo1">Nome:</p>
+                                    <p>
+                                    </p>
+                                </div>
+                                <div class="info">
+                                    <p class="tipo1">Email:</p>
+                                    <p>
+                                    </p>
+                                </div>
+                                <div class="info">
+                                    <p class="tipo1">Telefone:</p>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="botoes">
+                                <div class="entregaveis">
+                                    <p> <a class="botoes-entregaveis-a" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
-
-                    <div class="servicoContratado3">
-                        <div class="info">
-                            <p class="tipo2"> Informações do (a) cliente </p>
-                        </div>
-                        <div class="info">
-                            <p class="tipo1">Nome:</p>
-                            <p>
-                            </p>
-                        </div>
-                        <div class="info">
-                            <p class="tipo1">Email:</p>
-                            <p>
-                            </p>
-                        </div>
-                        <div class="info">
-                            <p class="tipo1">Telefone:</p>
-                            <p>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="botoes">
-                        <div class="entregaveis">
-                            <p> <a class="botoes-entregaveis-a" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>
-                        </div>
-                    </div>
-                </div>
+                        <% } %>
+                            <% } %>
             </main>
     </body>
 

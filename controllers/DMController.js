@@ -50,12 +50,11 @@ module.exports.mostraJobs = async (req, res) => {
     include: {
       model: models.Reserva,
       as: 'reservas',
-      include:{
-        model:models.Usuario,
+      include: {
+        model: models.Usuario,
         as: 'usuarios',
         attributes: ['nome', 'email', 'telefone'],
-      }
-     
+      },
     },
     dadosMembro: req.session.membro,
   });
@@ -102,45 +101,24 @@ module.exports.aprovacoes = async (req, res) => {
       telefoneContato: {
         [Op.like]: `${valor || ''}%`,
       },
-      
-           
-          
-            
-            
-         },
-         include:
-           {
-             model: models.Reserva,
-             as: 'reservas',
-             attributes:[
-               'status',
-               'horarioInicio'
-                            
-            ],
-            include:
-              {
-                model: models.Usuario,
-                as:'usuarios',
-                attributes:[
-                  'email'
+    },
+    include: {
+      model: models.Reserva,
+      as: 'reservas',
+      attributes: ['status', 'horarioInicio'],
+      include: {
+        model: models.Usuario,
+        as: 'usuarios',
+        attributes: ['email'],
+      },
+    },
+  });
+  console.log(resultados.length);
 
-                ]
-              }
-             
-            },
-             
-          
-         
-     }) 
-     console.log(resultados.length)
-     
-      res.render('dashboardMembro_aprovacoes', {
-        resultados,
-        title: 'Minha Agenda',
-        dadosUsuario: req.session.usuario,
-        dadosMembro: req.session.membro })
-  
-
-
-
+  res.render('dashboardMembro_aprovacoes', {
+    resultados,
+    title: 'Minha Agenda',
+    dadosUsuario: req.session.usuario,
+    dadosMembro: req.session.membro,
+  });
 };
