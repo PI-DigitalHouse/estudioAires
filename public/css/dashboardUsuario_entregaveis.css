@@ -44,8 +44,8 @@ input{
 }
 
 .tipo1{
-    border: 1.5px solid #FC7600;
-    background-color:#FC7600;
+    border: 1.5px solid ;
+    
     border-radius: 10px;
     padding: 5px;
     font-size: 16rem;
@@ -53,23 +53,16 @@ input{
     width: 100px;
 }
 
-.tipo1:hover{
-    background-color: #fa8d2e;
-    border: 1.5px solid #fa8d2e;
-}
+
 
 
 .tipo2{
     border: 1.5px solid #BFBFBF;
-    background-color: white;
+    background-color: #FC7600;
     border-radius: 10px;
-    padding: 5px;
+    padding: 15px;
     font-size: 16rem;
     color: black;
-    width: 100px
+    width: 150px
 }
 
-.tipo2:hover{
-    background-color:#d4d4d4;
-    border: 1.5px solid #d4d4d4;
-}

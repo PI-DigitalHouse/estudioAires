@@ -6,18 +6,26 @@
     <%- include partials/headerAreaRestritaMembros.ejs %>
     <% if (resultados) { %> 
     <% for (resultado of resultados) { %> 
-        <div id="containerServico">
+        <div id="containerServico1">
+            
             <div class="containerEsquerda">
+                
                 <div class="servicoContratado1">
-                    <h2>Número serviço: <%=resultado.idSolicitacao%></h2>
+                   <h4>Número serviço: <%=resultado.idSolicitacao%></h4>
+                    <div class="info">
+                        <p class="tipo3"> Informações da sessao:</p>
+                    </div>
+                    
+                    <p class="tipo1">Data e horario agendado: </p>
+                    <p><%=resultado.reservas.horarioInicio%></p>
                 
                     <div class="info">
-                        <p class="tipo1">Endereço:</p>                        
-                        <p><%=resultado.endereco%> </p>
+                        <p class="tipo1">Endereço:  </p>                        
+                        <p><%=resultado.endereco%></p>
                     </div>
                     <div class="info">
-                        <p class="tipo1">Valor do serviço:</p>
-                        <p>R$ <%=resultado.valor%> </p>
+                        <p class="tipo1">Valor do serviço: </p>
+                        <p>R$ <%=resultado.valor%></p>
                     </div>
                     <div class="info">
                         <p class="tipo1">Tamanho aproximado do imóvel:</p>
@@ -29,10 +37,10 @@
                     </div>
                 </div>
     
-                <div class="servicoContratado2">
+                <div class="servicoContratado1">
                     
                     <div class="info">
-                        <p class="tipo2"> Informações do (a) cliente </p>
+                        <p class="tipo3"> Informações do (a) cliente </p>
                     </div>
                     <div class="info">
                         <p class="tipo1">Nome do responsavel que acompanhará a sessao :</p>
@@ -46,18 +54,18 @@
                         <p class="tipo1">Telefone:</p>
                         <p><%=resultado.telefoneContato%></p>
                     </div>
+                    <form>
+                        <input class = "botoes-2" type="file" multiple="multiple">
+                    </form>
                 </div>
             </div>   
 
             <div class="containerCentro">
             
-                <p class="tipo1">Data e horario agendado:</p>
-                <p><%=resultado.reservas.horarioInicio%></p>
+             
 
                 <div class="botoes" style="width: 150px; height: 18px;">
-                    <form>
-                        <input class = "botoes-2" type="file" multiple="multiple">
-                    </form>
+                   
                         
         <!--             < for(let i = 0; i<aprovacao.horariosSelecionados.length ; i ++){ %>  
                         <div>
@@ -72,11 +80,11 @@
             <div class="containerDireita">
                 <div class="botoes">
                     <div class="entregaveis">
-                       
-                    </div> 
+                        <p> <a class="btn-end" href="."> FINALIZAR </a></p>
+                    </div>
                    
                 </div>
-                <a href="dashboardMembro_modal.html" class="informacoes">Mais informações</a>
+       
             </div>
         
         </div>

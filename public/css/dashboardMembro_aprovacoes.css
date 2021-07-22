@@ -17,26 +17,28 @@ html{
     
 }
 
+
 body{
     font-size: 20rem;
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
 }
 
-#containerServico{
+#containerServico1{
     display: flex;
+    height: fit-content;
     border: 2px solid #fff ;
     margin: 20px;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color:white;
-    justify-content: space-around;
+   justify-content:center; 
 }
 
 .containerEsquerda{
     display: flex;
     width: 40%;
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
 h3{
@@ -44,22 +46,52 @@ h3{
 }
 
 #servicoContratado__tipo--ajuste{
-    width: 70%;
+    width: 100%;
+}
+
+.info{
+    width: 600px;
+  
+
+}
+
+.btn-end{
+    background-color: #FC7600;
+}
+.tipo3{
+    border: 1.5px solid #BFBFBF;
+    background-color: #FC7600;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16rem;
+    color: black;
+    width: 50px;
 }
 
 .servicoContratado1{
-    margin-top: 10px;
+    display: flex;
+    border: 0.2px solid ;
+    width: 550px;
+    margin-top: 5px;
     margin-bottom: 10rem;
+    padding: 15px;
+    height: 580px;
 }
 
 .servicoContratado1 .info p{ 
     display: inline;
 }
+.info{
+    margin-top: 20px;
+    height: fit-content;
+}
 
 .tipo1{
     font-weight: bold;
+    width: 380px;
     margin-bottom: 0rem;
-    font-size: 20rem;
+    font-size: 15rem;
+    height: fit-content;
     
 }
 
