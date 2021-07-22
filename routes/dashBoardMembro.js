@@ -68,7 +68,7 @@ const models = require('../models');
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
-const {calendario, bloquear, solicitacoes,  aprovacoes} = require('../controllers/DMController');
+const {calendario, bloquear, aprovacoes, mostraJobs} = require('../controllers/DMController');
 const {loginMembro, logarMembro} =require('../controllers/autenticacaoMembro')
 const checkSessionMembro = require('../middlewares/checkMembro') 
 const session = require('express-session');
@@ -95,7 +95,7 @@ router.get('/meuPerfil',checkSessionMembro, function(req, res, next){
 
 
 //Membro -> jobs finalizados
-router.get('/jobsFinalizados', checkSessionMembro, solicitacoes)
+router.get('/jobsFinalizados', checkSessionMembro, mostraJobs)
 
 /*dentro dessa função eu preciso puxar os dados do usuário logado, imprimi-los no formulário de 
 alteração de dados e tornar esses mesmos campos preenchidos editáveis*/ 
