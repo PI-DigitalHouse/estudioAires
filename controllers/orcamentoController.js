@@ -32,7 +32,7 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   const dadosDoFormulario = req.body
 
 
-  const {valor} =req.query
+  const {valor, idUsuario} =req.query
   
 
 
@@ -42,30 +42,10 @@ module.exports.novoOrcamento = (async (req,res,next) => {
     },
     
   })
- 
+  
   req.body.horarioFinal = req.body.horarioInicio
   let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
-  
-  /* for (let i =0; i < juncao.length; i++){
-    if (juncao[i] == 'fotografia'){
-      juncaoServico= 1
-      continue
-    }
-    else if(juncao[i] == 'videoDinamico'){
-      let videoDinamico= 1
-      continue
-    }
-    else if(juncao[i] == 'fotografia3603d'){
-     let fotografia3603d = 1
-      continue
-    }
-    else if(juncao[i] == 'imagensAereas'){
-      let imagensAereas = 1
-      continue
-    }
-    return
-  } */
- //reservas
+
 console.log(newService.valor)
 console.log(dadosDoFormulario.servico)
 console.log(juncao.length) //percorrendo o array e trazendo a quantidade de servico que tem nele
@@ -73,54 +53,31 @@ console.log(juncao.length) //percorrendo o array e trazendo a quantidade de serv
 
   const resultado = calculaOrcamento(dadosDoFormulario.tamanhoImovel, newService.valor, juncao.length )
   //req.body.valor = resultado
-  //console.log(resultado)
+
 
  dadosDoFormulario.valor = resultado
- dadosDoFormulario.reservadoPor =  1//req.session.usuario.idUsuario
+ dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
  dadosDoFormulario.aceitoPor = 1
  dadosDoFormulario.membros_idMembro = 1
  dadosDoFormulario.status ='active'
 
-       
-  
-  
-  //console.log(juncao)
-  
-
-  //console.log(dadosDoFormulario)
   const reservas = await models.Reserva.create(dadosDoFormulario)
 
   if (!reservas) {
     res.render('orcamento')
     return
   }
+  
   dadosDoFormulario.reservas_idReserva=reservas.idReserva
   
-  
   await models.Orcamento.create(dadosDoFormulario)
-/* 
-  if (dadosDoFormulario) {
-    res.render('/', {
-        value: resultado
-        
-    } 
-    ) 
-    return */
 
- 
-  //salvarUsuario(orcamentosCadastrados)  //chamar a funcao para salvar o orcamento no JSON
   res.redirect('/') //redireciiona para home
  
 
 })
 
 
-
-/*function salvarUsuario (usuario){
-    const str = JSON.stringify(usuario) //transforma usuario em string
-    fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
-    
-  }*/
 
  function calculaOrcamento(tamanhoImovel, servico, valor ){
     

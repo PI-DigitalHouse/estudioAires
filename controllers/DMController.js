@@ -48,9 +48,14 @@ module.exports.mostraJobs = async (req, res) => {
       // },
     },
     include: {
-      model: models.Usuario,
-      as: 'usuarios',
-      attributes: ['nome', 'email', 'telefone'],
+      model: models.Reserva,
+      as: 'reservas',
+      include:{
+        model:models.Usuario,
+        as: 'usuarios',
+        attributes: ['nome', 'email', 'telefone'],
+      }
+     
     },
     dadosMembro: req.session.membro,
   });
