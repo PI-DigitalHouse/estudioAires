@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <link rel="stylesheet" href="../css/partials/header.css">  
     <%- include partials/head.ejs %>
 <body>
     <%- include partials/headerAreaRestritaMembros.ejs %>
@@ -34,11 +35,11 @@
                         <p class="tipo2"> Informações do (a) cliente </p>
                     </div>
                     <div class="info">
-                        <p class="tipo1">Nome :</p>
+                        <p class="tipo1">Nome do responsavel que acompanhará a sessao :</p>
                         <p><%=resultado.nomeContato%></p>
                     </div>
                     <div class="info">
-                        <p class="tipo1">Email:</p>
+                        <p class="tipo1">Email do usuario que reservou a sessao:</p>
                         <p><%=resultado.reservas.usuarios.email%></p>
                     </div>
                     <div class="info">

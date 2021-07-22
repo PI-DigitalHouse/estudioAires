@@ -112,7 +112,7 @@ module.exports.aprovacoes=(async(req,res)=>{
      
       res.render('dashboardMembro_aprovacoes', {
         resultados,
-        title: 'Aprovações',
+        title: 'Minha Agenda',
         dadosUsuario: req.session.usuario,
         dadosMembro: req.session.membro })
     

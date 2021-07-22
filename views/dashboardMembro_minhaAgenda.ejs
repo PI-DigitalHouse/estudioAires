@@ -17,219 +17,104 @@
             <div class="link-calendario"><a href="http://localhost:3000/dashboardMembro/calendario">Bloquear calendario</a></div>
         </div>
 
-        <div class="containerServico">
-            <div class="containerEsquerda">
-                <div class="servicoContratado1">
-                    <h2>Número serviço: 00002</h2>
-                
-                    <div class="info">
-                        <p class="tipo1">Endereço:</p>
-                        <p>Rua X</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Valor do serviço:</p>
-                        <p>R$ 500,00</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Tamanho do imóvel:</p>
-                        <p>400 m²</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Data do serviço</p>
-                        <p>5 de março 2020</p>
-                    </div>
-                    <div class="info">
-                    <p class="tipo1">Valor:</p>
-                    <p>R$ 500,00</p>
-                    </div>
-                </div>
-                <div class="servicoContratado2">
-                    <br>
-                    <div class="info">
-
-                        <p class="tipo1">Serviços contratados:</p>
-                            <ul>
-                                <li>Fotografia</li>
-                                <li>Fotografia 3d</li>
-                                <li>Vídeo</li>
-                            </ul>
-                    </div>
-                </div>
-                <div class="servicoContratado3">
-                    <div class="info">
-                        <p class="tipo2"> Informações do (a) cliente </p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Nome:</p>
-                        <p>Maria da Silva</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Email:</p>
-                        <p>mdasilva@gmail.com</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Telefone:</p>
-                        <p>+55 00 00000 0000</p>
-                    </div>
+        <% if (resultados) { %> 
+            <% for (resultado of resultados) { %> 
+                <div id="containerServico">
+                    <div class="containerEsquerda">
+                        <div class="servicoContratado1">
+                            <h2>Número serviço: <%=resultado.idSolicitacao%></h2>
                         
-
-
-
-                </div>
-                        <div class="botoes">
-                            <form>
-                                <input class = "botoes-2" type="file" multiple="multiple">
-                            </form>
-                            <div class="botoes-1">
-                                <p>Finalizar</p> 
+                            <div class="info">
+                                <p class="tipo1">Endereço:</p>                        
+                                <p><%=resultado.endereco%> </p>
+                            </div>
+                            <div class="info">
+                                <p class="tipo1">Valor do serviço:</p>
+                                <p>R$ <%=resultado.valor%> </p>
+                            </div>
+                            <div class="info">
+                                <p class="tipo1">Tamanho aproximado do imóvel:</p>
+                                <p><%=resultado.tamanhoImovel%>  m²</p>
+                            </div>
+                            <div class="info">
+                                <p class="tipo1">Serviços contratados:</p>
+                                <p><%=resultado.tamanhoImovel%>  m²</p>
                             </div>
                         </div>
-
-
-            </div>
             
-        </div>
-        <div class="containerServico">
-            <div class="containerEsquerda">
-                <div class="servicoContratado1">
-                    <h2>Número serviço: 00002</h2>
-                
-                    <div class="info">
-                        <p class="tipo1">Endereço:</p>
-                        <p>Rua X</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Valor do serviço:</p>
-                        <p>R$ 500,00</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Tamanho do imóvel:</p>
-                        <p>400 m²</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Data do serviço</p>
-                        <p>5 de março 2020</p>
-                    </div>
-                    <div class="info">
-                    <p class="tipo1">Valor:</p>
-                    <p>R$ 500,00</p>
-                    </div>
-                </div>
-                <div class="servicoContratado2">
-                    <br>
-                    <div class="info">
-
-                        <p class="tipo1">Serviços contratados:</p>
-                            <ul>
-                                <li>Fotografia</li>
-                                <li>Fotografia 3d</li>
-                                <li>Vídeo</li>
-                            </ul>
-                    </div>
-                </div>
-                <div class="servicoContratado3">
-                    <div class="info">
-                        <p class="tipo2"> Informações do (a) cliente </p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Nome:</p>
-                        <p>Maria da Silva</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Email:</p>
-                        <p>mdasilva@gmail.com</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Telefone:</p>
-                        <p>+55 00 00000 0000</p>
-                    </div>
-                        
-
-
-
-                </div>
-                        <div class="botoes">
-                            <form>
-                                <input class = "botoes-2" type="file" multiple="multiple">
-                            </form>
-                            <div class="botoes-1">
-                                <p>Finalizar</p> 
+                        <div class="servicoContratado2">
+                            
+                            <div class="info">
+                                <p class="tipo2"> Informações do (a) cliente </p>
+                            </div>
+                            <div class="info">
+                                <p class="tipo1">Nome :</p>
+                                <p><%=resultado.nomeContato%></p>
+                            </div>
+                            <div class="info">
+                                <p class="tipo1">Email:</p>
+                                <p><%=resultado.reservas.usuarios.email%></p>
+                            </div>
+                            <div class="info">
+                                <p class="tipo1">Telefone:</p>
+                                <p><%=resultado.telefoneContato%></p>
                             </div>
                         </div>
-
-
-            </div>
-            
-        </div>
-        <div class="containerServico">
-            <div class="containerEsquerda">
-                <div class="servicoContratado1">
-                    <h2>Número serviço: 00002</h2>
-                
-                    <div class="info">
-                        <p class="tipo1">Endereço:</p>
-                        <p>Rua X</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Valor do serviço:</p>
-                        <p>R$ 500,00</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Tamanho do imóvel:</p>
-                        <p>400 m²</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Data do serviço</p>
-                        <p>5 de março 2020</p>
-                    </div>
-                    <div class="info">
-                    <p class="tipo1">Valor:</p>
-                    <p>R$ 500,00</p>
-                    </div>
-                </div>
-                <div class="servicoContratado2">
-                    <br>
-                    <div class="info">
-
-                        <p class="tipo1">Serviços contratados:</p>
-                            <ul>
-                                <li>Fotografia</li>
-                                <li>Fotografia 3d</li>
-                                <li>Vídeo</li>
-                            </ul>
-                    </div>
-                </div>
-                <div class="servicoContratado3">
-                    <div class="info">
-                        <p class="tipo2"> Informações do (a) cliente </p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Nome:</p>
-                        <p>Maria da Silva</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Email:</p>
-                        <p>mdasilva@gmail.com</p>
-                    </div>
-                    <div class="info">
-                        <p class="tipo1">Telefone:</p>
-                        <p>+55 00 00000 0000</p>
                     </div>   
-                </div>
-
-                <div class="botoes">
-                    <form>
-                        <input class = "botoes-2" type="file" multiple="multiple">
-                    </form>
-                    <div class="botoes-1">
-                        <p>Finalizar</p> 
+        
+                    <div class="containerCentro">
+                    
+                        <p class="tipo1">Data e horario agendado:</p>
+                        <p><%=resultado.reservas.horarioInicio%></p>
+        
+                        <div class="botoes" style="width: 150px; height: 18px;">
+                            <form>
+                                <input class = "botoes-2" type="file" multiple="multiple">
+                            </form>
+                                
+                <!--             < for(let i = 0; i<aprovacao.horariosSelecionados.length ; i ++){ %>  
+                                <div>
+                                    <input type="radio" id = "horario1" name="answer">
+                                    <label>< aprovacao.horariosSelecionados[i] </label> 
+                                </div>
+                            } > 
+                             -->
+                        </div>
+                    </div>
+        
+                    <div class="containerDireita">
+                        <div class="botoes">
+                            <div class="entregaveis">
+                               
+                            </div> 
+                           
+                        </div>
+                        <a href="dashboardMembro_modal.html" class="informacoes">Mais informações</a>
+                    </div>
+                    <div class="botoes">
+                        <form>
+                            <input class = "botoes-2" type="file" multiple="multiple">
+                        </form>
+                        <div class="botoes-1">
+                            <p>Finalizar</p> 
+                        </div>
                     </div>
                 </div>
-                    
+            <% } %> 
+            <% } else { %>
+                 <div id="containerServico">
+        
+                    <div class="servicoContratado1">
+                        <h2>Ops! Voce ainda nao tem novas solicitacoes</h2>
+                    </div>
+        
+                </div>
+                
+                <% } %> 
 
-            </div>
-            
-        </div>
+                </div>
+                     
+
     </main>
 </body>
 </html>

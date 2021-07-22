@@ -88,15 +88,10 @@ router.get('/meuPerfil',checkSessionMembro, function(req, res, next){
     dadosMembro: req.session.membro   });
 })
 
-router.get('/minhaAgenda', checkSessionMembro, function(req, res, next){
-    res.render('dashboardMembro_minhaAgenda', {
-        title : 'Minha Agenda',
-        dadosUsuario: req.session.usuario,
-    dadosMembro: req.session.membro 
-    });
-});
+/* router.get('/minhaAgenda', checkSessionMembro, aprovacoes); */
 
-router.get('/aprovacoes', checkSessionMembro, aprovacoes );
+
+ router.get('/aprovacoes', checkSessionMembro, aprovacoes );
 
 
 //Membro -> jobs finalizados
