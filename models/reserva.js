@@ -21,9 +21,9 @@ module.exports = (sequelize, DataTypes) => {
                 this.belongsTo(models.Usuario, {
                     foreignKey: 'aceitoPor',
                     id: 'idUsuario',
-                   
+
                 })
-              
+
         }
     };
     Reserva.init({
@@ -39,16 +39,9 @@ module.exports = (sequelize, DataTypes) => {
             },
             allowNull: false
         },
-        aceitoPor: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'Usuarios'
-            },
-            allowNull: false
-        },
         horarioInicio: DataTypes.DATE,
         horarioFinal: DataTypes.DATE,
-        membros_idMembro:  DataTypes.INTEGER,
+        membros_idMembro: DataTypes.INTEGER,
         status: DataTypes.STRING(150)
     }, {
         sequelize,
