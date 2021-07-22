@@ -27,12 +27,7 @@ module.exports.bloquear = async (req, res, next) => {
 module.exports.solicitacoes = async (req, res) => {
   const { idSolicitacao, endereco, valor, tamanhoImovel, sessaoShooting } =
     req.query;
-  const { idUsuario, nome, email, telefone } = req.query;
-
   // Serviços contratados
-  // Nome do cliente
-  // E-mail do cliente
-  // Telefone do usuario
 
   const resultadosJobs = await models.Orcamento.findAll({
     where: {
@@ -48,9 +43,14 @@ module.exports.solicitacoes = async (req, res) => {
       valor: {
         [Op.like]: `${valor || ''}%`,
       },
-      sessaoShooting: {
-        [Op.like]: `${sessaoShooting || ''}%`,
-      },
+      // sessaoShooting: {
+      //   [Op.like]: `${sessaoShooting || ''}%`,
+      // },
+    },
+    include: {
+      model: models.Usuario,
+      as: 'usuarios',
+      attributes: ['nome', 'email', 'telefone'],
     },
     dadosMembro: req.session.membro,
   });
@@ -58,7 +58,8 @@ module.exports.solicitacoes = async (req, res) => {
 
   res.render('dashBoardMembro_jobsFinalizados', {
     title: 'Meus jobs finalizados',
-    // dadosMembro: req.session.membro
+    dadosUsuario: req.session.usuario,
+    dadosMembro: req.session.membro,
     resultadosJobs,
   });
 };
