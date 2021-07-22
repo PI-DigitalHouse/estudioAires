@@ -2,6 +2,7 @@ const bcrypt =require('bcrypt'); //chamando a lib para crip de hash de cadastro
 const session = require('express-session');
 const fs =require ('fs'); //lib para manipular arquivo do sistema operacional
 const models = require('../models');
+const { Op } = require('sequelize')
 
 var orcamentosCadastrados=[]; 
 
@@ -42,18 +43,34 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   let status = req.body.status= 'active';
   const dadosDoFormulario = req.body
   const tamanhoImovel = req.body.tamanhoImovel
-  var fotografia = 0
+  /*var fotografia = 0
   var fotografia3603d = 0
   var videoDinamico = 0
-  var imagensAereas = 0
+  var imagensAereas = 0*/
+
+  const { idServico, valor} = req.query
+
+  const valores = await models.Servico.findAll({
+    where:{
+      idServico:{
+        [Op.like]: `${idServico || ''}%`
+      },
+      valor:{
+        [Op.like]: `${valor || ''}%`
+      }
+    }
+  })
+
+
+//console.log(valores)
+console.log(valores.dataValues)
+
 
  req.body.horarioFinal = req.body.horarioInicio
-
-
   const juncao = orcamentosCadastrados.concat(servicos)
   
 
-  for (let i =0; i < juncao.length; i++){
+  /*for (let i =0; i < juncao.length; i++){
     if (juncao[i] == 'fotografia'){
       let fotografia = 0.2
       continue
@@ -71,16 +88,16 @@ module.exports.novoOrcamento = (async (req,res,next) => {
       continue
     }
     return
-  }
+  }*/
  //reservas
 
 
-  const resultado = calculaOrcamento(tamanhoImovel, fotografia, videoDinamico,fotografia3603d, imagensAereas )
-  req.body.valor = resultado
-  console.log(resultado)
+  //const resultado = calculaOrcamento(tamanhoImovel, fotografia, videoDinamico,fotografia3603d, imagensAereas )
+  //req.body.valor = resultado
+  //console.log(resultado)
 
 
- dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
+ dadosDoFormulario.reservadoPor =  1//req.session.usuario.idUsuario
  dadosDoFormulario.aceitoPor = 1
  dadosDoFormulario.membros_idMembro = 1
 
@@ -91,7 +108,7 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   //console.log(juncao)
   
 
-  console.log(dadosDoFormulario)
+  //console.log(dadosDoFormulario)
   const reservas = await models.Reserva.create(dadosDoFormulario)
 
   if (!reservas) {
