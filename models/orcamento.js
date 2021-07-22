@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
       status: DataTypes.STRING(45),
       contatoSessao: DataTypes.STRING(45),
       nomeContato: DataTypes.STRING(150),
-      //   telefoneContato: DataTypes.BIGINT,
+      telefoneContato: DataTypes.BIGINT,
       sessaoShooting: DataTypes.DATE,
       detalhes: DataTypes.STRING(300),
       reservas_idReserva: {
