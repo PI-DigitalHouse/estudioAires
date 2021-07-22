@@ -8,30 +8,29 @@
                 <% } %> > <a href="/dashboardMembro/aprovacoes">Minha Agenda</a></li>
            
             <li <% if (title==='Meus jobs finalizados' ) { %> id='selected'
-                <% } %> ><a href="/dashboardMembro/jobsFinalizados">Jobs Finalizados</a></li>
+                <% } %> ><a href="/dashboardMembro/jobsFinalizados">Jobs Finalizados</a>
+            </li>
         </ul>
     </nav>
-    
-    <div class="dropdown"> 
-                 
+
+    <div class="dropdown">
+
         <div class="dropdown a">
-            <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a"> 
-                 Olá, <%= dadosMembro.nome %>! ▼</button>
+            <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
+                Olá, <%= dadosMembro.nome %>! ▼</button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="/dashboardMembro/meuPerfil">Meu Perfil</a>
-              <a href="/dashboardMembro/Aprovacoes">Aprovações</a>
-              <a href="/dashboardMembro/minhaAgenda">Minha Agenda</a>
-              <a href="/logout">Sair</a>
+                <a href="/dashboardMembro/meuPerfil">Meu Perfil</a>
+                <a href="/dashboardMembro/Aprovacoes">Aprovações</a>
+                <a href="/dashboardMembro/minhaAgenda">Minha Agenda</a>
+                <a href="/logout">Sair</a>
             </div>
-          </div>
-        
-
-</div>
-        
+        </div>
 
 
-</div>
-<script src="/js/user-partials.js"></script>
+    </div>
+
+
+
+    </div>
+    <script src="/js/user-partials.js"></script>
 </header>
-
-

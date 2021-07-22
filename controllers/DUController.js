@@ -204,6 +204,8 @@ function hash(obj) {
 async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
 };
+
+//Busca solicitações no banco.
 module.exports.mostrarSolicitacoes = (async(req, res) => {
 
     const { idSolicitacao, endereco, tamanhoImovel, valor, /* dataInicio  dataFinal,*/ pagamento, status } = req.query
