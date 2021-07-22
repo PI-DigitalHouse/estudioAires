@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include partials/head.ejs %>
+<%= include partials/head.ejs %>
 
     <body>
-        <%- include partials/headerAreaRestritaMembros.ejs %>
+        <%= include partials/headerAreaRestritaMembros.ejs %>
             <main>
                 <div class="ordenacao">
                     <div class="cronos">
@@ -17,36 +17,30 @@
                     <input type="text" name="nome">
                 </div>
 
-                <!-- for (solicitacao of solicitacoes) { -->
                 <div class="containerServico">
                     <div class="containerEsquerda">
                         <div class="servicoContratado1">
                             <h2>Número serviço:
-                                <!-- solicitacoes.idSolicitacao%> -->
                             </h2>
 
                             <div class="info">
                                 <p class="tipo1">Endereço:</p>
                                 <p>
-                                    <!-- solicitacoes.endereco%> -->
                                 </p>
                             </div>
                             <div class="info">
                                 <p class="tipo1">Valor do serviço:</p>
                                 <p>R$
-                                    <!--solicitacoes.valorDoServico%>-->
                                 </p>
                             </div>
                             <div class="info">
                                 <p class="tipo1">Tamanho aproximado do imóvel:</p>
                                 <p>
-                                    <!-- solicitacoes.tamanhoImovel%> m² -->
                                 </p>
                             </div>
                             <div class="data">
                                 <p class="tipo1">Data:</p>
                                 <p>
-                                    <!-- solicitacoes.data%> -->
                                 </p>
                             </div>
                         </div>
@@ -56,7 +50,6 @@
                             <div class="info">
                                 <p class="tipo1">Serviços contratados:</p>
                                 <p>
-                                    <!-- solicitacoes.servicosContratados -->
                                 </p>
                             </div>
                         </div>
@@ -70,19 +63,16 @@
                         <div class="info">
                             <p class="tipo1">Nome:</p>
                             <p>
-                                <!-- jobs.nomeCliente -->
                             </p>
                         </div>
                         <div class="info">
                             <p class="tipo1">Email:</p>
                             <p>
-                                <!-- jobs.emailCliente -->
                             </p>
                         </div>
                         <div class="info">
                             <p class="tipo1">Telefone:</p>
                             <p>
-                                <!-- jobs.telefoneCliente%> -->
                             </p>
                         </div>
                     </div>
@@ -92,10 +82,7 @@
                             <p> <a class="botoes-entregaveis-a" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>
                         </div>
                     </div>
-
                 </div>
-                <!-- }  -->
-
             </main>
     </body>
 
