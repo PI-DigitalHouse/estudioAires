@@ -10,60 +10,56 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.hasMany(models.Servico, {
         foreignKey: 'idSolicitacao',
-        as: 'servicos'
+        as: 'servicos',
       }),
         this.hasMany(models.Arquivo, {
           foreignKey: 'idSolicitacao',
-          targetKey: 'idSolicitacao'
+          targetKey: 'idSolicitacao',
         }),
-
         // Associação com Pagamento
         this.hasOne(models.Pagamento, {
           foreignKey: 'idSolicitacao',
-          targetKey: 'idSolicitacao'
+          targetKey: 'idSolicitacao',
         }),
-
         // Associação com Servico
         this.hasMany(models.Servico, {
           foreignKey: 'idSolicitacao',
-          targetKey: 'idSolicitacao'
+          targetKey: 'idSolicitacao',
         }),
-
         // Associação com Reserva
         this.hasOne(models.Reserva, {
           foreignKey: 'idReserva',
-          as: 'reservas'
-        })
+          as: 'reservas',
+        });
       // Associação com Membros
       this.hasOne(models.Membro, {
         foreignKey: 'idMembro',
-        as: 'membros'
-      })
-
+        as: 'membros',
+      });
     }
-  };
-  Orcamento.init({
-    idSolicitacao: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+  }
+  Orcamento.init(
+    {
+      idSolicitacao: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      endereco: DataTypes.STRING(300),
+      tamanhoImovel: DataTypes.STRING(45),
+      cep: DataTypes.STRING(9),
+      valor: DataTypes.DECIMAL(10, 0),
+      pagamento: DataTypes.STRING(30),
+      status: DataTypes.STRING(45),
+      contatoSessao: DataTypes.STRING(45),
+      nomeContato: DataTypes.STRING(150),
+      sessaoShooting: DataTypes.DATE,
+      detalhes: DataTypes.STRING(300),
+      reservas_idReserva: {
+        type: DataTypes.INTEGER,
+        foreignKey: true,
+      },
     },
-    endereco: DataTypes.STRING(300),
-    tamanhoImovel: DataTypes.STRING(45),
-    cep: DataTypes.STRING(9),
-    valor: DataTypes.DECIMAL(10, 0),
-    pagamento: DataTypes.STRING(30),
-    status: DataTypes.STRING(45),
-    contatoSessao: DataTypes.STRING(45),
-    nomeContato: DataTypes.STRING(150),
-    telefoneContato: DataTypes.BIGINT,
-    sessaoShooting: DataTypes.DATE,
-    detalhes: DataTypes.STRING(300),
-    reservas_idReserva: {
-      type: DataTypes.INTEGER,
-      foreignKey: true,
-    },
-  },
     {
       sequelize,
       modelName: 'Orcamento',
