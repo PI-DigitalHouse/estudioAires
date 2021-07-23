@@ -214,6 +214,7 @@
             
                 var date = new Date();
                 var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+                let horariosBloqueados = horariosBloqueados
             
                $('#picker1').datetimepicker({
                     timepicker: true,
@@ -236,29 +237,11 @@
                     dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
                   },
                   minDate: today,
+                  //disabledDates: horariosBloqueados,
             
             
                 })
             
-                $('#picker2').datetimepicker({
-                    
-                  timepicker: false,
-                  datepicker: false,
-                  format: 'Y-m-d H:i:s',
-                  showSecond: false,
-                  yearStart: 2021,
-                  yearEnd: 2022,
-                  step: 30,
-                  mask: true,
-                  lang: 'pt-BR',
-                  il8n: {
-                    month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-                    dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
-                  },
-                  minDate: today,
-            
-            
-                })
               </script>
 
     </body>
