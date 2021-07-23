@@ -32,7 +32,7 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   const dadosDoFormulario = req.body
 
 
-  const {valor, idUsuario} =req.query
+  const {valor, idUsuario}=req.query
   
 
 
@@ -56,7 +56,7 @@ console.log(juncao.length) //percorrendo o array e trazendo a quantidade de serv
 
 
  dadosDoFormulario.valor = resultado
- dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
+dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
  dadosDoFormulario.membros_idMembro = 1
  dadosDoFormulario.status ='active'
 
