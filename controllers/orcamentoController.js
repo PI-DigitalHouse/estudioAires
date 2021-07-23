@@ -57,7 +57,6 @@ console.log(juncao.length) //percorrendo o array e trazendo a quantidade de serv
 
  dadosDoFormulario.valor = resultado
  dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
- dadosDoFormulario.aceitoPor = 1
  dadosDoFormulario.membros_idMembro = 1
  dadosDoFormulario.status ='active'
 

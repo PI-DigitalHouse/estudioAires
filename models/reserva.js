@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
                     as: 'usuarios'
                 }),
 
-                // Associação com Usuario
+                // Associação com Membro
                 this.belongsTo(models.Usuario, {
-                    foreignKey: 'aceitoPor',
-                    id: 'idUsuario',
+                    foreignKey: 'membros_idMembro',
+                    id: 'idMembro',
                    
                 })
               
@@ -39,10 +39,10 @@ module.exports = (sequelize, DataTypes) => {
             },
             allowNull: false
         },
-        aceitoPor: {
+        membros_idMembro: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'Usuarios'
+                model: 'Membros'
             },
             allowNull: false
         },

@@ -131,7 +131,11 @@ module.exports.aprovacoes = async (req, res) => {
              
           
          
-     }) 
+     }
+     
+     ) 
+     
+
      console.log(resultados.length)
      
       res.render('dashboardMembro_aprovacoes', {
