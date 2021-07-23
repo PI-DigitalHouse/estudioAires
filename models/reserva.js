@@ -39,6 +39,13 @@ module.exports = (sequelize, DataTypes) => {
             },
             allowNull: false
         },
+        aceitoPor: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Usuarios'
+            },
+            allowNull: false
+        },
         horarioInicio: DataTypes.DATE,
         horarioFinal: DataTypes.DATE,
         membros_idMembro: DataTypes.INTEGER,
