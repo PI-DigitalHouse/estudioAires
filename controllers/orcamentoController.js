@@ -32,7 +32,7 @@ module.exports.novoOrcamento = (async (req,res,next) => {
   const dadosDoFormulario = req.body
 
 
-  const {valor, idUsuario} =req.query
+  const {valor, idUsuario}=req.query
   
 
 
@@ -42,7 +42,11 @@ module.exports.novoOrcamento = (async (req,res,next) => {
     },
     
   })
-  
+  const valorFront = calValorfront =()=>{
+    dadosDoFormulario.tamanhoImovel*(0.2+juncao.length)
+  }
+
+
   req.body.horarioFinal = req.body.horarioInicio
   let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
 
@@ -56,8 +60,7 @@ console.log(juncao.length) //percorrendo o array e trazendo a quantidade de serv
 
 
  dadosDoFormulario.valor = resultado
- dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
- dadosDoFormulario.aceitoPor = 1
+dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
  dadosDoFormulario.membros_idMembro = 1
  dadosDoFormulario.status ='active'
 

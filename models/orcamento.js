@@ -32,9 +32,9 @@ module.exports = (sequelize, DataTypes) => {
           as: 'reservas',
         });
       // Associação com Membros
-      this.hasOne(models.Usuario, {
-        foreignKey: 'reservadoPor',
-        as: 'usuarios',
+      this.hasOne(models.Membro, {
+        foreignKey: 'idMembro',
+        as: 'membros',
       });
     }
   }

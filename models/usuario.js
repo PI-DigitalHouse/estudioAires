@@ -19,14 +19,9 @@ module.exports = (sequelize, DataTypes) => {
                 this.hasOne(models.Reserva, {
                     foreignKey: 'reservadoPor',
                     targetKey: 'idUsuario',
-                    as : 'reservas'
-                }),
-                // Associação com Reservas
-                this.hasOne(models.Reserva, {
-                    foreignKey: 'aceitoPor',
-                    targetKey: 'idUsuario',
-                   
+                     as : 'reservas'
                 })
+             
         }
     };
     Usuario.init({
