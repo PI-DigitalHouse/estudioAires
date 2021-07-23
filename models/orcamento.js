@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         this.hasMany(models.Servico, {
           foreignKey: 'idSolicitacao',
           targetKey: 'idSolicitacao',
+          as: 'services',
         }),
         // Associação com Reserva
         this.hasOne(models.Reserva, {
