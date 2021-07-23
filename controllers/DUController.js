@@ -208,9 +208,17 @@ async function compareHash(senha, hash) {
 //Busca solicitações no banco.
 module.exports.mostrarSolicitacoes = (async(req, res) => {
 
-    const { idSolicitacao, endereco, tamanhoImovel, valor, /* dataInicio  dataFinal,*/ pagamento, status } = req.query
+    const { 
+        idSolicitacao,
+        endereco,
+        tamanhoImovel,
+        valor,
+        pagamento, 
+        horarioInicio,
+        status } = 
+        req.query
 
-    const resultados = await models.Orcamento.findAll({
+    const resultadoOrcamentos = await models.Orcamento.findAll({
         where: {
             idSolicitacao: {
                 [Op.like]: `${idSolicitacao || ''}%`
@@ -240,9 +248,18 @@ module.exports.mostrarSolicitacoes = (async(req, res) => {
 
 
         },
-        dadosUsuario: req.session.usuario
+        include: {
+            model: models.Reserva,
+            as: 'reservas',
+            attributes: ['status', 'horarioInicio'],
+        },
+        
+    });
+   
+    res.render('dashboardUsuario_solicitacoes', 
+    { resultadoOrcamentos,
+        title: 'Solicitacoes',
+     dadosUsuario: req.session.usuario
     })
-    console.log(resultados.length)
-    res.render('dashboardUsuario/solicitacoes/:idUsuario', { resultados })
 
 })

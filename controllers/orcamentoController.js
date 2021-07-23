@@ -42,7 +42,11 @@ module.exports.novoOrcamento = (async (req,res,next) => {
     },
     
   })
-  
+  const valorFront = calValorfront =()=>{
+    dadosDoFormulario.tamanhoImovel*(0.2+juncao.length)
+  }
+
+
   req.body.horarioFinal = req.body.horarioInicio
   let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
 

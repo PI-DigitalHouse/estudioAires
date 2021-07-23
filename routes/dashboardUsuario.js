@@ -9,7 +9,7 @@ const checkSession = require('../middlewares/checkSession')
 router.get('/entregaveis/:idServico', checkSession, listEntregaveis);
 
 // Solicitações
-router.get('/solicitacoes/:idUsuario', checkSession, listSolicitacoes); 
+router.get('/solicitacoes/:idUsuario', checkSession, mostrarSolicitacoes); 
 /* router.get('/solicitacoes/:idUsuario', checkSession, mostrarSolicitacoes);*/
 
 // Recuperação de Senha
