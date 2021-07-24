@@ -7,7 +7,7 @@
 
 body{
     font-family: "Lato", sans-serif;
-    font-size: 16rem;
+    /* font-size: 16rem; */
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
     padding: 0;
@@ -51,7 +51,7 @@ main{
 
 .bolaOk.finish {
      color:rgb(68, 173, 68);
-     font-size: 0px;
+     /* font-size: 0px; */
      border: green; 
     background-image: url("../img/Vector.png");
     
@@ -64,7 +64,7 @@ main{
     height: 2em;
     margin-top: 36px; 
     font-weight: bold;
-    font-size: 14px;
+    /* font-size: 14px; */
     padding: 5px;
 }
 

@@ -6,7 +6,7 @@
 
 body{
     font-family: "Lato", sans-serif;
-    font-size: 20rem;
+    /* font-size: 20rem; */
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
     width: 100%;
@@ -42,7 +42,7 @@ h1{
 
 .du-meuPerfil-info-secao p{
     margin-top: 5px;
-    font-size: 20rem;
+    /* font-size: 20rem; */
 }
 
 .du-meuPerfil-info-secao-icone{
@@ -54,7 +54,7 @@ h1{
 }
 
 .du-meuPerfil-info-secao-titulo{
-    font-size: 14rem;
+    /* font-size: 14rem; */
     color: #949494;
     margin-bottom: 0px;
 }
@@ -143,7 +143,7 @@ footer{
 }
 
 .footer-col h4{
-    font-size: 18px;
+    /* font-size: 18px; */
     font-family: 'Lato', sans-serif;
     color: #FC7600;
     text-transform: capitalize;
@@ -168,7 +168,7 @@ footer{
 }
 
 .footer-col ul li a{
-    font-size: 16px;
+    /* font-size: 16px; */
     font-family: 'Quicksand', sans-serif;
     text-transform: capitalize;
     color: #ffffff;
@@ -188,7 +188,7 @@ footer{
     display: inline-block;
     height: 40px;
     width: 40px;
-    font-size: 20px;
+    /* font-size: 20px; */
     background: #81A8E7;
     text-align: center;
     line-height: 40px;
@@ -204,15 +204,15 @@ footer{
 @media (max-width:600px){
     body{
         font-family: "Lato", sans-serif;
-        font-size: 12px;
+        /* font-size: 12px; */
         background-image: url("../img/bg-opacity.png");
         margin: 0px;
     }
     .du-meuPerfil-info{
-        font-size: 12px;
+        /* font-size: 12px; */
     }
     .du-meuPerfil-info p{
-        font-size: 12px;
+        /* font-size: 12px; */
     }
     .du-meuPerfil-info-secao-titulo {
         font: size 12px;

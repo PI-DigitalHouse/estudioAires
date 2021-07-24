@@ -25,7 +25,7 @@ main{
 
 .dropdown{
     height: fit-content;
-    font-size: 18rem;
+    /* font-size: 18rem; */
 }
 
 .cronos{
@@ -35,7 +35,7 @@ main{
 
 p{
     margin: 0  5px 0 0;
-    font-size: 20rem;
+    /* font-size: 20rem; */
 }
 
 
@@ -59,11 +59,11 @@ p{
 }
 
 h2{
-    font-size: 22rem;
+    /* font-size: 22rem; */
 }
 
 .info{
-    font-size: 20rem;
+    /* font-size: 20rem; */
 }
 
 .servicoContratado1{
@@ -109,7 +109,7 @@ h2{
 }
 
 .informacoes{
-    font-size: 12rem;
+    /* font-size: 12rem; */
     text-align: end;
 }
 

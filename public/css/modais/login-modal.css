@@ -72,7 +72,7 @@
 .container-logo{
   font-family: "Lato", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  /* font-size: 20px; */
   color:black;
   text-decoration: none;
   margin: 50px;
@@ -112,7 +112,7 @@
  /*  text-decoration: none; */
   color:white;
   font-weight: bold;
-  font-size: 15px;
+  /* font-size: 15px; */
   
 }
 .psw-forget a:hover{
@@ -120,14 +120,14 @@ color:black;
 
 }
 .pws{
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 .psw a{
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 15px;
+  /* font-size: 15px; */
   
 }
 .psw a:hover{
@@ -136,7 +136,7 @@ color:black;
  
 .modal-cadastro{
   margin-top: 30px;
-  font-size: 15px;
+  /* font-size: 15px; */
   color: black;
 
 
@@ -154,7 +154,7 @@ color:black;
   border: none;
   cursor: pointer;
   width: 50%;
-  font-size: 15px;
+  /* font-size: 15px; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   font-weight: bold;
@@ -187,7 +187,7 @@ color:black;
   right: 25px;
   top: 0;
   color: #000;
-  font-size: 35px;
+  /* font-size: 35px; */
   font-weight: bold;
 }
 

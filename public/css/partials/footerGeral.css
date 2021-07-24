@@ -30,7 +30,7 @@ footer{
 }
 
 .footer-col h4{
-    font-size: 18px;
+    /* font-size: 18px; */
     color: #FC7600;
     text-transform: capitalize;
     margin-bottom: 35px;
@@ -54,7 +54,7 @@ footer{
 }
 
 .footer-col ul li a{
-    font-size: 16px;
+    /* font-size: 16px; */
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;
     color: #ffffff;
@@ -74,7 +74,7 @@ footer{
     display: inline-block;
     height: 40px;
     width: 40px;
-    font-size: 20px;
+    /* font-size: 20px; */
     background: #81A8E7;
     text-align: center;
     line-height: 40px;

@@ -40,11 +40,11 @@ main{
 }
 
 h2{
-    font-size: 26rem;
+    /* font-size: 26rem; */
 }
 
 .info{
-    font-size: 120rem;
+    /* font-size: 120rem; */
 }
 .form{
     width: 25%;
@@ -93,7 +93,7 @@ h2{
 }
 
 .informacoes{
-    font-size: 12rem;
+    /* font-size: 12rem; */
     text-align: end;
 }
 

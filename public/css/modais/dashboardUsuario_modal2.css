@@ -1,5 +1,5 @@
 html{
-    font-size: 6.25%;
+    /* font-size: 6.25%; */
     box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@ header{
 }
 
 h3{
-    font-size: 18rem;
+    /* font-size: 18rem; */
     text-align: center;
     padding-top: 20px;
 }
@@ -38,7 +38,7 @@ h3{
     background-color: white;
     border-radius: 10px;
     padding: 2px 40px;
-    font-size: 16rem;
+    /* font-size: 16rem; */
     color: black;
     width: 10%;
     height: 30px;

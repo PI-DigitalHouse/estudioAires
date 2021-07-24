@@ -35,12 +35,12 @@ body{
 
 .headerServico--backButton__paragraph{
     margin: 20% 0 0 0;
-    font-size: 21rem;
+    /* font-size: 21rem; */
 }
 
 /* fim do botão de retorno para main page */
 .headerServico--h1{
-    font-size: 64rem;
+    /* font-size: 64rem; */
     color:#212121;
     align-self: flex-end;
 
@@ -51,7 +51,7 @@ body{
 
 .headerServico--p{
     width: 525px;
-    font-size: 24rem;
+    /* font-size: 24rem; */
     margin: 10.8% 0 0 12%;
     color: #212121;
     text-align: end;
@@ -82,7 +82,7 @@ body{
 }
 
 .descricaoServico p{
-    font-size: 24rem;
+    /* font-size: 24rem; */
     color: #212121;
     text-align: end;
 }
@@ -119,14 +119,14 @@ body{
         }
 
         .headerServico--h1 {
-            font-size: 50rem;
+            /* font-size: 50rem; */
             top: 10%;
             right: 29%;
         }
 
         .headerServico--p {
             width: 84%;
-            font-size: 24rem;
+            /* font-size: 24rem; */
             margin: 16.8% 2% 0 2%;
             color: #212121;
             text-align: center;
@@ -152,7 +152,7 @@ body{
 
         .descricaoServico p {
             text-align: center;
-            font-size: 22rem;
+            /* font-size: 22rem; */
         }
 
         .descricaoServico--paragraph1{
@@ -178,11 +178,11 @@ body{
             flex-direction: column;
         }
         .footer-col h4 {
-            font-size: 11px;
+            /* font-size: 11px; */
         }
 
         .footer-col ul li a {
-            font-size: 11rem;
+            /* font-size: 11rem; */
         }
 
         .footer-col .social-links a{

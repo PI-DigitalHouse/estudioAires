@@ -19,7 +19,7 @@
 
 
 body{
-    font-size: 20rem;
+    /* font-size: 20rem; */
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
 }
@@ -42,7 +42,7 @@ body{
 }
 
 h3{
-    font-size: 26rem;
+    /* font-size: 26rem; */
 }
 
 #servicoContratado__tipo--ajuste{
@@ -63,7 +63,7 @@ h3{
     background-color: #FC7600;
     border-radius: 10px;
     padding: 15px;
-    font-size: 16rem;
+    /* font-size: 16rem; */
     color: black;
     width: 50px;
 }
@@ -90,7 +90,7 @@ h3{
     font-weight: bold;
     width: 380px;
     margin-bottom: 0rem;
-    font-size: 15rem;
+    /* font-size: 15rem; */
     height: fit-content;
     
 }
@@ -114,7 +114,7 @@ h3{
 }
 
 label{
-    font-size: 20rem;
+    /* font-size: 20rem; */
 }
 
 .containerDireita{
@@ -127,7 +127,7 @@ label{
 }
 
 .informacoes{
-    font-size: 16rem;
+    /* font-size: 16rem; */
     text-align: end;
     margin: 16rem;
     display: flex;

@@ -6,7 +6,7 @@
 
 body{
     font-family: "Lato", sans-serif;
-    font-size: 14rem;
+    /* font-size: 14rem; */
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
     width: 100%;
@@ -22,7 +22,7 @@ body{
 
 .dropdown{
     height: fit-content;
-    font-size: 14rem;
+    /* font-size: 14rem; */
 }
 
 .cronos{
@@ -63,11 +63,11 @@ p{
 }
 
 h2{
-    font-size: 24rem;
+    /* font-size: 24rem; */
 }
 
 .info{
-    font-size: 14rem;
+    /* font-size: 14rem; */
     margin-bottom: 7%;
 }
 
@@ -116,7 +116,7 @@ h2{
 .fases{
     display: flex;
     justify-content: space-between;
-    font-size: 14rem;
+    /* font-size: 14rem; */
 
 }
 
@@ -249,7 +249,7 @@ h2{
 } */
 
 .rodape{
-    font-size: 14rem;
+    /* font-size: 14rem; */
     margin-top: 5px;
     position: absolute;
     bottom: 0px;
@@ -264,7 +264,7 @@ h2{
 .cancelamento{
     border: none;
     font-family: 'Lato';
-    font-size: 14rem;
+    /* font-size: 14rem; */
     margin-top: 5px;
     position: absolute;
     bottom: 0px;
