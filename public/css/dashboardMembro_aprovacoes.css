@@ -8,14 +8,14 @@
 .logo-dash-memb{
     width: 80%;
 }
-.botoes-2{
+/* .botoes-2{
     text-align: center;
     padding: 5px;
     font-size: 15px;
     width: 420px;
     height: 50px;
     
-}
+} */
 
 
 body{
@@ -139,7 +139,7 @@ label{
 .informacoes a{
     color: black;
 }
-
+/* 
 .botoes{
     margin-top: 30px;
 }
@@ -179,7 +179,7 @@ label{
 .botoes .entregaveis:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
-}
+} */
 
 @media (max-width:625px){
     .containerServico{
@@ -214,7 +214,7 @@ label{
     .servicoContratado2{
         margin: 0rem;
     }
-    .botoes .entregaveis{
+    /* .botoes .entregaveis{
         border: 1.5px solid #FC7600;
         background-color:#FC7600;
         border-radius: 10px;
@@ -226,7 +226,7 @@ label{
     .botoes .prestador{
         width: 100%;
         margin: 0rem;
-    }
+    } */
     .containerDireita{
         width: 100%;
         margin: 0rem;

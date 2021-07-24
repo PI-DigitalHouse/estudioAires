@@ -24,7 +24,7 @@ body {
 .ab:hover{
     color:white;
 }
-
+/* 
 li,
 a,
 button {
@@ -32,7 +32,7 @@ button {
     font-size: 26px;
     color: #edf0f1;
     text-decoration: none;
-}
+} */
 .a{
     color:white;
     text-decoration: none;
@@ -142,7 +142,7 @@ button {
     border-bottom: 3px solid #FC7600;
 }
 
-button {
+/* button {
     padding: 10px 25px;
     background: rgba(252, 118, 0, 1);
     border: none;
@@ -153,7 +153,7 @@ button {
 
 button:hover {
     background: rgba(252, 118, 0, 0.8);
-}
+} */
 
 .splide {
     height: 750px;
@@ -229,7 +229,7 @@ video {
     margin: 0 0 5% 0;
 }
 
-.image-overlay button {
+/* .image-overlay button {
     width: 30%;
     height: 4.7vh;
     position: absolute;
@@ -240,7 +240,7 @@ video {
     border: none;
     border-radius: 18rem;
     box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0, 0.25);
-}
+} */
 
 .image-overlay--link {
     text-transform: uppercase;
@@ -351,7 +351,7 @@ video {
     margin: 3.5% 0 0 16%;
 }
 
-.box-servico--button {
+/* .box-servico--button {
     padding: 10px 25px;
     background: rgba(252, 118, 0, 1);
     border: none;
@@ -360,9 +360,9 @@ video {
     transition: all 0.3s ease 0s;
     width: 43%;
     margin: 13% 0 0 0;
-    /* box-shadow: 0rem 4rem 4rem rgb(0 0 0 / 25%); */
-}
-
+    /* box-shadow: 0rem 4rem 4rem rgb(0 0 0 / 25%); 
+} */
+/* 
 .box-servico--buttonLink {
     width: 258px;
     height: 42px;
@@ -373,7 +373,7 @@ video {
     background: #FC7600;
     border: none;
     border-radius: 18px;
-}
+} */
 
 
 /* fim da sessão de serviços */

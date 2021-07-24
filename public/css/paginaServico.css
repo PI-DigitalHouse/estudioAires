@@ -58,7 +58,7 @@ body{
     align-self: center;
 }
 
-.headerServico--buttonOrcamento{
+/* .headerServico--buttonOrcamento{
     background: #FC7600;
     border: 1px solid #FC7600;;
     border-radius: 18rem;
@@ -72,7 +72,7 @@ body{
     text-decoration: none;
     color: #FFFFFF;
     font-size: 25rem;
-}
+} */
 /* fim do header */
 
 
@@ -133,7 +133,7 @@ body{
             align-self: center;
         }
 
-        .headerServico--buttonOrcamento {
+        /* .headerServico--buttonOrcamento {
             margin: 71.7% 0 0 -90%;
             width: 37%;
             height: 8vh;
@@ -141,7 +141,7 @@ body{
 
         .headerServico--buttonLink {
             font-size: 20rem;
-        }
+        } */
         /* fim da header */
 
         /* início da main de descrição de serviços */

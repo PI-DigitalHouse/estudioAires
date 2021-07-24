@@ -63,7 +63,7 @@ h1{
     margin-bottom: 15px;
 }
 
-.du-meuPerfil-info-botao{
+/* .du-meuPerfil-info-botao{
     border: 1.5px solid #FC7600;
     background-color:#FC7600;
     border-radius: 10px;
@@ -112,7 +112,7 @@ h1{
 .du-meuPerfil-info-botao2:hover{
     background-color:#d4d4d4;
     border: 1.5px solid #d4d4d4;
-}
+} */
 
 
 /* footer */
@@ -217,7 +217,7 @@ footer{
     .du-meuPerfil-info-secao-titulo {
         font: size 12px;
     }
-    .du-meuPerfil-info-botao{
+    /* .du-meuPerfil-info-botao{
         border: 1.5px solid #FC7600;
         background-color:#FC7600;
         border-radius: 10px;
@@ -245,7 +245,7 @@ footer{
     }
     .du-meuPerfil-info-botao2 a{
         font-size: 12px;
-    }
+    } */
     .du-meuPerfil-info-secao-formulario{
         margin-bottom: 15px;
         width: 80%;

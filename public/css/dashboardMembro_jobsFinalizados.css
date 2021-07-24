@@ -113,7 +113,7 @@ h2{
     text-align: end;
 }
 
-.botoes{
+/* .botoes{
     margin: 20rem;
     width: 10%;
 }
@@ -137,7 +137,7 @@ h2{
 .botoes .entregaveis:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
-}
+} */
 
 .dash-mem-jobs-fin{
     text-decoration: none;
@@ -193,7 +193,7 @@ h2{
         margin: 20rem;
         width: 55%;
     }
-    .botoes{
+    /* .botoes{
         justify-content: center;
         display: flex;
         width: 50%;
@@ -223,7 +223,7 @@ h2{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
+    } */
     .informacoes{
         margin-left: 50rem;
     }

@@ -74,7 +74,7 @@ body{
     width: 80%;
 }
 
-.recuperar-senha-botao{
+/* .recuperar-senha-botao{
     border: 1.5px solid #FC7600;
     background-color:#FC7600;
     border-radius: 10px;
@@ -93,24 +93,24 @@ body{
     color: black;
     text-decoration: none;
     
-}
+} */
 
 .enviar{
     border: 1.5px solid #FC7600;
     background-color:#FC7600;
 }
 
-.recuperar-senha-botao:hover{
+/* .recuperar-senha-botao:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
-} 
+}  */
 
 .enviar:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
 } 
 
-.recuperar-senha-botao-a{
+/* .recuperar-senha-botao-a{
     text-decoration: none;
     color: black;
 }
@@ -123,5 +123,5 @@ body{
 
 .recuperar-senha-botao-2 a{
     color: #949494;
-}
+} */
 

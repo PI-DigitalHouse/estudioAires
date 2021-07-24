@@ -174,7 +174,7 @@ h2{
     top: 15px;
 }
 
-.botoes{
+/* .botoes{
     display: flex;
     justify-content: space-around;
     margin-top: 15px;
@@ -246,7 +246,7 @@ h2{
 .botoes .remarcacao:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
-}
+} */
 
 .rodape{
     font-size: 14rem;

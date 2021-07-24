@@ -97,7 +97,7 @@ h2{
     text-align: end;
 }
 
-.botoes{
+/* .botoes{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -126,7 +126,7 @@ h2{
 .botoes .botoes-1:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
-}
+} */
 
 .link-calendario a {
     text-decoration: none;
@@ -180,7 +180,7 @@ h2{
         width: 100%;
         display: inline-block;
     }
-    .botoes{
+    /* .botoes{
         justify-content: center;
         display: flex;
         width: 100%;
@@ -200,7 +200,7 @@ h2{
     .botoes .prestador{
         width: 100%;
         margin: 0rem;
-    }
+    } */
     .containerDireita{
         width: 100%;
         margin: 0rem;
