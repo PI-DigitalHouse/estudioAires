@@ -8,51 +8,31 @@
 
     <body>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
-            <main>
+            <main id="main-alterar-dados">
                 <h1>Meu Perfil</h1>
 
-                <form action="/dashboardUsuario/alterandoDados" method="POST">
+                <form action="/dashboardUsuario/alterandoDados" method="POST" id="form-alterar-dados">
                     <div class="form-group">
-                        <div class="form-control">
-                            <!-- //<img class="du-meuPerfil-info-secao-icone" src="../img/user.png" alt="ícone usuario"> -->
-                            <div>
-                                <h6>Nome</h6>
-                                <input type="text" class="form-control" name="nome" placeholder="nome"
-                                    value="<%=dadosUsuario.nome%>" style="width: 100px;">
-                            </div>
-                        </div>
+                        <h6>Nome</h6>
+                        <input type="text" class="form-control" name="nome" placeholder="nome"
+                            value="<%=dadosUsuario.nome%>">
                     </div>
                     <div class="form-group">
-                        <div class="form-control">
-                            <!-- <img class="du-meuPerfil-info-secao-icone" src="../img/icone_email.png" alt="ícone email"> -->
-                            <div>
-                                <h6>Email</h6>
-                                <input type="text" class="form-control" name="email" placeholder="E-mail"
-                                    value="<%=dadosUsuario.email%>" style="width: 100px;">
-                            </div>
-                        </div>
+                        <h6>Email</h6>
+                        <input type="text" class="form-control" name="email" placeholder="E-mail"
+                            value="<%=dadosUsuario.email%>">
                     </div>
                     <div class="form-group">
-                        <div class="form-control">
-                            <!-- <img class="du-meuPerfil-info-secao-icone" src="../img/driver-license.png" alt="ícone documento"> -->
-                            <div>
-                                <h6>CPF / CNPJ</h6>
-                                <input type="text" class="form-control" name="cpfCnpj" placeholder="CPF ou CNPJ"
-                                    value="<%=dadosUsuario.cpfCnpj%>" style="width: 100px;">
-                            </div>
-                        </div>
+                        <h6>CPF / CNPJ</h6>
+                        <input type="text" class="form-control" name="cpfCnpj" placeholder="CPF ou CNPJ"
+                            value="<%=dadosUsuario.cpfCnpj%>">
                     </div>
                     <div class="form-group">
-                        <div class="form-control">
-                            <!-- <img class="du-meuPerfil-info-secao-icone" src="../img/phone.png" alt="ícone telefone"> -->
-                            <div>
-                                <h6>Telefone</h6>
-                                <input type="text" class="form-control" name="telefone" placeholder="Telefone"
-                                    value="<%=dadosUsuario.telefone%>" style="width: 100px;">
-                            </div>
-                        </div>
+                        <h6>Telefone</h6>
+                        <input type="text" class="form-control" name="telefone" placeholder="Telefone"
+                            value="<%=dadosUsuario.telefone%>">
                     </div>
-                    <input type="submit" class="btn btn-dark" value="Salvar Alterações">
+                    <button type="submit" class="btn btn-dark">Salvar Alterações</button>
                 </form>
 
                 <h6 class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a

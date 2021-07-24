@@ -99,3 +99,15 @@ body{
     text-decoration: none;
     color: black;
 }
+
+#main-alterar-dados{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+   
+}
+
+#form-alterar-dados{
+    width: 80%;
+  
+}
