@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 6.25%;
+    /* font-size: 6.25%; */
     scroll-behavior: smooth;
     /*torna o scroll entre as sessões mais suave*/
 }
