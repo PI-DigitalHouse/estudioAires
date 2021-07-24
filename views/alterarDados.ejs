@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+    <%- include partials/head.ejs %>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <body>
-        <!-- aqui ta o problema do css -->
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main>
                 <div class="du-meuPerfil-info">
                     <h1>Meu Perfil</h1>
 
-                    <div action="/dashboardUsuario/alterandoDados" method="POST">
+                    <div action="/dashboardUsuario/alterandoDados" method="POST" class="container-perfil">
                         <div class="form-group">
                             <div class="form-control">
                                 <!-- //<img class="du-meuPerfil-info-secao-icone" src="../img/user.png" alt="ícone usuario"> -->
