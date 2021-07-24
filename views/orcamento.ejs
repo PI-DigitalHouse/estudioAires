@@ -88,11 +88,16 @@
                                 <!--  /*STEP1*/ -->
                                 <div class="tab">
                                     <h4>Informe o endereço onde serao realizadas as fotos:</h4>
-                                    <p>Endereço:<input required name="endereco" placeholder="Preencha com o endereço onde serão realizadas as fotos" maxlength="250" oninput="this.className = ''"></p>
+                                    <p>Endereço:<input required name="endereco"
+                                            placeholder="Preencha com o endereço onde serão realizadas as fotos"
+                                            maxlength="250" oninput="this.className = ''"></p>
 
-                                    <p>Informe o CEP:<input required name="cep" placeholder="Informe o CEP:" oninput="this.className = ''"></p>
+                                    <p>Informe o CEP:<input required name="cep" placeholder="Informe o CEP:"
+                                            oninput="this.className = ''"></p>
 
-                                    <p>Informe o tamanho do imovel:<input required name="tamanhoImovel" type="number" placeholder="Informe o tamanho do imóvel em m2" oninput="this.className = ''"></p>
+                                    <p>Informe o tamanho do imovel:<input required name="tamanhoImovel" type="number"
+                                            placeholder="Informe o tamanho do imóvel em m2"
+                                            oninput="this.className = ''"></p>
                                 </div>
 
 
@@ -101,12 +106,16 @@
                                 <div class="tab">
                                     <h4>Selecione os tipos de serviço:</h4>
                                     <ul class="listado">
-                                        <li><input value="fotografia" type="checkbox" name="servico" oninput="this.className = ''">Fotografia</li>
-                                        <li><input value="fotografia3603d" type="checkbox" name="servico" oninput="this.className = ''">Fotografia
+                                        <li><input value="fotografia" type="checkbox" name="servico"
+                                                oninput="this.className = ''">Fotografia</li>
+                                        <li><input value="fotografia3603d" type="checkbox" name="servico"
+                                                oninput="this.className = ''">Fotografia
                                             360 3D</li>
-                                        <li><input value="videoDinamico" type="checkbox" name="servico" oninput="this.className = ''">Video
+                                        <li><input value="videoDinamico" type="checkbox" name="servico"
+                                                oninput="this.className = ''">Video
                                             dinamico</li>
-                                        <li><input value="imagensAereas" type="checkbox" name="servico" oninput="this.className = ''">Imagens
+                                        <li><input value="imagensAereas" type="checkbox" name="servico"
+                                                oninput="this.className = ''">Imagens
                                             Aéreas</li>
 
                                     </ul>
@@ -123,14 +132,19 @@
                                 </div>
                                 <!--  /*STEP3*/ -->
                                 <div class="tab">
-                                    <h4>Algum responsável irá receber o prestador? Se sim, por favor informe o nome da pessoa:
+                                    <h4>Algum responsável irá receber o prestador? Se sim, por favor informe o nome da
+                                        pessoa:
                                     </h4>
-                                    <p>Nome do Responsável: <input required name="nomeContato" placeholder="Nome do Responsável" oninput="this.className = ''">
-                                    <p>Telefone do Responsável: <input required name="telefoneContato" placeholder="Telefone do Responsável" oninput="this.className = ''">
+                                    <p>Nome do Responsável: <input required name="nomeContato"
+                                            placeholder="Nome do Responsável" oninput="this.className = ''">
+                                    <p>Telefone do Responsável: <input required name="telefoneContato"
+                                            placeholder="Telefone do Responsável" oninput="this.className = ''">
                                     <p>Informe se há detalhes adicionais sobre o servico a ser prestado</p>
-                                    <p>Detalhes: <input name="detalhes" placeholder="Detalhes:" oninput="this.className = ''">
+                                    <p>Detalhes: <input name="detalhes" placeholder="Detalhes:"
+                                            oninput="this.className = ''">
 
-                                    <p>ATENÇÃO! Caso não haja quem receber o prestador, por favor entrar em contato com o
+                                    <p>ATENÇÃO! Caso não haja quem receber o prestador, por favor entrar em contato com
+                                        o
                                         prestador para detalhar as informações.</p>
 
 
@@ -148,7 +162,8 @@
                                 </div>
                                 <div class="tab">
 
-                                    <select class="usu-input-Tipo-2" placeholder="Escolha a forma de Pagamento:" name="pagamento" id="pagamento">
+                                    <select class="usu-input-Tipo-2" placeholder="Escolha a forma de Pagamento:"
+                                        name="pagamento" id="pagamento">
                                         <option value="Como nos conheceu?">Escolha a forma de Pagamento:</option>
                                         <option value="Pix">PIX</option>
                                         <option value="TransfBanc">Transferencia Bancária</option>
@@ -164,7 +179,8 @@
 
                                         <img src="/img/Vector.png" alt="">
 
-                                        <h5>Para obter mais informações a respeito do seu agendamento acesse sua área restrita.
+                                        <h5>Para obter mais informações a respeito do seu agendamento acesse sua área
+                                            restrita.
                                         </h5>
 
                                     </div>
@@ -179,7 +195,8 @@
                                 <div class="button-submit">
                                     <input type="button" id="prevBtn" onclick="nextPrev(-1)" value="VOLTAR"></input>
                                     <input type="button" id="nextBtn" onclick="nextPrev(1)" value="CONFIRMAR"></input>
-                                    <input type="submit" id="nextBtn2" onclick="nextPrev(1)" value="Enviar solicitação"></input>
+                                    <input type="submit" id="nextBtn2" onclick="nextPrev(1)"
+                                        value="Enviar solicitação"></input>
                                 </div>
                                 </div>
                                 <!--   <div class="button-submit">
@@ -208,7 +225,9 @@
 
                         var date = new Date();
                         var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-                        //let horariosBloqueados = horariosBloqueados
+                        var horariosBloqueados = horariosBloqueados
+
+                        console.log(horariosBloqueados)
 
                         $('#picker1').datetimepicker({
                             timepicker: true,
@@ -231,10 +250,22 @@
                                 dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
                             },
                             minDate: today,
-                            //disabledDates: horariosBloqueados,
+                            // beforeShowDay: function (date) {
+                            //     var string = jQuery.datepicker.formatDate('Y-m-d H:i:s', date);
+                            //     return [horariosBloqueados.indexOf(string) == -1]
+                            // }
 
-
+                            //beforeShowDay: my_check
                         })
+
+                        // function my_check(date) {
+                        //     var my_array = horariosBloqueados;
+                        //     if (my_array.indexOf(date) >= 0) {
+                        //         return [false, "notav", 'Not Available'];
+                        //     } else {
+                        //         return [true, "av", "available"];
+                        //     }
+                        // }
 
                     </script>
 
