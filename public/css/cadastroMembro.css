@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-        html{font-size: 6,25%;}
+        
         *{box-sizing: border-box;}
 
         .flex-container{
@@ -170,7 +170,7 @@
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
         }
-
+/* 
         .botao{
             width: 20%;
             height: fit-content;
@@ -182,7 +182,7 @@
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             font-size: 1rem;
             margin: 1rem;
-        }
+        } */
 
         .curriculo{
             
@@ -196,7 +196,7 @@
             margin: 1rem;
         }
 
-        button[type=submit] {
+        /* button[type=submit] {
             background-color: #FC7600;;
             color: white;
             padding: 14px 20px;
@@ -213,7 +213,7 @@
 
         button:hover {
             opacity: 0.6;
-          }
+          } */
 
         @media (max-width:520px){
             

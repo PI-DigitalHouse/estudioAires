@@ -8,29 +8,32 @@ const servico = require('../models/servico');
 let orcamentosCadastrados = [];
 
 
-module.exports.renderizaOrcamento = (req, res, next) => {
 
-const horariosBloqueados = async () => await models.Reserva.findAll({
-  where: {
-    idReserva: {
-      [Op.like]: `${idReserva || ''}%`,
+
+module.exports.renderizaOrcamento =  async (req, res, next) => {
+  const {idReserva} = req.query;
+  const bloqueio = await models.Reserva.findAll({
+    where: {
+      idReserva: {
+        [Op.like]: `${idReserva || ''}%`,
+      }
     }
-  }
-})
+  });
+
+  console.log(bloqueio)
 
   if (req.session.usuario) {
-
     res.render('orcamento', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      horariosBloqueados: horariosBloqueados
+      horariosBloqueados: bloqueio,
     })
   } else {
     console.log('n logado')
     res.render('orcamentoSLogin', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      horariosBloqueados: horariosBloqueados
+      horariosBloqueados: bloqueio,
     })
   }
 }

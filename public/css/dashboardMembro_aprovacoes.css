@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-html{
+/* html{
     font-size: 6.25%;
     font-family: "Lato", sans-serif;
-}
+} */
 
 .logo-dash-memb{
     width: 80%;
 }
-.botoes-2{
+/* .botoes-2{
     text-align: center;
     padding: 5px;
     font-size: 15px;
     width: 420px;
     height: 50px;
     
-}
+} */
 
 
 body{
-    font-size: 20rem;
+    /* font-size: 20rem; */
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
 }
@@ -42,7 +42,7 @@ body{
 }
 
 h3{
-    font-size: 26rem;
+    /* font-size: 26rem; */
 }
 
 #servicoContratado__tipo--ajuste{
@@ -63,7 +63,7 @@ h3{
     background-color: #FC7600;
     border-radius: 10px;
     padding: 15px;
-    font-size: 16rem;
+    /* font-size: 16rem; */
     color: black;
     width: 50px;
 }
@@ -90,7 +90,7 @@ h3{
     font-weight: bold;
     width: 380px;
     margin-bottom: 0rem;
-    font-size: 15rem;
+    /* font-size: 15rem; */
     height: fit-content;
     
 }
@@ -114,7 +114,7 @@ h3{
 }
 
 label{
-    font-size: 20rem;
+    /* font-size: 20rem; */
 }
 
 .containerDireita{
@@ -127,7 +127,7 @@ label{
 }
 
 .informacoes{
-    font-size: 16rem;
+    /* font-size: 16rem; */
     text-align: end;
     margin: 16rem;
     display: flex;
@@ -139,7 +139,7 @@ label{
 .informacoes a{
     color: black;
 }
-
+/* 
 .botoes{
     margin-top: 30px;
 }
@@ -179,7 +179,7 @@ label{
 .botoes .entregaveis:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
-}
+} */
 
 @media (max-width:625px){
     .containerServico{
@@ -214,7 +214,7 @@ label{
     .servicoContratado2{
         margin: 0rem;
     }
-    .botoes .entregaveis{
+    /* .botoes .entregaveis{
         border: 1.5px solid #FC7600;
         background-color:#FC7600;
         border-radius: 10px;
@@ -226,7 +226,7 @@ label{
     .botoes .prestador{
         width: 100%;
         margin: 0rem;
-    }
+    } */
     .containerDireita{
         width: 100%;
         margin: 0rem;

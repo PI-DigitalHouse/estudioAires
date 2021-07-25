@@ -1,14 +1,14 @@
-html{
+/* html{
     font-size: 6.25%;
     font-family: Arial;
     box-sizing: border-box;
-}
+} */
 body{
     margin:0;
 }
 
 h2{
-    font-size: 16rem;
+    /* font-size: 16rem; */
 }
 
 p{
@@ -38,7 +38,7 @@ input{
 }
 
 .nomeZip{
-    font-size: 16rem;
+    /* font-size: 16rem; */
     padding-top: 3px;
     display: flex;
 }
@@ -48,7 +48,7 @@ input{
     
     border-radius: 10px;
     padding: 5px;
-    font-size: 16rem;
+    /* font-size: 16rem; */
     margin: 10px;
     width: 100px;
 }
@@ -61,7 +61,7 @@ input{
     background-color: #FC7600;
     border-radius: 10px;
     padding: 15px;
-    font-size: 16rem;
+    /* font-size: 16rem; */
     color: black;
     width: 150px
 }

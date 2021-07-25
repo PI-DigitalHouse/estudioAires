@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -101,4 +102,119 @@
        <!--  <script type="text/javascript" src="../login-modal/login-modal.js"></script> -->
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/modais/cadastro-modal.css">
+    <title>Estúdio Aires</title>
+
+</head>
+
+<body>
+    <header>
+        <%- include partials/headerAreaLivreSemLogin.ejs %>
+            <%- include partials/head.ejs %>
+    </header>
+    <div class="banner-area">
+        <!--Vídeo de entrada do site-->
+        <div class="banner">
+            <video autoplay muted loop>
+                <source src="img/teste.mov" type="video/mp4">
+
+            </video>
+            <div class="modalCadastro">
+
+                <form class="modal-content-cadastro" method="POST" action="cadastro-usuario/novo">
+                    <div class="usu-card-login">
+                        <div class="usu-flex-container-02">
+                            <h5 class="usu-cadastro">
+                                <a href="/home" class="fas fa-arrow-left"></a> Cadastro
+                            </h5>
+
+                        </div>
+                        <h6>Seja bem-vindo!</h6>
+
+                        <div class="form-group">
+                            <input required class="form-control" placeholder="Seu nome:" maxlength="50" type="text"
+                                name="nome" id="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input required class="form-control" placeholder="Sobrenome:" maxlength="50" type="text"
+                                name="sobrenome" id="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input required class="form-control" placeholder="Email:" maxlength="60" type="email"
+                                name="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <input required class="form-control" placeholder="Telefone mais atual" maxlength="50"
+                                type="text" name="telefone" id="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input required class="form-control" placeholder="CPF ou CNPJ" maxlength="60"
+                                type="text" name="cpfCnpj" id="email">
+                            <% if(erros&&erros.cpfCnpj){ %>
+                                <span>
+                                    <%= erros.cpfCnpj.msg %>
+                                </span>
+                                <% } %>
+                        </div>
+
+
+                        <div class="form-group">
+                            <select class="form-control" placeholder="Como nos conheceu?" name="comoConheceu"
+                                id="Como nos conheceu">
+                                <option value="NaoEnviado">Como nos conheceu?</option>
+                                <option value="Imobiliaria">Imobiliária</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Google">Google</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input required class="form-control" placeholder="Senha" type="password" name="senha"
+                                id="senha">
+                        </div>
+                        <div class="form-group">
+                            <input required class="form-control" placeholder="Confirmar Senha" type="password"
+                                name="senha2" id="senhaConfirmacao">
+                            </div>
+                        
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="imobiliaria"> Sou uma imobiliária
+                            </div>
+                            <div class="form-check">
+                                <input required class="form-check-input" type="checkbox" name="termosDeUso"> Li e aceito os                                      href="#">Termos de uso</a> e a <a  href="#">Política
+                                    de
+                                    Privacidade
+                            </div>
+
+                        <button type="submit" class="btn btn-dark">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+            </form>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+    <!-- Modal-Cadastro-->
+
+    <!--  <script type="text/javascript" src="../login-modal/login-modal.js"></script> -->
+</body>
+
+>>>>>>> b2438d966afadea898ea787bb36e8df9d99fceba
 </html

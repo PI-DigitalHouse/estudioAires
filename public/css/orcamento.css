@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');  
   
-html{
+/* html{
     font-size: 6.25%;
-}
+} */
 
 body{
     font-family: "Lato", sans-serif;
-    font-size: 16rem;
+    /* font-size: 16rem; */
     background-image: url("../img/bg-opacity.png");
     margin: 0px;
     padding: 0;
@@ -51,7 +51,7 @@ main{
 
 .bolaOk.finish {
      color:rgb(68, 173, 68);
-     font-size: 0px;
+     /* font-size: 0px; */
      border: green; 
     background-image: url("../img/Vector.png");
     
@@ -64,7 +64,7 @@ main{
     height: 2em;
     margin-top: 36px; 
     font-weight: bold;
-    font-size: 14px;
+    /* font-size: 14px; */
     padding: 5px;
 }
 
@@ -291,7 +291,7 @@ input.invalid {
 /* Botoes */
 
 
-.button-submit {
+/* .button-submit {
     width: 100%;
     display: flex;
     justify-content:space-around;
@@ -319,7 +319,7 @@ input.invalid {
   
 button:hover {
     opacity: 0.8;
-}
+} */
 
 
 

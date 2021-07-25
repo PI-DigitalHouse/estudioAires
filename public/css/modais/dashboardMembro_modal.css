@@ -1,5 +1,5 @@
 html{
-    font-size: 6.25%;
+    /* font-size: 6.25%; */
     box-sizing: border-box;
 }
 
@@ -11,11 +11,11 @@ body{
 }
 
 h2{
-    font-size: 22rem;
+    /* font-size: 22rem; */
 }
 
 .info{
-    font-size: 20rem;
+    /* font-size: 20rem; */
     margin-bottom: 20px;
 }
 

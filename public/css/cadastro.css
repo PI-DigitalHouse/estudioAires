@@ -26,13 +26,13 @@
             padding: 0px 20px;
             align-self: center;
         }
-        li, a, button{
+        /* li, a, button{
             font-weight: 500;
             font-size: 20px;
             color: #edf0f1;
             text-decoration: none;
             align-self: center;
-        }
+        } */
         .nav-links li a:hover{
             border-bottom: 3px solid #FC7600;
         }
@@ -99,7 +99,7 @@
             justify-content: center;
             width: 100%;
             font-family: Lato;
-            font-size: 88%;
+            /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
             margin-bottom: 7%;
@@ -111,7 +111,7 @@
             justify-content: space-around;
             width: 100%;
             font-family: Lato;
-            font-size: 88%;
+            /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
             margin-bottom: 7%;
@@ -146,7 +146,7 @@
             justify-content: space-around;
             width: 100%;
             font-family: Lato;
-            font-size: 88%;
+            /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
             margin-bottom: 7%;
@@ -160,7 +160,7 @@
             justify-content: space-around;
             width: 100%;
             font-family: Lato;
-            font-size: 88%;
+            /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
             margin-bottom: 7%;
@@ -171,12 +171,12 @@
             justify-content: space-around;
             width: 100%;
             font-family: Lato;
-            font-size: 88%;
+            /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
             margin-bottom: 7%;
         }
-        button[type=submit] {
+        /* button[type=submit] {
             background-color: #FC7600;;
             color: white;
             padding: 14px 20px;
@@ -192,27 +192,27 @@
         }
         button:hover {
             opacity: 0.6;
-          }
+          } */
         a[class="fas fa-arrow-left"]{
             text-decoration: none;
             color: #FC7600;
             margin: 1rem;
         }
-        .usu-flex-container-botao{/**button-login**/
+        /* .usu-flex-container-botao{/**button-login*
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
             width: 100%;
             margin: 1%;
             height: 5rem;
-        }
+        } */
         .usu-flex-container-termos{/**termos**/
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
             width: 100%;
             font-family: Lato;
-            font-size: 88%;
+            /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
             margin-bottom: 7%;

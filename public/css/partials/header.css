@@ -162,9 +162,9 @@ nav li a:hover{
     }
 }
 */
-html{
-    font-size: 6.25%;
-}
+/* html{
+    font-size: 6.25%; 
+}*/
 
 header{
     margin:0;
@@ -177,7 +177,7 @@ header{
     position:sticky;
     top:0;
     left: 0;
-    font-size: 16rem;
+    /* font-size: 16rem; */
     margin:0;
    
   
@@ -219,7 +219,7 @@ nav li a {
     width: 100%;
     font-family: "Lato", sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    /* font-size: 18px; */
     color: #edf0f1;
     text-decoration: none;
 }
@@ -240,7 +240,7 @@ nav li a:hover{
     text-decoration: none;
     margin-left: 20px;
     font-family: "Lato", sans-serif;
-    font-size: 15px;
+    /* font-size: 15px; */
     font-weight: bold;
     
 }
@@ -248,7 +248,7 @@ nav li a:hover{
 #logo {
     font-family: "Lato", sans-serif;
     font-weight: 500;
-    font-size: 30px;
+    /* font-size: 30px; */
     color: #edf0f1;
     text-decoration: none;
 }
@@ -271,7 +271,7 @@ nav li a:hover{
     nav li a{
         font-family: "Lato", sans-serif;
         font-weight: 500;
-        font-size: 15px;
+        /* font-size: 15px; */
         color: #edf0f1;
         text-decoration: none;
         width: 10%;

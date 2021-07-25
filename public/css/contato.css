@@ -19,7 +19,7 @@ body{
 .logo a{
     text-decoration: none;
     color: #FC7600;
-    font-size: 30px;
+    /* font-size: 30px; */
 }
 
 .section-contato{
@@ -33,7 +33,7 @@ body{
     max-width: 500px;
     line-height: 65px;
     padding-left: 50px;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 .info-contato a{
@@ -44,7 +44,7 @@ body{
 .info-contato i{
     color: #FC7600;
     margin-right: 20px;
-    font-size: 25px;
+    /* font-size: 25px; */
 }
 
 .form-contato{
@@ -59,7 +59,7 @@ body{
 .form-contato h2{
     color: #FC7600;
     text-align: center;
-    font-size: 35px;
+    /* font-size: 35px; */
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -71,7 +71,7 @@ body{
     width: calc(50% - 10 px);
     height: 50px;
     padding: 12px;
-    font-size: 15px;
+    /* font-size: 15px; */
     border-radius: 5px;
     box-shadow: 0 1px 1px rgba (0, 0, 0, 0.1);
     opacity: 0.9;
@@ -88,7 +88,7 @@ body{
     border: none;
     width: 100%;
     padding: 12px;
-    font-size: 15px;
+    /* font-size: 15px; */
     min-height: 200px;
     max-height: 400px;
     resize: vertical;
@@ -104,7 +104,7 @@ body{
     border: none;
     width: 120px;
     height: 40px;
-    font-size: 15px;
+    /* font-size: 15px; */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;

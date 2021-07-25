@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-html{
+/* html{
     font-size: 6.25%;
-}
+} */
 
 body{
     font-family: "Lato", sans-serif;
-    font-size: 20rem;
+    /* font-size: 20rem; */
     background-image: url ("../img/bg-opacity.png");
     margin: 0px;
 }
@@ -40,11 +40,11 @@ main{
 }
 
 h2{
-    font-size: 26rem;
+    /* font-size: 26rem; */
 }
 
 .info{
-    font-size: 120rem;
+    /* font-size: 120rem; */
 }
 .form{
     width: 25%;
@@ -93,11 +93,11 @@ h2{
 }
 
 .informacoes{
-    font-size: 12rem;
+    /* font-size: 12rem; */
     text-align: end;
 }
 
-.botoes{
+/* .botoes{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -126,7 +126,7 @@ h2{
 .botoes .botoes-1:hover{
     background-color: #fa8d2e;
     border: 1.5px solid #fa8d2e;
-}
+} */
 
 .link-calendario a {
     text-decoration: none;
@@ -180,7 +180,7 @@ h2{
         width: 100%;
         display: inline-block;
     }
-    .botoes{
+    /* .botoes{
         justify-content: center;
         display: flex;
         width: 100%;
@@ -200,7 +200,7 @@ h2{
     .botoes .prestador{
         width: 100%;
         margin: 0rem;
-    }
+    } */
     .containerDireita{
         width: 100%;
         margin: 0rem;

@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 6.25%;
+    /* font-size: 6.25%; */
     scroll-behavior: smooth;
     /*torna o scroll entre as sessões mais suave*/
 }
@@ -24,7 +24,7 @@ body {
 .ab:hover{
     color:white;
 }
-
+/* 
 li,
 a,
 button {
@@ -32,13 +32,13 @@ button {
     font-size: 26px;
     color: #edf0f1;
     text-decoration: none;
-}
+} */
 .a{
     color:white;
     text-decoration: none;
     margin-left: 20px;
     font-family: "Lato", sans-serif;
-    font-size: 14rem;
+    /* font-size: 14rem; */
     font-weight: bold;  
 }
 .a:hover{
@@ -68,13 +68,13 @@ button {
 }
 
 .acessoMembro{
-    font-size: 10px;
+    /* font-size: 10px; */
     font-weight: bold;
     color: #FC7600;
     
 }
 .acessoMembro:hover{
-    font-size: 10px;
+    /* font-size: 10px; */
     font-weight: bold;
     color: white;
     
@@ -89,7 +89,7 @@ button {
     background-color: #FC7600;
     width: fit-content;
     margin-top: 30px;
-    font-size: 25px;
+    /* font-size: 25px; */
     color: #edf0f1;
     text-align: center;
     font-weight: bold;
@@ -112,16 +112,16 @@ button {
 
 .header-cadastrese {
     text-align: center;
-    font-size: 13px;
+    /* font-size: 13px; */
 }
 
 .header-cadastrese a {
-    font-size: 13px;
+    /* font-size: 13px; */
 }
 
 .header-cadastrese a:hover {
     color: #FC7600;
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: bold;
 }
 
@@ -142,7 +142,7 @@ button {
     border-bottom: 3px solid #FC7600;
 }
 
-button {
+/* button {
     padding: 10px 25px;
     background: rgba(252, 118, 0, 1);
     border: none;
@@ -153,7 +153,7 @@ button {
 
 button:hover {
     background: rgba(252, 118, 0, 0.8);
-}
+} */
 
 .splide {
     height: 750px;
@@ -219,17 +219,17 @@ video {
 }
 
 .image-overlayTitle {
-    font-size: 40rem;
+    /* font-size: 40rem; */
     font-weight: bold;
 }
 
 .image-overlay p {
-    font-size: 18rem;
+    /* font-size: 18rem; */
     font-weight: bold;
     margin: 0 0 5% 0;
 }
 
-.image-overlay button {
+/* .image-overlay button {
     width: 30%;
     height: 4.7vh;
     position: absolute;
@@ -240,13 +240,13 @@ video {
     border: none;
     border-radius: 18rem;
     box-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0, 0.25);
-}
+} */
 
 .image-overlay--link {
     text-transform: uppercase;
     text-decoration: none;
     color: #F5F4F6;
-    font-size: 13rem;
+    /* font-size: 13rem; */
     font-weight: bold;
     position: relative;
     bottom: 79%;
@@ -272,7 +272,7 @@ video {
 }
 
 .portfolio--orcamentoContainer p {
-    font-size: 12rem;
+    /* font-size: 12rem; */
     font-weight: 800;
     color: #212121;
     position: relative;
@@ -309,7 +309,7 @@ video {
 }
 
 .servicos h2 {
-    font-size: 55rem;
+    /* font-size: 55rem; */
     color: #212121;
     padding: 4.8% 0 1.3% 4.5%;
 }
@@ -332,7 +332,7 @@ video {
 
 .box-servico h3 {
     font-family: 'Lato';
-    font-size: 30rem;
+    /* font-size: 30rem; */
     font-weight: 800;
     color: #FC7600;
 }
@@ -346,12 +346,12 @@ video {
 .box-servico p {
     width: 268px;
     height: 159px;
-    font-size: 17rem;
+    /* font-size: 17rem; */
     color: #212121;
     margin: 3.5% 0 0 16%;
 }
 
-.box-servico--button {
+/* .box-servico--button {
     padding: 10px 25px;
     background: rgba(252, 118, 0, 1);
     border: none;
@@ -360,9 +360,9 @@ video {
     transition: all 0.3s ease 0s;
     width: 43%;
     margin: 13% 0 0 0;
-    /* box-shadow: 0rem 4rem 4rem rgb(0 0 0 / 25%); */
-}
-
+    /* box-shadow: 0rem 4rem 4rem rgb(0 0 0 / 25%); 
+} */
+/* 
 .box-servico--buttonLink {
     width: 258px;
     height: 42px;
@@ -373,7 +373,7 @@ video {
     background: #FC7600;
     border: none;
     border-radius: 18px;
-}
+} */
 
 
 /* fim da sessão de serviços */
@@ -396,7 +396,7 @@ video {
 }
 
 .quem-somos-intro h2 {
-    font-size: 55rem;
+    /* font-size: 55rem; */
     align-self: flex-start;
     color: #212121;
     font-weight: 700;
@@ -404,7 +404,7 @@ video {
 }
 
 .quem-somos-intro p {
-    font-size: 30rem;
+    /* font-size: 30rem; */
     width: 60%;
     text-align: justify;
     margin: 7% 15% 4.2% 16.2%
@@ -430,12 +430,12 @@ video {
 }
 
 .socio h3 {
-    font-size: 48rem;
+    /* font-size: 48rem; */
     font-weight: 700;
 }
 
 .socio p {
-    font-size: 22rem;
+    /* font-size: 22rem; */
     font-weight: 400;
     width: 108%;
     text-align: center;
@@ -460,7 +460,7 @@ video {
     width: 100%;
     padding: 67.33px 0 26.88px 104px;
     font-weight: 700;
-    font-size: 64rem;
+    /* font-size: 64rem; */
     line-height: 77px;
     color: #000000;
 }
@@ -478,7 +478,7 @@ video {
 }
 
 .listaParceiros-direita h4 {
-    font-size: 35rem;
+    /* font-size: 35rem; */
     font-weight: 600;
     margin: 1.7% 41.2% 0 48%;
     color: #F2994A;
@@ -486,7 +486,7 @@ video {
 
 .listaParceiros-direita p {
     width: 32.9%;
-    font-size: 22rem;
+    /* font-size: 22rem; */
     text-align: end;
     color: #212121;
 }
@@ -504,7 +504,7 @@ video {
 }
 
 .listaParceiros-esquerda h4 {
-    font-size: 36rem;
+    /* font-size: 36rem; */
     font-weight: 600;
     margin: -17.5% 31.2% 0 48.4%;
     color: #F2994A;
@@ -512,7 +512,7 @@ video {
 
 .listaParceiros-esquerda p {
     width: 32.9%;
-    font-size: 22rem;
+    /* font-size: 22rem; */
     text-align: start;
     margin: -14% 0 0 48.5%;
     color: #212121;
@@ -554,7 +554,7 @@ video {
     color: #FFF;
     border-radius: 50px;
     text-align: center;
-    font-size: 30px;
+    /* font-size: 30px; */
     box-shadow: 2px 2px 3px #999;
     z-index: 100;
 }
@@ -567,7 +567,7 @@ video {
     background-color: transparent;
     color: white;
     padding: 12px;
-    font-size: 16px;
+    /* font-size: 16px; */
     border: solid 3px #8acaf5;;
     cursor: pointer;
   }
@@ -599,7 +599,7 @@ video {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 12rem;
+    /* font-size: 12rem; */
   }
   
   /* Change color of dropdown links on hover */
