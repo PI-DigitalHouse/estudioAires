@@ -4,7 +4,7 @@
     <title>Estúdio Aires</title>
     <!--  bootstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   
+
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
@@ -26,45 +26,45 @@
         </nav>
 
         <!--USUARIO LOGADO-->
-        <div class="dropdown"> 
+        <div class="dropdown">
             <% if(dadosUsuario) { %>
-              
+
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
                          Olá, <%= dadosUsuario.nome %>! ▼</button>
                     <div id="myDropdown" class="dropdown-content">
-                      <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
-                      <a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitacoes</a>
-                      <a href="/orcamento">+ Novo Orçamento</a>
-                      <a href="/logout">Sair</a>
+                        <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
+                        <a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitacoes</a>
+                        <a href="/orcamento">+ Novo Orçamento</a>
+                        <a href="/logout">Sair</a>
                     </div>
-                  </div>
-                
- 
+                </div>
+
+
         </div>
         <script>
             /* When the user clicks on the button, 
-            toggle between hiding and showing the dropdown content */
+                                                toggle between hiding and showing the dropdown content */
             function myFunction() {
-              document.getElementById("myDropdown").classList.toggle("show");
+                document.getElementById("myDropdown").classList.toggle("show");
             }
-            
+
             // Close the dropdown if the user clicks outside of it
             window.onclick = function(event) {
-              if (!event.target.matches('.dropbtn')) {
-                let dropdowns = document.getElementsByClassName("dropdown-content");
-                let i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  let openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                  }
+                if (!event.target.matches('.dropbtn')) {
+                    let dropdowns = document.getElementsByClassName("dropdown-content");
+                    let i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        let openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
                 }
-              }
             }
-            </script>
+        </script>
         <% } %>
-        <!--USUARIO NAO LOGADO-->
+            <!--USUARIO NAO LOGADO-->
             <% if(!dadosUsuario) { %>
                 <div class="navbar-item">
                     <div class="buttons">
@@ -77,11 +77,10 @@
                                 <input class="header-cadastrese" type="submit" value="CADASTRE-SE"></input>
                         </div>
                     </form>
+                    <!-- <a class="header-cadastrese" href="/cadastro-usuario">Novo no Estúdio? CADASTRE-SE</a> EXEMPLO DE RESOLUÇÃO-->
                     <a class="acessoMembro ab" href="/dashboardMembro/login-membro">Sou Fotógrafo</a>
                 </div>
                 <% } %>
-
-
     </div>
 </header>
 <!-- If para sessao do usuario -->

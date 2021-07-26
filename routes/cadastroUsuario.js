@@ -5,8 +5,17 @@ const { check } = require('express-validator');
 
 router.get('/', cadastroModal);
 
-router.post('/novo', [check('cpfCnpj').isLength({ min: 11, max: 14 }).withMessage('Valor inválido'),
-        check('email').isEmail().withMessage('Por Favor indique um e-mail válido')
+router.post('/', [
+        check('nome').notEmpty().withMessage('Campo obrigatório').bail(),
+        check('sobrenome').notEmpty().withMessage('Campo obrigatório').bail(),
+        check('email').notEmpty().withMessage('Campo obrigatório').bail().
+        isEmail().withMessage('E-mail inválido').bail(),
+        check('telefone').isLength({ min: 10, max: 11 }).withMessage('Telefone incompleto').bail(),
+        check('telefone').notEmpty().withMessage('Campo obrigatório').bail(),
+        check('cpfCnpj').isLength({ min: 11, max: 14 }).withMessage('Valor insuficiente').bail(),
+        check('cpfCnpj').notEmpty().withMessage('Campo obrigatório').bail(),
+        check('comoConheceu').notEmpty().withMessage('Campo obrigatório').bail(),
+        check('imobiliaria').notEmpty().withMessage('Campo obrigatório').bail()
     ],
     postUsuario);
 
