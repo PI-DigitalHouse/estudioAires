@@ -233,13 +233,13 @@
                             timepicker: true,
                             allowTimes: function getArr() {
                                 var allowTimes = [
-                                    '08:00', '10:00', '14:00', '16:00'
+                                    '08:00:00', '10:00:00', '14:00:00', '16:00:00'
                                 ];
                                 return allowTimes;
                             }(),
 
                             datepicker: true,
-                            format: 'Y-m-d H:i:s',
+                            format: 'Y-m-d H:i',
                             yearStart: 2021,
                             yearEnd: 2022,
                             step: 30,
@@ -250,10 +250,11 @@
                                 dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
                             },
                             minDate: today,
+                            //disabledDates:["2021-07-27 10:00","2021-07-27 17:00"]
                             //opçao 1
                             // beforeShowDay: function (date) {
-                            //     var string = jQuery.datepicker.formatDate('Y-m-d H:i:s', date);
-                            //     return [horariosBloqueados.indexOf(string) == -1]
+                            //     //var string = jQuery.datepicker.formatDate('Y-m-d H:i', date);
+                            //     return ["2021-07-30 10:00:00"]
                             // }
 
                             //opção 2

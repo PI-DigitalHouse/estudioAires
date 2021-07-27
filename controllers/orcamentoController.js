@@ -5,6 +5,7 @@ const models = require('../models');
 const { Op } = require('sequelize');
 const servico = require('../models/servico');
 
+
 let orcamentosCadastrados = [];
 
 
@@ -17,10 +18,10 @@ module.exports.renderizaOrcamento =  async (req, res, next) => {
       idReserva: {
         [Op.like]: `${idReserva || ''}%`,
       }
-    }
+    }, attributes: ['horarioInicio']
   });
 
-  console.log(bloqueio)
+  console.log(JSON.stringify (bloqueio.map(data=>data.horarioInicio)))
 
   if (req.session.usuario) {
     res.render('orcamento', {
@@ -60,8 +61,9 @@ module.exports.novoOrcamento = (async (req, res, next) => {
     dadosDoFormulario.tamanhoImovel * (0.2 + juncao.length)
   }
 
-
-  req.body.horarioFinal = req.body.horarioInicio
+console.log(typeof req.body.horarioInicio)
+  req.body.horarioFinal = new Date (req.body.horarioInicio)
+  req.body.horarioFinal.setSeconds(0)
   let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
 
   console.log(newService.valor)
