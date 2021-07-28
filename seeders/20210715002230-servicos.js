@@ -35,6 +35,14 @@ module.exports = {
        
        createdAt: new Date(),
        updatedAt: new Date()
+    },{
+      tipoDeServico: 'Valor Fixo',
+       descricao: 'Valor adicionado a todos os orçamentos',
+       valor: 0.8,
+       
+       createdAt: new Date(),
+       updatedAt: new Date()
+
     }], {});
     
   },
