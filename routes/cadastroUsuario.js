@@ -15,7 +15,7 @@ router.post('/', [
         check('cpfCnpj').isLength({ min: 11, max: 14 }).withMessage('Valor insuficiente').bail(),
         check('cpfCnpj').notEmpty().withMessage('Campo obrigatório').bail(),
         check('comoConheceu').notEmpty().withMessage('Campo obrigatório').bail(),
-        check('imobiliaria').notEmpty().withMessage('Campo obrigatório').bail()
+        check('termosDeUso').notEmpty().withMessage('Campo obrigatório').bail()
     ],
     postUsuario);
 
