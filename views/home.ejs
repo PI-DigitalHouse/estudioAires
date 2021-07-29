@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-   
+
 <body>
     <!--Carrossel de entrada do site-->
-    
-  <!--Necessita revisar, nao funciona   <div class="container">
+
+    <!--Necessita revisar, nao funciona   <div class="container">
         <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -26,203 +26,205 @@
     <%- include partials/headerAreaLivreSemLogin.ejs %>
         <% if (!dadosUsuario){ %>
             <form method="GET" action="/orcamento/orcamentoSLogin">
-            <div class="container-div-2">
-                <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input>
-
-            </div>
-        </form>
-        <%}%>
-        <%if(dadosUsuario){%>
-            <form method="GET" action="/orcamento">
                 <div class="container-div-2">
                     <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input>
-    
+
                 </div>
             </form>
-        <%}%>
-        
+            <%}%>
+                <%if(dadosUsuario){%>
+                    <form method="GET" action="/orcamento">
+                        <div class="container-div-2">
+                            <input class="header-orcamento" type="submit" value="Faça seu orçamento com a gente!"></input>
 
-        <!-- início da sessão de portfólio MODAL-->
-        <div id="portfolio">
-            <div class="portfolioProjeto">
-                <img class="portfolioProjeto-1-image" src="./img/projeto1.png" alt="Imagem ilustrativa do projeto.">
-                <div class="image-overlay">
-                    <div class="image-overlayTitle">Projeto 1</div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    <p>
-                        <a href="">
+                        </div>
+                    </form>
+                    <%}%>
+
+
+                        <!-- início da sessão de portfólio MODAL-->
+                        <div id="portfolio">
+                            <div class="portfolioProjeto">
+                                <img class="portfolioProjeto-1-image" src="./img/projeto1.png" alt="Imagem ilustrativa do projeto.">
+                                <div class="image-overlay">
+                                    <div class="image-overlayTitle">Projeto 1</div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                    <p>
+                                        <a href="">
                                             Saiba Mais<img src="./img/arrow_right_hover.png">
                                             </a>
-                    </p>
-                    <button><a class="image-overlay--link" href="orcamento/orcamentoSLogin">Peça um
+                                    </p>
+                                    <button><a class="image-overlay--link" href="orcamento/orcamentoSLogin">Peça um
                         Orçamento</a></button>
-                </div>
-            </div>
+                                </div>
+                            </div>
 
-            <div class="portfolioProjeto">
-                <img src="./img/projeto2.png" alt="Imagem ilustrativa do projeto.">
-                <div class="image-overlay">
-                    <div class="image-overlayTitle">Projeto 2</div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
+                            <div class="portfolioProjeto">
+                                <img src="./img/projeto2.png" alt="Imagem ilustrativa do projeto.">
+                                <div class="image-overlay">
+                                    <div class="image-overlayTitle">Projeto 2</div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                    <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
                             src="./img/arrow_right_hover.png"></a></p>
-                    <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um
+                                    <button><a class="image-overlay--link" href="./orcamento-agendamento/orcamento.html">Peça um
                         Orçamento</a></button>
-                </div>
-            </div>
+                                </div>
+                            </div>
 
-            <div class="portfolioProjeto">
-                <img src="./img/projeto3.png" alt="Imagem ilustrativa do projeto.">
-                <div class="image-overlay">
-                    <div class="image-overlayTitle">Projeto 3</div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
+                            <div class="portfolioProjeto">
+                                <img src="./img/projeto3.png" alt="Imagem ilustrativa do projeto.">
+                                <div class="image-overlay">
+                                    <div class="image-overlayTitle">Projeto 3</div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                    <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
                             src="./img/arrow_right_hover.png"></a></p>
-                    <button><a class="image-overlay--link" href="orcamento/orcamentoSLogin?">Peça um
+                                    <button><a class="image-overlay--link" href="orcamento/orcamentoSLogin?">Peça um
                         Orçamento</a></button>
-                </div>
-            </div>
+                                </div>
+                            </div>
 
-            <div class="portfolioProjeto">
-                <img src="./img/projeto4.png" alt="Imagem ilustrativa do projeto.">
-                <div class="image-overlay">
-                    <div class="image-overlayTitle">Projeto 4</div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
+                            <div class="portfolioProjeto">
+                                <img src="./img/projeto4.png" alt="Imagem ilustrativa do projeto.">
+                                <div class="image-overlay">
+                                    <div class="image-overlayTitle">Projeto 4</div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                    <p><a href="../estudioAires/services-modal-gallery/modal-gallery.html">Saiba Mais<img
                             src="./img/arrow_right_hover.png"></a></p>
-                    <button><a class="image-overlay--link" href="orcamento/orcamentoSLogin?">Peça um
+                                    <button><a class="image-overlay--link" href="orcamento/orcamentoSLogin?">Peça um
                         Orçamento</a></button>
-                </div>
-            </div>
-        </div>
-        <!-- fim da sessão de portfólio MODAL-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fim da sessão de portfólio MODAL-->
 
-        <div>
-            <!--Botão do whatsapp-->
-            <a href="/" class="float" target="_blank">
-                <img src="/img/whatsapp-icon.png" alt="">
-            </a>
-        </div>
+                        <div>
+                            <!--Botão do whatsapp-->
+                            <a href="/" class="float" target="_blank">
+                                <img src="/img/whatsapp-icon.png" alt="">
+                            </a>
+                        </div>
 
-        <!-- início da sessão de serviços-->
-        <section id="servicosEA" class="servicos">
-            <h2>Nossos Serviços</h2>
-            <div class="container-servicos">
+                        <!-- início da sessão de serviços-->
+                        <section id="servicosEA" class="servicos">
+                            <h2>Nossos Serviços</h2>
+                            <div class="container-servicos">
 
-                <div class="box-servico">
-                    <img src="../img/servico1.png" alt="Descritivo serviço 1">
-                    <h3>Serviço 1</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico1">Saiba
+                                <div class="box-servico">
+                                    <img src="../img/servico1.png" alt="Descritivo serviço 1">
+                                    <h3>Serviço 1</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
+                                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico1">Saiba
                         mais</a></button>
-                </div>
+                                </div>
 
-                <div class="box-servico">
-                    <img src="../img/servico1.png" alt="Descritivo serviço 2">
-                    <h3>Serviço 2</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico2">Saiba
+                                <div class="box-servico">
+                                    <img src="../img/servico1.png" alt="Descritivo serviço 2">
+                                    <h3>Serviço 2</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
+                                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico2">Saiba
                         mais</a></button>
-                </div>
+                                </div>
 
-                <div class="box-servico">
-                    <img src="../img/servico3.png" alt="Descritivo serviço 3">
-                    <h3>Serviço 3</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico3">Saiba
+                                <div class="box-servico">
+                                    <img src="../img/servico3.png" alt="Descritivo serviço 3">
+                                    <h3>Serviço 3</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
+                                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico3">Saiba
                         mais</a></button>
-                </div>
+                                </div>
 
-                <div class="box-servico">
-                    <img src="../img/servico4.png" alt="Descritivo serviço 4">
-                    <h3>Serviço 4</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico4">Saiba
+                                <div class="box-servico">
+                                    <img src="../img/servico4.png" alt="Descritivo serviço 4">
+                                    <h3>Serviço 4</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
+                                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico4">Saiba
                         mais</a></button>
-                </div>
+                                </div>
 
-                <div class="box-servico">
-                    <img src="../img/servico5.png" alt="Descritivo serviço 5">
-                    <h3>Serviço 5</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico5">Saiba
+                                <div class="box-servico">
+                                    <img src="../img/servico5.png" alt="Descritivo serviço 5">
+                                    <h3>Serviço 5</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
+                                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico5">Saiba
                         mais</a></button>
-                </div>
+                                </div>
 
-                <div class="box-servico">
-                    <img src="../img/servico6.png" alt="Descritivo serviço 6">
-                    <h3>Serviço 6</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
-                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico6">Saiba
+                                <div class="box-servico">
+                                    <img src="../img/servico6.png" alt="Descritivo serviço 6">
+                                    <h3>Serviço 6</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nobis dolor minima dignissimos, iusto ad porro iste iure aliquam, suscipit excepturi impedit dolore sequi molestiae cumque sit odio, laudantium tempora.</p>
+                                    <button class="box-servico--button"><a class="box-servico--buttonLink" href="/servicos/servico6">Saiba
                         mais</a></button>
-                </div>
-            </div>
-        </section>
+                                </div>
+                            </div>
+                        </section>
 
-        <!-- início da sessão quem somos -->
-        <section id="quem-somosEA" class="quem-somos">
-            <div class="quem-somos-intro">
-                <h2>Quem Somos</h2>
+                        <!-- início da sessão quem somos -->
+                        <section id="quem-somosEA" class="quem-somos">
+                            <div class="quem-somos-intro">
+                                <h2>Quem Somos</h2>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero id, perferendis ut ex, similique fugiat distinctio ipsam earum praesentium consectetur dolorum officia obcaecati modi consequatur nam ab sit accusantium cumque.
-                </p>
-            </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero id, perferendis ut ex, similique fugiat distinctio ipsam earum praesentium consectetur dolorum officia obcaecati modi consequatur nam ab sit accusantium cumque.
+                                </p>
+                            </div>
 
-            <div class="container-socios">
-                <div class="socio">
-                    <img src="../img/placeHolderImageSocio1.png" alt="Placeholder image para o sócio 1">
-                    <h3>Fotógrafo 1</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta minus!
-                    </p>
-                </div>
+                            <div class="container-socios">
+                                <div class="socio">
+                                    <img src="../img/placeHolderImageSocio1.png" alt="Placeholder image para o sócio 1">
+                                    <h3>Fotógrafo 1</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta
+                                        minus!
+                                    </p>
+                                </div>
 
-                <div class="socio">
-                    <img src="../img/placeHolderImageSocio2.png" alt="Placeholder image para o sócio 2">
-                    <h3>Fotógrafo 2</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta minus!
-                    </p>
-                </div>
-            </div>
-        </section>
+                                <div class="socio">
+                                    <img src="../img/placeHolderImageSocio2.png" alt="Placeholder image para o sócio 2">
+                                    <h3>Fotógrafo 2</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, expedita sit? Aut harum deleniti, maiores deserunt error odio esse quibusdam, rerum dignissimos, nam nihil. Fugit similique temporibus ullam soluta
+                                        minus!
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
-        <!-- início da sessão parceiros -->
-        <section id="parceirosEA" class="parceiros">
-            <h2>Nossos parceiros</h2>
+                        <!-- início da sessão parceiros -->
+                        <section id="parceirosEA" class="parceiros">
+                            <h2>Nossos parceiros</h2>
 
-            <div class="listaParceiros-direita">
-                <h4>Parceiro 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
-                <img src="../img/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
-            </div>
+                            <div class="listaParceiros-direita">
+                                <h4>Parceiro 1</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
+                                <img src="../img/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
+                            </div>
 
-            <div class="listaParceiros-esquerda">
-                <img src="../img/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
-                <h4>Parceiro 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
-            </div>
+                            <div class="listaParceiros-esquerda">
+                                <img src="../img/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
+                                <h4>Parceiro 2</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
+                            </div>
 
-            <div class="listaParceiros-direita">
-                <h4>Parceiro 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
-                <img src="../img/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
-            </div>
+                            <div class="listaParceiros-direita">
+                                <h4>Parceiro 3</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
+                                <img src="../img/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
+                            </div>
 
-            <div class="listaParceiros-esquerda">
-                <img src="../img/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
-                <h4>Parceiro 4</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
-            </div>
-        </section>
+                            <div class="listaParceiros-esquerda">
+                                <img src="../img/placeHolderImageParceiros.png" alt="Placeholder image para parceiros.">
+                                <h4>Parceiro 4</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem praesentium quis commodi ullam? Modi odio, eum, dolores tenetur inventore quisquam soluta inventore quisquam soluta.</p>
+                            </div>
+                        </section>
 
-        <!-- Botão go up para início da home -->
-        <div class="footer--goUpBtn">
-            <a href="#"><img class="footer--goUpBtn--linkImg" src="../img/upButton.png"></a>
-        </div>
+                        <!-- Botão go up para início da home -->
+                        <div class="footer--goUpBtn">
+                            <a href="#"><img class="footer--goUpBtn--linkImg" src="../img/upButton.png"></a>
+                        </div>
 
-        <!-- Footer -->
-        <%- include partials/footer.ejs %>
+                        <!-- Footer -->
+                        <%- include partials/footer.ejs %>
 
-       
+
 </body>
 
 </html>
