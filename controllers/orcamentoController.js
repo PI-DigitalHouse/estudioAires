@@ -66,13 +66,14 @@ console.log(typeof req.body.horarioInicio)
   req.body.horarioFinal.setSeconds(0)
   let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
 
-  console.log(newService.valor)
-  console.log(dadosDoFormulario.servico)
-  console.log(juncao.length) //percorrendo o array e trazendo a quantidade de servico que tem nele
+  console.log(dadosDoFormulario)
+  //console.log(newService.valor)
+  //console.log(dadosDoFormulario.servico)
+  //console.log(juncao.length) //percorrendo o array e trazendo a quantidade de servico que tem nele
 
 
   const resultado = calculaOrcamento(dadosDoFormulario.tamanhoImovel, newService.valor, juncao.length)
-  //req.body.valor = resultado
+  req.body.valor = resultado
 
 
   dadosDoFormulario.valor = resultado
@@ -98,9 +99,12 @@ console.log(typeof req.body.horarioInicio)
 
 
 
-function calculaOrcamento(tamanhoImovel, servico, valor) {
-
-  let valorTotal = tamanhoImovel * (valor * servico)
+function calculaOrcamento(tamanhoImovel, numeroServicos, valor) {
+  
+  let valorTotal = tamanhoImovel*( numeroServicos*valor+ 0.8)
+  console.log(tamanhoImovel)
+  
+  console.log(valorTotal)
   return valorTotal
 }
 
