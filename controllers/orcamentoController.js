@@ -62,8 +62,8 @@ module.exports.novoOrcamento = (async (req, res, next) => {
   }
 
 console.log(typeof req.body.horarioInicio)
-  req.body.horarioFinal = new Date (req.body.horarioInicio)
-  req.body.horarioFinal.setSeconds(0)
+  req.body.dataFinal = req.body.dataInicio
+  req.body.horarioFinal = req.body.horarioInicio
   let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
 
   console.log(dadosDoFormulario)
