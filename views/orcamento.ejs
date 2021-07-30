@@ -154,8 +154,12 @@
                                 <div class="tab">
                                     <div class="container mt-5 mb-5" style="width: 400px;"></div>
                                     <h4>Por favor, selecione a data:</h4>
-                                        <input type="text" id="picker" name="horarioInicio" class="form-control">
-                                    </div>
+                                    <input type="text" id="picker1" name="dataInicio" class="form-control">
+                                    <button>Checar disponibilidade</button>
+                                    <input type="text" id="picker2" name="horarioInicio" class="form-control">
+
+                                </div>
+
                                 </div>
 
                                 </div>
@@ -228,7 +232,7 @@
 
                         console.log(horariosBloqueados)
 
-                        $('#picker').datetimepicker({
+                        $('#picker1').datetimepicker({
                             timepicker: false,
                             datepicker: true,
                             format: 'Y-m-d',
@@ -242,33 +246,30 @@
                                 dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
                             },
                             minDate: today,
-
-                             // allowTimes: function getArr() {
-                            //     var allowTimes = [
-                            //         '08:00:00', '10:00:00', '14:00:00', '16:00:00'
-                            //     ];
-                            //     return allowTimes;
-                            // }(),
-
-                            //disabledDates:["2021-07-27 10:00","2021-07-27 17:00"]
-                            //opçao 1
-                            // beforeShowDay: function (date) {
-                            //     //var string = jQuery.datepicker.formatDate('Y-m-d H:i', date);
-                            //     return ["2021-07-30 10:00:00"]
-                            // }
-
-                            //opção 2
-                            // beforeShowDay: my_check
+                        })
+                        $('#picker2').datetimepicker({
+                            timepicker: true,
+                            datepicker: false,
+                            format: 'H:i',
+                            yearStart: 2021,
+                            yearEnd: 2022,
+                            step: 30,
+                            mask: true,
+                            lang: 'pt-BR',
+                            il8n: {
+                                month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                                dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+                            },
+                            minDate: today,
+                            allowTimes: function getArr() {
+                                var allowTimes = [
+                                    '08:00:00', '10:00:00', '14:00:00', '16:00:00'
+                                ];
+                                return allowTimes;
+                            }(),
                         })
 
-                        // function my_check(date) {
-                        //     var my_array = horariosBloqueados;
-                        //     if (my_array.indexOf(date) >= 0) {
-                        //         return [false, "notav", 'Not Available'];
-                        //     } else {
-                        //         return [true, "av", "available"];
-                        //     }
-                        // }
+                     
 
                     </script>
 
