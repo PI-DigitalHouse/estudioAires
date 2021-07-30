@@ -152,10 +152,9 @@
                                 <!--  /*STEP4*/ -->
 
                                 <div class="tab">
+                                    <div class="container mt-5 mb-5" style="width: 400px;"></div>
                                     <h4>Por favor, selecione a data:</h4>
-                                    <div>
-                                        <input type="text" id="picker1" name="horarioInicio" class="form-control">
-
+                                        <input type="text" id="picker" name="horarioInicio" class="form-control">
                                     </div>
                                 </div>
 
@@ -229,17 +228,10 @@
 
                         console.log(horariosBloqueados)
 
-                        $('#picker1').datetimepicker({
-                            timepicker: true,
-                            allowTimes: function getArr() {
-                                var allowTimes = [
-                                    '08:00:00', '10:00:00', '14:00:00', '16:00:00'
-                                ];
-                                return allowTimes;
-                            }(),
-
+                        $('#picker').datetimepicker({
+                            timepicker: false,
                             datepicker: true,
-                            format: 'Y-m-d H:i',
+                            format: 'Y-m-d',
                             yearStart: 2021,
                             yearEnd: 2022,
                             step: 30,
@@ -250,6 +242,14 @@
                                 dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
                             },
                             minDate: today,
+
+                             // allowTimes: function getArr() {
+                            //     var allowTimes = [
+                            //         '08:00:00', '10:00:00', '14:00:00', '16:00:00'
+                            //     ];
+                            //     return allowTimes;
+                            // }(),
+
                             //disabledDates:["2021-07-27 10:00","2021-07-27 17:00"]
                             //opçao 1
                             // beforeShowDay: function (date) {
