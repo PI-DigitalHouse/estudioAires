@@ -18,7 +18,7 @@ module.exports.renderizaOrcamento =  async (req, res, next) => {
       idReserva: {
         [Op.like]: `${idReserva || ''}%`,
       }
-    }, attributes: ['horarioInicio']
+    }, attributes: ['dataInicio']
   });
 
   console.log(JSON.stringify (bloqueio.map(data=>data.horarioInicio)))

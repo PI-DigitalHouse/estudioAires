@@ -1,6 +1,6 @@
 var currentTab = 0; // O dash atual é definido para ser o primeiro dash (0)
 showTab(currentTab); // Exibir a dash atual
-const orcamentosCadastrados=[];
+const orcamentosCadastrados = [];
 
 function showTab(n) {
   // Esta função irá exibir dash especificado do formulário ...
@@ -9,16 +9,36 @@ function showTab(n) {
   // ... e corrija os botões Voltar / Confirmar:
   if (n == 0) {
     document.getElementById("prevBtn").style.display = "none";
-  } else {
+    document.getElementById("check-disponibilidade").style.display = "none";
+    document.getElementById("nextBtn2").style.display = "none";
+  } else if (n == 3) {
+    document.getElementById("check-disponibilidade").style.display = "inline";
+    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("nextBtn").style.display = "inline";
+    document.getElementById("nextBtn2").style.display = "none";
+  } else if (n == 5) {
+    document.getElementById("nextBtn2").style.display = "inline";
     document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Acesse sua área restrita";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "CONFIRMAR";
+  }else{
+    document.getElementById("check-disponibilidade").style.display = "none";
+    document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("nextBtn").style.display = "inline";
   }
 
+  //codigo original por se der merda
+  // if (n == 0) {
+  //   document.getElementById("prevBtn").style.display = "none";
+  // } else {
+  //   document.getElementById("prevBtn").style.display = "inline";
+  // } 
+  // if (n == (x.length - 1)) {
+  //   document.getElementById("nextBtn").innerHTML = "Acesse sua área restrita";
+  // } else {
+  //   document.getElementById("nextBtn").innerHTML = "CONFIRMAR";
+  // }
+
   // ... e executa uma função que exibe o indicador do step correto:
+
   fixStepIndicator(n)
 }
 
@@ -36,7 +56,7 @@ function nextPrev(n) {
     //...o formulário é enviado:
     document.getElementById("acao-central").submit();
     document.getElementById("acao-central").salvarUsuario(orcamentosCadastrados)
-    
+
     return false;
   }
   // Caso contrário, exiba o dash correto:
@@ -52,7 +72,7 @@ function validateForm() {
   for (i = 0; i < y.length; i++) {
     //Se um campo estiver vazio ...
     if (y[i].value == "") {
-     // adicione uma classe "inválida" ao campo:
+      // adicione uma classe "inválida" ao campo:
       y[i].className += " invalid";
       // e defina o status válido atual como falso:
       valid = false;
@@ -61,11 +81,11 @@ function validateForm() {
   //Se o status válido for verdadeiro, marque a etapa como concluída e válida:
   if (valid) {
     document.getElementsByClassName("bolaOk")[currentTab].className += " finish";
-    
+
   }
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish2";
-    
+
   }
   return valid; // retornar o status válido
 }
@@ -100,7 +120,25 @@ function fixStepIndicator2(n) {
   x[n].className += " active";
 }
 
-function salvarUsuario (usuario){
+function salvarUsuario(usuario) {
   const str = JSON.stringify(usuario) //transforma usuario em string
   fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
 }
+
+//codigo datetimepicker
+
+function checaDisponibilidade() {
+  let dataInicioForm = document.getElementById("picker1").value
+  console.log("entrou na função")
+  if (bloqueio.dataInicio == dataInicioForm) {
+    //codigo para procurar os horarios
+    console.log("nao foi")
+  } else {
+    console.log("foi")
+
+  }
+
+}
+
+
+
