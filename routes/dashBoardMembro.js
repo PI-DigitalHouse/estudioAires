@@ -1,4 +1,3 @@
-
 const models = require('../models');
 const express = require('express');
 const router = express.Router();
@@ -26,7 +25,7 @@ router.get('/meuPerfil',checkSessionMembro, function(req, res, next){
 /* router.get('/minhaAgenda', checkSessionMembro, aprovacoes); */
 
 
- router.get('/aprovacoes', checkSessionMembro, aprovacoes );
+ router.get('/aprovacoes', checkSessionMembro, aprovacoes);
 
 
 //Membro -> jobs finalizados
