@@ -66,7 +66,7 @@ console.log(typeof req.body.horarioInicio)
   req.body.horarioFinal = req.body.horarioInicio
   let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
 
-  console.log(dadosDoFormulario)
+  
   //console.log(newService.valor)
   //console.log(dadosDoFormulario.servico)
   //console.log(juncao.length) //percorrendo o array e trazendo a quantidade de servico que tem nele
@@ -80,7 +80,7 @@ console.log(typeof req.body.horarioInicio)
   dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
   dadosDoFormulario.membros_idMembro = 1
   dadosDoFormulario.status = 'active'
-
+  console.log(dadosDoFormulario)
   const reservas = await models.Reserva.create(dadosDoFormulario)
 
   if (!reservas) {
@@ -94,7 +94,7 @@ console.log(typeof req.body.horarioInicio)
 
   res.redirect('/') //redireciiona para home
 
-
+  
 })
 
 
