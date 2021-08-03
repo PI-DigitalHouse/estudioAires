@@ -221,28 +221,34 @@
 
                     <script>
                         let checkboxes = document.getElementsByName('servico')
-
-
-                        let array = []
-                        let tamanhoImovel = document.getElementById('tamanhoImovel').value
-                        //let tamanhoImovel2 = parseInt(tamanhoImovel, 10)
+                        const tamanho = document.getElementById('tamanhoImovel').value
 
                         checkboxes.forEach(function (item) {
                             item.onchange = function (e) {
                                 let checkBoxesChecados = Array.from(checkboxes).filter(function (checkbox) {
                                     return (checkbox.checked)
                                 })
-                                console.log(checkBoxesChecados) //n estou conseguindo fazer com que o programa pegue o valor passado no input de tamanho do imovel
+                                //console.log(checkBoxesChecados)
                                 let servicos = checkBoxesChecados.map(function (checkbox) {
                                     return checkbox.value
                                 })
-                                console.log(servicos)
+                                console.log(tamanho)
+                                calculaOrcamentoFront(servicos, tamanho)
+                                
+                                
                             }
                         })
 
-                        function calculaOrcamentoFront() {
-
-                        }
+                        
+                        function calculaOrcamentoFront(services, tamanhoDoImovel) {
+                            // esse n ta vindo
+                            console.log(services.length)
+                            console.log(tamanhoDoImovel)
+                            let result = (services.length * 0.2 + 0.8) * tamanhoDoImovel
+                            console.log(result)
+                            return result
+                        } 
+                        
                     </script>
 
                     <!-- script datepicker -->
@@ -259,7 +265,7 @@
                         var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
                         var horariosBloqueados = horariosBloqueados
 
-                        console.log(horariosBloqueados)
+                        //console.log(horariosBloqueados)
 
                         $('#picker1').datetimepicker({
                             timepicker: false,
