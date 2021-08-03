@@ -221,7 +221,7 @@
 
                     <script>
                         let checkboxes = document.getElementsByName('servico')
-                        const tamanho = document.getElementById('tamanhoImovel').value
+                       
 
                         checkboxes.forEach(function (item) {
                             item.onchange = function (e) {
@@ -232,19 +232,21 @@
                                 let servicos = checkBoxesChecados.map(function (checkbox) {
                                     return checkbox.value
                                 })
+                                let tamanho = document.getElementsByName('tamanhoImovel').value
                                 console.log(tamanho)
+                                console.log(servicos)
                                 calculaOrcamentoFront(servicos, tamanho)
                                 
                                 
                             }
+                            
+                            
                         })
 
                         
-                        function calculaOrcamentoFront(services, tamanhoDoImovel) {
-                            // esse n ta vindo
-                            console.log(services.length)
-                            console.log(tamanhoDoImovel)
-                            let result = (services.length * 0.2 + 0.8) * tamanhoDoImovel
+                        function calculaOrcamentoFront(services) {
+                            let tamanho = document.getElementsByName('tamanhoImovel').value
+                            let result = (services.length * 0.2 + 0.8) * tamanho
                             console.log(result)
                             return result
                         } 
