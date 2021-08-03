@@ -1,3 +1,23 @@
+//codigo datetimepicker
+let botaoDisponibilidade = document.getElementById("check-disponibilidade")
+
+botaoDisponibilidade.onclick = () => {
+
+  let dataInicioForm = document.getElementById("picker1").value
+
+  console.log(horariosBloqueados)
+  //bloqueio.indexOf(dataInicioForm) == -1
+
+  if (horariosBloqueados == 1){
+    console.log("foi")
+    //colocar codigo para ir pro próximo step
+    //currentTab = currentTab + n;
+  } else {
+    //codigo para procurar os horarios
+    console.log("nao foi")
+  }
+}
+
 var currentTab = 0; // O dash atual é definido para ser o primeiro dash (0)
 showTab(currentTab); // Exibir a dash atual
 const orcamentosCadastrados = [];
@@ -126,20 +146,7 @@ function salvarUsuario(usuario) {
   fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
 }
 
-//codigo datetimepicker
 
-function checaDisponibilidade() {
-  let dataInicioForm = document.getElementById("picker1").value
-  console.log("entrou na função")
-  if (bloqueio.dataInicio == dataInicioForm) {
-    //codigo para procurar os horarios
-    console.log("nao foi")
-  } else {
-    console.log("foi")
-
-  }
-
-}
 
 
 

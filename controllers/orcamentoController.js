@@ -9,28 +9,29 @@ let orcamentosCadastrados = [];
 
 module.exports.renderizaOrcamento = async (req, res, next) => {
   const { idReserva } = req.query;
-  // const bloqueio = await models.Reserva.findAll({
-  //   where: {
-  //     idReserva: {
-  //       [Op.like]: `${idReserva || ''}%`,
-  //     }
-  //   }, attributes: ['dataInicio']
-  // });
 
-  //console.log(JSON.stringify (bloqueio.map(data=>data.horarioInicio)))
+  const bloqueio = await models.Reserva.findAll({
+    where: {
+      idReserva: {
+        [Op.like]: `${idReserva || ''}%`,
+      }
+    }, attributes: ['dataInicio', 'horarioInicio']
+  });
+
+  console.log(JSON.stringify (bloqueio.map(data=>data.dataInicio)))
 
   if (req.session.usuario) {
     res.render('orcamento', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      //horariosBloqueados: bloqueio,
+      horariosBloqueados: bloqueio,
     })
   } else {
     console.log('n logado')
     res.render('orcamentoSLogin', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      //horariosBloqueados: bloqueio,
+      horariosBloqueados: bloqueio,
     })
   }
 }
