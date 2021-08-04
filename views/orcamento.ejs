@@ -124,7 +124,9 @@
                                         <p>Valor do seu orçamento: </p>
 
                                         <div class="valor-orcamento preco">
-                                            <div></div>
+                                            <div id = 'valorOrcamento'>
+                                                
+                                            </div>
 
 
                                         </div>
@@ -221,28 +223,39 @@
 
                     <script>
                         let checkboxes = document.getElementsByName('servico')
-
-
-                        let array = []
-                        let tamanhoImovel = document.getElementById('tamanhoImovel').value
-                        //let tamanhoImovel2 = parseInt(tamanhoImovel, 10)
+                        
 
                         checkboxes.forEach(function (item) {
                             item.onchange = function (e) {
                                 let checkBoxesChecados = Array.from(checkboxes).filter(function (checkbox) {
                                     return (checkbox.checked)
                                 })
-                                console.log(checkBoxesChecados) //n estou conseguindo fazer com que o programa pegue o valor passado no input de tamanho do imovel
+                                //console.log(checkBoxesChecados)
                                 let servicos = checkBoxesChecados.map(function (checkbox) {
                                     return checkbox.value
                                 })
-                                console.log(servicos)
+                                let tamanho = document.querySelector('#tamanhoImovel').value // aqui posso usar o getElementsByName, mas usando dessa forma eu preciso especificar o index pois ele retorna um array
+                                
+                                calculaOrcamentoFront(servicos, tamanho)
+                                
+                                
                             }
+                            
+                            
                         })
 
-                        function calculaOrcamentoFront() {
+                        
+                        function calculaOrcamentoFront(services) {
+                            let tamanho = document.querySelector('#tamanhoImovel').value
+                            let result = (services.length * 0.2 + 0.8) * tamanho
 
-                        }
+                            document.getElementById('valorOrcamento').innerText = result
+                            return result
+                            
+                        } 
+
+                        
+                        
                     </script>
 
                     <!-- script datepicker -->
