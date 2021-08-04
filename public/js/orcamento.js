@@ -1,4 +1,5 @@
 //codigo datetimepicker
+
 let botaoDisponibilidade = document.getElementById("check-disponibilidade")
 
 botaoDisponibilidade.onclick = () => {
@@ -6,7 +7,8 @@ botaoDisponibilidade.onclick = () => {
   let dataInicioForm = document.getElementById("picker1").value
 
   console.log(horariosBloqueados)
-  //bloqueio.indexOf(dataInicioForm) == -1
+
+  //horariosbloqueados.indexOf(dataInicioForm) == -1
 
   if (horariosBloqueados == 1){
     console.log("foi")

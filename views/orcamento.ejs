@@ -257,9 +257,9 @@
 
                         var date = new Date();
                         var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-                        var horariosBloqueados = horariosBloqueados
-
-                        console.log(horariosBloqueados)
+                        var horariosBloqueados = JSON.parse ('<%-horariosBloqueados%>')
+                        //para usar no front
+                        console.log(JSON.parse ('<%-horariosBloqueados%>'))
 
                         $('#picker1').datetimepicker({
                             timepicker: false,

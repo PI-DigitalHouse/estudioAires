@@ -17,14 +17,14 @@ module.exports.renderizaOrcamento = async (req, res, next) => {
       }
     }, attributes: ['dataInicio', 'horarioInicio']
   });
-
-  console.log(JSON.stringify (bloqueio.map(data=>data.dataInicio)))
+  //para usar no front
+  const bloqueio2 = JSON.stringify (bloqueio.map(data=>data.dataInicio))
 
   if (req.session.usuario) {
     res.render('orcamento', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      horariosBloqueados: bloqueio,
+      horariosBloqueados: bloqueio2,
     })
   } else {
     console.log('n logado')
