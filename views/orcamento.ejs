@@ -124,7 +124,9 @@
                                         <p>Valor do seu orçamento: </p>
 
                                         <div class="valor-orcamento preco">
-                                            <div></div>
+                                            <div id = 'valorOrcamento'>
+                                                
+                                            </div>
 
 
                                         </div>
@@ -221,7 +223,7 @@
 
                     <script>
                         let checkboxes = document.getElementsByName('servico')
-                       
+                        
 
                         checkboxes.forEach(function (item) {
                             item.onchange = function (e) {
@@ -232,9 +234,8 @@
                                 let servicos = checkBoxesChecados.map(function (checkbox) {
                                     return checkbox.value
                                 })
-                                let tamanho = document.getElementsByName('tamanhoImovel').value
-                                console.log(tamanho)
-                                console.log(servicos)
+                                let tamanho = document.querySelector('#tamanhoImovel').value // aqui posso usar o getElementsByName, mas usando dessa forma eu preciso especificar o index pois ele retorna um array
+                                
                                 calculaOrcamentoFront(servicos, tamanho)
                                 
                                 
@@ -245,11 +246,15 @@
 
                         
                         function calculaOrcamentoFront(services) {
-                            let tamanho = document.getElementsByName('tamanhoImovel').value
+                            let tamanho = document.querySelector('#tamanhoImovel').value
                             let result = (services.length * 0.2 + 0.8) * tamanho
-                            console.log(result)
+
+                            document.getElementById('valorOrcamento').innerText = result
                             return result
+                            
                         } 
+
+                        
                         
                     </script>
 
