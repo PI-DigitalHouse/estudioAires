@@ -24,13 +24,9 @@ router.get('/meuPerfil',checkSessionMembro, function(req, res, next){
 })
 
 /* router.get('/minhaAgenda', checkSessionMembro, aprovacoes); */
-<<<<<<< HEAD
- router.get('/aprovacoes', checkSessionMembro, aprovacoes );
-=======
 
 
  router.get('/aprovacoes', checkSessionMembro, aprovacoes);
->>>>>>> a4e78fedcbf3f563a7a2bca9ff073458bc45225c
 
 //Membro -> jobs finalizados
 router.get('/jobsFinalizados', checkSessionMembro, mostraJobs)
