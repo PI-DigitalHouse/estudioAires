@@ -13,8 +13,13 @@
                             <option value="mais antiga a mais nova">Mais antiga a mais nova</option>
                         </select>
                     </div>
-                    <p> Buscar: </p>
-                    <input type="text" name="nome">
+                    <div class="busca">
+                        <p> Buscar: </p>
+                        <form action="/dashboardMembro/buscar" method="GET">
+                            <input type="search" name="jobId">
+                            <input type="submit" value="Pesquisar">
+                        </form>
+                    </div>
                 </div>
                 <% if (resultadosJobs) { %>
                     <% for (resultado of resultadosJobs) { %>
