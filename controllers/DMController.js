@@ -13,11 +13,12 @@ module.exports.calendario = (req, res) => {
 module.exports.bloquear = async (req, res, next) => {
   const bloqueio = req.body;
 
-  bloqueio.reservadoPor = req.session.usuario.idUsuario;
-  bloqueio.aceitoPor = req.session.usuario.idUsuario;
+  bloqueio.reservadoPor = req.session.membro.idMembro;
+  bloqueio.aceitoPor = req.session.membro.idMembro;
   bloqueio.idSolicitacao = 1;
 
   console.log(bloqueio);
+  console.log(typeof req.body.horarioInicio)
 
   await models.Reserva.create(bloqueio);
 

@@ -13,9 +13,13 @@
     <h4>Selecione o período que deseja bloquear:</h4>
     <div class="container mt-5 mb-5" style="width: 400px;">
       <h4>Data de início:</h4>
-      <input type="text" id="picker1" name="horarioInicio" class="form-control">
+      <input type="text" id="picker1" name="dataInicio" class="form-control">
+      <h4>Horário de início:</h4>
+      <input type="text" id="picker2" name="horarioInicio" class="form-control">
       <h4>Data de finalização:</h4>
-      <input type="text" id="picker2" name="horarioFinal" class="form-control">
+      <input type="text" id="picker3" name="dataFinal" class="form-control">
+      <h4>Horário de finalização:</h4>
+      <input type="text" id="picker4" name="horarioFinal" class="form-control">
     </div>
     <button class="btn btn-lg btn-primary">Bloquear calendario</button>
   </form>
@@ -33,12 +37,14 @@
 
     var date = new Date();
     var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    var horariosBloqueados = horariosBloqueados
+
+    console.log(horariosBloqueados)
 
     $('#picker1').datetimepicker({
-      timepicker: true,
+      timepicker: false,
       datepicker: true,
-      format: 'Y-m-d H:i:s',
-      showSecond: true,
+      format: 'Y-m-d',
       yearStart: 2021,
       yearEnd: 2022,
       step: 30,
@@ -49,15 +55,27 @@
         dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
       },
       minDate: today,
-
-
-    })
-
-    $('#picker2').datetimepicker({
-      timepicker: true,
+    }),
+      $('#picker2').datetimepicker({
+        timepicker: true,
+        datepicker: false,
+        format: 'H:i',
+        yearStart: 2021,
+        yearEnd: 2022,
+        step: 30,
+        mask: true,
+        lang: 'pt-BR',
+        il8n: {
+          month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+          dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+        },
+        minDate: today,
+        
+      })
+    $('#picker3').datetimepicker({
+      timepicker: false,
       datepicker: true,
-      format: 'Y-m-d H:i:s',
-      showSecond: true,
+      format: 'Y-m-d',
       yearStart: 2021,
       yearEnd: 2022,
       step: 30,
@@ -68,9 +86,24 @@
         dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
       },
       minDate: today,
+    }),
+      $('#picker4').datetimepicker({
+        timepicker: true,
+        datepicker: false,
+        format: 'H:i',
+        yearStart: 2021,
+        yearEnd: 2022,
+        step: 30,
+        mask: true,
+        lang: 'pt-BR',
+        il8n: {
+          month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+          dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+        },
+        minDate: today,
+        
+      })
 
-
-    })
   </script>
 
 </body>
