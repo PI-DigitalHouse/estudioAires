@@ -1,50 +1,47 @@
-<html>
-<link rel="stylesheet" href="/css/partials/footerGeral.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<footer>
+    <div class="container-footer">
+        <div class="row-footer">
+            <div class="footer-col">
+                <h4>conheça</h4>
+                <ul>
+                    <li><a href="#quemSomos">quem somos</a></li>
+                    <li><a href="#splideDois">portifólio</a></li>
+                    <% if (!dadosUsuario){ %>
+                        <li><a href="/orcamento/orcamentoSLogin">orçamento</a></li>
+                        <%}%>
+                            <%if(dadosUsuario){%>
+                                <li><a href="/orcamento">orçamento</a></li>
+                                <%}%>
+                                    <li><a href="/cadastro-usuario">cadastre-se</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contate-nos</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="tel:000000000">telefone</a></li>
+                    <li><a href="https://web.whatsapp.com/send?phone=000000000" target="_blank">whatsapp</a></li>
+                    <li><a href="mailto:someone@example.com">someone@example.com</a></li>
+                </ul>
+            </div>
 
-<body>
-    <footer class="footer">
-        <div class="container-footer">
-            <div class="row-footer">
-                <div class="footer-col">
-                    <h4>conheça</h4>
-                    <ul>
-                        <li><a href="#quem-somosEA">quem somos</a></li>
-                        <li><a href="#portfolio">portifólio</a></li>
-                        <li><a href="/orcamento">orçamento</a></li>
-                        <li><a href="/cadastro-usuario">cadastre-se</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contate-nos</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">telefone</a></li>
-                        <li><a href="#">whatsapp <i class="fab fa-whatsapp"></i></a></li>
-                        <li><a href="#">ipDoEmail@email.com</a></li>
-                    </ul>
-                </div>
+            <div class="footer-col">
+                <h4>privacidade</h4>
+                <ul>
+                    <li><a href="#">termos</a></li>
+                    <li><a href="#">condições de uso</a></li>
+                </ul>
+            </div>
 
-                <div class="footer-col">
-                    <h4>privacidade</h4>
-                    <ul>
-                        <li><a href="#">termos</a></li>
-                        <li><a href="#">condições de uso</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Siga-nos</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+            <div class="footer-col">
+                <h4>Siga-nos</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
-</body>
-
-</html>
+    </div>
+</footer>

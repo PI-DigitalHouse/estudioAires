@@ -1,11 +1,12 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+footer {
+    background: /*#F5F4F6*/
+    rgba(127, 127, 127, 0.3);
+    padding: 70px 0;
 }
 
-
-/* }Configuração padrão do css para alguns navegadores */
+ul {
+    list-style: none;
+}
 
 .container-footer {
     max-width: 1170px;
@@ -15,15 +16,6 @@
 .row-footer {
     display: flex;
     flex-wrap: wrap;
-}
-
-ul {
-    list-style: none;
-}
-
-footer {
-    background: #F5F4F6;
-    padding: 70px 0;
 }
 
 .footer-col {
@@ -76,7 +68,6 @@ footer {
     display: inline-block;
     height: 40px;
     width: 40px;
-    /* font-size: 20px; */
     background: #81A8E7;
     text-align: center;
     line-height: 40px;
@@ -85,7 +76,30 @@ footer {
     transition: all 0.5s ease-out;
 }
 
+.footer-col .social-links a i {
+    margin: 10px;
+}
+
 .footer-col .social-links a:hover {
     cursor: pointer;
     transform: translateY(-15px);
 }
+
+
+/* Responsividade */
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+
+/* Responsividade */
