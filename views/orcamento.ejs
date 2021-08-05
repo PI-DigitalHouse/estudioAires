@@ -97,7 +97,7 @@
 
                                     <p>Informe o tamanho do imovel:<input required name="tamanhoImovel" type="number"
                                             placeholder="Informe o tamanho do imóvel em m2"
-                                            oninput="this.className = ''"></p>
+                                            oninput="this.className = ''" id='tamanhoImovel'></p>
                                 </div>
 
 
@@ -124,7 +124,9 @@
                                         <p>Valor do seu orçamento: </p>
 
                                         <div class="valor-orcamento preco">
-                                            <div></div>
+                                            <div id = 'valorOrcamento'>
+                                                
+                                            </div>
 
 
                                         </div>
@@ -152,14 +154,23 @@
                                 <!--  /*STEP4*/ -->
 
                                 <div class="tab">
+                                    <div class="container mt-5 mb-5" style="width: 400px;"></div>
                                     <h4>Por favor, selecione a data:</h4>
-                                    <div>
-                                        <input type="text" id="picker1" name="horarioInicio" class="form-control">
+                                    <input type="text" id="picker1" name="dataInicio" class="form-control">
 
-                                    </div>
+                                    <p id="texto-disponibilidade"></p>
                                 </div>
 
+                                <!--  /*STEP5*/ -->
+
+                                <div class="tab">
+                                    <div class="container mt-5 mb-5" style="width: 400px;"></div>
+                                    <h4>Por favor, selecione um horário:</h4>
+                                    <input type="text" id="picker2" name="horarioInicio" class="form-control">
                                 </div>
+
+                                <!--  /*STEP6*/ -->
+
                                 <div class="tab">
 
                                     <select class="usu-input-Tipo-2" placeholder="Escolha a forma de Pagamento:"
@@ -186,15 +197,13 @@
                                     </div>
                                 </div>
 
-
-
-
-
                                 <!-- BOTOES DE CONTINUAR E VOLTAR -->
 
                                 <div class="button-submit">
-                                    <input type="button" id="prevBtn" onclick="nextPrev(-1)" value="VOLTAR"></input>
-                                    <input type="button" id="nextBtn" onclick="nextPrev(1)" value="CONFIRMAR"></input>
+                                    <input type="button" id="prevBtn" onclick="nextPrev(-1)" value="Voltar"></input>
+                                    <input type="button" id="nextBtn" onclick="nextPrev(1)" value="Confirmar"></input>
+                                    <input type="button" id="check-disponibilidade"
+                                        value="Checar disponibilidade"></input>
                                     <input type="submit" id="nextBtn2" onclick="nextPrev(1)"
                                         value="Enviar solicitação"></input>
                                 </div>
@@ -212,6 +221,43 @@
 
                     <script type="text/javascript" src="/js/orcamento.js"></script>
 
+                    <script>
+                        let checkboxes = document.getElementsByName('servico')
+                        
+
+                        checkboxes.forEach(function (item) {
+                            item.onchange = function (e) {
+                                let checkBoxesChecados = Array.from(checkboxes).filter(function (checkbox) {
+                                    return (checkbox.checked)
+                                })
+                                //console.log(checkBoxesChecados)
+                                let servicos = checkBoxesChecados.map(function (checkbox) {
+                                    return checkbox.value
+                                })
+                                let tamanho = document.querySelector('#tamanhoImovel').value // aqui posso usar o getElementsByName, mas usando dessa forma eu preciso especificar o index pois ele retorna um array
+                                
+                                calculaOrcamentoFront(servicos, tamanho)
+                                
+                                
+                            }
+                            
+                            
+                        })
+
+                        
+                        function calculaOrcamentoFront(services) {
+                            let tamanho = document.querySelector('#tamanhoImovel').value
+                            let result = (services.length * 0.2 + 0.8) * tamanho
+
+                            document.getElementById('valorOrcamento').innerText = result
+                            return result
+                            
+                        } 
+
+                        
+                        
+                    </script>
+
                     <!-- script datepicker -->
                     <script src="/jquery.js"></script>
                     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -220,26 +266,18 @@
                     <script src="../js/jquery.datetimepicker.full.min.js"></script>
 
                     <script>
-
                         jQuery.datetimepicker.setLocale('pt-BR')
 
                         var date = new Date();
                         var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-                        var horariosBloqueados = horariosBloqueados
-
-                        console.log(horariosBloqueados)
+                        var horariosBloqueados = JSON.parse ('<%-horariosBloqueados%>')
+                        //para usar no front
+                        console.log(JSON.parse ('<%-horariosBloqueados%>'))
 
                         $('#picker1').datetimepicker({
-                            timepicker: true,
-                            allowTimes: function getArr() {
-                                var allowTimes = [
-                                    '08:00:00', '10:00:00', '14:00:00', '16:00:00'
-                                ];
-                                return allowTimes;
-                            }(),
-
+                            timepicker: false,
                             datepicker: true,
-                            format: 'Y-m-d H:i',
+                            format: 'Y-m-d',
                             yearStart: 2021,
                             yearEnd: 2022,
                             step: 30,
@@ -250,26 +288,28 @@
                                 dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
                             },
                             minDate: today,
-                            //disabledDates:["2021-07-27 10:00","2021-07-27 17:00"]
-                            //opçao 1
-                            // beforeShowDay: function (date) {
-                            //     //var string = jQuery.datepicker.formatDate('Y-m-d H:i', date);
-                            //     return ["2021-07-30 10:00:00"]
-                            // }
-
-                            //opção 2
-                            // beforeShowDay: my_check
                         })
-
-                        // function my_check(date) {
-                        //     var my_array = horariosBloqueados;
-                        //     if (my_array.indexOf(date) >= 0) {
-                        //         return [false, "notav", 'Not Available'];
-                        //     } else {
-                        //         return [true, "av", "available"];
-                        //     }
-                        // }
-
+                        $('#picker2').datetimepicker({
+                            timepicker: true,
+                            datepicker: false,
+                            format: 'H:i',
+                            yearStart: 2021,
+                            yearEnd: 2022,
+                            step: 30,
+                            mask: true,
+                            lang: 'pt-BR',
+                            il8n: {
+                                month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                                dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+                            },
+                            minDate: today,
+                            allowTimes: function getArr() {
+                                var allowTimes = [
+                                    '08:00:00', '10:00:00', '14:00:00', '16:00:00'
+                                ];
+                                return allowTimes;
+                            }(),
+                        })
                     </script>
 
 </body>
