@@ -1,11 +1,11 @@
 #pagina-projetos {
     text-transform: capitalize;
-    transition: .2s cubic-bezier(.34, 1.12, .68, 1.31);
+    transition: all .2s cubic-bezier(.34, 1.12, .68, 1.31);
 }
 
 .galeria-projetos {
     min-height: 100vh;
-    background: #eee;
+    background: rgba(127, 127, 127, 0.3);
     padding-bottom: 100px;
 }
 
@@ -20,7 +20,7 @@
 
 .galeria-projetos .controles-projetos .btn-projetos {
     height: 40px;
-    width: 140px;
+    width: 190px;
     background: #fff;
     color: #666;
     font-size: 20px;
@@ -32,7 +32,7 @@
 }
 
 .galeria-projetos .controles-projetos .btn-projetos.active {
-    background: coral;
+    background: #FC7600;
     color: #fff;
 }
 
@@ -56,8 +56,4 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-
-.galeria-projetos .containerImg-projetos .img-projetos:hover img {
-    transform: scale(1.4);
 }
