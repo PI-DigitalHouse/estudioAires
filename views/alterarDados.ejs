@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <%- include partials/head2.ejs %>
+<%- include partials/head2.ejs %>
 
     <body>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main id="main-alterar-dados">
-                <h1>Meu Perfil</h1>
+                <div class="du-meuPerfil-info">
+                    <h1>Meu Perfil</h1>
 
-                <form action="/dashboardUsuario/alterandoDados" method="POST" id="form-alterar-dados" class="du-altera-dados-container">
-                    <div>
-                        <h4>Nome</h4>
-                        <input type="text" class="du-altera-dados-input" name="nome" placeholder="nome"
-                            value="<%=dadosUsuario.nome%>">
-                    </div>
-                    <div>
-                        <h4>Email</h4>
-                        <input type="text"class="du-altera-dados-input" name="email" placeholder="E-mail"
-                            value="<%=dadosUsuario.email%>">
-                    </div>
-                    <div>
-                        <h4>CPF / CNPJ</h4>
-                        <input type="text" class="du-altera-dados-input"name="cpfCnpj" placeholder="CPF ou CNPJ"
-                            value="<%=dadosUsuario.cpfCnpj%>">
-                    </div>
-                    <div>
-                        <h4>Telefone</h4>
-                        <input type="text"class="du-altera-dados-input" name="telefone" placeholder="Telefone"
-                            value="<%=dadosUsuario.telefone%>">
-                    </div>
-                    <button type="submit">Salvar Alterações</button>
-                </form>
+                    <form action="/dashboardUsuario/alterandoDados" method="POST" id="form-alterar-dados"
+                        >
+                        <div class="du-meuPerfil-alteraDados-secao">
+                            <p class="du-meuPerfil-info-secao-titulo">Nome</p>
+                            <input type="text" class="du-altera-dados-input" name="nome" placeholder="nome"
+                                value="<%=dadosUsuario.nome%>">
+                        </div>
+                        <div class="du-meuPerfil-alteraDados-secao">
+                            <p class="du-meuPerfil-info-secao-titulo">Email</p>
+                            <input type="text" class="du-altera-dados-input" name="email" placeholder="E-mail"
+                                value="<%=dadosUsuario.email%>">
+                        </div>
+                        <div class="du-meuPerfil-alteraDados-secao">
+                            <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
+                            <input type="text" class="du-altera-dados-input" name="cpfCnpj" placeholder="CPF ou CNPJ"
+                                value="<%=dadosUsuario.cpfCnpj%>">
+                        </div>
+                        <div class="du-meuPerfil-alteraDados-secao">
+                            <p class="du-meuPerfil-info-secao-titulo">Telefone</p>
+                            <input type="text" class="du-altera-dados-input" name="telefone" placeholder="Telefone"
+                                value="<%=dadosUsuario.telefone%>">
+                        </div>
+                        <button type="submit">Salvar Alterações</button>
+                    </form>
 
-                <h4 class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a
-                        href="/dashboardUsuario/alteraSenha">Clique aqui</a></h4>
+                    <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a
+                            href="/dashboardUsuario/alteraSenha">Clique aqui</a></p>
                 </div>
-
+                </div>
             </main>
 
             <!-- Footer -->
