@@ -20,6 +20,9 @@ body{
     border-radius: 10px;
     background-color:white;
     justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .du-meuPerfil-info h1{
@@ -90,9 +93,11 @@ body{
 }  */
 
 .du-meuPerfil-info-rodape{
-    text-align: end;
+    text-align: center;
     position: relative;
     right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .du-meuPerfil-info p a{

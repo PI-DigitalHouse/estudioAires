@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<%- include partials/head.ejs %>
+<%- include partials/head2.ejs %>
 
     <body>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main>
                 <div class="du-meuPerfil-info">
-                    <h1>Meu Perfil</h1>
+                    <h1>Meu perfil</h1>
                     <div class="du-meuPerfil-info-secao">
-                        <img class="du-meuPerfil-info-secao-icone" src="../img/user.png" alt="ícone usuario">
                         <div>
                             <p class="du-meuPerfil-info-secao-titulo">Nome</p>
                             <p>
-                                <%=dadosUsuario.nome %>  <%=dadosUsuario.sobrenome %>
+                                <%=dadosUsuario.nome %>
+                                    <%=dadosUsuario.sobrenome %>
                             </p>
                         </div>
                     </div>
                     <div class="du-meuPerfil-info-secao">
-                        <img class="du-meuPerfil-info-secao-icone" src="../img/icone_email.png" alt="ícone email">
                         <div>
                             <p class="du-meuPerfil-info-secao-titulo">Email</p>
                             <p>
@@ -26,7 +25,6 @@
                         </div>
                     </div>
                     <div class="du-meuPerfil-info-secao">
-                        <img class="du-meuPerfil-info-secao-icone" src="../img/driver-license.png" alt="ícone documento">
                         <div>
                             <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
                             <p>
@@ -35,7 +33,6 @@
                         </div>
                     </div>
                     <div class="du-meuPerfil-info-secao">
-                        <img class="du-meuPerfil-info-secao-icone" src="../img/phone.png" alt="ícone telefone">
                         <div>
                             <p class="du-meuPerfil-info-secao-titulo">Telefone</p>
                             <p>
@@ -43,13 +40,9 @@
                             </p>
                         </div>
                     </div>
-
-                    <form method="GET" class="du-meuPerfil-info-botao">
-                        <a href="/dashboardUsuario/alteraDados"> Alterar dados </a>
-                    </form>
-                    <form method="get">
-                        <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a href="/dashboardUsuario/alteraSenha">Clique aqui</a></p>
-                    </form>
+                    <p class="du-meuPerfil-info-rodape"><a href="/dashboardUsuario/alteraDados"> Alterar dados </a></p>
+                    <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a
+                            href="/dashboardUsuario/alteraSenha">Clique aqui</a></p>
                 </div>
             </main>
 
