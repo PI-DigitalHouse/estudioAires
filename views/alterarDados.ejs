@@ -6,7 +6,7 @@
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main id="main-alterar-dados">
                 <div class="du-meuPerfil-info">
-                    <h1>Meu Perfil</h1>
+                    <h1>Alterar dados</h1>
 
                     <form action="/dashboardUsuario/alterandoDados" method="POST" id="form-alterar-dados"
                         >
@@ -30,7 +30,7 @@
                             <input type="text" class="du-altera-dados-input" name="telefone" placeholder="Telefone"
                                 value="<%=dadosUsuario.telefone%>">
                         </div>
-                        <button type="submit">Salvar Alterações</button>
+                        <button type="submit" class="botao-1">Salvar Alterações</button>
                     </form>
 
                     <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a
