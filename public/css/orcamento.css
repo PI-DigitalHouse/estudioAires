@@ -134,6 +134,29 @@ main{
     font-weight: bold;
 } 
 
+.fake-tab{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px; 
+ }
+ 
+ .fake-tab p{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     margin-left:5px;
+    padding-left: 10px;    
+ }
+ .fake-tab input{
+    width: 75%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 80px;  
+}
+
 .tab{
    display: none;
    flex-direction: column;

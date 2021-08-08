@@ -12,19 +12,23 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "none";
     document.getElementById("check-disponibilidade").style.display = "none";
     document.getElementById("nextBtn2").style.display = "none";
+    document.getElementById("horario").style.display = "none";
   } else if (n == 3) {
     document.getElementById("check-disponibilidade").style.display = "inline";
     document.getElementById("prevBtn").style.display = "none";
     document.getElementById("nextBtn").style.display = "inline";
     document.getElementById("nextBtn2").style.display = "none";
-  } else if (n == 5) {
+    document.getElementById("horario").style.display = "none";
+  } else if (n == 4) {
     document.getElementById("nextBtn2").style.display = "inline";
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("horario").style.display = "none";
   }else{
     document.getElementById("check-disponibilidade").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("nextBtn").style.display = "inline";
+    document.getElementById("horario").style.display = "none";
   }
 
   //codigo original por se der merda
@@ -57,7 +61,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...o formulário é enviado:
     document.getElementById("acao-central").submit();
-    document.getElementById("acao-central").salvarUsuario(orcamentosCadastrados)
+    //document.getElementById("acao-central").salvarUsuario(orcamentosCadastrados)
 
     return false;
   }
@@ -137,16 +141,6 @@ botaoDisponibilidade.onclick = () => {
 
   console.log(horariosBloqueados)
 
-  // for(let i = 0; i<horariosBloqueados.length; i ++){
-  //   if(horariosBloqueados[i].dataInicio == dataInicioForm){
-  //     console.log( "ocupado")
-  //     break
-  //   }else{
-  //     console.log("livre")
-  //   }
-  // }
-
-   //opção indexOf
   const diasOcupados =  []
 
   for (let i= 0; i<horariosBloqueados.length; i ++){
@@ -155,14 +149,22 @@ botaoDisponibilidade.onclick = () => {
 
   console.log(diasOcupados)
 
-  if (diasOcupados.indexOf(dataInicioForm) == -1){
-    console.log("foi")
-    //colocar codigo para ir pro próximo step
-    //nextPrev(4)
-  } else {
-    //codigo para procurar os horarios
-    console.log("nao foi")
+  const horariosOcupados =  []
+
+  for (let i= 0; i<horariosBloqueados.length; i ++){
+    horariosOcupados.push(horariosBloqueados[i].horarioInicio)
   }
+
+  console.log(horariosOcupados)
+
+  if (diasOcupados.indexOf(dataInicioForm) == -1){
+    console.log("dia livre")
+    document.getElementById("horario").style.display = "inline";
+    document.getElementById("check-disponibilidade").style.display = "none";
+  } else {
+    //codigo para procurar os horarios os horarios disponíveis
+    console.log("nao foi")
+  } 
 }
 
 
