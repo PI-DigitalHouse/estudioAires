@@ -1,24 +1,3 @@
-//codigo datetimepicker
-
-let botaoDisponibilidade = document.getElementById("check-disponibilidade")
-
-botaoDisponibilidade.onclick = () => {
-
-  let dataInicioForm = document.getElementById("picker1").value
-
-  console.log(horariosBloqueados)
-
-  //horariosbloqueados.indexOf(dataInicioForm) == -1
-
-  if (horariosBloqueados == 1){
-    console.log("foi")
-    //colocar codigo para ir pro próximo step
-    //currentTab = currentTab + n;
-  } else {
-    //codigo para procurar os horarios
-    console.log("nao foi")
-  }
-}
 
 var currentTab = 0; // O dash atual é definido para ser o primeiro dash (0)
 showTab(currentTab); // Exibir a dash atual
@@ -148,7 +127,43 @@ function salvarUsuario(usuario) {
   fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
 }
 
+//codigo datetimepicker
 
+let botaoDisponibilidade = document.getElementById("check-disponibilidade")
+
+botaoDisponibilidade.onclick = () => {
+
+  let dataInicioForm = document.getElementById("picker1").value
+
+  console.log(horariosBloqueados)
+
+  // for(let i = 0; i<horariosBloqueados.length; i ++){
+  //   if(horariosBloqueados[i].dataInicio == dataInicioForm){
+  //     console.log( "ocupado")
+  //     break
+  //   }else{
+  //     console.log("livre")
+  //   }
+  // }
+
+   //opção indexOf
+  const diasOcupados =  []
+
+  for (let i= 0; i<horariosBloqueados.length; i ++){
+    diasOcupados.push(horariosBloqueados[i].dataInicio)
+  }
+
+  console.log(diasOcupados)
+
+  if (diasOcupados.indexOf(dataInicioForm) == -1){
+    console.log("foi")
+    //colocar codigo para ir pro próximo step
+    //nextPrev(4)
+  } else {
+    //codigo para procurar os horarios
+    console.log("nao foi")
+  }
+}
 
 
 
