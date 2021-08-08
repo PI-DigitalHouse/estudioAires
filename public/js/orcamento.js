@@ -133,6 +133,10 @@ function salvarUsuario(usuario) {
 
 //codigo datetimepicker
 
+function getArr(allowTimes) {
+  return allowTimes;
+}
+
 let botaoDisponibilidade = document.getElementById("check-disponibilidade")
 
 botaoDisponibilidade.onclick = () => {
@@ -163,6 +167,34 @@ botaoDisponibilidade.onclick = () => {
     document.getElementById("check-disponibilidade").style.display = "none";
   } else {
     //codigo para procurar os horarios os horarios disponíveis
+
+    if(horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '08:00:00'){
+      var allowTimes = [
+        '10:00:00', '14:00:00', '16:00:00'
+    ];
+    return
+    } else if (horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '10:00:00'){
+      var allowTimes = [
+        '08:00:00', '14:00:00', '16:00:00'
+    ];
+    return
+    } else if(horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '14:00:00'){
+      var allowTimes = [
+        '08:00:00', '10:00:00', '16:00:00'
+    ];
+    return
+    }else if(horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '16:00:00'){
+      var allowTimes = [
+        '08:00:00', '10:00:00', '14:00:00'
+    ];
+    return
+    }
+
+    // for (let i = 0; i<horariosBloqueados.length; i ++){
+    // }
+
+    document.getElementById("horario").style.display = "inline";
+    document.getElementById("check-disponibilidade").style.display = "none";
     console.log("nao foi")
   } 
 }
