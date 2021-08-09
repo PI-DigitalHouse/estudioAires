@@ -1,4 +1,3 @@
-
 var currentTab = 0; // O dash atual é definido para ser o primeiro dash (0)
 showTab(currentTab); // Exibir a dash atual
 const orcamentosCadastrados = [];
@@ -134,6 +133,7 @@ function salvarUsuario(usuario) {
 //codigo datetimepicker
 
 function getArr(allowTimes) {
+  allowTimes
   return allowTimes;
 }
 
@@ -153,25 +153,59 @@ botaoDisponibilidade.onclick = () => {
 
   console.log(diasOcupados)
 
-  const horariosOcupados =  []
-
-  for (let i= 0; i<horariosBloqueados.length; i ++){
-    horariosOcupados.push(horariosBloqueados[i].horarioInicio)
-  }
-
-  console.log(horariosOcupados)
-
   if (diasOcupados.indexOf(dataInicioForm) == -1){
     console.log("dia livre")
     document.getElementById("horario").style.display = "inline";
     document.getElementById("check-disponibilidade").style.display = "none";
+    
+    $('#picker2').datetimepicker({
+      timepicker: true,
+      datepicker: false,
+      format: 'H:i',
+      yearStart: 2021,
+      yearEnd: 2022,
+      step: 30,
+      mask: true,
+      lang: 'pt-BR',
+      il8n: {
+          month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+          dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+      },
+      minDate: today,
+      allowTimes: function getArr() {
+          var allowTimes = [
+               '08:00:00','10:00:00', '14:00:00', '16:00:00'
+          ];
+          return allowTimes;
+      }(),
+  })
   } else {
+    
     //codigo para procurar os horarios os horarios disponíveis
+    verificaDisponibilidade (dataInicioForm)
 
     if(horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '08:00:00'){
-      var allowTimes = [
-        '10:00:00', '14:00:00', '16:00:00'
-    ];
+      $('#picker2').datetimepicker({
+        timepicker: true,
+        datepicker: false,
+        format: 'H:i',
+        yearStart: 2021,
+        yearEnd: 2022,
+        step: 30,
+        mask: true,
+        lang: 'pt-BR',
+        il8n: {
+            month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+        },
+        minDate: today,
+        allowTimes: function getArr() {
+            var allowTimes = [
+                 '10:00:00', '14:00:00', '16:00:00'
+            ];
+            return allowTimes;
+        }(),
+    })
     return
     } else if (horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '10:00:00'){
       var allowTimes = [
@@ -199,5 +233,13 @@ botaoDisponibilidade.onclick = () => {
   } 
 }
 
+async function verificaDisponibilidade (dataInicio) {
+  await fetch (`http://localhost:3000/orcamento/horariosPorDia?data=${dataInicio}`)
 
+  .then(response => response.json())
+  .then(data => console.log(data))
+
+  //allowTimes -> pop
+
+}
 

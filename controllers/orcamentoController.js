@@ -99,3 +99,7 @@ function calculaOrcamento(tamanhoImovel, numeroServicos, valor) {
   return valorTotal
 }
 
+module.exports.verificaDisponibilidade = (req, res) => {
+  let data = req.query.data
+  console.log(data)
+}
