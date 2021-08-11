@@ -23,7 +23,7 @@ function showTab(n) {
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("horario").style.display = "none";
-  }else{
+  } else {
     document.getElementById("check-disponibilidade").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("nextBtn").style.display = "inline";
@@ -130,12 +130,7 @@ function salvarUsuario(usuario) {
   fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
 }
 
-//codigo datetimepicker
-
-function getArr(allowTimes) {
-  allowTimes
-  return allowTimes;
-}
+//codigo para verificar a disponibilidade
 
 let botaoDisponibilidade = document.getElementById("check-disponibilidade")
 
@@ -150,14 +145,16 @@ botaoDisponibilidade.onclick = () => {
   for (let i = 0; i < horariosBloqueados.length; i++) {
     diasOcupados.push(horariosBloqueados[i].dataInicio)
   }
-  console.log(dataInicioForm)
-  console.log(diasOcupados)
+  console.log(`data escolhida pelo cliente: ${dataInicioForm}`)
+  console.log(`dias que já estão ocupados: ${diasOcupados}`)
 
   //verifica se o dia selecionado já tem alguma reserva
   if (diasOcupados.indexOf(dataInicioForm) == -1) {
-    console.log("dia livre")
+    console.log("o dia selecionado está livre")
+
     document.getElementById("horario").style.display = "inline";
     document.getElementById("check-disponibilidade").style.display = "none";
+    document.getElementById("prevBtn").style.display = "inline";
 
     $('#picker2').datetimepicker({
       timepicker: true,
@@ -181,72 +178,42 @@ botaoDisponibilidade.onclick = () => {
       }(),
     })
   } else {
-    console.log("dia ocupado")
-
-    //codigo para procurar os horarios os horarios disponíveis
-    
-    verificaDisponibilidade(dataInicioForm)
-
-    $('#picker2').datetimepicker({
-      timepicker: true,
-      datepicker: false,
-      format: 'H:i',
-      yearStart: 2021,
-      yearEnd: 2022,
-      step: 30,
-      mask: true,
-      lang: 'pt-BR',
-      il8n: {
-        month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
-      },
-      minDate: today,
-      allowTimes: function getArr() {
-        var allowTimes = [
-          '10:00:00', '14:00:00', '16:00:00'
-        ];
-        return allowTimes;
-      }(),
-    })
-
+    console.log("o dia selecionado está ocupado")
 
     document.getElementById("horario").style.display = "inline";
     document.getElementById("check-disponibilidade").style.display = "none";
-    
+    document.getElementById("prevBtn").style.display = "inline";
+
+    verificaDisponibilidade(dataInicioForm)
+
   }
 }
 
 async function verificaDisponibilidade(data) {
 
-  const ulResultados = document.getElementById('resultados')
+  let allowTimes = ['08:00:00', '10:00:00', '14:00:00', '16:00:00']
 
   const fetchResult = await fetch(`http://localhost:3000/orcamento/horariosPorDia?data=${data}`)
   const horariosOcupados = await fetchResult.json()
 
-  ulResultados.innerHTML = ''
-  for (const horario of horariosOcupados){
-    ulResultados.innerHTML += `<li>${horario.horarioInicio}<li>`
+  for (horarioOcupado of horariosOcupados) {
+    let index = allowTimes.indexOf(horarioOcupado.horarioInicio)
+    allowTimes.splice(index, 1)
   }
 
+  console.log(`os horarios livres no dia selecionado são: ${allowTimes}`)
 
-  // console.log('front' + response)
-  // const { data } = response
-  // const indisponiveis = data.map(d => d.horarioInicio)
-  // console.log(indisponiveis)
+  $('#picker2').datetimepicker({
+    timepicker: true,
+    datepicker: false,
+    format: 'H:i',
+    step: 30,
+    mask: true,
+    lang: 'pt-BR',
+    minDate: today,
+    allowTimes: function getArr() {
+      allowTimes
+      return allowTimes;
+    }(),
+  })
 }
-
-//codigo original 
-// async function verificaDisponibilidade(dataInicio) {
-//   await fetch(`http://localhost:3000/orcamento/horariosPorDia?data=${dataInicio}`)
-
-//     .then(res => console.log(res))
-//     .then(function(data){
-//       let bloqueios = data.results;
-//       return bloqueios.map(function(bloqueio){
-//         console.log(bloqueio)
-//       })
-//     })
-
-//   //allowTimes -> pop
-
-// }

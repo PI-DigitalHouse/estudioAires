@@ -66,11 +66,9 @@ module.exports.novoOrcamento = (async (req, res, next) => {
   const resultado = calculaOrcamento(dadosDoFormulario.tamanhoImovel, newService.valor, juncao.length)
   req.body.valor = resultado
 
-  //ajusta formato data
-  const dataInicioAjustada = req.body.dataInicio
-  dataInicioAjustada.setHours(0)
-  dataInicioAjustada.setMinutes(0)
-  dataInicioAjustada.setSeconds(0)
+  //ajusta formato data - > COLOCAR += O TEXTO
+  let dataInicioAjustada = req.body.dataInicio
+  dataInicioAjustada += 'T00:00:00.000Z'
 
   dadosDoFormulario.valor = resultado
   dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
