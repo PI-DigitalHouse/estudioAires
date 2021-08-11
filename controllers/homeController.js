@@ -55,9 +55,8 @@ module.exports.getLogin = (req, res) => {
     res.render('login', {
         error: {
             email: '',
-
         },
-
+        title: 'Logar',
         dadosUsuario: req.session.usuario
     })
 }
