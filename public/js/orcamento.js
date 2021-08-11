@@ -145,16 +145,15 @@ botaoDisponibilidade.onclick = () => {
   for (let i = 0; i < horariosBloqueados.length; i++) {
     diasOcupados.push(horariosBloqueados[i].dataInicio)
   }
-  console.log(`data escolhida pelo cliente: ${dataInicioForm}`)
-  console.log(`dias que já estão ocupados: ${diasOcupados}`)
 
   //verifica se o dia selecionado já tem alguma reserva
   if (diasOcupados.indexOf(dataInicioForm) == -1) {
     console.log("o dia selecionado está livre")
 
     document.getElementById("horario").style.display = "inline";
-    document.getElementById("check-disponibilidade").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("check-disponibilidade").style.display = "none";
+  
 
     $('#picker2').datetimepicker({
       timepicker: true,
@@ -179,11 +178,7 @@ botaoDisponibilidade.onclick = () => {
     })
   } else {
     console.log("o dia selecionado está ocupado")
-
-    document.getElementById("horario").style.display = "inline";
-    document.getElementById("check-disponibilidade").style.display = "none";
-    document.getElementById("prevBtn").style.display = "inline";
-
+  
     verificaDisponibilidade(dataInicioForm)
 
   }
@@ -201,19 +196,31 @@ async function verificaDisponibilidade(data) {
     allowTimes.splice(index, 1)
   }
 
-  console.log(`os horarios livres no dia selecionado são: ${allowTimes}`)
+  if (allowTimes.length === 0) {
+    console.log('todos os horários do dia estão ocupados')
 
-  $('#picker2').datetimepicker({
-    timepicker: true,
-    datepicker: false,
-    format: 'H:i',
-    step: 30,
-    mask: true,
-    lang: 'pt-BR',
-    minDate: today,
-    allowTimes: function getArr() {
-      allowTimes
-      return allowTimes;
-    }(),
-  })
+    document.getElementById("check-disponibilidade").style.display = "inline";
+    document.getElementById("horario").style.display = "none";
+    document.getElementById("erro-disponibilidade").innerHTML = 'Não existem horários disponíveis na data selecionada. Por favor selecione outra data'
+
+  } else {
+
+    console.log(`os horarios livres no dia selecionado são: ${allowTimes}`)
+    document.getElementById("nextBtn").style.display = "inline";
+    document.getElementById("erro-disponibilidade").innerHTML = ' '
+
+    $('#picker2').datetimepicker({
+      timepicker: true,
+      datepicker: false,
+      format: 'H:i',
+      step: 30,
+      mask: true,
+      lang: 'pt-BR',
+      minDate: today,
+      allowTimes: function getArr() {
+        allowTimes
+        return allowTimes;
+      }(),
+    })
+  }
 }
