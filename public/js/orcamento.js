@@ -207,6 +207,7 @@ async function verificaDisponibilidade(data) {
 
     console.log(`os horarios livres no dia selecionado são: ${allowTimes}`)
     document.getElementById("nextBtn").style.display = "inline";
+    document.getElementById("horario").style.display = "inline";
     document.getElementById("erro-disponibilidade").innerHTML = ' '
 
     $('#picker2').datetimepicker({
