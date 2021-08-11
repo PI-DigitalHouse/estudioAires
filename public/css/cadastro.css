@@ -1,7 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
         
-        .header-log-nav{
+        #header-log-nav-cadastro-usuario{
             display: flex;
             width: 100%;
             height: 10vh;
@@ -10,18 +10,18 @@
             
             flex-wrap: wrap;
         }
-        .logo{
+        #logo-cadastro-usuario{
             cursor: pointer;
             align-self: center;
         
         }
-        .nav-links{
+        #nav-links-cadastro-usuario{
             list-style: none;
             text-decoration: none;
             align-self: center;
             font-family: 'Lato', sans-serif;
         }
-        .nav-links li{
+        #nav-links-cadastro-usuario li{
             display: inline-block;
             padding: 0px 20px;
             align-self: center;
@@ -33,46 +33,46 @@
             text-decoration: none;
             align-self: center;
         } */
-        .nav-links li a:hover{
+        #nav-links li a:hover{
             border-bottom: 3px solid #FC7600;
         }
-        .espaco{
+        #espaco{
             width: 20%;
 
         }
         body{
             justify-content: center;
         }
-        .modalCadastro{
+        #modalCadastro-usuario{
             display: flex;
             justify-content: center;
         }
-        .modal-content-cadastro{
+        #modal-content-cadastro-usuario{
             display: flex;
             justify-content: center;
             margin-top: 5rem;
         }
-        .usu-flex-container-01{ /**container-01**/
+        #usu-flex-container-01{ /**container-01**/
             display: flex;
             flex-wrap: wrap; 
             justify-content: center;
             width: 100%;
             
         }
-        .usu-cadastro{
+        #usu-cadastro{
             font-family: Lato;
         }
         
-        .usu-flex-item{
+        #usu-flex-item{
             justify-content: center;
             width: 15rem;
         }
-        .usu-logo{
+        #usu-logo{
             justify-content: center;
             width: 20%;
             margin: 2rem;
         }
-        .usu-card-login{ /** card-login**/
+        #usu-card-login{ /** card-login**/
             display: flex;        
             border-radius: 18px;
             width: 80%;
@@ -87,13 +87,13 @@
             justify-content: space-around;
             margin:0rem;
         }
-        .usu-flex-container-02{/**container de posicionamento do cadastro e seta**/
+        #usu-flex-container-02{/**container de posicionamento do cadastro e seta**/
             display: flex;
             flex-wrap: wrap; 
             width: 90%;
             height: fit-content;
         }
-        .usu-flex-container-boas-vindas{/**novo**/
+        #usu-flex-container-boas-vindas{/**novo**/
             display: flex;
             flex-wrap: wrap; 
             justify-content: center;
@@ -105,7 +105,7 @@
             margin-bottom: 7%;
         }
 
-        .usu-flex-container-nome{/**container-02**/
+        #usu-flex-container-nome{/**container-02**/
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
@@ -117,7 +117,7 @@
             margin-bottom: 7%;
             opacity: .8;
         }
-        .usu-input-tipo-1{/**email2**/
+        #usu-input-tipo-1{/**email2**/
             background-color: white;
             border: 1px solid  darkgray;
             opacity: 2;
@@ -125,7 +125,7 @@
             height: 2rem;
             
         }
-        .usu-input-Tipo-2{/**email4**/
+        #usu-input-Tipo-2{/**email4**/
             background-color: #ffffff;
             border: 1px solid  darkgray;
             opacity: 2;
@@ -133,14 +133,14 @@
             height: 2rem;
             margin-top: 1rem;
         }
-        .usu-input-Tipo-3{/**email3**/
+        #usu-input-Tipo-3{/**email3**/
             background-color: #ffffff;
             border: 1px solid  darkgray;
             opacity: 2;
             width: 35%;
             height: 2rem;
         }
-        .usu-flex-container-tel-cpf{/**container-02**/
+        #usu-flex-container-tel-cpf{/**container-02**/
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
@@ -154,7 +154,7 @@
         form{
             width: 100%;
         }
-        .usu-flex-container-selecione{/**email4**/
+        #usu-flex-container-selecione{/**email4**/
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
@@ -165,7 +165,7 @@
             font-weight: 800;
             margin-bottom: 7%;
         }
-        .usu-flex-container-senha{/**email3**/
+        #usu-flex-container-senha{/**email3**/
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
@@ -186,19 +186,19 @@
             width: 45%;
             justify-content: center;
             font-size: 15px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0#25);
             border-radius: 18px;
-            opacity: 0.8;
+            opacity: 0#8;
         }
         button:hover {
-            opacity: 0.6;
+            opacity: 0#6;
           } */
         a[class="fas fa-arrow-left"]{
             text-decoration: none;
             color: #FC7600;
             margin: 1rem;
         }
-        /* .usu-flex-container-botao{/**button-login*
+        /* #usu-flex-container-botao{/**button-login*
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
@@ -206,7 +206,7 @@
             margin: 1%;
             height: 5rem;
         } */
-        .usu-flex-container-termos{/**termos**/
+        #usu-flex-container-termos{/**termos**/
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-around;
@@ -218,18 +218,18 @@
             margin-bottom: 7%;
             
         }
-        .checkbox1{
+        #checkbox1{
             width: 80%;
             color: rgb(71, 71, 71);
         }
-        .LiEAceito{
+        #LiEAceito{
             color: darkgray;
         }
-        .Termos{/**termos-1**/
+        #Termos{/**termos-1**/
             text-decoration: none;
             color:#FC7600;
         }
-        .política{
+        #política{
             text-decoration: none;
             color:#FC7600;
         }

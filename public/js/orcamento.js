@@ -23,7 +23,7 @@ function showTab(n) {
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("horario").style.display = "none";
-  }else{
+  } else {
     document.getElementById("check-disponibilidade").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("nextBtn").style.display = "inline";
@@ -130,34 +130,32 @@ function salvarUsuario(usuario) {
   fs.writeFileSync('orcamentosCadastrados.json', str)// criando o json com os usuarios cadastrados na string
 }
 
-//codigo datetimepicker
-
-function getArr(allowTimes) {
-  allowTimes
-  return allowTimes;
-}
+//codigo para verificar a disponibilidade
 
 let botaoDisponibilidade = document.getElementById("check-disponibilidade")
 
 botaoDisponibilidade.onclick = () => {
 
   let dataInicioForm = document.getElementById("picker1").value
+  dataInicioForm += 'T00:00:00.000Z'
 
-  console.log(horariosBloqueados)
+  //cria array de dias ocupados
+  const diasOcupados = []
 
-  const diasOcupados =  []
-
-  for (let i= 0; i<horariosBloqueados.length; i ++){
+  for (let i = 0; i < horariosBloqueados.length; i++) {
     diasOcupados.push(horariosBloqueados[i].dataInicio)
   }
 
-  console.log(diasOcupados)
+  //verifica se o dia selecionado já tem alguma reserva
+  if (diasOcupados.indexOf(dataInicioForm) == -1) {
+    console.log("o dia selecionado está livre")
 
-  if (diasOcupados.indexOf(dataInicioForm) == -1){
-    console.log("dia livre")
     document.getElementById("horario").style.display = "inline";
+    document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("check-disponibilidade").style.display = "none";
-    
+    document.getElementById("erro-disponibilidade").innerHTML = ' '
+  
+
     $('#picker2').datetimepicker({
       timepicker: true,
       datepicker: false,
@@ -168,78 +166,65 @@ botaoDisponibilidade.onclick = () => {
       mask: true,
       lang: 'pt-BR',
       il8n: {
-          month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-          dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
+        month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
       },
       minDate: today,
       allowTimes: function getArr() {
-          var allowTimes = [
-               '08:00:00','10:00:00', '14:00:00', '16:00:00'
-          ];
-          return allowTimes;
+        var allowTimes = [
+          '08:00:00', '10:00:00', '14:00:00', '16:00:00'
+        ];
+        return allowTimes;
       }(),
-  })
-  } else {
-    
-    //codigo para procurar os horarios os horarios disponíveis
-    verificaDisponibilidade (dataInicioForm)
-
-    if(horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '08:00:00'){
-      $('#picker2').datetimepicker({
-        timepicker: true,
-        datepicker: false,
-        format: 'H:i',
-        yearStart: 2021,
-        yearEnd: 2022,
-        step: 30,
-        mask: true,
-        lang: 'pt-BR',
-        il8n: {
-            month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-            dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
-        },
-        minDate: today,
-        allowTimes: function getArr() {
-            var allowTimes = [
-                 '10:00:00', '14:00:00', '16:00:00'
-            ];
-            return allowTimes;
-        }(),
     })
-    return
-    } else if (horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '10:00:00'){
-      var allowTimes = [
-        '08:00:00', '14:00:00', '16:00:00'
-    ];
-    return
-    } else if(horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '14:00:00'){
-      var allowTimes = [
-        '08:00:00', '10:00:00', '16:00:00'
-    ];
-    return
-    }else if(horariosBloqueados.dataInicio == dataInicioForm && horariosBloqueados.horarioInicio == '16:00:00'){
-      var allowTimes = [
-        '08:00:00', '10:00:00', '14:00:00'
-    ];
-    return
-    }
+  } else {
+    console.log("o dia selecionado está ocupado")
+  
+    verificaDisponibilidade(dataInicioForm)
 
-    // for (let i = 0; i<horariosBloqueados.length; i ++){
-    // }
+  }
+}
 
+async function verificaDisponibilidade(data) {
+
+  let allowTimes = ['08:00:00', '10:00:00', '14:00:00', '16:00:00']
+
+  const fetchResult = await fetch(`http://localhost:3000/orcamento/horariosPorDia?data=${data}`)
+  const horariosOcupados = await fetchResult.json()
+
+  for (horarioOcupado of horariosOcupados) {
+    let index = allowTimes.indexOf(horarioOcupado.horarioInicio)
+    allowTimes.splice(index, 1)
+  }
+
+  if (allowTimes.length === 0) {
+    console.log('todos os horários do dia estão ocupados')
+
+    document.getElementById("check-disponibilidade").style.display = "inline";
+    document.getElementById("horario").style.display = "none";
+    document.getElementById("erro-disponibilidade").innerHTML = 'Não existem horários disponíveis na data selecionada. Por favor selecione outra data'
+
+  } else {
+
+    console.log(`os horarios livres no dia selecionado são: ${allowTimes}`)
+    document.getElementById("nextBtn").style.display = "inline";
+    document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("horario").style.display = "inline";
     document.getElementById("check-disponibilidade").style.display = "none";
-    console.log("nao foi")
-  } 
+    document.getElementById("erro-disponibilidade").innerHTML = ' '
+
+    $('#picker2').datetimepicker({
+      timepicker: true,
+      datepicker: false,
+      format: 'H:i',
+      step: 30,
+      mask: true,
+      lang: 'pt-BR',
+      minDate: today,
+      allowTimes: function getArr() {
+        allowTimes
+        return allowTimes;
+      }(),
+    })
+  }
 }
-
-async function verificaDisponibilidade (dataInicio) {
-  await fetch (`http://localhost:3000/orcamento/horariosPorDia?data=${dataInicio}`)
-
-  .then(response => response.json())
-  .then(data => console.log(data))
-
-  //allowTimes -> pop
-
-}
-

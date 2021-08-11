@@ -4,6 +4,8 @@ const fs = require('fs'); //lib para manipular arquivo do sistema operacional
 const models = require('../models');
 const { Op } = require('sequelize');
 const servico = require('../models/servico');
+const { response } = require('express');
+
 
 let orcamentosCadastrados = [];
 
@@ -11,7 +13,7 @@ module.exports.renderizaOrcamento = async (req, res, next) => {
   const { idReserva } = req.query;
 
   //datas e horarios bloqueados
-  const bloqueio3 = await models.Reserva.findAll({
+  const bloqueios = await models.Reserva.findAll({
     where: {
       idReserva: {
         [Op.like]: `${idReserva || ''}%`,
@@ -19,24 +21,22 @@ module.exports.renderizaOrcamento = async (req, res, next) => {
     }, attributes: ['dataInicio', 'horarioInicio']
   });
   //para usar no front
-  const bloqueio4 = JSON.stringify (bloqueio3)
+  const agendamentos = JSON.stringify(bloqueios)
 
-  console.log(bloqueio4)
-
-  //bloqueio.map(data=>data.dataInicio)
+  console.log(agendamentos)
 
   if (req.session.usuario) {
     res.render('orcamento', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      horariosBloqueados: bloqueio4,
+      horariosBloqueados: agendamentos,
     })
   } else {
     console.log('n logado')
     res.render('orcamentoSLogin', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      horariosBloqueados: bloqueio4,
+      horariosBloqueados: agendamentos,
     })
   }
 }
@@ -66,12 +66,17 @@ module.exports.novoOrcamento = (async (req, res, next) => {
   const resultado = calculaOrcamento(dadosDoFormulario.tamanhoImovel, newService.valor, juncao.length)
   req.body.valor = resultado
 
+  //ajusta formato data - > COLOCAR += O TEXTO
+  let dataInicioAjustada = req.body.dataInicio
+  dataInicioAjustada += 'T00:00:00.000Z'
+
   dadosDoFormulario.valor = resultado
   dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
   dadosDoFormulario.membros_idMembro = 1
   dadosDoFormulario.status = 'active'
-  dadosDoFormulario.dataFinal = req.body.dataInicio
+  dadosDoFormulario.dataFinal = dataInicioAjustada
   dadosDoFormulario.horarioFinal = req.body.horarioInicio
+  dadosDoFormulario.dataInicio = dataInicioAjustada
   console.log(dadosDoFormulario)
   const reservas = await models.Reserva.create(dadosDoFormulario)
 
@@ -99,7 +104,15 @@ function calculaOrcamento(tamanhoImovel, numeroServicos, valor) {
   return valorTotal
 }
 
-module.exports.verificaDisponibilidade = (req, res) => {
-  let data = req.query.data
-  console.log(data)
+module.exports.verificaDisponibilidade = async (req, res) => {
+  var dataSelecionada = req.query.data
+  
+  const horariosAgendados = await models.Reserva.findAll({
+    where:{
+       dataInicio: dataSelecionada
+      }, attributes: ['dataInicio', 'horarioInicio']
+  });
+
+  res.send(horariosAgendados)
+
 }

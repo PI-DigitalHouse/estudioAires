@@ -155,13 +155,17 @@
 
                                 <div class="tab">
                                     <div class="container mt-5 mb-5" style="width: 400px;"></div>
-                                    <h4>Por favor, selecione a data:</h4>
-                                    <input type="text" id="picker1" name="dataInicio" class="form-control">
+                                    <h4>Selecione a data:</h4>
+                                    <input type="text" id="picker1" name="dataInicio" class="form-control" autocomplete="off">
+                                    <p id="erro-disponibilidade"></p>
                                 </div>
                                 <div class="fake-tab" id="horario">
                                     <div class="container mt-5 mb-5" style="width: 400px;"></div>
-                                    <h4>Por favor, selecione um horário:</h4>
-                                    <input type="text" id="picker2" name="horarioInicio" class="form-control">
+                                    <h4>Selecione um horário:</h4>
+                                    <input type="text" id="picker2" name="horarioInicio" class="form-control" autocomplete="off">
+                                    <ul id="resultados">
+
+                                    </ul>
                                 </div>
 
                                 <!--  /*STEP5*/ -->
@@ -284,29 +288,7 @@
                             },
                             minDate: today,
                         })
-                        //código original picker 2
                         
-                        // $('#picker2').datetimepicker({
-                        //     timepicker: true,
-                        //     datepicker: false,
-                        //     format: 'H:i',
-                        //     yearStart: 2021,
-                        //     yearEnd: 2022,
-                        //     step: 30,
-                        //     mask: true,
-                        //     lang: 'pt-BR',
-                        //     il8n: {
-                        //         month: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-                        //         dayOfWeek: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo']
-                        //     },
-                        //     minDate: today,
-                        //     allowTimes: function getArr() {
-                        //         var allowTimes = [
-                        //             '08:00:00', '10:00:00', '14:00:00', '16:00:00'
-                        //         ];
-                        //         return allowTimes;
-                        //     }(),
-                        // })
                     </script>
 
 </body>

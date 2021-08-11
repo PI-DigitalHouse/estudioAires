@@ -8,9 +8,9 @@ module.exports.loginMembro = (async (req, res) => {
   res.render('loginMembro',{
     error: {
         email:'',
-       
+        
     },
-    
+    title:'loginMembro',
     dadosUsuario: req.session.usuario
 })
 });
