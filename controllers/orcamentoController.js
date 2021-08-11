@@ -106,8 +106,6 @@ function calculaOrcamento(tamanhoImovel, numeroServicos, valor) {
 
 module.exports.verificaDisponibilidade = async (req, res) => {
   var dataSelecionada = req.query.data
-
-  console.log('Dado da query: ' + dataSelecionada)
   
   const horariosAgendados = await models.Reserva.findAll({
     where:{
@@ -116,8 +114,5 @@ module.exports.verificaDisponibilidade = async (req, res) => {
   });
 
   res.send(horariosAgendados)
-
-  //para usar no front
-  const horariosAgendados2 = JSON.stringify(horariosAgendados)
 
 }
