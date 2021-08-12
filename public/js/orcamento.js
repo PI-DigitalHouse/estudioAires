@@ -4,7 +4,7 @@ const orcamentosCadastrados = [];
 
 function showTab(n) {
   // Esta função irá exibir dash especificado do formulário ...
-  var x = document.getElementsByClassName("tab");
+  var x = document.getElementsByClassName("tab-orcamento");
   x[n].style.display = "block";
   // ... e corrija os botões Voltar / Confirmar:
   if (n == 0) {
@@ -49,7 +49,7 @@ function showTab(n) {
 
 function nextPrev(n) {
   //Esta função descobrirá qual dash deve exibir
-  var x = document.getElementsByClassName("tab");
+  var x = document.getElementsByClassName("tab-orcamento");
   // Saia da função se algum campo do dash atual for inválido:
   if (n == 1 && !validateForm()) return false;
   // Oculte o dash atual:
@@ -59,7 +59,7 @@ function nextPrev(n) {
   // se você chegou ao final do formulário ... :
   if (currentTab >= x.length) {
     //...o formulário é enviado:
-    document.getElementById("acao-central").submit();
+    document.getElementById("acao-central-orcamento").submit();
     //document.getElementById("acao-central").salvarUsuario(orcamentosCadastrados)
 
     return false;
@@ -71,7 +71,7 @@ function nextPrev(n) {
 function validateForm() {
   // Esta função trata da validação dos campos do formulário
   var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
+  x = document.getElementsByClassName("tab-orcamento");
   y = x[currentTab].getElementsByTagName("input");
   // Um loop que verifica todos os campos de entrada no dash atual:
   for (i = 0; i < y.length; i++) {
@@ -85,11 +85,11 @@ function validateForm() {
   }
   //Se o status válido for verdadeiro, marque a etapa como concluída e válida:
   if (valid) {
-    document.getElementsByClassName("bolaOk")[currentTab].className += " finish";
+    document.getElementsByClassName("bolaOk-orcamento")[currentTab].className += " finish";
 
   }
   if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish2";
+    document.getElementsByClassName("step-orcamento")[currentTab].className += " finish2";
 
   }
   return valid; // retornar o status válido
@@ -97,7 +97,7 @@ function validateForm() {
 
 function fixStepIndicator(n) {
   // Esta função remove a classe "ativa" de todos os steps ...
-  var i, x = document.getElementsByClassName("bolaOk");
+  var i, x = document.getElementsByClassName("bolaOk-orcamento");
   for (i = 0; i < x.length; i++) {
     x[i].className = x[i].className.replace(" active", "");
   }
@@ -117,7 +117,7 @@ function fixStepIndicator2(n) {
 /*border*/
 function fixStepIndicator2(n) {
   // Esta função remove a classe "ativa" de todas as etapas ...
-  var i, x = document.getElementsByClassName("step");
+  var i, x = document.getElementsByClassName("step-orcamento");
   for (i = 0; i < x.length; i++) {
     x[i].className = x[i].className.replace(" active", "");
   }

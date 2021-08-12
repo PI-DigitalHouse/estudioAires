@@ -25,10 +25,10 @@ module.exports.bloquear = async (req, res, next) => {
   res.redirect('/');
 };
 
+//renderiza os jobs finalizados
 module.exports.mostraJobs = async (req, res) => {
   const { idSolicitacao, endereco, valor, tamanhoImovel, sessaoShooting } =
     req.query;
-  // Serviços contratados
 
   const resultadosJobs = await models.Orcamento.findAll({
     where: {
@@ -128,3 +128,17 @@ module.exports.aprovacoes = async (req, res) => {
     dadosMembro: req.session.membro,
   });
 };
+
+//busca de um job pelo id do serviço
+module.exports.buscaJob = (async (req, res) => {
+  const {jobId} = req.query;
+
+  const listaJobs = await models.Orcamento.findOne({
+    where: {
+      idSolicitacao : {
+        [Op.like]: `${jobId}%`,
+      }
+    }
+  })
+  res.render('listaJob', {listaJobs});
+})

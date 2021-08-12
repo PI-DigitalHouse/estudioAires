@@ -48,11 +48,14 @@ module.exports = (sequelize, DataTypes) => {
       dataFinal: DataTypes.DATE,
       membros_idMembro: DataTypes.INTEGER,
       status: DataTypes.STRING(150),
+      servico: DataTypes.JSON
     },
+    
     {
       sequelize,
       modelName: 'Reserva',
     },
+    
   );
   return Reserva;
 };
