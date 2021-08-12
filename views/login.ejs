@@ -3,37 +3,13 @@
 
     <body>
         <%- include partials/headerAreaLivreSemLogin %>
-            <div class="banner-area">
-                <div class="banner">
-                    <video autoplay muted loop>
-                <source src="/img/teste.mov" type="video/mp4">
-            </video>
-                </div>
-            </div>
-
             <form class="" action="/login" method="POST">
                 <div class="login">
-                    <span class="container-logo">Estúdio Aires</span>
+                    <div class="container-logo">Estúdio Aires</div>
                     <span style="font-size: 15px; color:red; font-weight:bold ;"><%= error.email ? error.email : '' %></span>
                     <span style="font-size: 15px; color: red; font-weight:bold ;"><%= error.senha ? error.senha : '' %></span>
-
-                    <input type="text" required placeholder="Email:" maxlength="60" type="email" name="email" id="email" />
-
-                    <input type="password" placeholder="Senha:" name="senha" required />
-
-                    <form action="/recuperarSenha" method="GET">
-                        <span class="psw-forget"><a href="/recuperarSenha">Esqueceu sua senha? </a></span>
-                    </form>
-
-                    <button type="submit">ENTRAR</button>
-
-                    <div class="modal-cadastro">
-                        <span class="psw">Novo no Estúdio? <a href="/cadastro-usuario">CADASTRE-SE</a></span>
-                        <a class="acessoMembro ab" href="/dashboardMembro/login-membro">Sou Fotógrafo</a>
-                    </div>
                 </div>
             </form>
-
     </body>
 
 </html>

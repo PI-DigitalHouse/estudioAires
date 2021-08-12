@@ -209,7 +209,7 @@
      text-align: center;
      font-size: 30px;
      box-shadow: 1px 1px 2px #888;
-     z-index: 999;
+     z-index: 988;
  }
  
  .fa-whatsapp {
@@ -227,7 +227,7 @@
      color: rgba(252, 118, 0, 1);
      text-align: center;
      font-size: 30px;
-     z-index: 999;
+     z-index: 988;
  }
  
  .fa-arrow-up {
