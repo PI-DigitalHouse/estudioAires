@@ -5,6 +5,7 @@ const models = require('../models');
 const { Op } = require('sequelize');
 const servico = require('../models/servico');
 const { response } = require('express');
+const { stringify } = require('querystring');
 
 
 let orcamentosCadastrados = [];
@@ -44,14 +45,24 @@ module.exports.renderizaOrcamento = async (req, res, next) => {
 module.exports.novoOrcamento = (async (req, res, next) => {
 
   const dadosDoFormulario = req.body
-  const { valor, idUsuario } = req.query
+  const { valor, idUsuario, tipoDeServico } = req.query
 
   const newService = await models.Servico.findOne({
     valor: {
       [Op.like]: `${valor || ''}%`,
     },
+    
 
   })
+
+  const servico = await models.Servico.findOne({
+    tipoDeServico: {
+      [Op.like]: `${tipoDeServico || ''}%`,
+    },
+    
+
+  })
+
   const valorFront = calValorfront = () => {
     dadosDoFormulario.tamanhoImovel * (0.2 + juncao.length)
   }
@@ -77,7 +88,10 @@ module.exports.novoOrcamento = (async (req, res, next) => {
   dadosDoFormulario.dataFinal = dataInicioAjustada
   dadosDoFormulario.horarioFinal = req.body.horarioInicio
   dadosDoFormulario.dataInicio = dataInicioAjustada
+  //dadosDoFormulario.servico = stringify(req.body.servico)
+  //dadosDoFormulario.servico = servico.tipoDeServico
   console.log(dadosDoFormulario)
+  console.log(servico.tipoDeServico)
   const reservas = await models.Reserva.create(dadosDoFormulario)
 
   if (!reservas) {
