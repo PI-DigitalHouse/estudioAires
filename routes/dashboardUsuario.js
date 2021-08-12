@@ -1,5 +1,5 @@
 const express = require('express');
-const { listEntregaveis, listSolicitacoes, recuperaSenha, showAlteraSenha, alteraSenha, meuPerfil, calendario, showAlteraDados, alteraDados, mostrarSolicitacoes } = require('../controllers/DUController');
+const { listEntregaveis, recuperaSenha, showAlteraSenha, alteraSenha, meuPerfil, showAlteraDados, alteraDados, mostrarSolicitacoes } = require('../controllers/DUController');
 const session = require('express-session');
 
 const router = express.Router();
