@@ -82,8 +82,9 @@ h2{
 }
 
 .servicoContratado2{
-    margin-top: 50px;
-    margin-left: 20px;
+
+    margin-left: 3px;
+    padding: 20px;
 }
 
 .servicoContratado2 .info p{
@@ -92,6 +93,7 @@ h2{
 
 .containerDireita{
     margin-right: 20px;
+    margin-left: 14px;
     position: relative;
 }
 

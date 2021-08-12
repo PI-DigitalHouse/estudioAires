@@ -165,7 +165,7 @@ module.exports.mostrarSolicitacoes = (async(req, res) => {
         include: {
             model: models.Reserva,
             as: 'reservas',
-            attributes: ['status', 'horarioInicio', 'dataInicio'],
+            attributes: ['status', 'horarioInicio', 'dataInicio', 'servico' ],
         },
         
     });
