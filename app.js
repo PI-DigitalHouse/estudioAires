@@ -5,10 +5,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyparser = require('body-parser')
 const session = require('express-session')
-const homeRouter = require('./routes/home');
 
+const homeRouter = require('./routes/home');
 const dashboardUsuarioRouter = require('./routes/dashboardUsuario')
-const servicosRouter = require('./routes/servicos')
 const DMRouter = require('./routes/dashBoardMembro')
 
 
@@ -28,15 +27,13 @@ app.use(session({
     secret: 'lapidandodiamante'
 }))
 
-app.use('/', homeRouter);
 app.use('/admin', require('./routes/adminRoute'));
-app.use('/orcamento', require('./routes/orcamento'));
+app.use('/', homeRouter);
+app.use('/contato', require('./routes/contatoRoute'));
 app.use('/dashboardUsuario', dashboardUsuarioRouter);
-app.use('/servicos', servicosRouter);
-/* app.use('/cadastro-membro', require('./routes/cadastroMembro')); */
 app.use('/cadastro-usuario', require('./routes/cadastroUsuario'));
 app.use('/dashboardMembro', DMRouter)
-app.use('/contato', require('./routes/contatoRoute'));
+app.use('/orcamento', require('./routes/orcamento'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
