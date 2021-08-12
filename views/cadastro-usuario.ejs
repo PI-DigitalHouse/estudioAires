@@ -1,87 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+    
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--  bootstrap Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/modais/cadastro-modal.css">
     <title>Estúdio Aires</title>
-
+    
 </head>
 
 <body>
-    <header>
+    
         <%- include partials/headerAreaLivreSemLogin.ejs %>
-            <%- include partials/head.ejs %>
-    </header>
-    <div class="banner-area">
+        <%- include partials/head2.ejs %>
+    
+    <div id="banner-area">
         <!--Vídeo de entrada do site-->
-        <div class="banner">
+        <div id="banner">
             <video autoplay muted loop>
                 <source src="img/teste.mov" type="video/mp4">
 
             </video>
-            <div class="modalCadastro">
+            <div id="modalCadastro-usuario">
 
-                <form class="modal-content-cadastro" method="POST" action="cadastro-usuario">
-                    <div class="usu-card-login">
-                        <div class="usu-flex-container-02">
-                            <h5 class="usu-cadastro">
-                                <a href="/home" class="fas fa-arrow-left"></a> Cadastro
-                            </h5>
+                <form id="modal-content-cadastro-usuario" method="POST" action="cadastro-usuario">
+                    <div id="usu-card-login">
+                        <div id="usu-flex-container-02">
+                            <h3 id="usu-cadastro">
+                                <a href="/home" id="fas fa-arrow-left"></a> Cadastro
+                            </h3>
 
                         </div>
-                        <h6>Seja bem-vindo!!</h6>
-
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Seu nome:" maxlength="50" type="text" name="nome" id="Nome">
+                        <div id="usu-flex-container-boas-vindas">
+                            <h2>Seja bem-vindo!</h2>
                         </div>
-                        <% if(erros&&erros.nome){ %>
-                            <span>
-                                <%= erros.nome.msg %>
-                            </span>
-                            <% } %>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Sobrenome:" maxlength="50" type="text" name="sobrenome" id="Nome">
-                                </div>
-                                <% if(erros&&erros.sobrenome){ %>
-                                    <span>
-                            <%= erros.sobrenome.msg %>
-                        </span>
-                                    <% } %>
-                                        <div class="form-group">
-                                            <input class="form-control" placeholder="Email:" maxlength="60" type="email" name="email" id="email">
-                                        </div>
-                                        <% if(erros&&erros.email){ %>
-                                            <span>
-                                                <%= erros.email.msg %>
-                                            </span>
-                                            <% } %>
-                                                <div class="form-group">
-                                                    <input class="form-control" placeholder="Telefone mais atual" maxlength="50" type="text" name="telefone" id="Nome">
-                                                </div>
-                                                <% if(erros&&erros.telefone){ %>
-                                                    <span>
-                                                <%= erros.telefone.msg %>
-                                            </span>
-                                                    <% } %>
-                                                        <div class="form-group">
-                                                            <input class="form-control" placeholder="CPF ou CNPJ" maxlength="60" type="text" name="cpfCnpj" id="email">
-                                                            <% if(erros&&erros.cpfCnpj){ %>
-                                                                <span>
-                        <%= erros.cpfCnpj.msg %>
+
+
+
+                        <div id="usu-flex-container-nome">
+                            <input required id="usu-input-tipo-1" placeholder="Seu nome:" maxlength="50" type="text"
+                                name="nome" id="Nome" required>
+                            <input required id="usu-input-tipo-1" placeholder="Sobrenome:" maxlength="50" type="text"
+                                name="sobrenome" id="Nome" required>
+                            <input required id="usu-input-tipo-1" placeholder="Email:" maxlength="60" type="email"
+                                name="email" id="email">
+                        </div>
+                        <div id="usu-flex-container-tel-cpf">
+                            <input required id="usu-input-tipo-1" placeholder="Telefone mais atual" maxlength="50"
+                                type="text" name="telefone" id="Nome" required>
+                            <input required id="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="60"
+                                type="text" name="cpfCnpj" id="email">
+                            <% if(erros&&erros.cpfCnpj){ %>
+                                <span>
+                                    <%= erros.cpfCnpj.msg %>
                                 </span>
-                                                                <% } %>
-                                                        </div>
-
-
-                                                        <div class="form-group">
-                                                            <select class="form-control" placeholder="Como nos conheceu?" name="comoConheceu" id="Como nos conheceu">
+                                <% } %>
+                        </div>
+                        <div id="usu-flex-container-selecione">
+                            <select id="usu-input-Tipo-2" placeholder="Como nos conheceu?" name="comoConheceu"
+                                id="Como nos conheceu">
                                 <option value="NaoEnviado">Como nos conheceu?</option>
                                 <option value="Imobiliaria">Imobiliária</option>
                                 <option value="Facebook">Facebook</option>
@@ -89,49 +68,38 @@
                                 <option value="Google">Google</option>
                                 <option value="outro">Outro</option>
                             </select>
-                                                        </div>
-                                                        <% if(erros&&erros.comoConheceu){ %>
-                                                            <span>
-                                                                <%= erros.comoConheceu.msg %>
-                                                            </span>
-                                                            <% } %>
-                                                                <div class="form-group">
-                                                                    <input class="form-control" placeholder="Senha" type="password" name="senha" id="senha">
-                                                                </div>
-                                                                <% if(erros&&erros.senha){ %>
-                                                                    <span>
-                                                                        <%= erros.senha.msg %>
-                                                                    </span>
-                                                                    <% } %>
-                                                                        <div class="form-group">
-                                                                            <input class="form-control" placeholder="Confirmar Senha" type="password" name="senha2" id="senhaConfirmacao">
-                                                                        </div>
-                                                                        <% if(erros&&erros.senha){ %>
-                                                                            <span>
-                                                                                <%= erros.senha.msg %>
-                                                                            </span>
-                                                                            <% } %>
-                                                                                <div class="form-check">
-                                                                                    <input class="form-check-input" type="checkbox" name="imobiliaria"> Sou uma imobiliária
-                                                                                </div>
-                                                                                <div class="form-check">
-                                                                                    <input class="form-check-input" type="checkbox" name="termosDeUso"> Li e aceito os Termos de uso</a> e a <a href="#">Política
-                                    de
-                                    Privacidade
-                            </div>
-                            <% if(erros&&erros.termosDeUso){ %>
-                                <span>
-                                    <%= erros.termosDeUso.msg %>
-                                </span>
-                                <% } %>
-                        <button type="submit" class="btn btn-dark">Cadastrar</button>
-                    </div>
-                </div>
-            </div>
-            </form>
+                        </div>
+                        <div id="usu-flex-container-senha">
+                            <input required id="usu-input-Tipo-3" placeholder="Senha" type="password" name="senha"
+                                id="senha">
 
+                            <input required id="usu-input-Tipo-3" placeholder="Confirmar Senha" type="password"
+                                name="senha2" id="senhaConfirmacao">
+
+
+
+                        </div>
+
+                        <div id="usu-flex-container-termos">
+                            <div id="checkbox1">
+                                <input type="checkbox" name="imobiliaria"> Sou uma imobiliária
+                            </div>
+                            <div id="checkbox1">
+                                <input required id="LiEAceito" type="checkbox" name="termosDeUso"> Li e aceito os <a
+                                    id="Termos" href="#">Termos de uso</a> e a <a id="política" href="#">Política
+                                    de
+                                    Privacidade</a>
+                            </div>
+
+
+                        </div>
+                            <button type="submit" class="btn btn-dark">Cadastrar</button>
+                       
+
+                </form>
+
+            </div>
         </div>
-    </div>
 
     </div>
 
@@ -144,4 +112,4 @@
     <!--  <script type="text/javascript" src="../login-modal/login-modal.js"></script> -->
 </body>
 
-</html
+</html>

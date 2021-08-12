@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const {renderizaOrcamento, novoOrcamento, renderizaOrcamentoSLogin } = require ('../controllers/orcamentoController')
+const {renderizaOrcamento, novoOrcamento, renderizaOrcamentoSLogin, verificaDisponibilidade } = require ('../controllers/orcamentoController')
 const checkSession = require('../middlewares/checkSession') 
 
 
@@ -13,6 +13,8 @@ router.get('/novo', renderizaOrcamento);
 router.post('/novoOrcamento', novoOrcamento);
 
 router.get('/orcamentoSLogin', renderizaOrcamento);
+
+router.get ('/horariosPorDia', verificaDisponibilidade)
 
 
 module.exports = router;

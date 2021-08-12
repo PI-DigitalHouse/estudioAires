@@ -1,34 +1,18 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estúdio Aires</title>
-    <!--  bootstrap Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-</head>
-
 <header>
-    <!--Nav fixo do site-->
-    <div class="header-log-nav">
-        <div class="logo a"><a href="/" class="ab">Estúdio Aires</a></div>
+    <div class="header-logo">
+        <a href="/" class="linkLogo-header">Estúdio Aires</a>
         <nav>
-            <ul class="nav-links">
-                <li><a class="ab" href="/">Home
-                        <!--Fazer redirect?-->
-                    </a></li>
-                <li><a class="ab" href="#servicosEA">Serviços</a></li>
-                <li><a class="ab" href="#quem-somosEA">Quem Somos</a></li>
-                <li><a class="ab" href="#parceirosEA">Parceiros</a></li>
-                <li><a class="ab" href="/contato">Contato</a></li>
+            <ul class="links-header">
+                <li><a class="ab link link--metis" href="/">Home</a></li>
+                <li><a class="ab link link--metis" href="#servicos">Serviços</a></li>
+                <li><a class="ab link link--metis" href="#quemSomos">Quem Somos</a></li>
+                <li><a class="ab link link--metis" href="/contato">Contato</a></li>
             </ul>
         </nav>
 
         <!--USUARIO LOGADO-->
         <div class="dropdown">
             <% if(dadosUsuario) { %>
-
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
                          Olá, <%= dadosUsuario.nome %>! ▼</button>
@@ -39,12 +23,10 @@
                         <a href="/logout">Sair</a>
                     </div>
                 </div>
-
-
         </div>
         <script>
             /* When the user clicks on the button, 
-                                                toggle between hiding and showing the dropdown content */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    toggle between hiding and showing the dropdown content */
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
@@ -66,21 +48,47 @@
         <% } %>
             <!--USUARIO NAO LOGADO-->
             <% if(!dadosUsuario) { %>
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <button onclick="document.getElementById('id01').style.display='block'" ype="button" class="btn btn-warning "><a class="ab"
-                                href='/login'>Login</a></button>
-                    </div>
-                    <form method="GET" action="/cadastro-usuario">
-                        <div class="container-cadastrese">
-                            <span class="header-cadastrese">Novo no Estúdio?
-                                <input class="header-cadastrese" type="submit" value="CADASTRE-SE"></input>
-                        </div>
-                    </form>
-                    <!-- <a class="header-cadastrese" href="/cadastro-usuario">Novo no Estúdio? CADASTRE-SE</a> EXEMPLO DE RESOLUÇÃO-->
-                    <a class="acessoMembro ab" href="/dashboardMembro/login-membro">Sou Fotógrafo</a>
+                <div>
+                    <button onclick="abreFormLogin()" class="loginLink">Entre/Cadastre-se</button>
                 </div>
                 <% } %>
     </div>
 </header>
-<!-- If para sessao do usuario -->
+<div class="overlay-login"></div>
+<div class="modal-login">
+    <div class="fecharModal-login" onclick="fechaFormLogin()"><i class="fas fa-times"></i></div>
+    <form class="formLogin" action="/login" method="POST">
+
+        <div class="logo-login">
+            <h1>Estúdio Aires</h1>
+        </div>
+
+        <div class="titulo-login">
+            Entre no Estúdio
+        </div>
+        <div class="elemento-login">
+            <label for="email">E-mail</label>
+            <input type="text" type="email" name="email" id="email" required/>
+            <!-- <span style="font-size: 15px; color:red; font-weight:bold ;">NEG EJS error.email ? error.email : ''</span> -->
+        </div>
+
+        <div class="elemento-login">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" required />
+            <!-- <span style="font-size: 15px; color: red; font-weight:bold ;">NEG EJS error.senha ? error.senha : ''</span> -->
+        </div>
+
+        <div class="elemento-login loginLink-senha">
+            <a href="/recuperarSenha">Esqueceu sua senha?</a>
+        </div>
+
+        <div class="elemento-login">
+            <button type="submit">Entrar</button>
+        </div>
+
+        <div class="elemento-login loginLink-cadastro">
+            <a href="/cadastro-usuario">Novo no Estúdio? Cadastre-se</a>
+        </div>
+
+    </form>
+</div>

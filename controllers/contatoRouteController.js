@@ -11,7 +11,14 @@ const writeFile = (content) => {
 }
 
 module.exports.renderiza = (req, res) => {
-    res.render('contato');
+    let dadosUsuario = null
+    if (req.session && req.session.usuario) {
+        dadosUsuario = req.session.usuario
+    }
+    res.render('contato', {
+        title: 'Contato',
+        dadosUsuario: dadosUsuario
+    })
 }
 
 module.exports.postContato = (req, res) => {

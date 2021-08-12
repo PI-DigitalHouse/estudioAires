@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<%- include partials/head.ejs %>
+<%- include partials/head2.ejs %>
 
     <body>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
@@ -53,7 +53,7 @@
                                     <div class="info">
                                         <p class="tipo1">Data do serviço</p>
                                         <p>
-                                            <%=resultadoOrcamento.reservas.horarioInicio%>
+                                            <%=resultadoOrcamento.reservas.dataInicio%> às <%=resultadoOrcamento.reservas.horarioInicio%>
                                         </p>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                     <div class="info">
                                         <p class="tipo1">Serviços contratados:</p>
                                         <p>
-                                            <!--  <solicitacao.servicosContratados%> -->
+                                            <%=resultadoOrcamento.reservas.servico%>
                                         </p>
                                     </div>
                                 </div>
@@ -129,8 +129,7 @@
                                         <div class="botoes">
                                             <form>
                                                 <div class="prestador">
-                                                    <a href="dashboardUsuario_modalInfoPrestador.html"> Informações
-                                                        prestador</a>
+                                                    Informações prestador
                                                 </div>
                                             </form>
                                         </div>

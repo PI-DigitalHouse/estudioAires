@@ -4,13 +4,17 @@ const fs = require('fs'); //lib para manipular arquivo do sistema operacional
 const models = require('../models');
 const { Op } = require('sequelize');
 const servico = require('../models/servico');
+const { response } = require('express');
+const { stringify } = require('querystring');
+
 
 let orcamentosCadastrados = [];
 
 module.exports.renderizaOrcamento = async (req, res, next) => {
   const { idReserva } = req.query;
 
-  const bloqueio = await models.Reserva.findAll({
+  //datas e horarios bloqueados
+  const bloqueios = await models.Reserva.findAll({
     where: {
       idReserva: {
         [Op.like]: `${idReserva || ''}%`,
@@ -18,20 +22,22 @@ module.exports.renderizaOrcamento = async (req, res, next) => {
     }, attributes: ['dataInicio', 'horarioInicio']
   });
   //para usar no front
-  const bloqueio2 = JSON.stringify (bloqueio.map(data=>data.dataInicio))
+  const agendamentos = JSON.stringify(bloqueios)
+
+  console.log(agendamentos)
 
   if (req.session.usuario) {
     res.render('orcamento', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      horariosBloqueados: bloqueio2,
+      horariosBloqueados: agendamentos,
     })
   } else {
     console.log('n logado')
     res.render('orcamentoSLogin', {
       title: 'Novo Orçamento',
       dadosUsuario: req.session.usuario,
-      horariosBloqueados: bloqueio,
+      horariosBloqueados: agendamentos,
     })
   }
 }
@@ -39,14 +45,24 @@ module.exports.renderizaOrcamento = async (req, res, next) => {
 module.exports.novoOrcamento = (async (req, res, next) => {
 
   const dadosDoFormulario = req.body
-  const { valor, idUsuario } = req.query
+  const { valor, idUsuario, tipoDeServico } = req.query
 
   const newService = await models.Servico.findOne({
     valor: {
       [Op.like]: `${valor || ''}%`,
     },
+    
 
   })
+
+  const servico = await models.Servico.findOne({
+    tipoDeServico: {
+      [Op.like]: `${tipoDeServico || ''}%`,
+    },
+    
+
+  })
+
   const valorFront = calValorfront = () => {
     dadosDoFormulario.tamanhoImovel * (0.2 + juncao.length)
   }
@@ -61,13 +77,21 @@ module.exports.novoOrcamento = (async (req, res, next) => {
   const resultado = calculaOrcamento(dadosDoFormulario.tamanhoImovel, newService.valor, juncao.length)
   req.body.valor = resultado
 
+  //ajusta formato data - > COLOCAR += O TEXTO
+  let dataInicioAjustada = req.body.dataInicio
+  dataInicioAjustada += 'T00:00:00.000Z'
+
   dadosDoFormulario.valor = resultado
   dadosDoFormulario.reservadoPor = req.session.usuario.idUsuario
   dadosDoFormulario.membros_idMembro = 1
   dadosDoFormulario.status = 'active'
-  dadosDoFormulario.dataFinal = req.body.dataInicio
+  dadosDoFormulario.dataFinal = dataInicioAjustada
   dadosDoFormulario.horarioFinal = req.body.horarioInicio
+  dadosDoFormulario.dataInicio = dataInicioAjustada
+  //dadosDoFormulario.servico = stringify(req.body.servico)
+  //dadosDoFormulario.servico = servico.tipoDeServico
   console.log(dadosDoFormulario)
+  console.log(servico.tipoDeServico)
   const reservas = await models.Reserva.create(dadosDoFormulario)
 
   if (!reservas) {
@@ -94,3 +118,15 @@ function calculaOrcamento(tamanhoImovel, numeroServicos, valor) {
   return valorTotal
 }
 
+module.exports.verificaDisponibilidade = async (req, res) => {
+  var dataSelecionada = req.query.data
+  
+  const horariosAgendados = await models.Reserva.findAll({
+    where:{
+       dataInicio: dataSelecionada
+      }, attributes: ['dataInicio', 'horarioInicio']
+  });
+
+  res.send(horariosAgendados)
+
+}

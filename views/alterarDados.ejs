@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<%- include partials/head.ejs %>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<%- include partials/head2.ejs %>
 
     <body>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main id="main-alterar-dados">
-                <h1>Meu Perfil</h1>
+                <div class="du-meuPerfil-info">
+                    <h1>Alterar dados</h1>
 
-                <form action="/dashboardUsuario/alterandoDados" method="POST" id="form-alterar-dados">
-                    <div class="form-group">
-                        <h6>Nome</h6>
-                        <input type="text" class="form-control" name="nome" placeholder="nome"
-                            value="<%=dadosUsuario.nome%>">
-                    </div>
-                    <div class="form-group">
-                        <h6>Email</h6>
-                        <input type="text" class="form-control" name="email" placeholder="E-mail"
-                            value="<%=dadosUsuario.email%>">
-                    </div>
-                    <div class="form-group">
-                        <h6>CPF / CNPJ</h6>
-                        <input type="text" class="form-control" name="cpfCnpj" placeholder="CPF ou CNPJ"
-                            value="<%=dadosUsuario.cpfCnpj%>">
-                    </div>
-                    <div class="form-group">
-                        <h6>Telefone</h6>
-                        <input type="text" class="form-control" name="telefone" placeholder="Telefone"
-                            value="<%=dadosUsuario.telefone%>">
-                    </div>
-                    <button type="submit" class="btn btn-dark">Salvar Alterações</button>
-                </form>
+                    <form action="/dashboardUsuario/alterandoDados" method="POST" id="form-alterar-dados"
+                        >
+                        <div class="du-meuPerfil-alteraDados-secao">
+                            <p class="du-meuPerfil-info-secao-titulo">Nome</p>
+                            <input type="text" class="du-altera-dados-input" name="nome" placeholder="nome"
+                                value="<%=dadosUsuario.nome%>">
+                        </div>
+                        <div class="du-meuPerfil-alteraDados-secao">
+                            <p class="du-meuPerfil-info-secao-titulo">Email</p>
+                            <input type="text" class="du-altera-dados-input" name="email" placeholder="E-mail"
+                                value="<%=dadosUsuario.email%>">
+                        </div>
+                        <div class="du-meuPerfil-alteraDados-secao">
+                            <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
+                            <input type="text" class="du-altera-dados-input" name="cpfCnpj" placeholder="CPF ou CNPJ"
+                                value="<%=dadosUsuario.cpfCnpj%>">
+                        </div>
+                        <div class="du-meuPerfil-alteraDados-secao">
+                            <p class="du-meuPerfil-info-secao-titulo">Telefone</p>
+                            <input type="text" class="du-altera-dados-input" name="telefone" placeholder="Telefone"
+                                value="<%=dadosUsuario.telefone%>">
+                        </div>
+                        <button type="submit" class="botao-1">Salvar Alterações</button>
+                    </form>
 
-                <h6 class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a
-                        href="/dashboardUsuario/alteraSenha">Clique aqui</a></h6>
+                    <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a
+                            href="/dashboardUsuario/alteraSenha">Clique aqui</a></p>
                 </div>
-
+                </div>
             </main>
 
             <!-- Footer -->

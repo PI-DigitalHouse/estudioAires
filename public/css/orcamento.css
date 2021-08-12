@@ -31,12 +31,12 @@ main{
     padding: 5px; 
 }
 
-.container{
+.container-orcamento{
     display: flex;
     justify-content: center;   
 }
 
-.menu-lateral{
+.menu-lateral-orcamento{
     display:flex;
     flex-direction: column;
     width: 450px;
@@ -57,7 +57,7 @@ main{
     
 }
 
-.step{
+.step-orcamento{
     display: flex;
     place-content:center;
     width: 450px;
@@ -72,12 +72,12 @@ main{
     color:rgb(190, 190, 190);   
 }
 
-.step p{
+.step-orcamento p{
     display: flex;
     width: 800px;
 }
 
-.bolinhas{
+.bolinhas-orcamento{
     width: 35px;
     display: flex;
     justify-content: space-around;
@@ -85,7 +85,7 @@ main{
     margin-right: 15px;
 }
  
- .bolaOk{
+ .bolaOk-orcamento{
     
     height: 28px;
     width: 28px;
@@ -102,7 +102,7 @@ main{
  /* Dashboard central*/
 
 
-#acao-central{
+#acao-central-orcamento{
     display: flex;
     flex-direction: column;
     box-shadow:2px 2px 7px rgba(112, 112, 112, 0.25);
@@ -116,11 +116,11 @@ main{
     padding:10px;
 }
 
-.title{
+.title-orcamento{
     display: flex;
 }
 
-.title p{
+.title-orcamento p{
     color: blanchedalmond;
     display: grid;
     position: relative;
@@ -134,14 +134,37 @@ main{
     font-weight: bold;
 } 
 
-.tab{
+.fake-tab-orcamento{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px; 
+ }
+ 
+ .fake-tab-orcamento p{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     margin-left:5px;
+    padding-left: 10px;    
+ }
+ .fake-tab-orcamento input{
+    width: 75%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 80px;  
+}
+
+.tab-orcamento{
    display: none;
    flex-direction: column;
    width: 100%;
    padding: 15px; 
 }
 
-.tab p{
+.tab-orcamento p{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -153,7 +176,7 @@ main{
 /*STEP1*/
 
 
-.tab input{
+.tab-orcamento input{
     width: 75%;
     padding: 12px 20px;
     margin: 15px 0;
@@ -192,7 +215,7 @@ input.invalid {
 /*STEP2*/
 
 
-.listado {
+.listado-orcamento {
     margin:0;
     padding: 0;
     display: flex;
@@ -203,13 +226,13 @@ input.invalid {
     justify-content: space-around;
 } 
 
-.listado li{
+.listado-orcamento li{
     margin-left: 2px;
     list-style: none;
     padding: 15px;
 }
 
-.listado input{
+.listado-orcamento input{
     width: 15px;
     margin:5px;
 }
@@ -229,7 +252,7 @@ input.invalid {
     padding: 0;
 }
 
-.preco{
+.preco-orcamento{
     display: flex;
     border-radius: 15px;
     border: tomato 1px solid;
@@ -245,18 +268,18 @@ input.invalid {
 /*STEP FINAL*/
 
 
-.icon-confirm{
+.icon-confirm-orcamento{
     display: flex;
     position: relative;
     flex-direction: column;
 }
 
-.icon-confirm h4, h5{
+.icon-confirm-orcamento h4, h5{
     text-align: center;
     margin-top: 35px;
 }
 
-.icon-confirm img {
+.icon-confirm-orcamento img {
     position: relative;
     left: 45%;
     width: 50px;
@@ -265,7 +288,7 @@ input.invalid {
     bottom: 25px;
 }
 
-.icon-confirm a{
+.icon-confirm-orcamento a{
     text-decoration: none;
     color: #FC7600;
     font-weight: bold;

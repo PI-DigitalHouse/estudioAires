@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-   <%- include partials/head.ejs %> 
+<%- include partials/headerAreaLivreSemLogin.ejs %>
+
 <body>
-    <%- include partials/headerAreaLivreSemLogin.ejs %> 
-    <main>
-        <div class="container-recuperar-senha">
-            <div class="recuperar-senha">
-                <h3>Esqueceu a senha?</h3>
-                <form action="/receberEmail" method="POST">
-                    <div class="recuperar-senha-secao">
-                        <img class="recuperar-senha-secao-icone" src="/img/icone_email.png" alt="ícone email">
-                        <div>
-                            <p class="recuperar-senha-secao-titulo">Insira abaixo o seu email cadastrado para que
-                                possamos
-                                te ajudar a recuperar a senha</p>
-                            <input name="email" class="recuperar-senha-secao-input" type="email" placeholder="exemplo@mail.com">
+    <%- include partials/head2.ejs %>
+
+
+        <main>
+            <div id='pai-flex'>
+                <div id="container-recuperar-senha">
+                    
+                    <div id="recuperar-senha">
+                        <div id= 'titulo'>
+                            <h3>Esqueceu a senha?</h3>
                         </div>
+                        
+                        
+                        <form id='teste' action="/receberEmail" method="POST">
+                            <div id="recuperar-senha-secao">
+                                
+                                <div>
+                                    <div id='p'>
+                                        
+                                            Insira abaixo o seu email cadastrado para que
+                                        possamos
+                                        te ajudar a recuperar a senha
+                                    </div>
+                                    
+                                    <input name="email" id="recuperar-senha-secao-input" type="email"
+                                        placeholder="exemplo@mail.com">
+                                </div>
+                            </div>
+                            <div id="recuperar-senha-botao">
+                                <button id="enviar" type="submit">Recuperar Dados</button>
+                            </div>
+                            <div id="recuperar-senha-botao-2">
+                                <a href="/">Voltar</a>
+                            </div>
+                        </form>
                     </div>
-                    <div class="recuperar-senha-botao">
-                        <button class="enviar" type="submit">Recuperar Dados</button>
-                    </div>
-                    <div class="recuperar-senha-botao-2">
-                        <a href="/">Voltar</a>
-                    </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
 
 
 </body>

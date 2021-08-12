@@ -69,12 +69,9 @@ h2{
 .info{
     /* font-size: 14rem; */
     margin-bottom: 7%;
+    margin-top: 7%;
 }
 
-.servicoContratado1{
-
-    margin-bottom: 20px;
-}
 
 .servicoContratado1 .info p{ 
     display: inline;
@@ -168,10 +165,10 @@ h2{
 .linha{
     position: absolute;
     background: #ACACA6 ;
-    width: 75%;
+    width: 76%;
     height: 1.5px;
-    margin-left: 60px;
-    top: 15px;
+    margin-left: 65px;
+    top: 12px;
 }
 
 /* .botoes{

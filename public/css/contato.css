@@ -16,47 +16,47 @@ body{
     align-items: center;
 }
 
-.logo a{
+#logo a{
     text-decoration: none;
     color: #FC7600;
     /* font-size: 30px; */
 }
 
-.section-contato{
+#section-contato-home{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.info-contato{
+#info-contato-home{
     max-width: 500px;
     line-height: 65px;
     padding-left: 50px;
     /* font-size: 18px; */
 }
 
-.info-contato a{
+#info-contato-home a{
     text-decoration: none;
     color: #81A8E7;
 }
 
-.info-contato i{
+#info-contato-home i{
     color: #FC7600;
     margin-right: 20px;
     /* font-size: 25px; */
 }
 
-.form-contato{
+#form-contato-home{
     max-width: 700px;
     margin-right: 50px;
 }
 
-.info-contato,.form-contato{
+#info-contato-home,#form-contato-home{
     flex: 1;
 }
 
-.form-contato h2{
+#form-contato-home h2{
     color: #FC7600;
     text-align: center;
     /* font-size: 35px; */
@@ -64,7 +64,7 @@ body{
     margin-bottom: 30px;
 }
 
-.form-contato .text-box{
+#form-contato-home #text-box{
     background: #D8D7D8;
     color: #000000;
     border: none;
@@ -78,11 +78,11 @@ body{
     margin-bottom: 2px;
 }
 
-.form-contato .text-box:first-child{
+#form-contato-home #text-box:first-child{
     margin-right: 15px;
 }
 
-.form-contato textarea{
+#form-contato-home textarea{
     background: #D8D7D8;
     color: #000000;
     border: none;
@@ -98,7 +98,7 @@ body{
     opacity: 0.9;
 }
 
-.form-contato .btn-enviar{
+#form-contato-home #btn-enviar{
     background: rgba(252, 118, 0, 1);
     color: #F5F4F6;
     border: none;
@@ -114,7 +114,7 @@ body{
     transition-property: background;
 }
 
-.form-contato .btn-enviar:hover{
+#form-contato-home #btn-enviar:hover{
     background: rgba(252, 118, 0, 0.8);
 }
 
