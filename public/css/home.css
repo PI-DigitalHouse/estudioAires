@@ -2,7 +2,7 @@
  
  .container-header a {
      text-decoration: none;
-     z-index: 998;
+     z-index: 988;
      display: flex;
      position: absolute;
      padding: 20px;

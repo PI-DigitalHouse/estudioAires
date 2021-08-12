@@ -51,67 +51,36 @@ module.exports.recuSenha = (req, res) => {
     })
 }
 
-module.exports.getLogin = (req, res) => {
-    res.render('login', {
-        error: {
-            email: '',
-        },
-        title: 'Logar',
-        dadosUsuario: req.session.usuario
-    })
-}
-
-
-
-
 module.exports.logar = (async(req, res) => {
     const { email, senha } = req.body;
 
-
     const foundUser = await models.Usuario.findOne({
         where: {
-            email: req.body.email,
-
+            email: req.body.email
         }
     });
-
     if (!foundUser) {
-        res.render('login', {
+        res.render('home', {
             error: {
                 email: 'Usuário nao cadastrado'
             },
             value: email
         })
         console.log('email')
-        return //colocar error no ejs login 
+        return
     }
     const hashando = await compareHash(req.body.senha, foundUser.senha)
-
     if (!hashando) {
-        res.render('login', {
+        res.render('home', {
             error: {
                 senha: 'Usuário ou senha incorreta'
             }
         });
         return
     }
-
-
-
-
     req.session.usuario = foundUser;
-
     res.redirect('/')
 });
-
-
-
-
-
-
-
-
-
 
 async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
