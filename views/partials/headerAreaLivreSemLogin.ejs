@@ -26,7 +26,7 @@
         </div>
         <script>
             /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                                                                                                                        toggle between hiding and showing the dropdown content */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        toggle between hiding and showing the dropdown content */
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
@@ -49,8 +49,44 @@
             <!--USUARIO NAO LOGADO-->
             <% if(!dadosUsuario) { %>
                 <div>
-                    <a class="loginLink" href="/login">Entre/Cadastre-se</a>
+                    <button onclick="abreFormLogin()" class="loginLink">Entre/Cadastre-se</button>
                 </div>
                 <% } %>
     </div>
 </header>
+<div class="overlay-login"></div>
+<div class="modal-login">
+    <div class="fecharModal-login" onclick="fechaFormLogin()"><i class="fas fa-times"></i></div>
+    <div class="formLogin">
+
+        <div class="logo-login">
+            <h1>Estúdio Aires</h1>
+        </div>
+
+        <div class="titulo-login">
+            Entre no Estúdio
+        </div>
+        <div class="elemento-login">
+            <label for="email">E-mail</label>
+            <input type="text" type="email" name="email" id="email" required/>
+        </div>
+
+        <div class="elemento-login">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" required />
+        </div>
+
+        <div class="elemento-login">
+            <button type="submit">Entrar</button>
+        </div>
+
+        <div class="elemento-login">
+            <a href="/recuperarSenha">Esqueceu sua senha?</a>
+        </div>
+
+        <div class="elemento-login">
+            <a href="/cadastro-usuario">Novo no Estúdio? Cadastre-se</a>
+        </div>
+
+    </div>
+</div>
