@@ -8,7 +8,7 @@
                 <section class="duInfo">
                     <h1>Alteração de senha</h1>
 
-                    <form class="duInfo__form" action="/dashboardUsuario/alterandoSenha" method="POST">
+                    <form action="/dashboardUsuario/alterandoSenha" method="POST">
                         <div class="duInfo__secao">
                             <img class="duInfo__secao--icone" src="./img/key.png" alt="ícone chave">
                             <div>
@@ -30,18 +30,16 @@
                                 <input class="duInfo__secao--formulario" type="password" name="senhaNova2">
                             </div>
                         </div>
-                        <div class="du-meuPerfil-info-botao">
+                        <div class="botoes du-meuPerfil-info-botao">
                             <input type="submit" value="Atualizar Senha" class="botao-1">
                         </div>
-                        <div class="du-meuPerfil-info-botao2">
+                        <div class="botoes du-meuPerfil-info-botao2">
                             <a class="botao-2" href="/dashboardUsuario/meuPerfil"> Voltar </a>
                         </div>
                     </form>
                 </section>
             </main>
-
             <%- include partials/footer.ejs %>
-
     </body>
 
 </html>
