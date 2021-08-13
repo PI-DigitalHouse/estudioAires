@@ -6,10 +6,13 @@ const logger = require('morgan');
 const bodyparser = require('body-parser')
 const session = require('express-session')
 
+const adminRouter = require('./routes/adminRoute')
 const homeRouter = require('./routes/home');
-const dashboardUsuarioRouter = require('./routes/dashboardUsuario')
+const contatoRouter = require('./routes/contatoRoute')
+const DURouter = require('./routes/dashboardUsuario')
+const cadastroUsuario = require('./routes/cadastroUsuario')
 const DMRouter = require('./routes/dashBoardMembro')
-
+const orcamento = require('./routes/orcamento')
 
 const app = express();
 
@@ -27,13 +30,13 @@ app.use(session({
     secret: 'lapidandodiamante'
 }))
 
-app.use('/admin', require('./routes/adminRoute'));
+app.use('/admin', adminRouter);
 app.use('/', homeRouter);
-app.use('/contato', require('./routes/contatoRoute'));
-app.use('/dashboardUsuario', dashboardUsuarioRouter);
-app.use('/cadastro-usuario', require('./routes/cadastroUsuario'));
+app.use('/contato', contatoRouter);
+app.use('/dashboardUsuario', DURouter);
+app.use('/cadastro-usuario', cadastroUsuario);
 app.use('/dashboardMembro', DMRouter)
-app.use('/orcamento', require('./routes/orcamento'));
+app.use('/orcamento', orcamento);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
