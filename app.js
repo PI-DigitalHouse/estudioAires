@@ -7,12 +7,12 @@ const bodyparser = require('body-parser')
 const session = require('express-session')
 
 const adminRouter = require('./routes/adminRoute')
-const homeRouter = require('./routes/home');
+const homeRouter = require('./routes/homeRoute');
 const contatoRouter = require('./routes/contatoRoute')
-const DURouter = require('./routes/dashboardUsuario')
-const cadastroUsuario = require('./routes/cadastroUsuario')
-const DMRouter = require('./routes/dashBoardMembro')
-const orcamento = require('./routes/orcamento')
+const DURouter = require('./routes/dashboardUsuarioRoute')
+const cadastroUsuario = require('./routes/cadastroUsuarioRoute')
+const DMRouter = require('./routes/dashboardMembroRoute')
+const orcamento = require('./routes/orcamentoRoute')
 
 const app = express();
 
