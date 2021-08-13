@@ -3,7 +3,7 @@ const session = require('express-session');
 const { Op } = require('sequelize');
 
 module.exports.calendario = (req, res) => {
-  res.render('DMCalendario', {
+  res.render('DM_calendario', {
     title: 'Minha agenda',
     dadosUsuario: req.session.usuario,
     dadosMembro: req.session.membro,
@@ -66,7 +66,7 @@ module.exports.mostraJobs = async (req, res) => {
   //   console.log(JSON.stringify(resultadosJobs));
   console.log(resultadosJobs);
 
-  res.render('dashBoardMembro_jobsFinalizados', {
+  res.render('DM_jobsFinalizados', {
     title: 'Meus jobs finalizados',
     dadosUsuario: req.session.usuario,
     dadosMembro: req.session.membro,
@@ -121,7 +121,7 @@ module.exports.aprovacoes = async (req, res) => {
   });
   console.log(resultados.length);
 
-  res.render('dashboardMembro_aprovacoes', {
+  res.render('DM_aprovacoes', {
     resultados,
     title: 'Minha Agenda',
     dadosUsuario: req.session.usuario,
