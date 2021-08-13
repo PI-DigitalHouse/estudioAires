@@ -56,9 +56,11 @@ module.exports.logarAdmin = (req, res) => {
     if(userAdmin===req.body.emailAdmin){
         if(senhaAdmin2===req.body.senhaAdmin){
             req.session.admin = userAdmin;
+            
          res.redirect('/admin/dashboardAdmin')}
         return
     }
+   
     
 }
 

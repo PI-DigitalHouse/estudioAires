@@ -1,12 +1,17 @@
 const models = require('../models');
 const bcrypt = require('bcrypt');
 const { body, validationResult } = require('express-validator');
+const { Op } = require('sequelize');
 
 module.exports.cadastroModal = (req, res) => {
     res.render('cadastro-usuario', {
-        dadosUsuario: req.session.usuario, //FAZ o IF no HEADER se nao existe usuario como vai ter sessao ? Revisar header
-        erros: {},
+        dadosUsuario: req.session.usuario, 
+        
         title: 'Cadastro',
+        erro:{
+            email:''
+          },
+          value:{ },
     });
 
 }
@@ -14,45 +19,63 @@ module.exports.cadastroModal = (req, res) => {
 
 module.exports.postUsuario = (async(req, res) => {
     const user = req.body
-    const error = validationResult(req)
+   const error = validationResult(req)
     console.log(error.mapped())
 
     if (!error.isEmpty()) {
         res.render('cadastro-usuario', {
-            erros: error.mapped(),
-            dadosUsuario: null, //ficar esperto
+            erro: error.mapped(),
+            dadosUsuario: null, 
             title: 'Cadastro'
         })
         return
     }
 
     //Validação de email existente no banco
-    const usuario = await models.Usuario.findOne({
+    const usuario = await models.Usuario.findAll({
         where: {
-            email: user.email
+            email: 
+                user.email,
+              
+            cpfCnpj: 
+                user.cpfCnpj
+            
         }
     })
     if (usuario) {
         res.render('cadastro-usuario', {
-            erros: {
-                email: {
-                    msg: 'E-mail já cadastrado'
-                }
+            erro: {
+                email:  'E-mail já cadastrado',
+                cpfCnpj: 'CPF ja cadastrado'
+                
             },
-            dadosUsuario: null //ficar esperto
+            dadosUsuario: null,
+            title: 'Cadastro',
         })
         return
     }
+    /*if ( {
+        res.render('cadastro-usuario', {
+            erro: {
+                cpf:  'CPF já cadastrado'
+                
+            },
+            dadosUsuario: null,
+            title: 'Cadastro',
+        })
+        return
+    }*/
+
 
     //Validação da confirmação de senha do input ser compatível com a senha do input
     if (!user.senha === user.senha2) {
         res.render('cadastro-usuario', {
-            erros: {
+            erro: {
                 senha: {
                     msg: 'Senhas não compatíveis'
                 }
             },
-            dadosUsuario: null //ficar esperto
+            dadosUsuario: null 
         })
     }
 

@@ -286,3 +286,21 @@ body.showLoginForm .modal-login {
 
 
 /* Modal Login */
+
+/*Login Admin*/
+
+.loginAdmin{
+    position: fixed;
+    top: -150%;
+    left: 50%;
+ 
+    width: 350px;
+    height: 450px;
+    border-radius: 1%;
+    background: #e9e9e9;
+
+   
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  
+
+}

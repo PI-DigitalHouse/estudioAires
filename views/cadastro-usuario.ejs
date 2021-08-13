@@ -45,6 +45,8 @@
                                 name="nome" id="Nome" required>
                             <input required id="usu-input-tipo-1" placeholder="Sobrenome:" maxlength="50" type="text"
                                 name="sobrenome" id="Nome" required>
+                                <p><%=erro.email%> </p>
+
                             <input required id="usu-input-tipo-1" placeholder="Email:" maxlength="60" type="email"
                                 name="email" id="email">
                         </div>
@@ -53,9 +55,9 @@
                                 type="text" name="telefone" id="Nome" required>
                             <input required id="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="60"
                                 type="text" name="cpfCnpj" id="email">
-                            <% if(erros&&erros.cpfCnpj){ %>
+                            <% if(erro&&erro.cpfCnpj){ %>
                                 <span>
-                                    <%= erros.cpfCnpj.msg %>
+                                    <%= erro.cpfCnpj.msg%>
                                 </span>
                                 <% } %>
                         </div>
