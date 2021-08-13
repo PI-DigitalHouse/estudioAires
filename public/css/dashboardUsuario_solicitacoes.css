@@ -62,10 +62,6 @@ p{
     width: 50%;
 }
 
-h2{
-    /* font-size: 24rem; */
-}
-
 .info{
     /* font-size: 14rem; */
     margin-bottom: 7%;
@@ -81,6 +77,15 @@ h2{
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+.servicoContratado2{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+>>>>>>> 68a0f63e6c3ca9f2fb16206dc515d5d574efd239
 .servicoContratado2 .info p{
     margin: 0px
 }
@@ -95,6 +100,10 @@ h2{
     text-decoration: none;
     color: black;
     width: 50%;
+}
+
+.prestador{
+    margin-top: 40px;
 }
 
 .status{

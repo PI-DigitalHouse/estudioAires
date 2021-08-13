@@ -2,13 +2,6 @@ const models = require('../models');
 const bcrypt = require('bcrypt');
 const { Op } = require('sequelize')
 
-module.exports.listEntregaveis = (req, res) => {
-    res.render('dashboardUsuario_entregaveis', {
-        title: 'Entregáveis',
-        entregaveis: array,
-        dadosUsuario: req.session.usuario
-    });
-}
 
 module.exports.recuperaSenha = (req, res) => {
     res.render('DU_recuperacaoSenha', {
@@ -18,7 +11,7 @@ module.exports.recuperaSenha = (req, res) => {
 }
 
 module.exports.showAlteraSenha = (req, res) => {
-    res.render('dashboardUsuario_alteracaoSenha', {
+    res.render('DU_alteracaoSenha', {
         title: 'Altere a sua Senha',
         dadosUsuario: req.session.usuario
     });
@@ -40,7 +33,7 @@ module.exports.alteraSenha = async(req, res) => {
     const hashando = await compareHash(dadosForm.senhaAntiga, usuario.senha)
 
     if (!hashando) {
-        res.render('dashboardUsuario_alteracaoSenha', {
+        res.render('DU_alteracaoSenha', {
             erros: {
                 senhaAntiga: {
                     msg: 'Senha não correspondente'
@@ -53,7 +46,7 @@ module.exports.alteraSenha = async(req, res) => {
 
     //Verificando senhas iguais nos inputs de novaSenha1 e 2
     if (!dadosForm.senhaNova === dadosForm.senhaNova2) {
-        res.render('dashboardUsuario_alteracaoSenha', {
+        res.render('DU_alteracaoSenha', {
             erros: {
                 senhaNova: {
                     msg: 'As senhas não correspondem'
@@ -78,7 +71,7 @@ module.exports.alteraSenha = async(req, res) => {
 
 module.exports.meuPerfil = (req, res) => {
     console.log(req)
-    res.render('dashboardUsuario_meuPerfil', {
+    res.render('DU_meuPerfil', {
             title: 'Meu Perfil',
             dadosUsuario: req.session.usuario
         }
@@ -165,12 +158,12 @@ module.exports.mostrarSolicitacoes = (async(req, res) => {
         include: {
             model: models.Reserva,
             as: 'reservas',
-            attributes: ['status', 'horarioInicio', 'dataInicio', 'servico' ],
+            attributes: ['status', 'horarioInicio', 'dataInicio','servico'],
         },
         
     });
    
-    res.render('dashboardUsuario_solicitacoes', 
+    res.render('DU_solicitacoes', 
     { resultadoOrcamentos,
         title: 'Solicitacoes',
      dadosUsuario: req.session.usuario

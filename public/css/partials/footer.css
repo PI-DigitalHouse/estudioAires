@@ -1,6 +1,7 @@
 footer {
     background: /*#F5F4F6*/
-    rgba(127, 127, 127, 0.3);
+    /* rgba(127, 127, 127, 0.3) */
+    rgba(0, 0, 0, .6);
     padding: 70px 0;
 }
 

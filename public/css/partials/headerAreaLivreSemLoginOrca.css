@@ -1,0 +1,12 @@
+.header-logo-orcamento {
+    height: 18vh;
+    
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    
+    backdrop-filter: blur(6px);
+}
