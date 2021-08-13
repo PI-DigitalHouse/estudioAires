@@ -15,7 +15,7 @@ function showTab(n) {
   } else if (n == 3) {
     document.getElementById("check-disponibilidade").style.display = "inline";
     document.getElementById("prevBtn").style.display = "none";
-    document.getElementById("nextBtn").style.display = "inline";
+    document.getElementById("nextBtn").style.display = "none";
     document.getElementById("nextBtn2").style.display = "none";
     document.getElementById("horario").style.display = "none";
   } else if (n == 4) {
@@ -30,19 +30,6 @@ function showTab(n) {
     document.getElementById("horario").style.display = "none";
   }
 
-  //codigo original por se der merda
-  // if (n == 0) {
-  //   document.getElementById("prevBtn").style.display = "none";
-  // } else {
-  //   document.getElementById("prevBtn").style.display = "inline";
-  // } 
-  // if (n == (x.length - 1)) {
-  //   document.getElementById("nextBtn").innerHTML = "Acesse sua área restrita";
-  // } else {
-  //   document.getElementById("nextBtn").innerHTML = "CONFIRMAR";
-  // }
-
-  // ... e executa uma função que exibe o indicador do step correto:
 
   fixStepIndicator(n)
 }
@@ -152,6 +139,7 @@ botaoDisponibilidade.onclick = () => {
 
     document.getElementById("horario").style.display = "inline";
     document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("nextBtn").style.display = "inline";
     document.getElementById("check-disponibilidade").style.display = "none";
     document.getElementById("erro-disponibilidade").innerHTML = ' '
   
