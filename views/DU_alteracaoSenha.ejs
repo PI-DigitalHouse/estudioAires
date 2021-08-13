@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<%- include partials/head.ejs %>
+<%- include partials/head2.ejs %>
 
     <body>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main>
-                <div class="du-meuPerfil-info">
+                <section class="duInfo">
                     <h1>Alteração de senha</h1>
 
-                    <form action="/dashboardUsuario/alterandoSenha" method="POST">
-                        <div class="du-meuPerfil-info-secao">
-                            <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
+                    <form class="duInfo__form" action="/dashboardUsuario/alterandoSenha" method="POST">
+                        <div class="duInfo__secao">
+                            <img class="duInfo__secao--icone" src="./img/key.png" alt="ícone chave">
                             <div>
-                                <p class="du-meuPerfil-info-secao-titulo">Senha antiga</p>
-                                <input class="du-meuPerfil-info-secao-formulario" type="password" name="senhaAntiga">
+                                <p class="duInfo__secao--titulo">Senha antiga</p>
+                                <input class="duInfo__secao--formulario" type="password" name="senhaAntiga">
                             </div>
                         </div>
-                        <div class="du-meuPerfil-info-secao">
-                            <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
+                        <div class="duInfo__secao">
+                            <img class="duInfo__secao--icone" src="/img/key.png" alt="ícone chave">
                             <div>
-                                <p class="du-meuPerfil-info-secao-titulo">Senha nova</p>
-                                <input class="du-meuPerfil-info-secao-formulario" type="password" name="senhaNova">
+                                <p class="duInfo__secao--titulo">Senha nova</p>
+                                <input class="duInfo__secao--formulario" type="password" name="senhaNova">
                             </div>
                         </div>
-                        <div class="du-meuPerfil-info-secao">
-                            <img class="du-meuPerfil-info-secao-icone" src="/img/key.png" alt="ícone chave">
+                        <div class="duInfo__secao">
+                            <img class="duInfo__secao--icone" src="/img/key.png" alt="ícone chave">
                             <div>
-                                <p class="du-meuPerfil-info-secao-titulo">Confirme senha nova</p>
-                                <input class="du-meuPerfil-info-secao-formulario" type="password" name="senhaNova2">
+                                <p class="duInfo__secao--titulo">Confirme senha nova</p>
+                                <input class="duInfo__secao--formulario" type="password" name="senhaNova2">
                             </div>
                         </div>
                         <div class="du-meuPerfil-info-botao">
-                            <input type="submit" value="Atualizar Senha">
+                            <input type="submit" value="Atualizar Senha" class="botao-1">
                         </div>
                         <div class="du-meuPerfil-info-botao2">
-                            <a href="/dashboardUsuario/meuPerfil"> Voltar </a>
+                            <a class="botao-2" href="/dashboardUsuario/meuPerfil"> Voltar </a>
                         </div>
                     </form>
-                </div>
+                </section>
             </main>
 
             <%- include partials/footer.ejs %>
