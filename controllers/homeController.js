@@ -2,7 +2,6 @@ const models = require('../models');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 
-
 module.exports.getHome = (req, res) => {
     res.render('home', {
         dadosUsuario: req.session.usuario,
@@ -109,10 +108,6 @@ module.exports.logar = (async(req, res) => {
     res.redirect('/')
 });
 
-async function compareHash(senha, hash) {
-    return await bcrypt.compare(senha, hash);
-};
-
 module.exports.logOut = (req, res) => {
     req.session.destroy();
     res.redirect('/');
@@ -123,3 +118,7 @@ module.exports.renderizaOrcamentoSLogin = (req, res, next) => {
         dadosUsuario: req.session.usuario
     });
 }
+
+async function compareHash(senha, hash) {
+    return await bcrypt.compare(senha, hash);
+};

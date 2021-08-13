@@ -3,18 +3,17 @@ const models = require('../models');
 const session = require('express-session');
 const router = express.Router();
 const bcrypt = require('bcrypt')
-const { loginAdmin, logarAdmin, getDashAdmin, showCadastroMembro, postMembro} = require('../controllers/adminController');
-const checkSessionAdmin = require('../middlewares/checkAdmin') 
-
+const { loginAdmin, logarAdmin, getDashAdmin, showCadastroMembro, postMembro } = require('../controllers/adminController');
+const checkSessionAdmin = require('../middlewares/checkAdmin')
 
 router.get('/', loginAdmin)
 
 router.post('/logarAdmin', logarAdmin);
-router.post('/novoMembro',checkSessionAdmin, postMembro);
 
-router.get('/dashboardAdmin',checkSessionAdmin, getDashAdmin)
+router.post('/novoMembro', checkSessionAdmin, postMembro);
 
-router.get('/cadastroMembro',checkSessionAdmin, showCadastroMembro)
+router.get('/dashboardAdmin', checkSessionAdmin, getDashAdmin)
 
+router.get('/cadastroMembro', checkSessionAdmin, showCadastroMembro)
 
-module.exports = router; 
+module.exports = router;

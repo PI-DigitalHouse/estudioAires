@@ -19,6 +19,4 @@ router.post('/', [
     ],
     postUsuario);
 
-
-
 module.exports = router;
