@@ -19,6 +19,4 @@ router.post('/', [
     ],
     postUsuario);
 
-//criar arquivo com o array e importar(o check tbm)
-
 module.exports = router;

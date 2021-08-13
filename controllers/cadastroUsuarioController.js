@@ -4,19 +4,17 @@ const { body, validationResult } = require('express-validator');
 
 module.exports.cadastroModal = (req, res) => {
     res.render('cadastro-usuario', {
-        dadosUsuario: req.session.usuario, //FAZ o IF no HEADER se nao existe usuario como vai ter sessao ? Revisar header
+        dadosUsuario: req.session.usuario,
         erros: {},
         title: 'Cadastro',
     });
 
 }
 
-
 module.exports.postUsuario = (async(req, res) => {
     const user = req.body
     const error = validationResult(req)
     console.log(error.mapped())
-
     if (!error.isEmpty()) {
         res.render('cadastro-usuario', {
             erros: error.mapped(),
@@ -25,8 +23,6 @@ module.exports.postUsuario = (async(req, res) => {
         })
         return
     }
-
-    //Validação de email existente no banco
     const usuario = await models.Usuario.findOne({
         where: {
             email: user.email
@@ -39,12 +35,10 @@ module.exports.postUsuario = (async(req, res) => {
                     msg: 'E-mail já cadastrado'
                 }
             },
-            dadosUsuario: null //ficar esperto
+            dadosUsuario: null
         })
         return
     }
-
-    //Validação da confirmação de senha do input ser compatível com a senha do input
     if (!user.senha === user.senha2) {
         res.render('cadastro-usuario', {
             erros: {
@@ -52,28 +46,20 @@ module.exports.postUsuario = (async(req, res) => {
                     msg: 'Senhas não compatíveis'
                 }
             },
-            dadosUsuario: null //ficar esperto
+            dadosUsuario: null
         })
     }
-
-
-
-
-
-    user.senha = hash(user.senha) //encriptando a senha
+    user.senha = hash(user.senha)
     user.senha2 = hash(user.senha2)
     console.log(user)
     await models.Usuario.create(user)
-
-    res.redirect('/') //redireciona para home
+    res.redirect('/')
 });
 
 function hash(obj) {
-
     const salt = bcrypt.genSaltSync(10)
     const psw = bcrypt.hashSync(obj, salt)
     return psw;
-
 }
 async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
