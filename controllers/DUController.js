@@ -43,7 +43,7 @@ module.exports.alteraSenha = async(req, res) => {
                     msg: 'As senhas não correspondem'
                 }
             },
-            dadosUsuario: null //ficar esperto
+            dadosUsuario: null
         })
         return
     }

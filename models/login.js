@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
             },
             allowNull: false
         },
-        id: DataTypes.INTEGER //arrumar isso aqui matheus
+        id: DataTypes.INTEGER
     }, {
         sequelize,
         modelName: 'Login',
