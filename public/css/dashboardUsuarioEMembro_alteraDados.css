@@ -3,3 +3,11 @@
     margin-top: 5px;
     margin-left: 20px;
 }
+.du-meuPerfil-alteraDados-secao input {
+width: 75%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 80px;  
+}
