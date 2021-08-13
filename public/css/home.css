@@ -24,22 +24,19 @@
  /* SERVIÇOS */
  
  .titulo-servicos {
+     height: 40px;
      display: flex;
      justify-content: center;
-     color: /*rgba(252, 118, 0, 1)*/
-     /* #81A8E7 */
-     black;
-     background: /*#F5F4F6*/
-     rgba(252, 118, 0, 1);
+     align-items: center;
+     color: #fff;
+     background: rgba(252, 118, 0, 1);
  }
  
  .container1-servicos {
      display: flex;
      justify-content: center;
      align-items: center;
-     background: rgba(127, 127, 127, 0.3)
-     /* #81A8E7 */
-     ;
+     background: rgba(127, 127, 127, 0.3);
  }
  
  .container2-servicos {
@@ -89,10 +86,14 @@
      margin-top: -140px;
      padding: 10px 15px;
      text-align: center;
-     color: #111;
+     color: #fff;
      visibility: hidden;
      opacity: 0;
      transition: 0.3s ease-in-out;
+ }
+ 
+ .container2-servicos .card-servicos .content-servicos h2 {
+     margin-bottom: 16px;
  }
  
  .container2-servicos .card-servicos:hover .content-servicos {
@@ -105,8 +106,8 @@
  .link-servicos {
      font-size: 18px;
      text-decoration: none;
-     color: black;
-     border-bottom: 1px solid black;
+     color: #fff;
+     border-bottom: 1px solid #fff;
  }
  /* SERVIÇOS */
  /* PORTIFÓLIOS */
@@ -154,6 +155,8 @@
      padding: 10px;
      margin-left: 140px;
      margin-top: 8px;
+     text-align: center;
+     line-height: 26px;
  }
  
  .container-nossaEquipe .titulo-nossaEquipe {
@@ -161,6 +164,7 @@
      justify-content: center;
      align-items: center;
      margin-left: 16px;
+     margin-top: 60px;
  }
  
  .container-nossaEquipe .titulo-nossaEquipe h2 {
@@ -175,7 +179,7 @@
  }
  
  .container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe img {
-     width: 40%;
+     width: 26%;
  }
  
  .container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe {
@@ -188,11 +192,13 @@
  .container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe h3 {
      font-size: 30px;
      padding: 8px;
+     margin-bottom: 10px;
  }
  
  .container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe p {
      text-align: center;
      width: 80%;
+     line-height: 26px;
  }
  /* QUEM SOMOS */
  /* BOTÃO WHATSAPP */

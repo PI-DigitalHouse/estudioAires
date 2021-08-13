@@ -8,6 +8,7 @@
     align-items: center;
     background: rgba(0, 0, 0, .6);
     z-index: 989;
+    backdrop-filter: blur(6px);
 }
 
 .linkLogo-header {
