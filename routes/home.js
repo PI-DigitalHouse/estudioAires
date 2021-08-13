@@ -7,10 +7,13 @@ const { listServico1, listServico2, listServico3, listServico4, listServico5, li
 const { getHome, recuSenha, logOut, getProjeto1, getProjeto2, getProjeto3, logar } = require('../controllers/homeController');
 const logarMembro = require('../controllers/autenticacaoMembro')
 const checkSession = require('../middlewares/checkSession')
+const checkSessionMembro = require('../middlewares/checkMembro') 
 
 router.get('/', getHome)
 
 router.get('/', checkSession, getHome)
+router.get('/', checkSessionMembro, getHome)
+
     /* GET serviço 1 */
 router.get('/servico1', listServico1);
 
