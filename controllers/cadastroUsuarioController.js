@@ -2,50 +2,54 @@ const models = require('../models');
 const bcrypt = require('bcrypt');
 const { body, validationResult } = require('express-validator');
 const { Op } = require('sequelize');
+const { unsubscribe } = require('../routes/cadastroUsuarioRoute');
 
 module.exports.cadastroModal = (req, res) => {
     res.render('cadastro-usuario', {
         dadosUsuario: req.session.usuario,
         erros: {},
         title: 'Cadastro',
-        erro:{
-            email:''
-          },
-          value:{ },
+        erro: {
+            email: ''
+        },
+        value: {},
     });
 
 }
 
-module.exports.postUsuario = (async(req, res) => {
+module.exports.postUsuario = (async (req, res) => {
     const user = req.body
-   const error = validationResult(req)
+    const error = validationResult(req)
     console.log(error.mapped())
     if (!error.isEmpty()) {
         res.render('cadastro-usuario', {
             erro: error.mapped(),
-            dadosUsuario: null, 
+            dadosUsuario: null,
             title: 'Cadastro'
         })
         return
     }
     const usuario = await models.Usuario.findOne({
+
         where: {
-            email: 
-                user.email,
-              
-            cpfCnpj: 
-                user.cpfCnpj
-            
+            [Op.or]: [
+                { email: user.email },
+                { cpfCnpj: user.cpfCnpj }
+            ]
         }
-    })
+    });
+
+
+
     if (usuario) {
         res.render('cadastro-usuario', {
             erro: {
-                email:  'E-mail já cadastrado',
-                cpfCnpj: 'CPF ja cadastrado'
-                
+                email: 'E-mail ou CPF/CNPJ já cadastrado'
+
+
             },
-            dadosUsuario: null
+            dadosUsuario: null,
+            title: 'Cadastro'
         })
         return
     }
@@ -56,7 +60,8 @@ module.exports.postUsuario = (async(req, res) => {
                     msg: 'Senhas não compatíveis'
                 }
             },
-            dadosUsuario: null
+            dadosUsuario: null,
+            title: 'Cadastro'
         })
     }
     user.senha = hash(user.senha)
