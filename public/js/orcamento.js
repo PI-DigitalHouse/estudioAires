@@ -23,7 +23,12 @@ function showTab(n) {
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("horario").style.display = "none";
-  } else {
+  } else if (n == 5) {
+    document.getElementById("nextBtn2").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("horario").style.display = "none";
+  }  else {
     document.getElementById("check-disponibilidade").style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("nextBtn").style.display = "inline";

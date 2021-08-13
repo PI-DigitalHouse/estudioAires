@@ -344,10 +344,18 @@ button:hover {
     opacity: 0.8;
 } */
 
+#nextBtn{
+    margin-left: 28px;
+    margin-top: 20px;
+}
 
+#prevBtn{
+    margin-left: 28px;
+}
 
-
-
+#check-disponibilidade{
+    margin-left: 12px;
+}
     
 
 
