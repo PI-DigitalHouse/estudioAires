@@ -19,19 +19,12 @@ module.exports.showAlteraSenha = (req, res) => {
 
 module.exports.alteraSenha = async(req, res) => {
     const dadosForm = req.body
-        // console.log(dadosForm)
-
-    //Chamando o usuário pela sessão
     const usuario = await models.Usuario.findOne({
         where: {
             idUsuario: req.session.usuario.idUsuario
         }
     });
-    // console.log(usuario)
-
-    //Validando senha do banco com a do input
     const hashando = await compareHash(dadosForm.senhaAntiga, usuario.senha)
-
     if (!hashando) {
         res.render('DU_alteracaoSenha', {
             erros: {
@@ -39,12 +32,10 @@ module.exports.alteraSenha = async(req, res) => {
                     msg: 'Senha não correspondente'
                 }
             },
-            dadosUsuario: null //ficar esperto
+            dadosUsuario: null
         })
         return
     }
-
-    //Verificando senhas iguais nos inputs de novaSenha1 e 2
     if (!dadosForm.senhaNova === dadosForm.senhaNova2) {
         res.render('DU_alteracaoSenha', {
             erros: {
@@ -52,20 +43,17 @@ module.exports.alteraSenha = async(req, res) => {
                     msg: 'As senhas não correspondem'
                 }
             },
-            dadosUsuario: null //ficar esperto
+            dadosUsuario: null
         })
         return
     }
-
     const update = await models.Usuario.update({
-            senha: hash(dadosForm.senhaNova)
-        }, {
-            where: {
-                idUsuario: req.session.usuario.idUsuario
-            }
+        senha: hash(dadosForm.senhaNova)
+    }, {
+        where: {
+            idUsuario: req.session.usuario.idUsuario
         }
-
-    )
+    })
     res.redirect('/dashboardUsuario/meuPerfil')
 }
 
@@ -90,48 +78,31 @@ module.exports.alteraDados = async(req, res) => {
     let dadosNovos = req.body
 
     const update = await models.Usuario.update(dadosNovos, {
-            where: {
-                idUsuario: req.session.usuario.idUsuario
-            }
+        where: {
+            idUsuario: req.session.usuario.idUsuario
         }
-
-    )
+    })
     const resultados = await models.Usuario.findOne({
         where: {
             idUsuario: req.session.usuario.idUsuario
         }
     })
     req.session.save(function() {
-            req.session.usuario = resultados
-            res.redirect('/dashboardUsuario/meuPerfil')
-        })
-        // res.redirect('/dashboardUsuario/meuPerfil')
+        req.session.usuario = resultados
+        res.redirect('/dashboardUsuario/meuPerfil')
+    })
 }
 
-function hash(obj) {
-
-    const salt = bcrypt.genSaltSync(10)
-    const psw = bcrypt.hashSync(obj, salt)
-    return psw;
-
-}
-
-async function compareHash(senha, hash) {
-    return await bcrypt.compare(senha, hash);
-};
-
-//Busca solicitações no banco.
 module.exports.mostrarSolicitacoes = (async(req, res) => {
-
-    const { 
+    const {
         idSolicitacao,
         endereco,
         tamanhoImovel,
         valor,
         pagamento,
-        status } = 
-        req.query
-
+        status
+    } =
+    req.query
     const resultadoOrcamentos = await models.Orcamento.findAll({
         where: {
             idSolicitacao: {
@@ -152,21 +123,29 @@ module.exports.mostrarSolicitacoes = (async(req, res) => {
             status: {
                 [Op.like]: `${status || ''}%`
             },
-
-
         },
         include: {
             model: models.Reserva,
             as: 'reservas',
-            attributes: ['status', 'horarioInicio', 'dataInicio','servico'],
+            attributes: ['status', 'horarioInicio', 'dataInicio', 'servico'],
         },
-        
     });
-   
-    res.render('DU_solicitacoes', 
-    { resultadoOrcamentos,
+    res.render('DU_solicitacoes', {
+        resultadoOrcamentos,
         title: 'Solicitacoes',
-     dadosUsuario: req.session.usuario
+        dadosUsuario: req.session.usuario
     })
 
 })
+
+function hash(obj) {
+
+    const salt = bcrypt.genSaltSync(10)
+    const psw = bcrypt.hashSync(obj, salt)
+    return psw;
+
+}
+
+async function compareHash(senha, hash) {
+    return await bcrypt.compare(senha, hash);
+};

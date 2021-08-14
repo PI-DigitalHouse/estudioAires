@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/modais/login-modal.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../footer/footerGeral.css">
-    <!--<link rel="stylesheet" href="./modal-galley.css">-->
-    <link rel="stylesheet" href="../login-modal/login-modal.css">
-    <link rel="shortcut icon" href="images/square-logo-lineorange.png">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <title>Estúdio Aires</title>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    
+    
+        <script src="https://kit.fontawesome.com/f67cfcbcf9.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cadastroMembro</title>
+       
+        <link rel="stylesheet" href="../css/cadastroMembro.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+        <%- include partials/head2.ejs %>
+    </head>
 </head>
 
 <body>
@@ -23,31 +23,28 @@
         <%- include partials/headerAdminZone.ejs %>
 
     </header>
-    <div class="banner-area">
-        <div class="banner">
-            <video autoplay muted loop>
-                <source src="/img/teste.mov" type="video/mp4">
-            </video>
+   
+    <div class="login">
+    <form class="formLogin" action="/" method="POST">
+        <div class="logo-login">
+            <h1>Dashboard Admin</h1>
         </div>
-    </div>
-
-    <form class="adminLogin" action="/" method="POST">
-        <span class="a">DASHBOARD ADMIN</span>
-        <button  class="login a membro">
-            <a href='cadastroMembro'>Cadastrar Membro</a>
-        </button>
-        <button  class="login a membro">
-            <a href='#'>Ver Membros Cadastrados</a>
-        </button>
-        <button  class="login a membro">
-            <a href='#'>Ver Solicitacoes</a>
-        </button>
-        <button  class="login a membro">
-            <a href='#'>Outros</a>
-        </button>
+        <div class="elemento-login ">
+            <button ><a href='cadastroMembro'>Cadastrar Membro</a></button>
+        </div>
+      
+        <div class="elemento-login ">
+            <button ><a href='cadastroMembro'>Ver Membros Cadastrados</a></button>
+        </div>
+        <div class="elemento-login ">
+            <button ><a href='cadastroMembro'>Ver Solicitacoes</a></button>
+        </div>
+       
         </form>  
 
 
         </div>
     </form>
+</div>
+    </body>
 </body>

@@ -34,6 +34,14 @@
                             </h3>
 
                         </div>
+                        <div >
+                        <span class="erros-alert" > <%=erro.email%> </span>
+                        <% if(erro&&erro.cpfCnpj){ %>
+                            <span>
+                                <%= erro.cpfCnpj.msg%>
+                            </span>
+                            <% } %>
+                        </div>
                         <div id="usu-flex-container-boas-vindas">
                             <h2>Seja bem-vindo!</h2>
                         </div>
@@ -45,6 +53,8 @@
                                 name="nome" id="Nome" required>
                             <input required id="usu-input-tipo-1" placeholder="Sobrenome:" maxlength="50" type="text"
                                 name="sobrenome" id="Nome" required>
+                               
+
                             <input required id="usu-input-tipo-1" placeholder="Email:" maxlength="60" type="email"
                                 name="email" id="email">
                         </div>
@@ -53,11 +63,7 @@
                                 type="text" name="telefone" id="Nome" required>
                             <input required id="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="60"
                                 type="text" name="cpfCnpj" id="email">
-                            <% if(erros&&erros.cpfCnpj){ %>
-                                <span>
-                                    <%= erros.cpfCnpj.msg %>
-                                </span>
-                                <% } %>
+                            
                         </div>
                         <div id="usu-flex-container-selecione">
                             <select id="usu-input-Tipo-2" placeholder="Como nos conheceu?" name="comoConheceu"

@@ -33,7 +33,13 @@
     justify-content: center;
   }
 
+.erros-alert{
+    background-color: red;
+    color:white;
+    width: 230px;
+    height: 45px;
 
+}
 /* Botao Close */
 .close {
     position: absolute;

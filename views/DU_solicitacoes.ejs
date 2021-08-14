@@ -50,6 +50,14 @@
                                             <%=resultadoOrcamento.tamanhoImovel%> m²
                                         </p>
                                     </div>
+                        
+                                        <div class="info">
+                                            <p class="tipo1">Serviços contratados:</p>
+                                            <p>
+                                                <%=resultadoOrcamento.reservas.servico%>
+                                            </p>
+                                        </div>
+                                   
                                     <div class="info">
                                         <p class="tipo1">Data do serviço</p>
                                         <p>
@@ -141,13 +149,17 @@
                                                 </div>
                                                 <% } %>
 
+                                                <div class="botoes">
+                                                       <button id="aplicar" onclick="abreAlertDelete()">CANCELAR</button> 
+                                                </div>
                             </div>
                         </div>
                         <% } %>
                             <% } %>
 
 
-
+                            <script type="text/javascript" src="/js/sweetAlert.js"></script>  
+                            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     </body>
 
 </html>

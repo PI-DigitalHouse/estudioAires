@@ -1,15 +1,5 @@
 const fs = require('fs')
 
-const readFile = () => {
-    const content = fs.readFileSync('./mensagemDeContato.json', 'utf-8')
-    return JSON.parse(content)
-}
-
-const writeFile = (content) => {
-    const updateFile = JSON.stringify(content)
-    fs.writeFileSync('./mensagemDeContato.json', updateFile, 'utf-8')
-}
-
 module.exports.renderiza = (req, res) => {
     let dadosUsuario = null
     if (req.session && req.session.usuario) {
@@ -27,4 +17,14 @@ module.exports.postContato = (req, res) => {
     currentContent.push({ dados })
     writeFile(currentContent)
     res.redirect('/')
+}
+
+const readFile = () => {
+    const content = fs.readFileSync('./mensagemDeContato.json', 'utf-8')
+    return JSON.parse(content)
+}
+
+const writeFile = (content) => {
+    const updateFile = JSON.stringify(content)
+    fs.writeFileSync('./mensagemDeContato.json', updateFile, 'utf-8')
 }
