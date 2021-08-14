@@ -14,8 +14,8 @@ function abreAlertDelete(){
         text: "Ao cancelar nao sera possivel reativar essa solicitacao",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Sim, cancelar!',
-        cancelButtonText: 'Nao cancelar!',
+        confirmButtonText: 'Cancelar solicitacao!',
+        cancelButtonText: 'Nao',
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
@@ -36,6 +36,7 @@ function abreAlertDelete(){
         }
       })
     }
+
 
 
 
