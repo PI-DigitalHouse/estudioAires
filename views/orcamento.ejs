@@ -248,9 +248,12 @@
                         function calculaOrcamentoFront(services) {
                             let tamanho = document.querySelector('#tamanhoImovel').value
                             let result = (services.length * 0.2 + 0.8) * tamanho
+                            result3 = new Intl.NumberFormat('pt-BR', { maximumSignificantDigits:6 }).format(result)
 
-                            document.getElementById('valorOrcamento').innerText = result
-                            return result
+                            document.getElementById('valorOrcamento').innerText = result3
+                            
+                            
+                            return result3
                             
                         } 
 

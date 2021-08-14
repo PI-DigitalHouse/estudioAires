@@ -368,7 +368,14 @@ button:hover {
 #check-disponibilidade{
     margin-left: 12px;
 }
+
+.valor-orcamento-add{
+    color: green;
+}
+#valorOrcamento{
+    color: green;
     
+}
 
 
   
