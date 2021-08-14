@@ -79,29 +79,24 @@ module.exports.recuSenha = (req, res) => {
 
 module.exports.logar = (async(req, res) => {
     const { email, senha } = req.body;
-
-    const foundUser = await models.Usuario.findOne({
+    let foundUser = await models.Usuario.findOne({
         where: {
             email: req.body.email
         }
     });
+
     if (!foundUser) {
-        res.render('home', {
-            error: {
-                email: 'Usuário nao cadastrado'
-            },
-            value: email
-        })
-        console.log('email')
-        return
-    }
-    const hashando = await compareHash(req.body.senha, foundUser.senha)
-    if (!hashando) {
-        res.render('home', {
-            error: {
-                senha: 'Usuário ou senha incorreta'
+
+        foundUser = await models.Membro.findOne({
+            where: {
+                email: req.body.email
             }
         });
+    }
+    // AQUI FICA O CÓDIGO COMENTADO LÁ NO FINAL
+    if (foundUser.experiencia) {
+        req.session.membro = foundUser;
+        res.redirect('meuPerfil');
         return
     }
     req.session.usuario = foundUser;
@@ -122,3 +117,27 @@ module.exports.renderizaOrcamentoSLogin = (req, res, next) => {
 async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
 };
+
+// if (!foundUser) {
+//     res.render('home', {
+//         error: {
+//             email: 'Usuário nao cadastrado'
+//         },
+//         value: email,
+//         title: 'home',
+//         dadosUsuario: null
+//     })
+//     console.log('email')
+//     return
+// }
+// const hashando = await compareHash(req.body.senha, foundUser.senha)
+// if (!hashando) {
+//     res.render('home', {
+//         error: {
+//             senha: 'Usuário ou senha incorreta'
+//         },
+//         title: 'home',
+//         dadosUsuario: null
+//     });
+//     return
+// }
