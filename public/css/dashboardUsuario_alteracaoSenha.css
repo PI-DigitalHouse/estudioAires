@@ -19,6 +19,12 @@
   border-bottom: #fc7600 solid 1px;
 }
 
+.fa,
+.fas {
+  padding-top: 1rem;
+  margin-right: 1rem;
+}
+
 .duInfo__secao {
   display: flex;
   border-bottom: #949494 dashed 0.063rem;
