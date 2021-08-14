@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <link rel="stylesheet" href="sweetalert2.min.css">
 <%- include partials/head2.ejs %>
 
     <body>
@@ -21,7 +22,8 @@
                         <option value="sessao agendada">Sessão agendada</option>
                     </select>
                 </div>
-
+             </main>
+<div>
                 <% if(resultadoOrcamentos){ %>
                     <% for (resultadoOrcamento of resultadoOrcamentos) { %>
 
@@ -137,7 +139,7 @@
                                         <div class="botoes">
                                             <form>
                                                 <div class="prestador">
-                                                    Informações prestador
+                                                   
                                                 </div>
                                             </form>
                                         </div>
@@ -150,17 +152,22 @@
                                                 <% } %>
 
                                                 <div class="botoes">
-                                                       <button id="aplicar" onclick="abreAlertDelete()">CANCELAR</button> 
+                                                      <p>Ocorreu algum imprevisto e precisa cancelar? </p>
+                                                       <button class="botao-1" id="salva-alteracoes" onclick="abreAlertDelete()">CANCELAR</button> 
                                                 </div>
                             </div>
                         </div>
                         <% } %>
                             <% } %>
-
+                        </div>
 
                             <script type="text/javascript" src="/js/sweetAlert.js"></script>  
-                            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    </body>
+                            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+   
+                            <%- include partials/footer.ejs %>
+
+                        </body>
 
 </html>
 
