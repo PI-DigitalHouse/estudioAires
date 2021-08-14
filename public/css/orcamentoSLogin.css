@@ -14,11 +14,11 @@ body{
     margin: 0;
 }
 
-main{
+
+.main{
     display: flex;
     justify-content: center;
 }
-
 .card-login-orcamento{
     display: flex;
     width: 80%;
