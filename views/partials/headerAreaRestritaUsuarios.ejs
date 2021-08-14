@@ -3,10 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estúdio Aires</title>
     <link rel="stylesheet" href="/css/partials/headerAreaRestritaUsuarios.css">
- 
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-   
-   
 </head>
 
 <header>
@@ -14,32 +12,25 @@
     <nav class="nav-hea">
         <ul>
             <li><a href="/">Home</a></li>
-            <li ><a href="/dashboardUsuario/solicitacoes">Solicitações</a></li>
+            <li><a href="/dashboardUsuario/solicitacoes">Solicitações</a></li>
             <li><a href="/orcamento">+ Novo Orçamento</a></li>
             <li><a href="/contato">Contate-nos</a></li>
         </ul>
     </nav>
-    
-      <!--   <a class="a" href="/dashboardUsuario/meuPerfil">
-            Olá, <=dadosUsuario.nome%>
-        </a>
-        <a class="a" href="/logout">Sair</a> -->
-   
-    <div class="dropdown"> 
-                 
-            <div class="dropdown a">
-                <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a"> 
-                     Olá, <%= dadosUsuario.nome %>! ▼</button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
-                  <a href="/dashboardUsuario/solicitacoes">Solicitacoes</a>
-                  <a href="/orcamento">+ Novo Orçamento</a>
-                  <a href="/logout">Sair</a>
-                </div>
-              </div>
-            
 
+    <div class="dropdown">
+        <div class="dropdown a">
+            <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
+                Olá, <%= dadosUsuario.nome %>! ▼</button>
+            <div id="myDropdown" class="dropdown-content">
+
+                <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
+                <a href="/dashboardUsuario/solicitacoes">Solicitacoes</a>
+                <a href="/orcamento">+ Novo Orçamento</a>
+                <a href="/logout">Sair</a>
+            </div>
+        </div>
     </div>
-</div>
-<script src="/js/user-partials.js"></script>
+    </div>
+    <script src="/js/user-partials.js"></script>
 </header>

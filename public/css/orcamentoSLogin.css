@@ -14,39 +14,47 @@ body{
     margin: 0;
 }
 
-main{
+
+.main{
     display: flex;
     justify-content: center;
 }
-
 .card-login-orcamento{
     display: flex;
-    width: 1175px;
-    height: 655px; 
+    width: 80%;
+    height: fit-content; 
     margin-top: 3rem;  
     border: 2.8px solid #FC7600;
     filter: white;
-    
+    border-radius: 2rem;
     background-color:  rgba(253, 253, 253, 0.781);
-    padding: 5px; 
+     
 }
 
 .container-orcamento{
     display: flex;
-    justify-content: center;   
+    justify-content: center;  
+    width: 50%; 
+    margin: 1.8rem;
+    
+}
+.container-orcamento2{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu-lateral-orcamento{
     display:flex;
-    flex-direction: column;
-    width: 450px;
-    height: 38em;
+    flex-wrap: wrap;
+    width:100%;
+    height: fit-content;
     border-radius: 18px;
-    padding: 10px;
+    justify-content: flex-start;
     box-shadow:2px 2px 7px rgba(112, 112, 112, 0.25);
-    position: relative;
-    left: 1%;
-    top:2%;
+    
+    
 }
 
 .bolaOk.finish {
@@ -59,13 +67,13 @@ main{
 
 .step-orcamento{
     display: flex;
-    place-content:center;
-    width: 450px;
-    height: 2em;
-    margin-top: 36px; 
+    justify-content: flex-start;
+    width: 90%;
+    margin: 1rem;
+     
     font-weight: bold;
     /* font-size: 14px; */
-    padding: 5px;
+    
 }
 
 .step.finish2{
@@ -74,21 +82,24 @@ main{
 
 .step-orcamento p{
     display: flex;
-    width: 800px;
+    height: fit-content;
+    width: 100%;
+    
 }
 
 .bolinhas-orcamento{
-    width: 35px;
+    width: 10%;
+    
     display: flex;
     justify-content: space-around;
-    margin-top: 5px;
-    margin-right: 15px;
+    margin: 0rem;
+   
+    
 }
  
  .bolaOk-orcamento{
     
-    height: 28px;
-    width: 28px;
+    width: 100%;
     background-color: transparent;
     border-color: #FC7600;
     color: #FC7600;
@@ -106,31 +117,28 @@ main{
     display: flex;
     flex-direction: column;
     box-shadow:2px 2px 7px rgba(112, 112, 112, 0.25);
-    width: 650px;
-    height: 38em;
+    width: 60%;
+    height: fit-content;
     border-radius: 18px;
-    position: relative;
-    left: 2%;
-    top:2%;
+    margin: 2rem;
     
-    padding:10px;
+    
+    
 }
 
 .title-orcamento{
     display: flex;
+    width: 98%;
+    justify-content: center;
+
 }
 
 .title-orcamento p{
     color: blanchedalmond;
-    display: grid;
-    position: relative;
-    left: 2%;
-    place-content: center;
-    width: 95%;
-    height: 2em;
-    border-radius: 5px;
+    width: 100%;
+   
+    border-radius: 2rem;
     background-color: rgba(252, 118, 0, 2);
-    padding: 2px;
     font-weight: bold;
 } 
 
@@ -146,30 +154,29 @@ main{
      flex-direction: column;
      width: 100%;
      margin-left:5px;
-    padding-left: 10px;    
+        
  }
  .fake-tab-orcamento input{
     width: 75%;
-    padding: 12px 20px;
+    
     margin: 15px 0;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    margin-right: 80px;  
+     
 }
 
 .tab-orcamento{
    display: none;
-   flex-direction: column;
+   
    width: 100%;
-   padding: 15px; 
+    
 }
 
 .tab-orcamento p{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-left:5px;
-   padding-left: 10px;    
+    width: fit;
+        
 }
 
 
@@ -177,12 +184,12 @@ main{
 
 
 .tab-orcamento input{
-    width: 75%;
-    padding: 12px 20px;
-    margin: 15px 0;
+    width: 100%;
+    
+    
     border: 1px solid #ccc;
     box-sizing: border-box;
-    margin-right: 80px;  
+      
 }
 
 .step-4-date{
@@ -238,18 +245,19 @@ input.invalid {
 }
 
 .valor-orcamento{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 8%;
-    bottom: 5%;
-    text-align: center;
+    display: inline-flex;
+    text-align: flex-start;
+    text-decoration: green solid;
 }
 
 .valor-orcamento p{
     width: 35%;
     margin:0;
     padding: 0;
+}
+
+.valor-orcamento preco{
+    text-decoration: green solid;
 }
 
 .preco-orcamento{
@@ -314,15 +322,14 @@ input.invalid {
 /* Botoes */
 
 
-/* .button-submit {
+.button-submit {
     width: 100%;
     display: flex;
     justify-content:space-around;
-    position: relative;
-    top: 10%;
+    
 }
 
-.button-submit input {
+/*.button-submit input {
     background-color: #FC7600;;
     color: white;
     padding: 14px 20px;

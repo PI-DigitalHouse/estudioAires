@@ -1,85 +1,95 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estúdio Aires</title>
-    <link rel="stylesheet" href="/css/home.css">
-   
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-</head>
-
 <header>
-    <!--Nav fixo do site-->
-    <div class="header-log-nav">
-        <div class="logo a"><a href="/" class="ab">Estúdio Aires</a></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a class="ab" href="/">Home
-                        <!--Fazer redirect?-->
-                    </a></li>
-                <li><a class="ab" href="#servicosEA">Serviços</a></li>
-                <li><a class="ab" href="#quem-somosEA">Quem Somos</a></li>
-                <li><a class="ab" href="#parceirosEA">Parceiros</a></li>
-                <li><a class="ab" href="/contato">Contato</a></li>
-            </ul>
-        </nav>
+  <div class="header-logo">
+      <a href="/" class="linkLogo-header">Estúdio Aires</a>
+      <nav>
+          <ul class="links-header">
+              <li><a class="ab link link--metis" href="/">Home</a></li>
+              <li><a class="ab link link--metis" href="#servicos">Serviços</a></li>
+              <li><a class="ab link link--metis" href="#quemSomos">Quem Somos</a></li>
+              <li><a class="ab link link--metis" href="/contato">Contato</a></li>
+          </ul>
+      </nav>
 
-        <!--USUARIO LOGADO-->
-        <div class="dropdown"> 
-            <% if(dadosAdmin) { %>
-              
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
-                         Olá, <%= dadosAdmin %>! ▼</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="/cadastro">cadastro membros</a>
-                      <a href="/">solicitacoes</a>
-                      <a href="/">outros</a>
+      <!--USUARIO LOGADO-->
+      <div class="dropdown">
+          <% if(dadosAdmin) { %>
+              <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
+                       Olá, Admin! ▼</button>
+                  <div id="myDropdown" class="dropdown-content">
+                      <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
+                      <a href="/dashboardUsuario/solicitacoes/:idUsuario">Solicitacoes</a>
+                      <a href="/orcamento">+ Novo Orçamento</a>
                       <a href="/logout">Sair</a>
-                    </div>
                   </div>
-                
- 
-        </div>
-        <script>
-            /* When the user clicks on the button, 
-            toggle between hiding and showing the dropdown content */
-            function myFunction() {
+              </div>
+      </div>
+      <script>
+          /* When the user clicks on the button, 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  toggle between hiding and showing the dropdown content */
+          function myFunction() {
               document.getElementById("myDropdown").classList.toggle("show");
-            }
-            
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(event) {
+          }
+
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
               if (!event.target.matches('.dropbtn')) {
-                let dropdowns = document.getElementsByClassName("dropdown-content");
-                let i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  let openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
+                  let dropdowns = document.getElementsByClassName("dropdown-content");
+                  let i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                      let openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                      }
                   }
-                }
               }
-            }
-            </script>
-        <% } %>
-        <!--USUARIO NAO LOGADO-->
-            <% if(!dadosAdmin) { %>
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <button onclick="document.getElementById('id01').style.display='block'" class="login a"><a
-                                href='/login'>Login</a></button>
-                    </div>
-                    <form method="GET" action="/cadastro-usuario">
-                        <div class="container-cadastrese">
-                            <span class="header-cadastrese">Novo no Estúdio?
-                                <input class="header-cadastrese" type="submit" value="CADASTRE-SE"></input>
-                        </div>
-                    </form>
-                </div>
-                <% } %>
-
-
-    </div>
+          }
+      </script>
+      <% } %>
+          <!--USUARIO NAO LOGADO-->
+          <% if(!dadosAdmin) { %>
+              <div>
+                  <button onclick="abreFormLogin()" class="loginLink">Entre/Cadastre-se</button>
+              </div>
+              <% } %>
+  </div>
 </header>
+<div class="overlay-login"></div>
+<div class="modal-login">
+  <div class="fecharModal-login" onclick="fechaFormLogin()"><i class="fas fa-times"></i></div>
+  <form class="formLogin" action="admin/logarAdmin" method="POST">
+
+      <div class="logo-login">
+          <h1>Estúdio Aires</h1>
+      </div>
+
+      <div class="titulo-login">
+          Entre no Estúdio
+      </div>
+      <div class="elemento-login">
+          <label for="email">E-mail</label>
+          <input type="text" type="email" name="email" id="email" required/>
+          <!-- <span style="font-size: 15px; color:red; font-weight:bold ;">NEG EJS error.email ? error.email : ''</span> -->
+      </div>
+
+      <div class="elemento-login">
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" required />
+          <!-- <span style="font-size: 15px; color: red; font-weight:bold ;">NEG EJS error.senha ? error.senha : ''</span> -->
+      </div>
+
+      <div class="elemento-login loginLink-senha">
+          <a href="/recuperarSenha">Esqueceu sua senha?</a>
+      </div>
+
+      <div class="elemento-login">
+          <button type="submit">Entrar</button>
+      </div>
+
+      <div class="elemento-login loginLink-cadastro">
+          <a href="/cadastro-usuario">Novo no Estúdio? Cadastre-se</a>
+      </div>
+
+  </form>
+</div>
 <!-- If para sessao do usuario -->

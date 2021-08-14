@@ -77,18 +77,22 @@ p{
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
 .servicoContratado2{
     margin-top: 50px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
+>>>>>>> 68a0f63e6c3ca9f2fb16206dc515d5d574efd239
 .servicoContratado2 .info p{
     margin: 0px
 }
 
 .containerDireita{
     margin-right: 20px;
+    margin-left: 14px;
     position: relative;
 }
 

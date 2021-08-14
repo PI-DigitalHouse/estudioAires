@@ -14,16 +14,16 @@ body{
     margin: 0;
 }
 
-main{
+.main{
     display: flex;
     justify-content: center;
 }
 
-.card-login{
+.card-login-orcamento{
     display: flex;
     width: 1175px;
     height: 655px; 
-    margin-top: 3rem;  
+    margin-top: 1rem;  
     border: 2.8px solid #FC7600;
     filter: white;
     
@@ -33,20 +33,28 @@ main{
 
 .container-orcamento{
     display: flex;
-    justify-content: center;   
+    justify-content: center;  
+    width: 40%; 
+    margin: 1.8rem;
+    margin-left: 0rem;
+}
+.container-orcamento2{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu-lateral-orcamento{
     display:flex;
     flex-direction: column;
-    width: 450px;
-    height: 38em;
+    width: 100%;
+    height: fit-content;
     border-radius: 18px;
-    padding: 10px;
+    
     box-shadow:2px 2px 7px rgba(112, 112, 112, 0.25);
-    position: relative;
-    left: 1%;
-    top:2%;
+    
+    
 }
 
 .bolaOk.finish {
@@ -59,65 +67,69 @@ main{
 
 .step-orcamento{
     display: flex;
-    place-content:center;
-    width: 450px;
-    height: 2em;
-    margin-top: 36px; 
+    justify-content: center;
+    width: 100%;
+    margin: 1rem;
+    height: 5vh;
     font-weight: bold;
     /* font-size: 14px; */
-    padding: 5px;
+    
 }
 
 .step.finish2{
     color:rgb(190, 190, 190);   
 }
 
-.step-orcamento p{
+.step-orcamento p{ /*aqui ta dando ruim*/
     display: flex;
-    width: 800px;
+    
+    
 }
 
 .bolinhas-orcamento{
-    width: 35px;
+    width: auto;
+    height: auto;
     display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
-    margin-right: 15px;
+    justify-content: center;
+    
+    
+    
 }
  
- .bolaOk-orcamento{
+.bolaOk-orcamento{
     
-    height: 28px;
-    width: 28px;
+    
+    width: 100%;
     background-color: transparent;
     border-color: #FC7600;
     color: #FC7600;
     border: #f88336 solid 1px;
     border-radius: 60%;
     text-align: center;
-    padding-top: 3px;   
+      
 } 
  
 
  /* Dashboard central*/
 
 
-#acao-central-orcamento{
+ #acao-central-orcamento{
     display: flex;
     flex-direction: column;
     box-shadow:2px 2px 7px rgba(112, 112, 112, 0.25);
-    width: 650px;
-    height: 38em;
+    width: 100%;
+    height: fit-content;
     border-radius: 18px;
-    position: relative;
-    left: 2%;
-    top:2%;
+    margin: 2rem;
+    margin-left: 0rem;
     
-    padding:10px;
+    
 }
 
 .title-orcamento{
     display: flex;
+    width: 100%;
+
 }
 
 .title-orcamento p{
@@ -132,7 +144,7 @@ main{
     background-color: rgba(252, 118, 0, 2);
     padding: 2px;
     font-weight: bold;
-} 
+}
 
 .fake-tab-orcamento{
     display: none;
@@ -344,11 +356,26 @@ button:hover {
     opacity: 0.8;
 } */
 
+#nextBtn{
+    margin-left: 28px;
+    margin-top: 20px;
+}
 
+#prevBtn{
+    margin-left: 28px;
+}
 
+#check-disponibilidade{
+    margin-left: 12px;
+}
 
-
+.valor-orcamento-add{
+    color: green;
+}
+#valorOrcamento{
+    color: green;
     
+}
 
 
   

@@ -1,32 +1,30 @@
 * {
-    font-family: 'Lato', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    /*torna o scroll entre as sessões mais suave*/
+  scroll-behavior: smooth;
+  /*torna o scroll entre as sessões mais suave*/
 }
 
-
 /* Botoes */
-
 .botao-1 {
-    background-color: #FF4D00;
-    color: white;
-    /* border-radius: 90%; */
-    padding: 5px;
-    border: solid white;
-    border-radius: 4px;
+  background-color: #ff4d00;
+  color: white;
+  /* border-radius: 90%; */
+  padding: 5px;
+  border: solid white;
+  border-radius: 4px;
 }
 
 .botao-2 {
-    background-color: #D8D7D8;
-    color: #212121;
-    /* border-radius: 90%; */
-    padding: 5px;
-    border: solid white;
-    border-radius: 4px;
+  background-color: #d8d7d8;
+  color: #212121;
+  /* border-radius: 90%; */
+  padding: 5px;
+  border: solid white;
+  border-radius: 4px;
 }

@@ -73,7 +73,7 @@ module.exports.novoOrcamento = (async(req, res, next) => {
     }
     dadosDoFormulario.reservas_idReserva = reservas.idReserva
     await models.Orcamento.create(dadosDoFormulario)
-    res.redirect('/') //redireciiona para home
+    res.redirect('/')
 })
 module.exports.verificaDisponibilidade = async(req, res) => {
     var dataSelecionada = req.query.data
