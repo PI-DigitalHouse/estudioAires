@@ -136,6 +136,8 @@ module.exports.mostrarSolicitacoes = (async(req, res) => {
         dadosUsuario: req.session.usuario
     })
 
+    console.log(resultadoOrcamentos)
+
 })
 
 function hash(obj) {
