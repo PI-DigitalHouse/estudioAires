@@ -63,7 +63,11 @@
                                     <div class="info">
                                         <p class="tipo1">Data do serviço</p>
                                         <p>
-                                            <%=resultadoOrcamento.reservas.dataInicio%> às <%=resultadoOrcamento.reservas.horarioInicio%>
+                                            <% const data = resultadoOrcamento.reservas.dataInicio %>
+                                            <% const dataString = data.toString() %>
+                                            <% const dataFormatada = dataString.replace("21:00:00 GMT-0300 (Brasilia Standard Time)", " ") %>
+
+                                            <%=dataFormatada%> às <%=resultadoOrcamento.reservas.horarioInicio%>
                                         </p>
                                     </div>
                                 </div>
@@ -73,7 +77,12 @@
                                     <div class="info">
                                         <p class="tipo1">Serviços contratados:</p>
                                         <p>
-                                            <%=resultadoOrcamento.reservas.servico%>
+                                            <% const servico = resultadoOrcamento.reservas.servico%>
+                                            <% const servicoString = servico.toString() %>
+                                            <% const mapObj = {fotografia : " Fotografia", fotografia3603d: " Fotografia 360 3D", videoDinamico: " Vídeo Dinâmico", imagensAereas: " Imagens Aéreas"}; %>
+                                            <% const servicoFormatado = servicoString.replace (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi, function (matched) {return mapObj[matched]})%> 
+
+                                            <%=servicoFormatado%>
                                         </p>
                                     </div>
                                 </div>

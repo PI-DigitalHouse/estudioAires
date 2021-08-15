@@ -1,16 +1,7 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estúdio Aires</title>
-    <link rel="stylesheet" href="/css/partials/headerAreaRestritaUsuarios.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-</head>
-
-<header>
-    <a id="logo" href="/">Estudio Aires </a>
-    <nav class="nav-hea">
-        <ul>
+<header class="headerAreaRestritaUsuarios">
+    <a class="headerAreaRestritaUsuarios__logo" href="/">Estudio Aires </a>
+    <nav class="headerAreaRestritaUsuarios__nav">
+        <ul class="headerAreaRestritaUsuarios__links-header">
             <li><a href="/">Home</a></li>
             <li><a href="/dashboardUsuario/solicitacoes">Solicitações</a></li>
             <li><a href="/orcamento">+ Novo Orçamento</a></li>
@@ -23,7 +14,6 @@
             <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
                 Olá, <%= dadosUsuario.nome %>! ▼</button>
             <div id="myDropdown" class="dropdown-content">
-
                 <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
                 <a href="/dashboardUsuario/solicitacoes">Solicitacoes</a>
                 <a href="/orcamento">+ Novo Orçamento</a>

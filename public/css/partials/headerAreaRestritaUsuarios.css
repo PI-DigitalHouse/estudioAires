@@ -1,169 +1,49 @@
-/* 
-html{
-    font-size: 6.25%;
-} */
-
-header {
-  background: rgba(0, 0, 0, 0.4);
-  width: auto;
-  height: 110px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  left: 0;
-  /* font-size: 26px; */
-  margin: 0;
-}
-
-#selected {
-  position: relative;
-  color: white;
-  padding: 1px 1px 1px 1px;
-  border-radius: 10px 10px 0px 0px;
-  border-bottom: #fc7600 solid 2px;
-  font-weight: bold;
-}
-
-#selected:hover {
-  border-bottom: 3px solid #fc7600;
-}
-
-.nav-hea {
-  width: 60%;
-  display: flex;
-  /* font-size: 35px; */
-  justify-content: space-around;
-  align-items: center;
-}
-
-nav ul {
-  display: flex;
+.headerAreaRestritaUsuarios {
+  height: 18vh;
+  overflow: hidden;
   width: 100%;
-  align-items: center;
-  position: relative;
-  left: 15%;
-  /* justify-content: space-around; */
-  list-style-type: none;
-}
-
-nav li a {
   display: flex;
-  position: relative;
-  margin-right: 128px;
-  width: 100%;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  /* font-size: 18px; */
-  color: #edf0f1;
-  text-decoration: none;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 989;
+  backdrop-filter: blur(6px);
 }
 
-nav li a:hover {
-  color: #fc7600;
-}
-
-.usuario {
-  width: 20%;
-  height: 100px;
-  margin-bottom: 15px;
-}
-
-.usuario,
-.a {
-  color: white;
-  text-decoration: none;
+.headerAreaRestritaUsuarios__logo {
   margin-left: 20px;
-  font-family: 'Lato', sans-serif;
-  /* font-size: 14rem; */
   font-weight: bold;
-}
-
-.container-div {
-  display: flex;
-  position: absolute;
-  top: 45%;
-  left: 83%;
-  background-color: transparent;
-  width: 18%;
-  margin-top: 30px;
-  margin-bottom: 5px;
-  /* font-size: 15px; */
-  color: #edf0f1;
-}
-
-.container-cadastrese {
-  display: flex;
-  position: absolute;
-  top: 40%;
-  left: 72%;
-  background-color: transparent;
-  width: 18%;
-  margin-top: 30px;
-  /* font-size: 15px; */
-  color: #edf0f1;
-}
-
-.header-cadastrese {
-  text-align: center;
-  /* font-size: 13px; */
-}
-
-.header-cadastrese a {
-  text-decoration: none;
-  /* font-size: 13px; */
-  color: white;
-}
-
-.header-cadastrese a:hover {
   color: #fc7600;
-  /* font-size: 18px; */
-  font-weight: bold;
+  text-decoration: none;
+  font-size: 24px;
 }
 
-#logo {
+.headerAreaRestritaUsuarios__links-header li {
+  font-size: 22px;
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.headerAreaRestritaUsuarios__links-header li a {
+  margin-left: 85px;
+  width: 100%;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
-  /* font-size: 30px; */
-  color: #edf0f1;
+  color: #81a8e7;
   text-decoration: none;
 }
 
-.usuario a:hover {
+.headerAreaRestritaUsuarios__links-header li a:hover {
   color: #fc7600;
-}
-/*.a{
-     font-size: 12px; 
-}*/
-
-.fotoPerfil {
-  border-radius: 50%;
-  width: 12%;
-  margin-left: 10px;
+  border-bottom: 1px solid #fc7600;
 }
 
-.login {
-  padding: 10px 25px;
-  background: rgba(252, 118, 0, 1);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  color: white;
-  /* font-size: 18px; */
-}
-
-.login:hover {
-  background: rgba(252, 118, 0, 0.8);
-}
 /* Dropdown Button */
 .dropbtn {
   background-color: transparent;
   color: white;
-  padding: 12px;
-  /* font-size: 16px; */
-  border: solid 3px #8acaf5;
+  padding: 0.75rem;
+  border: solid 0.188rem #8acaf5;
   cursor: pointer;
 }
 
@@ -185,22 +65,21 @@ nav li a:hover {
   display: none;
   position: absolute;
   background-color: rgba(252, 118, 0, 0.8);
-  min-width: 160px;
-  width: 450px;
-  height: 560px;
+  min-width: 10rem;
+  width: 28.125rem;
+  height: 35rem;
   top: 3%;
   right: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
-  /* font-size: 12rem; */
 }
 
 /* Change color of dropdown links on hover */
@@ -212,7 +91,6 @@ nav li a:hover {
 .show {
   display: block;
   position: fixed;
-  right: 50px;
+  right: 0.125rem;
+  top: 6rem;
 }
-
-/*modal lateral*/
