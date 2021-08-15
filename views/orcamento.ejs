@@ -26,8 +26,8 @@
 
 
 
-                    <main>
-                        <section class='card-login'>
+                    <main class='main'>
+                        <section class='card-login-orcamento'>
                             <div class="container-orcamento">
 
                                 <div class="menu-lateral-orcamento">
@@ -120,16 +120,17 @@
 
                                     </ul>
 
-                                    <div class="valor-orcamento">
-                                        <p>Valor do seu orçamento: </p>
-
-                                        <div class="valor-orcamento preco">
-                                            <div id = 'valorOrcamento'>
-                                                
+                                    <div class="container-orcamento2">
+                                        <div class="valor-orcamento">
+                                            Valor do seu orçamento:
+                                            <div id="valorOrcamento">
+                
                                             </div>
-
-
+                                        
+                                        
                                         </div>
+                                        
+                                        
                                     </div>
                                 </div>
                                 <!--  /*STEP3*/ -->
@@ -247,9 +248,12 @@
                         function calculaOrcamentoFront(services) {
                             let tamanho = document.querySelector('#tamanhoImovel').value
                             let result = (services.length * 0.2 + 0.8) * tamanho
+                            result3 = new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 6 }).format(result)
 
-                            document.getElementById('valorOrcamento').innerText = result
-                            return result
+                            document.getElementById('valorOrcamento').innerText = 'R$' + result3
+                            
+                            
+                            return result3
                             
                         } 
 

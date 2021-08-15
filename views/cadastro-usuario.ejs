@@ -34,13 +34,9 @@
                             </h3>
 
                         </div>
-                        <div >
-                        <span class="erros-alert" > <%=erro.email%> </span>
-                        <% if(erro&&erro.cpfCnpj){ %>
-                            <span>
-                                <%= erro.cpfCnpj.msg%>
-                            </span>
-                            <% } %>
+                        <div id="alertBtn">
+                        <span  class="erros-alert" > <%=erro.email%> </span>
+                        
                         </div>
                         <div id="usu-flex-container-boas-vindas">
                             <h2>Seja bem-vindo!</h2>
@@ -100,7 +96,7 @@
 
 
                         </div>
-                            <button type="submit" class="btn btn-dark">Cadastrar</button>
+                            <button type="submit" class="btn btn-dark" id="submit-cadastro" >Cadastrar</button>
                        
 
                 </form>
@@ -113,6 +109,8 @@
 
 
 
+    <script type="text/javascript" src="/js/sweetAlert.js"></script>  
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Modal-Cadastro-->
 

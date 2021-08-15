@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <link rel="stylesheet" href="sweetalert2.min.css">
 <%- include partials/head2.ejs %>
 
     <body>
@@ -21,7 +22,8 @@
                         <option value="sessao agendada">Sessão agendada</option>
                     </select>
                 </div>
-
+             </main>
+<div>
                 <% if(resultadoOrcamentos){ %>
                     <% for (resultadoOrcamento of resultadoOrcamentos) { %>
 
@@ -61,7 +63,11 @@
                                     <div class="info">
                                         <p class="tipo1">Data do serviço</p>
                                         <p>
-                                            <%=resultadoOrcamento.reservas.dataInicio%> às <%=resultadoOrcamento.reservas.horarioInicio%>
+                                            <% const data = resultadoOrcamento.reservas.dataInicio %>
+                                            <% const dataString = data.toString() %>
+                                            <% const dataFormatada = dataString.replace("21:00:00 GMT-0300 (Brasilia Standard Time)", " ") %>
+
+                                            <%=dataFormatada%> às <%=resultadoOrcamento.reservas.horarioInicio%>
                                         </p>
                                     </div>
                                 </div>
@@ -71,7 +77,12 @@
                                     <div class="info">
                                         <p class="tipo1">Serviços contratados:</p>
                                         <p>
-                                            <%=resultadoOrcamento.reservas.servico%>
+                                            <% const servico = resultadoOrcamento.reservas.servico%>
+                                            <% const servicoString = servico.toString() %>
+                                            <% const mapObj = {fotografia : " Fotografia", fotografia3603d: " Fotografia 360 3D", videoDinamico: " Vídeo Dinâmico", imagensAereas: " Imagens Aéreas"}; %>
+                                            <% const servicoFormatado = servicoString.replace (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi, function (matched) {return mapObj[matched]})%> 
+
+                                            <%=servicoFormatado%>
                                         </p>
                                     </div>
                                 </div>
@@ -137,7 +148,7 @@
                                         <div class="botoes">
                                             <form>
                                                 <div class="prestador">
-                                                    Informações prestador
+                                                   
                                                 </div>
                                             </form>
                                         </div>
@@ -150,16 +161,22 @@
                                                 <% } %>
 
                                                 <div class="botoes">
-                                                       <button>CANCELAR</button> 
+                                                      <p>Ocorreu algum imprevisto e precisa cancelar? </p>
+                                                       <button class="botao-1" id="salva-alteracoes" onclick="abreAlertDelete()">CANCELAR</button> 
                                                 </div>
                             </div>
                         </div>
                         <% } %>
                             <% } %>
+                        </div>
 
+                            <script type="text/javascript" src="/js/sweetAlert.js"></script>  
+                            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+   
+                            <%- include partials/footer.ejs %>
 
-
-    </body>
+                        </body>
 
 </html>
 
