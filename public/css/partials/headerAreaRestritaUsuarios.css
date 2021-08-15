@@ -1,7 +1,7 @@
 header {
   background: rgba(0, 0, 0, 0.4);
   width: auto;
-  height: 110px;
+  height: 6.876rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,14 +14,14 @@ header {
 #selected {
   position: relative;
   color: white;
-  padding: 1px 1px 1px 1px;
-  border-radius: 10px 10px 0px 0px;
-  border-bottom: #fc7600 solid 2px;
+  padding: 0.063rem 0.063rem 0.063rem 0.063rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+  border-bottom: #fc7600 solid 0.125rem;
   font-weight: bold;
 }
 
 #selected:hover {
-  border-bottom: 3px solid #fc7600;
+  border-bottom: 0.188rem solid #fc7600;
 }
 
 .nav-hea {
@@ -43,7 +43,7 @@ nav ul {
 nav li a {
   display: flex;
   position: relative;
-  margin-right: 128px;
+  margin-right: 8rem;
   width: 100%;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
@@ -57,15 +57,15 @@ nav li a:hover {
 
 .usuario {
   width: 20%;
-  height: 100px;
-  margin-bottom: 15px;
+  height: 6.25rem;
+  margin-bottom: 0.938rem;
 }
 
 .usuario,
 .a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 1.25rem;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
 }
@@ -77,8 +77,8 @@ nav li a:hover {
   left: 83%;
   background-color: transparent;
   width: 18%;
-  margin-top: 30px;
-  margin-bottom: 5px;
+  margin-top: 1.875rem;
+  margin-bottom: 0.313rem;
   color: #edf0f1;
 }
 
@@ -89,7 +89,7 @@ nav li a:hover {
   left: 72%;
   background-color: transparent;
   width: 18%;
-  margin-top: 30px;
+  margin-top: 1.875rem;
   color: #edf0f1;
 }
 
@@ -121,14 +121,14 @@ nav li a:hover {
 .fotoPerfil {
   border-radius: 50%;
   width: 12%;
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
 .login {
-  padding: 10px 25px;
+  padding: 0.625rem 1.563rem;
   background: rgba(252, 118, 0, 1);
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   color: white;
@@ -142,8 +142,8 @@ nav li a:hover {
 .dropbtn {
   background-color: transparent;
   color: white;
-  padding: 12px;
-  border: solid 3px #8acaf5;
+  padding: 0.75rem;
+  border: solid 0.188rem #8acaf5;
   cursor: pointer;
 }
 
@@ -165,22 +165,21 @@ nav li a:hover {
   display: none;
   position: absolute;
   background-color: rgba(252, 118, 0, 0.8);
-  min-width: 160px;
-  width: 450px;
-  height: 560px;
+  min-width: 10rem;
+  width: 28.125rem;
+  height: 35rem;
   top: 3%;
   right: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
-  /* font-size: 12rem; */
 }
 
 /* Change color of dropdown links on hover */
@@ -192,5 +191,5 @@ nav li a:hover {
 .show {
   display: block;
   position: fixed;
-  right: 50px;
+  right: 3.125rem;
 }
