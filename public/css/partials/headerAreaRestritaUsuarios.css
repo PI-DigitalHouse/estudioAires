@@ -1,6 +1,5 @@
 .headerAreaRestritaUsuarios {
   height: 18vh;
-  overflow: hidden;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -92,5 +91,5 @@
   display: block;
   position: fixed;
   right: 0.125rem;
-  top: 6rem;
+  top: 7rem;
 }
