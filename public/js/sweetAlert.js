@@ -11,17 +11,17 @@ function abreAlertDelete(){
       
       swalWithBootstrapButtons.fire({
         title: 'Tem certeza que deseja cancelar esse serviço?',
-        text: "Ao cancelar nao sera possivel reativar essa solicitacao",
+        text: "Ao cancelar, não será possível reativá-lo",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Sim, cancelar!',
-        cancelButtonText: 'Nao cancelar!',
+        confirmButtonText: 'Cancelar solicitacão',
+        cancelButtonText: 'Não',
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
           swalWithBootstrapButtons.fire(
-            'Solicitacao cancelada!',
-            'Seu servico foi cancelado com sucesso',
+            'Solicitação cancelada!',
+            'Seu serviço foi cancelado com sucesso',
             'success'
           )
         } else if (
@@ -30,12 +30,13 @@ function abreAlertDelete(){
         ) {
           swalWithBootstrapButtons.fire(
             'Ufa, foi por pouco...',
-            'Sua solicitacao segue ativa:)',
+            'Sua solicitação segue ativa :)',
             'error'
           )
         }
       })
     }
+
 
 
 

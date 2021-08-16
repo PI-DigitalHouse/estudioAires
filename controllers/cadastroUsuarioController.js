@@ -53,12 +53,11 @@ module.exports.postUsuario = (async (req, res) => {
         })
         return
     }
-    if (!user.senha === user.senha2) {
+    if (user.senha != user.senha2) {
         res.render('cadastro-usuario', {
             erro: {
-                senha: {
-                    msg: 'Senhas não compatíveis'
-                }
+                senha: 'Senhas não compatíveis'
+                
             },
             dadosUsuario: null,
             title: 'Cadastro'
