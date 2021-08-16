@@ -1,43 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="stylesheet" href="/css/contato.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
 <%- include partials/head2.ejs %>
-<body>
-    <!-- header -->
-   <!--  < include partials/headerAreaLivreSemLogin.ejs > -->
 
-        <!-- LINKS -->
-        <div id="section-contato-home">
-            <div id="info-contato-home">
-                <!-- LOGO -->
-                <div><a href="#"><i class="fas fa-map-marker-alt"></i>kkkkkkkkkkk</a></div>
-                <div><a href="#"><i class="fas fa-envelope"></i>kkkkkkkkkkkkkkkk</a></div>
-                <div><a href="#"><i class="fas fa-phone"></i>kkkkkkkkkkkk</a></div>
-                <div><a href="#"><i class="fas fa-clock"></i>kkkkkkkkkkkkkk</a></div>
+    <body>
+        <%- include partials/headerAreaLivreSemLogin.ejs %>
+            <div class="container-contato">
+                <div class="sessao-contato">
+                    <div class="info-contato">
+                        <div><a href="https://web.whatsapp.com/send?phone=+55(11)999119438" target="_blank"><i class="fab fa-whatsapp"></i>Fale diretamente conosco</a></div>
+                        <div><a href="mailto:contato@estudioaires.com.br"><i class="fas fa-envelope"></i>contato@estudioaires.com.br</a></div>
+                        <div><a href="tel:(11)999119438"><i class="fas fa-phone"></i>(11)999119438</a></div>
+                        <div><a href="#"><i class="fas fa-clock"></i>seg-sex 8:00 as 17:00</a></div>
+                    </div>
+
+                    <div class="form-contato">
+                        <h2>Contate-nos</h2>
+                        <form class="contato" action="/contato" method="POST">
+                            <input type="text" name="nome" class="textBox-contato" placeholder="Digite seu Nome" required>
+                            <input type="text" name="email" class="textBox-contato" placeholder="Digite seu E-mail" required>
+                            <textarea name="mensagem" rows="5" placeholder="Digite sua Mensagem" required></textarea>
+                            <input type="submit" class="btnEnviar-contato" value="Enviar">
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <!-- FORMULARIO -->
-            <div id="form-contato-home">
-                <h2>Contate-nos</h2>
-                <form id="contato" action="/contato" method="POST">
-                    <input type="text" name="nome" id="text-box" placeholder="Digite seu Nome" required>
-                    <input type="text" name="email" id="text-box" placeholder="Digite seu E-mail" required>
-                    <textarea name="mensagem" rows="5" placeholder="Digite sua Mensagem" required></textarea>
-                    <input type="submit" class="botao-1" id="btn-enviar" value="Enviar">
-                </form>
-            </div>
-        </div>
-
-</body>
-
-<!-- Footer -->
-<%- include partials/footer.ejs %>
-
-</html>
+            <%- include partials/footer.ejs %>
+    </body>
