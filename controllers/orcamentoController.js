@@ -49,10 +49,15 @@ module.exports.novoOrcamento = (async(req, res, next) => {
             [Op.like]: `${tipoDeServico || ''}%`,
         }
     })
-    const valorFront = calValorfront = () => {
-        dadosDoFormulario.tamanhoImovel * (0.2 + juncao.length)
-    }
+    
     let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
+
+    if (dadosDoFormulario.tamanhoImovel <=100){
+        dadosDoFormulario.tamanhoImovel = 100
+        console.log(dadosDoFormulario.tamanhoImovel)
+    }
+
+
     const resultado = calculaOrcamento(dadosDoFormulario.tamanhoImovel, newService.valor, juncao.length)
     req.body.valor = resultado
     let dataInicioAjustada = req.body.dataInicio
@@ -75,6 +80,8 @@ module.exports.novoOrcamento = (async(req, res, next) => {
     await models.Orcamento.create(dadosDoFormulario)
     res.redirect('/')
 })
+
+
 module.exports.verificaDisponibilidade = async(req, res) => {
     var dataSelecionada = req.query.data
     const horariosAgendados = await models.Reserva.findAll({
