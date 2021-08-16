@@ -1,120 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap'); */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+body {
+  min-height: 100vh;
+  background: #ebe9eb;
+  background-size: cover;
 }
 
-body{
-    min-height: 100vh;
-    background: #ebe9eb;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#logo a {
+  text-decoration: none;
+  color: #fc7600;
 }
 
-#logo a{
-    text-decoration: none;
-    color: #FC7600;
-    /* font-size: 30px; */
+#section-contato-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12% 0 5% 0;
 }
 
-#section-contato-home{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#info-contato-home {
+  max-width: 500px;
+  line-height: 65px;
+  padding-left: 50px;
 }
 
-#info-contato-home{
-    max-width: 500px;
-    line-height: 65px;
-    padding-left: 50px;
-    /* font-size: 18px; */
+#info-contato-home a {
+  text-decoration: none;
+  color: #81a8e7;
 }
 
-#info-contato-home a{
-    text-decoration: none;
-    color: #81A8E7;
+#info-contato-home i {
+  color: #fc7600;
+  margin-right: 20px;
 }
 
-#info-contato-home i{
-    color: #FC7600;
-    margin-right: 20px;
-    /* font-size: 25px; */
+#form-contato-home {
+  max-width: 700px;
+  margin-right: 50px;
 }
 
-#form-contato-home{
-    max-width: 700px;
-    margin-right: 50px;
+#info-contato-home,
+#form-contato-home {
+  flex: 1;
 }
 
-#info-contato-home,#form-contato-home{
-    flex: 1;
+#form-contato-home h2 {
+  color: #fc7600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
-#form-contato-home h2{
-    color: #FC7600;
-    text-align: center;
-    /* font-size: 35px; */
-    text-transform: uppercase;
-    margin-bottom: 30px;
+#form-contato-home #text-box {
+  background: #d8d7d8;
+  color: #000000;
+  border: none;
+  width: calc(50% - 10 px);
+  height: 50px;
+  padding: 12px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba (0, 0, 0, 0.1);
+  opacity: 0.9;
+  margin-bottom: 2px;
 }
 
-#form-contato-home #text-box{
-    background: #D8D7D8;
-    color: #000000;
-    border: none;
-    width: calc(50% - 10 px);
-    height: 50px;
-    padding: 12px;
-    /* font-size: 15px; */
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba (0, 0, 0, 0.1);
-    opacity: 0.9;
-    margin-bottom: 2px;
+#form-contato-home #text-box:first-child {
+  margin-right: 15px;
 }
 
-#form-contato-home #text-box:first-child{
-    margin-right: 15px;
+#form-contato-home textarea {
+  background: #d8d7d8;
+  color: #000000;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba (0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
 }
 
-#form-contato-home textarea{
-    background: #D8D7D8;
-    color: #000000;
-    border: none;
-    width: 100%;
-    padding: 12px;
-    /* font-size: 15px; */
-    min-height: 200px;
-    max-height: 400px;
-    resize: vertical;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba (0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    opacity: 0.9;
+#form-contato-home #btn-enviar {
+  background: rgba(252, 118, 0, 1);
+  color: #f5f4f6;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: background;
 }
 
-#form-contato-home #btn-enviar{
-    background: rgba(252, 118, 0, 1);
-    color: #F5F4F6;
-    border: none;
-    width: 120px;
-    height: 40px;
-    /* font-size: 15px; */
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    transition-property: background;
+#form-contato-home #btn-enviar:hover {
+  background: rgba(252, 118, 0, 0.8);
 }
-
-#form-contato-home #btn-enviar:hover{
-    background: rgba(252, 118, 0, 0.8);
-}
-
