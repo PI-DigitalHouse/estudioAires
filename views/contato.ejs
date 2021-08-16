@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="stylesheet" href="/css/contato.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
 <%- include partials/head2.ejs %>
-<body>
-    <!-- header -->
-   <!--  < include partials/headerAreaLivreSemLogin.ejs > -->
 
-        <!-- LINKS -->
-        <div id="section-contato-home">
-            <div id="info-contato-home">
-                <!-- LOGO -->
-                <div><a href="#"><i class="fas fa-map-marker-alt"></i>kkkkkkkkkkk</a></div>
-                <div><a href="#"><i class="fas fa-envelope"></i>kkkkkkkkkkkkkkkk</a></div>
-                <div><a href="#"><i class="fas fa-phone"></i>kkkkkkkkkkkk</a></div>
-                <div><a href="#"><i class="fas fa-clock"></i>kkkkkkkkkkkkkk</a></div>
-            </div>
+    <body>
+        <!-- header -->
+        <%- include partials/headerAreaLivreSemLogin.ejs %>
 
+            <!-- LINKS -->
+            <div id="section-contato-home">
+                <div id="info-contato-home">
+                    <!-- LOGO -->
+                    <div><a href="#"><i class="fas fa-map-marker-alt"></i>kkkkkkkkkkk</a></div>
+                    <div><a href="#"><i class="fas fa-envelope"></i>kkkkkkkkkkkkkkkk</a></div>
+                    <div><a href="#"><i class="fas fa-phone"></i>kkkkkkkkkkkk</a></div>
+                    <div><a href="#"><i class="fas fa-clock"></i>kkkkkkkkkkkkkk</a></div>
+                </div>
+
+<<<<<<< HEAD
             <!-- FORMULARIO -->
             <div id="form-contato-home">
                 <h2>Contate-nos</h2>
@@ -33,12 +28,23 @@
                     <textarea name="mensagem" rows="5" placeholder="Digite sua Mensagem" required></textarea>
                     <input type="submit" class="botao-1" id="btn-enviar" value="Enviar">
                 </form>
+=======
+                <!-- FORMULARIO -->
+                <div id="form-contato-home">
+                    <h2>Contate-nos</h2>
+                    <form id="contato" action="/contato" method="POST">
+                        <input type="text" name="nome" id="text-box" placeholder="Digite seu Nome" required>
+                        <input type="text" name="email" id="text-box" placeholder="Digite seu E-mail" required>
+                        <textarea name="mensagem" rows="5" placeholder="Digite sua Mensagem" required></textarea>
+                        <input type="submit" class="botao-1" id="btn-enviar" value="Enviar">
+                    </form>
+                </div>
+>>>>>>> 5591d914118e22545a587f9fdc75d0c4cc334551
             </div>
-        </div>
 
-</body>
+    </body>
 
-<!-- Footer -->
-<%- include partials/footer.ejs %>
+    <!-- Footer -->
+    <%- include partials/footer.ejs %>
 
 </html>
