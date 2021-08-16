@@ -251,13 +251,23 @@
 
         function calculaOrcamentoFront(services) {
             let tamanho = document.querySelector('#tamanhoImovel').value
-            let result = (services.length * 0.2 + 0.8) * tamanho
-            result3 = new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 6 }).format(result)
 
-            document.getElementById('valorOrcamento').innerText = 'R$'+ result3
+            if (tamanho <= 100) {
+                let tamanho = 100
+                let result = (services.length * 0.2 + 0.8) * tamanho
+                result3 = new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 6 }).format(result)
+                document.getElementById('valorOrcamento').innerText = 'R$' + result3
+                return result
+            } else {
+                let tamanho = document.querySelector('#tamanhoImovel').value
+                let result = (services.length * 0.2 + 0.8) * tamanho
+                result3 = new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 6 }).format(result)
+                document.getElementById('valorOrcamento').innerText = 'R$' + result3
+                return result
+            }
 
 
-            return result3
+
 
         }
 
