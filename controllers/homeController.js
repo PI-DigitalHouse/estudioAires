@@ -4,7 +4,7 @@ const session = require('express-session');
 
 module.exports.getHome = (req, res) => {
     res.render('home', {
-        dadosUsuario: req.session.usuario,
+        dadosUsuario: req.session.usuario || req.session.membro,
         title: 'home'
     })
 }
@@ -96,7 +96,7 @@ module.exports.logar = (async(req, res) => {
     // AQUI FICA O CÓDIGO COMENTADO LÁ NO FINAL
     if (foundUser.experiencia) {
         req.session.membro = foundUser;
-        res.redirect('meuPerfil');
+        res.redirect('/');
         return
     }
     req.session.usuario = foundUser;
