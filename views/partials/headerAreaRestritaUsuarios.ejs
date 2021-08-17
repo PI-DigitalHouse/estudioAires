@@ -9,18 +9,19 @@
         </ul>
     </nav>
 
-    <div class="dropdown">
+    <section class="dropdown">
         <div class="dropdown a">
             <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
                 Olá, <%= dadosUsuario.nome %>! ▼</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="/dashboardUsuario/meuPerfil">Meu Perfil</a>
-                <a href="/dashboardUsuario/solicitacoes">Solicitacoes</a>
-                <a href="/orcamento">+ Novo Orçamento</a>
-                <a href="/logout">Sair</a>
+                <a href="/dashboardUsuario/meuPerfil"><i class="far fa-user"></i>  Meu Perfil</a>
+                <a href="/dashboardUsuario/solicitacoes"><i class="fas fa-concierge-bell"></i>Solicitacoes</a>
+                <a href="/orcamento"><i class="fas fa-plus-circle"></i>Novo Orçamento</a>
+                <a href="/dashboardUsuario/alteraDados"><i class="fas fa-portrait"></i> Alterar seus dados</a>
+
+                <a href="/logout"><i class="fas fa-sign-out-alt"></i>Sair</a>
             </div>
         </div>
-    </div>
-    </div>
+    </section>
     <script src="/js/user-partials.js"></script>
 </header>

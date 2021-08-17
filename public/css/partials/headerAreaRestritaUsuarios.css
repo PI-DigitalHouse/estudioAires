@@ -1,6 +1,5 @@
 .headerAreaRestritaUsuarios {
   height: 18vh;
-  overflow: hidden;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -72,6 +71,7 @@
   right: 0;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
   z-index: 99;
+  
 }
 
 /* Links inside the dropdown */
@@ -92,5 +92,6 @@
   display: block;
   position: fixed;
   right: 0.125rem;
-  top: 6rem;
+  top: 7rem;
 }
+
