@@ -1,379 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-        
-        *{box-sizing: border-box;}
-body{
-    background-color: #f5f5f5;
-    height: 100%;
-}
-.login{
+.login {
+  position: fixed;
+  top: 20%;
+  left: 35%;
 
-    position: fixed;
-    top:20%;
-    left: 35%;
-  
-    width: 350px;
-    height: 450px;
-    border-radius: 1%;
-    background: #e9e9e9;
-   
-    z-index: 991;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+  width: 350px;
+  height: 450px;
+  border-radius: 1%;
+
+  z-index: 991;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
 }
 .login .formLogin .logo-login {
-    margin: 30px 0px 20px;
-    text-align: center;
+  margin: 30px 0px 20px;
+  text-align: center;
 }
 
 .login .formLogin .titulo-login {
-    text-align: center;
-    font-size: 20;
-    font-weight: 600;
-    color: #FC7600;
-    margin: 20px 0px;
+  text-align: center;
+  font-size: 20;
+  font-weight: 600;
+  color: #fc7600;
+  margin: 20px 0px;
 }
 
 .login .formLogin .elemento-login {
-    padding: 8px 20px;
+  padding: 8px 20px;
 }
 
 .login .formLogin .elemento-login label {
-    display: block;
-    font-size: 14px;
-    color: black;
-    margin-bottom: 5px;
+  display: block;
+  font-size: 14px;
+  color: black;
+  margin-bottom: 5px;
 }
 
 .login .formLogin .elemento-login input {
-    width: 100%;
-    padding: 8px 10px;
-    box-sizing: border-box;
-    outline: none;
-    border: 1px solid black;
-    background: #eee;
-    border-radius: 5px;
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid black;
+  background: #eee;
+  border-radius: 5px;
 }
 
 .login .formLogin .elemento-login button {
-    margin-top: 5px;
-    width: 100%;
-    padding: 10px 0;
-    text-transform: uppercase;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    background: rgba(252, 118, 0, 0.7);
-    color: #f5f5f5;
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px 0;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(252, 118, 0, 0.7);
+  color: #f5f5f5;
 }
 
 .login .formLogin .elemento-login button:hover {
-    background-color: rgba(252, 118, 0, 1);
-    transition: all 0.5s ease 0s;
+  background-color: rgba(252, 118, 0, 1);
+  transition: all 0.5s ease 0s;
 }
 
 .login .formLogin .elemento-login a {
-    display: inline;
-    text-decoration: none;
-    color: #6996df;
+  display: inline;
+  text-decoration: none;
+  color: #6996df;
 }
 
 .login .formLogin .elemento-login a:hover {
-    border-bottom: 0.5px solid #81A8E7;
+  border-bottom: 0.5px solid #81a8e7;
 }
 
 .loginLink-senha {
-    margin-right: 164px;
+  margin-right: 164px;
 }
-
-.loginLink-cadastro {
-    margin-left: 50px;
-}
-#container-membro{
-    display: flex;
-    top: 34%;
-}
-
-        .flex-container{
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            width: 100%;
-            
-
-        }
-
-        .flex-item{
-            justify-content: center;
-            width: 15rem;
-            
-        }
-
-        .flex-container2{
-            display: flex;
-            flex-wrap: wrap; 
-            width: 90%;
-            
-            height: fit-content;
-        }
-
-        .card-flex{
-            border: 2px solid #FC7600;
-            border-radius: 18px;
-            width: 85%;
-            height: fit-content;
-            background-color:  rgba(253, 253, 253, 0.7);
-            opacity: .8;
-            margin-top: 12%;
-        }
-
-        .cadastro{
-            font-family: Lato;
-            font-size: 1.5rem;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 22px;
-            letter-spacing: 0em;
-            text-align: start;
-            justify-content: flex-start;
-            align-self: flex-start;
-            margin-block-start: 1em;
-            
-            margin-left: 1em;
-            width:95% ; 
-        }
-        
-        .arrowBack{
-            align-self: center;
-        }
-
-        .textoApresentacao{
-            height: 10%;
-            width: 85%;
-            font-family: Lato;
-            font-size: 1em;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 22px;
-            letter-spacing: 0em;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            padding: 1.5rem;
-            margin-bottom: 4rem;
-            border-radius: 2rem;
-        }
-
-        .flex-container-nome{
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: space-around;
-            width: 100%;
-            margin: 1%;
-            height: 3rem;  
-        }
-
-        .inputTipo1{
-            background-color: #ffffff;
-            border: 1px solid  darkgray;
-            opacity: .8;
-            width: 35%;
-            height: 2rem;
-            margin-top: 1rem;
-        }
-        
-        .inputTipo2{
-            background-color: #ffffff;
-            border: 1px solid  darkgray;
-            opacity: .8;
-            width: 85%;
-            height: 2rem;
-            margin-top: 1rem;
-        }
-
-        .inputTipo3{
-            background-color: #ffffff;
-            border: 1px solid  darkgray;
-            opacity: .8;
-            width: 35%;
-            height: 2rem;   
-        }
-        
-        .flex-container-boas-vindas{
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            width: 100%;
-            font-family: Lato;
-            font-size: 88%;
-            font-style: normal;
-            font-weight: 800;
-            margin-bottom: 2%;
-        }
-
-        .fonte{
-            font-family: Lato;
-            font-size: 0.7em;
-            font-style: normal;
-            font-weight: 800;
-            margin-left: 3rem;
-        }
-
-        .text{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.8em;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: 0em;
-            text-align: left;
-            background-color: #ffffff;
-            border: 1px solid  darkgray;
-            opacity: .8;
-            
-            
-            width: 35%;
-            height: fit-content;
-            padding: 0.5rem;
-            display: block;
-        }
-
-        .EscrevaSobreVc{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.8em;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: 0em;
-            text-align: left;
-            border-radius: 0.5rem;
-            margin-top: 1rem;
-            border: solid 1px #FC7600 ;
-            width: 100%;
-            height: 3rem;
-            padding: 0.5rem;
-        }
-
-        .flex-container-anexo{
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: flex-start;
-            width: 100%;
-            padding: 1rem; 
-        }
-
-        .botãoRadio{
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-/* 
-        .botao{
-            width: 20%;
-            height: fit-content;
-            background-color: #FC7600 ;
-            border-radius: 12px;
-            border: 1px;
-            padding: 0.5rem;
-            color: white;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            font-size: 1rem;
-            margin: 1rem;
-        } */
-
-        .curriculo{
-            
-            justify-content: center;
-            margin-left: 4rem;
-        }
-        
-        a{
-            text-decoration: none;
-            color: #FC7600;
-            margin: 1rem;
-        }
-
-        /* button[type=submit] {
-            background-color: #FC7600;;
-            color: white;
-            padding: 14px 20px;
-            height: 3rem;
-            border: none;
-            cursor: pointer;
-            width: 45%;
-            justify-content: center;
-            font-size: 15px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 18px;
-            opacity: 0.8;  
-        }
-
-        button:hover {
-            opacity: 0.6;
-          } */
-
-        @media (max-width:520px){
-            
-            *{box-sizing: border-box;}
-            
-            form{
-                display: flex;
-                flex-wrap: wrap;
-                
-                
-            }
-            .flex-container-nome{
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: flex;
-                justify-content: center;
-                
-            }
-            .inputTipo1{
-                width: 80%;
-                margin: rem;
-            }
-            
-            .inputTipo2{
-                width: 80%;
-                margin: rem;
-            }
-            .inputTipo3{
-                width: 80%;
-                margin: rem;
-            }
-            .text{
-                width: 80%;
-                margin: rem;
-                margin-top: 0.4rem;
-                margin-bottom: 0.5rem;
-            }
-            .flex-container-anexo{
-                width: 80%;
-                margin: 0rem;
-                margin-top: 3rem;
-                justify-content: center;
-                display: flex;
-                flex-wrap: wrap; 
-                
-                
-                padding: 1rem;
-            }
-            .EscrevaSobreVc{
-                margin-bottom: 0.5rem;
-            }
-            .fonte{
-                display: flex;
-                justify-content: center;
-            }
-            
-            }
-            .inputTipo1:focus,.EscrevaSobreVc:focus,.inputTipo3{
-                    outline-color: #FC7600;
-                    
-                    
-                }
-                .displayFlexColumn{
-                    display: flex;
-                    flex-direction: column;
-                    width: 35%;
-                }
-               
