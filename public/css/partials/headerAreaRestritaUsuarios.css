@@ -63,24 +63,29 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(252, 118, 0, 0.8);
+  background-color: rgba(252, 118, 0, 1);
   min-width: 10rem;
   width: 28.125rem;
-  height: 35rem;
-  top: 3%;
+  height: 23rem;
+  top: 1%;
   right: 0;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
   z-index: 99;
+  backdrop-filter: blur(6px);
+  color: white;
   
+
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
+  padding: 1px;
 }
+
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
