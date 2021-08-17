@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.login {
+  position: fixed;
+  top: 20%;
+  left: 35%;
+
+  width: 350px;
+  height: 450px;
+  border-radius: 1%;
+
+  z-index: 991;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+.login .formLogin .logo-login {
+  margin: 30px 0px 20px;
+  text-align: center;
+}
+
+.login .formLogin .titulo-login {
+  text-align: center;
+  font-size: 20;
+  font-weight: 600;
+  color: #fc7600;
+  margin: 20px 0px;
+}
+
+.login .formLogin .elemento-login {
+  padding: 8px 20px;
+}
+
+.login .formLogin .elemento-login label {
+  display: block;
+  font-size: 14px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.login .formLogin .elemento-login input {
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid black;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.login .formLogin .elemento-login button {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px 0;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(252, 118, 0, 0.7);
+  color: #f5f5f5;
+}
+
+.login .formLogin .elemento-login button:hover {
+  background-color: rgba(252, 118, 0, 1);
+  transition: all 0.5s ease 0s;
+}
+
+.login .formLogin .elemento-login a {
+  display: inline;
+  text-decoration: none;
+  color: #6996df;
+}
+
+.login .formLogin .elemento-login a:hover {
+  border-bottom: 0.5px solid #81a8e7;
+}
+
+.loginLink-senha {
+  margin-right: 164px;
+}

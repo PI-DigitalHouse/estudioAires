@@ -7,7 +7,7 @@ const path = require('path');
 
 module.exports.showCadastroMembro = (req, res) => {
     res.render('cadastroMembro', {
-        title: 'DashAdmin',
+        title: 'Dashboard do Admin',
         dadosUsuario: req.session.usuario,
         dadosAdmin: req.session.admin
     })
@@ -25,7 +25,7 @@ module.exports.postMembro = (async(req, res) => {
 
 module.exports.loginAdmin = (req, res) => {
     res.render('DB_Admin', {
-        title: 'DashAdmin',
+        title: 'Dashboard do Admin',
         dadosUsuario: req.session.usuario,
         dadosAdmin: req.session.admin
     })
@@ -46,7 +46,7 @@ module.exports.logarAdmin = (req, res) => {
 
 module.exports.getDashAdmin = (req, res) => {
     res.render('DB_AdminAuth', {
-        title: 'DashAdmin',
+        title: 'Dashboard do Admin',
         dadosUsuario: req.session.usuario,
         dadosAdmin: req.session.admin
     })

@@ -1,50 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include partials/head2.ejs %>
 
-
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-    
-    
-        <script src="https://kit.fontawesome.com/f67cfcbcf9.js" crossorigin="anonymous"></script>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>cadastroMembro</title>
-       
-        <link rel="stylesheet" href="../css/cadastroMembro.css">
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        
-        <%- include partials/head2.ejs %>
-    </head>
-</head>
-
-<body>
-    <header>
+    <body>
         <%- include partials/headerAdminZone.ejs %>
+            <div class="login">
+                <form class="formLogin" action="/" method="POST">
+                    <div class="logo-login">
+                        <h1>Dashboard Admin</h1>
+                    </div>
+                    <div class="elemento-login ">
+                        <button><a href='cadastroMembro'>Cadastrar Membro</a></button>
+                    </div>
 
-    </header>
-   
-    <div class="login">
-    <form class="formLogin" action="/" method="POST">
-        <div class="logo-login">
-            <h1>Dashboard Admin</h1>
-        </div>
-        <div class="elemento-login ">
-            <button ><a href='cadastroMembro'>Cadastrar Membro</a></button>
-        </div>
-      
-        <div class="elemento-login ">
-            <button ><a href='cadastroMembro'>Ver Membros Cadastrados</a></button>
-        </div>
-        <div class="elemento-login ">
-            <button ><a href='cadastroMembro'>Ver Solicitacoes</a></button>
-        </div>
-       
-        </form>  
+                    <div class="elemento-login ">
+                        <button><a href='cadastroMembro'>Ver Membros Cadastrados</a></button>
+                    </div>
+                    <div class="elemento-login ">
+                        <button><a href='cadastroMembro'>Ver Solicitacoes</a></button>
+                    </div>
 
-
-        </div>
-    </form>
-</div>
+                </form>
+            </div>
     </body>
-</body>
