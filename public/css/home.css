@@ -1,242 +1,251 @@
- /* BOTAO DE ORCAMENTO NO CARROSSEL DE ENTRADA */
- 
- .container-header a {
-     text-decoration: none;
-     z-index: 988;
-     display: flex;
-     position: absolute;
-     padding: 20px;
-     top: 83%;
-     left: 3%;
-     background-color: rgba(252, 118, 0, 0.7);
-     margin-top: 30px;
-     font-size: 25px;
-     color: #F5F4F6;
-     font-weight: bold;
-     border-radius: 10px;
- }
- 
- .header-orcamento:hover {
-     background-color: rgba(252, 118, 0, 1);
-     transition: all 0.5s ease 0s;
- }
- /* BOTAO DE ORCAMENTO NO CARROSSEL DE ENTRADA */
- /* SERVIÇOS */
- 
- .titulo-servicos {
-     height: 40px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     color: #fff;
-     background: rgba(252, 118, 0, 1);
- }
- 
- .container1-servicos {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background: rgba(127, 127, 127, 0.3);
- }
- 
- .container2-servicos {
-     position: relative;
-     width: 1500px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     flex-wrap: wrap;
-     padding: 30px;
- }
- 
- .container2-servicos .card-servicos {
-     position: relative;
-     max-width: 300px;
-     height: 158px;
-     background: rgba(252, 118, 0, 1);
-     margin: 30px 10px;
-     padding: 20px 15px;
-     display: flex;
-     flex-direction: column;
-     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-     transition: 0.3s ease-in-out;
- }
- 
- .container2-servicos .card-servicos:hover {
-     height: 360px;
- }
- 
- .container2-servicos .card-servicos .imgBx-servicos {
-     position: relative;
-     width: 260px;
-     height: 172px;
-     top: -60px;
-     left: 5px;
-     z-index: 1;
-     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
- }
- 
- .container2-servicos .card-servicos .imgBx-servicos img {
-     max-width: 100%;
-     border-radius: 4px;
- }
- 
- .container2-servicos .card-servicos .content-servicos {
-     position: relative;
-     margin-top: -140px;
-     padding: 10px 15px;
-     text-align: center;
-     color: #fff;
-     visibility: hidden;
-     opacity: 0;
-     transition: 0.3s ease-in-out;
- }
- 
- .container2-servicos .card-servicos .content-servicos h2 {
-     margin-bottom: 16px;
- }
- 
- .container2-servicos .card-servicos:hover .content-servicos {
-     visibility: visible;
-     opacity: 1;
-     margin-top: -40px;
-     transition-delay: 0.3s;
- }
- 
- .link-servicos {
-     font-size: 18px;
-     text-decoration: none;
-     color: #fff;
-     border-bottom: 1px solid #fff;
- }
- /* SERVIÇOS */
- /* PORTIFÓLIOS */
- 
- #splideDois {
-     background: rgba(127, 127, 127, 0.3);
- }
- 
- .splide__slide a img {
-     width: 443px;
-     height: 350px;
- }
- 
- .splide__slide .content-portifolio {
-     position: absolute;
-     bottom: 0;
-     background: rgb(0, 0, 0);
-     background: rgba(0, 0, 0, 0.5);
-     color: #f1f1f1;
-     width: 100%;
-     padding: 20px;
- }
- /* PORTIFÓLIOS */
- /* QUEM SOMOS */
- 
- .containerPai {
-     background: rgba(121, 121, 121, 0.3);
- }
- 
- .container-quemSomos .titulo-quemSomos {
-     height: 50px;
-     display: flex;
-     justify-content: center;
-     align-items: flex-end;
-     margin-left: 16px;
- }
- 
- .container-quemSomos .titulo-quemSomos h2 {
-     border-bottom: 1px solid black;
- }
- 
- .container-quemSomos .contentPrincipal-quemSomos {
-     height: 200px;
-     width: 80%;
-     padding: 10px;
-     margin-left: 140px;
-     margin-top: 8px;
-     text-align: justify;
-     line-height: 26px;
- }
- 
- .container-nossaEquipe .titulo-nossaEquipe {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     margin-left: 16px;
-     margin-top: 60px;
- }
- 
- .container-nossaEquipe .titulo-nossaEquipe h2 {
-     border-bottom: 1px solid black;
- }
- 
- .container-nossaEquipe .contentPrincipal-nossaEquipe {
-     height: 420px;
-     width: 100%;
-     display: flex;
-     align-items: flex-start;
- }
- 
- .container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe img {
-     width: 26%;
- }
- 
- .container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
- }
- 
- .container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe h3 {
-     font-size: 30px;
-     padding: 8px;
-     margin-bottom: 10px;
- }
- 
- .container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe p {
-     text-align: center;
-     width: 80%;
-     line-height: 26px;
- }
- /* QUEM SOMOS */
- /* BOTÃO WHATSAPP */
- 
- .link-btnWpp {
-     position: fixed;
-     width: 55px;
-     height: 55px;
-     bottom: 12px;
-     right: 20px;
-     background: #25d366;
-     color: #fff;
-     border-radius: 50px;
-     text-align: center;
-     font-size: 30px;
-     box-shadow: 1px 1px 2px #888;
-     z-index: 988;
- }
- 
- .fa-whatsapp {
-     margin-top: 12px;
- }
- /* BOTÃO WHATSAPP */
- /* BOTÃO GO UP */
- 
- .link-btngoUp {
-     position: fixed;
-     width: 55px;
-     height: 55px;
-     bottom: 12px;
-     right: 70px;
-     color: rgba(252, 118, 0, 1);
-     text-align: center;
-     font-size: 30px;
-     z-index: 988;
- }
- 
- .fa-arrow-up {
-     margin-top: 12px;
- }
- /* BOTÃO GO UP */
+/* BOTAO DE ORCAMENTO NO CARROSSEL DE ENTRADA */
+
+.container-header a {
+  text-decoration: none;
+  z-index: 988;
+  display: flex;
+  position: absolute;
+  padding: 20px;
+  top: 50%;
+  left: 3%;
+  background-color: rgba(252, 118, 0, 0.7);
+  margin-top: 30px;
+  font-size: 25px;
+  color: #f5f4f6;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.header-orcamento:hover {
+  background-color: rgba(252, 118, 0, 1);
+  transition: all 0.5s ease 0s;
+}
+/* BOTAO DE ORCAMENTO NO CARROSSEL DE ENTRADA */
+/* SERVIÇOS */
+
+.titulo-servicos {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: rgba(252, 118, 0, 1);
+}
+
+.container1-servicos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(127, 127, 127, 0.3);
+}
+
+.container2-servicos {
+  position: relative;
+  width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.container2-servicos .card-servicos {
+  position: relative;
+  max-width: 300px;
+  height: 158px;
+  background: rgba(252, 118, 0, 1);
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.container2-servicos .card-servicos:hover {
+  height: 360px;
+}
+
+.container2-servicos .card-servicos .imgBx-servicos {
+  position: relative;
+  width: 260px;
+  height: 172px;
+  top: -60px;
+  left: 5px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container2-servicos .card-servicos .imgBx-servicos img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.container2-servicos .card-servicos .content-servicos {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.container2-servicos .card-servicos .content-servicos h2 {
+  margin-bottom: 16px;
+}
+
+.container2-servicos .card-servicos:hover .content-servicos {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+
+.link-servicos {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+/* SERVIÇOS */
+/* PORTIFÓLIOS */
+
+#splideDois {
+  background: rgba(127, 127, 127, 0.3);
+}
+
+.splide__slide a img {
+  width: 443px;
+  height: 350px;
+}
+
+.splide__slide .content-portifolio {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+/* PORTIFÓLIOS */
+/* QUEM SOMOS */
+
+.containerPai {
+  background: rgba(121, 121, 121, 0.3);
+}
+
+.container-quemSomos .titulo-quemSomos {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: 16px;
+}
+
+.container-quemSomos .titulo-quemSomos h2 {
+  border-bottom: 1px solid black;
+}
+
+.container-quemSomos .contentPrincipal-quemSomos {
+  height: 200px;
+  width: 80%;
+  padding: 10px;
+  margin-left: 140px;
+  margin-top: 8px;
+  text-align: justify;
+  line-height: 26px;
+}
+
+.container-nossaEquipe .titulo-nossaEquipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+  margin-top: 60px;
+}
+
+.container-nossaEquipe .titulo-nossaEquipe h2 {
+  border-bottom: 1px solid black;
+}
+
+.container-nossaEquipe .contentPrincipal-nossaEquipe {
+  height: 420px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.container-nossaEquipe
+  .contentPrincipal-nossaEquipe
+  .membroEquipe-nossaEquipe
+  img {
+  width: 26%;
+}
+
+.container-nossaEquipe .contentPrincipal-nossaEquipe .membroEquipe-nossaEquipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-nossaEquipe
+  .contentPrincipal-nossaEquipe
+  .membroEquipe-nossaEquipe
+  h3 {
+  font-size: 30px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.container-nossaEquipe
+  .contentPrincipal-nossaEquipe
+  .membroEquipe-nossaEquipe
+  p {
+  text-align: center;
+  width: 80%;
+  line-height: 26px;
+}
+/* QUEM SOMOS */
+/* BOTÃO WHATSAPP */
+
+.link-btnWpp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 12px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 988;
+}
+
+.fa-whatsapp {
+  margin-top: 12px;
+}
+/* BOTÃO WHATSAPP */
+/* BOTÃO GO UP */
+
+.link-btngoUp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 12px;
+  right: 70px;
+  color: rgba(252, 118, 0, 1);
+  text-align: center;
+  font-size: 30px;
+  z-index: 988;
+}
+
+.fa-arrow-up {
+  margin-top: 12px;
+}
+/* BOTÃO GO UP */
