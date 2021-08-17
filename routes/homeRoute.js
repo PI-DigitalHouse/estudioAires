@@ -6,7 +6,6 @@ const bcrypt = require('bcrypt')
 const { getHome, recuSenha, logOut, getProjeto1, getProjeto2, getProjeto3, logar, listServico1, listServico2, listServico3, listServico4 } = require('../controllers/homeController');
 const logarMembro = require('../controllers/autenticacaoMembro')
 const checkSession = require('../middlewares/checkSession')
-const checkSessionMembro = require('../middlewares/checkMembro') 
 
 router.get('/', getHome)
 

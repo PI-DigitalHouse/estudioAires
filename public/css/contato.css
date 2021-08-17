@@ -1,3 +1,126 @@
+<<<<<<< HEAD
+.container-contato {
+    min-height: 99vh;
+    background: #ebe9eb;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao-contato {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-contato {
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.info-contato a {
+    text-decoration: none;
+    color: #81A8E7;
+}
+
+.info-contato i {
+    color: #FC7600;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.form-contato {
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.info-contato,
+.form-contato {
+    flex: 1;
+}
+
+.form-contato h2 {
+    color: #FC7600;
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.form-contato .textBox-contato {
+    background: #D8D7D8;
+    color: #000000;
+    border: none;
+    width: calc(50% - 10 px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba (0, 0, 0, 0.1);
+    opacity: 0.9;
+    margin-bottom: 2px;
+}
+
+.form-contato .textBox-contato:first-child {
+    margin-right: 15px;
+}
+
+.form-contato textarea {
+    background: #D8D7D8;
+    color: #000000;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba (0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.form-contato .btnEnviar-contato {
+    background: rgba(252, 118, 0, 0.8);
+    color: #F5F4F6;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.form-contato .btnEnviar-contato:hover {
+    background: rgba(252, 118, 0, 1);
+}
+
+@media screen and (max-width: 950px) {
+    .sessao-contato {
+        flex-direction: column;
+    }
+    .info-contato,
+    .form-contato {
+        margin: 30px 50px;
+    }
+    .form-contato h2 {
+        font-size: 30px;
+    }
+    .form-contato .textBox-contato {
+        width: 100%;
+    }
+}
+=======
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap'); */
 
 body {
@@ -102,3 +225,4 @@ body {
 #form-contato-home #btn-enviar:hover {
   background: rgba(252, 118, 0, 0.8);
 }
+>>>>>>> 6c5556d1c6b05c3895b3d8576698932393c87f42
