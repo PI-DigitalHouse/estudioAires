@@ -216,7 +216,7 @@
   position: fixed;
   width: 55px;
   height: 55px;
-  bottom: 12px;
+  bottom: 0;
   right: 20px;
   background: #25d366;
   color: #fff;
