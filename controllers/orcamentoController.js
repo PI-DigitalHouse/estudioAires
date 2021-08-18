@@ -52,11 +52,10 @@ module.exports.novoOrcamento = (async(req, res, next) => {
     
     let juncao = orcamentosCadastrados.concat(dadosDoFormulario.servico)
 
-    if (dadosDoFormulario.tamanhoImovel <=100){
+    if (dadosDoFormulario.tamanhoImovel <= 100){
         dadosDoFormulario.tamanhoImovel = 100
         console.log(dadosDoFormulario.tamanhoImovel)
     }
-
 
     const resultado = calculaOrcamento(dadosDoFormulario.tamanhoImovel, newService.valor, juncao.length)
     req.body.valor = resultado
@@ -98,4 +97,19 @@ function calculaOrcamento(tamanhoImovel, numeroServicos, valor) {
     console.log(tamanhoImovel)
     console.log(valorTotal)
     return valorTotal
+}
+
+module.exports.deletarOrcamento = async(req, res) => {
+    const { idOrcamento } = req.query
+    const orcamento = await models.Orcamento.findOne({
+        where: {
+            idOrcamento: idOrcamento
+        }
+    })
+    if (orcamento) {
+        await orcamento.destroy()
+        res.redirect('/dashboardUsuario/solicitacoes')
+    } else {
+        res.redirect('/dashboardUsuario/solicitacoes')
+    }
 }
