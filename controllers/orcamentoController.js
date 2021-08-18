@@ -100,14 +100,20 @@ function calculaOrcamento(tamanhoImovel, numeroServicos, valor) {
 }
 
 module.exports.deletarOrcamento = async(req, res) => {
-    const { idOrcamento } = req.query
-    const orcamento = await models.Orcamento.findOne({
+    const { idOrcamento: idReserva } = req.query
+    const orcamento = await models.Reserva.findOne({
         where: {
-            idOrcamento: idOrcamento
+            idReserva: idReserva
         }
     })
     if (orcamento) {
-        await orcamento.destroy()
+        await orcamento.update({
+            status: 'deleted'
+        }, {
+            where: {
+                idReserva: idReserva}
+            }),
+
         res.redirect('/dashboardUsuario/solicitacoes')
     } else {
         res.redirect('/dashboardUsuario/solicitacoes')
