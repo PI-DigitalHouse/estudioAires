@@ -146,3 +146,22 @@ module.exports.mostraAlteraDados = (async (req, res) => {
         title: 'Alterar Dados'
     })
 })
+
+module.exports.alteraDados = async(req, res) => {
+    let dadosNovos = req.body
+
+    const update = await models.Membro.update(dadosNovos, {
+        where: {
+            idMembro: req.session.membro.idMembro
+        }
+    })
+    const resultados = await models.Membro.findOne({
+        where: {
+            idMembro: req.session.membro.idMembro
+        }
+    })
+    req.session.save(function() {
+        req.session.membro = resultados
+        res.redirect('/')
+    })
+}

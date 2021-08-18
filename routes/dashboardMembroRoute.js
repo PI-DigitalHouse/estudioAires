@@ -2,7 +2,7 @@ const models = require('../models');
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
-const { calendario, bloquear, aprovacoes, mostraJobs, buscaJob, minhaAgenda, mostraAlteraDados } = require('../controllers/DMController');
+const { calendario, bloquear, aprovacoes, mostraJobs, buscaJob, minhaAgenda, mostraAlteraDados, alteraDados } = require('../controllers/DMController');
 const { loginMembro, logarMembro } = require('../controllers/autenticacaoMembro')
 const checkSessionMembro = require('../middlewares/checkMembro')
 const session = require('express-session');
@@ -28,6 +28,7 @@ router.get('/minhaAgenda', checkSessionMembro, minhaAgenda)
 
 router.get('/alterarDados',checkSessionMembro, mostraAlteraDados)
 
+router.post('/alterarDados',checkSessionMembro, alteraDados)
 
 //Busca jobs por ID
 router.get('/buscar', checkSessionMembro, buscaJob)
