@@ -21,7 +21,7 @@ module.exports.logarMembro = (async(req, res) => {
     });
     const hashando2 = await compareHash(req.body.senha, foundUser2.senha)
     req.session.membro = foundUser2;
-    res.redirect('meuPerfil');
+    res.redirect('/dashboardMembro');
 });
 
 async function compareHash(senha, hash) {

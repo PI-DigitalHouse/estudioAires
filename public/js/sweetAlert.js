@@ -6,7 +6,7 @@ function abreAlertDelete(){
           confirmButton: 'btn btn-success',
           cancelButton: 'btn btn-danger'
         },
-        buttonsStyling: false
+        buttonsStyling: true
       })
       
       swalWithBootstrapButtons.fire({
@@ -15,11 +15,18 @@ function abreAlertDelete(){
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Cancelar solicitacão',
+        showLoaderOnConfirm: true,
         cancelButtonText: 'Não',
-        reverseButtons: true
-      }).then((result) => {
+        reverseButtons: true,
+        
+        },
+        async function update(status){
+          return await fetch(`http://locahost:3000/reserva?${status}`)
+
+        }).then((result) => {
+
         if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire(
+       swalWithBootstrapButtons.fire(
             'Solicitação cancelada!',
             'Seu serviço foi cancelado com sucesso',
             'success'
@@ -36,6 +43,7 @@ function abreAlertDelete(){
         }
       })
     }
+
 
 
 

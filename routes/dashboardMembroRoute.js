@@ -12,6 +12,8 @@ router.get('/login-membro', loginMembro)
 
 router.post('/login-membro', logarMembro)
 
+router.get('/', logarMembro)
+
 router.get('/aprovacoes', checkSessionMembro, aprovacoes);
 
 //Visualização calendario
