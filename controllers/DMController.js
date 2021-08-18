@@ -10,6 +10,14 @@ module.exports.calendario = (req, res) => {
     });
 };
 
+module.exports.minhaAgenda = (req, res) => {
+    res.render('DM_minhaAgenda', {
+        title: 'Minha agenda',
+        dadosUsuario: req.session.usuario,
+        dadosMembro: req.session.membro,
+    });
+};
+
 module.exports.bloquear = async(req, res, next) => {
     const bloqueio = req.body;
     bloqueio.reservadoPor = req.session.membro.idMembro;
