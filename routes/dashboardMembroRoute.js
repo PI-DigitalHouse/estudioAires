@@ -12,13 +12,7 @@ router.get('/login-membro', loginMembro)
 
 router.post('/login-membro', logarMembro)
 
-router.get('/meuPerfil', checkSessionMembro, function(req, res, next) {
-    res.render('dashboardMembroMeuPerfil', {
-        title: 'Minha Agenda',
-        dadosUsuario: req.session.usuario,
-        dadosMembro: req.session.membro
-    });
-})
+router.get('/', logarMembro)
 
 router.get('/aprovacoes', checkSessionMembro, aprovacoes);
 

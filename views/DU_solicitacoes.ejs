@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <link rel="stylesheet" href="sweetalert2.min.css">
+    
 <%- include partials/head2.ejs %>
-
+<link rel="stylesheet" href="sweetalert2.min.css">
     <body>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main>
@@ -153,16 +153,12 @@
                                             </form>
                                         </div>
                                         <% } %>
-                                            <% if (resultadoOrcamento.reservas.status=='Sessão agendada' ) { %>
-                                                <div class="rodape">
-                                                    <p>Ocorreu algum imprevisto e precisa cancelar? </p>
-                                                    <button class="cancelamento">Clique aqui</button>
-                                                </div>
-                                                <% } %>
+                                          
 
                                                 <div class="botoes">
                                                       <p>Ocorreu algum imprevisto e precisa cancelar? </p>
-                                                       <button class="botao-1" id="salva-alteracoes" onclick="abreAlertDelete()">CANCELAR</button> 
+                                                       <button class="botao-1" id="salva-alteracoes" onclick="abreAlertDelete()">CANCELAR</b
+                                                        preutt=on> 
                                                 </div>
                             </div>
                         </div>
