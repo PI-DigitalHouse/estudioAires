@@ -138,6 +138,17 @@ module.exports.buscaJob = (async (req, res) => {
     res.render('listaJob', { listaJobs });
 })
 
+module.exports.meuPerfilM = (req, res) => {
+    const a = []
+    res.render('DM_meuPerfil', {
+            title: 'Meu Perfil',
+            dadosUsuario: a,
+            dadosMembro: req.session.membro
+        }
+
+    );
+}
+
 module.exports.mostraAlteraDados = (async (req, res) => {
     const a = []
     res.render('alterarDadosMembro', {
@@ -162,6 +173,6 @@ module.exports.alteraDados = async(req, res) => {
     })
     req.session.save(function() {
         req.session.membro = resultados
-        res.redirect('/')
+        res.redirect('/dashboardMembro/meuPerfil')
     })
 }
