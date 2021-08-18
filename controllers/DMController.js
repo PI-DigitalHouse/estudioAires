@@ -18,7 +18,7 @@ module.exports.minhaAgenda = (req, res) => {
     });
 };
 
-module.exports.bloquear = async(req, res, next) => {
+module.exports.bloquear = async (req, res, next) => {
     const bloqueio = req.body;
     bloqueio.reservadoPor = req.session.membro.idMembro;
     bloqueio.aceitoPor = req.session.membro.idMembro;
@@ -29,9 +29,9 @@ module.exports.bloquear = async(req, res, next) => {
     res.redirect('/');
 };
 
-module.exports.mostraJobs = async(req, res) => {
+module.exports.mostraJobs = async (req, res) => {
     const { idSolicitacao, endereco, valor, tamanhoImovel, sessaoShooting } =
-    req.query;
+        req.query;
     const resultadosJobs = await models.Orcamento.findAll({
         where: {
             idSolicitacao: {
@@ -48,19 +48,19 @@ module.exports.mostraJobs = async(req, res) => {
             },
         },
         include: [{
-                model: models.Reserva,
-                as: 'reservas',
-                include: {
-                    model: models.Usuario,
-                    as: 'usuarios',
-                    attributes: ['nome', 'email', 'telefone'],
-                },
+            model: models.Reserva,
+            as: 'reservas',
+            include: {
+                model: models.Usuario,
+                as: 'usuarios',
+                attributes: ['nome', 'email', 'telefone'],
             },
-            {
-                model: models.Servico,
-                as: 'services',
-                attributes: ['tipoDeServico'],
-            },
+        },
+        {
+            model: models.Servico,
+            as: 'services',
+            attributes: ['tipoDeServico'],
+        },
         ],
         dadosMembro: req.session.membro,
     });
@@ -73,7 +73,7 @@ module.exports.mostraJobs = async(req, res) => {
     });
 };
 
-module.exports.aprovacoes = async(req, res) => {
+module.exports.aprovacoes = async (req, res) => {
     const {
         idSolicitacao,
         endereco,
@@ -126,7 +126,7 @@ module.exports.aprovacoes = async(req, res) => {
     });
 };
 
-module.exports.buscaJob = (async(req, res) => {
+module.exports.buscaJob = (async (req, res) => {
     const { jobId } = req.query;
     const listaJobs = await models.Orcamento.findOne({
         where: {
@@ -136,4 +136,13 @@ module.exports.buscaJob = (async(req, res) => {
         }
     })
     res.render('listaJob', { listaJobs });
+})
+
+module.exports.mostraAlteraDados = (async (req, res) => {
+    const a = []
+    res.render('alterarDadosMembro', {
+        dadosMembro: req.session.membro,
+        dadosUsuario: a,
+        title: 'Alterar Dados'
+    })
 })
