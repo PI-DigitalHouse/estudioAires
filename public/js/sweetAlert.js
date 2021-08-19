@@ -31,6 +31,7 @@ function abreAlertDelete(){
             'Seu serviço foi cancelado com sucesso',
             'success'
           )
+          document.getElementById("containerServico").style.display = "none";
         } else if (
           /* Read more about handling dismissals below */
           result.dismiss === Swal.DismissReason.cancel
