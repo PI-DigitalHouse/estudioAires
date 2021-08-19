@@ -1,17 +1,13 @@
-<link rel="stylesheet" href="/css/partials/headerAreaRestritaUsuarios.css">
-<link rel="stylesheet" href="/css/home.css">
-<header>
+<header class="headerAreaRestritaMembros">
+    <a id="headerAreaRestritaMembros__logo" href="/">Estudio Aires </a>
     <nav>
-        <a id="logo" href="/">Estudio Aires </a>
-        <ul>
-
+        <ul class="headerAreaRestritaMembros__links-header">
             <li <% if (title==='Aprovacoes' ) { %> id='selected'
 
                 <% } %> >
 
                     <a href="/dashboardMembro/aprovacoes">Minha Agenda</a>
             </li>
-
             <li <% if (title==='Meus jobs finalizados' ) { %> id='selected'
                 <% } %> ><a href="/dashboardMembro/jobsFinalizados">Jobs Finalizados</a>
             </li>
@@ -19,7 +15,6 @@
     </nav>
 
     <div class="dropdown">
-
         <div class="dropdown a">
             <button onclick="myFunction()" class="dropbtn btn btn-secondary dropdown-toggle a">
                 Olá, <%= dadosMembro.nome %>! ▼</button>
@@ -30,12 +25,7 @@
                 <a href="/logout">Sair</a>
             </div>
         </div>
-
-
     </div>
-
-
-
     </div>
     <script src="/js/user-partials.js"></script>
 </header>

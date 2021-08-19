@@ -1,64 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-/* html{
-    font-size: 6.25%;
-    font-family: "Lato", sans-serif;
-} */
 
-.logo-dash-memb{
-    width: 80%;
-}
-/* .botoes-2{
-    text-align: center;
-    padding: 5px;
-    font-size: 15px;
-    width: 420px;
-    height: 50px;
+
+
+
+
+
+#body{
     
-} */
-
-
-body{
-    /* font-size: 20rem; */
     background-image: url("../img/bg-opacity.png");
-    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#containerServico1{
+#containerServico1-DM-Apro{
+
     display: flex;
+    flex-direction: column;
     height: fit-content;
     border: 2px solid #fff ;
-    margin: 20px;
+    margin: 2rem;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color:white;
-   justify-content:center; 
+    width: 95%;
 }
 
-.containerEsquerda{
+#containerEsquerda-DM-Apro{
     display: flex;
-    width: 40%;
-    margin-left: 10px;
+    flex-wrap: wrap;
+    width: 95%;
+    margin:2rem;
+    justify-content: space-between;
 }
 
-h3{
-    /* font-size: 26rem; */
-}
 
-#servicoContratado__tipo--ajuste{
+
+
+
+#info-DM-Apro{
     width: 100%;
-}
-
-.info{
-    width: 600px;
   
 
 }
 
-.btn-end{
+#btn-end-DM-Apro{
     background-color: #FC7600;
 }
-.tipo3{
+#tipo3-DM-Apro{
     border: 1.5px solid #BFBFBF;
     background-color: #FC7600;
     border-radius: 10px;
@@ -68,56 +57,47 @@ h3{
     width: 50px;
 }
 
-.servicoContratado1{
+#servicoContratado1-DM-Apro{
     display: flex;
-    border: 0.2px solid ;
-    width: 550px;
-    margin-top: 5px;
-    margin-bottom: 10rem;
-    padding: 15px;
+    flex-wrap: wrap;
+    
+    width: 45%;
+    
+    
     height: 580px;
+    justify-content: space-between;
 }
 
-.servicoContratado1 .info p{ 
+#servicoContratado1-DM-Apro #info-DM-Apro p{ 
     display: inline;
 }
-.info{
+#info-DM-Apro{
     margin-top: 20px;
     height: fit-content;
 }
 
-.tipo1{
+#tipo1-DM-Apro{
     font-weight: bold;
-    width: 380px;
-    margin-bottom: 0rem;
-    /* font-size: 15rem; */
+    width: 100%;
     height: fit-content;
-    
 }
 
-.servicoContratado2{
-    margin-left: 15rem;
-    margin-top: 13rem;
-}
 
-.servicoContratado2 .info p{
-    margin: 0px
-}
 
-.containerCentro{
+
+
+#containerCentro-DM-Apro{
        width: 25%;
 }
 
-.containerCentro p{
+#containerCentro-DM-Apro p{
     margin-top: 30px;
     width: 87%;
 }
 
-label{
-    /* font-size: 20rem; */
-}
 
-.containerDireita{
+
+#containerDireita-DM-Apro{
     width: 15%;
     margin: 5rem;
     display: flex;
@@ -126,7 +106,7 @@ label{
     flex-wrap: wrap;   
 }
 
-.informacoes{
+#informacoes{
     /* font-size: 16rem; */
     text-align: end;
     margin: 16rem;
@@ -136,21 +116,21 @@ label{
     color: black;
 }
 
-.informacoes a{
+#informacoes a{
     color: black;
 }
 /* 
-.botoes{
+#botoes{
     margin-top: 30px;
 }
 
-.botoes p{
+#botoes p{
     margin: 0px;
     text-align: center;  
 }
 
-.botoes .prestador{
-    border: 1.5px solid #BFBFBF;
+#botoes #prestador{
+    border: 1#5px solid #BFBFBF;
     background-color: white;
     border-radius: 10px;
     padding: 5px;
@@ -161,13 +141,13 @@ label{
     
 }
 
-.botoes .prestador:hover{
+#botoes #prestador:hover{
     background-color:#d4d4d4;
-    border: 1.5px solid #d4d4d4;
+    border: 1#5px solid #d4d4d4;
 }
 
-.botoes .entregaveis{
-    border: 1.5px solid #FC7600;
+#botoes #entregaveis{
+    border: 1#5px solid #FC7600;
     background-color:#FC7600;
     border-radius: 10px;
     padding: 5px;
@@ -176,13 +156,13 @@ label{
     width: 100%;
 }
 
-.botoes .entregaveis:hover{
+#botoes #entregaveis:hover{
     background-color: #fa8d2e;
-    border: 1.5px solid #fa8d2e;
+    border: 1#5px solid #fa8d2e;
 } */
 
 @media (max-width:625px){
-    .containerServico{
+    #containerServico{
         display: flex;
         border: 2px solid #fff ;
         margin: 20px;
@@ -192,30 +172,30 @@ label{
         justify-content: space-around;
         flex-direction: column;
     }
-    .containerEsquerda{
+    #containerEsquerda{
         display: flex;
         width: 100%;
         margin-top: 20rem;
         margin-left: 40rem;
         flex-wrap: wrap;
     }
-    .containerCentro{
+    #containerCentro{
         width: 100%;
         margin-top: 20rem;
         margin-left: 40rem;
     }
-    .containerDireita{
+    #containerDireita{
         width: 100%;
         
     }
-    .servicoContratado1{
+    #servicoContratado1{
         width: 100%;
     }
-    .servicoContratado2{
+    #servicoContratado2{
         margin: 0rem;
     }
-    /* .botoes .entregaveis{
-        border: 1.5px solid #FC7600;
+    /* #botoes #entregaveis{
+        border: 1#5px solid #FC7600;
         background-color:#FC7600;
         border-radius: 10px;
         padding: 5px;
@@ -223,18 +203,18 @@ label{
         width: 100%;
         margin: 0rem;
     }
-    .botoes .prestador{
+    #botoes #prestador{
         width: 100%;
         margin: 0rem;
     } */
-    .containerDireita{
+    #containerDireita{
         width: 100%;
         margin: 0rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
-    .informacoes{
+    #informacoes{
         margin-left: 50rem;
     }
     

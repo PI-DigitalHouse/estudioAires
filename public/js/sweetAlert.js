@@ -1,6 +1,7 @@
 
 document.getElementById("btnSweetAlert").addEventListener("click", abreAlertDelete)
-function abreAlertDelete(){
+function abreAlertDelete(id){
+  console.log(id)
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
           confirmButton: 'btn btn-success',
@@ -18,19 +19,19 @@ function abreAlertDelete(){
         showLoaderOnConfirm: true,
         cancelButtonText: 'Não',
         reverseButtons: true,
-        
-        },
-        async function update(status){
-          return await fetch(`http://locahost:3000/reserva?${status}`)
 
-        }).then((result) => {
+        }).then(async(result) => {
+          console.log(result)
 
         if (result.isConfirmed) {
-       swalWithBootstrapButtons.fire(
-            'Solicitação cancelada!',
-            'Seu serviço foi cancelado com sucesso',
-            'success'
-          )
+        
+        await fetch(`http://localhost:3000/orcamento/deletar?idOrcamento=${id}`)
+        swalWithBootstrapButtons.fire(
+          'Solicitação cancelada!',
+          'Seu serviço foi cancelado com sucesso',
+          'success'
+      )
+
         } else if (
           /* Read more about handling dismissals below */
           result.dismiss === Swal.DismissReason.cancel
