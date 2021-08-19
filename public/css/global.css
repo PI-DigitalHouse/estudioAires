@@ -29,7 +29,7 @@ html {
   border-radius: 4px;
 }
 
-#submit-cadastro{
+#submit-cadastro {
   margin-top: 15px;
   width: 30%;
   padding: 10px 0;
@@ -42,4 +42,10 @@ html {
   cursor: pointer;
   background: rgba(252, 118, 0, 0.7);
   color: #f5f5f5;
+}
+
+/* Posicionamento do botão na página DM_jobsfinalizados.ejs */
+.btn_entregaveis {
+  position: relative;
+  top: 10rem;
 }
