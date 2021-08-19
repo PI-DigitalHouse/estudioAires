@@ -24,13 +24,13 @@ function abreAlertDelete(id){
           console.log(result)
 
         if (result.isConfirmed) {
-      //  swalWithBootstrapButtons.fire(
-      //       'Solicitação cancelada!',
-      //       'Seu serviço foi cancelado com sucesso',
-      //       'success'
-      //     )
-        await fetch(`http://localhost:3000/orcamento/deletar?idOrcamento=${id}`)
         
+        await fetch(`http://localhost:3000/orcamento/deletar?idOrcamento=${id}`)
+        swalWithBootstrapButtons.fire(
+          'Solicitação cancelada!',
+          'Seu serviço foi cancelado com sucesso',
+          'success'
+      )
 
         } else if (
           /* Read more about handling dismissals below */
