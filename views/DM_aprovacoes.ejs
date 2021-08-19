@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <link rel="stylesheet" href="../css/partials/header.css">  
-    <%- include partials/head2.ejs %>
-<body id='body'>
-    <%- include partials/headerAreaRestritaMembros.ejs %>
-    <% if (resultados) { %> 
-    <% for (resultado of resultados) { %> 
-        <div id="containerServico1-DM-Apro">
-            
-            <div id="containerEsquerda-DM-Apro">
-                
-                <div id="servicoContratado1-DM-Apro">
-                   <h4>Número serviço: <%=resultado.idSolicitacao%></h4>
-                    <div id="info-DM-Apro">
-                        <p id="tipo3-DM-Apro"> Informações da sessao:</p>
-                    </div>
-                    
-                    <p id="tipo1-DM-Apro">Data e horario agendado: </p>
-                    <p><%=resultado.reservas.horarioInicio%></p>
-                
-                    <div id="info-DM-Apro">
-                        <p id="tipo1-DM-Apro">Endereço:  </p>                        
-                        <p><%=resultado.endereco%></p>
-                    </div>
-                    <div id="info-DM-Apro">
-                        <p id="tipo1-DM-Apro">Valor do serviço: </p>
-                        <p>R$ <%=resultado.valor%></p>
-                    </div>
-                    <div id="info-DM-Apro">
-                        <p id="tipo1-DM-Apro">Tamanho aproximado do imóvel:</p>
-                        <p><%=resultado.tamanhoImovel%>  m²</p>
-                    </div>
-                    <div id="info-DM-Apro">
-                        <p id="tipo1-DM-Apro">Serviços contratados:</p>
-                        <p><%=resultado.serviceOrcamento%>  m²</p>
-                    </div>
-                </div>
-    
-                <div id="servicoContratado1-DM-Apro">
-                    
-                    <div id="info-DM-Apro">
-                        <p id="tipo3-DM-Apro"> Informações do (a) cliente </p>
-                    </div>
-                    <div id="info-DM-Apro">
-                        <p id="tipo1-DM-Apro">Nome do responsavel que acompanhará a sessao :</p>
-                        <p><%=resultado.nomeContato%></p>
-                    </div>
-                    <div id="info-DM-Apro">
-                        <p id="tipo1-DM-Apro">Email do usuario que reservou a sessao:</p>
-                        <p><%=resultado.reservas.usuarios.email%></p>
-                    </div>
-                    <div id="info-DM-Apro">
-                        <p id="tipo1-DM-Apro">Telefone:</p>
-                        <p><%=resultado.telefoneContato%></p>
-                    </div>
-                    <form>
-                        <input id = "botoes-2" type="file" multiple="multiple">
-                    </form>
-                </div>
-            </div>   
+<%- include partials/head2.ejs %>
 
-            
+    <body id='body'>
+        <%- include partials/headerAreaRestritaMembros.ejs %>
+            <% if (resultados) { %>
+                <% for (resultado of resultados) { %>
+                    <div id="containerServico1-DM-Apro">
 
-           <!-- <div id="containerDireita-DM-Apro">
+                        <div id="containerEsquerda-DM-Apro">
+
+                            <div id="servicoContratado1-DM-Apro">
+                                <h4>Número serviço: <%=resultado.idSolicitacao%>
+                                </h4>
+                                <div id="info-DM-Apro">
+                                    <p id="tipo3-DM-Apro"> Informações da sessao:</p>
+                                </div>
+
+                                <p id="tipo1-DM-Apro">Data e horario agendado: </p>
+                                <p>
+                                    <%=resultado.reservas.horarioInicio%>
+                                </p>
+
+                                <div id="info-DM-Apro">
+                                    <p id="tipo1-DM-Apro">Endereço: </p>
+                                    <p>
+                                        <%=resultado.endereco%>
+                                    </p>
+                                </div>
+                                <div id="info-DM-Apro">
+                                    <p id="tipo1-DM-Apro">Valor do serviço: </p>
+                                    <p>R$ <%=resultado.valor%>
+                                    </p>
+                                </div>
+                                <div id="info-DM-Apro">
+                                    <p id="tipo1-DM-Apro">Tamanho aproximado do imóvel:</p>
+                                    <p>
+                                        <%=resultado.tamanhoImovel%> m²
+                                    </p>
+                                </div>
+                                <div id="info-DM-Apro">
+                                    <p id="tipo1-DM-Apro">Serviços contratados:</p>
+                                    <p>
+                                        <%=resultado.serviceOrcamento%> m²
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div id="servicoContratado1-DM-Apro">
+
+                                <div id="info-DM-Apro">
+                                    <p id="tipo3-DM-Apro"> Informações do (a) cliente </p>
+                                </div>
+                                <div id="info-DM-Apro">
+                                    <p id="tipo1-DM-Apro">Nome do responsavel que acompanhará a sessao :</p>
+                                    <p>
+                                        <%=resultado.nomeContato%>
+                                    </p>
+                                </div>
+                                <div id="info-DM-Apro">
+                                    <p id="tipo1-DM-Apro">Email do usuario que reservou a sessao:</p>
+                                    <p>
+                                        <%=resultado.reservas.usuarios.email%>
+                                    </p>
+                                </div>
+                                <div id="info-DM-Apro">
+                                    <p id="tipo1-DM-Apro">Telefone:</p>
+                                    <p>
+                                        <%=resultado.telefoneContato%>
+                                    </p>
+                                </div>
+                                <form>
+                                    <input id="botoes-2" type="file" multiple="multiple">
+                                </form>
+                            </div>
+                        </div>
+
+
+
+                        <!-- <div id="containerDireita-DM-Apro">
                 <div id="botoes">
                     <div id="entregaveis">
                         <p> <a id="btn-end-DM-Apro" href="."> FINALIZAR </a></p>
@@ -71,18 +87,20 @@
                 </div>
        
             </div>-->
-        
-        </div>
-    <% } %> 
-    <% } else { %>
-         <div id="containerServico">
 
-            <div id="servicoContratado1-DM-Apro">
-                <h2>Ops! Voce ainda nao tem novas solicitacoes</h2>
-            </div>
+                    </div>
+                    <% } %>
+                        <% } else { %>
+                            <div id="containerServico">
 
-        </div>
-        
-        <% } %> 
-</body>
+                                <div id="servicoContratado1-DM-Apro">
+                                    <h2>Ops! Voce ainda nao tem novas solicitacoes</h2>
+                                </div>
+
+                            </div>
+
+                            <% } %>
+                                <%- include partials/footer.ejs %>
+    </body>
+
 </html>
