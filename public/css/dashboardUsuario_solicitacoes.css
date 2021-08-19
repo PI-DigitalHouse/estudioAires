@@ -1,179 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 /* html{
     font-size: 6.25%;
 } */
 
-body{
-    font-family: "Lato", sans-serif;
-    /* font-size: 14rem; */
-    background-image: url("../img/bg-opacity.png");
-    margin: 0px;
-    width: 100%;
-    margin: auto;
+body {
+  font-family: 'Lato', sans-serif;
+  /* font-size: 14rem; */
+  background-image: url('../img/bg-opacity.png');
+  margin: 0px;
+  width: 100%;
+  margin: auto;
 }
 
 /* ordenação */
-.ordenacao{
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-end;
+.ordenacao {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.dropdown{
-    height: fit-content;
-    /* font-size: 14rem; */
+.dropdown {
+  height: fit-content;
+  /* font-size: 14rem; */
 }
 
-.cronos{
-    display: flex;
-    margin-right: 15px;
+.cronos {
+  display: flex;
+  margin-right: 15px;
 }
 
-p{
-    margin: 0  5px 0 0;
+p {
+  margin: 0 5px 0 0;
 }
 
 /* serviços */
 
-.containerServico{
-    display: flex;
-    border: 2px solid #fff ;
-    margin: 20px;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    background-color:white;
-    justify-content: center;
+.containerServico {
+  display: flex;
+  border: 2px solid #fff;
+  margin: 20px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: white;
+  justify-content: center;
 }
 
-.containerServicoCancelado{
-    display: flex;
-    border: 2px solid #fff ;
-    margin: 20px;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    background-color:white;
-    justify-content: center;
-    padding-bottom: 20px;
+.containerServicoCancelado {
+  display: flex;
+  border: 2px solid #fff;
+  margin: 20px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: white;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
-.containerEsquerda{
-    display: flex;
-    width: 50%;
+.containerEsquerda {
+  display: flex;
+  width: 50%;
 }
 
-.info{
-    /* font-size: 14rem; */
-    margin-bottom: 7%;
-    margin-top: 7%;
+.info {
+  /* font-size: 14rem; */
+  margin-bottom: 7%;
+  margin-top: 7%;
 }
 
-
-.servicoContratado1 .info p{ 
-    display: inline;
+.servicoContratado1 .info p {
+  display: inline;
 }
 
-.tipo1{
-    font-weight: bold;
+.tipo1 {
+  font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
-.servicoContratado2{
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+.servicoContratado2 {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
->>>>>>> 68a0f63e6c3ca9f2fb16206dc515d5d574efd239
-.servicoContratado2 .info p{
-    margin: 0px
+.servicoContratado2 .info p {
+  margin: 0px;
 }
 
-.containerDireita{
-    margin-right: 20px;
-    margin-left: 14px;
-    position: relative;
+.containerDireita {
+  margin-right: 20px;
+  margin-left: 14px;
+  position: relative;
 }
 
-.containerDireita a{
-    text-decoration: none;
-    color: black;
-    width: 50%;
+.containerDireita a {
+  text-decoration: none;
+  color: black;
+  width: 50%;
 }
 
-.prestador{
-    margin-top: 40px;
+.prestador {
+  margin-top: 40px;
 }
 
-.status{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 30%;
-    margin-top: 15px;
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  margin-top: 15px;
 }
 
-.fases{
-    display: flex;
-    justify-content: space-between;
-    /* font-size: 14rem; */
-
+.fases {
+  display: flex;
+  justify-content: space-between;
+  /* font-size: 14rem; */
 }
 
-.fases p{
-    text-align: center;
-    margin-left: 10px;
+.fases p {
+  text-align: center;
+  margin-left: 10px;
 }
 
-
-.step{
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border: 2px solid #ACACA6;
-    border-radius: 50%;
+.step {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #acaca6;
+  border-radius: 50%;
 }
 
-.farol{
-    position: relative;
+.farol {
+  position: relative;
 }
 
-.bolinhas{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    z-index: 2;
+.bolinhas {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
 }
 
-.bolaOk{
-    height: 25px;
-    width: 25px;
-    background-color:#27AE60;
-    border: #ACACA6 solid 1px;
-    border-radius: 50%;
-    text-align: center;
-    padding-top: 3px;
+.bolaOk {
+  height: 25px;
+  width: 25px;
+  background-color: #27ae60;
+  border: #acaca6 solid 1px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
 }
 
-.bola{
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border: #ACACA6 solid 1px;
-    border-radius: 50%;
-    text-align: center;
-    padding-top: 3px;
+.bola {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border: #acaca6 solid 1px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
 }
 
-.linha{
-    position: absolute;
-    background: #ACACA6 ;
-    width: 76%;
-    height: 1.5px;
-    margin-left: 65px;
-    top: 12px;
+.linha {
+  position: absolute;
+  background: #acaca6;
+  width: 76%;
+  height: 1.5px;
+  margin-left: 65px;
+  top: 12px;
 }
 
 /* .botoes{
@@ -250,27 +244,27 @@ p{
     border: 1.5px solid #fa8d2e;
 } */
 
-.rodape{
-    /* font-size: 14rem; */
-    margin-top: 5px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    display: flex;
+.rodape {
+  /* font-size: 14rem; */
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
 }
 
-.rodape p{
-    margin-right: 95px;
+.rodape p {
+  margin-right: 95px;
 }
 
-.cancelamento{
-    border: none;
-    font-family: 'Lato';
-    /* font-size: 14rem; */
-    margin-top: 5px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    background: white;
-    text-decoration: underline;
+.cancelamento {
+  border: none;
+  font-family: 'Lato';
+  /* font-size: 14rem; */
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: white;
+  text-decoration: underline;
 }
