@@ -9,7 +9,7 @@
   backdrop-filter: blur(6px);
 }
 
-.headerAreaRestritaMembros__logo {
+#headerAreaRestritaMembros__logo {
   margin-left: 20px;
   font-weight: bold;
   color: #fc7600;
