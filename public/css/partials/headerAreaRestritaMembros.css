@@ -96,3 +96,22 @@
   right: 0.125rem;
   top: 7rem;
 }
+
+/* Ajustes de CSS para DM_jobsfinalizados.ejs */
+.containerServico.containerPadding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.ordenacao.ordenacaoMargin {
+  margin-right: 29px;
+}
+
+.cronos.cronosMargin {
+  margin-top: 20px;
+}
+
+.busca {
+  display: flex;
+  margin-top: 20px;
+}
