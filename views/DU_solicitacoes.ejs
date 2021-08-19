@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
+
 <%- include partials/head2.ejs %>
-<link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
     <body>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main>
@@ -22,10 +23,11 @@
                         <option value="sessao agendada">Sessão agendada</option>
                     </select>
                 </div>
-             </main>
-<div>
+            </main>
+            <div>
                 <% if(resultadoOrcamentos){ %>
                     <% for (resultadoOrcamento of resultadoOrcamentos) { %>
+                        <%    if(resultadoOrcamento.reservas.status=='active'){ %>
 
                         <div class="containerServico">
                             <div class="containerEsquerda">
@@ -52,22 +54,22 @@
                                             <%=resultadoOrcamento.tamanhoImovel%> m²
                                         </p>
                                     </div>
-                        
-                                        <div class="info">
-                                            <p class="tipo1">Serviços contratados:</p>
-                                            <p>
-                                                <%=resultadoOrcamento.reservas.servico%>
-                                            </p>
-                                        </div>
-                                   
+
+                                    <div class="info">
+                                        <p class="tipo1">Serviços contratados:</p>
+                                        <p>
+                                            <%=resultadoOrcamento.reservas.servico%>
+                                        </p>
+                                    </div>
+
                                     <div class="info">
                                         <p class="tipo1">Data do serviço</p>
                                         <p>
-                                            <% const data = resultadoOrcamento.reservas.dataInicio %>
-                                            <% const dataString = data.toString() %>
-                                            <% const dataFormatada = dataString.replace("21:00:00 GMT-0300 (Brasilia Standard Time)", " ") %>
+                                            <% const data=resultadoOrcamento.reservas.dataInicio %>
+                                                <% const dataString=data.toString() %>
+                                                    <% const dataFormatada=dataString.replace("21:00:00 GMT-0300 (Brasilia Standard Time)", " " ) %>
 
-                                            <%=dataFormatada%> às <%=resultadoOrcamento.reservas.horarioInicio%>
+                                                        <%=dataFormatada%> às <%=resultadoOrcamento.reservas.horarioInicio%>
                                         </p>
                                     </div>
                                 </div>
@@ -77,12 +79,12 @@
                                     <div class="info">
                                         <p class="tipo1">Serviços contratados:</p>
                                         <p>
-                                            <% const servico = resultadoOrcamento.reservas.servico%>
-                                            <% const servicoString = servico.toString() %>
-                                            <% const mapObj = {fotografia : " Fotografia", fotografia3603d: " Fotografia 360 3D", videoDinamico: " Vídeo Dinâmico", imagensAereas: " Imagens Aéreas"}; %>
-                                            <% const servicoFormatado = servicoString.replace (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi, function (matched) {return mapObj[matched]})%> 
+                                            <% const servico=resultadoOrcamento.reservas.servico%>
+                                                <% const servicoString=servico.toString() %>
+                                                    <% const mapObj={fotografia : " Fotografia" , fotografia3603d: " Fotografia 360 3D" , videoDinamico: " Vídeo Dinâmico" , imagensAereas: " Imagens Aéreas" }; %>
+                                                        <% const servicoFormatado=servicoString.replace (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi, function (matched) {return mapObj[matched]})%>
 
-                                            <%=servicoFormatado%>
+                                                            <%=servicoFormatado%>
                                         </p>
                                     </div>
                                 </div>
@@ -99,29 +101,22 @@
 
                                 <div class="farol">
                                     <div class="bolinhas">
-                                        <%if(resultadoOrcamento.reservas.status=='active'
-                                            ||resultadoOrcamento.reservas.status=='Sessão em andamento'
-                                            ||resultadoOrcamento.reservas.status=='Imagens em edição'
-                                            ||resultadoOrcamento.reservas.status=='Imagens postadas' ) { %>
+                                        <%if(resultadoOrcamento.reservas.status=='active' ||resultadoOrcamento.reservas.status=='Sessão em andamento' ||resultadoOrcamento.reservas.status=='Imagens em edição' ||resultadoOrcamento.reservas.status=='Imagens postadas' ) { %>
                                             <div class="bolaOk"> 1 </div>
                                             <% }else{ %>
                                                 <div class="bola"> 1 </div>
                                                 <% } %>
-                                                    <%if(resultadoOrcamento.reservas.status=='Sessão em andamento' ||
-                                                        resultadoOrcamento.reservas.status=='Imagens em edição' ||
-                                                        resultadoOrcamento.reservas.status=='Imagens postadas' ) { %>
+                                                    <%if(resultadoOrcamento.reservas.status=='Sessão em andamento' || resultadoOrcamento.reservas.status=='Imagens em edição' || resultadoOrcamento.reservas.status=='Imagens postadas' ) { %>
                                                         <div class="bolaOk"> 2 </div>
                                                         <% }else{ %>
                                                             <div class="bola"> 2 </div>
                                                             <% } %>
-                                                                <%if(resultadoOrcamento.reservas.status=='Imagens em edição' ||
-                                                                    resultadoOrcamento.reservas.status=='Imagens postadas' ) { %>
+                                                                <%if(resultadoOrcamento.reservas.status=='Imagens em edição' || resultadoOrcamento.reservas.status=='Imagens postadas' ) { %>
                                                                     <div class="bolaOk"> 3 </div>
                                                                     <% }else{ %>
                                                                         <div class="bola"> 3 </div>
                                                                         <% } %>
-                                                                            <%if(resultadoOrcamento.reservas.status=='Imagens postadas'
-                                                                                ) { %>
+                                                                            <%if(resultadoOrcamento.reservas.status=='Imagens postadas' ) { %>
                                                                                 <div class="bolaOk"> 4 </div>
                                                                                 <% }else{ %>
                                                                                     <div class="bola"> 4 </div>
@@ -148,31 +143,31 @@
                                         <div class="botoes">
                                             <form>
                                                 <div class="prestador">
-                                                   
+
                                                 </div>
                                             </form>
                                         </div>
                                         <% } %>
-                                          
 
-                                                <div class="botoes">
-                                                      <p>Ocorreu algum imprevisto e precisa cancelar? </p>
-                                                       <button class="botao-1" id="salva-alteracoes" onclick="abreAlertDelete()">CANCELAR</b
-                                                        preutt=on> 
-                                                </div>
+
+                                            <div class="botoes">
+                                                <p>Ocorreu algum imprevisto e precisa cancelar? </p>
+                                                <button class="botao-1" id="salva-alteracoes" onclick="abreAlertDelete('<%-resultadoOrcamento.idSolicitacao%>')">CANCELAR</b preutt=on>
+                                            </div>
                             </div>
                         </div>
                         <% } %>
                             <% } %>
-                        </div>
+                            <% } %>
+            </div>
 
-                            <script type="text/javascript" src="/js/sweetAlert.js"></script>  
-                            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   
-   
-                            <%- include partials/footer.ejs %>
+            <script type="text/javascript" src="/js/sweetAlert.js"></script>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-                        </body>
+
+            <%- include partials/footer.ejs %>
+
+    </body>
 
 </html>
 

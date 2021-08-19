@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include partials/head2.ejs %>
+
+    <body>
+        <%- include partials/headerAreaRestritaMembros.ejs %>
+            <main>
+                <div class="du-meuPerfil-info">
+                    <h1>Meu perfil</h1>
+                    <div class="du-meuPerfil-info-secao">
+                        <div>
+                            <p class="du-meuPerfil-info-secao-titulo">Nome</p>
+                            <p>
+                                <%=dadosMembro.nome %>
+                                    <%=dadosMembro.sobrenome %>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="du-meuPerfil-info-secao">
+                        <div>
+                            <p class="du-meuPerfil-info-secao-titulo">Email</p>
+                            <p>
+                                <%=dadosMembro.email%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="du-meuPerfil-info-secao">
+                        <div>
+                            <p class="du-meuPerfil-info-secao-titulo">CPF / CNPJ</p>
+                            <p>
+                                <%=dadosMembro.cpfCnpj%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="du-meuPerfil-info-secao">
+                        <div>
+                            <p class="du-meuPerfil-info-secao-titulo">Experiencia</p>
+                            <p>
+                                <%=dadosMembro.experiencia%>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="du-meuPerfil-info-rodape"><a href="/dashboardMembro/alterarDados"> Alterar dados </a></p>
+                    <p class="du-meuPerfil-info-rodape">Precisa alterar sua senha? <a href="/dashboardUsuario/alteraSenha">Clique aqui</a></p>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <%- include partials/footer.ejs %>
+    </body>
+
+</html>
