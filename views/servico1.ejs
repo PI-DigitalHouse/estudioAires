@@ -2,7 +2,41 @@
 <%- include partials/head2.ejs %>
 
     <body>
+        <!-- Header -->
+        <% if (!dadosUsuario){ %>
+            <div class="btnOrcamento-pgServicos">
+                <a class="orcamento-pgServicos" href="/orcamento/orcamentoSLogin">Faça seu orçamento!</a>
+            </div>
+            <%}%>
+                <%if(dadosUsuario){%>
+                    <div class="btnOrcamento-pgServicos">
+                        <a class="orcamento-pgServicos" href="/orcamento">Faça seu orçamento!</a>
+                    </div>
+                    <%}%>
+                        <!-- Header -->
+                        <div class="container-pgServicos">
+                            <div class="titulo-pgServicos">
+                                <img src="/img/imagensDeEntrada/imagemEntrada1.jpg" alt="fotografia">
+                                <div class="textoTitulo-pgServicos">
+                                    <h2>Fotografia</h2>
+                                </div>
+                            </div>
 
+                            <div class="info-pgServicos">
+                                <h4>Lorem ipsum dolor, sit amet consectetur aserawe</h4>
+                                <div class="paragrafos-pgServicos">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam voluptas voluptates rerum nihil dolorum, a odit saepe dicta libero at dolorem dolore maiores sunt non veritatis officiis unde temporibus dolor! Lorem
+                                        ipsum, dolor sit amet consectetur adipisicing elit. Cumque maxime dolorem nihil quam deleniti fugiat quas laborum provident. Nobis eaque magnam maxime nam doloremque, porro iusto doloribus.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam voluptas voluptates rerum nihil dolorum, a odit saepe dicta libero at dolorem dolore maiores sunt non veritatis officiis unde temporibus dolor! Lorem
+                                        ipsum, dolor sit amet consectetur adipisicing elit. Cumque maxime dolorem nihil quam deleniti fugiat quas laborum provident. Nobis eaque magnam maxime nam doloremque, porro iusto doloribus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer -->
+                        <%- include partials/footer.ejs %>
+                            <!-- Footer-->
     </body>
 
 </html>
