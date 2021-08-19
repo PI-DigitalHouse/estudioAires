@@ -59,7 +59,7 @@
                                     <div class="info">
                                         <p class="tipo1">Serviços contratados:</p>
                                         <p>
-                                            <!-- resultado.services.map(s=> s.tipoDeServico).join(', ')%> -->
+                                            <%=resultadoOrcamento.reservas.servico%>
                                         </p>
                                     </div>
                                 </div>
@@ -92,13 +92,14 @@
 
                             <div class="botoes">
                                 <div class="entregaveis">
-                                    <p> <a class="botoes-entregaveis-a" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>
+                                    <p> <a class="botao-1 btn_entregaveis" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>
                                 </div>
                             </div>
                         </div>
                         <% } %>
                             <% } %>
             </main>
+            <%- include partials/footer.ejs %>
     </body>
 
 </html>
