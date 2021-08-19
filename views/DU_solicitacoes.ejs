@@ -27,6 +27,7 @@
             <div>
                 <% if(resultadoOrcamentos){ %>
                     <% for (resultadoOrcamento of resultadoOrcamentos) { %>
+                        <%    if(resultadoOrcamento.reservas.status=='active'){ %>
 
                         <div class="containerServico">
                             <div class="containerEsquerda">
@@ -156,6 +157,7 @@
                             </div>
                         </div>
                         <% } %>
+                            <% } %>
                             <% } %>
             </div>
 

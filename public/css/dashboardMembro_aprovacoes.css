@@ -29,7 +29,7 @@
 #containerEsquerda-DM-Apro{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
     margin:2rem;
     justify-content: space-between;
 }
@@ -39,7 +39,7 @@
 
 
 #info-DM-Apro{
-    width: 600px;
+    width: 100%;
   
 
 }
@@ -78,11 +78,8 @@
 
 #tipo1-DM-Apro{
     font-weight: bold;
-    width: 380px;
-    margin-bottom: 0rem;
-    /* font-size: 15rem; */
+    width: 100%;
     height: fit-content;
-    
 }
 
 

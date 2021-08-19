@@ -43,29 +43,46 @@ module.exports.getProjeto3 = (req, res) => {
 }
 
 module.exports.listServico1 = (req, res) => {
+    let dadosUsuario = null
+    if (req.session && req.session.usuario) {
+        dadosUsuario = req.session.usuario
+    }
     res.render('servico1', {
-        title: 'Servico 1'
+        title: 'Servico 1',
+        dadosUsuario: dadosUsuario
     });
 }
 
 module.exports.listServico2 = (req, res) => {
+    let dadosUsuario = null
+    if (req.session && req.session.usuario) {
+        dadosUsuario = req.session.usuario
+    }
     res.render('servico2', {
         title: 'Servico 2',
-        dadosUsuario: req.session.usuario
+        dadosUsuario: dadosUsuario
     });
 }
 
 module.exports.listServico3 = (req, res) => {
+    let dadosUsuario = null
+    if (req.session && req.session.usuario) {
+        dadosUsuario = req.session.usuario
+    }
     res.render('servico3', {
         title: 'Servico 3',
-        dadosUsuario: req.session.usuario
+        dadosUsuario: dadosUsuario
     });
 }
 
 module.exports.listServico4 = (req, res) => {
+    let dadosUsuario = null
+    if (req.session && req.session.usuario) {
+        dadosUsuario = req.session.usuario
+    }
     res.render('servico4', {
         title: 'Servico 4',
-        dadosUsuario: req.session.usuario
+        dadosUsuario: dadosUsuario
     });
 }
 

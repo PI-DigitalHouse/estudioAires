@@ -1,0 +1,74 @@
+.btnOrcamento-pgServicos a {
+    text-decoration: none;
+    z-index: 988;
+    display: flex;
+    position: absolute;
+    padding: 20px;
+    top: 182px;
+    left: 0;
+    background-color: rgba(252, 118, 0, 0.7);
+    margin-top: 30px;
+    font-size: 25px;
+    color: #f5f4f6;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.orcamento-pgServicos:hover {
+    background-color: rgba(252, 118, 0, 1);
+    transition: all 0.5s ease 0s;
+}
+
+.container-pgServicos {
+    background: rgba(127, 127, 127, 0.3);
+}
+
+.titulo-pgServicos {
+    position: relative;
+}
+
+.titulo-pgServicos img {
+    width: 100%;
+    height: 300px;
+}
+
+.textoTitulo-pgServicos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    /* rgba(252, 118, 0, 1) */
+    font-size: 50px;
+}
+
+.info-pgServicos {
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* color: rgba(252, 118, 0, 1); */
+}
+
+.info-pgServicos h4 {
+    font-size: 40px;
+    padding-top: 36px;
+    padding-bottom: 18px;
+    color: rgba(252, 118, 0, 1);
+}
+
+.paragrafos-pgServicos {
+    padding-top: 18px;
+    display: flex;
+    width: 70%;
+    text-align: justify;
+}
+
+.paragrafos-pgServicos p {
+    color: #81a8e7;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 20px;
+}
