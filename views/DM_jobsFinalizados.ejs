@@ -49,7 +49,13 @@
                                     <div class="data">
                                         <p class="tipo1">Data:</p>
                                         <p>
-                                            <%=resultado.reservas.horarioInicio%>
+                                            <% const data=resultado.reservas.dataInicio %>
+                                                <% const dataString=data.toString() %>
+                                                    <% const dataFormatada=dataString.replace("21:00:00 GMT-0300", " " )
+                                                        %>
+
+                                                        <%=dataFormatada%> às
+                                                            <%=resultado.reservas.horarioInicio%>
                                         </p>
                                     </div>
                                 </div>
@@ -61,8 +67,13 @@
                                         <p>
                                             <% const servico=resultado.reservas.servico%>
                                                 <% const servicoString=servico.toString() %>
-                                                    <% const mapObj={fotografia : " Fotografia" , fotografia3603d: " Fotografia 360 3D" , videoDinamico: " Vídeo Dinâmico" , imagensAereas: " Imagens Aéreas" }; %>
-                                                        <% const servicoFormatado=servicoString.replace (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi, function (matched) {return mapObj[matched]})%>
+                                                    <% const mapObj={fotografia : " Fotografia" ,
+                                                        fotografia3603d: " Fotografia 360 3D" ,
+                                                        videoDinamico: " Vídeo Dinâmico" ,
+                                                        imagensAereas: " Imagens Aéreas" }; %>
+                                                        <% const servicoFormatado=servicoString.replace
+                                                            (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi,
+                                                            function (matched) {return mapObj[matched]})%>
 
                                                             <%=servicoFormatado%>
                                         </p>
@@ -97,7 +108,9 @@
 
                             <div class="botoes">
                                 <div class="entregaveis">
-                                    <p> <a class="botao-1 btn_entregaveis" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver entregáveis </a></p>
+                                    <p> <a class="botao-1 btn_entregaveis"
+                                            href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver
+                                            entregáveis </a></p>
                                 </div>
                             </div>
                         </div>
