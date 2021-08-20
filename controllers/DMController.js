@@ -10,13 +10,49 @@ module.exports.calendario = (req, res) => {
     });
 };
 
-module.exports.minhaAgenda = (req, res) => {
+module.exports.minhaAgenda = (async(req, res) => {
+    const { idSolicitacao, endereco, valor, tamanhoImovel, sessaoShooting } =
+        req.query;
+    const resultados = await models.Orcamento.findAll({
+        where: {
+            idSolicitacao: {
+                [Op.like]: `${idSolicitacao || ''}%`,
+            },
+            endereco: {
+                [Op.like]: `${endereco || ''}%`,
+            },
+            tamanhoImovel: {
+                [Op.like]: `${tamanhoImovel || ''}%`,
+            },
+            valor: {
+                [Op.like]: `${valor || ''}%`,
+            },
+        },
+        include: [{
+            model: models.Reserva,
+            as: 'reservas',
+            include: {
+                model: models.Usuario,
+                as: 'usuarios',
+                attributes: ['nome', 'email', 'telefone'],
+            },
+        },
+        {
+            model: models.Servico,
+            as: 'services',
+            attributes: ['tipoDeServico'],
+        },
+        ],
+        dadosMembro: req.session.membro,
+    });
+    
     res.render('DM_minhaAgenda', {
         title: 'Minha agenda',
         dadosUsuario: req.session.usuario,
         dadosMembro: req.session.membro,
+        resultados
     });
-};
+});
 
 module.exports.bloquear = async (req, res, next) => {
     const bloqueio = req.body;
