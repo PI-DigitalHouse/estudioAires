@@ -351,3 +351,9 @@ button:hover {
 #valorOrcamento {
   color: green;
 }
+
+.fas, .fa-paper-plane{
+  size: 7px;
+  color: green;
+  
+}

@@ -124,6 +124,7 @@ module.exports.logar = (async(req, res) => {
         return
     }
     const hashando = await compareHash(req.body.senha, foundUser.senha)
+    console.log(hashando)
     if (!hashando) {
         res.render('home', {
             error: {
