@@ -255,7 +255,7 @@ body.showLoginForm .modal-login {
 }
 
 .modal-login .formLogin .elemento-login a {
-  display: inline;
+  display: table-cell;
   text-decoration: none;
   color: #6996df;
 }
