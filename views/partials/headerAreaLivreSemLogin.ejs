@@ -21,19 +21,19 @@
                         <a href="/dashboardUsuario/solicitacoes"><i class="fas fa-concierge-bell"></i>Solicitacoes</a>
                         <a href="/orcamento"><i class="fas fa-plus-circle"></i>Novo Orçamento</a>
                         <a href="/dashboardUsuario/alteraDados"><i class="fas fa-portrait"></i> Alterar seus dados</a>
-        
+
                         <a href="/logout"><i class="fas fa-sign-out-alt"></i>Sair</a>
                     </div>
                 </div>
         </div>
 
-        
-            
 
 
 
-        
-      
+
+
+
+
         <% } %>
             <!--USUARIO NAO LOGADO-->
             <% if(!dadosUsuario) { %>
@@ -59,13 +59,19 @@
         <div class="elemento-login">
             <label for="email">E-mail</label>
             <input type="text" type="email" name="email" id="email" required/>
-            <!-- <span style="font-size: 15px; color:red; font-weight:bold ;">NEG EJS error.email ? error.email : ''</span> -->
+            <% if(error){ %>
+                <script>
+                    abreFormLogin()
+                </script>
+                <% } %>
+                    <span style="font-size: 15px; color:red; font-weight:bold ;"> <%= error && error.email ? error.email : '' %> </span>
+
         </div>
 
         <div class="elemento-login">
             <label for="senha">Senha</label>
             <input type="password" name="senha" required />
-            <!-- <span style="font-size: 15px; color: red; font-weight:bold ;">NEG EJS error.senha ? error.senha : ''</span> -->
+            <span style="font-size: 15px; color: red; font-weight:bold ;"> <%=error && error.senha ? error.senha : ''%></span>
         </div>
 
         <div class="elemento-login loginLink-senha">
