@@ -5,7 +5,8 @@ const session = require('express-session');
 module.exports.getHome = (req, res) => {
     res.render('home', {
         dadosUsuario: req.session.usuario || req.session.membro,
-        title: 'home'
+        title: 'home',
+        error: null
     })
 }
 
@@ -110,7 +111,29 @@ module.exports.logar = (async(req, res) => {
             }
         });
     }
-    // AQUI FICA O CÓDIGO COMENTADO LÁ NO FINAL
+    if (!foundUser) {
+        res.render('home', {
+            error: {
+                email: 'Usuário nao cadastrado'
+            },
+            value: email,
+            title: 'home',
+            dadosUsuario: null
+        })
+        console.log('email')
+        return
+    }
+    const hashando = await compareHash(req.body.senha, foundUser.senha)
+    if (!hashando) {
+        res.render('home', {
+            error: {
+                senha: 'Usuário ou senha incorreta'
+            },
+            title: 'home',
+            dadosUsuario: null
+        });
+        return
+    }
     if (foundUser.experiencia) {
         req.session.membro = foundUser;
         res.redirect('/');
@@ -134,27 +157,3 @@ module.exports.renderizaOrcamentoSLogin = (req, res, next) => {
 async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
 };
-
-// if (!foundUser) {
-//     res.render('home', {
-//         error: {
-//             email: 'Usuário nao cadastrado'
-//         },
-//         value: email,
-//         title: 'home',
-//         dadosUsuario: null
-//     })
-//     console.log('email')
-//     return
-// }
-// const hashando = await compareHash(req.body.senha, foundUser.senha)
-// if (!hashando) {
-//     res.render('home', {
-//         error: {
-//             senha: 'Usuário ou senha incorreta'
-//         },
-//         title: 'home',
-//         dadosUsuario: null
-//     });
-//     return
-// }

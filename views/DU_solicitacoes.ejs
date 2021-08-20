@@ -60,7 +60,7 @@
                                             <p>
                                                 <% const data=resultadoOrcamento.reservas.dataInicio %>
                                                     <% const dataString=data.toString() %>
-                                                        <% const dataFormatada=dataString.replace("21:00:00 GMT-0300 (Brasilia Standard Time)", " " ) %>
+                                                        <% const dataFormatada=dataString.replace("21:00:00 GMT-0300", " " ) %>
 
                                                             <%=dataFormatada%> às <%=resultadoOrcamento.reservas.horarioInicio%>
                                             </p>
