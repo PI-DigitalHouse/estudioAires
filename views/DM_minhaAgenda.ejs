@@ -38,7 +38,19 @@
                             </div>
                             <div class="info">
                                 <p class="tipo1">Serviços contratados:</p>
-                                <p><%=resultado.tamanhoImovel%>  m²</p>
+                                <p>
+                                    <% const servico=resultado.reservas.servico%>
+                                        <% const servicoString=servico.toString() %>
+                                            <% const mapObj={fotografia : " Fotografia" ,
+                                                fotografia3603d: " Fotografia 360 3D" ,
+                                                videoDinamico: " Vídeo Dinâmico" ,
+                                                imagensAereas: " Imagens Aéreas" }; %>
+                                                <% const servicoFormatado=servicoString.replace
+                                                    (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi,
+                                                    function (matched) {return mapObj[matched]})%>
+
+                                                    <%=servicoFormatado%>
+                                </p>
                             </div>
                         </div>
             
@@ -65,7 +77,15 @@
                     <div class="containerCentro">
                     
                         <p class="tipo1">Data e horario agendado:</p>
-                        <p><%=resultado.reservas.horarioInicio%></p>
+                        <p>
+                            <% const data=resultado.reservas.dataInicio %>
+                                <% const dataString=data.toString() %>
+                                    <% const dataFormatada=dataString.replace("21:00:00 GMT-0300", " " )
+                                        %>
+
+                                        <%=dataFormatada%> às
+                                            <%=resultado.reservas.horarioInicio%>
+                        </p>
         
                         <div class="botoes" style="width: 150px; height: 18px;">
                             <form>
