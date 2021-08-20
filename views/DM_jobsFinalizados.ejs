@@ -59,7 +59,12 @@
                                     <div class="info">
                                         <p class="tipo1">Serviços contratados:</p>
                                         <p>
-                                            <!-- <=resultadoOrcamento.reservas.servico> -->
+                                            <% const servico=resultado.reservas.servico%>
+                                                <% const servicoString=servico.toString() %>
+                                                    <% const mapObj={fotografia : " Fotografia" , fotografia3603d: " Fotografia 360 3D" , videoDinamico: " Vídeo Dinâmico" , imagensAereas: " Imagens Aéreas" }; %>
+                                                        <% const servicoFormatado=servicoString.replace (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi, function (matched) {return mapObj[matched]})%>
+
+                                                            <%=servicoFormatado%>
                                         </p>
                                     </div>
                                 </div>

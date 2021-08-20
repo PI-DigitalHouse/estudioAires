@@ -30,7 +30,7 @@ module.exports.bloquear = async (req, res, next) => {
 };
 
 module.exports.mostraJobs = async (req, res) => {
-    const { idSolicitacao, endereco, valor, tamanhoImovel, sessaoShooting } =
+    const { idSolicitacao, endereco, valor, tamanhoImovel } =
         req.query;
     const resultadosJobs = await models.Orcamento.findAll({
         where: {
@@ -64,6 +64,7 @@ module.exports.mostraJobs = async (req, res) => {
         ],
         dadosMembro: req.session.membro,
     });
+    
     console.log(resultadosJobs);
     res.render('DM_jobsFinalizados', {
         title: 'Meus jobs finalizados',
