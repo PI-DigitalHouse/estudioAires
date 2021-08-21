@@ -64,6 +64,12 @@ ul {
   padding-left: 8px;
 }
 
+.social-links {
+  width: 114%;
+  position: relative;
+  right: 1rem;
+}
+
 .footer-col .social-links a {
   display: inline-block;
   height: 40px;
