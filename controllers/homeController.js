@@ -137,7 +137,7 @@ module.exports.logar = (async(req, res) => {
     }
     if (foundUser.experiencia) {
         req.session.membro = foundUser;
-        res.redirect('/');
+        res.redirect('/dashboardMembro/minhaAgenda');
         return
     }
     req.session.usuario = foundUser;

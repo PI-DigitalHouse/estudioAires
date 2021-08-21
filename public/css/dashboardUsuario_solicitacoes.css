@@ -30,6 +30,7 @@ body {
 .cronos {
   display: flex;
   margin-right: 15px;
+  z-index: -1;
 }
 
 p {
@@ -116,7 +117,6 @@ p {
 .fases {
   display: flex;
   justify-content: space-between;
-  /* font-size: 14rem; */
 }
 
 .fases p {
