@@ -89,7 +89,7 @@ module.exports.mostraJobs = async (req, res) => {
             include: {
                 model: models.Usuario,
                 as: 'usuarios',
-                attributes: ['nome', 'email', 'telefone'],
+                attributes: ['nome', 'email', 'telefone', 'status'],
             },
         },
         {

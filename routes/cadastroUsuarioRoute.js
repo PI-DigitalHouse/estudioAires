@@ -10,9 +10,9 @@ router.post('/', [
         check('sobrenome').notEmpty().withMessage('Campo obrigatório').bail(),
         check('email').notEmpty().withMessage('Campo obrigatório').bail().
         isEmail().withMessage('E-mail inválido').bail(),
-        check('telefone').isLength({ min: 6, max: 11 }).withMessage('Telefone incompleto').bail(),
+        check('telefone').isLength({ min: 1, max: 21 }).withMessage('Telefone incompleto').bail(),
         check('telefone').notEmpty().withMessage('Campo obrigatório').bail(),
-        check('cpfCnpj').isLength({ min: 11, max: 14 }).withMessage('Valor de CPF ou CNPJ invalido').bail(),
+        check('cpfCnpj').isLength({ min: 1, max: 14 }).withMessage('Valor de CPF ou CNPJ invalido').bail(),
         check('cpfCnpj').notEmpty().withMessage('Campo obrigatório').bail(),
         check('comoConheceu').notEmpty().withMessage('Campo obrigatório').bail(),
         check('termosDeUso').notEmpty().withMessage('Campo obrigatório').bail()
