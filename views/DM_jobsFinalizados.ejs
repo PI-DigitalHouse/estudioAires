@@ -5,7 +5,7 @@
     <body>
         <%-include partials/headerAreaRestritaMembros.ejs%>
             <main>
-                <div class="ordenacao ordenacaoMargin">
+                <!-- <div class="ordenacao ordenacaoMargin">
                     <div class="cronos cronosMargin">
                         <p>Ordenar por:</p>
                         <select name="ordCronologica" id="ordCronologica" class="dropdown">
@@ -20,116 +20,109 @@
                             <input type="submit" value="Pesquisar">
                         </form>
                     </div>
-                </div>
+                </div> -->
                 <% if (resultadosJobs) { %>
                     <% for (resultado of resultadosJobs) { %>
-                        <%    if(resultado.reservas.status=='finalizado'){ %>
-                        <div class="containerServico containerPadding">
-                            <div class="containerEsquerda">
-                                <div class="servicoContratado1">
-                                    <h2>Número serviço: <%= resultado.idSolicitacao%>
-                                    </h2>
-                                    <div class="info">
-                                        <p class="tipo1">Endereço:
-                                        </p>
-                                        <p>
-                                            <%= resultado.endereco%>
-                                        </p>
-                                    </div>
-                                    <div class="info">
-                                        <p class="tipo1">Valor do serviço:</p>
-                                        <p>R$ <%= resultado.valor%>
-                                        </p>
-                                    </div>
-                                    <div class="info">
-                                        <p class="tipo1">Tamanho aproximado do imóvel:</p>
-                                        <p>
-                                            <%= resultado.valor%> m²
-                                        </p>
-                                    </div>
-                                    <div class="info">
-                                        <p class="tipo1">Data:</p>
-                                        <p>
-                                            <% const data=resultado.reservas.dataInicio %>
-                                                <% const dataString=data.toString() %>
-                                                    <% const dataFormatada=dataString.replace("21:00:00 GMT-0300", " " )
-                                                        %>
+                        <% if(resultado.reservas.status=='finalizado' ){ %>
+                            <div class="containerServico containerPadding">
+                                <div class="containerEsquerda">
+                                    <div class="servicoContratado1">
+                                        <h2>Número serviço: <%= resultado.idSolicitacao%>
+                                        </h2>
+                                        <div class="info">
+                                            <p class="tipo1">Endereço:
+                                            </p>
+                                            <p>
+                                                <%= resultado.endereco%>
+                                            </p>
+                                        </div>
+                                        <div class="info">
+                                            <p class="tipo1">Valor do serviço:</p>
+                                            <p>R$ <%= resultado.valor%>
+                                            </p>
+                                        </div>
+                                        <div class="info">
+                                            <p class="tipo1">Tamanho aproximado do imóvel:</p>
+                                            <p>
+                                                <%= resultado.valor%> m²
+                                            </p>
+                                        </div>
+                                        <div class="info">
+                                            <p class="tipo1">Data:</p>
+                                            <p>
+                                                <% const data=resultado.reservas.dataInicio %>
+                                                    <% const dataString=data.toString() %>
+                                                        <% const dataFormatada=dataString.replace("21:00:00 GMT-0300", " " ) %>
 
-                                                        <%=dataFormatada%> às
-                                                            <%=resultado.reservas.horarioInicio%>
-                                        </p>
+                                                            <%=dataFormatada%> às
+                                                                <%=resultado.reservas.horarioInicio%>
+                                            </p>
+                                        </div>
+                                        <div class="info">
+                                            <p class="tipo1">Status dessa solicitacao:</p>
+                                            <p>
+                                                <%=resultado.reservas.status%>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="info">
-                                        <p class="tipo1">Status dessa solicitacao:</p>
-                                        <p>
-                                            <%=resultado.reservas.status%>
-                                        </p>
+
+                                    <div class="servicoContratado2">
+                                        <br>
+                                        <div class="info">
+                                            <p class="tipo1">Serviços contratados:</p>
+                                            <p>
+                                                <% const servico=resultado.reservas.servico%>
+                                                    <% const servicoString=servico.toString() %>
+                                                        <% const mapObj={fotografia : " Fotografia" , fotografia3603d: " Fotografia 360 3D" , videoDinamico: " Vídeo Dinâmico" , imagensAereas: " Imagens Aéreas" }; %>
+                                                            <% const servicoFormatado=servicoString.replace (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi, function (matched) {return mapObj[matched]})%>
+
+                                                                <%=servicoFormatado%>
+                                            </p>
+                                        </div>
                                     </div>
+
                                 </div>
 
-                                <div class="servicoContratado2">
-                                    <br>
+                                <div class="servicoContratado3">
                                     <div class="info">
-                                        <p class="tipo1">Serviços contratados:</p>
+                                        <p class="tipo2"> Informações do (a) cliente </p>
+                                    </div>
+                                    <div class="info">
+                                        <p class="tipo1">Nome:</p>
                                         <p>
-                                            <% const servico=resultado.reservas.servico%>
-                                                <% const servicoString=servico.toString() %>
-                                                    <% const mapObj={fotografia : " Fotografia" ,
-                                                        fotografia3603d: " Fotografia 360 3D" ,
-                                                        videoDinamico: " Vídeo Dinâmico" ,
-                                                        imagensAereas: " Imagens Aéreas" }; %>
-                                                        <% const servicoFormatado=servicoString.replace
-                                                            (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi,
-                                                            function (matched) {return mapObj[matched]})%>
-
-                                                            <%=servicoFormatado%>
+                                            <%=resultado.reservas.usuarios.nome%>
                                         </p>
                                     </div>
+                                    <div class="info">
+                                        <p class="tipo1">Email:</p>
+                                        <p>
+                                            <%=resultado.reservas.usuarios.email%>
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <p class="tipo1">Telefone:</p>
+                                        <p>
+                                            <%=resultado.reservas.usuarios.telefone%>
+                                        </p>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="botoes">
+                                    <div class="entregaveis">
+
+                                        <p> <a class="botao-1 btn_entregaveis" href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver
+                                                entregáveis </a></p>
+
+                                    </div>
+
                                 </div>
 
                             </div>
-
-                            <div class="servicoContratado3">
-                                <div class="info">
-                                    <p class="tipo2"> Informações do (a) cliente </p>
-                                </div>
-                                <div class="info">
-                                    <p class="tipo1">Nome:</p>
-                                    <p>
-                                        <%=resultado.reservas.usuarios.nome%>
-                                    </p>
-                                </div>
-                                <div class="info">
-                                    <p class="tipo1">Email:</p>
-                                    <p>
-                                        <%=resultado.reservas.usuarios.email%>
-                                    </p>
-                                </div>
-                                <div class="info">
-                                    <p class="tipo1">Telefone:</p>
-                                    <p>
-                                        <%=resultado.reservas.usuarios.telefone%>
-                                    </p>
-                                </div>
-
-
-                            </div>
-
-                            <div class="botoes">
-                                <div class="entregaveis">
-                                    
-                                    <p> <a class="botao-1 btn_entregaveis"
-                                            href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver
-                                            entregáveis </a></p>
-                                            
-                                </div>
-                                
-                            </div>
-                         
-                        </div>
-                        <% } %>
                             <% } %>
-                            <% } %> 
+                                <% } %>
+                                    <% } %>
             </main>
             <%- include partials/footer.ejs %>
     </body>

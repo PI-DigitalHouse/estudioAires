@@ -47,5 +47,6 @@ html {
 /* Posicionamento do botão na página DM_jobsfinalizados.ejs */
 .btn_entregaveis {
   position: relative;
-  top: 10rem;
+  top: 15.1rem;
+  left: 12rem;
 }
