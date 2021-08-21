@@ -39,6 +39,8 @@ p {
   border-radius: 10px;
   background-color: white;
   justify-content: center;
+  border-left-color:green;
+  border-left-width: 10px;
 }
 
 .containerServicoCanceladoMinhaAgenda {
