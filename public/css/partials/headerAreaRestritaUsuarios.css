@@ -17,6 +17,10 @@
   font-size: 24px;
 }
 
+#headerAreaRestritaUsuarios__nav {
+  width: fit-content;
+}
+
 .headerAreaRestritaUsuarios__links-header li {
   font-size: 22px;
   display: inline-block;
@@ -96,4 +100,3 @@
   right: 0.125rem;
   top: 7rem;
 }
-
