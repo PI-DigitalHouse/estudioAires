@@ -1,218 +1,291 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-/* html{
-    font-size: 6.25%;
-} */
+/* ordenação */
 
-body{
-    font-family: "Lato", sans-serif;
-    /* font-size: 20rem; */
-    background-image: url ("../img/bg-opacity.png");
-    margin: 0px;
-}
-main{
-    display: flex;
-    justify-content:center;
-    flex-wrap: wrap;
-
+#ordenacaominhaAgenda {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-right: 1.3rem;
 }
 
-.dash-mem-jobs-fin{
-    text-decoration: none;
-    color: white;
-}
-.containerServico{
-    display: flex;
-    border: 2px solid #fff ;
-    margin: 20px;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    background-color:white;
-    justify-content: space-around;
-    width: 100%;
+.link-calendarioMinhaAgenda a {
+  color: white;
 }
 
-.containerEsquerda{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: flex-start;
-    
+.buscarMinhaAgenda {
+  margin-left: 1rem;
+  height: fit-content;
+}
+.dropdownMinhaAgenda {
+  height: fit-content;
+  /* font-size: 14rem; */
 }
 
-h2{
-    /* font-size: 26rem; */
+#cronosMinhaAgenda {
+  display: flex;
+  margin-right: 15px;
+  z-index: -1;
 }
 
-.info{
-    /* font-size: 120rem; */
-}
-.form{
-    width: 25%;
-}
-.servicoContratado1{
-    
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    flex-direction: column;
-
+p {
+  margin: 0 5px 0 0;
 }
 
-.servicoContratado1 .info p{ 
-    display: inline;
-    margin: 4rem;
+/* serviços */
+#containerServicoMinhaAgenda {
+  display: flex;
+  border: 2px solid #fff;
+  margin: 20px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: white;
+  justify-content: center;
 }
 
-.tipo1{
-    font-weight: bold;
+.containerServicoCanceladoMinhaAgenda {
+  display: flex;
+  border: 2px solid #fff;
+  margin: 20px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: white;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
-.servicoContratado2{
-    height: 100%;
-    margin: 4rem;
+.containerEsquerdaMinhaAgenda {
+  display: flex;
+  width: 50%;
 }
 
-.servicoContratado2 .info p{
-    margin: 0px
+.infoMinhaAgenda {
+  margin-bottom: 7%;
+  margin-top: 7%;
+  display: flex;
 }
 
-.servicoContratado3{
-    margin: 4rem;
+.containerCentroMinhaAgenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4.2rem;
 }
 
-
-
-.tipo2{
-    font-weight: bold;
-    text-decoration: underline;  
+.formMinhaAgenda {
+  /* margin-left: -3rem;
+  margin-top: 2rem; */
+  position: relative;
+  top: 5rem;
+  left: 13rem;
 }
 
-.containerDireita{
-    width: 20%;
-    margin-right: 100px;
+.servicoContratado1MinhaAgenda {
+  margin: 1rem;
 }
 
-.informacoes{
-    /* font-size: 12rem; */
-    text-align: end;
+.servicoContratado1MinhaAgenda .infoMinhaAgenda p {
+  display: inline;
 }
 
-/* .botoes{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 25%;
-    justify-content: center;
-    height: 100%;
+.tipo1MinhaAgenda {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
 }
 
-.botoes p{
-    margin: 0px;
-    text-align: center;
+input[type='file'] {
+  color: transparent;
 }
 
-
-
-.botoes .botoes-1{
-    border: 1.5px solid #FC7600;
-    background-color:#FC7600;
-    border-radius: 10px;
-    padding: 5px;
-    font-size: 20rem;
-    width: 50%;
-    
+.tipo1MinhaAgendaHorario {
+  width: 12rem;
 }
 
-.botoes .botoes-1:hover{
-    background-color: #fa8d2e;
-    border: 1.5px solid #fa8d2e;
-} */
-
-.link-calendario a {
-    text-decoration: none;
-    color: black;
-    margin-left: 20px;
+.servicoContratado2MinhaAgenda {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 59%;
 }
 
+.servicoContratado2MinhaAgenda .infoMinhaAgenda p {
+  margin: 0px;
+}
 
-@media (max-width:600px){
-    .containerServico{
-        display: flex;
-        border: 2px solid #fff ;
-        margin: 20px;
-        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        background-color:white;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-    }
-    .containerEsquerda{
-        display: flex;
-        width: 100%;
-        height: fit-content;
-        flex-wrap: wrap;
-    }
-    .containerCentro{
-        width: 100%;
-        margin-top: 20rem;
-        margin-left: 40rem;
-    }
-    .containerDireita{
-        width: 100%;
-        
-    }
-    .servicoContratado1{
-        width: fit-content;
-        margin: 20rem;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100%;
-    }
-    .servicoContratado2{
-        margin: 20rem;
-        width: 100%;
-        height: fit-content;
-    }
-    .servicoContratado3{
-        margin: 20rem;
-        width: 100%;
-        display: inline-block;
-    }
-    /* .botoes{
-        justify-content: center;
-        display: flex;
-        width: 100%;
-        height: 10%;
-        margin: 16rem;
-        margin-top: 0rem;
-    }
-    .botoes .entregaveis{
-        border: 1.5px solid #FC7600;
-        background-color:#FC7600;
-        border-radius: 10px;
-        padding: 5px;
-        font-size: 14rem;
-        width: 100%;
-        margin: 0rem;
-    }
-    .botoes .prestador{
-        width: 100%;
-        margin: 0rem;
-    } */
-    .containerDireita{
-        width: 100%;
-        margin: 0rem;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .informacoes{
-        margin-left: 50rem;
-    }
-    .info{
-        text-align: left;
-    }
-    
+.containerDireitaMinhaAgenda {
+  position: relative;
+  top: 12rem;
+  left: 0.3rem;
+  height: 0;
+}
+
+.containerDireitaMinhaAgenda a {
+  text-decoration: none;
+  color: black;
+  width: 50%;
+}
+
+.finalizouMinhaAgenda {
+  position: relative;
+  top: 11.5rem;
+  left: 6rem;
+  height: 0;
+}
+
+#salva-alteracoesMinhaAgenda {
+  margin: 1rem 0rem 0rem 2.3rem;
+}
+
+.prestadorMinhaAgenda {
+  margin-top: 40px;
+}
+
+.statusMinhaAgenda {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  margin-top: 15px;
+}
+
+.fasesMinhaAgenda {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fasesMinhaAgenda p {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.stepMinhaAgenda {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #acaca6;
+  border-radius: 50%;
+}
+
+.farolMinhaAgenda {
+  position: relative;
+}
+
+.bolinhasMinhaAgenda {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.bolaOkMinhaAgenda {
+  height: 25px;
+  width: 25px;
+  background-color: #27ae60;
+  border: #acaca6 solid 1px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.bolaMinhaAgenda {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border: #acaca6 solid 1px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.linhaMinhaAgenda {
+  position: absolute;
+  background: #acaca6;
+  width: 76%;
+  height: 1.5px;
+  margin-left: 65px;
+  top: 12px;
+}
+
+.botoesMinhaAgenda .prestadorMinhaAgenda {
+  border: 1.5px solid #bfbfbf;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+.botoesMinhaAgenda .prestadorMinhaAgenda a {
+  padding: 5px;
+  font-size: 14rem;
+  color: black;
+}
+
+.botoesMinhaAgenda .prestadorMinhaAgenda:hover {
+  background-color: #d4d4d4;
+  border: 1.5px solid #d4d4d4;
+}
+
+.botoesMinhaAgenda .entregaveisMinhaAgenda {
+  border: 1.5px solid #fc7600;
+  background-color: #fc7600;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14rem;
+  width: 100%;
+  text-align: center;
+}
+.botoesMinhaAgenda .entregaveisMinhaAgenda a {
+  padding: 5px;
+  font-size: 14rem;
+  color: black;
+}
+
+.botoesMinhaAgenda .entregaveisMinhaAgenda:hover {
+  background-color: #fa8d2e;
+  border: 1.5px solid #fa8d2e;
+}
+
+.botoesMinhaAgenda .remarcacaoMinhaAgenda {
+  margin-top: 25px;
+  border: 1.5px solid #fc7600;
+  background-color: #fc7600;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14rem;
+  width: 100%;
+  text-align: center;
+}
+.botoesMinhaAgenda .remarcacaoMinhaAgenda a {
+  padding: 5px;
+  font-size: 14rem;
+  color: black;
+}
+
+.botoesMinhaAgenda .remarcacaoMinhaAgenda:hover {
+  background-color: #fa8d2e;
+  border: 1.5px solid #fa8d2e;
+}
+*/ .rodapeMinhaAgenda {
+  /* font-size: 14rem; */
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+}
+
+.rodapeMinhaAgenda p {
+  margin-right: 95px;
+}
+
+.cancelamentoMinhaAgenda {
+  border: none;
+  font-family: 'Lato';
+  /* font-size: 14rem; */
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: white;
+  text-decoration: underline;
 }

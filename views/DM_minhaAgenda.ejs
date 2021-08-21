@@ -1,149 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include partials/head2.ejs %>
+<%- include partials/head2.ejs %>
 
-<body>
-    <%- include partials/headerAreaRestritaMembros.ejs %>
-    <main>
-        <div class="ordenacao">
-            <div class="cronos">
-                <p>Ordenar por:</p>
-                <select name="ordCronologica" id="ordCronologica" class="dropdown">
-                    <option value="mais nova a mais antiga">Mais nova a mais antiga</option>
-                    <option value="mais antiga a mais nova">Mais antiga a mais nova</option>
-                </select>
-            </div>
-            <p> Buscar: </p>
-            <input type="text" name="nome">
-            <div class="link-calendario"><a href="http://localhost:3000/dashboardMembro/calendario">Bloquear calendario</a></div>
-        </div>
-        </main>
-<div>
-        <% if (resultados) { %> 
-            <% for (resultado of resultados) { %> 
-                <%    if(resultado.reservas.status=='active'){ %>
-                <div id="containerServico">
-                    <div class="containerEsquerda">
-                        <div class="servicoContratado1">
-                            <h2>Número serviço: <%=resultado.idSolicitacao%></h2>
-                        
-                            <div class="info">
-                                <p class="tipo1">Endereço:</p>                        
-                                <p><%=resultado.endereco%> </p>
-                            </div>
-                            <div class="info">
-                                <p class="tipo1">Valor do serviço:</p>
-                                <p>R$ <%=resultado.valor%> </p>
-                            </div>
-                            <div class="info">
-                                <p class="tipo1">Tamanho aproximado do imóvel:</p>
-                                <p><%=resultado.tamanhoImovel%>  m²</p>
-                            </div>
-                            <div class="info">
-                                <p class="tipo1">Serviços contratados:</p>
-                                <p>
-                                    <% const servico=resultado.reservas.servico%>
-                                        <% const servicoString=servico.toString() %>
-                                            <% const mapObj={fotografia : " Fotografia" ,
-                                                fotografia3603d: " Fotografia 360 3D" ,
-                                                videoDinamico: " Vídeo Dinâmico" ,
-                                                imagensAereas: " Imagens Aéreas" }; %>
-                                                <% const servicoFormatado=servicoString.replace
-                                                    (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi,
-                                                    function (matched) {return mapObj[matched]})%>
+    <body>
+        <%- include partials/headerAreaRestritaMembros.ejs %>
+            <main>
+                <div id="ordenacaominhaAgenda">
+                    <div class="link-calendarioMinhaAgenda botao-1"><a href="http://localhost:3000/dashboardMembro/calendario">Bloquear calendario</a></div>
+                </div>
+            </main>
+            <div>
+                <% if (resultados) { %>
+                    <% for (resultado of resultados) { %>
+                        <% if(resultado.reservas.status=='active' ){ %>
+                            <div id="containerServicoMinhaAgenda">
+                                <div class="containerEsquerdaMinhaAgenda">
+                                    <div class="servicoContratado1MinhaAgenda">
+                                        <h2>Número serviço: <%=resultado.idSolicitacao%>
+                                        </h2>
 
-                                                    <%=servicoFormatado%>
-                                </p>
-                            </div>
-                        </div>
-            
-                        <div class="servicoContratado2">
-                            
-                            <div class="info">
-                                <p class="tipo2"> Informações do (a) cliente </p>
-                            </div>
-                            <div class="info">
-                                <p class="tipo1">Nome :</p>
-                                <p><%=resultado.nomeContato%></p>
-                            </div>
-                            <div class="info">
-                                <p class="tipo1">Email:</p>
-                                <p><%=resultado.reservas.usuarios.email%></p>
-                            </div>
-                            <div class="info">
-                                <p class="tipo1">Telefone:</p>
-                                <p><%=resultado.telefoneContato%></p>
-                            </div>
-                        </div>
-                    </div>   
-        
-                    <div class="containerCentro">
-                    
-                        <p class="tipo1">Data e horario agendado:</p>
-                        <p>
-                            <% const data=resultado.reservas.dataInicio %>
-                                <% const dataString=data.toString() %>
-                                    <% const dataFormatada=dataString.replace("21:00:00 GMT-0300", " " )
-                                        %>
+                                        <div class="infoMinhaAgenda">
+                                            <p class="tipo1MinhaAgenda">Endereço:</p>
+                                            <p>
+                                                <%=resultado.endereco%>
+                                            </p>
+                                        </div>
+                                        <div class="infoMinhaAgenda">
+                                            <p class="tipo1MinhaAgenda">Valor do serviço:</p>
+                                            <p>R$ <%=resultado.valor%>
+                                            </p>
+                                        </div>
+                                        <div class="infoMinhaAgenda">
+                                            <p class="tipo1MinhaAgenda">Tamanho aproximado do imóvel:</p>
+                                            <p>
+                                                <%=resultado.tamanhoImovel%> m²
+                                            </p>
+                                        </div>
+                                        <div class="infoMinhaAgenda">
+                                            <p class="tipo1MinhaAgenda">Serviços contratados:</p>
+                                            <p>
+                                                <% const servico=resultado.reservas.servico%>
+                                                    <% const servicoString=servico.toString() %>
+                                                        <% const mapObj={fotografia : " Fotografia" , fotografia3603d: " Fotografia 360 3D" , videoDinamico: " Vídeo Dinâmico" , imagensAereas: " Imagens Aéreas" }; %>
+                                                            <% const servicoFormatado=servicoString.replace (/fotografia|fotografia3603d|videoDinamico|imagensAereas/gi, function (matched) {return mapObj[matched]})%>
 
-                                        <%=dataFormatada%> às
-                                            <%=resultado.reservas.horarioInicio%>
-                        </p>
-        
-                        <div class="botoes" style="width: 150px; height: 18px;">
-                            <form>
-                                <input class = "botoes-2" type="file" multiple="multiple">
-                            </form>
-                                
-                <!--             < for(let i = 0; i<aprovacao.horariosSelecionados.length ; i ++){ %>  
+                                                                <%=servicoFormatado%>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="servicoContratado2MinhaAgenda">
+
+                                        <div class="infoMinhaAgenda">
+                                            <p class="tipo2MinhaAgenda"> Informações do (a) cliente </p>
+                                        </div>
+                                        <div class="infoMinhaAgenda">
+                                            <p class="tipo1MinhaAgenda">Nome :</p>
+                                            <p>
+                                                <%=resultado.nomeContato%>
+                                            </p>
+                                        </div>
+                                        <div class="infoMinhaAgenda">
+                                            <p class="tipo1MinhaAgenda">Email:</p>
+                                            <p>
+                                                <%=resultado.reservas.usuarios.email%>
+                                            </p>
+                                        </div>
+                                        <div class="infoMinhaAgenda">
+                                            <p class="tipo1MinhaAgenda">Telefone:</p>
+                                            <p>
+                                                <%=resultado.telefoneContato%>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="containerCentroMinhaAgenda">
+
+                                    <p class="tipo1MinhaAgenda">Data e horario agendado:</p>
+                                    <p class="tipo1MinhaAgendaHorario">
+                                        <% const data=resultado.reservas.dataInicio %>
+                                            <% const dataString=data.toString() %>
+                                                <% const dataFormatada=dataString.replace("21:00:00 GMT-0300", " " ) %>
+
+                                                    <%=dataFormatada%> às
+                                                        <%=resultado.reservas.horarioInicio%>
+                                    </p>
+
+                                    <div class="botoes" style="width: 150px; height: 18px;">
+                                        <form class="formMinhaAgenda">
+                                            <input class="botao" type="file" multiple="multiple">
+                                        </form>
+
+                                        <!--             < for(let i = 0; i<aprovacao.horariosSelecionados.length ; i ++){ %>  
                                 <div>
                                     <input type="radio" id = "horario1" name="answer">
                                     <label>< aprovacao.horariosSelecionados[i] </label> 
                                 </div>
                             } > 
                              -->
-                        </div>
-                    </div>
-        
-                    <div class="containerDireita">
-                        <div class="botoes">
-                            <div class="entregaveis">
-                               
-                            </div> 
-                           
-                        </div>
-                        <a href="dashboardMembro_modal.html" class="informacoes">Mais informações</a>
-                    </div>
-                    <div class="botoes">
-                        <form>
-                            <input class = "botoes-2" type="file" multiple="multiple">
-                        </form>
-                        
-                        <div class="botoes">
-                            <p>Finalizou o servico? </p>
-                            <button class="botao-1" id="salva-alteracoes" onclick="abreAlertFinalizar(('<%-resultado.idSolicitacao%>'))">Finalizar</b preutt=on>
-                        </div>
-                    </div>
-                </div>
-            <% } %> 
-            <% } %>
-            <% } else { %>
-                 <div id="containerServico">
-        
-                    <div class="servicoContratado1">
-                        <h2>Ops! Voce ainda nao tem novas solicitacoes</h2>
-                    </div>
-        
-                </div>
-                
-                <% } %> 
+                                    </div>
+                                </div>
 
-                </div>
+                                <div class="containerDireitaMinhaAgenda">
+                                    <div>
+                                        <div>
+
+                                        </div>
+
+                                    </div>
+                                    <a href="dashboardMembro_modal.html" class="informacoesMinhaAgenda botao-2">Mais informações</a>
+                                </div>
+                                <div class="finalizouMinhaAgenda">
+                                    <p>Finalizou o servico? </p>
+                                    <button class="botao-1" id="salva-alteracoesMinhaAgenda" onclick="abreAlertFinalizar(('<%-resultado.idSolicitacao%>'))">Finalizar</b preutt=on>
+                                </div>
+                            </div>
             </div>
-                     
+            <% } %>
+                <% } %>
+                    <% } else { %>
+                        <div id="containerServicoMinhaAgenda">
 
-    </main>
-    <script type="text/javascript" src="/js/sweetAlertMembro.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
+                            <div class="servicoContratado1MinhaAgenda">
+                                <h2>Ops! Voce ainda nao tem novas solicitacoes</h2>
+                            </div>
+
+                        </div>
+
+                        <% } %>
+
+                            </div>
+                            </div>
+
+
+                            </main>
+                            <script type="text/javascript" src="/js/sweetAlertMembro.js"></script>
+                            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+
 </html>
