@@ -118,3 +118,17 @@
   display: flex;
   margin-top: 20px;
 }
+
+/* Estilo para página de calendário do dashboardMembro/calendario */
+
+#tituloCalendario {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#ajustaBotaoCalendario {
+  margin-left: 41rem;
+  margin-bottom: 1rem;
+  background: rgba(252, 118, 0, 0.7);
+  border-color: transparent;
+}
