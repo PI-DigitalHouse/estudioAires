@@ -105,7 +105,7 @@ body {
   flex-direction: column;
   box-shadow: 2px 2px 7px rgba(112, 112, 112, 0.25);
   width: 100%;
-  height: fit-content;
+  height: 24rem;
   border-radius: 18px;
   margin: 2rem;
   margin-left: 0rem;
@@ -341,6 +341,13 @@ button:hover {
   margin-left: 28px;
 }
 
+.ajustaBotaoOrcamento {
+  height: 30px;
+  position: relative;
+  top: 1.3rem;
+  width: 5rem;
+}
+
 #check-disponibilidade {
   margin-left: 12px;
 }
@@ -351,4 +358,3 @@ button:hover {
 #valorOrcamento {
   color: green;
 }
-
