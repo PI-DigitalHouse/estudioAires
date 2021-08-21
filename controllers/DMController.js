@@ -86,10 +86,11 @@ module.exports.mostraJobs = async (req, res) => {
         include: [{
             model: models.Reserva,
             as: 'reservas',
+           
             include: {
                 model: models.Usuario,
                 as: 'usuarios',
-                attributes: ['nome', 'email', 'telefone', 'status'],
+                attributes: ['nome', 'email', 'telefone'],
             },
         },
         {
@@ -213,3 +214,4 @@ module.exports.alteraDados = async(req, res) => {
         res.redirect('/dashboardMembro/meuPerfil')
     })
 }
+

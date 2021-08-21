@@ -23,6 +23,7 @@
                 </div>
                 <% if (resultadosJobs) { %>
                     <% for (resultado of resultadosJobs) { %>
+                        <%    if(resultado.reservas.status=='finalizado'){ %>
                         <div class="containerServico containerPadding">
                             <div class="containerEsquerda">
                                 <div class="servicoContratado1">
@@ -56,6 +57,12 @@
 
                                                         <%=dataFormatada%> às
                                                             <%=resultado.reservas.horarioInicio%>
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <p class="tipo1">Status dessa solicitacao:</p>
+                                        <p>
+                                            <%=resultado.reservas.status%>
                                         </p>
                                     </div>
                                 </div>
@@ -104,18 +111,25 @@
                                         <%=resultado.reservas.usuarios.telefone%>
                                     </p>
                                 </div>
+
+
                             </div>
 
                             <div class="botoes">
                                 <div class="entregaveis">
+                                    
                                     <p> <a class="botao-1 btn_entregaveis"
                                             href="../dashboardUsuario/dashboardUsuario_entregaveis.html"> Ver
                                             entregáveis </a></p>
+                                            
                                 </div>
+                                
                             </div>
+                         
                         </div>
                         <% } %>
                             <% } %>
+                            <% } %> 
             </main>
             <%- include partials/footer.ejs %>
     </body>

@@ -119,3 +119,24 @@ module.exports.deletarOrcamento = async(req, res) => {
         res.redirect('/dashboardUsuario/solicitacoes')
     }
 }
+
+module.exports.finalizarJob = async(req, res) => {
+    const { idOrcamento: idReserva } = req.query
+    const job = await models.Reserva.findOne({
+        where: {
+            idReserva: idReserva
+        }
+    })
+    if (job) {
+        await job.update({
+            status: 'finalizado'
+        }, {
+            where: {
+                idReserva: idReserva}
+            }),
+
+        res.redirect('/dashboardMembro/minhaAgenda')
+    } else {
+        res.redirect('/dashboardMembro/minhaAgenda')
+    }
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include partials/head2.ejs %>
+
 <body>
     <%- include partials/headerAreaRestritaMembros.ejs %>
     <main>
@@ -16,9 +17,11 @@
             <input type="text" name="nome">
             <div class="link-calendario"><a href="http://localhost:3000/dashboardMembro/calendario">Bloquear calendario</a></div>
         </div>
-
+        </main>
+<div>
         <% if (resultados) { %> 
             <% for (resultado of resultados) { %> 
+                <%    if(resultado.reservas.status=='active'){ %>
                 <div id="containerServico">
                     <div class="containerEsquerda">
                         <div class="servicoContratado1">
@@ -115,12 +118,15 @@
                         <form>
                             <input class = "botoes-2" type="file" multiple="multiple">
                         </form>
-                        <div class="botao-1">
-                            <p>Finalizar</p> 
+                        
+                        <div class="botoes">
+                            <p>Finalizou o servico? </p>
+                            <button class="botao-1" id="salva-alteracoes" onclick="abreAlertFinalizar(('<%-resultado.idSolicitacao%>'))">Finalizar</b preutt=on>
                         </div>
                     </div>
                 </div>
             <% } %> 
+            <% } %>
             <% } else { %>
                  <div id="containerServico">
         
@@ -133,8 +139,11 @@
                 <% } %> 
 
                 </div>
+            </div>
                      
 
     </main>
+    <script type="text/javascript" src="/js/sweetAlertMembro.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

@@ -101,6 +101,8 @@
 .containerServico.containerPadding {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  border-left-color: red;
+  border-left-width: 10px;
 }
 
 .ordenacao.ordenacaoMargin {

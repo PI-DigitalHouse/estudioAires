@@ -12,7 +12,9 @@ body {
   width: 100%;
   margin: auto;
 }
-
+.swal-button {
+  background-color: red;
+  }
 /* ordenação */
 .ordenacao {
   margin-top: 20px;
