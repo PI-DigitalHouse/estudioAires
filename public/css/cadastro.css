@@ -82,6 +82,7 @@
             filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.50));
             border-radius: 18px;
             background-color:   rgba(253, 253, 253, 0.7);   
+            padding: 8px;
                        
             flex-wrap: wrap;
             justify-content: space-around;
@@ -102,7 +103,7 @@
             /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
-            margin-bottom: 7%;
+            margin-bottom: 3%;
         }
 
         #usu-flex-container-nome{/**container-02**/
@@ -114,7 +115,7 @@
             /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
-            margin-bottom: 7%;
+            margin-bottom: 3%;
             opacity: .8;
         }
         #usu-input-tipo-1{/**email2**/
@@ -129,9 +130,9 @@
             background-color: #ffffff;
             border: 1px solid  darkgray;
             opacity: 2;
-            width: 85%;
+            width: 35%;
             height: 2rem;
-            margin-top: 1rem;
+            
         }
         #usu-input-Tipo-3{/**email3**/
             background-color: #ffffff;
@@ -149,7 +150,7 @@
             /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
-            margin-bottom: 7%;
+            margin-bottom: 3%;
         }
         form{
             width: 100%;
@@ -163,7 +164,7 @@
             /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
-            margin-bottom: 7%;
+            margin-bottom: 3%;
         }
         #usu-flex-container-senha{/**email3**/
             display: flex;
@@ -174,7 +175,7 @@
             /* font-size: 88%; */
             font-style: normal;
             font-weight: 800;
-            margin-bottom: 7%;
+            margin-bottom: 3%;
         }
         /* button[type=submit] {
             background-color: #FC7600;;
