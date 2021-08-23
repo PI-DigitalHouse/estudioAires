@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
+
 
 <head>
     <meta charset="UTF-8">
@@ -8,22 +8,16 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/modais/cadastro-modal.css">
     <title>Estúdio Aires</title>
-    
+
 </head>
 
 <body>
-    
-        <%- include partials/headerAreaLivreSemLogin.ejs %>
-        
-        <%- include partials/head2.ejs %>
-    
-    <div id="banner-area">
-        <!--Vídeo de entrada do site-->
-        <div id="banner">
-            <video autoplay muted loop>
-                <source src="img/teste.mov" type="video/mp4">
 
-            </video>
+    <%- include partials/headerAreaLivreSemLogin.ejs %>
+
+        <%- include partials/head2.ejs %>
+
+
             <div id="modalCadastro-usuario">
 
                 <form id="modal-content-cadastro-usuario" method="POST" action="cadastro-usuario">
@@ -35,13 +29,13 @@
 
                         </div>
                         <div id="alertBtn">
-                        <span  class="erros-alert" > <%=erro.email%> </span>
-                        
+                            <span class="erros-alert"> <%=erro.email%> </span>
+
                         </div>
                         <div id="alertBtn">
-                            <span  class="erros-alert" > <%=erro.senha%> </span>
-                            
-                            </div>
+                            <span class="erros-alert"> <%=erro.senha%> </span>
+
+                        </div>
                         <div id="usu-flex-container-boas-vindas">
                             <h2>Seja bem-vindo!</h2>
                         </div>
@@ -49,27 +43,21 @@
 
 
                         <div id="usu-flex-container-nome">
-                            <input required id="usu-input-tipo-1" placeholder="Seu nome:" maxlength="50" type="text"
-                                name="nome" id="Nome" required>
-                            <input required id="usu-input-tipo-1" placeholder="Sobrenome:" maxlength="50" type="text"
-                                name="sobrenome" id="Nome" required>
-                            
+                            <input required id="usu-input-tipo-1" placeholder="Seu nome:" maxlength="50" type="text" name="nome" id="Nome" required>
+                            <input required id="usu-input-tipo-1" placeholder="Sobrenome:" maxlength="50" type="text" name="sobrenome" id="Nome" required>
 
-                           
+
+
                         </div>
                         <div id="usu-flex-container-selecione">
-                        <input required id="usu-input-tipo-1" placeholder="Email:" maxlength="60" type="email"
-                        name="email" id="email">
-                        <input required id="usu-input-tipo-1" placeholder="Telefone mais atual" maxlength="50"
-                        type="text" name="telefone" id="Nome" required>
-                    </div>
+                            <input required id="usu-input-tipo-1" placeholder="Email:" maxlength="60" type="email" name="email" id="email">
+                            <input required id="usu-input-tipo-1" placeholder="Telefone mais atual" maxlength="50" type="text" name="telefone" id="Nome" required>
+                        </div>
                         <div id="usu-flex-container-tel-cpf">
-                       
-                            <input required id="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="60"
-                                type="text" name="cpfCnpj" id="email">
-                             
-                            <select id="usu-input-Tipo-2" placeholder="Como nos conheceu?" name="comoConheceu"
-                                id="Como nos conheceu">
+
+                            <input required id="usu-input-tipo-1" placeholder="CPF ou CNPJ" maxlength="60" type="text" name="cpfCnpj" id="email">
+
+                            <select id="usu-input-Tipo-2" placeholder="Como nos conheceu?" name="comoConheceu" id="Como nos conheceu">
                                 <option value="NaoEnviado">Como nos conheceu?</option>
                                 <option value="Imobiliaria">Imobiliária</option>
                                 <option value="Facebook">Facebook</option>
@@ -77,15 +65,13 @@
                                 <option value="Google">Google</option>
                                 <option value="outro">Outro</option>
                             </select>
-                        
-                        </div>
-                      
-                        <div id="usu-flex-container-senha">
-                            <input required id="usu-input-Tipo-3" placeholder="Senha" type="password" name="senha"
-                                id="senha">
 
-                            <input required id="usu-input-Tipo-3" placeholder="Confirmar Senha" type="password"
-                                name="senha2" id="senhaConfirmacao">
+                        </div>
+
+                        <div id="usu-flex-container-senha">
+                            <input required id="usu-input-Tipo-3" placeholder="Senha" type="password" name="senha" id="senha">
+
+                            <input required id="usu-input-Tipo-3" placeholder="Confirmar Senha" type="password" name="senha2" id="senhaConfirmacao">
 
 
 
@@ -96,33 +82,29 @@
                                 <input type="checkbox" name="imobiliaria"> Sou uma imobiliária
                             </div>
                             <div id="checkbox1">
-                                <input required id="LiEAceito" type="checkbox" name="termosDeUso"> Li e aceito os <a
-                                    id="Termos" href="#">Termos de uso</a> e a <a id="política" href="#">Política
+                                <input required id="LiEAceito" type="checkbox" name="termosDeUso"> Li e aceito os <a id="Termos" href="#">Termos de uso</a> e a <a id="política" href="#">Política
                                     de
                                     Privacidade</a>
                             </div>
 
 
                         </div>
-                            <button type="submit" class="btn btn-dark" id="submit-cadastro" >Cadastrar</button>
-                       
+                        <button type="submit" class="btn btn-dark" id="submit-cadastro">Cadastrar</button>
+
 
                 </form>
 
+                </div>
             </div>
-        </div>
 
-    </div>
-
+            </div>
 
 
 
-    <script type="text/javascript" src="/js/sweetAlert.js"></script>  
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Modal-Cadastro-->
+            <script type="text/javascript" src="/js/sweetAlert.js"></script>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!--  <script type="text/javascript" src="../login-modal/login-modal.js"></script> -->
 </body>
 
 </html>
