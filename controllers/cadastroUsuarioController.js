@@ -13,11 +13,12 @@ module.exports.cadastroModal = (req, res) => {
             email: ''
         },
         value: {},
+        error: null
     });
 
 }
 
-module.exports.postUsuario = (async (req, res) => {
+module.exports.postUsuario = (async(req, res) => {
     const user = req.body
     const error = validationResult(req)
     console.log(error.mapped())
@@ -57,7 +58,7 @@ module.exports.postUsuario = (async (req, res) => {
         res.render('cadastro-usuario', {
             erro: {
                 senha: 'Senhas não compatíveis'
-                
+
             },
             dadosUsuario: null,
             title: 'Cadastro'
