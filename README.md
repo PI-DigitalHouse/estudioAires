@@ -7,7 +7,6 @@ A ideia principal, é oferecer uma plataforma em que os clientes possam agendar 
 </br>
 
 ## Lado do cliente
-----
 </br>
 
 No sistema, este usuário é o cliente e é mencionado como **usuário**.
@@ -20,7 +19,6 @@ No sistema, este usuário é o cliente e é mencionado como **usuário**.
 </br>
 
 ## Lado fornecedor (fotógrafo)
-----
 </br>
 
 No sistema, este usuário é tratado como **membro**.
@@ -33,7 +31,6 @@ Para os dois tipos de usuário, é possível visualizar em suas _dashboards_ o s
 </br>
 
 ## Mapa do Site
-----
 </br>
 
 ```
@@ -64,7 +61,6 @@ Dashboard Admin
 </br>
 
 ## Seeds
-----
 </br>
 
 Durante o desenvolvimento do projeto, criamos três _seeds_ que são utilizadas para popular as informações no banco de dados e tornam o sistema funcional.
@@ -89,7 +85,6 @@ Este _login_ pode ser acessado através da rota `localhost:3000/admin`.
 </br>
 
 ## Para rodar o projeto
-----
 </br>
 
 - Rodar o _script_ do banco de dados (`DBStudioAires.sql`);
@@ -101,7 +96,6 @@ Este _login_ pode ser acessado através da rota `localhost:3000/admin`.
 </br>
 
 ## Tecnologias Utilizadas
-----
 </br>
 
 - [Express](https://expressjs.com/)
@@ -114,7 +108,6 @@ Este _login_ pode ser acessado através da rota `localhost:3000/admin`.
 </br>
 
 ## Restrições do projeto
-----
 </br>
 
 Este foi um projeto realizado no decorrer do curso de formação de [Desenvolvimento Web Full Stack da Digital House](https://www.digitalhouse.com/br/curso/desenvolvimento-web-full-stack), com a finalidade de colocar em prática os conceitos aprendidos no decorrer do curso.
@@ -129,7 +122,6 @@ Este foi um projeto realizado no decorrer do curso de formação de [Desenvolvim
 </br>
 
 ## Sobre o Banco de Dados
-----
 </br>
 
 O banco de dados do projeto, tem um _bug_ não foi resolvido, sobre o `auto_increment` de algumas tabelas. Ao rodar o _script_ retirado do MySql, o `auto_increment` adiciona números aleatórios. Para corrigir este comportamento, a cada vez que rodamos o _script_, corrigimos o incremento de cada tabela.
@@ -139,7 +131,6 @@ O arquivo incluido neste repositório, já tem esta correção implementada.
 </br>
 
 ## Autores
-----
 
 - [Amanda Cardoso](https://github.com/cardoso24)
 - [Camila Queiroz](https://github.com/camimq)
