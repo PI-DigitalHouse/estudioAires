@@ -1,51 +1,149 @@
-# PI Digital House - Estúdio Aires
-
-<h4 align="center"> 
-	🚧  P.I Estúdio Aires 🚀 Em construção...  🚧
-</h4>
-<br/>
-
-O Projeto Integrador tem como proposta construir uma aplicação web para uma empresa de fotografia, especializada em prestação de serviços imobiliários.
+# PI Digital House | Estúdio Aires
+</br>
+O Projeto Integrador tem como proposta construir uma aplicação web para uma empresa de fotografia, especializada na prestação de serviços imobiliários.
 
 A ideia principal, é oferecer uma plataforma em que os clientes possam agendar suas demandas por imagens (fotografias, vídeos, imagens aéreas etc). Para que este serviço seja possível, existem dois lados que precisam ser organizados para que a jornada do usuário funcione de forma fluida.
 
-### Lado do cliente
+</br>
+
+## Lado do cliente
+----
+</br>
+
+No sistema, este usuário é o cliente e é mencionado como **usuário**.
 
 - Cadastro do usuário
 - Acesso à _dashboard_ para que faça o orçamento do serviço desejado;
 - Seleciona data / horário para prestação do serviço;
-- Confirma data / horário junto ao fotógrafo que irá prestar o serviço;
 - Cobrança e pagamento são feitos online.
 
-### Lado fornecedor (fotógrafo)
+</br>
+
+## Lado fornecedor (fotógrafo)
+----
+</br>
+
+No sistema, este usuário é tratado como **membro**.
 
 - Cadastro do usuário
-- Acesso à _dashboard_ para que gere orçamento à clientes;
-- Acesso à agenda de serviços para confirmar demandas de clientes.
+- Acesso à _dashboard_ para gestão de agenda;
 
-Para os dois tipos de usuário, será possível visualizar em suas _dashboards_ o status de cada serviço e seus detalhamentos.
+Para os dois tipos de usuário, é possível visualizar em suas _dashboards_ o status de cada serviço e seus detalhamentos.
+
+</br>
+
+## Mapa do Site
+----
+</br>
+
+```
+Home
+├── Serviços
+├── Quem Somos
+└── Contato
+    ├── Login Usuário
+    │   ├── Meu Perfil
+    │   ├── Solicitações
+    │   ├── Novo Orçamento
+    │   └── Alterar seus dados
+    └── Login Membro
+        ├── Meu Perfil
+        ├── Jobs Finalizados
+        └── Minha Agenda
+```
+
+Há também um acesso Admin, para que seja possível administrar os usuários membro.
+
+```
+Dashboard Admin
+├── Cadastrar Membro
+├── Ver Membros Cadastrados
+└── Ver Solicitações
+```
+
+</br>
+
+## Seeds
+----
+</br>
+
+Durante o desenvolvimento do projeto, criamos três _seeds_ que são utilizadas para popular as informações no banco de dados e tornam o sistema funcional.
+
+**Seed de Usuários**
+
+- **_Login_**: lula@pt.com.br
+- **_Senha_**: 12345
+
+**Seed de Membros**
+
+- **_Login_**: dilma@pt.com.br
+- **_Senha_**: 12345
+
+**Seed de Admin**
+
+- **_Login_**: admin2021
+- **_Senha_**: 1234
+
+Este _login_ pode ser acessado através da rota `localhost:3000/admin`.
+
+</br>
+
+## Para rodar o projeto
+----
+</br>
+
+- Rodar o _script_ do banco de dados (`DBStudioAires.sql`);
+- Rodar o `npm i` para instalar as dependências do projeto;
+- Instalar o [`.env`](https://www.npmjs.com/package/dotenv). O modelo está na pasta como `.env-example`;
+- No terminal, rodar o comando `npm start`;
+- No navegador, acessar a rota `localhost:3000`.
+
+</br>
+
+## Tecnologias Utilizadas
+----
+</br>
+
+- [Express](https://expressjs.com/)
+- [Sequelize](https://sequelize.org/)
+- [NodeJS](https://nodejs.org/en/)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+- [EJS](https://www.npmjs.com/package/ejs)
+- [MySql](https://www.mysql.com/)
+
+</br>
+
+## Restrições do projeto
+----
+</br>
+
+Este foi um projeto realizado no decorrer do curso de formação de [Desenvolvimento Web Full Stack da Digital House](https://www.digitalhouse.com/br/curso/desenvolvimento-web-full-stack), com a finalidade de colocar em prática os conceitos aprendidos no decorrer do curso.
+</br>
+
+**Restrições:**
+
+- Otimização do código, eliminando códigos repetidos;
+- Componentização de código, para melhor organização do projeto;
+- Revisão do código para correção de _bugs_ e implementação completa de responsividade;
+
+</br>
+
+## Sobre o Banco de Dados
+----
+</br>
+
+O banco de dados do projeto, tem um _bug_ não foi resolvido, sobre o `auto_increment` de algumas tabelas. Ao rodar o _script_ retirado do MySql, o `auto_increment` adiciona números aleatórios. Para corrigir este comportamento, a cada vez que rodamos o _script_, corrigimos o incremento de cada tabela.
+
+O arquivo incluido neste repositório, já tem esta correção implementada.
+
+</br>
 
 ## Autores
 ----
+</br>
 
-<br/>
-
-<div>
-    <a href="https://github.com/orgs/PI-DigitalHouse/people/cardoso24"><img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQEHgkDzrGHAfA/profile-displayphoto-shrink_800_800/0/1586794626624?e=1623283200&v=beta&t=WiFfcYFIHBB3P3U9xD1mg2LmLUjcN9uuyK4dKu5dfjw" width="100px;" alt="Amanda Cardoso"/></a>
-    <a href="https://github.com/camimq"> <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/7540283?s=400&u=3f8c64bb5cdec217f324f3947af502d62566d3b9&v=4" width="100px;" alt="Camila Queiroz"/></a>
-    <a href="https://github.com/orgs/PI-DigitalHouse/people/henriquepbalsimelli"> <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQEyKvQ1FNuMNw/profile-displayphoto-shrink_800_800/0/1605117347153?e=1623283200&v=beta&t=Ta-R0uf1t_NoQOTyo6fynJdbBbjsO2oUL9LwXYl2mXo" width="100px;" alt="Henrique Balsimelli"/></a>
-    <a href="https://www.linkedin.com/in/mariana-pinheiro-brodersen-ela-she-ella-93868314a/"><img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQGet47hjBW6UQ/profile-displayphoto-shrink_800_800/0/1597851377503?e=1623283200&v=beta&t=IRZF3S-7sexHuraYGdH--ZsEvtdoy_ORtLgUKILgyto" width="100px;" alt="Mariana Brodersen"/></a>
-    <a href="https://www.linkedin.com/in/mariana-pinheiro-brodersen-ela-she-ella-93868314a/"><img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C5635AQFQEnkJuPgHqA/profile-framedphoto-shrink_800_800/0/1617670015429?e=1618009200&v=beta&t=FNylmBc0_BIc3ka2ftuSotbDfEdhQfMQ5TtRPfk5zlQ" width="100px;" alt="Matheus Pierro"/></a>
-    
-
-</div>
-
-<style>
-
-    a {
-        margin-left: 15px
-    }
-</style>
-
----
-<br/>
+- Amanda Cardoso
+- Camila Queiroz
+- Henrique Balsimelli
+- Mariana Brodersen
+- Matheus Pierro
