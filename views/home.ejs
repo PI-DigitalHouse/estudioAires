@@ -16,161 +16,228 @@
                         <%}%>
                             <!-- Header -->
 
-                            <!--Carrossel de entrada do site splide js -->
-                            <div class="splide" id="splide">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide"><img src="/img/imagensDeEntrada/imagemEntrada3.jpg"></li>
-                                        <li class="splide__slide"><img src="/img/imagensDeEntrada/imagemEntrada2.jpg"></li>
-                                        <li class="splide__slide"><img src="/img/imagensDeEntrada/imagemEntrada1.jpg"></li>
-                                        <li class="splide__slide"><img src="/img/imagensDeEntrada/imagemEntrada4.jpg"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--Carrossel de entrada do site splide js -->
+                            <!-- Modal de conteúdo-->
+                            <% if (!dadosUsuario){ %>
+                                <div class='bckGroundModal' id='baackGround'>
+                                    <div class='modalHome' id='modalCont'>
+                                        <div id='conteudoModal'>
+                                            <div id='boas-vindaas'>
+                                                <h1 class='txtCont'>
+                                                    Olá! Muito obrigado por visitar o nosso site.
+                                                </h1>
+                                                <h2 class ='txtCont2'>
+                                                    É um prazer tê-lo conosco.
+                                                </h2>
+                                                <h3 class='txtCont3'>
+                                                    A apresentação digital dos seus imóveis começa agora! Caso tenha algum problema, por favor, não deixe de entrar em contato conosco:
+                                                </h3>
+                                                <h3>
+                                                    contato@estudioaires.com.br
+                                                </h3>
+                                            </div>
 
-                            <!-- Cards de serviços -->
-                            <h2 class="titulo-servicos" id="servicos">Conheça nossos serviços</h1>
-                                <div class="container1-servicos">
-                                    <div class="container2-servicos">
-                                        <div class="card-servicos">
-                                            <div class="imgBx-servicos">
-                                                <img src="/img/imagensDeEntrada/imagemEntrada3.jpg">
-                                            </div>
-                                            <div class="content-servicos">
-                                                <h2>Fotografia</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus vel quos adipisci incidunt a voluptatum, voluptas hic doloremque nulla pariatur...</p>
-                                                <a class="link-servicos" href="servico1">Saiba mais</a>
-                                            </div>
+                                            <span class='x' onclick="fechaModalConteudo()">Fechar</span>
                                         </div>
 
-                                        <div class="card-servicos">
-                                            <div class="imgBx-servicos">
-                                                <img src="/img/imagensDeEntrada/imagemEntrada2.jpg">
-                                            </div>
-                                            <div class="content-servicos">
-                                                <h2>Fotografia 360 3D</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus vel quos adipisci incidunt a voluptatum, voluptas hic doloremque nulla pariatur...</p>
-                                                <a class="link-servicos" href="servico2">Saiba mais</a>
-                                            </div>
-                                        </div>
 
-                                        <div class="card-servicos">
-                                            <div class="imgBx-servicos">
-                                                <img src="/img/imagensDeEntrada/imagemEntrada1.jpg">
-                                            </div>
-                                            <div class="content-servicos">
-                                                <h2>Vídeo dinâmico</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus vel quos adipisci incidunt a voluptatum, voluptas hic doloremque nulla pariatur...</p>
-                                                <a class="link-servicos" href="servico3">Saiba mais</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="card-servicos">
-                                            <div class="imgBx-servicos">
-                                                <img src="/img/imagensDeEntrada/imagemEntrada4.jpg">
-                                            </div>
-                                            <div class="content-servicos">
-                                                <h2>Imagens Aéreas</h2>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus vel quos adipisci incidunt a voluptatum, voluptas hic doloremque nulla pariatur...</p>
-                                                <a class="link-servicos" href="servico4">Saiba mais</a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
+                                <%}%>
+                                    <!--Carrossel de entrada do site splide js -->
+                                    <div class="splide" id="splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide"><img
+                                                        src="/img/imagensDeEntrada/imagemEntrada3.jpg"></li>
+                                                <li class="splide__slide"><img
+                                                        src="/img/imagensDeEntrada/imagemEntrada2.jpg"></li>
+                                                <li class="splide__slide"><img
+                                                        src="/img/imagensDeEntrada/imagemEntrada1.jpg"></li>
+                                                <li class="splide__slide"><img
+                                                        src="/img/imagensDeEntrada/imagemEntrada4.jpg"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--Carrossel de entrada do site splide js -->
 
-                                <!-- Cards de serviços -->
-
-                                <!-- Carrossel de portifólios -->
-                                <div class="splide" id="splideDois">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <a href="/projetos/projeto1" target="_blank"><img src="/img/imagensDeEntrada/imagemEntrada3.jpg"></a>
-                                                <div class="content-portifolio">
-                                                    <h1>Projeto1</h1>
-                                                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                                    <!-- Cards de serviços -->
+                                    <h2 class="titulo-servicos" id="servicos">Conheça nossos serviços</h1>
+                                        <div class="container1-servicos">
+                                            <div class="container2-servicos">
+                                                <div class="card-servicos">
+                                                    <div class="imgBx-servicos">
+                                                        <img src="/img/imagensDeEntrada/imagemEntrada3.jpg">
+                                                    </div>
+                                                    <div class="content-servicos">
+                                                        <h2>Fotografia</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                                                            delectus vel quos adipisci incidunt a voluptatum, voluptas
+                                                            hic doloremque nulla pariatur...</p>
+                                                        <a class="link-servicos" href="servico1">Saiba mais</a>
+                                                    </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <a href="/projetos/projeto2" target="_blank"><img src="/img/imagensDeEntrada/imagemEntrada2.jpg"></a>
-                                                <div class="content-portifolio">
-                                                    <h1>Projeto2</h1>
-                                                    <p>Lorem ipsum dolor sit amet consectetur</p>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <a href="/projetos/projeto3" target="_blank"><img src="/img/imagensDeEntrada/imagemEntrada1.jpg"></a>
-                                                <div class="content-portifolio">
-                                                    <h1>Projeto3</h1>
-                                                    <p>Lorem ipsum dolor sit amet consectetur</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Carrossel de portifólios -->
 
-                                <!-- Quem Somos -->
-                                <div class="containerPai" id="quemSomos">
-                                    <div class="container-quemSomos">
-                                        <div class="titulo-quemSomos">
-                                            <h2>Quem Somos</h2>
-                                        </div>
-                                        <div class="contentPrincipal-quemSomos">
-                                            <p>Somos um estúdio especializado em fotografia imobiliária, que vem buscando uma solução digital para os corretores, imobiliárias e proprietários. Nossa proposta, inicialmente, é atuar nas duas principais fases
-                                                da jornada de busca do consumidor por um imóvel. A primeira delas é a atração em que o usuário que navega pelas plataformas digitais tem que se sentir atraído pelo card do seu anúncio. Pode-se dizer que
-                                                os cards são como a vitrine de um lojista, onde o produto que você está oferecendo deve ser apresentado de forma clara e bonita. A próxima etapa da jornada do usuário é o conhecimento do imóvel que ela se
-                                                sentiu atraída. Nessa etapa ela consumirá o conteúdo disponível no seu anúncio para entender melhor a disposição dos cômodos, por exemplo. Esse é um ótimo momento para supri-lo com um tour 360 para que ele
-                                                possa ver todos os ângulos e cantos do imóvel. Além disso, muitas pessoas levam em conta a região e os estabelecimentos que estão perto do imóvel que ela está visitando. Nesse momento é interessante que
-                                                o visitante veja um vídeo feito com um drone ressaltando os estabelecimentos próximos.
-                                            </p>
-                                        </div>
-                                    </div>
+                                                <div class="card-servicos">
+                                                    <div class="imgBx-servicos">
+                                                        <img src="/img/imagensDeEntrada/imagemEntrada2.jpg">
+                                                    </div>
+                                                    <div class="content-servicos">
+                                                        <h2>Fotografia 360 3D</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                                                            delectus vel quos adipisci incidunt a voluptatum, voluptas
+                                                            hic doloremque nulla pariatur...</p>
+                                                        <a class="link-servicos" href="servico2">Saiba mais</a>
+                                                    </div>
+                                                </div>
 
-                                    <div class="container-nossaEquipe">
-                                        <div class="titulo-nossaEquipe">
-                                            <h2>Nossa Equipe</h2>
-                                        </div>
-                                        <div class="contentPrincipal-nossaEquipe">
-                                            <div class="membroEquipe-nossaEquipe">
-                                                <img src="/img/imgsTestes/socios/placeHolderImageSocio1.png" alt="Imagem opicional do Henrique">
-                                                <h3>Henrique</h3>
-                                                <p>Somos um estúdio especializado em fotografia imobiliária, que vem buscando uma solução digital para os corretores, imobiliárias e proprietários. Nossa proposta, inicialmente, é atuar nas duas principais
-                                                    fases da jornada de busca do consumidor por um imóvel.
-                                                </p>
-                                            </div>
-                                            <div class="membroEquipe-nossaEquipe">
-                                                <img src="/img/imgsTestes/socios/placeHolderImageSocio2.png" alt="Imagem opicional do Matheus">
-                                                <h3>Matheus</h3>
-                                                <p>Somos um estúdio especializado em fotografia imobiliária, que vem buscando uma solução digital para os corretores, imobiliárias e proprietários. Nossa proposta, inicialmente, é atuar nas duas principais
-                                                    fases da jornada de busca do consumidor por um imóvel.
-                                                </p>
+                                                <div class="card-servicos">
+                                                    <div class="imgBx-servicos">
+                                                        <img src="/img/imagensDeEntrada/imagemEntrada1.jpg">
+                                                    </div>
+                                                    <div class="content-servicos">
+                                                        <h2>Vídeo dinâmico</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                                                            delectus vel quos adipisci incidunt a voluptatum, voluptas
+                                                            hic doloremque nulla pariatur...</p>
+                                                        <a class="link-servicos" href="servico3">Saiba mais</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-servicos">
+                                                    <div class="imgBx-servicos">
+                                                        <img src="/img/imagensDeEntrada/imagemEntrada4.jpg">
+                                                    </div>
+                                                    <div class="content-servicos">
+                                                        <h2>Imagens Aéreas</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                                                            delectus vel quos adipisci incidunt a voluptatum, voluptas
+                                                            hic doloremque nulla pariatur...</p>
+                                                        <a class="link-servicos" href="servico4">Saiba mais</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <!-- Quem Somos -->
 
-                                <!-- Footer -->
-                                <%- include partials/footer.ejs %>
-                                    <!-- Footer-->
+                                        <!-- Cards de serviços -->
 
-                                    <!--Botão do whatsapp-->
-                                    <div>
-                                        <a href="https://web.whatsapp.com/send?phone=000000000" target="_blank" class="link-btnWpp">
-                                            <i class="fab fa-whatsapp"></i>
-                                        </a>
-                                    </div>
-                                    <!--Botão do whatsapp-->
+                                        <!-- Carrossel de portifólios -->
+                                        <div class="splide" id="splideDois">
+                                            <div class="splide__track">
+                                                <ul class="splide__list">
+                                                    <li class="splide__slide">
+                                                        <a href="/projetos/projeto1" target="_blank"><img
+                                                                src="/img/imagensDeEntrada/imagemEntrada3.jpg"></a>
+                                                        <div class="content-portifolio">
+                                                            <h1>Projeto1</h1>
+                                                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <a href="/projetos/projeto2" target="_blank"><img
+                                                                src="/img/imagensDeEntrada/imagemEntrada2.jpg"></a>
+                                                        <div class="content-portifolio">
+                                                            <h1>Projeto2</h1>
+                                                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <a href="/projetos/projeto3" target="_blank"><img
+                                                                src="/img/imagensDeEntrada/imagemEntrada1.jpg"></a>
+                                                        <div class="content-portifolio">
+                                                            <h1>Projeto3</h1>
+                                                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Carrossel de portifólios -->
 
-                                    <!-- Botão go up para início da home -->
-                                    <div>
-                                        <a href="#inicialPage" class="link-btngoUp">
-                                            <i class="fas fa-arrow-up"></i>
-                                        </a>
-                                    </div>
-                                    <!-- Botão go up para início da home -->
+                                        <!-- Quem Somos -->
+                                        <div class="containerPai" id="quemSomos">
+                                            <div class="container-quemSomos">
+                                                <div class="titulo-quemSomos">
+                                                    <h2>Quem Somos</h2>
+                                                </div>
+                                                <div class="contentPrincipal-quemSomos">
+                                                    <p>Somos um estúdio especializado em fotografia imobiliária, que vem
+                                                        buscando uma solução digital para os corretores, imobiliárias e
+                                                        proprietários. Nossa proposta, inicialmente, é atuar nas duas
+                                                        principais fases
+                                                        da jornada de busca do consumidor por um imóvel. A primeira
+                                                        delas é a atração em que o usuário que navega pelas plataformas
+                                                        digitais tem que se sentir atraído pelo card do seu anúncio.
+                                                        Pode-se dizer que
+                                                        os cards são como a vitrine de um lojista, onde o produto que
+                                                        você está oferecendo deve ser apresentado de forma clara e
+                                                        bonita. A próxima etapa da jornada do usuário é o conhecimento
+                                                        do imóvel que ela se
+                                                        sentiu atraída. Nessa etapa ela consumirá o conteúdo disponível
+                                                        no seu anúncio para entender melhor a disposição dos cômodos,
+                                                        por exemplo. Esse é um ótimo momento para supri-lo com um tour
+                                                        360 para que ele
+                                                        possa ver todos os ângulos e cantos do imóvel. Além disso,
+                                                        muitas pessoas levam em conta a região e os estabelecimentos que
+                                                        estão perto do imóvel que ela está visitando. Nesse momento é
+                                                        interessante que
+                                                        o visitante veja um vídeo feito com um drone ressaltando os
+                                                        estabelecimentos próximos.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="container-nossaEquipe">
+                                                <div class="titulo-nossaEquipe">
+                                                    <h2>Nossa Equipe</h2>
+                                                </div>
+                                                <div class="contentPrincipal-nossaEquipe">
+                                                    <div class="membroEquipe-nossaEquipe">
+                                                        <img src="/img/imgsTestes/socios/placeHolderImageSocio1.png"
+                                                            alt="Imagem opicional do Henrique">
+                                                        <h3>Henrique</h3>
+                                                        <p>Somos um estúdio especializado em fotografia imobiliária, que
+                                                            vem buscando uma solução digital para os corretores,
+                                                            imobiliárias e proprietários. Nossa proposta, inicialmente,
+                                                            é atuar nas duas principais
+                                                            fases da jornada de busca do consumidor por um imóvel.
+                                                        </p>
+                                                    </div>
+                                                    <div class="membroEquipe-nossaEquipe">
+                                                        <img src="/img/imgsTestes/socios/placeHolderImageSocio2.png"
+                                                            alt="Imagem opicional do Matheus">
+                                                        <h3>Matheus</h3>
+                                                        <p>Somos um estúdio especializado em fotografia imobiliária, que
+                                                            vem buscando uma solução digital para os corretores,
+                                                            imobiliárias e proprietários. Nossa proposta, inicialmente,
+                                                            é atuar nas duas principais
+                                                            fases da jornada de busca do consumidor por um imóvel.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Quem Somos -->
+
+                                        <!-- Footer -->
+                                        <%- include partials/footer.ejs %>
+                                            <!-- Footer-->
+
+                                            <!--Botão do whatsapp-->
+                                            <div>
+                                                <a href="https://web.whatsapp.com/send?phone=000000000" target="_blank"
+                                                    class="link-btnWpp">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                            </div>
+                                            <!--Botão do whatsapp-->
+
+                                            <!-- Botão go up para início da home -->
+                                            <div>
+                                                <a href="#inicialPage" class="link-btngoUp">
+                                                    <i class="fas fa-arrow-up"></i>
+                                                </a>
+                                            </div>
+                                            <!-- Botão go up para início da home -->
     </body>
 
 </html>

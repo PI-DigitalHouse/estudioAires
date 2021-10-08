@@ -1,8 +1,8 @@
 const fs = require('fs')
 
 module.exports.renderiza = (req, res) => {
-    let dadosUsuario = null
-    let erros = []
+    let dadosUsuario = req.session
+    let erros = res.send('contato@estudioaires.com.br')
     if (req.session && req.session.usuario) {
         dadosUsuario = req.session.usuario
     }

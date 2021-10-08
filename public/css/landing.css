@@ -1,0 +1,42 @@
+
+.body{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-image:url('imoveis2.png') ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom
+    
+}
+
+.contentLimit{
+    margin-top: 2rem ;
+    display: flex;
+    width: 50%;
+    height: 80vh;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    background-color: rgba(87, 86, 86, 0.1);
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+
+}
+.containerConteudo{
+    margin: 2rem;
+    
+}
+
+.backGroundImage{
+    background-image:'../public/img/imoveis.jpf' ;
+}
+
+.link  {
+    text-decoration: sandybrown;
+}

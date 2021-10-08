@@ -3,14 +3,14 @@ const session = require('express-session');
 const fs = require('fs');
 const models = require('../models');
 const { Op } = require('sequelize');
-const servico = require('../models/servico');
+const servicos = require('../models/servicos');
 const { response } = require('express');
 const { stringify } = require('querystring');
 let orcamentosCadastrados = [];
 
 module.exports.renderizaOrcamento = async(req, res, next) => {
     const { idReserva } = req.query;
-    const bloqueios = await models.Reserva.findAll({
+    const bloqueios = await models.reservas.findAll({
         where: {
             idReserva: {
                 [Op.like]: `${idReserva || ''}%`,
@@ -39,12 +39,12 @@ module.exports.renderizaOrcamento = async(req, res, next) => {
 module.exports.novoOrcamento = (async(req, res, next) => {
     const dadosDoFormulario = req.body
     const { valor, idUsuario, tipoDeServico } = req.query
-    const newService = await models.Servico.findOne({
+    const newService = await models.servicos.findOne({
         valor: {
             [Op.like]: `${valor || ''}%`,
         }
     })
-    const servico = await models.Servico.findOne({
+    const servico = await models.servicos.findOne({
         tipoDeServico: {
             [Op.like]: `${tipoDeServico || ''}%`,
         }
@@ -70,20 +70,20 @@ module.exports.novoOrcamento = (async(req, res, next) => {
     dadosDoFormulario.dataInicio = dataInicioAjustada
     console.log(dadosDoFormulario)
     console.log(servico.tipoDeServico)
-    const reservas = await models.Reserva.create(dadosDoFormulario)
+    const reservas = await models.reservas.create(dadosDoFormulario)
     if (!reservas) {
         res.render('orcamento')
         return
     }
     dadosDoFormulario.reservas_idReserva = reservas.idReserva
-    await models.Orcamento.create(dadosDoFormulario)
+    await models.orcamentos.create(dadosDoFormulario)
     res.redirect('/')
 })
 
 
 module.exports.verificaDisponibilidade = async(req, res) => {
     var dataSelecionada = req.query.data
-    const horariosAgendados = await models.Reserva.findAll({
+    const horariosAgendados = await models.reservas.findAll({
         where: {
             dataInicio: dataSelecionada
         },
@@ -101,7 +101,7 @@ function calculaOrcamento(tamanhoImovel, numeroServicos, valor) {
 
 module.exports.deletarOrcamento = async(req, res) => {
     const { idOrcamento: idReserva } = req.query
-    const orcamento = await models.Reserva.findOne({
+    const orcamento = await models.reservas.findOne({
         where: {
             idReserva: idReserva
         }
@@ -122,7 +122,7 @@ module.exports.deletarOrcamento = async(req, res) => {
 
 module.exports.finalizarJob = async(req, res) => {
     const { idOrcamento: idReserva } = req.query
-    const job = await models.Reserva.findOne({
+    const job = await models.reservas.findOne({
         where: {
             idReserva: idReserva
         }

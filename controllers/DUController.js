@@ -19,7 +19,7 @@ module.exports.showAlteraSenha = (req, res) => {
 
 module.exports.alteraSenha = async(req, res) => {
     const dadosForm = req.body
-    const usuario = await models.Usuario.findOne({
+    const usuario = await models.usuarios.findOne({
         where: {
             idUsuario: req.session.usuario.idUsuario
         }
@@ -47,7 +47,7 @@ module.exports.alteraSenha = async(req, res) => {
         })
         return
     }
-    const update = await models.Usuario.update({
+    const update = await models.usuarios.update({
         senha: hash(dadosForm.senhaNova)
     }, {
         where: {
@@ -77,12 +77,12 @@ module.exports.showAlteraDados = (req, res) => {
 module.exports.alteraDados = async(req, res) => {
     let dadosNovos = req.body
 
-    const update = await models.Usuario.update(dadosNovos, {
+    const update = await models.usuarios.update(dadosNovos, {
         where: {
             idUsuario: req.session.usuario.idUsuario
         }
     })
-    const resultados = await models.Usuario.findOne({
+    const resultados = await models.usuarios.findOne({
         where: {
             idUsuario: req.session.usuario.idUsuario
         }
@@ -103,7 +103,7 @@ module.exports.mostrarSolicitacoes = (async(req, res) => {
         status
     } =
     req.query
-    const resultadoOrcamentos = await models.Orcamento.findAll({
+    const resultadoOrcamentos = await models.orcamentos.findAll({
         where: {
             idSolicitacao: {
                 [Op.like]: `${idSolicitacao || ''}%`
@@ -125,7 +125,7 @@ module.exports.mostrarSolicitacoes = (async(req, res) => {
             },
         },
         include: {
-            model: models.Reserva,
+            model: models.reservas,
             as: 'reservas',
             attributes: ['status', 'horarioInicio', 'dataInicio', 'servico'],
         },

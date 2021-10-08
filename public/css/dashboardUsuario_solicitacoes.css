@@ -4,7 +4,7 @@
     font-size: 6.25%;
 } */
 
-body {
+#bodyDUSolicitacoes {
   font-family: 'Lato', sans-serif;
   /* font-size: 14rem; */
   background-image: url('../img/bg-opacity.png');
@@ -273,4 +273,9 @@ p {
   right: 0px;
   background: white;
   text-decoration: underline;
+}
+.aviso{
+  display: flex;
+  justify-content: center;
+  margin: 5rem
 }

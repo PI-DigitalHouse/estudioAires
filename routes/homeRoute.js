@@ -3,7 +3,7 @@ const models = require('../models');
 const session = require('express-session');
 const router = express.Router();
 const bcrypt = require('bcrypt')
-const { getHome, recuSenha, logOut, getProjeto1, getProjeto2, getProjeto3, logar, listServico1, listServico2, listServico3, listServico4 } = require('../controllers/homeController');
+const { getHome, recuSenha, logOut, getProjeto1, getProjeto2, getProjeto3, logar, listServico1, listServico2, listServico3, listServico4, landing, conteudo } = require('../controllers/homeController');
 const logarMembro = require('../controllers/autenticacaoMembro')
 const checkSession = require('../middlewares/checkSession')
 
@@ -40,5 +40,9 @@ router.post('/login', logar);
 
 /* GET Log-out */
 router.get('/logout', logOut);
+
+router.get('/landing', landing)
+
+router.get('/conteudo', conteudo)
 
 module.exports = router;

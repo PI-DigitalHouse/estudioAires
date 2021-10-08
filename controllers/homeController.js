@@ -97,7 +97,7 @@ module.exports.recuSenha = (req, res) => {
 
 module.exports.logar = (async(req, res) => {
     const { email, senha } = req.body;
-    let foundUser = await models.Usuario.findOne({
+    let foundUser = await models.usuarios.findOne({
         where: {
             email: req.body.email
         }
@@ -105,7 +105,7 @@ module.exports.logar = (async(req, res) => {
 
     if (!foundUser) {
 
-        foundUser = await models.Membro.findOne({
+        foundUser = await models.membros.findOne({
             where: {
                 email: req.body.email
             }
@@ -158,3 +158,19 @@ module.exports.renderizaOrcamentoSLogin = (req, res, next) => {
 async function compareHash(senha, hash) {
     return await bcrypt.compare(senha, hash);
 };
+
+module.exports.landing = (req, res, next)=>{
+    res.render('landingPage', {
+        dadosUsuario: req.session.usuario || req.session.membro,
+        title: 'Landing Page',
+        error: null
+    })
+}
+
+module.exports.conteudo = (req, res, next)=>{
+    res.render('conteudo', {
+        dadosUsuario: req.session.usuario || req.session.membro,
+        title: 'Conteudo',
+        error: null
+    })
+}

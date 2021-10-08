@@ -4,7 +4,7 @@
 <%- include partials/head2.ejs %>
     <link rel="stylesheet" href="sweetalert2.min.css">
 
-    <body>
+    <body id = 'bodyDUSolicitacoes'>
         <%- include partials/headerAreaRestritaUsuarios.ejs %>
             <main>
                 <!-- <div class="ordenacao">
@@ -25,6 +25,14 @@
                 </div> -->
             </main>
             <div>
+                <h1 class="aviso">
+                    Você ainda não tem nenhuma solicitação.
+                </h1>
+                <h3 class="aviso">
+                    Por favor entre em contato conosco via e-mail ou whatsApp.
+                </h3>
+            </div>
+            <!--<div>
                 <% if(resultadoOrcamentos){ %>
                     <% for (resultadoOrcamento of resultadoOrcamentos) { %>
                         <% if(resultadoOrcamento.reservas.status=='active' ){ %>
@@ -60,7 +68,7 @@
                                             <p>
                                                 <%=resultadoOrcamento.reservas.servico%>
                                             </p>
-                                        </div> -->
+                                        </div> 
 
                                         <div class="info">
                                             <p class="tipo1">Data do serviço</p>
@@ -163,7 +171,7 @@
 
             <script type="text/javascript" src="/js/sweetAlert.js"></script>
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+            -->
 
             <%- include partials/footer.ejs %>
 

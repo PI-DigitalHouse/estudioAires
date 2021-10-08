@@ -19,7 +19,7 @@ module.exports.postMembro = (async(req, res) => {
     membroUsuario.senha = hash(membroUsuario.senha)
     membroUsuario.senha2 = hash(membroUsuario.senha2)
     console.log(membroUsuario)
-    await models.Membro.create(membroUsuario)
+    await models.membros.create(membroUsuario)
     res.redirect('/admin/dashboardAdmin')
 });
 

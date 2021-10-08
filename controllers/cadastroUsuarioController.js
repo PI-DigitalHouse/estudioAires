@@ -30,7 +30,7 @@ module.exports.postUsuario = (async(req, res) => {
         })
         return
     }
-    const usuario = await models.Usuario.findOne({
+    const usuario = await models.usuarios.findOne({
 
         where: {
             [Op.or]: [
@@ -67,7 +67,7 @@ module.exports.postUsuario = (async(req, res) => {
     user.senha = hash(user.senha)
     user.senha2 = hash(user.senha2)
     console.log(user)
-    await models.Usuario.create(user)
+    await models.usuarios.create(user)
     res.redirect('/')
 });
 

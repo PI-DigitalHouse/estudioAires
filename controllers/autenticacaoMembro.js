@@ -14,7 +14,7 @@ module.exports.loginMembro = (async(req, res) => {
 
 module.exports.logarMembro = (async(req, res) => {
     const { email, senha } = req.body;
-    const foundUser2 = await models.Membro.findOne({
+    const foundUser2 = await models.membros.findOne({
         where: {
             email: req.body.email
         }

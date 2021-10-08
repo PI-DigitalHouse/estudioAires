@@ -13,7 +13,7 @@ module.exports.calendario = (req, res) => {
 module.exports.minhaAgenda = (async(req, res) => {
     const { idSolicitacao, endereco, valor, tamanhoImovel, sessaoShooting } =
         req.query;
-    const resultados = await models.Orcamento.findAll({
+    const resultados = await models.orcamentos.findAll({
         where: {
             idSolicitacao: {
                 [Op.like]: `${idSolicitacao || ''}%`,
@@ -29,16 +29,16 @@ module.exports.minhaAgenda = (async(req, res) => {
             },
         },
         include: [{
-            model: models.Reserva,
+            model: models.reservas,
             as: 'reservas',
             include: {
-                model: models.Usuario,
+                model: models.usuarios,
                 as: 'usuarios',
                 attributes: ['nome', 'email', 'telefone'],
             },
         },
         {
-            model: models.Servico,
+            model: models.servicos,
             as: 'services',
             attributes: ['tipoDeServico'],
         },
@@ -61,14 +61,14 @@ module.exports.bloquear = async (req, res, next) => {
     bloqueio.idSolicitacao = 1;
     console.log(bloqueio);
     console.log(typeof req.body.horarioInicio)
-    await models.Reserva.create(bloqueio);
+    await models.reservas.create(bloqueio);
     res.redirect('/');
 };
 
 module.exports.mostraJobs = async (req, res) => {
     const { idSolicitacao, endereco, valor, tamanhoImovel } =
         req.query;
-    const resultadosJobs = await models.Orcamento.findAll({
+    const resultadosJobs = await models.orcamentos.findAll({
         where: {
             idSolicitacao: {
                 [Op.like]: `${idSolicitacao || ''}%`,
@@ -84,17 +84,17 @@ module.exports.mostraJobs = async (req, res) => {
             },
         },
         include: [{
-            model: models.Reserva,
+            model: models.reservas,
             as: 'reservas',
            
             include: {
-                model: models.Usuario,
+                model: models.usuarios,
                 as: 'usuarios',
                 attributes: ['nome', 'email', 'telefone'],
             },
         },
         {
-            model: models.Servico,
+            model: models.servicos,
             as: 'services',
             attributes: ['tipoDeServico'],
         },
@@ -123,7 +123,7 @@ module.exports.aprovacoes = async (req, res) => {
         status,
         email,
     } = req.query;
-    const resultados = await models.Orcamento.findAll({
+    const resultados = await models.orcamentos.findAll({
         where: {
             idSolicitacao: {
                 [Op.like]: `${idSolicitacao || ''}%`,
@@ -145,11 +145,11 @@ module.exports.aprovacoes = async (req, res) => {
             },
         },
         include: {
-            model: models.Reserva,
+            model: models.reservas,
             as: 'reservas',
             attributes: ['status', 'horarioInicio'],
             include: {
-                model: models.Usuario,
+                model: models.usuarios,
                 as: 'usuarios',
                 attributes: ['email'],
             },
@@ -166,7 +166,7 @@ module.exports.aprovacoes = async (req, res) => {
 
 module.exports.buscaJob = (async (req, res) => {
     const { jobId } = req.query;
-    const listaJobs = await models.Orcamento.findOne({
+    const listaJobs = await models.orcamentos.findOne({
         where: {
             idSolicitacao: {
                 [Op.like]: `${jobId}%`,
@@ -199,12 +199,12 @@ module.exports.mostraAlteraDados = (async (req, res) => {
 module.exports.alteraDados = async(req, res) => {
     let dadosNovos = req.body
 
-    const update = await models.Membro.update(dadosNovos, {
+    const update = await models.membros.update(dadosNovos, {
         where: {
             idMembro: req.session.membro.idMembro
         }
     })
-    const resultados = await models.Membro.findOne({
+    const resultados = await models.membros.findOne({
         where: {
             idMembro: req.session.membro.idMembro
         }

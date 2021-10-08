@@ -23,6 +23,74 @@
 /* BOTAO DE ORCAMENTO NO CARROSSEL DE ENTRADA */
 /* SERVIÇOS */
 
+.bckGroundModal{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.65);
+  z-index: 50000;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.modalHome{
+  margin-top: 2rem;
+  width: 50%;
+  height: fit-content;
+  background-color: #fff;
+  border: 1px solid black;
+  z-index: 50000;
+  position: fixed;
+  border-radius: 1rem;
+  align-content: space-around;
+  background-color: rgba(186, 238, 255, 0.87)
+  
+}
+
+.x{
+  cursor: pointer;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-color: bisque;
+  font-weight: bold;
+}
+
+.fecharModalConteudo{
+  display: none;
+  
+
+}
+
+#conteudoModal{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: wrap;
+  ;
+}
+#boas-vindaas{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  
+}
+.txtCont{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem;
+}
+.txtCont2{
+  margin: 2rem;
+}
+.txtCont3{
+  margin: 2rem;
+}
+
 .titulo-servicos {
   height: 40px;
   display: flex;

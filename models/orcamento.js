@@ -1,45 +1,45 @@
 'use strict';
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Orcamento extends Model {
+  class orcamentos extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.hasMany(models.Servico, {
+      this.hasMany(models.servicos, {
         foreignKey: 'idSolicitacao',
         as: 'servicos',
       }),
-        this.hasMany(models.Arquivo, {
+        this.hasMany(models.arquivos, {
           foreignKey: 'idSolicitacao',
           targetKey: 'idSolicitacao',
         }),
         // Associação com Pagamento
-        this.hasOne(models.Pagamento, {
+        this.hasOne(models.Pagamentos, {
           foreignKey: 'idSolicitacao',
           targetKey: 'idSolicitacao',
         }),
         // Associação com Servico
-        this.hasMany(models.Servico, {
+        this.hasMany(models.servicos, {
           foreignKey: 'idSolicitacao',
           targetKey: 'idSolicitacao',
           as: 'services',
         }),
         // Associação com Reserva
-        this.hasOne(models.Reserva, {
+        this.hasOne(models.reservas, {
           foreignKey: 'idReserva',
           as: 'reservas',
         });
       // Associação com Membros
-      this.hasOne(models.Membro, {
+      this.hasOne(models.membros, {
         foreignKey: 'idMembro',
         as: 'membros',
       });
     }
   }
-  Orcamento.init(
+  orcamentos.init(
     {
       idSolicitacao: {
         type: DataTypes.INTEGER,
@@ -65,8 +65,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: 'Orcamento',
+      modelName: 'orcamentos',
     },
   );
-  return Orcamento;
+  return orcamentos;
 };

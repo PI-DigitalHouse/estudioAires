@@ -5,8 +5,12 @@
 
     <body>
         <!-- header -->
-        <%- include partials/headerAreaLivreSemLogin.ejs %>
-
+        <% if(!dadosUsuario) { %>
+            <%- include partials/headerAreaLivreSemLogin.ejs%>
+            
+        <%}else{%>
+            <%- include partials/headerAreaRestritaUsuarios.ejs %>
+            <%}%>
             <!-- LINKS -->
             <div id="section-contato-home">
                 <div id="info-contato-home">
